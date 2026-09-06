@@ -13,12 +13,12 @@ import{t as e}from"./react.B3l9tXpq.js";import{t}from"./jsx-runtime.DIiiIrYY.js"
           color: var(--color-text-muted, #555);
         }
         .bpc__field input {
-          font-size: 1rem;
-          padding: 0.5rem 0.6rem;
-          border: 1px solid var(--color-border, #ccc);
-          border-radius: 6px;
+          font-size: 1.05rem;
+          padding: 0.7rem 0.85rem;
+          border: 1px solid var(--color-border-strong, #ccc);
+          border-radius: var(--radius-sm, 8px);
           background: #fff;
-          color: #1a1a1a;
+          color: var(--color-text, #1a1a1a);
         }
         .bpc__error {
           padding: 0.75rem 1rem;
@@ -39,18 +39,18 @@ import{t as e}from"./react.B3l9tXpq.js";import{t}from"./jsx-runtime.DIiiIrYY.js"
           border-bottom: 1px solid var(--color-border, #e3e1d8);
           vertical-align: top;
         }
-        .bpc__row--recommended { background: #f4faf5; }
+        .bpc__row--recommended { background: var(--color-primary-soft, #f4faf5); }
         .bpc__badge {
           display: inline-block;
           margin-left: 0.5rem;
           padding: 0.1rem 0.5rem;
           font-size: 0.72rem;
           border-radius: 999px;
-          background: #14532d;
+          background: var(--color-primary, #1f3a2f);
           color: #fff;
           font-weight: 700;
         }
-        .bpc__gain { color: #14532d; font-weight: 700; }
+        .bpc__gain { color: var(--color-primary, #14532d); font-weight: 800; font-size: 1.05em; }
         .bpc__loss { color: #8a2e2e; }
         .bpc__reasoning { font-size: 0.85rem; color: var(--color-text-muted, #555); }
         .bpc__logic { margin: 1rem 0; font-size: 0.92rem; }

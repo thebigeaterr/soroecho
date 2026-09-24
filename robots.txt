@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://soroecho.com/sitemap-index.xml
+Sitemap: https://thebigeaterr.github.io/soroecho/sitemap-index.xml

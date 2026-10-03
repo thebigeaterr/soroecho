@@ -12,6 +12,11 @@
               var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
               if (!anchor) return;
               var href = anchor.href;
+              // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+              if (href.indexOf('note.com/like_quince7527') !== -1) {
+                gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+                return;
+              }
               var linkKind = null;
               if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
                 linkKind = 'amazon_business';

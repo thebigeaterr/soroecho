@@ -1,0 +1,256 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>インボイス登録と屋号の扱い｜個人事業主が公表・請求書・変更で迷わない手順 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+            document.addEventListener('click', function (event) {
+              var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+              if (!anchor) return;
+              var href = anchor.href;
+              // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+              if (href.indexOf('note.com/like_quince7527') !== -1) {
+                gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+                return;
+              }
+              var linkKind = null;
+              if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+                linkKind = 'amazon_business';
+              } else if (
+                (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+                href.indexOf('tag=') !== -1
+              ) {
+                linkKind = 'amazon';
+              } else if (href.indexOf('px.a8.net') !== -1) {
+                linkKind = 'a8';
+              } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+                linkKind = 'rakuten';
+              } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+                linkKind = 'other';
+              }
+              if (!linkKind) return;
+              var linkDomain = '';
+              try {
+                linkDomain = new URL(href, location.href).hostname;
+              } catch (e) {}
+              gtag('event', 'affiliate_click', {
+                link_kind: linkKind,
+                link_domain: linkDomain,
+                offer_id: anchor.dataset.offer || '',
+                page_path: location.pathname,
+              });
+            });
+          </script><meta name="description" content="個人事業主がインボイス登録をした際の屋号の扱いを解説します。申請書の書き方、公表サイトへ屋号を載せる申出、屋号だけの請求書の可否、屋号変更時の手続きまで整理し、迷わず対応できる手順がわかります。登録番号があれば屋号表記も可能です。"><link rel="canonical" href="https://soroecho.com/articles/invoice-touroku-yagou/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="インボイス登録と屋号の扱い｜個人事業主が公表・請求書・変更で迷わない手順 | そろえ帳"><meta property="og:description" content="個人事業主がインボイス登録をした際の屋号の扱いを解説します。申請書の書き方、公表サイトへ屋号を載せる申出、屋号だけの請求書の可否、屋号変更時の手続きまで整理し、迷わず対応できる手順がわかります。登録番号があれば屋号表記も可能です。"><meta property="og:url" content="https://soroecho.com/articles/invoice-touroku-yagou/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/invoice-touroku-yagou.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="インボイス登録と屋号の扱い｜個人事業主が公表・請求書・変更で迷わない手順 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="インボイス登録と屋号の扱い｜個人事業主が公表・請求書・変更で迷わない手順 | そろえ帳"><meta name="twitter:description" content="個人事業主がインボイス登録をした際の屋号の扱いを解説します。申請書の書き方、公表サイトへ屋号を載せる申出、屋号だけの請求書の可否、屋号変更時の手続きまで整理し、迷わず対応できる手順がわかります。登録番号があれば屋号表記も可能です。"><meta name="twitter:image" content="https://soroecho.com/og/invoice-touroku-yagou.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"インボイス登録と屋号の扱い｜個人事業主が公表・請求書・変更で迷わない手順","item":"https://soroecho.com/articles/invoice-touroku-yagou/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"インボイス登録と屋号の扱い｜個人事業主が公表・請求書・変更で迷わない手順","description":"個人事業主がインボイス登録をした際の屋号の扱いを解説します。申請書の書き方、公表サイトへ屋号を載せる申出、屋号だけの請求書の可否、屋号変更時の手続きまで整理し、迷わず対応できる手順がわかります。登録番号があれば屋号表記も可能です。","url":"https://soroecho.com/articles/invoice-touroku-yagou/","datePublished":"2026-10-08T00:00:00.000Z","dateModified":"2026-10-08T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/invoice-touroku-yagou/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"屋号がなくてもインボイスの登録はできますか？","acceptedAnswer":{"@type":"Answer","text":"できます。登録に屋号は必須ではありません。屋号がない場合は、個人の氏名で登録・公表され、請求書にも氏名を書けば足ります。"}},{"@type":"Question","name":"公表サイトに屋号を載せないと、登録は無効になりますか？","acceptedAnswer":{"@type":"Answer","text":"無効にはなりません。個人事業主の場合、公表サイトに出るのは原則として氏名と登録番号などで、屋号の公表は申出をした場合に限られます。載せるかどうかは任意です。"}},{"@type":"Question","name":"請求書に屋号だけを書いて本名を書かなくても大丈夫ですか？","acceptedAnswer":{"@type":"Answer","text":"登録番号とあわせて、どの事業者か特定できるかが論点になります。公表サイトで屋号も公表しておくと、取引先が確認しやすくなります。取り扱いは国税庁の最新の案内で確認してください。"}},{"@type":"Question","name":"屋号を変えたら、インボイスの登録をやり直す必要がありますか？","acceptedAnswer":{"@type":"Answer","text":"登録番号は変わらないため、登録のやり直しは通常必要ありません。公表サイトに屋号を載せている場合は、公表事項の変更を申し出て表示を更新します。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+.article__eyecatch[data-astro-cid-sgg5joot]{aspect-ratio:2;border-radius:var(--radius-lg);border:1px solid var(--color-border);margin:0 0 1.5rem;overflow:hidden}.article__eyecatch[data-astro-cid-sgg5joot] .eyecatch,.article__eyecatch[data-astro-cid-sgg5joot] .eyecatch svg{width:100%;height:100%}.article__meta[data-astro-cid-sgg5joot]{color:var(--color-text-muted);margin:.5rem 0 2rem;font-size:.85rem}.article__meta-sep[data-astro-cid-sgg5joot]{margin:0 .4em}.article__toc[data-astro-cid-sgg5joot]{background:var(--color-bg);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:0 0 2.5rem;padding:1.25rem 1.5rem}.article__toc-title[data-astro-cid-sgg5joot]{color:var(--color-text-muted);margin:0 0 .75rem;font-size:.9rem;font-weight:800}.article__toc[data-astro-cid-sgg5joot] ol[data-astro-cid-sgg5joot]{margin:0;padding-left:0;list-style:none}.article__toc[data-astro-cid-sgg5joot] li[data-astro-cid-sgg5joot]{margin-bottom:.5em;font-size:.92rem}.article__toc[data-astro-cid-sgg5joot] a[data-astro-cid-sgg5joot]{color:var(--color-text);gap:.6em;text-decoration:none;display:flex}.article__toc[data-astro-cid-sgg5joot] a[data-astro-cid-sgg5joot]:hover{color:var(--color-primary);text-decoration:underline}.article__toc-number[data-astro-cid-sgg5joot]{color:var(--color-accent-ink);flex-shrink:0;font-weight:800}@media (width>=640px){.article__toc[data-astro-cid-sgg5joot] ol[data-astro-cid-sgg5joot]{grid-template-columns:1fr 1fr;column-gap:2rem;display:grid}}.article__body>p:first-of-type{color:var(--color-text);font-size:1.1rem;line-height:1.85}.article__faq[data-astro-cid-sgg5joot],.article__sources[data-astro-cid-sgg5joot],.article__related[data-astro-cid-sgg5joot],.article__tools[data-astro-cid-sgg5joot]{margin-top:3.5rem}.article__guide-hub-link[data-astro-cid-sgg5joot]{margin:1.5rem 0 0}.article__related[data-astro-cid-sgg5joot]+.article__guide-hub-link[data-astro-cid-sgg5joot]{margin-top:1.25rem}.article__tool-card[data-astro-cid-sgg5joot]{align-items:flex-start}.article__tool-card-name[data-astro-cid-sgg5joot]{margin:1rem 0 .5rem;font-size:1.05rem;font-weight:800}.article__tool-card-desc[data-astro-cid-sgg5joot]{color:var(--color-text-muted);flex:1;margin:0;font-size:.88rem;line-height:1.7}.article__tool-card-cta[data-astro-cid-sgg5joot]{color:var(--color-primary);margin-top:1rem;font-size:.88rem}.article__faq-item[data-astro-cid-sgg5joot]{border-top:1px solid var(--color-border);padding:1.25rem 0}.article__faq-item[data-astro-cid-sgg5joot]:last-child{padding-bottom:0}.article__faq-q[data-astro-cid-sgg5joot]{gap:.6em;margin:0 0 .5em;font-weight:800;display:flex}.article__faq-a[data-astro-cid-sgg5joot]{color:var(--color-text-muted);gap:.6em;margin:0;display:flex}.article__faq-mark[data-astro-cid-sgg5joot]{background:var(--color-primary-soft);width:1.6em;height:1.6em;color:var(--color-primary);border-radius:999px;flex-shrink:0;justify-content:center;align-items:center;font-size:.85em;font-weight:800;display:inline-flex}.article__faq-mark--a[data-astro-cid-sgg5joot]{background:var(--color-accent-soft);color:var(--color-accent-ink)}.article__sources[data-astro-cid-sgg5joot] ul[data-astro-cid-sgg5joot]{padding-left:1.2em;font-size:.88rem}.article__sources-date[data-astro-cid-sgg5joot]{color:var(--color-text-muted);font-size:.85em}
+</style></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/articles/#category-nav" data-astro-cid-z4jru4n3>カテゴリ</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>インボイス登録と屋号の扱い｜個人事業主が公表・請求書・変更で迷わない手順</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech4c12b-g" x1="0" y1="0" x2="1" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient></defs><rect width="400" height="225" fill="url(#ech4c12b-g)" data-astro-cid-yuatfsof></rect><circle cx="384" cy="76" r="42.699999999999996" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="384" cy="76" r="67.10000000000001" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="384" cy="76" r="91.5" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="384" cy="76" r="115.89999999999999" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="384" cy="76" r="122" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>インボイス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>登録</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>個人事業主</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>インボイス登録と屋号の扱い｜個人事業主が公表・請求書・変更で迷わない手順</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-10-08T00:00:00.000Z" data-astro-cid-sgg5joot>2026年10月8日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約7分</p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論屋号は登録の必須条件ではなく公表したいときだけ申し出る" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：屋号は登録の必須条件ではなく、公表したいときだけ申し出る</a></li><li data-astro-cid-sgg5joot><a href="#登録申請書に屋号を書く欄はあるのか" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>登録申請書に屋号を書く欄はあるのか</a></li><li data-astro-cid-sgg5joot><a href="#公表サイトに屋号を載せる方法公表事項の申出" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>公表サイトに屋号を載せる方法（公表事項の申出）</a></li><li data-astro-cid-sgg5joot><a href="#請求書に屋号だけ書いて本名を書かない場合の扱い" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>請求書に屋号だけ書いて、本名を書かない場合の扱い</a></li><li data-astro-cid-sgg5joot><a href="#屋号を変えたときの手続き" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>屋号を変えたときの手続き</a></li><li data-astro-cid-sgg5joot><a href="#屋号と帳簿の整理を同時に進めるなら" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>屋号と帳簿の整理を同時に進めるなら</a></li><li data-astro-cid-sgg5joot><a href="#登録前に確認する順番のまとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>登録前に確認する順番のまとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論屋号は登録の必須条件ではなく公表したいときだけ申し出る">結論：屋号は登録の必須条件ではなく、公表したいときだけ申し出る</h2>
+<p>インボイス（適格請求書発行事業者）の登録に、屋号は必須ではありません。登録の主体は、屋号ではなく「あなた個人」です。</p>
+<p>公表サイトには、個人事業主の場合、氏名と登録番号などが載ります。屋号を載せたいときは、別に「公表事項の申出」をします。</p>
+<p>請求書に屋号だけを書く場合は、取引先が登録番号から事業者を確認できるかがポイントです。屋号を公表しておくと、迷いが少なくなります。</p>
+<p>この記事では、次の4点を順に整理します。</p>
+<ul>
+<li>登録申請書での屋号の扱い</li>
+<li>公表サイトに屋号を載せる方法</li>
+<li>請求書に屋号だけ書く場合の考え方</li>
+<li>屋号を変えたときの手続き</li>
+</ul>
+<p>屋号の決め方や届出そのものは、別記事の<a href="/articles/yagou-kimekata-todokede/">屋号の決め方と届出のルール</a>で扱っています。請求書全体の書き方は<a href="/articles/seikyuusho-kakikata-invoice-taiou/">請求書の書き方とインボイス対応</a>をご覧ください。</p>
+<p>内容は、国税庁の公式ページ（2026年10月8日時点で確認した範囲）に基づきます。様式や運用は改定されることがあるため、申請前に最新の案内を見てください。</p>
+<h2 id="登録申請書に屋号を書く欄はあるのか">登録申請書に屋号を書く欄はあるのか</h2>
+<p>登録申請書は、あなたが「適格請求書発行事業者になる」と届け出る書類です。申請の中心は、氏名、納税地（住所）、課税事業者かどうか、といった本人を特定する情報です。</p>
+<p>屋号の欄の有無や位置は、様式の版によって異なる場合があります。そのため、記入前に国税庁の最新の様式で、屋号の欄があるかを確認してください。</p>
+<p>屋号を書く欄があっても、そこに書いたことが自動で公表されるとは限りません。「申請書に書くこと」と「公表サイトに載ること」は別の話として考えると、混乱しません。</p>
+<p>あなたの状況に応じた考え方は、次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>あなたの状況</th>
+<th>考え方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>屋号で仕事をしていて、開業届にも屋号を書いた</td>
+<td>申請書は本人名義で出す。屋号を載せたい場合は、公表の申出を追加で検討する</td>
+</tr>
+<tr>
+<td>屋号はあるが、開業届は出していない</td>
+<td>登録は本人名義でできる。屋号を公表したいなら、同じく申出で足りるかを確認する</td>
+</tr>
+<tr>
+<td>屋号がない</td>
+<td>氏名のみで登録・公表される。何も追加しなくてよい</td>
+</tr>
+<tr>
+<td>法人にしている（または予定がある）</td>
+<td>法人は名称と所在地が公表される。この記事の個人向け手順とは別なので、法人の案内を確認する</td>
+</tr>
+</tbody>
+</table>
+<p>申請の流れは、おおむね次のとおりです。</p>
+<ol>
+<li>課税事業者か、免税事業者かを確認する（免税事業者の場合は、課税事業者になる手続きも関係します）</li>
+<li>国税庁の最新の様式、またはオンラインの申請画面を開く</li>
+<li>氏名、住所（納税地）などを入力する</li>
+<li>屋号の記入欄があれば、必要に応じて記入する</li>
+<li>公表したい事項があれば、申出の欄や別様式を確認する</li>
+<li>提出後、登録番号の通知を受け取る</li>
+</ol>
+<p>[要実演スクショ: 登録申請書の屋号・公表に関する入力画面]</p>
+<h2 id="公表サイトに屋号を載せる方法公表事項の申出">公表サイトに屋号を載せる方法（公表事項の申出）</h2>
+<p>適格請求書発行事業者の情報は、国税庁の公表サイトで誰でも検索できます。個人事業主の場合、公表されるのは原則として氏名と登録番号などです。</p>
+<p>自宅住所は、原則として載りません。ここは「自宅住所を出したくない」方にとって大切な点です。</p>
+<p>屋号や事務所の所在地は、あなたが申し出た場合に、追加で公表されます。これが「公表事項の申出」です。</p>
+<p>申出をするかどうかは、取引先との関係で決めます。次の点を比べてください。</p>
+<table>
+<thead>
+<tr>
+<th>比べる点</th>
+<th>屋号を公表する場合</th>
+<th>公表しない場合</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>取引先の確認</td>
+<td>屋号で検索して確認しやすい</td>
+<td>氏名で確認することになる</td>
+</tr>
+<tr>
+<td>請求書との一致</td>
+<td>請求書の屋号と公表内容が一致する</td>
+<td>請求書に氏名を併記すると分かりやすい</td>
+</tr>
+<tr>
+<td>事業内容の見え方</td>
+<td>屋号から事業が推測される</td>
+<td>氏名のみで、事業内容は分からない</td>
+</tr>
+<tr>
+<td>手間</td>
+<td>申出が必要</td>
+<td>不要</td>
+</tr>
+</tbody>
+</table>
+<p>公表の申出は、おおむね次の順で進めます。</p>
+<ol>
+<li>公表サイトで、自分の現在の公表内容を検索して確認する</li>
+<li>国税庁の案内で、公表事項の申出の方法（書面またはオンライン）を確認する</li>
+<li>載せたい屋号を、請求書で使う表記と同じ形で用意する</li>
+<li>申出を提出する</li>
+<li>反映後、公表サイトで屋号が表示されているかを確認する</li>
+</ol>
+<p>[要実演スクショ: 公表サイトで屋号が表示された検索結果画面]</p>
+<p>表記ゆれには注意してください。請求書は「○○デザイン」、公表は「○○ design」のようにずれると、取引先が確認しにくくなります。</p>
+<aside class="cta-box"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">弥生株式会社</p><h3 class="cta-box__title">弥生シリーズ（やよいの青色申告 オンライン など）</h3><p class="cta-box__body">会計・青色申告のクラウドソフト。新規申込が成果条件。</p><a class="cta-box__button" href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E9T4M2+35XE+5ZEMP" data-offer="yayoi" rel="sponsored nofollow noopener" target="_blank">弥生シリーズ（やよいの青色申告 オンライン など）の公式サイトへ</a></aside>
+<h2 id="請求書に屋号だけ書いて本名を書かない場合の扱い">請求書に屋号だけ書いて、本名を書かない場合の扱い</h2>
+<p>請求書（適格請求書）には、発行事業者の「氏名又は名称」と登録番号を書く必要があります。屋号で仕事をしている人は、ここに屋号だけを書いてよいのかが気になるところです。</p>
+<p>考え方の軸は、取引先が登録番号から、その請求書の発行者を確認できるかどうかです。屋号のみの記載で足りるかは、公表サイトに屋号が出ているかどうかで、安心感が変わります。</p>
+<p>実務では、次の整理が分かりやすいでしょう。</p>
+<table>
+<thead>
+<tr>
+<th>請求書の書き方</th>
+<th>公表サイトに屋号を載せている</th>
+<th>載せていない</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>屋号のみ</td>
+<td>登録番号と屋号で突き合わせやすい</td>
+<td>公表サイトで屋号が出ないため、確認しにくい</td>
+</tr>
+<tr>
+<td>屋号＋氏名</td>
+<td>突き合わせやすい</td>
+<td>氏名で公表内容と合わせられる</td>
+</tr>
+<tr>
+<td>氏名のみ</td>
+<td>問題が起きにくい</td>
+<td>問題が起きにくい</td>
+</tr>
+</tbody>
+</table>
+<p>迷う場合は、「屋号＋氏名」の併記が最も混乱の少ない形です。たとえば「○○デザイン　山田太郎」のように書き、その横に登録番号（Tから始まる13桁）を添えます。</p>
+<p>請求書の記載事項の全体像や、レイアウトの例は<a href="/articles/seikyuusho-kakikata-invoice-taiou/">請求書の書き方とインボイス対応</a>で説明しています。ここでは屋号の部分だけに絞りました。</p>
+<p>屋号のみで発行したい場合の手順は、次のとおりです。</p>
+<ol>
+<li>公表サイトで、自分の登録番号の公表内容を確認する</li>
+<li>屋号が出ていなければ、公表事項の申出で屋号を追加する</li>
+<li>請求書の屋号の表記を、公表内容と同じにする</li>
+<li>登録番号を請求書の見やすい位置に入れる</li>
+<li>取引先から問い合わせが多い場合は、氏名の併記に切り替える</li>
+</ol>
+<p>取り扱いの細部は、国税庁の最新の案内で確認してください。取引先の経理方針によって、氏名の併記を求められることもあります。</p>
+<h2 id="屋号を変えたときの手続き">屋号を変えたときの手続き</h2>
+<p>屋号を変えても、登録番号は変わりません。登録は本人（個人）に対して行われているためです。登録のやり直しは、通常必要ありません。</p>
+<p>ただし、公表サイトに屋号を載せている場合は、表示が古い屋号のままになります。そこで、公表事項の変更を申し出ます。</p>
+<p>屋号を公表していない場合は、公表サイトの更新は不要です。請求書の表記を新しい屋号に変えるだけで済みます。</p>
+<p>変更の手順は、次のとおりです。</p>
+<ol>
+<li>新しい屋号の使用開始日を決める</li>
+<li>税務署への開業届の屋号を変えるかを検討する（届出の考え方は<a href="/articles/yagou-kimekata-todokede/">屋号の決め方と届出のルール</a>を参照）</li>
+<li>公表サイトで、現在の公表内容を確認する</li>
+<li>公表事項の変更の申出を提出する</li>
+<li>反映を確認したうえで、請求書の屋号表記を切り替える</li>
+<li>切り替え前後の請求書は、新旧どちらの屋号か分かるよう日付を記録しておく</li>
+</ol>
+<p>切り替えの時期が重なる点には注意が必要です。公表内容の反映より先に、請求書だけ新屋号にすると、取引先が公表サイトで確認できない期間が生まれます。</p>
+<p>そのため、請求書の切り替えは、公表の反映を確認してからにするのが安全です。反映までの期間は国税庁の案内で確認してください。</p>
+<p>あなたの状況による分岐は、次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>状況</th>
+<th>やること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>屋号を公表している</td>
+<td>公表事項の変更を申し出る＋請求書の表記を変える</td>
+</tr>
+<tr>
+<td>屋号を公表していない</td>
+<td>請求書の表記を変える（必要なら公表の申出も検討）</td>
+</tr>
+<tr>
+<td>屋号をやめて本名に戻す</td>
+<td>公表している屋号を取り下げる手続きを確認し、請求書は氏名表記にする</td>
+</tr>
+</tbody>
+</table>
+<h2 id="屋号と帳簿の整理を同時に進めるなら">屋号と帳簿の整理を同時に進めるなら</h2>
+<p>屋号を変えたり、公表を追加したりすると、請求書、帳簿、取引先への案内の表記がずれやすくなります。名称と登録番号を一か所で管理しておくと、あとで確認する手間が減ります。</p>
+<p>インボイス対応の請求書の作成や、売上・経費の記帳は、会計ソフトでまとめて管理する方法があります。屋号や登録番号を設定して、請求書の書式に反映できるものもあります。</p>
+<p>提供される機能は製品や契約内容で異なるため、請求書の発行や帳簿づけの機能は、各社の公式な案内で確認してください。</p>
+<p><a href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E9T4M2+35XE+5ZEMP" rel="sponsored nofollow noopener" target="_blank">個人事業主向けの会計ソフトを見る</a></p>
+<p>選ぶときは、次のような比較軸で見てください。</p>
+<ul>
+<li>屋号と氏名を、請求書に併記できるか</li>
+<li>登録番号を、請求書の書式に入れられるか</li>
+<li>開業届の有無にかかわらず、青色申告の帳簿づけに使えるか</li>
+<li>料金や無料の範囲が、公式ページで確認できるか</li>
+</ul>
+<aside class="cta-box"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">弥生株式会社</p><h3 class="cta-box__title">弥生シリーズ（やよいの青色申告 オンライン など）</h3><p class="cta-box__body">会計・青色申告のクラウドソフト。新規申込が成果条件。</p><a class="cta-box__button" href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E9T4M2+35XE+5ZEMP" data-offer="yayoi" rel="sponsored nofollow noopener" target="_blank">弥生シリーズ（やよいの青色申告 オンライン など）の公式サイトへ</a></aside>
+<h2 id="登録前に確認する順番のまとめ">登録前に確認する順番のまとめ</h2>
+<p>最後に、屋号まわりの作業を、順番にまとめます。</p>
+<ol>
+<li>屋号を公表するか決める（取引先の確認しやすさと、事業内容の見え方で判断する）</li>
+<li>申請書の最新の様式で、屋号の欄の有無を確認する</li>
+<li>登録の申請を出し、登録番号を受け取る</li>
+<li>公表サイトで、自分の公表内容を検索して確認する</li>
+<li>屋号を載せる場合は、公表事項の申出を出す</li>
+<li>請求書の表記を、公表内容と同じ形にそろえる</li>
+<li>屋号を変えるときは、公表の変更申出を先に出してから請求書を切り替える</li>
+</ol>
+<p>屋号の扱いで迷ったときは、「公表サイトを見た取引先が、請求書の発行者と同じ人だと分かるか」を基準にしてください。氏名の併記は、そのための簡単な方法です。</p>
+<p>制度の細かい取り扱いは、国税庁のインボイス制度の案内ページと、公表サイトで確認できます。申請の直前に、最新の内容を見ておくことをおすすめします。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>屋号がなくてもインボイスの登録はできますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>できます。登録に屋号は必須ではありません。屋号がない場合は、個人の氏名で登録・公表され、請求書にも氏名を書けば足ります。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>公表サイトに屋号を載せないと、登録は無効になりますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>無効にはなりません。個人事業主の場合、公表サイトに出るのは原則として氏名と登録番号などで、屋号の公表は申出をした場合に限られます。載せるかどうかは任意です。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>請求書に屋号だけを書いて本名を書かなくても大丈夫ですか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>登録番号とあわせて、どの事業者か特定できるかが論点になります。公表サイトで屋号も公表しておくと、取引先が確認しやすくなります。取り扱いは国税庁の最新の案内で確認してください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>屋号を変えたら、インボイスの登録をやり直す必要がありますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>登録番号は変わらないため、登録のやり直しは通常必要ありません。公表サイトに屋号を載せている場合は、公表事項の変更を申し出て表示を更新します。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/invoice_about.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 インボイス制度特設サイト</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.invoice-kohyo.nta.go.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 適格請求書発行事業者公表サイト</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-08）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/" data-astro-cid-sgg5joot>開業・法人サービスの記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/articles/#category-nav" data-astro-cid-z4jru4n3>カテゴリ</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

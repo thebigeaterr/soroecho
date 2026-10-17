@@ -1,0 +1,280 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ChatGPTの領収書はどこで出す？請求書・インボイス・消費税・勘定科目を整理 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="ChatGPTの領収書は、OpenAIの請求ポータルから「請求書」として取得します。Plus/Pro・Business・API・アプリストア経由で場所が異なります。宛名の変更、インボイス、消費税、勘定科目、保存の考え方をまとめます。"><link rel="canonical" href="https://soroecho.com/articles/chatgpt-ryoushuusho-invoice/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="ChatGPTの領収書はどこで出す？請求書・インボイス・消費税・勘定科目を整理 | そろえ帳"><meta property="og:description" content="ChatGPTの領収書は、OpenAIの請求ポータルから「請求書」として取得します。Plus/Pro・Business・API・アプリストア経由で場所が異なります。宛名の変更、インボイス、消費税、勘定科目、保存の考え方をまとめます。"><meta property="og:url" content="https://soroecho.com/articles/chatgpt-ryoushuusho-invoice/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/chatgpt-ryoushuusho-invoice.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="ChatGPTの領収書はどこで出す？請求書・インボイス・消費税・勘定科目を整理 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="ChatGPTの領収書はどこで出す？請求書・インボイス・消費税・勘定科目を整理 | そろえ帳"><meta name="twitter:description" content="ChatGPTの領収書は、OpenAIの請求ポータルから「請求書」として取得します。Plus/Pro・Business・API・アプリストア経由で場所が異なります。宛名の変更、インボイス、消費税、勘定科目、保存の考え方をまとめます。"><meta name="twitter:image" content="https://soroecho.com/og/chatgpt-ryoushuusho-invoice.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"ChatGPTの領収書はどこで出す？請求書・インボイス・消費税・勘定科目を整理","item":"https://soroecho.com/articles/chatgpt-ryoushuusho-invoice/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"ChatGPTの領収書はどこで出す？請求書・インボイス・消費税・勘定科目を整理","description":"ChatGPTの領収書は、OpenAIの請求ポータルから「請求書」として取得します。Plus/Pro・Business・API・アプリストア経由で場所が異なります。宛名の変更、インボイス、消費税、勘定科目、保存の考え方をまとめます。","url":"https://soroecho.com/articles/chatgpt-ryoushuusho-invoice/","datePublished":"2026-10-17T00:00:00.000Z","dateModified":"2026-10-17T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/chatgpt-ryoushuusho-invoice/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"ChatGPTの領収書はどこでもらえますか？","acceptedAnswer":{"@type":"Answer","text":"OpenAIの公式ヘルプでは、領収書は請求書（invoice）として請求ポータルから取得します。Plus/Proは設定のAccountにあるPaymentのManage、Businessはワークスペース設定のBillingにあるInvoicesから入ります。Apple App StoreやGoogle Play経由で契約した場合は、アプリストア側の購入履歴を確認します。"}},{"@type":"Question","name":"発行済みの請求書の宛名は変えられますか？","acceptedAnswer":{"@type":"Answer","text":"請求情報（宛名やTax IDなど）の変更は、将来の請求書にだけ反映されます。発行済みの請求書は書き換わりません。再発行はHelp Centerのチャットで請求書番号と希望内容を伝えて依頼できますが、再発行されるとは限らないと公式に書かれています。"}},{"@type":"Question","name":"ChatGPTの請求書にインボイスの登録番号は載りますか？","acceptedAnswer":{"@type":"Answer","text":"OpenAIの公式ヘルプでは、OpenAI OpCo, LLCは日本の適格請求書発行事業者で、登録番号T3700150133253は対象取引の請求書に記載されるとしています。いつの請求書から載っているかは、公式ヘルプの取得範囲では分かりません。手元の請求書と、国税庁の公表サイトで確認してください。"}},{"@type":"Question","name":"ChatGPTの勘定科目は何にすればよいですか？","acceptedAnswer":{"@type":"Answer","text":"国税庁の案内にAIサービスを名指しした説明はなく、決まった正解は断定できません。通信費・広告宣伝費・消耗品費・雑費などの国税庁の説明に、使い方と継続の仕方を当てはめて選びます。迷う場合は税理士か税務署に確認してください。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>ChatGPTの領収書はどこで出す？請求書・インボイス・消費税・勘定科目を整理</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecj2gin6-g" x1="0" y1="0" x2="1" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecj2gin6-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecj2gin6-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecj2gin6-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="92" r="124" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>chatgpt</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>領収書</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>ChatGPTの領収書はどこで出す？請求書・インボイス・消費税・勘定科目を整理</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-10-17T00:00:00.000Z" data-astro-cid-sgg5joot>2026年10月17日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約11分</p><aside class="receipt-facts" aria-labelledby="receipt-facts-heading" data-astro-cid-tcbxoyxt><h2 id="receipt-facts-heading" class="receipt-facts__title" data-astro-cid-tcbxoyxt>このサービスの確認済みの事実</h2><dl class="receipt-facts__list" data-astro-cid-tcbxoyxt><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>領収書の出し方</dt><dd data-astro-cid-tcbxoyxt><ul data-astro-cid-tcbxoyxt><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>Plus / Pro</strong>: 設定（Settings）の Account で Payment &gt; Manage を開き、請求ポータルの Invoice History からダウンロード</li><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>Business（旧Team。2025-08-29に名称変更）</strong>: ワークスペース設定の Billing &gt; Invoices（オーナーとして。Manage plan &gt; Payment method からも請求ポータルへ）</li><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>API（個人・チーム）</strong>: Billing history（支払い履歴と利用可能な請求書・領収書）</li><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>API（Enterprise）</strong>: API Platform の Billing からダウンロード（暦月末請求、請求サイクル終了後おおむね2週間以内に発行）</li><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>Apple App Store / Google Play 経由</strong>: OpenAIの請求ポータルには出ない。アプリストアの購入履歴（Appleは更新ごとにメールの領収書）</li></ul></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>宛名</dt><dd data-astro-cid-tcbxoyxt>公式の案内では確認できず<span class="receipt-facts__note" data-astro-cid-tcbxoyxt>（請求情報（billing information）と Tax ID は更新できる（個人: Settings &gt; Billing &gt; Edit、Business: Workspace settings &gt; Billing &gt; Settings &gt; Edit、API: 組織の billing preferences）。会社名専用の欄があるかは公式ページで確認できず。更新は将来の請求書のみ、発行済みは変わらず、再発行はサポート審査で保証なし）</span></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>インボイス</dt><dd data-astro-cid-tcbxoyxt>対応<span class="receipt-facts__note" data-astro-cid-tcbxoyxt>（公式ヘルプ「OpenAI OpCo, LLC will provide customers with Qualified Invoices as a Qualified Invoice issuer in Japan」。登録番号は対象取引の請求書に記載と記載。JCT適用開始はヘルプでは2025-01-01。登録年月日は公式ヘルプにないため不明（国税庁公表サイトで読者が確認））</span></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>登録番号</dt><dd data-astro-cid-tcbxoyxt>T3700150133253<span class="receipt-facts__note" data-astro-cid-tcbxoyxt>（<a href="https://help.openai.com/en/articles/10242647-the-japanese-consumption-tax-on-your-openai-invoices" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>公式ページで確認</a>）</span></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>最終確認日</dt><dd data-astro-cid-tcbxoyxt><time datetime="2026-10-17" data-astro-cid-tcbxoyxt>2026年10月17日</time></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>公式の情報</dt><dd data-astro-cid-tcbxoyxt><ul data-astro-cid-tcbxoyxt><li data-astro-cid-tcbxoyxt><a href="https://help.openai.com/en/articles/10242647-the-japanese-consumption-tax-on-your-openai-invoices" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>https://help.openai.com/en/articles/10242647-the-japanese-consumption-tax-on-your-openai-invoices</a></li><li data-astro-cid-tcbxoyxt><a href="https://help.openai.com/en/articles/12356340-how-can-i-find-my-past-chatgpt-invoices" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>https://help.openai.com/en/articles/12356340-how-can-i-find-my-past-chatgpt-invoices</a></li><li data-astro-cid-tcbxoyxt><a href="https://help.openai.com/en/articles/9038389-updating-billing-information-tax-id-and-vat-id" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>https://help.openai.com/en/articles/9038389-updating-billing-information-tax-id-and-vat-id</a></li></ul></dd></div></dl></aside><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#chatgptの領収書は請求書として請求ポータルから取る" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>ChatGPTの領収書は「請求書」として請求ポータルから取る</a></li><li data-astro-cid-sgg5joot><a href="#契約の入り口で領収書請求書の出し方が変わる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>契約の入り口で、領収書（請求書）の出し方が変わる</a></li><li data-astro-cid-sgg5joot><a href="#plusproの領収書請求書を取る手順" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>Plus/Proの領収書（請求書）を取る手順</a></li><li data-astro-cid-sgg5joot><a href="#business旧teamの請求書を取る手順" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>Business（旧Team）の請求書を取る手順</a></li><li data-astro-cid-sgg5joot><a href="#apiの領収書請求書の取り方" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>APIの領収書（請求書）の取り方</a></li><li data-astro-cid-sgg5joot><a href="#applegoogle経由で契約した場合の領収書" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>Apple・Google経由で契約した場合の領収書</a></li><li data-astro-cid-sgg5joot><a href="#宛名会社名tax-idを請求書に入れる方法" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>宛名・会社名・Tax IDを請求書に入れる方法</a></li><li data-astro-cid-sgg5joot><a href="#chatgptのインボイス適格請求書と消費税" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>ChatGPTのインボイス（適格請求書）と消費税</a></li><li data-astro-cid-sgg5joot><a href="#国税庁のルールのおさらい仕入税額控除と保存" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>国税庁のルールのおさらい：仕入税額控除と保存</a></li><li data-astro-cid-sgg5joot><a href="#chatgptの経費にする勘定科目の選択肢" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>10</span>ChatGPTの経費にする勘定科目の選択肢</a></li><li data-astro-cid-sgg5joot><a href="#chatgptの請求書データの保存方法電子取引" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>11</span>ChatGPTの請求書データの保存方法（電子取引）</a></li><li data-astro-cid-sgg5joot><a href="#手続きのチェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>12</span>手続きのチェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#次の一歩保存と仕訳をどこで管理するか" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>13</span>次の一歩：保存と仕訳をどこで管理するか</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="chatgptの領収書は請求書として請求ポータルから取る">ChatGPTの領収書は「請求書」として請求ポータルから取る</h2>
+<p>OpenAIの公式ヘルプでは、ChatGPTの領収書は「請求書（invoice）」として請求ポータルから取得します。Plus/Pro、Business、API、Apple・Google経由で入口が違います。</p>
+<p>宛名やTax IDは請求情報で変えられますが、変更は将来の請求書だけに効き、発行済みの請求書は書き換わりません。</p>
+<p>OpenAI OpCo, LLCは日本の適格請求書発行事業者で、登録番号はT3700150133253です。勘定科目は国税庁の説明に当てはめて選ぶもので、決まった正解は国税庁の案内から断定できません。</p>
+<p>この記事で分かることは次のとおりです。</p>
+<ul>
+<li>契約の入り口ごとの請求書の取り方</li>
+<li>宛名・Tax IDの入れ方と、直せる範囲</li>
+<li>インボイスと消費税の見方</li>
+<li>勘定科目の選択肢と、保存の考え方</li>
+</ul>
+<p>情報は2026年10月17日時点の公式ページに基づきます。画面の表記は変わることがあるため、実際の画面で確認してください。</p>
+<h2 id="契約の入り口で領収書請求書の出し方が変わる">契約の入り口で、領収書（請求書）の出し方が変わる</h2>
+<p>OpenAIの公式ヘルプによると、Plus/ProかBusinessかで、アカウント設定内の場所が少し変わります。どこから契約したかで、まず探す場所が決まります。</p>
+<table>
+<thead>
+<tr>
+<th>契約の入り口</th>
+<th>請求書を探す場所</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Plus / Pro</td>
+<td>設定（Settings）のAccountにある Payment &gt; Manage</td>
+</tr>
+<tr>
+<td>Business</td>
+<td>ワークスペース設定の Billing &gt; Invoices</td>
+</tr>
+<tr>
+<td>API</td>
+<td>個人・チームは Billing history。Enterpriseは API Platform の Billing</td>
+</tr>
+<tr>
+<td>Apple App Store / Google Play 経由</td>
+<td>OpenAI側ではなく、アプリストアの購入履歴</td>
+</tr>
+</tbody>
+</table>
+<p>Businessは、旧ChatGPT Teamです。公式ヘルプによると、2025年8月29日にChatGPT BusinessへTeamから名称が変わりました。名称変更の後は、請求書と領収書にChatGPT Businessと表記されるようになったとのことです。</p>
+<p>過去の分に「ChatGPT Team」と書かれているのは、この名称変更の前の請求だと読めます。</p>
+<p>あなたの場合、どの入口で契約したかが分からなければ、次の順に確認すると整理しやすくなります。</p>
+<ol>
+<li>請求のメールが届いているか（OpenAIからか、Appleなどアプリストアからか）</li>
+<li>個人のアカウントか、ワークスペース（チーム）のアカウントか</li>
+<li>APIの利用料を別に支払っていないか</li>
+</ol>
+<h2 id="plusproの領収書請求書を取る手順">Plus/Proの領収書（請求書）を取る手順</h2>
+<p>Plus/Proの場合、公式ヘルプの手順は次のとおりです。</p>
+<ol>
+<li>ChatGPTにログインし、Settings &gt; Account を開く</li>
+<li>Payment の Manage を選ぶ</li>
+<li>表示される請求ポータルの Invoice History から、過去の請求書をダウンロードする</li>
+</ol>
+<p>Invoice History に請求書が出てこないときは、公式のトラブルシューティングに沿って次の点を確認します。</p>
+<ul>
+<li>別のChatGPTアカウントや別のワークスペースにログインしていないか</li>
+<li>アプリストア経由で契約していないか</li>
+</ul>
+<p>仕事用とプライベート用でメールアドレスを使い分けていると、取り違えが起きやすくなります。支払いに使ったカードの明細と、アカウントのメールアドレスを照らし合わせると、どのアカウントか見当がつきます。</p>
+<h2 id="business旧teamの請求書を取る手順">Business（旧Team）の請求書を取る手順</h2>
+<p>Businessの場合、公式ヘルプの手順は次のとおりです。</p>
+<ol>
+<li>ワークスペースの設定を開く</li>
+<li>Billing を選び、Invoices を開く</li>
+<li>そのワークスペース・アカウントで利用できる請求書を確認する</li>
+</ol>
+<p>Invoices が見えないときは、公式ヘルプの案内どおり、正しいワークスペース・アカウントのオーナー（owner）としてログインしているかを確認します。それでも請求書が見つからなければ、OpenAIサポートに問い合わせる流れです。</p>
+<p>Manage plan &gt; Payment method を選んでも、過去の請求書がある請求ポータルに入れると公式に案内されています。</p>
+<h2 id="apiの領収書請求書の取り方">APIの領収書（請求書）の取り方</h2>
+<p>APIは、契約の形で取り方が分かれます。公式ヘルプの内容は次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>契約の形</th>
+<th>支払い方法と請求書</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>個人・チーム</td>
+<td>プリペイドのクレジット、またはカードの自動課金。Billing history で支払い履歴と、利用できる請求書・領収書を見る</td>
+</tr>
+<tr>
+<td>Enterprise</td>
+<td>暦月末に請求。請求サイクルの終了後、通常2週間以内に請求書が発行される。API Platform の Billing からダウンロードする</td>
+</tr>
+</tbody>
+</table>
+<p>ChatGPTの月額プランとAPIは、別の請求になります。ChatGPTのPlusとAPIの両方を使っている場合は、請求書も別々に取る必要があります。</p>
+<h2 id="applegoogle経由で契約した場合の領収書">Apple・Google経由で契約した場合の領収書</h2>
+<p>アプリストア経由で始めた契約の領収書は、OpenAIの請求ポータルには出ません。公式のトラブルシューティングでも、アプリストアの購入履歴を確認するよう案内されています。</p>
+<p>Apple App Storeの場合、公式ヘルプには次の内容があります。</p>
+<ul>
+<li>更新のたびに、Appleからメールの領収書が届く</li>
+<li>メールは、Apple IDに紐づくアドレスに届く</li>
+<li>iPhoneでは Settings &gt; 自分の名前 &gt; Media &amp; Purchases &gt; View Account &gt; Purchase History で購入履歴を確認できる</li>
+</ul>
+<p>Google Playの詳しい画面手順は、今回確認した公式ページでは取得できていません。Google Play側のヘルプで確認してください。</p>
+<p>アプリストア経由の領収書は、発行者がAppleやGoogleになります。そのため、OpenAIのインボイス登録番号の話とは分けて考える必要があります。</p>
+<h2 id="宛名会社名tax-idを請求書に入れる方法">宛名・会社名・Tax IDを請求書に入れる方法</h2>
+<p>公式ヘルプ（Updating billing information, Tax ID, and VAT ID）に、請求情報を更新する手順があります。</p>
+<p><strong>個人アカウント</strong></p>
+<ol>
+<li>プロフィールアイコンから Settings を開く</li>
+<li>Billing タブを選ぶ</li>
+<li>Billing information の Edit を選ぶ</li>
+<li>請求情報を更新する（Tax IDも必要に応じて追加できる）</li>
+</ol>
+<p>Account の下に Payment が表示される場合は、Settings &gt; Account &gt; Payment の Manage から、Billing information の Update information でも更新できます。</p>
+<p><strong>Business</strong>：オーナーとしてログインし、Workspace settings &gt; Billing &gt; Settings &gt; Edit の順に進みます。</p>
+<p><strong>API</strong>：組織の billing preferences を開いて更新します。</p>
+<p>注意したいのは、変更が将来の請求書にだけ効く点です。公式ヘルプには、請求情報やTax IDの更新は発行済みの請求書を改訂しない、とあります。宛名を直したい場合は、次回の請求の前に更新しておくのが現実的です。</p>
+<p>すでに発行された請求書の再発行は、Help Centerのチャットで、請求書番号と希望内容を添えて依頼します。サポートが再発行できるか確認する流れで、再発行は保証されないと公式に書かれています。</p>
+<p>また、入力したTax IDが無効と判断された場合、システムの記録から外され、該当する税が課される可能性があるとも案内されています。</p>
+<p>なお、請求書に会社名を入れる専用の欄があるかどうかは、確認した公式の案内では分かりませんでした。公式の範囲では、請求情報（billing information）を更新できる、というところまでです。</p>
+<h2 id="chatgptのインボイス適格請求書と消費税">ChatGPTのインボイス（適格請求書）と消費税</h2>
+<p>OpenAIの公式ヘルプ（The Japanese Consumption Tax on your OpenAI Invoices）の内容は次のとおりです。</p>
+<ul>
+<li>OpenAI OpCo, LLCは、対象サービスの請求書に日本の消費税（JCT）10%を請求・徴収する</li>
+<li>日本の顧客には、適格請求書発行事業者として適格請求書を交付する</li>
+<li>登録番号T3700150133253は、対象取引の請求書に記載される</li>
+<li>適格請求書の消費税額は日本円で表示される。米ドル表示でも、税額は日本円で出る</li>
+<li>この変更は2025年1月1日に始まり、以前の請求書にJCTは追加されない</li>
+</ul>
+<p>公式ヘルプが書いているJCTの適用開始は2025年1月1日です。登録番号が請求書に載り始めた時期や、登録の年月日は、公式ヘルプの取得範囲では分かりません。ご自身で<a href="https://www.invoice-kohyo.nta.go.jp/">国税庁の適格請求書発行事業者公表サイト</a>に登録番号を入れて、登録年月日を確認してください。あわせて、手元の請求書に登録番号が載っているかも見てください。</p>
+<p>Enterpriseなど、個別の契約を結んでいる事業者向けには、JCTは請求されません。公式ヘルプでは「リバースチャージ方式が通常適用される」とされています。</p>
+<p>自分自身がインボイス登録をする場合の屋号の扱いは、<a href="/articles/invoice-touroku-yagou/">インボイス登録と屋号</a>で解説しています。</p>
+<h2 id="国税庁のルールのおさらい仕入税額控除と保存">国税庁のルールのおさらい：仕入税額控除と保存</h2>
+<p>国税庁の案内（タックスアンサー No.6118、インボイス制度Q&amp;A 問103-3など）から、共通の事実を整理します。</p>
+<ul>
+<li>国外事業者によるインターネット経由のサービス提供は、国内の事業者・消費者向けであれば、国内取引として消費税の課税対象になる</li>
+<li>「事業者向け」は、サービスの性質や取引条件から、受ける側が通常事業者に限られるもの。この場合は国内事業者が申告・納税する（リバースチャージ方式）</li>
+<li>「消費者向け」は、国外事業者が申告・納税する</li>
+<li>消費者向けのサービスで仕入税額控除を受けるには、適格請求書の保存が必要</li>
+<li>事業者向けの場合は、適格請求書の保存は必要なく、一定の事項を記載した帳簿の保存で仕入税額控除ができる（例：インターネット広告の配信）</li>
+<li>適格請求書は請求書に限らず、所定の事項があれば領収書などの名称でも該当する</li>
+<li>免税事業者は消費税の申告が不要で、特定課税仕入れをしても申告は要らない</li>
+<li>簡易課税制度や2割特例・3割特例を使うと、受け取ったインボイスを保存しなくても仕入税額控除を受けられる</li>
+</ul>
+<p>あなたの場合は、課税事業者か免税事業者か、簡易課税を選んでいるかで扱いが変わります。ChatGPTの契約が国税庁の言う事業者向けか消費者向けかも、個別の判断になります。</p>
+<p>仕組みの詳細は海外SaaSの消費税とインボイスにまとめています。個別の判断は、税理士または税務署に確認してください。</p>
+<h2 id="chatgptの経費にする勘定科目の選択肢">ChatGPTの経費にする勘定科目の選択肢</h2>
+<p>国税庁の案内には、ChatGPTなどのAIサービスを名指しした説明はありません。国税庁の確定申告書等作成コーナーの説明を、次の表にまとめます。</p>
+<table>
+<thead>
+<tr>
+<th>勘定科目</th>
+<th>国税庁の説明（抜粋）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>通信費</td>
+<td>事業用として使用した電話料、切手代、電報料などです</td>
+</tr>
+<tr>
+<td>広告宣伝費</td>
+<td>新聞、雑誌、ラジオ、テレビなどの広告費用、チラシ、折込み広告の費用など</td>
+</tr>
+<tr>
+<td>消耗品費</td>
+<td>帳簿、文房具、用紙、包装紙、ガソリンなどの消耗品購入費。取得価額が10万円未満か、使用可能期間が1年未満の什器備品の購入費</td>
+</tr>
+<tr>
+<td>雑費</td>
+<td>事業上の費用で他の経費に当てはまらない経費です</td>
+</tr>
+</tbody>
+</table>
+<p>どの科目にするかは、用途と継続の仕方を踏まえて税理士に確認すると安心です。使い方が変わらない限り、毎年同じ科目に揃えておくと、帳簿を見返すときに迷いにくくなります。</p>
+<p>個人事業主は、仕事とプライベートで使っている場合に、按分が必要になることがあります。考え方は<a href="/articles/keihi-naru-mono-naranai-mono/">経費になるもの・ならないもの</a>で解説しています。</p>
+<h2 id="chatgptの請求書データの保存方法電子取引">ChatGPTの請求書データの保存方法（電子取引）</h2>
+<p>ポータルからダウンロードしたPDFは、電子帳簿保存法でいう電子取引データにあたります。国税庁の案内では、次の点が示されています。</p>
+<ul>
+<li>紙でやりとりしていた場合に保存が必要な書類（領収書・請求書など）に相当するデータを保存する</li>
+<li>ファイル形式は問わず、PDFへの変換やスクリーンショットでもよい</li>
+<li>改ざん防止の措置が必要</li>
+<li>「日付・金額・取引先」で検索できる必要がある</li>
+<li>規則的なファイル名を付ける方法や、表計算ソフトで索引簿を作る方法がある</li>
+</ul>
+<p>一問一答の問39では、授受のタイミングが次のように説明されています。</p>
+<ul>
+<li>インターネット上で領収書等データを確認できる状態になった時点が、授受のタイミングと考えられる</li>
+<li>ダウンロードしなければ保存義務が生じない、というものではない</li>
+<li>まとめてダウンロードする場合も、その取引の日が属する年分の中にダウンロードして保存する</li>
+</ul>
+<p>つまり、ポータルに請求書が並んでいても、後から取ればよいわけではありません。年内にダウンロードして保存しておくことが前提になります。</p>
+<p>保存の要件の詳細は、<a href="/articles/ryoushuusho-hozon-e-bunsho-taiou/">領収書の電子保存への対応</a>にまとめています。</p>
+<h2 id="手続きのチェックリスト">手続きのチェックリスト</h2>
+<p>最後に、確認項目を並べます。</p>
+<ol>
+<li>契約の入り口（直接契約か、アプリストア経由か）を確認した</li>
+<li>Plus/Proは Settings &gt; Account &gt; Payment &gt; Manage、Businessは Billing &gt; Invoices から請求書を開いた</li>
+<li>Invoice History が空のとき、別アカウント・別ワークスペースを疑った</li>
+<li>APIを使っているなら、Billing history などで別に請求書を確認した</li>
+<li>宛名やTax IDは、次の請求の前に請求情報で更新した</li>
+<li>発行済みの請求書は書き換わらないことを理解した</li>
+<li>手元の請求書に登録番号T3700150133253があるか、日付とあわせて見た</li>
+<li>自分が課税事業者か免税事業者か、簡易課税かを確認した</li>
+<li>勘定科目を決め、事業とプライベートの按分の要否を確認した</li>
+<li>請求書のPDFを、年内にダウンロードして検索できる形で保存した</li>
+</ol>
+<h2 id="次の一歩保存と仕訳をどこで管理するか">次の一歩：保存と仕訳をどこで管理するか</h2>
+<aside class="cta-box"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">弥生株式会社</p><h3 class="cta-box__title">弥生シリーズ（やよいの青色申告 オンライン など）</h3><p class="cta-box__body">会計・青色申告のクラウドソフト。新規申込が成果条件。</p><a class="cta-box__button" href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E9T4M2+35XE+5ZEMP" data-offer="yayoi" rel="sponsored nofollow noopener" target="_blank">弥生シリーズ（やよいの青色申告 オンライン など）の公式サイトへ</a></aside>
+<p>請求書のデータを保存したり、仕訳を入力したりする場所として、会計ソフトを使う選択肢もあります。弥生株式会社の会計ソフトです。</p>
+<p><a href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E9T4M2+35XE+5ZEMP" rel="sponsored nofollow noopener" target="_blank">青色申告対応のクラウド会計ソフトを見る</a></p>
+<p>他のサービスの出し方は、次の記事で解説しています。</p>
+<ul>
+<li>Claudeの領収書と消費税</li>
+<li>Canvaの領収書とインボイス</li>
+<li>Zoomの領収書</li>
+</ul>
+<p>海外サービス全体の仕組みは、海外SaaSの消費税とインボイスにまとめています。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>ChatGPTの領収書はどこでもらえますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>OpenAIの公式ヘルプでは、領収書は請求書（invoice）として請求ポータルから取得します。Plus/Proは設定のAccountにあるPaymentのManage、Businessはワークスペース設定のBillingにあるInvoicesから入ります。Apple App StoreやGoogle Play経由で契約した場合は、アプリストア側の購入履歴を確認します。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>発行済みの請求書の宛名は変えられますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>請求情報（宛名やTax IDなど）の変更は、将来の請求書にだけ反映されます。発行済みの請求書は書き換わりません。再発行はHelp Centerのチャットで請求書番号と希望内容を伝えて依頼できますが、再発行されるとは限らないと公式に書かれています。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>ChatGPTの請求書にインボイスの登録番号は載りますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>OpenAIの公式ヘルプでは、OpenAI OpCo, LLCは日本の適格請求書発行事業者で、登録番号T3700150133253は対象取引の請求書に記載されるとしています。いつの請求書から載っているかは、公式ヘルプの取得範囲では分かりません。手元の請求書と、国税庁の公表サイトで確認してください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>ChatGPTの勘定科目は何にすればよいですか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>国税庁の案内にAIサービスを名指しした説明はなく、決まった正解は断定できません。通信費・広告宣伝費・消耗品費・雑費などの国税庁の説明に、使い方と継続の仕方を当てはめて選びます。迷う場合は税理士か税務署に確認してください。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://help.openai.com/en/articles/12356340-how-can-i-find-my-past-chatgpt-invoices" rel="noopener" target="_blank" data-astro-cid-sgg5joot>OpenAI Help: How can I find my past ChatGPT invoices?</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://help.openai.com/en/articles/6640792-when-can-i-expect-to-receive-my-openai-api-invoice" rel="noopener" target="_blank" data-astro-cid-sgg5joot>OpenAI Help: API billing and invoice timing</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://help.openai.com/en/articles/9030143-how-do-i-obtain-my-chatgpt-subscription-invoice-if-i-subscribed-from-the-apple-app-store" rel="noopener" target="_blank" data-astro-cid-sgg5joot>OpenAI Help: Apple App Storeで購読した場合の請求書</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://help.openai.com/en/articles/9038389-updating-billing-information-tax-id-and-vat-id" rel="noopener" target="_blank" data-astro-cid-sgg5joot>OpenAI Help: Updating billing information, Tax ID, and VAT ID</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://help.openai.com/en/articles/10242647-the-japanese-consumption-tax-on-your-openai-invoices" rel="noopener" target="_blank" data-astro-cid-sgg5joot>OpenAI Help: The Japanese Consumption Tax on your OpenAI Invoices</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://help.openai.com/en/articles/12111915-chatgpt-business-rename-faq" rel="noopener" target="_blank" data-astro-cid-sgg5joot>OpenAI Help: ChatGPT Business: General FAQ</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6118.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.6118</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/pdf/qa/103-3.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 インボイス制度Q&amp;A 問103-3</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/invoice_about.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 インボイス制度の特設サイト</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/law/joho-zeikaishaku/sonota/jirei/tokusetsu/pdf/0023006-085_01.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 電子帳簿保存法 電子取引データの保存方法</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/law/joho-zeikaishaku/sonota/jirei/pdf/0021006-031_03.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 電子帳簿保存法一問一答【電子取引関係】問39</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.keisan.nta.go.jp/r5yokuaru/aoiroshinkoku/hitsuyokeihi/tsushinhi/tsushinhi.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 確定申告書等作成コーナー よくある質問（通信費）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.keisan.nta.go.jp/r5yokuaru/aoiroshinkoku/hitsuyokeihi/kokokusendenhi/kokokusendenhi.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 確定申告書等作成コーナー よくある質問（広告宣伝費）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.keisan.nta.go.jp/r5yokuaru/aoiroshinkoku/hitsuyokeihi/shomohinhi/shomohinhi.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 確定申告書等作成コーナー よくある質問（消耗品費）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.keisan.nta.go.jp/r5yokuaru/aoiroshinkoku/hitsuyokeihi/zappi/zappi.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 確定申告書等作成コーナー よくある質問（雑費）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/kakutei-shinkoku/" data-astro-cid-sgg5joot>確定申告・会計ソフト・経費の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

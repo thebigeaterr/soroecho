@@ -1,0 +1,239 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>スマートEX 領収書の出し方｜宛名・インボイス・いつまで出せるかを公式FAQで整理 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="スマートEXの領収書は「領収書表示サービス」で、予約完了日の翌日から最大15か月後まで、宛名を入力して表示・印刷します。当日は不可。インボイス対応、払戻しの扱い、WEBフォームの使いどころまで整理します。"><link rel="canonical" href="https://soroecho.com/articles/smart-ex-ryoushuusho/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="スマートEX 領収書の出し方｜宛名・インボイス・いつまで出せるかを公式FAQで整理 | そろえ帳"><meta property="og:description" content="スマートEXの領収書は「領収書表示サービス」で、予約完了日の翌日から最大15か月後まで、宛名を入力して表示・印刷します。当日は不可。インボイス対応、払戻しの扱い、WEBフォームの使いどころまで整理します。"><meta property="og:url" content="https://soroecho.com/articles/smart-ex-ryoushuusho/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/smart-ex-ryoushuusho.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="スマートEX 領収書の出し方｜宛名・インボイス・いつまで出せるかを公式FAQで整理 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="スマートEX 領収書の出し方｜宛名・インボイス・いつまで出せるかを公式FAQで整理 | そろえ帳"><meta name="twitter:description" content="スマートEXの領収書は「領収書表示サービス」で、予約完了日の翌日から最大15か月後まで、宛名を入力して表示・印刷します。当日は不可。インボイス対応、払戻しの扱い、WEBフォームの使いどころまで整理します。"><meta name="twitter:image" content="https://soroecho.com/og/smart-ex-ryoushuusho.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"スマートEX 領収書の出し方｜宛名・インボイス・いつまで出せるかを公式FAQで整理","item":"https://soroecho.com/articles/smart-ex-ryoushuusho/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"スマートEX 領収書の出し方｜宛名・インボイス・いつまで出せるかを公式FAQで整理","description":"スマートEXの領収書は「領収書表示サービス」で、予約完了日の翌日から最大15か月後まで、宛名を入力して表示・印刷します。当日は不可。インボイス対応、払戻しの扱い、WEBフォームの使いどころまで整理します。","url":"https://soroecho.com/articles/smart-ex-ryoushuusho/","datePublished":"2026-10-18T00:00:00.000Z","dateModified":"2026-10-18T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/smart-ex-ryoushuusho/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"スマートEXの領収書は予約した当日に出せますか？","acceptedAnswer":{"@type":"Answer","text":"出せません。予約完了日の当日は表示できず、23時30分から5時30分の間も利用できません。予約完了日の翌日から最大15か月後まで、領収書表示サービスで表示できます。"}},{"@type":"Question","name":"スマートEXの領収書の宛名は後から変えられますか？","acceptedAnswer":{"@type":"Answer","text":"宛名は、領収書表示画面の宛名欄に入力して［印刷］を押す手順で入れます。公式ページには、表示期間内であれば回数に制限はないと書かれています。宛名を後から変更できるかどうかは、公式の案内で確認できませんでした。"}},{"@type":"Question","name":"スマートEXの領収書はインボイスに対応していますか？","acceptedAnswer":{"@type":"Answer","text":"公式FAQによると、発行される領収書はすべてインボイスに対応しています。領収書表示画面で［印刷］を押すと、登録番号等が記載された領収書が表示されます。"}},{"@type":"Question","name":"領収書表示サービスが使えないときはどうしますか？","acceptedAnswer":{"@type":"Answer","text":"複数人予約を分割した領収書を希望する場合や、解約後に別のアカウントを作成した場合などは、WEBフォームから申し込めます。紙で発行して郵送され、お届けまで1〜2週間程度かかります。PDFでの発行はできません。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>スマートEX 領収書の出し方｜宛名・インボイス・いつまで出せるかを公式FAQで整理</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec724vbl-g" x1="0" y1="0" x2="1" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec724vbl-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ec724vbl-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec724vbl-p)" data-astro-cid-yuatfsof></rect><circle cx="375" cy="113" r="145" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>スマートex</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>領収書</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>スマートEX 領収書の出し方｜宛名・インボイス・いつまで出せるかを公式FAQで整理</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-10-18T00:00:00.000Z" data-astro-cid-sgg5joot>2026年10月18日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約6分</p><aside class="receipt-facts" aria-labelledby="receipt-facts-heading" data-astro-cid-tcbxoyxt><h2 id="receipt-facts-heading" class="receipt-facts__title" data-astro-cid-tcbxoyxt>このサービスの確認済みの事実</h2><dl class="receipt-facts__list" data-astro-cid-tcbxoyxt><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>領収書の出し方</dt><dd data-astro-cid-tcbxoyxt><ul data-astro-cid-tcbxoyxt><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>スマートEX（ブラウザ）</strong>: ログイン →［ご利用履歴・領収書の発行］→ 照会期間 → ［領収書表示］→ 宛名入力 →［印刷］</li><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>スマートEX（EXアプリ）</strong>: 右上アカウント →［購入履歴・領収書］→ 期間（予約した日）→［領収書を発行する］→ 宛名入力 →［プレビュー］</li><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>複数人予約の分割／アカウント再作成で表示できない</strong>: WEBフォーム申請（紙・郵送、1〜2週間程度、PDFなし）</li><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>エクスプレス予約</strong>: ブラウザの［ご利用履歴・領収書の発行］、EXアプリの［購入履歴・領収書］。一部の法人会員は領収書不可（ご利用票）。駅窓口購入分は購入した窓口へ</li></ul></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>宛名</dt><dd data-astro-cid-tcbxoyxt>宛名を指定できる<span class="receipt-facts__note" data-astro-cid-tcbxoyxt>（領収書表示画面で宛名欄に任意の文字を入力）</span></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>インボイス</dt><dd data-astro-cid-tcbxoyxt>対応<span class="receipt-facts__note" data-astro-cid-tcbxoyxt>（発行される領収書はすべてインボイス対応。［印刷］で登録番号等が載る。EX予約も同様（一部法人会員は領収書不可））</span></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>登録番号</dt><dd data-astro-cid-tcbxoyxt>公式の案内では確認できず</dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>発行期限</dt><dd data-astro-cid-tcbxoyxt>予約完了日の翌日から最大15ヵ月後（23:30）まで。予約完了日当日と23:30〜5:30は不可</dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>最終確認日</dt><dd data-astro-cid-tcbxoyxt><time datetime="2026-10-17" data-astro-cid-tcbxoyxt>2026年10月17日</time></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>公式の情報</dt><dd data-astro-cid-tcbxoyxt><ul data-astro-cid-tcbxoyxt><li data-astro-cid-tcbxoyxt><a href="https://faq.expy.jp/faq/show/252?site_domain=smart-ex" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>https://faq.expy.jp/faq/show/252?site_domain=smart-ex</a></li><li data-astro-cid-tcbxoyxt><a href="https://smart-ex.jp/reservation/reserve_smart/receipt/" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>https://smart-ex.jp/reservation/reserve_smart/receipt/</a></li><li data-astro-cid-tcbxoyxt><a href="https://faq.expy.jp/faq/show/335?site_domain=smart-ex" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>https://faq.expy.jp/faq/show/335?site_domain=smart-ex</a></li><li data-astro-cid-tcbxoyxt><a href="https://faq.expy.jp/faq/show/21?site_domain=expy" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>https://faq.expy.jp/faq/show/21?site_domain=expy</a></li><li data-astro-cid-tcbxoyxt><a href="https://faq.expy.jp/faq/show/360?site_domain=smart-ex" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>https://faq.expy.jp/faq/show/360?site_domain=smart-ex</a></li></ul></dd></div></dl></aside><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#スマートex-領収書の結論と早見表" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>スマートEX 領収書の結論と早見表</a></li><li data-astro-cid-sgg5joot><a href="#スマートex-領収書の発行手順ブラウザとexアプリ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>スマートEX 領収書の発行手順（ブラウザとEXアプリ）</a></li><li data-astro-cid-sgg5joot><a href="#スマートex-領収書はいつまで出せる表示できる期間" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>スマートEX 領収書はいつまで出せる？表示できる期間</a></li><li data-astro-cid-sgg5joot><a href="#スマートex-領収書とインボイス登録番号" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>スマートEX 領収書とインボイス（登録番号）</a></li><li data-astro-cid-sgg5joot><a href="#払戻し遅延のときのスマートex-領収書" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>払戻し・遅延のときのスマートEX 領収書</a></li><li data-astro-cid-sgg5joot><a href="#領収書をpdfにしたいとき" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>領収書をPDFにしたいとき</a></li><li data-astro-cid-sgg5joot><a href="#領収書表示サービスが使えないときwebフォーム" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>領収書表示サービスが使えないとき：WEBフォーム</a></li><li data-astro-cid-sgg5joot><a href="#カード明細とスマートex-領収書の突き合わせ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>カード明細とスマートEX 領収書の突き合わせ</a></li><li data-astro-cid-sgg5joot><a href="#ex予約エクスプレス予約の領収書" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>EX予約（エクスプレス予約）の領収書</a></li><li data-astro-cid-sgg5joot><a href="#よくある質問とまとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>10</span>よくある質問とまとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="スマートex-領収書の結論と早見表">スマートEX 領収書の結論と早見表</h2>
+<p>スマートEXの領収書は「領収書表示サービス」で出します。予約完了日の翌日から最大15か月後まで、ブラウザかEXアプリで宛名を入力し、表示・印刷します。</p>
+<p>予約完了日の当日は表示できません。23時30分から5時30分の間も使えません。</p>
+<p>発行される領収書はすべてインボイスに対応していると、公式FAQに書かれています（2026年10月17日確認）。</p>
+<p>買い方や状況ごとの入口は、次の表のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>状況</th>
+<th>使う入口</th>
+<th>補足</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>パソコンやスマホのブラウザで予約した</td>
+<td>領収書表示サービス（ブラウザ）</td>
+<td>宛名欄に入力して［印刷］</td>
+</tr>
+<tr>
+<td>EXアプリで予約した</td>
+<td>EXアプリの［購入履歴・領収書］</td>
+<td>宛名入力後に［プレビュー］</td>
+</tr>
+<tr>
+<td>払戻しや遅延で一部返金があった</td>
+<td>領収書表示サービス</td>
+<td>3つのボタンの金額を合計して確認</td>
+</tr>
+<tr>
+<td>複数人予約を分けたい／アカウントを作り直した</td>
+<td>WEBフォーム</td>
+<td>紙で郵送、1〜2週間程度、PDFなし</td>
+</tr>
+</tbody>
+</table>
+<p>在来線や窓口で買ったきっぷの領収書は別の話です。新幹線の領収書全般は新幹線の領収書の取り方にまとめています。</p>
+<h2 id="スマートex-領収書の発行手順ブラウザとexアプリ">スマートEX 領収書の発行手順（ブラウザとEXアプリ）</h2>
+<p>ここでは公式FAQと公式ページの文言に沿って、手順を整理します。迷ったら公式の案内を優先してください。</p>
+<h3 id="ブラウザで出す場合">ブラウザで出す場合</h3>
+<ol>
+<li>スマートEXにログインします。</li>
+<li>メインメニューから［ご利用履歴・領収書の発行］を選びます。</li>
+<li>照会期間を指定します。</li>
+<li>希望する購入分の［領収書表示］を選びます。</li>
+<li>表示された領収書の宛名欄に、任意の文字を入力します。</li>
+<li>［印刷］ボタンを押します。</li>
+</ol>
+<p>［印刷］を押すと、インボイス対応の領収書画面が表示されます。表示期間内であれば、回数の制限はありません。</p>
+<h3 id="exアプリで出す場合">EXアプリで出す場合</h3>
+<ol>
+<li>ログイン後、トップ画面の右上にあるアカウントをタップします。</li>
+<li>［購入履歴・領収書］をタップします。</li>
+<li>期間を選びます。乗車日ではなく、予約した日を指定します。</li>
+<li>該当の購入履歴を選びます。</li>
+<li>［領収書を発行する］をタップします。</li>
+<li>宛名を入力し、［プレビュー］をタップします。ブラウザに切り替わり、領収書が表示されます。</li>
+</ol>
+<p>照会期間は、乗車日ではなく予約した日で指定します。</p>
+<h3 id="宛名には何を書くか">宛名には何を書くか</h3>
+<p>宛名欄には任意の文字を入力できます（公式ページ）。屋号・個人名・会社名のどれを入れるかは公式の案内には書かれていません。精算先から指定がある場合は、その指定に合わせてください。</p>
+<p>何が経費になるかの考え方は、<a href="/articles/keihi-naru-mono-naranai-mono/">経費になるもの・ならないもの</a>を参考にしてください。個別の判断は、税理士または税務署へご確認ください。</p>
+<h2 id="スマートex-領収書はいつまで出せる表示できる期間">スマートEX 領収書はいつまで出せる？表示できる期間</h2>
+<p>表示できる期間は、予約完了日の翌日から最大15か月後（23:30）までです。公式ページにそう書かれています。</p>
+<p>覚えておきたいのは、次の3点です。</p>
+<ol>
+<li>予約完了日の当日は、領収書を表示できない</li>
+<li>23時30分から5時30分の間は、サービスを利用できない</li>
+<li>表示期間内なら、表示の回数に制限はない</li>
+</ol>
+<p>起点は乗車日ではなく、予約完了日です。</p>
+<p>表示期間を過ぎる前に、保管用に印刷や保存をしておく必要があります。電子データでの保存の考え方は、<a href="/articles/ryoushuusho-hozon-e-bunsho-taiou/">領収書の保存・電子文書への対応</a>で解説しています。</p>
+<h2 id="スマートex-領収書とインボイス登録番号">スマートEX 領収書とインボイス（登録番号）</h2>
+<p>公式FAQによると、スマートEXで発行される領収書はすべてインボイスに対応しています。領収書表示画面で［印刷］を押すと、登録番号等が記載された領収書が表示されます。</p>
+<p>登録番号の数字は、ここには書きません。表示された領収書の画面で、ご自身で確認してください。</p>
+<p>3万円未満の公共交通機関の運賃に関する国税庁の特例（公共交通機関特例）の扱いは、新幹線の領収書の記事で説明しています。制度の適用は事業の状況で変わるため、個別の判断は税理士または税務署へご相談ください。</p>
+<h2 id="払戻し遅延のときのスマートex-領収書">払戻し・遅延のときのスマートEX 領収書</h2>
+<p>予約を払い戻したときの手数料や、列車が2時間以上遅れて一部料金の払戻しを受けたときも、領収書は発行できます（公式FAQ、2026年10月17日確認）。</p>
+<p>金額は、次の3つのボタンに分かれて表示されます。</p>
+<table>
+<thead>
+<tr>
+<th>ボタン</th>
+<th>表示される金額</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>［領収書表示］</td>
+<td>当初購入の金額</td>
+</tr>
+<tr>
+<td>［払戻明細］</td>
+<td>払戻しの金額</td>
+</tr>
+<tr>
+<td>［払戻手数料］</td>
+<td>払戻手数料（手数料がある場合のみ）</td>
+</tr>
+</tbody>
+</table>
+<p>それぞれを出力して合計すると、最終的に支払った金額が分かります。公式FAQでは、これらをそれぞれ出力して合計すると最終的に支払った金額が分かると案内されています。</p>
+<p>複数の利用がある場合は、領収書の左上にある「お預かり番号」が一致するものでまとめて確認します。番号が違う書類を混ぜないよう注意してください。</p>
+<h2 id="領収書をpdfにしたいとき">領収書をPDFにしたいとき</h2>
+<p>表示した領収書をPDFで保存できるかは、お使いの端末によって異なります。公式FAQでは、保存の可否や操作方法は端末のメーカーに問い合わせるよう案内されています。</p>
+<p>WEBフォームで頼んだ領収書は紙で郵送され、PDFでは発行されません。電子データで保存する場合の考え方は、<a href="/articles/ryoushuusho-hozon-e-bunsho-taiou/">領収書の保存・電子文書への対応</a>を参照してください。</p>
+<h2 id="領収書表示サービスが使えないときwebフォーム">領収書表示サービスが使えないとき：WEBフォーム</h2>
+<p>次のような場合は、WEBフォームから領収書を依頼できます（公式FAQ、2026年10月17日確認）。</p>
+<ul>
+<li>複数人予約を分割した領収書を希望する場合</li>
+<li>解約後に別のアカウントを作成したなどで、領収書発行サービスが使えない場合</li>
+</ul>
+<p>WEBフォームの領収書は、紙で発行され、郵送されます。お届けまで1〜2週間程度かかります。PDFでの発行はできません。</p>
+<p>お届けまで時間がかかるため、提出期限がある場合は余裕をもって申し込んでください。</p>
+<h2 id="カード明細とスマートex-領収書の突き合わせ">カード明細とスマートEX 領収書の突き合わせ</h2>
+<p>ご利用履歴では、予約、変更、払戻しの履歴を確認できます。公式ページには、カード明細との照合に活用できると書かれています。履歴は予約日の翌日から最大15か月分です。</p>
+<p>確認の手順は、次のとおりです。</p>
+<ol>
+<li>［ご利用履歴・領収書の発行］をタップする</li>
+<li>［ご利用履歴一覧］で照会期間を選ぶ</li>
+<li>［再検索］をタップする</li>
+</ol>
+<p>ログイン後の画面から発行する領収書や、きっぷを受け取ったときに発行されるご利用票には、カード発行会社と違う名前が印字されることがあります。公式FAQによると、カードのブランドごとに次の名前が印字されます。</p>
+<table>
+<thead>
+<tr>
+<th>ブランド</th>
+<th>印字される名前</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VISA・Master</td>
+<td>MUFG</td>
+</tr>
+<tr>
+<td>JCB・AMEX・Discover</td>
+<td>JCB</td>
+</tr>
+<tr>
+<td>Diners</td>
+<td>DIN</td>
+</tr>
+</tbody>
+</table>
+<p>これはカード発行会社に関わらず印字されるものです。また、ご利用票やカード明細に表示される発売会社名は発駅で変わります。</p>
+<ul>
+<li>東京〜京都発：JR東海</li>
+<li>新神戸〜小倉発：JR西日本</li>
+<li>新鳥栖〜鹿児島中央発：JR九州</li>
+</ul>
+<p>新大阪・博多発は、方面によって変わります。カード明細と照合するときは、この点に注意してください。</p>
+<h2 id="ex予約エクスプレス予約の領収書">EX予約（エクスプレス予約）の領収書</h2>
+<p>EX予約（エクスプレス予約）も、公式FAQの形はスマートEXと近く、「領収書表示サービス」を使います。発行される領収書は、すべてインボイスに対応しているとされています。</p>
+<p>注意点は、次の3つです。</p>
+<ol>
+<li>一部の法人会員は、領収書が発行できず、ご利用票の発行になる</li>
+<li>ご利用票は、改札機から出力されるか、きっぷ受取時に渡される</li>
+<li>各帳票を経費精算などに使えるかは、会員自身が事前に確認する</li>
+</ol>
+<p>エクスプレス予約とは別に、JR東海・JR西日本・JR九州の駅窓口で買った乗車券類の領収書は、買った駅窓口に申し出ます。</p>
+<p>スマートEXとEX予約は、別のサービスです。どちらで予約したかを、まず確認してください。</p>
+
+<h2 id="よくある質問とまとめ">よくある質問とまとめ</h2>
+<p>よくある質問は、フロントマターのFAQにも載せています。ここでは要点を整理します。</p>
+<ul>
+<li>出せる期間：予約完了日の翌日から最大15か月後まで</li>
+<li>出せない時間：予約完了日の当日、23時30分〜5時30分</li>
+<li>出し方：ブラウザは［ご利用履歴・領収書の発行］、アプリは［購入履歴・領収書］</li>
+<li>インボイス：すべて対応。［印刷］で登録番号等が載る画面になる</li>
+<li>払戻し：3つのボタンを合計して最終支払額を確認</li>
+<li>特殊な場合：WEBフォーム（紙・郵送・1〜2週間程度・PDFなし）</li>
+</ul>
+<p>経費にしてよいかどうかや、インボイスの適用の可否は、事業の状況で変わります。国税庁の一般的な説明を確認したうえで、個別の判断は税理士または税務署へご相談ください。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>スマートEXの領収書は予約した当日に出せますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>出せません。予約完了日の当日は表示できず、23時30分から5時30分の間も利用できません。予約完了日の翌日から最大15か月後まで、領収書表示サービスで表示できます。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>スマートEXの領収書の宛名は後から変えられますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>宛名は、領収書表示画面の宛名欄に入力して［印刷］を押す手順で入れます。公式ページには、表示期間内であれば回数に制限はないと書かれています。宛名を後から変更できるかどうかは、公式の案内で確認できませんでした。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>スマートEXの領収書はインボイスに対応していますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式FAQによると、発行される領収書はすべてインボイスに対応しています。領収書表示画面で［印刷］を押すと、登録番号等が記載された領収書が表示されます。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>領収書表示サービスが使えないときはどうしますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>複数人予約を分割した領収書を希望する場合や、解約後に別のアカウントを作成した場合などは、WEBフォームから申し込めます。紙で発行して郵送され、お届けまで1〜2週間程度かかります。PDFでの発行はできません。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://faq.expy.jp/faq/show/252?site_domain=smart-ex" rel="noopener" target="_blank" data-astro-cid-sgg5joot>スマートEX 領収書の発行方法（公式FAQ）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://smart-ex.jp/reservation/reserve_smart/receipt/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>領収書表示サービス（スマートEX公式）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://faq.expy.jp/faq/show/335?site_domain=smart-ex" rel="noopener" target="_blank" data-astro-cid-sgg5joot>払戻し時の領収書（公式FAQ）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://faq.expy.jp/faq/show/1298?site_domain=smart-ex" rel="noopener" target="_blank" data-astro-cid-sgg5joot>領収書のPDF保存（公式FAQ）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://faq.expy.jp/faq/show/244?site_domain=smart-ex" rel="noopener" target="_blank" data-astro-cid-sgg5joot>ご利用履歴の確認（公式FAQ）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://faq.expy.jp/faq/show/361?site_domain=smart-ex" rel="noopener" target="_blank" data-astro-cid-sgg5joot>カード会社名の印字（公式FAQ）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://faq.expy.jp/faq/show/360?site_domain=smart-ex" rel="noopener" target="_blank" data-astro-cid-sgg5joot>発売会社名（公式FAQ）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://faq.expy.jp/faq/show/21?site_domain=expy" rel="noopener" target="_blank" data-astro-cid-sgg5joot>エクスプレス予約の領収書・ご利用票（公式FAQ）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/kakutei-shinkoku/" data-astro-cid-sgg5joot>確定申告・会計ソフト・経費の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Amazonビジネスのグループ設定の手順｜部署ごとに支払い方法と承認を分ける考え方 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="Amazonビジネスのグループは、部署・注文内容・プロジェクトごとに作り、支払い方法や住所、承認の要否を分けられます。追加と役割の割り当て、削除の条件、支払い方法の共有の注意点を公式ヘルプに沿って整理します。"><link rel="canonical" href="https://soroecho.com/articles/amazon-business-group-settei/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="Amazonビジネスのグループ設定の手順｜部署ごとに支払い方法と承認を分ける考え方 | そろえ帳"><meta property="og:description" content="Amazonビジネスのグループは、部署・注文内容・プロジェクトごとに作り、支払い方法や住所、承認の要否を分けられます。追加と役割の割り当て、削除の条件、支払い方法の共有の注意点を公式ヘルプに沿って整理します。"><meta property="og:url" content="https://soroecho.com/articles/amazon-business-group-settei/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/amazon-business-group-settei.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Amazonビジネスのグループ設定の手順｜部署ごとに支払い方法と承認を分ける考え方 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Amazonビジネスのグループ設定の手順｜部署ごとに支払い方法と承認を分ける考え方 | そろえ帳"><meta name="twitter:description" content="Amazonビジネスのグループは、部署・注文内容・プロジェクトごとに作り、支払い方法や住所、承認の要否を分けられます。追加と役割の割り当て、削除の条件、支払い方法の共有の注意点を公式ヘルプに沿って整理します。"><meta name="twitter:image" content="https://soroecho.com/og/amazon-business-group-settei.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"Amazonビジネスのグループ設定の手順｜部署ごとに支払い方法と承認を分ける考え方","item":"https://soroecho.com/articles/amazon-business-group-settei/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Amazonビジネスのグループ設定の手順｜部署ごとに支払い方法と承認を分ける考え方","description":"Amazonビジネスのグループは、部署・注文内容・プロジェクトごとに作り、支払い方法や住所、承認の要否を分けられます。追加と役割の割り当て、削除の条件、支払い方法の共有の注意点を公式ヘルプに沿って整理します。","url":"https://soroecho.com/articles/amazon-business-group-settei/","datePublished":"2026-10-19T00:00:00.000Z","dateModified":"2026-10-19T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/amazon-business-group-settei/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Amazonビジネスのグループは何の単位で作れますか？","acceptedAnswer":{"@type":"Answer","text":"公式ヘルプでは、部署・注文内容・プロジェクトなどでグループを作れるとされています。管理者は1つまたは複数のグループを管理できます。"}},{"@type":"Question","name":"グループを削除するにはどうすればよいですか？","acceptedAnswer":{"@type":"Answer","text":"削除できるのは、ユーザーの登録がないグループだけです。先にサブグループやユーザーを別のグループへ移動するか削除します。その後、設定の「グループ」からアクションで「削除」を選びます。"}},{"@type":"Question","name":"グループを切り替える操作手順はありますか？","acceptedAnswer":{"@type":"Answer","text":"今回確認した公式ヘルプには、切り替えの操作手順の記載がありません。そのため手順は断定しません。グループの追加と役割の割り当てを整理し、実際の画面表示は管理画面でご確認ください。"}},{"@type":"Question","name":"支払い方法を共有すると、メンバーも変更できますか？","acceptedAnswer":{"@type":"Answer","text":"メンバーは共有された支払い方法を使えますが、変更はできません。一方、そのグループの管理者は全員、共有された支払い方法を変更・削除できます。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>Amazonビジネスのグループ設定の手順｜部署ごとに支払い方法と承認を分ける考え方</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1aaynx6-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1aaynx6-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ec1aaynx6-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1aaynx6-p)" data-astro-cid-yuatfsof></rect><circle cx="377" cy="47" r="155" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>amazonビジネス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>グループ</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>設定</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--amazon-business">Amazonビジネス実務</span><h1 data-astro-cid-sgg5joot>Amazonビジネスのグループ設定の手順｜部署ごとに支払い方法と承認を分ける考え方</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-10-19T00:00:00.000Z" data-astro-cid-sgg5joot>2026年10月19日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約6分</p><p class="cta-inline">Amazonビジネスは法人・個人事業主向けのAmazonアカウントで、登録は無料です。<a href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">公式サイトで詳細を見る</a></p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論グループは部署注文内容プロジェクトで作り支払い方法と承認を分ける" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：グループは「部署・注文内容・プロジェクト」で作り、支払い方法と承認を分ける</a></li><li data-astro-cid-sgg5joot><a href="#グループでできることを先に整理する" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>グループでできることを先に整理する</a></li><li data-astro-cid-sgg5joot><a href="#あなたの場合はどう分ける規模別の考え方" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>あなたの場合はどう分ける？（規模別の考え方）</a></li><li data-astro-cid-sgg5joot><a href="#グループに入れられる役割を知る" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>グループに入れられる役割を知る</a></li><li data-astro-cid-sgg5joot><a href="#グループ追加と役割の割り当て手順" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>グループ追加と役割の割り当て手順</a></li><li data-astro-cid-sgg5joot><a href="#グループの編集削除と削除できない場合の対処" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>グループの編集・削除と、削除できない場合の対処</a></li><li data-astro-cid-sgg5joot><a href="#グループの切り替えについて分かっていること" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>「グループの切り替え」について分かっていること</a></li><li data-astro-cid-sgg5joot><a href="#支払い方法を共有するときの注意" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>支払い方法を共有するときの注意</a></li><li data-astro-cid-sgg5joot><a href="#見積書や請求の確認は別の手続き" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>見積書や請求の確認は別の手続き</a></li><li data-astro-cid-sgg5joot><a href="#まとめ設定前に決めておく3つのこと" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>10</span>まとめ：設定前に決めておく3つのこと</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論グループは部署注文内容プロジェクトで作り支払い方法と承認を分ける">結論：グループは「部署・注文内容・プロジェクト」で作り、支払い方法と承認を分ける</h2>
+<p>Amazonビジネスのグループは、部署・注文内容・プロジェクトなどの単位で作れます。グループごとに支払い方法・住所・配送先を設定でき、承認が必要かどうかも分けられます。</p>
+<p>設定の流れは、グループを作り、ユーザーを追加し、役割を割り当てる、の3段階です。管理者は1つでも複数でもグループを管理できます。</p>
+<p>なお「グループの切り替え」の操作手順は、今回確認した公式ヘルプには記載がありません。この記事では手順を断定せず、追加と役割の割り当てを中心に説明します。</p>
+<p>なお、この記事の内容は2026年10月12日時点で確認した公式ヘルプに基づきます。</p>
+<h2 id="グループでできることを先に整理する">グループでできることを先に整理する</h2>
+<p>グループを使う目的は、「誰が」「どの支払い方法で」「どこへ届けるか」を分けることです。公式ヘルプで確認できる内容は次のとおりです。</p>
+<ul>
+<li>部署・注文内容・プロジェクトなどでグループを作れる</li>
+<li>管理者は1つまたは複数のグループを管理できる</li>
+<li>グループごとに、個別または共通の支払い方法・住所・配送先を設定できる</li>
+<li>承認が必要な場合と、不要な場合がある</li>
+<li>グループ情報はダウンロードできる</li>
+</ul>
+<p>たとえば、営業部は営業部のカード、制作部は制作部のカード、というように分けられます。逆に、全部署で同じ支払い方法を使うこともできます。</p>
+<p>「どう分けるか」は会社の運用ルール次第です。まず次の表で、自社の分け方を考えてみてください。</p>
+<table>
+<thead>
+<tr>
+<th>分け方</th>
+<th>向いている場面</th>
+<th>決めておくこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>部署ごと</td>
+<td>費用を部署単位で管理したい</td>
+<td>部署ごとの支払い方法と配送先</td>
+</tr>
+<tr>
+<td>注文内容ごと</td>
+<td>消耗品や設備など種類で分けたい</td>
+<td>種類ごとの承認の要否</td>
+</tr>
+<tr>
+<td>プロジェクトごと</td>
+<td>案件単位で費用を把握したい</td>
+<td>終了後のグループの扱い</td>
+</tr>
+</tbody>
+</table>
+<h2 id="あなたの場合はどう分ける規模別の考え方">あなたの場合はどう分ける？（規模別の考え方）</h2>
+<p>読者の状況によって、グループの必要性は変わります。</p>
+<p><strong>ひとり社長・個人事業主（従業員0〜2人）の場合</strong>
+グループを細かく分ける必要は小さいでしょう。まずは1つのグループで始め、案件ごとに費用を分けたくなった時点でプロジェクト単位のグループを検討する程度で足ります。</p>
+<p><strong>従業員5〜30人の会社で備品を買う総務・購買担当の場合</strong>
+部署ごとに支払い方法や承認を分けたいなら、グループが役立ちます。承認が必要な部署と不要な部署を分けると、少額の補充は現場で、高額なものは承認付き、という運用ができます。</p>
+<p><strong>個人用アカウントとの違いが気になる場合</strong>
+アカウントの違いは、関連記事の <a href="/articles/amazon-business-kojin-chigai/">Amazonビジネスと個人アカウントの違い</a> で整理しています。</p>
+<h2 id="グループに入れられる役割を知る">グループに入れられる役割を知る</h2>
+<p>グループには、次の役割のユーザーを複数含められます。</p>
+<ol>
+<li>管理者</li>
+<li>購買依頼者</li>
+<li>パンチアウト購買依頼者</li>
+<li>システム担当者</li>
+<li>会計担当者</li>
+</ol>
+<p>役割ごとに何ができるかの詳しい権限は、今回の確認範囲では細かく取得していません。そのため、ここでは「これらの役割を割り当てられる」という事実だけを示します。</p>
+<p>実際に割り当てる前に、画面に表示される役割の説明文を読み、その人に必要な範囲かを確かめてください。</p>
+<h2 id="グループ追加と役割の割り当て手順">グループ追加と役割の割り当て手順</h2>
+<p>ユーザーをグループに追加する手順は、公式ヘルプでは次のとおりです。</p>
+<ol>
+<li>設定から「ユーザー」を開く</li>
+<li>追加したいユーザーを選ぶ</li>
+<li>「他のグループに追加」を選ぶ</li>
+<li>グループ名を検索する</li>
+<li>役割を選ぶ</li>
+<li>「グループに追加」を押す</li>
+</ol>
+<p>[要実演スクショ: 設定の「ユーザー」画面と「他のグループに追加」の画面]</p>
+<p>別の入口として、グループ側から追加する方法もあります。設定の「グループ」を開き、該当グループで「ユーザーの追加」を選びます。</p>
+<p>[要実演スクショ: 設定の「グループ」画面とアクションのメニュー]</p>
+<p>追加するときは、同じ人に複数の役割を割り当てる必要があるかを先に決めておくと迷いません。役割は「その人が実際にやる仕事」に合わせて選びます。</p>
+<aside class="cta-box cta-box--subtle"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">Amazonビジネス</p><h3 class="cta-box__title">法人・個人事業主向けのAmazonアカウント</h3><p class="cta-box__body">請求書払いや数量割引など、通常のAmazonアカウントにはない機能が使えます。登録は無料です（詳細は公式サイトの案内に基づきます）。</p><a class="cta-box__button" href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">Amazonビジネスの登録ページへ（公式）</a></aside>
+<h2 id="グループの編集削除と削除できない場合の対処">グループの編集・削除と、削除できない場合の対処</h2>
+<p>グループの編集や削除は、設定の「グループ」から行います。</p>
+<ol>
+<li>設定から「グループ」を開く</li>
+<li>対象のグループのアクションを開く</li>
+<li>「グループを編集」または「削除」を選ぶ</li>
+</ol>
+<p>ただし、削除できるのは<strong>ユーザーの登録がないグループだけ</strong>です。ユーザーやサブグループが残っていると削除できません。</p>
+<p>削除できないときは、次の順で進めます。</p>
+<ol>
+<li>グループに登録されているユーザーを確認する</li>
+<li>サブグループがあれば、移動または削除する</li>
+<li>ユーザーを別のグループへ移動、または削除する</li>
+<li>空になったグループを削除する</li>
+</ol>
+<p>プロジェクトが終わったときの後片付けにも、この手順が使えます。削除前に、グループ情報をダウンロードして記録を残しておくと安心です。</p>
+<h2 id="グループの切り替えについて分かっていること">「グループの切り替え」について分かっていること</h2>
+<p>「切り替え」を検索する人は、複数のグループを使い分ける場面を想定していることが多いでしょう。ただ、今回確認した公式ヘルプには、切り替えの操作手順は書かれていません。</p>
+<p>そのため、画面上のどこをどう押せば切り替わる、とは断定しません。</p>
+<p>代わりに、確認できる事実から考え方を整理します。</p>
+<ul>
+<li>管理者は複数のグループを管理できる</li>
+<li>ユーザーは「他のグループに追加」で別のグループにも入れる</li>
+<li>役割はグループへの追加時に選ぶ</li>
+</ul>
+<p>つまり、複数のグループで作業する場合は、必要なグループにあらかじめ追加し、役割を割り当てておく、というのが公式に確認できる範囲です。実際の画面での挙動は、管理画面でお確かめください。</p>
+<h2 id="支払い方法を共有するときの注意">支払い方法を共有するときの注意</h2>
+<p>グループごとに支払い方法を分けるだけでなく、共通の支払い方法を共有することもできます。公式ヘルプで確認できる条件は次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>共有できる数</td>
+<td>最大1,000グループまで</td>
+</tr>
+<tr>
+<td>一度に追加できる数</td>
+<td>20グループずつ</td>
+</tr>
+<tr>
+<td>管理者の権限</td>
+<td>そのグループの管理者は全員、変更・削除できる</td>
+</tr>
+<tr>
+<td>メンバーの権限</td>
+<td>使えるが、変更はできない</td>
+</tr>
+</tbody>
+</table>
+<p>特に注意したいのは、共有すると<strong>そのグループの管理者全員</strong>が支払い方法を変更・削除できる点です。管理者の人数が多いグループに共有する前に、誰が管理者になっているかを確認してください。</p>
+<p>共有の前に、次の点を確かめておくと安心です。</p>
+<ol>
+<li>共有先グループの管理者は誰か</li>
+<li>管理者が不要に増えていないか</li>
+<li>メンバーに使わせるだけでよいか</li>
+</ol>
+<h2 id="見積書や請求の確認は別の手続き">見積書や請求の確認は別の手続き</h2>
+<p>グループで支払い方法や承認を整えたあとは、社内の稟議（りんぎ）や取引先への提出で書類が必要になることがあります。見積書の発行については、<a href="/articles/amazon-business-mitsumorisho-hakkou/">Amazonビジネスで見積書を発行する手順</a> を参照してください。</p>
+<p>グループの設定と書類の準備は別の作業ですが、承認の流れを決めるときに一緒に考えると運用が整います。</p>
+<aside class="cta-box cta-box--subtle"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">Amazonビジネス</p><h3 class="cta-box__title">法人・個人事業主向けのAmazonアカウント</h3><p class="cta-box__body">請求書払いや数量割引など、通常のAmazonアカウントにはない機能が使えます。登録は無料です（詳細は公式サイトの案内に基づきます）。</p><a class="cta-box__button" href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">Amazonビジネスの登録ページへ（公式）</a></aside>
+<h2 id="まとめ設定前に決めておく3つのこと">まとめ：設定前に決めておく3つのこと</h2>
+<p>グループを作る前に、次の3つを決めておくと、あとで直す手間が減ります。</p>
+<ol>
+<li><strong>分け方</strong>：部署、注文内容、プロジェクトのどれで分けるか</li>
+<li><strong>支払いと届け先</strong>：グループごとに分けるか、共通にするか</li>
+<li><strong>承認の要否</strong>：承認が必要なグループと不要なグループをどう分けるか</li>
+</ol>
+<p>そのうえで、グループを作り、ユーザーを追加し、役割を割り当てます。不要になったグループは、ユーザーを移動してから削除します。</p>
+<p>切り替えの手順など、公式ヘルプで確認できない点は断定せず、管理画面の表示に従って進めてください。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Amazonビジネスのグループは何の単位で作れますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式ヘルプでは、部署・注文内容・プロジェクトなどでグループを作れるとされています。管理者は1つまたは複数のグループを管理できます。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>グループを削除するにはどうすればよいですか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>削除できるのは、ユーザーの登録がないグループだけです。先にサブグループやユーザーを別のグループへ移動するか削除します。その後、設定の「グループ」からアクションで「削除」を選びます。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>グループを切り替える操作手順はありますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>今回確認した公式ヘルプには、切り替えの操作手順の記載がありません。そのため手順は断定しません。グループの追加と役割の割り当てを整理し、実際の画面表示は管理画面でご確認ください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>支払い方法を共有すると、メンバーも変更できますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>メンバーは共有された支払い方法を使えますが、変更はできません。一方、そのグループの管理者は全員、共有された支払い方法を変更・削除できます。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=201633320" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス ヘルプ：グループの作成と管理</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-12）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=202136670" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス ヘルプ：ユーザーを他のグループに追加する</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-12）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=202025770" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス ヘルプ：支払い方法の共有</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-12）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/amazon-business-mitsumorisho-hakkou/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1oukbk0-g" x1="0" y1="0" x2="1" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1oukbk0-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1oukbk0-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1oukbk0-p)" data-astro-cid-yuatfsof></rect><circle cx="366" cy="57" r="153" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Amazon</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>見積書</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>出し方</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--amazon-business">Amazonビジネス実務</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>Amazonの見積書の出し方｜カートからPDFで保存する手順（Amazonビジネス・登録無料）</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>Amazonで見積書が必要なときは、登録無料のAmazonビジネスを使います。注文前はカートから参考見積書、注文後は注文履歴から見積書をPDFで保存でき、稟議や経費精算に使えます。個人アカウントしかない場合の考え方と、配送料が載らない・ダウンロードできないときの注意点もまとめました。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-06T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月6日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約12分</p></div></a><a class="card article-card" href="/articles/kojin-jigyou-kaigyoutodoke-nashi-amazon-business-toroku/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1ptehj0-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1ptehj0-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1ptehj0-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1ptehj0-p)" data-astro-cid-yuatfsof></rect><circle cx="363" cy="90" r="176" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>個人事業主</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>開業届なし</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Amazonビジネス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--amazon-business">Amazonビジネス実務</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>Amazonビジネスの登録に必要書類は？開業届なしの個人事業主が用意するもの一覧</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>個人事業主がAmazonビジネスに登録するときは、確認書類を1点提出します。開業届がなくても、過去2年以内の確定申告書B・収支内訳書、インボイスの登録通知書などで代わりになります。公式ヘルプの書類一覧と提出時の注意点、登録手順、屋号の扱いを整理しました。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-06T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月6日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/amazon-business/" data-astro-cid-sgg5joot>Amazonビジネス実務の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/business-prime/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 L4 4"></path><path d="M4 20 L21 20"></path><path d="M7 20 L7 14"></path><path d="M11 20 L11 10"></path><path d="M15 20 L15 15"></path><path d="M19 20 L19 7"></path><path d="M5 16 L20 8"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>Business Prime 損益分岐計算</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>注文回数と送料を入れると、Businessプライムの元が取れる回数がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/amazon-business-check/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 9 l2 2 l3.5 -3.5"></path><path d="M8 15 h8"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>Amazonビジネスが必要か判定</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>5つの質問に答えるだけで、Amazonビジネスが「要る」「今は要らない」「どちらでも」のどれかがわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

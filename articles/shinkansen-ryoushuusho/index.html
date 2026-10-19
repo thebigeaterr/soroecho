@@ -1,0 +1,206 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>新幹線の領収書の出し方｜えきねっと・スマートEX・窓口別とインボイス・3万円未満の扱い | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="新幹線の領収書は買い方で出し方が変わります。えきねっと・スマートEX・エクスプレス予約・駅の窓口や券売機ごとの手順を整理し、国税庁のQ&amp;Aで示された、3万円未満の鉄道運賃の公共交通機関特例（帳簿のみの保存）と、経費精算のポイントも整理します。"><link rel="canonical" href="https://soroecho.com/articles/shinkansen-ryoushuusho/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="新幹線の領収書の出し方｜えきねっと・スマートEX・窓口別とインボイス・3万円未満の扱い | そろえ帳"><meta property="og:description" content="新幹線の領収書は買い方で出し方が変わります。えきねっと・スマートEX・エクスプレス予約・駅の窓口や券売機ごとの手順を整理し、国税庁のQ&amp;Aで示された、3万円未満の鉄道運賃の公共交通機関特例（帳簿のみの保存）と、経費精算のポイントも整理します。"><meta property="og:url" content="https://soroecho.com/articles/shinkansen-ryoushuusho/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/shinkansen-ryoushuusho.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="新幹線の領収書の出し方｜えきねっと・スマートEX・窓口別とインボイス・3万円未満の扱い — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="新幹線の領収書の出し方｜えきねっと・スマートEX・窓口別とインボイス・3万円未満の扱い | そろえ帳"><meta name="twitter:description" content="新幹線の領収書は買い方で出し方が変わります。えきねっと・スマートEX・エクスプレス予約・駅の窓口や券売機ごとの手順を整理し、国税庁のQ&amp;Aで示された、3万円未満の鉄道運賃の公共交通機関特例（帳簿のみの保存）と、経費精算のポイントも整理します。"><meta name="twitter:image" content="https://soroecho.com/og/shinkansen-ryoushuusho.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"新幹線の領収書の出し方｜えきねっと・スマートEX・窓口別とインボイス・3万円未満の扱い","item":"https://soroecho.com/articles/shinkansen-ryoushuusho/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"新幹線の領収書の出し方｜えきねっと・スマートEX・窓口別とインボイス・3万円未満の扱い","description":"新幹線の領収書は買い方で出し方が変わります。えきねっと・スマートEX・エクスプレス予約・駅の窓口や券売機ごとの手順を整理し、国税庁のQ&Aで示された、3万円未満の鉄道運賃の公共交通機関特例（帳簿のみの保存）と、経費精算のポイントも整理します。","url":"https://soroecho.com/articles/shinkansen-ryoushuusho/","datePublished":"2026-10-19T00:00:00.000Z","dateModified":"2026-10-19T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/shinkansen-ryoushuusho/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"新幹線の領収書は、どこで発行できますか。","acceptedAnswer":{"@type":"Answer","text":"買い方で異なります。えきねっとはマイページ、スマートEX・エクスプレス予約は領収書表示サービス、JR東日本の駅の窓口や券売機はその場で発行できます。JR東日本以外の駅は各社の案内で確認してください。"}},{"@type":"Question","name":"新幹線代が3万円未満なら、領収書はいりませんか。","acceptedAnswer":{"@type":"Answer","text":"国税庁のQ&Aでは、3万円未満の鉄道運賃は適格請求書の交付義務が免除され、一定の事項を記載した帳簿のみの保存で仕入税額控除が認められるとされています。ただし帳簿の記載事項は必要です。個別の判断は税理士や税務署に確認してください。"}},{"@type":"Question","name":"4人分の新幹線きっぷを1回で買った場合、3万円の判定はどうなりますか。","acceptedAnswer":{"@type":"Answer","text":"国税庁Q&Aでは、1回の取引の税込価額で判定します。大人運賃13,000円で4人分なら、4人分の52,000円で判定するという例が示されています。"}},{"@type":"Question","name":"領収書の宛名を後から直せますか。","acceptedAnswer":{"@type":"Answer","text":"JR東日本の場合、お手元の領収書と引き換えに、新しい宛名の領収書をみどりの窓口や改札で発行できます。JR東日本以外の会社が発行した領収書は対応できないとされています。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>新幹線の領収書の出し方｜えきねっと・スマートEX・窓口別とインボイス・3万円未満の扱い</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecgfmxb6-g" x1="0" y1="0" x2="1" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecgfmxb6-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecgfmxb6-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecgfmxb6-p)" data-astro-cid-yuatfsof></rect><circle cx="346" cy="88" r="172" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>新幹線</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>領収書</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>新幹線の領収書の出し方｜えきねっと・スマートEX・窓口別とインボイス・3万円未満の扱い</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-10-19T00:00:00.000Z" data-astro-cid-sgg5joot>2026年10月19日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約7分</p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#新幹線の領収書は買い方で出し方が違う早見表" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>新幹線の領収書は買い方で出し方が違う【早見表】</a></li><li data-astro-cid-sgg5joot><a href="#えきねっとで買った新幹線の領収書を出す" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>えきねっとで買った新幹線の領収書を出す</a></li><li data-astro-cid-sgg5joot><a href="#スマートexエクスプレス予約で買った新幹線の領収書を出す" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>スマートEX・エクスプレス予約で買った新幹線の領収書を出す</a></li><li data-astro-cid-sgg5joot><a href="#駅の窓口券売機で買った新幹線の領収書を出す" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>駅の窓口・券売機で買った新幹線の領収書を出す</a></li><li data-astro-cid-sgg5joot><a href="#新幹線の領収書とインボイス3万円未満の特例とは" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>新幹線の領収書とインボイス：3万円未満の特例とは</a></li><li data-astro-cid-sgg5joot><a href="#新幹線の領収書を経費にするときの精算のコツ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>新幹線の領収書を経費にするときの精算のコツ</a></li><li data-astro-cid-sgg5joot><a href="#新幹線の領収書チェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>新幹線の領収書チェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#次の一歩領収書や交通費の記録をまとめる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>次の一歩：領収書や交通費の記録をまとめる</a></li><li data-astro-cid-sgg5joot><a href="#よくある質問とまとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>よくある質問とまとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="新幹線の領収書は買い方で出し方が違う早見表">新幹線の領収書は買い方で出し方が違う【早見表】</h2>
+<p>新幹線の領収書は、きっぷの買い方によって出す場所が変わります。えきねっとはマイページ、スマートEX・エクスプレス予約は領収書表示サービス、駅の窓口・券売機はその場で出せます。</p>
+<p>インボイス制度（消費税の適格請求書等保存方式）では、3万円未満の鉄道運賃は適格請求書の交付義務が免除されます。3万円以上は適格請求書の保存が仕入税額控除の要件です（国税庁Q&amp;A、2026年10月17日確認）。</p>
+<p>まず、自分がどの方法で買ったかを下の表で確認してください。</p>
+<table>
+<thead>
+<tr>
+<th>買い方</th>
+<th>領収書の出し方</th>
+<th>詳しい記事</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>えきねっと</td>
+<td>マイページからPDFで出す</td>
+<td><a href="/articles/ekinet-ryoushuusho/">えきねっとの領収書</a></td>
+</tr>
+<tr>
+<td>スマートEX・エクスプレス予約</td>
+<td>領収書表示サービスで宛名を入力して印刷</td>
+<td><a href="/articles/smart-ex-ryoushuusho/">スマートEXの領収書</a></td>
+</tr>
+<tr>
+<td>駅の窓口・券売機</td>
+<td>その場で発行</td>
+<td>この記事の「駅の窓口・券売機」の節</td>
+</tr>
+<tr>
+<td>Suicaで乗った分</td>
+<td>別の手順</td>
+<td>Suicaの領収書</td>
+</tr>
+</tbody>
+</table>
+<p>JR西日本のe5489やJR九州のネット予約で買った場合は、それぞれの公式の案内で確認してください（今回は公式ページを確認できていません）。出張でETCを使った高速道路料金は、ETCの領収書とインボイスを参照してください。</p>
+<h2 id="えきねっとで買った新幹線の領収書を出す">えきねっとで買った新幹線の領収書を出す</h2>
+<p>えきねっとで買ったきっぷは、マイページから領収書をPDFで出せます。ここでは要点だけ示します。</p>
+<ul>
+<li>発行できる期間は「お支払い完了日から乗車日の6ヶ月後まで」です。</li>
+<li>領収書は「適格簡易請求書（簡易インボイス）」として交付され、登録番号はT9011001029597と案内されています。</li>
+<li>出す期限があるため、出張が終わったら早めに入手しておくと安心です。</li>
+</ul>
+<p>画面の操作や注意点は <a href="/articles/ekinet-ryoushuusho/">えきねっとの領収書の記事</a> にまとめています。</p>
+<p>出典：<a href="https://secure.okbiz.jp/eki-net/faq/show/4935">えきねっと よくある質問</a>、<a href="https://secure.okbiz.jp/eki-net/faq/show/5374">インボイスの案内</a>（確認日 2026年10月17日）。</p>
+<h2 id="スマートexエクスプレス予約で買った新幹線の領収書を出す">スマートEX・エクスプレス予約で買った新幹線の領収書を出す</h2>
+<p>スマートEXとエクスプレス予約は、どちらも「領収書表示サービス」から出します。ブラウザやEXアプリで宛名を入力し、印刷する流れです。</p>
+<ul>
+<li>スマートEXは、予約完了日の翌日から最大15ヵ月後まで領収書情報を表示できます。</li>
+<li>発行される領収書は、スマートEX・エクスプレス予約ともにすべてインボイスに対応していると案内されています。</li>
+<li>エクスプレス予約では、一部の法人会員は領収書を発行できず、ご利用票の発行となります。</li>
+</ul>
+<p>経費精算に使えるかどうかは、会員自身で事前に確認するよう案内されています。会社の会員の場合は、自社の取り扱いを確かめてください。</p>
+<p>詳しくは <a href="/articles/smart-ex-ryoushuusho/">スマートEX・エクスプレス予約の領収書の記事</a> を参照してください。</p>
+<p>出典：<a href="https://faq.expy.jp/faq/show/252?site_domain=smart-ex">スマートEX</a>、<a href="https://faq.expy.jp/faq/show/21?site_domain=expy">エクスプレス予約</a>（確認日 2026年10月17日）。</p>
+<h2 id="駅の窓口券売機で買った新幹線の領収書を出す">駅の窓口・券売機で買った新幹線の領収書を出す</h2>
+<p>ここでは、JR東日本の駅で買った場合を説明します。JR東日本以外の駅で買った場合は、各社の案内で確認してください。</p>
+<h3 id="券売機で買った場合の手順">券売機で買った場合の手順</h3>
+<ol>
+<li>券売機できっぷを買い、お金を支払います。</li>
+<li>支払い後、画面に「領収書」のボタンが出ます。操作方法は券売機の種類によって異なります。</li>
+<li>ボタンを押します。</li>
+<li>ボタンを押せなかったときは、みどりの窓口か改札にきっぷを持って行き、係員に申し出ます。</li>
+</ol>
+<h3 id="インボイス様式の領収証と例外の機器">インボイス様式の領収証と、例外の機器</h3>
+<p>JR東日本の券売機やみどりの窓口で出る領収証は、一部の機器を除き、金額に関わらずインボイス制度の趣旨に沿った様式です。</p>
+<p>例外は、自動精算機、のりつぎ精算機、窓口精算機、WelcomeSuica発売機です。これらは必要に応じて改札係員等に申し出ると発行されます。</p>
+<h3 id="宛名の直しと後日の発行">宛名の直しと後日の発行</h3>
+<p>宛名を直したいときは、お手元の領収書と引き換えに、新しい宛名の領収書を出してもらえます。みどりの窓口か改札の係員に申し出ます。JR東日本以外の会社が発行した領収書は対応できないとされています。</p>
+<p>後日の発行を希望する場合は、購入者本人が購入内容を確認できるもの（きっぷやクレジットカードの利用票など）を持って、JR東日本の駅のみどりの窓口へ行きます。JR東日本の駅で買った場合に限られます。</p>
+<p>クレジットカードで払った場合は、領収証ではなく「ご利用明細としての発行」になります。</p>
+<p>出典：JR東日本の案内（<a href="https://jreastfaq.jreast.co.jp/faq/show/3871">3871</a>、<a href="https://jreastfaq.jreast.co.jp/faq/show/3170">3170</a>、<a href="https://jreastfaq.jreast.co.jp/faq/show/1032">1032</a>、<a href="https://jreastfaq.jreast.co.jp/faq/show/3314">3314</a>）（確認日 2026年10月17日）。</p>
+<h2 id="新幹線の領収書とインボイス3万円未満の特例とは">新幹線の領収書とインボイス：3万円未満の特例とは</h2>
+<p>国税庁Q&amp;Aでは、3万円未満の公共交通機関（船舶、バス、鉄道）による旅客の運送は、適格請求書の交付義務が免除されています。これを「公共交通機関特例」と呼びます。</p>
+<h3 id="3万円の判定は1回の取引で行う">3万円の判定は「1回の取引」で行う</h3>
+<p>判定は、1回の取引の税込価額で行います。きっぷ1枚ごとの金額や、月まとめの金額では判定しません。</p>
+<p>国税庁の例では、新幹線の大人運賃が13,000円で4人分の運送なら、4人分の52,000円で判定します。この場合は3万円以上になります。</p>
+<h3 id="特急料金は対象入場料金手回品料金は対象外">特急料金は対象、入場料金・手回品料金は対象外</h3>
+<p>特急料金、急行料金、寝台料金は、旅客の運送に直接付随する対価として特例の対象です。入場料金や手回品料金は対象になりません。</p>
+<h3 id="3万円未満と3万円以上の違い">3万円未満と3万円以上の違い</h3>
+<table>
+<thead>
+<tr>
+<th>区分</th>
+<th>仕入税額控除の要件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3万円未満</td>
+<td>一定の事項を記載した帳簿のみの保存で認められる</td>
+</tr>
+<tr>
+<td>3万円以上</td>
+<td>適格請求書の保存が要件</td>
+</tr>
+</tbody>
+</table>
+<p>3万円未満の場合、帳簿には「3万円未満の鉄道料金」のように、帳簿のみの保存で認められる仕入れに当たる旨を書きます。この場合、請求書等の保存は要件にならず、帳簿の記載事項が必要になります（問110）。</p>
+<p>3万円以上でも、鉄道事業者から適格簡易請求書の記載事項（取引年月日を除く）を記載した乗車券の交付を受け、その乗車券が回収される場合は、帳簿のみの保存で認められます。</p>
+<p>個別の判断は税理士や税務署に確認してください。</p>
+<p>出典：国税庁Q&amp;A <a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/pdf/qa/01-07.pdf">問41・問43・問44</a>、<a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/pdf/qa/105.pdf">問105</a>、<a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/pdf/qa/110.pdf">問110</a>（確認日 2026年10月17日）。</p>
+<h2 id="新幹線の領収書を経費にするときの精算のコツ">新幹線の領収書を経費にするときの精算のコツ</h2>
+<p>新幹線代を経費として精算するときは、次の点を押さえておくと整理しやすくなります。会社の精算ルールは会社ごとに異なるため、自社の決まりを優先してください。</p>
+<ol>
+<li><strong>何のための移動かを記録する</strong>：日付、区間、用件を、帳簿や精算メモに残します。</li>
+<li><strong>3万円以上かを1回の取引で見る</strong>：複数人分をまとめて買った場合は、合計額で判定します。</li>
+<li><strong>出張旅費を従業員に支給する場合</strong>：国税庁Q&amp;A問110では、従業員等に支給する通常必要と認められる出張旅費等は、帳簿のみの保存で認められる取引に挙げられています。「通常必要と認められる範囲」が前提です。</li>
+<li><strong>電子で出した領収書の扱い</strong>：PDFなどの保存方法は <a href="/articles/ryoushuusho-hozon-e-bunsho-taiou/">電子領収書の保存の記事</a> を参照してください。</li>
+<li><strong>何が経費になるか</strong>：<a href="/articles/keihi-naru-mono-naranai-mono/">経費になるもの・ならないもの</a> で整理しています。</li>
+</ol>
+<p>なお、公共交通機関特例の課税仕入れは、帳簿に仕入れの相手方の住所または所在地を書く必要がありません（問110）。</p>
+<h2 id="新幹線の領収書チェックリスト">新幹線の領収書チェックリスト</h2>
+<p>出張の前後に、次の項目を確認してください。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> きっぷを買った方法（えきねっと／スマートEX・エクスプレス予約／駅の窓口・券売機）を確認した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 買い方に合った場所で領収書を出した</li>
+<li class="task-list-item"><input type="checkbox" disabled> えきねっとは、乗車日の6ヶ月後までの期限内に出した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 宛名が正しいか確認した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 1回の取引の税込合計が3万円未満か、3万円以上かを確認した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 3万円未満なら、帳簿に「3万円未満の鉄道料金」などの記載をした</li>
+<li class="task-list-item"><input type="checkbox" disabled> 3万円以上なら、適格請求書を保存した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 何のための移動かを記録した</li>
+</ul>
+<h2 id="次の一歩領収書や交通費の記録をまとめる">次の一歩：領収書や交通費の記録をまとめる</h2>
+<p>領収書の出し方と、帳簿への記録の考え方が分かったら、次は日々の記録をどこにまとめるかを決める段階です。出張の記録、領収書の整理、確定申告の準備を一か所で進めたい場合は、クラウド型の会計サービスも選択肢になります。</p>
+<aside class="cta-box"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">株式会社マネーフォワード</p><h3 class="cta-box__title">マネーフォワード クラウド</h3><p class="cta-box__body">会計・確定申告・開業届作成などのクラウドサービス。</p><a class="cta-box__button" href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E8M9EI+4JGQ+60WN6" data-offer="moneyforward-cloud" rel="sponsored nofollow noopener" target="_blank">マネーフォワード クラウドの公式サイトへ</a></aside>
+<p>マネーフォワード クラウドは、会計・確定申告・開業届作成などのクラウドサービスです。使える機能や料金は変わることがあるため、自分の事業に合うかどうかを公式の案内で確認してください。</p>
+<p><a href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E8M9EI+4JGQ+60WN6" rel="sponsored nofollow noopener" target="_blank">マネーフォワード クラウドの公式サイトで機能と料金を確認する</a></p>
+<h2 id="よくある質問とまとめ">よくある質問とまとめ</h2>
+<p><strong>Q. 新幹線の領収書は、どこで発行できますか。</strong>
+買い方で異なります。えきねっとはマイページ、スマートEX・エクスプレス予約は領収書表示サービス、JR東日本の駅の窓口や券売機はその場で発行できます。</p>
+<p><strong>Q. 3万円未満なら領収書はいりませんか。</strong>
+国税庁Q&amp;Aでは、帳簿のみの保存で仕入税額控除が認められるとされています。ただし帳簿の記載事項は必要です。</p>
+<p><strong>Q. 4人分を1回で買ったときの判定はどうなりますか。</strong>
+1回の取引の税込価額で判定します。大人運賃13,000円の4人分なら、52,000円で判定します。</p>
+<p><strong>Q. 領収書の宛名は後から直せますか。</strong>
+JR東日本では、領収書と引き換えに、みどりの窓口や改札で新しい宛名の領収書を出してもらえます。</p>
+<h3 id="まとめ">まとめ</h3>
+<p>新幹線の領収書は、まず買い方を確認し、その方法に合った場所で出します。インボイス制度では、判定を1回の取引の税込価額で行う点が要になります。</p>
+<p>税務の個別の判断は、税理士や税務署に確認してください。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>新幹線の領収書は、どこで発行できますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>買い方で異なります。えきねっとはマイページ、スマートEX・エクスプレス予約は領収書表示サービス、JR東日本の駅の窓口や券売機はその場で発行できます。JR東日本以外の駅は各社の案内で確認してください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>新幹線代が3万円未満なら、領収書はいりませんか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>国税庁のQ&amp;Aでは、3万円未満の鉄道運賃は適格請求書の交付義務が免除され、一定の事項を記載した帳簿のみの保存で仕入税額控除が認められるとされています。ただし帳簿の記載事項は必要です。個別の判断は税理士や税務署に確認してください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>4人分の新幹線きっぷを1回で買った場合、3万円の判定はどうなりますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>国税庁Q&amp;Aでは、1回の取引の税込価額で判定します。大人運賃13,000円で4人分なら、4人分の52,000円で判定するという例が示されています。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>領収書の宛名を後から直せますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>JR東日本の場合、お手元の領収書と引き換えに、新しい宛名の領収書をみどりの窓口や改札で発行できます。JR東日本以外の会社が発行した領収書は対応できないとされています。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://secure.okbiz.jp/eki-net/faq/show/4935" rel="noopener" target="_blank" data-astro-cid-sgg5joot>えきねっと よくある質問（領収書の発行）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://secure.okbiz.jp/eki-net/faq/show/5374" rel="noopener" target="_blank" data-astro-cid-sgg5joot>えきねっと よくある質問（インボイス）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://faq.expy.jp/faq/show/252?site_domain=smart-ex" rel="noopener" target="_blank" data-astro-cid-sgg5joot>スマートEX よくある質問（領収書）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://faq.expy.jp/faq/show/21?site_domain=expy" rel="noopener" target="_blank" data-astro-cid-sgg5joot>エクスプレス予約 よくある質問（領収書）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://jreastfaq.jreast.co.jp/faq/show/3871" rel="noopener" target="_blank" data-astro-cid-sgg5joot>JR東日本 よくあるご質問（券売機での領収書）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://jreastfaq.jreast.co.jp/faq/show/3170" rel="noopener" target="_blank" data-astro-cid-sgg5joot>JR東日本 よくあるご質問（インボイス様式の領収証）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://jreastfaq.jreast.co.jp/faq/show/1032" rel="noopener" target="_blank" data-astro-cid-sgg5joot>JR東日本 よくあるご質問（後日の領収証発行）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://jreastfaq.jreast.co.jp/faq/show/3314" rel="noopener" target="_blank" data-astro-cid-sgg5joot>JR東日本 よくあるご質問（宛名の変更）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/pdf/qa/01-07.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 消費税の軽減税率制度・インボイス制度Q&amp;A 問41・問43・問44</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/pdf/qa/105.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 インボイス制度Q&amp;A 問105</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/pdf/qa/110.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 インボイス制度Q&amp;A 問110</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/kakutei-shinkoku/" data-astro-cid-sgg5joot>確定申告・会計ソフト・経費の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/receipts/" data-astro-cid-sgg5joot>サービス別 領収書・インボイス対応一覧を見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

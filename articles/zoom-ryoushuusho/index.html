@@ -1,0 +1,307 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Zoom の領収書はどこで取る？請求書PDFの取得・宛名・消費税の実務 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="Zoom の公式ヘルプでは、請求の書類は invoice（請求書）として Plans and billing から表示・PDF保存できます。宛名の設定、消費税とインボイス番号、勘定科目の選択肢、保存の要件までを整理します。"><link rel="canonical" href="https://soroecho.com/articles/zoom-ryoushuusho/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="Zoom の領収書はどこで取る？請求書PDFの取得・宛名・消費税の実務 | そろえ帳"><meta property="og:description" content="Zoom の公式ヘルプでは、請求の書類は invoice（請求書）として Plans and billing から表示・PDF保存できます。宛名の設定、消費税とインボイス番号、勘定科目の選択肢、保存の要件までを整理します。"><meta property="og:url" content="https://soroecho.com/articles/zoom-ryoushuusho/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/zoom-ryoushuusho.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Zoom の領収書はどこで取る？請求書PDFの取得・宛名・消費税の実務 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Zoom の領収書はどこで取る？請求書PDFの取得・宛名・消費税の実務 | そろえ帳"><meta name="twitter:description" content="Zoom の公式ヘルプでは、請求の書類は invoice（請求書）として Plans and billing から表示・PDF保存できます。宛名の設定、消費税とインボイス番号、勘定科目の選択肢、保存の要件までを整理します。"><meta name="twitter:image" content="https://soroecho.com/og/zoom-ryoushuusho.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"Zoom の領収書はどこで取る？請求書PDFの取得・宛名・消費税の実務","item":"https://soroecho.com/articles/zoom-ryoushuusho/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Zoom の領収書はどこで取る？請求書PDFの取得・宛名・消費税の実務","description":"Zoom の公式ヘルプでは、請求の書類は invoice（請求書）として Plans and billing から表示・PDF保存できます。宛名の設定、消費税とインボイス番号、勘定科目の選択肢、保存の要件までを整理します。","url":"https://soroecho.com/articles/zoom-ryoushuusho/","datePublished":"2026-10-19T00:00:00.000Z","dateModified":"2026-10-19T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/zoom-ryoushuusho/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Zoom の領収書はどこで発行できますか？","acceptedAnswer":{"@type":"Answer","text":"Zoom の公式ヘルプでは、請求の書類は invoice（請求書）として案内されています。オーナー・管理者・請求権限のあるユーザーが、ウェブポータルの Plans and billings から表示・検索・PDFダウンロードできます。「領収書」という名前の別の書類は、公式の案内で確認できませんでした。"}},{"@type":"Question","name":"請求書に会社名や宛名を入れるにはどうしますか？","acceptedAnswer":{"@type":"Answer","text":"Plans and Billing の Billing Management にある Contact Information で、Sold To Contact の Edit から会社名・組織名とアカウントの種類を入力して Save します。発行済みの請求書が変更で書き換わるかは、公式の案内で確認できませんでした。"}},{"@type":"Question","name":"Zoom の請求書にインボイスの登録番号は載りますか？","acceptedAnswer":{"@type":"Answer","text":"Zoom の公式ヘルプによると、登録番号 T6700150118763 は、2023年10月1日以降に発行され、Sold To（販売先）が日本の請求書に記載されます。それより前の請求書は再作成されず、番号は載りません。"}},{"@type":"Question","name":"Zoom の勘定科目は何にすればよいですか？","acceptedAnswer":{"@type":"Answer","text":"国税庁の案内から「この科目」と断定できるものはありません。通信費・消耗品費・雑費などの説明に、利用の実態を当てはめて選びます。迷う場合は税理士や税務署に相談してください。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>Zoom の領収書はどこで取る？請求書PDFの取得・宛名・消費税の実務</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="eczai9zb-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient></defs><rect width="400" height="225" fill="url(#eczai9zb-g)" data-astro-cid-yuatfsof></rect><circle cx="386" cy="32" r="52.5" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="386" cy="32" r="82.5" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="386" cy="32" r="112.5" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="386" cy="32" r="142.5" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="386" cy="32" r="150" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>zoom</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>領収書</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>Zoom の領収書はどこで取る？請求書PDFの取得・宛名・消費税の実務</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-10-19T00:00:00.000Z" data-astro-cid-sgg5joot>2026年10月19日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約10分</p><aside class="receipt-facts" aria-labelledby="receipt-facts-heading" data-astro-cid-tcbxoyxt><h2 id="receipt-facts-heading" class="receipt-facts__title" data-astro-cid-tcbxoyxt>このサービスの確認済みの事実</h2><dl class="receipt-facts__list" data-astro-cid-tcbxoyxt><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>領収書の出し方</dt><dd data-astro-cid-tcbxoyxt><ul data-astro-cid-tcbxoyxt><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>有料プラン全般（Zoom から直接購入）</strong>: Zoomウェブポータル &gt; プロフィール &gt; Plans and billings &gt; Payment History または Invoice History タブ。請求書番号で検索・表示、Print または チェック + Download でPDF（オーナー・管理者・請求権限ロールのみ）</li><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>リセラー経由</strong>: 公式ヘルプはリセラーに確認するよう案内</li></ul></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>宛名</dt><dd data-astro-cid-tcbxoyxt>宛名を指定できる<span class="receipt-facts__note" data-astro-cid-tcbxoyxt>（Plans and Billing &gt; Billing Management &gt; Contact Information の Sold To Contact で Edit。Company/Organization Name と Account Type（Personal / Business）を入力。請求先を分ける場合は Billing Contact も入力。発行済み請求書への反映有無は公式ページで確認できず）</span></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>インボイス</dt><dd data-astro-cid-tcbxoyxt>対応<span class="receipt-facts__note" data-astro-cid-tcbxoyxt>（公式ヘルプ「mentioned on all invoices issued where the customer ‘Sold To’ is Japan with effect from 1 October 2023」、2023-10-01以降のSold To日本の請求書は適格請求書の要件に沿って発行。それ以前の請求書は再作成されない。「領収書」という名前の別書類は公式ページで確認できず）</span></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>登録番号</dt><dd data-astro-cid-tcbxoyxt>T6700150118763<span class="receipt-facts__note" data-astro-cid-tcbxoyxt>（<a href="https://support.zoom.com/hc/en/article?id=zm_kb&amp;sysparm_article=KB0061252" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>公式ページで確認</a>）</span></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>最終確認日</dt><dd data-astro-cid-tcbxoyxt><time datetime="2026-10-17" data-astro-cid-tcbxoyxt>2026年10月17日</time></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>公式の情報</dt><dd data-astro-cid-tcbxoyxt><ul data-astro-cid-tcbxoyxt><li data-astro-cid-tcbxoyxt><a href="https://support.zoom.com/hc/en/article?id=zm_kb&amp;sysparm_article=KB0061252" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>https://support.zoom.com/hc/en/article?id=zm_kb&amp;sysparm_article=KB0061252</a></li><li data-astro-cid-tcbxoyxt><a href="https://support.zoom.com/hc/en/article?id=zm_kb&amp;sysparm_article=KB0063038" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>https://support.zoom.com/hc/en/article?id=zm_kb&amp;sysparm_article=KB0063038</a></li><li data-astro-cid-tcbxoyxt><a href="https://support.zoom.com/hc/en/article?id=zm_kb&amp;sysparm_article=KB0067545" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>https://support.zoom.com/hc/en/article?id=zm_kb&amp;sysparm_article=KB0067545</a></li></ul></dd></div></dl><p class="receipt-facts__hub" data-astro-cid-tcbxoyxt><a class="arrow-link" href="/receipts/" data-astro-cid-tcbxoyxt>ほかのサービスの領収書・インボイス対応を見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-tcbxoyxt>→</span></a></p></aside><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論zoom-の領収書は請求書invoiceのpdfで取る" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：Zoom の「領収書」は請求書（invoice）のPDFで取る</a></li><li data-astro-cid-sgg5joot><a href="#zoom-の領収書は請求書pdf権限がないと見えない" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>Zoom の領収書は請求書PDF。権限がないと見えない</a></li><li data-astro-cid-sgg5joot><a href="#zoom-の請求書の取り方領収書発行の代わりになる手順" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>Zoom の請求書の取り方（領収書発行の代わりになる手順）</a></li><li data-astro-cid-sgg5joot><a href="#zoom-の請求書に載る項目" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>Zoom の請求書に載る項目</a></li><li data-astro-cid-sgg5joot><a href="#宛名会社名を請求書に入れる方法" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>宛名・会社名を請求書に入れる方法</a></li><li data-astro-cid-sgg5joot><a href="#zoom-の消費税とインボイス適格請求書" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>Zoom の消費税とインボイス（適格請求書）</a></li><li data-astro-cid-sgg5joot><a href="#国税庁のルールのおさらいとあなたの区分による違い" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>国税庁のルールのおさらいと、あなたの区分による違い</a></li><li data-astro-cid-sgg5joot><a href="#zoom-の勘定科目は何を選ぶか" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>Zoom の勘定科目は何を選ぶか</a></li><li data-astro-cid-sgg5joot><a href="#請求書pdfの保存で押さえる要件" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>請求書PDFの保存で押さえる要件</a></li><li data-astro-cid-sgg5joot><a href="#経費にする前のチェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>10</span>経費にする前のチェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#次の一歩帳簿に入れて申告まで通す" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>11</span>次の一歩：帳簿に入れて、申告まで通す</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論zoom-の領収書は請求書invoiceのpdfで取る">結論：Zoom の「領収書」は請求書（invoice）のPDFで取る</h2>
+<p>Zoom の公式ヘルプでは、請求の書類は「invoice（請求書）」と案内されています。オーナー・管理者・請求権限のあるユーザーが、Zoom のウェブポータルの Plans and billing から表示・検索・PDFダウンロードできます。「領収書」という名前の別の書類は、公式の案内で確認できませんでした。</p>
+<p>日本の消費税（JCT）は、「Sold To（販売先）」の住所が日本なら課されます。Zoom Communications Inc. は適格請求書発行事業者で、登録番号は T6700150118763 です。2023年10月1日以降、販売先が日本の請求書にこの番号が載ると公式に書かれています。</p>
+<p>この記事で分かることは次のとおりです。</p>
+<ul>
+<li>請求書を取れる人と、取り方の手順</li>
+<li>請求書に載る項目と、宛名・会社名の入れ方</li>
+<li>消費税・インボイスの扱いと、勘定科目の選択肢</li>
+<li>保存の要件と、最後に確認するチェックリスト</li>
+</ul>
+<h2 id="zoom-の領収書は請求書pdf権限がないと見えない">Zoom の領収書は請求書PDF。権限がないと見えない</h2>
+<p>Zoom の画面で「領収書」を探しても、その名前のメニューは公式ヘルプの取得ページには出てきません。経費の証憑として使う書類は、請求書（invoice）のPDFと考えるのが公式の案内に沿った整理です。</p>
+<p>請求書を表示・検索・ダウンロードできるのは、次の人です。</p>
+<ul>
+<li>アカウントのオーナー</li>
+<li>管理者（admin）</li>
+<li>請求（billing）の権限を持つカスタムロールのユーザー</li>
+</ul>
+<p>「会議には入れるのに請求の画面が出ない」場合は、権限がないことが考えられます。ひとり社長や個人事業主で自分がオーナーなら、通常は自分で取得できます。従業員がいる会社では、オーナーか管理者に権限を確認してください。</p>
+<p>なお、リセラー（販売代理店）経由で購入した場合は、Zoom の公式ヘルプも「リセラーに確認」と書いています。この場合、書類の出し方は購入元によって異なります。</p>
+<h2 id="zoom-の請求書の取り方領収書発行の代わりになる手順">Zoom の請求書の取り方（領収書発行の代わりになる手順）</h2>
+<p>Zoom の公式ヘルプにある手順は次のとおりです。画面の表示は英語です。</p>
+<ol>
+<li>Zoom のウェブポータルにサインインします。</li>
+<li>右上のプロフィール画像（またはイニシャル）をクリックし、Plans and billings を選びます。</li>
+<li>Payment History または Invoice History のタブに、請求書の一覧が表示されます。</li>
+<li>検索と絞り込みで、期間・ステータス・請求書番号を指定して探します。</li>
+<li>請求書番号をクリックすると、内容が表示されます。</li>
+<li>必要に応じて Print を押すか、請求書番号の横のチェックボックスを選んで Download を押すと、PDFで保存できます。</li>
+</ol>
+<p>一覧に出る状態表示は、次の4種類です。</p>
+<table>
+<thead>
+<tr>
+<th>表示</th>
+<th>意味（公式の説明）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open</td>
+<td>請求書が未払い</td>
+</tr>
+<tr>
+<td>Processing</td>
+<td>処理中</td>
+</tr>
+<tr>
+<td>Paid</td>
+<td>支払い済み</td>
+</tr>
+<tr>
+<td>Credit</td>
+<td>クレジット</td>
+</tr>
+</tbody>
+</table>
+<p>経費の証憑にするなら、支払いが済んだ請求書かどうかを状態表示で確かめてから保存すると整理しやすくなります。</p>
+<h2 id="zoom-の請求書に載る項目">Zoom の請求書に載る項目</h2>
+<p>請求書には、主に次の項目が載ります。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Invoice Date</td>
+<td>請求日</td>
+</tr>
+<tr>
+<td>Invoice #</td>
+<td>請求書番号</td>
+</tr>
+<tr>
+<td>Account Number</td>
+<td>アカウント番号</td>
+</tr>
+<tr>
+<td>Currency</td>
+<td>通貨</td>
+</tr>
+<tr>
+<td>Payment Method</td>
+<td>支払方法</td>
+</tr>
+<tr>
+<td>Account Legal Name</td>
+<td>請求のために登録された、アカウントに紐づく組織の正式名称</td>
+</tr>
+<tr>
+<td>Sold To Address</td>
+<td>販売先の住所</td>
+</tr>
+<tr>
+<td>Bill To Address</td>
+<td>請求先の住所</td>
+</tr>
+<tr>
+<td>Charge Details</td>
+<td>請求の明細</td>
+</tr>
+<tr>
+<td>Taxes, Fees &amp; Surcharge Details</td>
+<td>税・手数料・追加料金の内訳</td>
+</tr>
+<tr>
+<td>Transactions</td>
+<td>取引の情報</td>
+</tr>
+</tbody>
+</table>
+<p>公式ヘルプには、表示される情報はアカウントや請求の設定によって変わることがあると書かれています。自分の請求書にこれらがすべて載るとは限りません。実物のPDFで、必要な項目があるかを確認してください。</p>
+<h2 id="宛名会社名を請求書に入れる方法">宛名・会社名を請求書に入れる方法</h2>
+<p>宛名や会社名は、Zoom 側の連絡先情報（Contact Information）で設定します。変更できるのは、アカウントオーナー、管理者、請求権限を持つ役割のユーザーです。</p>
+<ol>
+<li>Plans and Billing をクリックし、Billing Management を開きます。</li>
+<li>Contact Information の項目で、Sold To Contact の右にある Edit をクリックします。</li>
+<li>氏名、メールアドレス、住所を入力します。</li>
+<li>会社名や組織名を入れる場合は「Edit Company/Organization Name」から入力します。仕事用のアカウントの場合に入れる欄と案内されています。</li>
+<li>Account Type で、Personal Account か Business Account のどちらかを選びます。</li>
+<li>請求先を分けたいときは「Use the same contact information for billing」のチェックを外し、Billing Contact を別に入力します。</li>
+<li>Save をクリックします。</li>
+</ol>
+<p>公式ヘルプでは、Billing Contact は購読料を支払う人、Sold To Contact は通常アカウントオーナーで購読を使う人と説明されています。</p>
+<p>あなたの場合の分岐は次のとおりです。</p>
+<ul>
+<li><strong>個人事業主で屋号を宛名にしたい場合</strong>: 会社名・組織名の欄に入力する方法があります。ただし、屋号と氏名のどちらが請求書に載るかは、画面の入力と請求書の表示を見て確かめてください。</li>
+<li><strong>法人の場合</strong>: 登記上の正式名称を入れます。Account Legal Name は「請求のために登録された正式名称」と説明されています。</li>
+<li><strong>自宅住所を出したくない場合</strong>: Sold To の住所は請求書に載る項目です。入れる住所は、入力前に決めてください。</li>
+</ul>
+<p>発行済みの請求書が、この変更で書き換わるかどうかは、公式の案内で確認できませんでした。宛名は、最初の請求の前に設定しておくほうが安全です。カード側の請求先住所の更新は、別の手順（支払い方法の更新）で行います。</p>
+<h2 id="zoom-の消費税とインボイス適格請求書">Zoom の消費税とインボイス（適格請求書）</h2>
+<p>Zoom の公式ヘルプ「JCT（日本の消費税）」の要点は次のとおりです。</p>
+<ul>
+<li>Zoom から直接購入する場合の案内です。リセラー経由なら、リセラーに確認します。</li>
+<li>Sold To の住所が日本の顧客は、日本居住者として扱われます。リセラーでない限り、JCT が課されます。</li>
+<li>最低購入金額はなく、すべてのサービスに適用されます。</li>
+<li>登録番号 T6700150118763 は、2023年10月1日以降、Sold To が日本のすべての請求書に記載されます。</li>
+<li>2023年10月1日以降に発行された Sold To が日本の請求書は、適格請求書の要件に沿って発行されます。</li>
+<li>JCT は請求書全体で四捨五入されます。</li>
+<li>日本円以外の通貨で請求される場合、JCT の合計額の日本円表示も請求書に付きます。</li>
+<li>2023年10月1日より前の請求書は、登録番号などを加えて再作成されることはありません。</li>
+<li>Sold To の住所が正確であることは、顧客の責任とされています。</li>
+</ul>
+<p>Zoom 公式ヘルプは、この登録番号を国税庁のサイトで確認できるとしています。ご自身で<a href="https://www.invoice-kohyo.nta.go.jp/">国税庁の適格請求書発行事業者公表サイト</a>に番号を入れて確認してください。Zoom 公式ヘルプには「税務アドバイスではない」との免責もあります。</p>
+<h2 id="国税庁のルールのおさらいとあなたの区分による違い">国税庁のルールのおさらいと、あなたの区分による違い</h2>
+<p>国外の事業者によるインターネット経由のサービスには、事業者向けと消費者向けの区分があります（国税庁タックスアンサー No.6118）。事業者向けは、国内の事業者が「特定課税仕入れ」として申告・納税する仕組み（リバースチャージ）です。消費者向けは、国外事業者が申告・納税します。</p>
+<p>インボイスの保存については、国税庁のQ&amp;A（問103-3）に次の整理があります。</p>
+<table>
+<thead>
+<tr>
+<th>区分</th>
+<th>仕入税額控除の条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>事業者向け</td>
+<td>適格請求書の保存は必要なく、一定の事項を記載した帳簿の保存で控除が可能</td>
+</tr>
+<tr>
+<td>消費者向け</td>
+<td>国外事業者から交付された適格請求書の保存が必要</td>
+</tr>
+</tbody>
+</table>
+<p>Zoom がどちらに当たるかは、サービスの性質や取引条件によるため、この記事では断定しません。</p>
+<p>あなたの区分によって、扱いは変わります。</p>
+<ul>
+<li><strong>免税事業者</strong>: 消費税の申告をする必要がないため、特定課税仕入れの申告も不要です（タックスアンサー No.6118）。</li>
+<li><strong>簡易課税や2割特例・3割特例を使う場合</strong>: 受け取ったインボイスを保存しなくても仕入税額控除を受けられる、と国税庁の特設サイトにあります。</li>
+<li><strong>一般課税の課税事業者</strong>: 国税庁の特設サイトでは、インボイスがない経費は原則として仕入税額控除ができないとされています。</li>
+</ul>
+<p>請求書に限らず、所定の事項が載った書類なら、領収書や納品書など名称を問わずインボイスになります。個別の判断は税理士や税務署に相談してください。海外サービス全般の考え方は海外SaaSの消費税とインボイスの整理にまとめています。</p>
+<h2 id="zoom-の勘定科目は何を選ぶか">Zoom の勘定科目は何を選ぶか</h2>
+<p>国税庁の案内から、「Zoom はこの科目」と断定できるものはありません。国税庁の説明に、利用の実態を当てはめて選びます。</p>
+<table>
+<thead>
+<tr>
+<th>科目</th>
+<th>国税庁の説明</th>
+<th>当てはまりうる場面</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>通信費</td>
+<td>事業用として使用した電話料、切手代、電報料など</td>
+<td>通信回線を使うサービスとして整理する場合</td>
+</tr>
+<tr>
+<td>消耗品費</td>
+<td>帳簿、文房具、用紙、包装紙、ガソリンなどの消耗品購入費など</td>
+<td>少額の利用料として整理する場合</td>
+</tr>
+<tr>
+<td>雑費</td>
+<td>事業上の費用で他の経費に当てはまらない経費</td>
+<td>他の科目に当てはまらないと判断する場合</td>
+</tr>
+</tbody>
+</table>
+<p>Zoom は通信回線を使うサービスなので、通信費に当たるかが論点になります。ただし国税庁の説明は電話料や切手代などの例で、SaaS の名指しはありません。当てはまるかは、判断が分かれることがあります。</p>
+<p>一度決めた科目は、毎年同じ扱いにして帳簿で一貫させると整理しやすくなります。私用と併用している場合は、事業分だけを経費にする按分が必要です。考え方は<a href="/articles/keihi-naru-mono-naranai-mono/">経費になるもの・ならないもの</a>で解説しています。迷う場合は税理士か税務署に相談してください。</p>
+<h2 id="請求書pdfの保存で押さえる要件">請求書PDFの保存で押さえる要件</h2>
+<p>Zoom からダウンロードしたPDFは、電子帳簿保存法の「電子取引データ」に当たります。国税庁の資料では、紙でやりとりしていれば保存が必要な書類（領収書、請求書など）に相当するデータを保存する必要があるとされています。</p>
+<p>主な要件は次のとおりです。</p>
+<ol>
+<li>ファイル形式は問われません。PDFや、スクリーンショットでも差し支えありません。</li>
+<li>改ざん防止の措置をとります。</li>
+<li>「日付・金額・取引先」で検索できるようにします。</li>
+<li>ディスプレイやプリンタ等を備え付けます。</li>
+</ol>
+<p>検索要件には、規則的なファイル名を付ける方法や、表計算ソフトで索引簿を作る方法があります。たとえば「日付_Zoom_金額」のように名前をそろえる方法です。</p>
+<p>国税庁の一問一答では、ウェブ上で確認できる状態になった時点が授受のタイミングとされています。ダウンロードしなければ保存義務が生じない、というものではありません。まとめてダウンロードする場合も、その年分のうちに保存します。詳しい要件は<a href="/articles/ryoushuusho-hozon-e-bunsho-taiou/">領収書の電子保存の対応</a>を参照してください。</p>
+<h2 id="経費にする前のチェックリスト">経費にする前のチェックリスト</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 自分は Zoom のオーナー、管理者、請求権限のあるユーザーのいずれかか</li>
+<li class="task-list-item"><input type="checkbox" disabled> リセラー経由の購入ではないか（その場合は購入元に確認）</li>
+<li class="task-list-item"><input type="checkbox" disabled> Plans and billings で、対象期間の請求書を検索できたか</li>
+<li class="task-list-item"><input type="checkbox" disabled> 請求書の状態が Paid（支払い済み）か</li>
+<li class="task-list-item"><input type="checkbox" disabled> Sold To の住所・会社名・Account Type は正しいか</li>
+<li class="task-list-item"><input type="checkbox" disabled> 2023年10月1日以降の請求書に T6700150118763 が載っているか</li>
+<li class="task-list-item"><input type="checkbox" disabled> 自分は課税事業者か、免税か、簡易課税かを確認したか</li>
+<li class="task-list-item"><input type="checkbox" disabled> 勘定科目を決め、毎年同じ扱いにするか</li>
+<li class="task-list-item"><input type="checkbox" disabled> 私用との併用があれば、按分の割合を決めたか</li>
+<li class="task-list-item"><input type="checkbox" disabled> PDFを、日付・金額・取引先で検索できる形で保存したか</li>
+</ul>
+<h2 id="次の一歩帳簿に入れて申告まで通す">次の一歩：帳簿に入れて、申告まで通す</h2>
+<p>請求書を取り、宛名と税の扱いを確認できたら、次は帳簿への記帳です。取引の記録、科目の統一、申告書の作成まで一続きで進められる道具があると、毎月の作業が整理しやすくなります。</p>
+<aside class="cta-box"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">弥生株式会社</p><h3 class="cta-box__title">弥生シリーズ（やよいの青色申告 オンライン など）</h3><p class="cta-box__body">会計・青色申告のクラウドソフト。新規申込が成果条件。</p><a class="cta-box__button" href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E9T4M2+35XE+5ZEMP" data-offer="yayoi" rel="sponsored nofollow noopener" target="_blank">弥生シリーズ（やよいの青色申告 オンライン など）の公式サイトへ</a></aside>
+<p><a href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E9T4M2+35XE+5ZEMP" rel="sponsored nofollow noopener" target="_blank">青色申告対応のクラウド会計ソフトを見る</a></p>
+<p>他のサービスの書類については、次の記事も参考にしてください。</p>
+<ul>
+<li><a href="/articles/chatgpt-ryoushuusho-invoice/">ChatGPT の領収書とインボイス</a></li>
+<li><a href="/articles/claude-ryoushuusho-shouhizei/">Claude の領収書と消費税</a></li>
+<li>Canva の領収書とインボイス</li>
+<li>全体像は海外SaaSの消費税とインボイスの整理</li>
+</ul>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Zoom の領収書はどこで発行できますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>Zoom の公式ヘルプでは、請求の書類は invoice（請求書）として案内されています。オーナー・管理者・請求権限のあるユーザーが、ウェブポータルの Plans and billings から表示・検索・PDFダウンロードできます。「領収書」という名前の別の書類は、公式の案内で確認できませんでした。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>請求書に会社名や宛名を入れるにはどうしますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>Plans and Billing の Billing Management にある Contact Information で、Sold To Contact の Edit から会社名・組織名とアカウントの種類を入力して Save します。発行済みの請求書が変更で書き換わるかは、公式の案内で確認できませんでした。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Zoom の請求書にインボイスの登録番号は載りますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>Zoom の公式ヘルプによると、登録番号 T6700150118763 は、2023年10月1日以降に発行され、Sold To（販売先）が日本の請求書に記載されます。それより前の請求書は再作成されず、番号は載りません。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Zoom の勘定科目は何にすればよいですか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>国税庁の案内から「この科目」と断定できるものはありません。通信費・消耗品費・雑費などの説明に、利用の実態を当てはめて選びます。迷う場合は税理士や税務署に相談してください。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://support.zoom.com/hc/en/article?id=zm_kb&amp;sysparm_article=KB0063038" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Zoom Support: Viewing your Zoom invoice history and invoice details</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://support.zoom.com/hc/en/article?id=zm_kb&amp;sysparm_article=KB0067545" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Zoom Support: Updating your Zoom billing contact</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://support.zoom.com/hc/en/article?id=zm_kb&amp;sysparm_article=KB0061252" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Zoom Support: Japanese Consumption Tax (JCT)</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6118.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.6118 国境を越えた役務の提供に対する消費税の課税</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/pdf/qa/103-3.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 インボイス制度Q&amp;A 問103-3</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/invoice_about.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 インボイス制度の特設サイト</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/law/joho-zeikaishaku/sonota/jirei/tokusetsu/pdf/0023006-085_01.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 電子帳簿保存法 電子取引データの保存方法</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/law/joho-zeikaishaku/sonota/jirei/pdf/0021006-031_03.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 電子帳簿保存法一問一答【電子取引関係】問39</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.keisan.nta.go.jp/r5yokuaru/aoiroshinkoku/hitsuyokeihi/tsushinhi/tsushinhi.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 確定申告書等作成コーナー よくある質問 通信費</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.keisan.nta.go.jp/r5yokuaru/aoiroshinkoku/hitsuyokeihi/shomohinhi/shomohinhi.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 確定申告書等作成コーナー よくある質問 消耗品費</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.keisan.nta.go.jp/r5yokuaru/aoiroshinkoku/hitsuyokeihi/zappi/zappi.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 確定申告書等作成コーナー よくある質問 雑費</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/kakutei-shinkoku/" data-astro-cid-sgg5joot>確定申告・会計ソフト・経費の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/receipts/" data-astro-cid-sgg5joot>サービス別 領収書・インボイス対応一覧を見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

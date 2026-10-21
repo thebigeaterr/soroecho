@@ -1,0 +1,224 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>メルカリの領収書は出る？インボイスと経費にする記録の残し方 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="メルカリ ShopsのヘルプではShopsに領収書・インボイスの発行機能はないと案内されています。通常のメルカリは案内を確認できませんでした。経費の証拠にする記録の残し方とインボイスの考え方を整理します。"><link rel="canonical" href="https://soroecho.com/articles/mercari-ryoushuusho/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="メルカリの領収書は出る？インボイスと経費にする記録の残し方 | そろえ帳"><meta property="og:description" content="メルカリ ShopsのヘルプではShopsに領収書・インボイスの発行機能はないと案内されています。通常のメルカリは案内を確認できませんでした。経費の証拠にする記録の残し方とインボイスの考え方を整理します。"><meta property="og:url" content="https://soroecho.com/articles/mercari-ryoushuusho/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/mercari-ryoushuusho.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="メルカリの領収書は出る？インボイスと経費にする記録の残し方 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="メルカリの領収書は出る？インボイスと経費にする記録の残し方 | そろえ帳"><meta name="twitter:description" content="メルカリ ShopsのヘルプではShopsに領収書・インボイスの発行機能はないと案内されています。通常のメルカリは案内を確認できませんでした。経費の証拠にする記録の残し方とインボイスの考え方を整理します。"><meta name="twitter:image" content="https://soroecho.com/og/mercari-ryoushuusho.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"メルカリの領収書は出る？インボイスと経費にする記録の残し方","item":"https://soroecho.com/articles/mercari-ryoushuusho/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"メルカリの領収書は出る？インボイスと経費にする記録の残し方","description":"メルカリ ShopsのヘルプではShopsに領収書・インボイスの発行機能はないと案内されています。通常のメルカリは案内を確認できませんでした。経費の証拠にする記録の残し方とインボイスの考え方を整理します。","url":"https://soroecho.com/articles/mercari-ryoushuusho/","datePublished":"2026-10-21T00:00:00.000Z","dateModified":"2026-10-21T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/mercari-ryoushuusho/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"メルカリで領収書は発行してもらえますか？","acceptedAnswer":{"@type":"Answer","text":"メルカリShopsのヘルプでは、領収書や適格請求書（インボイス）の発行機能はないと案内されています。通常のメルカリ（個人間取引）で購入者向けに領収書を出す案内は、ヘルプセンターの購入・支払い関連の記事一覧では確認できませんでした（2026年10月17日時点）。"}},{"@type":"Question","name":"領収書がないとき、経費の証拠として何を残せばよいですか？","acceptedAnswer":{"@type":"Answer","text":"メルカリShopsの公式案内では、購入時に自動送付されるメールや、決済手段ごとの利用明細での代替が案内されています。購入履歴の画面、メール、おさいふの利用履歴などを保存しておく方法があります。個別の判断は税理士や税務署にご相談ください。"}},{"@type":"Question","name":"メルカリで買った物のインボイスはもらえますか？","acceptedAnswer":{"@type":"Answer","text":"適格請求書は、登録を受けた適格請求書発行事業者でなければ交付できないと国税庁が説明しています。メルカリShopsのインボイスについてはショップへ直接相談するよう案内されています。個人の出品者が登録しているかは、メルカリのヘルプからは分かりません。"}},{"@type":"Question","name":"免税事業者の場合もインボイスを気にする必要がありますか？","acceptedAnswer":{"@type":"Answer","text":"仕入税額控除は課税事業者の消費税の計算に関わる仕組みのため、免税事業者の方には関係しない場合があります。ただし所得税や法人税の帳簿・書類の保存は別に考える必要があります。詳しくは国税庁の案内や税務署でご確認ください。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>メルカリの領収書は出る？インボイスと経費にする記録の残し方</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecdp7mey-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecdp7mey-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecdp7mey-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecdp7mey-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="54" r="130" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>メルカリ</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>領収書</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>メルカリの領収書は出る？インボイスと経費にする記録の残し方</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-10-21T00:00:00.000Z" data-astro-cid-sgg5joot>2026年10月21日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約7分</p><aside class="receipt-facts" aria-labelledby="receipt-facts-heading" data-astro-cid-tcbxoyxt><h2 id="receipt-facts-heading" class="receipt-facts__title" data-astro-cid-tcbxoyxt>このサービスの確認済みの事実</h2><dl class="receipt-facts__list" data-astro-cid-tcbxoyxt><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>領収書の出し方</dt><dd data-astro-cid-tcbxoyxt><ul data-astro-cid-tcbxoyxt><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>メルカリShops</strong>: 領収書・インボイスの発行機能はない。購入時に自動送付されるメールや決済手段ごとの利用明細で代替し、必要ならショップへ相談（注文内容は「マイページ」→「購入履歴」）</li><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>通常のメルカリ（個人間取引）</strong>: 購入者向けの領収書の案内は、公式ヘルプの購入・取引関連の記事一覧では確認できなかった</li></ul></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>宛名</dt><dd data-astro-cid-tcbxoyxt>公式の案内では確認できず<span class="receipt-facts__note" data-astro-cid-tcbxoyxt>（公式の案内で確認できなかった）</span></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>インボイス</dt><dd data-astro-cid-tcbxoyxt>公式の案内では確認できず<span class="receipt-facts__note" data-astro-cid-tcbxoyxt>（メルカリShopsはインボイスの発行機能なしでショップへ直接相談。通常のメルカリは公式の案内で確認できなかった）</span></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>登録番号</dt><dd data-astro-cid-tcbxoyxt>公式の案内では確認できず</dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>最終確認日</dt><dd data-astro-cid-tcbxoyxt><time datetime="2026-10-17" data-astro-cid-tcbxoyxt>2026年10月17日</time></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>公式の情報</dt><dd data-astro-cid-tcbxoyxt><ul data-astro-cid-tcbxoyxt><li data-astro-cid-tcbxoyxt><a href="https://help.jp.mercari.com/guide/articles/1271/" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>領収書や適格請求書（インボイス）を発行してほしいです（メルカリShops）</a></li><li data-astro-cid-tcbxoyxt><a href="https://help.jp.mercari.com/guide/articles/1155/" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>注文内容はどこから確認できますか？（メルカリShops）</a></li><li data-astro-cid-tcbxoyxt><a href="https://help.jp.mercari.com/guide/articles/578/" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>各決済手段の支払方法とご利用履歴の確認方法</a></li></ul></dd></div></dl><p class="receipt-facts__hub" data-astro-cid-tcbxoyxt><a class="arrow-link" href="/receipts/" data-astro-cid-tcbxoyxt>ほかのサービスの領収書・インボイス対応を見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-tcbxoyxt>→</span></a></p></aside><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論メルカリの領収書は発行機能なしと案内されているこの記事で分かること" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：メルカリの領収書は「発行機能なし」と案内されている（この記事で分かること）</a></li><li data-astro-cid-sgg5joot><a href="#メルカリで領収書は出る通常のメルカリとメルカリshopsの違い" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>メルカリで領収書は出る？通常のメルカリとメルカリShopsの違い</a></li><li data-astro-cid-sgg5joot><a href="#メルカリshopsの公式案内領収書の代わりに何を使うか" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>メルカリShopsの公式案内：領収書の代わりに何を使うか</a></li><li data-astro-cid-sgg5joot><a href="#経費の証拠に残せる記録購入履歴メール利用明細" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>経費の証拠に残せる記録：購入履歴・メール・利用明細</a></li><li data-astro-cid-sgg5joot><a href="#メルカリのインボイス適格請求書の考え方" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>メルカリのインボイス（適格請求書）の考え方</a></li><li data-astro-cid-sgg5joot><a href="#経費の証拠としての保存何をどこまで残すか" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>経費の証拠としての保存：何をどこまで残すか</a></li><li data-astro-cid-sgg5joot><a href="#メルカリで事業用の物を買うときのチェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>メルカリで事業用の物を買うときのチェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#まとめメルカリの領収書は代わりの記録で備える" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>まとめ：メルカリの領収書は代わりの記録で備える</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論メルカリの領収書は発行機能なしと案内されているこの記事で分かること">結論：メルカリの領収書は「発行機能なし」と案内されている（この記事で分かること）</h2>
+<p>メルカリの公式ヘルプで領収書とインボイスの扱いが書かれているのは、メルカリShopsだけです。そこには「発行機能はない」と明記されています。</p>
+<p>通常のメルカリ（個人間取引）で、購入者向けの領収書を出す案内は、ヘルプセンターの購入・取引関連の記事一覧では確認できませんでした（2026年10月17日時点）。</p>
+<p>残せる記録は、購入履歴・購入時のメール・支払い手段ごとの利用明細です。インボイス（適格請求書）は、登録を受けた事業者でなければ交付できません（国税庁）。</p>
+<p>この記事では、次の流れで整理します。</p>
+<ol>
+<li>メルカリで領収書は出るのか</li>
+<li>メルカリShopsの公式案内</li>
+<li>経費の証拠として残せる記録</li>
+<li>インボイスの考え方</li>
+<li>保存の注意点とチェックリスト</li>
+</ol>
+<p>「自分の場合はどうか」を考える手がかりとして、開業届の有無や法人か個人か、免税事業者かどうかによって変わる点にも触れます。</p>
+<h2 id="メルカリで領収書は出る通常のメルカリとメルカリshopsの違い">メルカリで領収書は出る？通常のメルカリとメルカリShopsの違い</h2>
+<p>メルカリには、大きく分けて2つの買い方があります。個人間で売買する通常のメルカリと、ショップ（お店）が出品するメルカリShopsです。</p>
+<table>
+<thead>
+<tr>
+<th>区分</th>
+<th>領収書・インボイスについての公式案内</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>通常のメルカリ（個人間取引）</td>
+<td>購入者向けの領収書の案内は、購入・取引関連の記事一覧では確認できなかった</td>
+</tr>
+<tr>
+<td>メルカリShops</td>
+<td>領収書・インボイスの発行機能はない。代替の方法が案内されている</td>
+</tr>
+</tbody>
+</table>
+<p>通常のメルカリについては、購入者が領収書を出せるかどうか、どこで出すかが公式の案内で確認できませんでした。宛名の入れ方についても同様です。ここは推測では書かず、「確認できなかった」という扱いにとどめます。</p>
+<p>なお、メルカリでは領収書や公的証明書の出品が禁止されています。脱税目的での不正利用やなりすましを防ぐためと、公式ヘルプに書かれています。</p>
+<p>領収書の代わりになる取引の記録を、自分でどう残すかを考えることになります。</p>
+<p>事業用の物を買うときは、最初から「領収書は出ない前提」で記録の残し方を決めておくと、後から慌てずに済みます。</p>
+<h2 id="メルカリshopsの公式案内領収書の代わりに何を使うか">メルカリShopsの公式案内：領収書の代わりに何を使うか</h2>
+<p>メルカリShopsのヘルプには、領収書と適格請求書について次の趣旨の案内があります。</p>
+<ul>
+<li>領収書や適格請求書（インボイス）の発行機能はない</li>
+<li>購入時に自動送付されるメールや、決済手段ごとに発行される利用明細等で代替する</li>
+<li>やむを得ず領収書が必要な場合は、ショップへ相談する</li>
+<li>ショップも領収書の要望に応えられない場合がある</li>
+<li>適格請求書（インボイス）は、ショップへ直接相談する</li>
+</ul>
+<p>ここで押さえたいのは、領収書が出るかどうかはショップ次第だという点です。相談はできますが、応じてもらえる保証はありません。</p>
+<p>注文内容の確認場所も案内されています。</p>
+<ol>
+<li>メルカリアプリで「マイページ」を開く</li>
+<li>「購入履歴」を選ぶ</li>
+<li>Webの場合は「購入した商品」から選ぶ</li>
+</ol>
+<p>購入履歴には、通常のメルカリの商品とメルカリShopsの商品が一緒に表示されるとのことです。</p>
+<p>注意したいのが、同じ商品を複数個まとめて買った注文で、一部がキャンセルされた場合です。購入時のメールに書かれた金額と、最終的な請求金額が異なります。最終的な請求金額は、注文詳細画面で確認するよう案内されています。</p>
+<p>経費にする金額は、メールの金額だけで決めず、注文詳細画面の金額と照らして確認してください。</p>
+<h2 id="経費の証拠に残せる記録購入履歴メール利用明細">経費の証拠に残せる記録：購入履歴・メール・利用明細</h2>
+<p>領収書が出ない場合に、残せる記録は主に3種類あります。</p>
+<table>
+<thead>
+<tr>
+<th>記録</th>
+<th>内容</th>
+<th>確認・保存の方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>購入履歴</td>
+<td>購入した商品と注文の内容</td>
+<td>画面を保存、または印刷</td>
+</tr>
+<tr>
+<td>自動送付メール</td>
+<td>購入時に届く確認メール</td>
+<td>メールを保管、またはPDFなどで保存</td>
+</tr>
+<tr>
+<td>支払い手段ごとの利用明細</td>
+<td>実際に支払った記録</td>
+<td>おさいふ、またはカード会社などで確認</td>
+</tr>
+</tbody>
+</table>
+<p>支払い手段ごとの利用履歴は、メルカリアプリの「おさいふ」から確認できます。公式ヘルプでは次のように案内されています。</p>
+<ul>
+<li>クレジット：「〇月の請求」→「内訳を見る」</li>
+<li>メルペイ残高：「残高」→「残高履歴」</li>
+<li>ポイント：「ポイント」→「履歴と有効期限」</li>
+</ul>
+<p>また、「おさいふ」→「最近の利用」→「毎月のご利用状況」では、メルカリやメルペイが使えるお店での支払い履歴を、ひと月ごとに確認できます。</p>
+<p>紙のご利用明細は発行されていません。そのため、必要なら画面の保存や印刷で自分で形に残すことになります。</p>
+<p>開業届を出している個人事業主の方も、法人の担当者の方も、考え方は同じです。「何を、いつ、いくらで、何のために買ったか」が後から追える状態にしておくのが基本です。</p>
+<p>経費として認められるかどうかの線引きは、<a href="/articles/keihi-naru-mono-naranai-mono/">経費になるもの・ならないもの</a>も参考にしてください。</p>
+<p>他のサービスで領収書を出す手順は、<a href="/articles/amazon-ryoushuusho-dashikata/">Amazonの領収書の出し方</a>、楽天市場の領収書、Yahoo!ショッピングの領収書、Appleの領収書で解説しています。</p>
+<h2 id="メルカリのインボイス適格請求書の考え方">メルカリのインボイス（適格請求書）の考え方</h2>
+<p>インボイスについては、国税庁が次のように説明しています。</p>
+<ul>
+<li>適格請求書は、税務署長の登録を受けた適格請求書発行事業者でなければ交付できない</li>
+<li>免税事業者や消費者など、適格請求書発行事業者以外の者からの課税仕入れは、原則として仕入税額控除ができない</li>
+<li>一定の要件を満たせば、令和5年10月1日から令和13年9月30日までの期間は、仕入税額相当額の一定割合（80パーセント、7・5・3割）を控除できる経過措置がある</li>
+</ul>
+<p>仕入税額控除とは、買い物で支払った消費税を、納める消費税から差し引く仕組みです。</p>
+<p>ただし、これは消費税の課税事業者が対象となる仕組みです。免税事業者の方は、仕入税額控除そのものが関係しない場合があります。詳しくは国税庁の案内や税務署でご確認ください。</p>
+<p>あなたの状況ごとの考え方を整理します。</p>
+<table>
+<thead>
+<tr>
+<th>あなたの状況</th>
+<th>考え方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>課税事業者（消費税を納めている）</td>
+<td>売り手がインボイス登録事業者かどうかが、控除に関わる</td>
+</tr>
+<tr>
+<td>免税事業者</td>
+<td>仕入税額控除が関係しない場合がある。所得税・法人税の記録保存は別に必要</td>
+</tr>
+<tr>
+<td>開業直後で判断に迷う</td>
+<td>自分が課税事業者かどうかを、まず税務署の案内で確認する</td>
+</tr>
+</tbody>
+</table>
+<p>売り手が登録を受けているかは、国税庁の公表サイトで登録番号を確認できます。入口は<a href="https://www.invoice-kohyo.nta.go.jp/">国税庁 適格請求書発行事業者公表サイト</a>のトップページです。</p>
+<p>メルカリの個人の出品者が登録しているかどうかは、メルカリの公式ヘルプからは分かりません。メルカリShopsでは、インボイスが必要な場合はショップへ直接相談する形です。</p>
+<p>海外サービスの利用料とインボイスの関係は、<a href="/articles/kaigai-saas-shouhizei-invoice/">海外SaaSの消費税とインボイス</a>で扱っています。</p>
+<h2 id="経費の証拠としての保存何をどこまで残すか">経費の証拠としての保存：何をどこまで残すか</h2>
+<p>国税庁は、取引に伴い作成したり受け取ったりした書類を保存しておく必要があるとしています。</p>
+<p>請求書、見積書、納品書、送り状などは、5年間の保存でよい書類の例として挙げられています。</p>
+<p>仕入税額控除を受けるには、帳簿と、事実を証する請求書等の両方の保存が必要と説明されています。</p>
+<p>帳簿だけの保存で認められる取引も一部ありますが、限定的です。たとえば、古物営業を営む者が適格請求書発行事業者でない者から古物を購入する場合は、棚卸資産に該当するものに限られます。</p>
+<p>また、基準期間の課税売上高が1億円以下などの事業者が、令和5年10月1日から令和11年9月30日までに行った税込1万円未満の課税仕入れは、一定の事項を記載した帳簿のみの保存で認められる場合があります。</p>
+<p>一般の備品購入などにこれらが当てはまるかは、事業の内容や状況によります。個別の判断は税理士や税務署にご相談ください。</p>
+<p>電子データで残す場合の注意は、<a href="/articles/ryoushuusho-hozon-e-bunsho-taiou/">領収書の電子保存への対応</a>にまとめています。</p>
+<aside class="cta-box"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">弥生株式会社</p><h3 class="cta-box__title">弥生シリーズ（やよいの青色申告 オンライン など）</h3><p class="cta-box__body">会計・青色申告のクラウドソフト。新規申込が成果条件。</p><a class="cta-box__button" href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E9T4M2+35XE+5ZEMP" data-offer="yayoi" rel="sponsored nofollow noopener" target="_blank">弥生シリーズ（やよいの青色申告 オンライン など）の公式サイトへ</a></aside>
+<p>記録を日々の帳簿につなげる段階では、会計ソフトを使うと取引の整理がしやすくなります。青色申告向けの帳簿づけに対応したものとして、<a href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E9T4M2+35XE+5ZEMP" rel="sponsored nofollow noopener" target="_blank">青色申告対応の会計ソフトを見る</a>から内容を確認できます。</p>
+<h2 id="メルカリで事業用の物を買うときのチェックリスト">メルカリで事業用の物を買うときのチェックリスト</h2>
+<p>購入前から保存までの流れを、順番に確認します。</p>
+<ol>
+<li>購入先が通常のメルカリか、メルカリShopsかを確認する</li>
+<li>領収書が必須の取引なら、購入前にショップへ相談できるか確認する</li>
+<li>購入後、購入履歴（「マイページ」→「購入履歴」）で注文内容を確認する</li>
+<li>購入時に届くメールを保管する</li>
+<li>まとめ買いでキャンセルがあれば、注文詳細画面の最終請求金額を確認する</li>
+<li>「おさいふ」で支払い手段ごとの利用履歴を確認し、画面を保存または印刷する</li>
+<li>事業で使う目的、品名、金額、日付を帳簿に記録する</li>
+<li>課税事業者の場合は、売り手の登録の有無を国税庁の公表サイトで確認する</li>
+<li>判断に迷う取引は、税理士または税務署に相談する</li>
+</ol>
+<p>複数人で備品を買う総務・購買担当の方は、購入者ごとに記録の残し方がばらつかないよう、チーム内で保存場所を決めておくと管理しやすくなります。</p>
+<h2 id="まとめメルカリの領収書は代わりの記録で備える">まとめ：メルカリの領収書は代わりの記録で備える</h2>
+<p>メルカリShopsには領収書・インボイスの発行機能がなく、購入時のメールや決済手段ごとの利用明細で代替する案内になっています。</p>
+<p>通常のメルカリについては、購入者向けの領収書の案内を公式ヘルプで確認できませんでした。</p>
+<p>そのため、購入履歴、メール、おさいふの利用履歴を保存し、帳簿につなげる方法で備えるのが基本です。</p>
+<p>インボイスは、登録を受けた事業者でなければ交付できません。課税事業者か免税事業者かで影響が変わるため、自分の区分を確認したうえで、個別の判断は税理士や税務署に相談してください。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>メルカリで領収書は発行してもらえますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>メルカリShopsのヘルプでは、領収書や適格請求書（インボイス）の発行機能はないと案内されています。通常のメルカリ（個人間取引）で購入者向けに領収書を出す案内は、ヘルプセンターの購入・支払い関連の記事一覧では確認できませんでした（2026年10月17日時点）。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>領収書がないとき、経費の証拠として何を残せばよいですか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>メルカリShopsの公式案内では、購入時に自動送付されるメールや、決済手段ごとの利用明細での代替が案内されています。購入履歴の画面、メール、おさいふの利用履歴などを保存しておく方法があります。個別の判断は税理士や税務署にご相談ください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>メルカリで買った物のインボイスはもらえますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>適格請求書は、登録を受けた適格請求書発行事業者でなければ交付できないと国税庁が説明しています。メルカリShopsのインボイスについてはショップへ直接相談するよう案内されています。個人の出品者が登録しているかは、メルカリのヘルプからは分かりません。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>免税事業者の場合もインボイスを気にする必要がありますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>仕入税額控除は課税事業者の消費税の計算に関わる仕組みのため、免税事業者の方には関係しない場合があります。ただし所得税や法人税の帳簿・書類の保存は別に考える必要があります。詳しくは国税庁の案内や税務署でご確認ください。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://help.jp.mercari.com/guide/articles/1271/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>メルカリ ヘルプ 領収書や適格請求書（インボイス）を発行してほしいです（メルカリShops）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://help.jp.mercari.com/guide/articles/1155/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>メルカリ ヘルプ 注文内容はどこから確認できますか？（メルカリShops）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://help.jp.mercari.com/guide/articles/578/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>メルカリ ヘルプ 各決済手段の支払方法とご利用履歴の確認方法</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://help.jp.mercari.com/guide/articles/887/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>メルカリ ヘルプ 領収書や公的証明書類（禁止されている出品物）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6498.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.6498</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6496.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.6496</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2070.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.2070</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.invoice-kohyo.nta.go.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 適格請求書発行事業者公表サイト</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/kakutei-shinkoku/" data-astro-cid-sgg5joot>確定申告・会計ソフト・経費の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/receipts/" data-astro-cid-sgg5joot>サービス別 領収書・インボイス対応一覧を見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

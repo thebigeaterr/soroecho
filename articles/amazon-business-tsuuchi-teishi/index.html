@@ -1,0 +1,195 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Amazonビジネスの通知を止める方法｜メール・SMS・郵送を減らす設定手順 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="Amazonビジネスの通知やメールは、アカウントサービスの「Eメールとメッセージ」から設定して減らせます。情報配信Eメール、SMS、ダイレクトメール、郵送それぞれの止め方と、止められない注文関連メールの扱いを整理します。"><link rel="canonical" href="https://soroecho.com/articles/amazon-business-tsuuchi-teishi/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="Amazonビジネスの通知を止める方法｜メール・SMS・郵送を減らす設定手順 | そろえ帳"><meta property="og:description" content="Amazonビジネスの通知やメールは、アカウントサービスの「Eメールとメッセージ」から設定して減らせます。情報配信Eメール、SMS、ダイレクトメール、郵送それぞれの止め方と、止められない注文関連メールの扱いを整理します。"><meta property="og:url" content="https://soroecho.com/articles/amazon-business-tsuuchi-teishi/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/amazon-business-tsuuchi-teishi.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Amazonビジネスの通知を止める方法｜メール・SMS・郵送を減らす設定手順 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Amazonビジネスの通知を止める方法｜メール・SMS・郵送を減らす設定手順 | そろえ帳"><meta name="twitter:description" content="Amazonビジネスの通知やメールは、アカウントサービスの「Eメールとメッセージ」から設定して減らせます。情報配信Eメール、SMS、ダイレクトメール、郵送それぞれの止め方と、止められない注文関連メールの扱いを整理します。"><meta name="twitter:image" content="https://soroecho.com/og/amazon-business-tsuuchi-teishi.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"Amazonビジネスの通知を止める方法｜メール・SMS・郵送を減らす設定手順","item":"https://soroecho.com/articles/amazon-business-tsuuchi-teishi/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Amazonビジネスの通知を止める方法｜メール・SMS・郵送を減らす設定手順","description":"Amazonビジネスの通知やメールは、アカウントサービスの「Eメールとメッセージ」から設定して減らせます。情報配信Eメール、SMS、ダイレクトメール、郵送それぞれの止め方と、止められない注文関連メールの扱いを整理します。","url":"https://soroecho.com/articles/amazon-business-tsuuchi-teishi/","datePublished":"2026-10-21T00:00:00.000Z","dateModified":"2026-10-21T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/amazon-business-tsuuchi-teishi/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Amazonビジネスの通知をすべて止めることはできますか？","acceptedAnswer":{"@type":"Answer","text":"情報配信Eメールは「すべての情報配信Eメールを受信しない」を選んで保存すると止められます。ただし、注文に関する重要なメールは配信されることがあると公式ヘルプに記載されています。"}},{"@type":"Question","name":"SMS（携帯への通知）はどこで設定しますか？","acceptedAnswer":{"@type":"Answer","text":"アカウントサービスの「Eメールとメッセージ」から「情報配信サービスの設定」を開き、SMSの設定で行います。携帯番号を追加する際は、ワンタイムパスワードで確認します。"}},{"@type":"Question","name":"郵送のダイレクトメールも止められますか？","acceptedAnswer":{"@type":"Answer","text":"情報配信の設定画面で「郵送での情報配信は受け取らない。」を選んで保存します。"}},{"@type":"Question","name":"登録した覚えがないのにAmazonビジネスのメールが届きます。どうすればよいですか？","acceptedAnswer":{"@type":"Answer","text":"この記事は登録済みの方向けです。登録していないのに届く場合は、関連記事 /articles/scout-2026-09-16-7/ をご覧ください。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>Amazonビジネスの通知を止める方法｜メール・SMS・郵送を減らす設定手順</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecy1vi02-g" x1="0" y1="0" x2="1" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecy1vi02-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecy1vi02-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecy1vi02-p)" data-astro-cid-yuatfsof></rect><circle cx="334" cy="81" r="141" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>amazonビジネス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>通知</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>停止</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--amazon-business">Amazonビジネス実務</span><h1 data-astro-cid-sgg5joot>Amazonビジネスの通知を止める方法｜メール・SMS・郵送を減らす設定手順</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-10-21T00:00:00.000Z" data-astro-cid-sgg5joot>2026年10月21日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約5分</p><p class="cta-inline">Amazonビジネスは法人・個人事業主向けのAmazonアカウントで、登録は無料です。<a href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">公式サイトで詳細を見る</a></p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#まず確認したい通知の種類と止められる範囲" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>まず確認したい：通知の種類と止められる範囲</a></li><li data-astro-cid-sgg5joot><a href="#手順1設定画面を開く" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>手順1：設定画面を開く</a></li><li data-astro-cid-sgg5joot><a href="#手順2情報配信eメールを止める" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>手順2：情報配信Eメールを止める</a></li><li data-astro-cid-sgg5joot><a href="#手順3sms携帯への通知を設定する" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>手順3：SMS（携帯への通知）を設定する</a></li><li data-astro-cid-sgg5joot><a href="#手順4郵送の案内を止める" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>手順4：郵送の案内を止める</a></li><li data-astro-cid-sgg5joot><a href="#止められないメールとの付き合い方" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>止められないメールとの付き合い方</a></li><li data-astro-cid-sgg5joot><a href="#設定後に確認すること" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>設定後に確認すること</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><p>Amazonビジネスの通知は、アカウントサービスの「Eメールとメッセージ」にある「情報配信サービスの設定」で減らせます。情報配信Eメールは「すべて受信しない」にでき、郵送の案内も止められます。</p>
+<p>ただし、注文に関する重要なメールは配信されることがあります。通知をゼロにするのではなく、「不要な宣伝を止め、必要な連絡は残す」考え方で設定するのが現実的です。</p>
+<p>この記事は、Amazonビジネスに登録済みの方向けです。登録した覚えがないのにメールが届く場合は、<a href="/articles/scout-2026-09-16-7/">こちらの記事</a>をご覧ください。</p>
+<h2 id="まず確認したい通知の種類と止められる範囲">まず確認したい：通知の種類と止められる範囲</h2>
+<p>Amazonビジネスから届く連絡は、大きく分けて次の種類があります。どれを減らしたいかで、操作する場所が変わります。</p>
+<p>公式ヘルプによると、アカウントの更新やアクションは、通知ベル（画面上の鈴のマーク）またはEメールで知らされます。また、アカウントや注文に関するテキストメッセージ（SMS）やEメールの通知も設定できます。</p>
+<table>
+<thead>
+<tr>
+<th>種類</th>
+<th>内容</th>
+<th>止められるか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>情報配信Eメール</td>
+<td>新商品・セール・おすすめなどの案内</td>
+<td>「すべて受信しない」に設定できる</td>
+</tr>
+<tr>
+<td>ダイレクトメール</td>
+<td>会員登録・新商品・セール・おすすめの案内</td>
+<td>受信するかどうかを選べる</td>
+</tr>
+<tr>
+<td>SMS</td>
+<td>携帯電話への通知</td>
+<td>SMSの設定で管理する</td>
+</tr>
+<tr>
+<td>郵送</td>
+<td>紙の情報配信</td>
+<td>「受け取らない」に設定できる</td>
+</tr>
+<tr>
+<td>注文に関する重要なメール</td>
+<td>注文内容に関わる連絡</td>
+<td>配信されることがある</td>
+</tr>
+</tbody>
+</table>
+<p>「うざい」と感じる通知の多くは、上の表の上から3行目までに当たることが多いでしょう。まず宣伝系を止め、それでも気になる連絡が残るかを見る順番がおすすめです。</p>
+<p>あなたの場合の目安は次のとおりです。</p>
+<ul>
+<li>宣伝メールが多すぎる：情報配信Eメールの設定へ</li>
+<li>携帯に通知が来るのが負担：SMSの設定へ</li>
+<li>封書やはがきが届く：郵送の設定へ</li>
+<li>注文関連の連絡も多い：後述の「止められないメール」を確認</li>
+</ul>
+<h2 id="手順1設定画面を開く">手順1：設定画面を開く</h2>
+<p>すべての設定は、アカウントサービスから入ります。次の手順で開いてください。</p>
+<ol>
+<li>Amazonビジネスにログインする</li>
+<li>「アカウントサービス」を開く</li>
+<li>「Eメールとメッセージ」を選ぶ</li>
+<li>「情報配信サービスの設定」を開く</li>
+</ol>
+<p>この画面で、Eメール、SMS、ダイレクトメール、郵送といった項目を確認できます。</p>
+<p>[要実演スクショ: アカウントサービスの「Eメールとメッセージ」画面]</p>
+<p>[要実演スクショ: 「情報配信サービスの設定」画面]</p>
+<p>画面の表示は、時期や利用環境で変わる場合があります。項目名が少し違うときは、公式ヘルプの案内と見比べながら進めてください。</p>
+<h2 id="手順2情報配信eメールを止める">手順2：情報配信Eメールを止める</h2>
+<p>宣伝やお知らせのメールを一括で止めたい場合は、次の操作をします。</p>
+<ol>
+<li>「情報配信サービスの設定」を開く</li>
+<li>「情報配信Eメール」の項目を選ぶ</li>
+<li>「すべての情報配信Eメールを受信しない」を選ぶ</li>
+<li>「保存」を押す</li>
+</ol>
+<p>保存を忘れると設定が反映されないため、最後に必ず保存ボタンを押してください。</p>
+<p>[要実演スクショ: 「すべての情報配信Eメールを受信しない」を選択した画面]</p>
+<h3 id="一部だけ残したい場合">一部だけ残したい場合</h3>
+<p>すべて止めるのではなく、必要なものだけ受け取る選択もできます。公式ヘルプでは、次の調整ができるとされています。</p>
+<ul>
+<li>どの部署からの情報配信Eメールを受け取るかを選ぶ</li>
+<li>Eメールの形式を選ぶ</li>
+<li>ダイレクトメールの設定で、会員登録・新商品・セール・おすすめの受信を、項目ごとに受け取る／受け取らないで選ぶ</li>
+</ul>
+<p>たとえば、セールの案内だけ残して、おすすめは止める、といった使い分けが考えられます。</p>
+<h3 id="プログラムのメールについて">プログラムのメールについて</h3>
+<p>特定のプログラムに関するメールは、「Eメールご登録」で管理します。情報配信Eメールを止めても、プログラム側のメールは別に設定が必要な場合があります。止めたはずのメールが届くときは、この画面も確認してください。</p>
+<aside class="cta-box cta-box--subtle"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">Amazonビジネス</p><h3 class="cta-box__title">法人・個人事業主向けのAmazonアカウント</h3><p class="cta-box__body">請求書払いや数量割引など、通常のAmazonアカウントにはない機能が使えます。登録は無料です（詳細は公式サイトの案内に基づきます）。</p><a class="cta-box__button" href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">Amazonビジネスの登録ページへ（公式）</a></aside>
+<h2 id="手順3sms携帯への通知を設定する">手順3：SMS（携帯への通知）を設定する</h2>
+<p>SMSは、携帯電話の番号を追加することで受け取れる仕組みです。受け取りたくない場合は、番号を追加しないままにしておくのが基本です。</p>
+<p>すでに設定している場合、または新しく設定する場合の流れは次のとおりです。</p>
+<ol>
+<li>「情報配信サービスの設定」を開く</li>
+<li>SMSの設定を選ぶ</li>
+<li>携帯番号を追加する</li>
+<li>ワンタイムパスワード（確認用の一回限りの数字）で確認する</li>
+</ol>
+<p>番号の追加時には、携帯に届くワンタイムパスワードで本人確認を行います。</p>
+<p>[要実演スクショ: SMSの設定画面]</p>
+<p>SMSを止めたい場合の具体的な画面操作は、公式ヘルプの記載の範囲では細かく確認できません。設定画面でSMSの項目を開き、画面の案内に沿って確認してください。</p>
+<h2 id="手順4郵送の案内を止める">手順4：郵送の案内を止める</h2>
+<p>紙のダイレクトメールが届く場合は、郵送の設定を変えます。メールの設定とは別になっているため、メールを止めても郵送は止まらないことがあります。</p>
+<ol>
+<li>「情報配信サービスの設定」を開く</li>
+<li>郵送の項目を選ぶ</li>
+<li>「郵送での情報配信は受け取らない。」を選ぶ</li>
+<li>「保存」を押す</li>
+</ol>
+<p>[要実演スクショ: 郵送の設定画面]</p>
+<p>自宅兼事務所で開業している個人事業主の方は、この設定が特に関係します。自宅住所に宣伝の郵便物が届くのを減らしたい場合は、メールと郵送の両方を確認してください。</p>
+<h2 id="止められないメールとの付き合い方">止められないメールとの付き合い方</h2>
+<p>公式ヘルプには、注文に関する重要なメールは配信されることがあると書かれています。情報配信をすべて止めても、注文に関する連絡は届く場合があるということです。</p>
+<p>これは、注文の確認や変更など、取引に必要な連絡を受け取れなくならないための仕組みと考えられます。通知を完全に消すより、次の方法で整理するのが現実的です。</p>
+<ul>
+<li>仕事用のメールアドレスと私用のアドレスを分ける</li>
+<li>注文関連のメールだけを、メールソフトで専用フォルダに振り分ける</li>
+<li>通知ベルの表示は、まとめて確認する時間を決める</li>
+</ul>
+<h3 id="あなたの場合の考え方">「あなたの場合」の考え方</h3>
+<ul>
+<li>個人事業主（ひとりで利用）：宣伝系をすべて止め、注文関連だけ残す形が管理しやすい</li>
+<li>従業員がいて複数人で使う：担当者ごとに受け取りたい連絡が違うため、部署ごとの配信の選択を見直す</li>
+<li>発送件数が多いネットショップ運営者：注文関連の連絡を見落とさないよう、止めすぎに注意する</li>
+</ul>
+<h2 id="設定後に確認すること">設定後に確認すること</h2>
+<p>設定を変えたら、次の点を確認しておくと安心です。</p>
+<ol>
+<li>設定画面をもう一度開き、変更が保存されているか見る</li>
+<li>しばらく届くメールを観察し、止まらないものの種類を確認する</li>
+<li>届き続けるものが宣伝か、注文関連かを見分ける</li>
+<li>宣伝なのに届く場合は、プログラムのメール（「Eメールご登録」）も確認する</li>
+</ol>
+<p>アカウントの種類によって使える機能が違うため、個人用との違いが気になる方は<a href="/articles/amazon-business-kojin-chigai/">Amazonビジネスと個人アカウントの違い</a>も参考にしてください。見積書の取得など実務の流れは<a href="/articles/amazon-business-mitsumorisho-hakkou/">見積書の発行手順</a>で解説しています。</p>
+<aside class="cta-box cta-box--subtle"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">Amazonビジネス</p><h3 class="cta-box__title">法人・個人事業主向けのAmazonアカウント</h3><p class="cta-box__body">請求書払いや数量割引など、通常のAmazonアカウントにはない機能が使えます。登録は無料です（詳細は公式サイトの案内に基づきます）。</p><a class="cta-box__button" href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">Amazonビジネスの登録ページへ（公式）</a></aside>
+<p>通知を整えておくと、本当に必要な注文の連絡に気づきやすくなります。宣伝系だけを止めて、仕事に必要な連絡は残す形を目指してください。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Amazonビジネスの通知をすべて止めることはできますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>情報配信Eメールは「すべての情報配信Eメールを受信しない」を選んで保存すると止められます。ただし、注文に関する重要なメールは配信されることがあると公式ヘルプに記載されています。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>SMS（携帯への通知）はどこで設定しますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>アカウントサービスの「Eメールとメッセージ」から「情報配信サービスの設定」を開き、SMSの設定で行います。携帯番号を追加する際は、ワンタイムパスワードで確認します。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>郵送のダイレクトメールも止められますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>情報配信の設定画面で「郵送での情報配信は受け取らない。」を選んで保存します。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>登録した覚えがないのにAmazonビジネスのメールが届きます。どうすればよいですか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>この記事は登録済みの方向けです。登録していないのに届く場合は、関連記事 /articles/scout-2026-09-16-7/ をご覧ください。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=GJDNR3MKLAUDDED7" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon ヘルプ：通知・情報配信の設定</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-12）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=GJAW9SFGM8XTS89H" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon ヘルプ：情報配信Eメール・郵送の停止</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-12）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/amazon-business-mitsumorisho-hakkou/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1oukbk0-g" x1="0" y1="0" x2="1" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1oukbk0-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1oukbk0-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1oukbk0-p)" data-astro-cid-yuatfsof></rect><circle cx="366" cy="57" r="153" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Amazon</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>見積書</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>出し方</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--amazon-business">Amazonビジネス実務</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>Amazonの見積書の出し方｜カートからPDFで保存する手順（Amazonビジネス・登録無料）</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>Amazonで見積書が必要なときは、登録無料のAmazonビジネスを使います。注文前はカートから参考見積書、注文後は注文履歴から見積書をPDFで保存でき、稟議や経費精算に使えます。個人アカウントしかない場合の考え方と、配送料が載らない・ダウンロードできないときの注意点もまとめました。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-06T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月6日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約12分</p></div></a><a class="card article-card" href="/articles/kojin-jigyou-kaigyoutodoke-nashi-amazon-business-toroku/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1ptehj0-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1ptehj0-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1ptehj0-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1ptehj0-p)" data-astro-cid-yuatfsof></rect><circle cx="363" cy="90" r="176" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>個人事業主</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>開業届なし</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Amazonビジネス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--amazon-business">Amazonビジネス実務</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>Amazonビジネスの登録に必要書類は？開業届なしの個人事業主が用意するもの一覧</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>個人事業主がAmazonビジネスに登録するときは、確認書類を1点提出します。開業届がなくても、過去2年以内の確定申告書B・収支内訳書、インボイスの登録通知書などで代わりになります。公式ヘルプの書類一覧と提出時の注意点、登録手順、屋号の扱いを整理しました。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-06T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月6日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/amazon-business/" data-astro-cid-sgg5joot>Amazonビジネス実務の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/business-prime/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 L4 4"></path><path d="M4 20 L21 20"></path><path d="M7 20 L7 14"></path><path d="M11 20 L11 10"></path><path d="M15 20 L15 15"></path><path d="M19 20 L19 7"></path><path d="M5 16 L20 8"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>Business Prime 損益分岐計算</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>注文回数と送料を入れると、Businessプライムの元が取れる回数がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/amazon-business-check/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 9 l2 2 l3.5 -3.5"></path><path d="M8 15 h8"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>Amazonビジネスが必要か判定</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>5つの質問に答えるだけで、Amazonビジネスが「要る」「今は要らない」「どちらでも」のどれかがわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

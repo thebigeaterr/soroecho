@@ -1,0 +1,227 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Canvaの領収書・請求書はどこで取る？取得手順・宛名・インボイスと消費税の確認 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="Canvaの公式ヘルプ（日本語版）では、領収書にあたる書類は請求書として、設定の「注文と請求書」からPDFで取得できます。取り方、宛名の設定、消費税とインボイスの確認点、勘定科目、保存の要件を整理します。"><link rel="canonical" href="https://soroecho.com/articles/canva-ryoushuusho-invoice/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="Canvaの領収書・請求書はどこで取る？取得手順・宛名・インボイスと消費税の確認 | そろえ帳"><meta property="og:description" content="Canvaの公式ヘルプ（日本語版）では、領収書にあたる書類は請求書として、設定の「注文と請求書」からPDFで取得できます。取り方、宛名の設定、消費税とインボイスの確認点、勘定科目、保存の要件を整理します。"><meta property="og:url" content="https://soroecho.com/articles/canva-ryoushuusho-invoice/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/canva-ryoushuusho-invoice.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Canvaの領収書・請求書はどこで取る？取得手順・宛名・インボイスと消費税の確認 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Canvaの領収書・請求書はどこで取る？取得手順・宛名・インボイスと消費税の確認 | そろえ帳"><meta name="twitter:description" content="Canvaの公式ヘルプ（日本語版）では、領収書にあたる書類は請求書として、設定の「注文と請求書」からPDFで取得できます。取り方、宛名の設定、消費税とインボイスの確認点、勘定科目、保存の要件を整理します。"><meta name="twitter:image" content="https://soroecho.com/og/canva-ryoushuusho-invoice.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"Canvaの領収書・請求書はどこで取る？取得手順・宛名・インボイスと消費税の確認","item":"https://soroecho.com/articles/canva-ryoushuusho-invoice/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Canvaの領収書・請求書はどこで取る？取得手順・宛名・インボイスと消費税の確認","description":"Canvaの公式ヘルプ（日本語版）では、領収書にあたる書類は請求書として、設定の「注文と請求書」からPDFで取得できます。取り方、宛名の設定、消費税とインボイスの確認点、勘定科目、保存の要件を整理します。","url":"https://soroecho.com/articles/canva-ryoushuusho-invoice/","datePublished":"2026-10-22T00:00:00.000Z","dateModified":"2026-10-22T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/canva-ryoushuusho-invoice/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Canva の領収書はどこで発行できますか？","acceptedAnswer":{"@type":"Answer","text":"Canva の公式ヘルプ（日本語版）では、書類は「請求書」として案内されています。ホームでアカウントのプロフィールを開き、[設定]の[注文と請求書]タブで購入した商品を見つけて[請求書を表示]を選ぶと、PDFが端末にダウンロードされます。「領収書」という名前の別の書類は、公式ヘルプでは確認できませんでした。"}},{"@type":"Question","name":"Canva の請求書に会社名や住所を入れるにはどうしますか？","acceptedAnswer":{"@type":"Answer","text":"公式ヘルプ（日本語版）では、[設定]の[お支払い]にある[お支払いの詳細]で、請求先連絡先名と請求先住所を追加・更新できると案内されています。変更は今後の請求書に適用され、既存の請求書は変更されません。チームでは所有者と管理者だけが変更できます。"}},{"@type":"Question","name":"Canva の請求書にインボイスの登録番号は載りますか？","acceptedAnswer":{"@type":"Answer","text":"公式ヘルプ（日本語版）には、Canva の請求書が適格請求書か、日本の登録番号が載るかの記載を確認できませんでした。手元の請求書に「T」と13桁の番号があるかを見て、あれば国税庁の適格請求書発行事業者公表サイトで、名称が発行元と一致するかを確認してください。"}},{"@type":"Question","name":"Canva の請求書に消費税は含まれますか？","acceptedAnswer":{"@type":"Answer","text":"公式ヘルプ（日本語版）によると、印刷製品は日本国内で印刷するため消費税が課されます。企業のお客様がサブスクリプションを購入する場合は、購入時に有効な会社登記番号を提示すれば、請求書に消費税は含まれないと案内されています。「会社登記番号」が日本の事業者の何にあたるかは、公式ヘルプでは確認できませんでした。"}},{"@type":"Question","name":"Canva の利用料の勘定科目は何にすればよいですか？","acceptedAnswer":{"@type":"Answer","text":"国税庁の案内から、正解の科目を一つに断定することはできません。広告素材の制作に使うなら広告宣伝費、事業用の通信に近いなら通信費、少額の道具なら消耗品費、他に当てはまらなければ雑費、といった選択肢があります。用途に合わせて選び、迷えば税理士や税務署に相談してください。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>Canvaの領収書・請求書はどこで取る？取得手順・宛名・インボイスと消費税の確認</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1s65q7i-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1s65q7i-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ec1s65q7i-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1s65q7i-p)" data-astro-cid-yuatfsof></rect><circle cx="362" cy="47" r="178" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>canva</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>領収書</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>Canvaの領収書・請求書はどこで取る？取得手順・宛名・インボイスと消費税の確認</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-10-22T00:00:00.000Z" data-astro-cid-sgg5joot>2026年10月22日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約9分</p><aside class="receipt-facts" aria-labelledby="receipt-facts-heading" data-astro-cid-tcbxoyxt><h2 id="receipt-facts-heading" class="receipt-facts__title" data-astro-cid-tcbxoyxt>このサービスの確認済みの事実</h2><dl class="receipt-facts__list" data-astro-cid-tcbxoyxt><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>領収書の出し方</dt><dd data-astro-cid-tcbxoyxt><ul data-astro-cid-tcbxoyxt><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>デスクトップ（Canva直接の購入）</strong>: プロフィール → [設定] → [注文と請求書]タブ → 購入した商品の[請求書を表示]（PDFがダウンロードされる。印刷物は追加メニューから）</li><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>メール</strong>: アカウントのメールアドレスまたは請求書用メールアドレスに請求書が届く。Canvaのメールの[詳細を表示]から[注文と請求書]へ（ログイン必要）</li><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>PayPal</strong>: PayPalから届く請求書メール、またはPayPalのアクティビティの取引。出品者は Canva Pty Limited</li><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>App Store（iOS）</strong>: Canvaアプリでサブスクリプションの Apple 受領書IDを生成できる</li><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>Google Play</strong>: Googleから届く注文番号（GPA.XXXX-...）のメール、または Google Payments の[アクティビティ]</li></ul></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>宛名</dt><dd data-astro-cid-tcbxoyxt>宛名を指定できる<span class="receipt-facts__note" data-astro-cid-tcbxoyxt>（請求先連絡先名・請求先住所を設定できる。今後の請求書のみ反映（既存の請求書は変更されない））</span></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>インボイス</dt><dd data-astro-cid-tcbxoyxt>公式の案内では確認できず<span class="receipt-facts__note" data-astro-cid-tcbxoyxt>（公式ヘルプ（日本語版）に、適格請求書にあたるか・日本の登録番号が載るかの記載は確認できなかった）</span></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>登録番号</dt><dd data-astro-cid-tcbxoyxt>公式の案内では確認できず</dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>最終確認日</dt><dd data-astro-cid-tcbxoyxt><time datetime="2026-10-17" data-astro-cid-tcbxoyxt>2026年10月17日</time></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>公式の情報</dt><dd data-astro-cid-tcbxoyxt><ul data-astro-cid-tcbxoyxt><li data-astro-cid-tcbxoyxt><a href="https://www.canva.com/ja_jp/help/find-read-invoices/" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>Canva ヘルプ（日本語版）請求書を探して確認する</a></li><li data-astro-cid-tcbxoyxt><a href="https://www.canva.com/ja_jp/help/billing-details/" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>Canva ヘルプ（日本語版）請求書の詳細を変更する</a></li><li data-astro-cid-tcbxoyxt><a href="https://www.canva.com/ja_jp/help/canva-sales-tax-per-country/" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>Canva ヘルプ（日本語版）Canvaの国ごとの売上税</a></li></ul></dd></div></dl><p class="receipt-facts__hub" data-astro-cid-tcbxoyxt><a class="arrow-link" href="/receipts/" data-astro-cid-tcbxoyxt>ほかのサービスの領収書・インボイス対応を見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-tcbxoyxt>→</span></a></p></aside><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論canva-の領収書は請求書のpdf設定の注文と請求書から取る" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：Canva の「領収書」は請求書のPDF。設定の「注文と請求書」から取る</a></li><li data-astro-cid-sgg5joot><a href="#canva-の請求書の取り方デスクトップ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>Canva の請求書の取り方（デスクトップ）</a></li><li data-astro-cid-sgg5joot><a href="#メールで届く請求書と銀行明細での探し方" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>メールで届く請求書と、銀行明細での探し方</a></li><li data-astro-cid-sgg5joot><a href="#paypalapp-storegoogle-play-で支払った場合" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>PayPal・App Store・Google Play で支払った場合</a></li><li data-astro-cid-sgg5joot><a href="#宛名請求先の名前住所と納税者番号の設定" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>宛名（請求先の名前・住所）と納税者番号の設定</a></li><li data-astro-cid-sgg5joot><a href="#canva-の消費税とインボイス適格請求書" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>Canva の消費税とインボイス（適格請求書）</a></li><li data-astro-cid-sgg5joot><a href="#国税庁のルールのおさらい仕入税額控除免税事業者簡易課税少額特例" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>国税庁のルールのおさらい（仕入税額控除・免税事業者・簡易課税・少額特例）</a></li><li data-astro-cid-sgg5joot><a href="#canva-の勘定科目の選択肢" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>Canva の勘定科目の選択肢</a></li><li data-astro-cid-sgg5joot><a href="#請求書データの保存電子取引データの要件" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>請求書データの保存：電子取引データの要件</a></li><li data-astro-cid-sgg5joot><a href="#チェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>10</span>チェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#次の一歩" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>11</span>次の一歩</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論canva-の領収書は請求書のpdf設定の注文と請求書から取る">結論：Canva の「領収書」は請求書のPDF。設定の「注文と請求書」から取る</h2>
+<p>Canva の公式ヘルプ（日本語版）では、購入の書類は「請求書」と案内されています。「領収書」という名前の別の書類は、確認できた公式ヘルプには出てきません。経費の証憑にするなら、この請求書のPDFを保存します。</p>
+<p>この記事で分かることは次のとおりです。</p>
+<ul>
+<li>請求書の取り方と、支払い経路（直接・PayPal・App Store・Google Play）ごとの探し方</li>
+<li>請求先の名前・住所・納税者番号の設定</li>
+<li>消費税の扱いと、インボイスの登録番号の確認の仕方</li>
+<li>勘定科目の選択肢と、電子データの保存の要件</li>
+</ul>
+<p>Canva のヘルプは機械翻訳で提供されており、画面名が表示によって異なることがあります。以下の画面名は公式ヘルプ（日本語版）の表記です。確認した日は2026年10月17日です。</p>
+<h2 id="canva-の請求書の取り方デスクトップ">Canva の請求書の取り方（デスクトップ）</h2>
+<p>公式ヘルプ（日本語版）「請求書を探して確認する」では、まず「請求書を表示するには、適切なCanvaアカウントとチームにログインしていることを確認してください。」と案内されています。複数のアカウントやチームを使っている人は、支払った側にログインしているかを先に見てください。</p>
+<p>手順は次のとおりです。</p>
+<ol>
+<li>ホームページでアカウントのプロフィールを選び、メニューを開きます。</li>
+<li>[設定]を選びます。</li>
+<li>[注文と請求書]タブを開きます。</li>
+<li>購入した商品を見つけて、[請求書を表示]を選びます。</li>
+</ol>
+<p>公式ヘルプには「請求書はPDFとして端末にダウンロードされます。」とあります。印刷物の注文の場合は、先に追加のメニューを選んでから[請求書を表示]を選ぶと案内されています。</p>
+<p>Canva はナビゲーションを順次変更しているため、手順がアプリの表示と一致しないことがある、とも書かれています。ホームページにプロフィールなどが見当たらないときは、[その他]から進むよう案内されています。</p>
+<h2 id="メールで届く請求書と銀行明細での探し方">メールで届く請求書と、銀行明細での探し方</h2>
+<p>公式ヘルプによると、請求書はアカウントのメールアドレスまたは請求書用メールアドレスに送信されます。Canva から届いたメールの[詳細を表示]を選ぶと、[注文と請求書]の画面に進めます。ログインが必要です。</p>
+<p>銀行やカードの明細には、「CANVA * （請求書番号）」と表示されます。請求書番号は、0から始まる5桁の数字、ハイフン、7〜9桁の数字の形です。公式ヘルプの例は「CANVA * 01234-1234567」です。明細の番号から、どの請求書か突き合わせられます。</p>
+<h2 id="paypalapp-storegoogle-play-で支払った場合">PayPal・App Store・Google Play で支払った場合</h2>
+<p>支払い経路によって、探す場所が変わります。公式ヘルプ（日本語版）の案内は次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>支払い経路</th>
+<th>公式ヘルプの案内</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PayPal</td>
+<td>PayPal から届く請求書メールか、PayPal のアクティビティの取引を探す。出品者は「Canva Pty Limited」（英国のお客様は Canva UK Operations Limited）。Payment Attempt ID は「pa」で始まる</td>
+</tr>
+<tr>
+<td>App Store（iOS）</td>
+<td>サブスクリプションは、Canva アプリで Apple の受領書IDを生成できる</td>
+</tr>
+<tr>
+<td>Google Play</td>
+<td>Google から注文番号（GPA.XXXX-…）の入ったメールが届く。Google Payments の[アクティビティ]で Canva の請求を探せる</td>
+</tr>
+</tbody>
+</table>
+<p>App Store や Google Play の決済は、書類の出し方がCanva 直接の場合と異なります。経費の証憑として何を保存するかは、それぞれの案内で確認した書類にそろえてください。</p>
+<h2 id="宛名請求先の名前住所と納税者番号の設定">宛名（請求先の名前・住所）と納税者番号の設定</h2>
+<p>公式ヘルプ（日本語版）「請求書の詳細を変更する」では、Canva の請求書に表示される請求先連絡先名と請求先住所を追加・更新できると案内されています。請求書の通知を受け取る請求先の連絡先も追加できます。請求書に表示される名前とメールアドレスは、[設定]の[プロフィール]で設定します。</p>
+<p>チームの場合、お支払いの詳細を更新できるのは所有者と管理者だけです。</p>
+<p>手順は次のとおりです。</p>
+<ol>
+<li>プロフィールから[設定]を選びます。</li>
+<li>[お支払い]を選びます。</li>
+<li>[お支払いの詳細]で[追加]または[更新]を選びます。</li>
+<li>[請求書情報]を選び、請求先住所を入力します。</li>
+<li>[変更を保存]を選びます。</li>
+</ol>
+<p>公式ヘルプには「新しい詳細は今後の請求書に記載されます。」とあります。「変更は今後の請求書に適用されます。」とも書かれており、宛名は最初の請求の前に設定しておくほうが安全です。</p>
+<p>納税者番号は、[設定]の[お支払いスケジュール]から[お支払いの詳細]を開き、[追加または更新]、[納税者番号を追加]の順に進みます。公式ヘルプは、納税者番号を追加するとVAT、GSTまたは納税者番号が請求書に表示されるようになるが、これによりアカウントが自動的に免税になるわけではない、と説明しています。更新は将来の請求書にのみ適用され、既存の請求書は変更されません。</p>
+<p>新しい請求書には、国と郵便番号が表示されます。住所の全体は、アカウント設定で更新した後に表示される、とあります。</p>
+<h2 id="canva-の消費税とインボイス適格請求書">Canva の消費税とインボイス（適格請求書）</h2>
+<p>公式ヘルプ（日本語版）「Canvaの国ごとの売上税」の日本の項目では、消費税について次の2点が案内されています。</p>
+<ul>
+<li>「Canvaは、印刷製品の供給に消費税を請求することが義務付けられています。これは、製品を日本国内で印刷しているためです。」</li>
+<li>「ただし、企業のお客様でサブスクリプションを購入される場合、購入時に有効な会社登記番号をご提示いただければ、請求書に消費税が含まれることはありません。」</li>
+</ul>
+<p>つまり、印刷物には消費税がかかり、企業のサブスクリプションは、会社登記番号の提示があれば請求書に消費税が含まれません。</p>
+<p>確認した公式ヘルプには、次の点は書かれていませんでした。</p>
+<ul>
+<li>Canva の請求書が適格請求書（インボイス）にあたるか</li>
+<li>日本の登録番号（T＋13桁）が請求書に載るか</li>
+<li>「会社登記番号」が、日本の事業者の何にあたるか</li>
+</ul>
+<p>そのため、この記事では断定しません。手元の請求書で、次の順に確認します。</p>
+<ol>
+<li>請求書に「T」から始まる13桁の番号があるか</li>
+<li>日本の消費税の額が載っているか</li>
+<li>発行元の名称は何か</li>
+</ol>
+<p>番号があれば、ご自身で<a href="https://www.invoice-kohyo.nta.go.jp/">国税庁の適格請求書発行事業者公表サイト</a>に入力して、名称が請求書の発行元と一致するかを確認してください。番号がない場合は、Canva のサポートに適格請求書の扱いを問い合わせるのが確実です。「会社登記番号」の意味も、同じくサポートで確かめられます。</p>
+<p>消費税が載っていない請求書を受け取った場合に、自分側で申告・納税が必要になるかは、そのサービスが国税庁の言う「事業者向け」に当たるかなどで変わります。整理は<a href="/articles/kaigai-saas-shouhizei-invoice/">海外SaaSの消費税とインボイス</a>にまとめました。最終判断は税理士か税務署に確認します。</p>
+<h2 id="国税庁のルールのおさらい仕入税額控除免税事業者簡易課税少額特例">国税庁のルールのおさらい（仕入税額控除・免税事業者・簡易課税・少額特例）</h2>
+<p>ここからは Canva に限らない共通の制度です。</p>
+<ul>
+<li><strong>仕入税額控除</strong>：払った消費税を、納める消費税から差し引く仕組みです。国税庁は、インボイス（適格請求書）がない仕入れや経費は原則として仕入税額控除ができないとしています。</li>
+<li><strong>書類の名前は問わない</strong>：請求書に限らず、所定の事項が載っていれば、領収書や納品書でもインボイスになります。記載事項には、売手の名称と登録番号、取引年月日、税率ごとの対価と消費税額、交付先の名称などがあります。</li>
+<li><strong>免税事業者</strong>：消費税の確定申告が不要なため、特定課税仕入れ（リバースチャージの対象）をしても申告は必要ありません。</li>
+<li><strong>簡易課税・2割特例・3割特例</strong>：国税庁のインボイス制度の特設サイトに「簡易課税制度や２割特例·３割特例を使うことで、受け取ったインボイスを保存しなくても仕入税額控除を受けることができます」とあります。使えるかどうかは、自分の課税期間と事業の区分で変わるため、税務署か税理士に確認してください。</li>
+<li><strong>事業者向けか消費者向けか</strong>：国税庁Q&amp;Aでは、事業者向けの電気通信利用役務（例：インターネット広告の配信）は適格請求書の保存が不要で、帳簿の保存で仕入税額控除ができます。消費者向け（例：電子書籍・音楽の配信）は適格請求書の保存が必要です。</li>
+<li><strong>少額特例</strong>：一定規模以下の事業者が、令和5年10月1日から令和11年9月30日までの間に行う税込1万円未満の課税仕入れについて、帳簿のみの保存で控除を受けられる経過措置です。</li>
+</ul>
+<p>Canva の利用がどちらの区分にあたるかは、契約内容（個人か事業か、サービスの内容）や請求書の記載で変わりえます。自分の場合の判断は、税理士か税務署に確認してください。</p>
+<h2 id="canva-の勘定科目の選択肢">Canva の勘定科目の選択肢</h2>
+<p>Canva は「デザインを作る道具」です。国税庁の案内に Canva などの名指しはなく、正解の科目を一つに断定することはできません。国税庁の説明に当てはめて、用途に合うものを選ぶ形になります。</p>
+<table>
+<thead>
+<tr>
+<th>勘定科目</th>
+<th>国税庁の説明</th>
+<th>当てはまりうる用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>広告宣伝費</td>
+<td>新聞、雑誌、ラジオ、テレビなどの広告費用、チラシ、折込み広告の費用など</td>
+<td>バナーやチラシなど広告素材の制作に使う場合</td>
+</tr>
+<tr>
+<td>通信費</td>
+<td>事業用として使用した電話料、切手代、電報料など</td>
+<td>通信に近い性質と考える場合</td>
+</tr>
+<tr>
+<td>消耗品費</td>
+<td>帳簿、文房具、用紙などの購入費。取得価額10万円未満か使用可能期間1年未満の什器備品の購入費</td>
+<td>少額の道具・用品として扱う場合</td>
+</tr>
+<tr>
+<td>雑費</td>
+<td>事業上の費用で他の経費に当てはまらないもの</td>
+<td>他のどれにも当てはまらない場合</td>
+</tr>
+</tbody>
+</table>
+<p>広告素材の制作が中心なら広告宣伝費に当たる場合がありますが、あくまで用途次第の選択肢です。資料作成やSNS投稿画像など使い方が混ざる場合は、主な用途で決め、毎年同じ基準で続けると帳簿が読みやすくなります。</p>
+<p>事業とプライベートの両方で使う場合は、按分（割り振り）が必要になることがあります。考え方は <a href="/articles/keihi-naru-mono-naranai-mono/">経費になるもの・ならないもの</a> を参照してください。迷う場合は税理士か税務署に確認しましょう。</p>
+<h2 id="請求書データの保存電子取引データの要件">請求書データの保存：電子取引データの要件</h2>
+<p>ウェブ上で確認・ダウンロードする請求書や領収書のデータは、電子帳簿保存法でいう電子取引データにあたる場合があります。国税庁は、紙でやりとりしていれば保存が必要な書類（領収書・請求書など）に相当するデータを保存するよう求めています。</p>
+<p>ポイントは次のとおりです。</p>
+<ol>
+<li><strong>ダウンロードして保存する</strong>：国税庁の一問一答では、ウェブ上で確認できる時点が授受のタイミングと考えられ、ダウンロードしなければ保存義務が生じない、というものではありません。</li>
+<li><strong>その年のうちに保存する</strong>：まとめてダウンロードする場合も、取引の日が属する年分の中に行う必要があります。</li>
+<li><strong>ファイル形式</strong>：ファイル形式は問わず、PDFやスクリーンショットでも問題ないとされています。</li>
+<li><strong>検索と改ざん防止</strong>：「日付・金額・取引先」で検索できること、改ざん防止の措置が必要です。規則的なファイル名を付ける方法や、表計算ソフトで索引簿を作る方法があります。</li>
+</ol>
+<p>詳しい要件は <a href="/articles/ryoushuusho-hozon-e-bunsho-taiou/">領収書の電子保存への対応</a> に譲ります。</p>
+<h2 id="チェックリスト">チェックリスト</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 支払った側のアカウント・チームにログインしている</li>
+<li class="task-list-item"><input type="checkbox" disabled> [設定]の[注文と請求書]で、請求書のPDFを保存した（PayPal・App Store・Google Play の場合は、それぞれの書類）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 銀行明細の「CANVA * （請求書番号）」と請求書が一致している</li>
+<li class="task-list-item"><input type="checkbox" disabled> 請求先連絡先名・請求先住所を、請求の前に設定した（変更は今後の請求書のみ）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 請求書に「T」＋13桁の番号があるかを見て、あれば国税庁の公表サイトで確認した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 消費税が載っているか、載っていない場合の処理を税理士か税務署に相談した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 勘定科目を用途で決め、事業とプライベートの按分を検討した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 年内にPDFを保存し、日付・金額・取引先で検索できるようにした</li>
+</ul>
+<h2 id="次の一歩">次の一歩</h2>
+<p>請求書PDFが取れたら、次は帳簿に載せる作業です。勘定科目を選び、日付・金額・取引先をそろえて記録します。青色申告に対応した会計ソフトなら、この記録と申告書の作成を一つの流れで進められます。</p>
+<aside class="cta-box"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">弥生株式会社</p><h3 class="cta-box__title">弥生シリーズ（やよいの青色申告 オンライン など）</h3><p class="cta-box__body">会計・青色申告のクラウドソフト。新規申込が成果条件。</p><a class="cta-box__button" href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E9T4M2+35XE+5ZEMP" data-offer="yayoi" rel="sponsored nofollow noopener" target="_blank">弥生シリーズ（やよいの青色申告 オンライン など）の公式サイトへ</a></aside>
+<p><a href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E9T4M2+35XE+5ZEMP" rel="sponsored nofollow noopener" target="_blank">青色申告対応のクラウド会計ソフトを見る</a></p>
+<p>他のサービスの扱いは、次の記事にまとめています。</p>
+<ul>
+<li><a href="/articles/chatgpt-ryoushuusho-invoice/">ChatGPT の領収書とインボイス</a></li>
+<li><a href="/articles/claude-ryoushuusho-shouhizei/">Claude の領収書と消費税</a></li>
+<li><a href="/articles/zoom-ryoushuusho/">Zoom の領収書</a></li>
+</ul>
+<p>海外サービス全体の消費税とインボイスの考え方は、<a href="/articles/kaigai-saas-shouhizei-invoice/">海外SaaSの消費税とインボイス</a> を見てください。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Canva の領収書はどこで発行できますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>Canva の公式ヘルプ（日本語版）では、書類は「請求書」として案内されています。ホームでアカウントのプロフィールを開き、[設定]の[注文と請求書]タブで購入した商品を見つけて[請求書を表示]を選ぶと、PDFが端末にダウンロードされます。「領収書」という名前の別の書類は、公式ヘルプでは確認できませんでした。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Canva の請求書に会社名や住所を入れるにはどうしますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式ヘルプ（日本語版）では、[設定]の[お支払い]にある[お支払いの詳細]で、請求先連絡先名と請求先住所を追加・更新できると案内されています。変更は今後の請求書に適用され、既存の請求書は変更されません。チームでは所有者と管理者だけが変更できます。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Canva の請求書にインボイスの登録番号は載りますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式ヘルプ（日本語版）には、Canva の請求書が適格請求書か、日本の登録番号が載るかの記載を確認できませんでした。手元の請求書に「T」と13桁の番号があるかを見て、あれば国税庁の適格請求書発行事業者公表サイトで、名称が発行元と一致するかを確認してください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Canva の請求書に消費税は含まれますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式ヘルプ（日本語版）によると、印刷製品は日本国内で印刷するため消費税が課されます。企業のお客様がサブスクリプションを購入する場合は、購入時に有効な会社登記番号を提示すれば、請求書に消費税は含まれないと案内されています。「会社登記番号」が日本の事業者の何にあたるかは、公式ヘルプでは確認できませんでした。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Canva の利用料の勘定科目は何にすればよいですか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>国税庁の案内から、正解の科目を一つに断定することはできません。広告素材の制作に使うなら広告宣伝費、事業用の通信に近いなら通信費、少額の道具なら消耗品費、他に当てはまらなければ雑費、といった選択肢があります。用途に合わせて選び、迷えば税理士や税務署に相談してください。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://www.canva.com/ja_jp/help/find-read-invoices/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Canva ヘルプ（日本語版）請求書を探して確認する</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.canva.com/ja_jp/help/billing-details/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Canva ヘルプ（日本語版）請求書の詳細を変更する</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.canva.com/ja_jp/help/canva-sales-tax-per-country/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Canva ヘルプ（日本語版）Canvaの国ごとの売上税</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6118.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.6118 国境を越えた役務の提供に対する消費税の課税</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/pdf/qa/103-3.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 インボイス制度Q&amp;A 問103-3</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/invoice_about.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 インボイス制度の特設サイト</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/law/joho-zeikaishaku/sonota/jirei/tokusetsu/pdf/0023006-085_01.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 電子帳簿保存法 電子取引データの保存方法</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/law/joho-zeikaishaku/sonota/jirei/pdf/0021006-031_03.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 電子帳簿保存法一問一答【電子取引関係】問39</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.keisan.nta.go.jp/r5yokuaru/aoiroshinkoku/hitsuyokeihi/kokokusendenhi/kokokusendenhi.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 確定申告書等作成コーナー よくある質問 広告宣伝費</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.keisan.nta.go.jp/r5yokuaru/aoiroshinkoku/hitsuyokeihi/tsushinhi/tsushinhi.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 確定申告書等作成コーナー よくある質問 通信費</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.keisan.nta.go.jp/r5yokuaru/aoiroshinkoku/hitsuyokeihi/shomohinhi/shomohinhi.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 確定申告書等作成コーナー よくある質問 消耗品費</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.keisan.nta.go.jp/r5yokuaru/aoiroshinkoku/hitsuyokeihi/zappi/zappi.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 確定申告書等作成コーナー よくある質問 雑費</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/kakutei-shinkoku/" data-astro-cid-sgg5joot>確定申告・会計ソフト・経費の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/receipts/" data-astro-cid-sgg5joot>サービス別 領収書・インボイス対応一覧を見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

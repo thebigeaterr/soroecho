@@ -1,0 +1,259 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Apple の領収書はどこで取る？Apple Store の請求書PDF・宛名・App Store の購入履歴 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="Apple Online Store で買った Mac・iPhone は、出荷時にメール「請求金額のお知らせ」でPDFが届き、適格請求書として使えると公式にあります。法人名の入れ方、日付、紛失時の扱い、App Store・iCloud の購入履歴の探し方を整理します。"><link rel="canonical" href="https://soroecho.com/articles/apple-ryoushuusho/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="Apple の領収書はどこで取る？Apple Store の請求書PDF・宛名・App Store の購入履歴 | そろえ帳"><meta property="og:description" content="Apple Online Store で買った Mac・iPhone は、出荷時にメール「請求金額のお知らせ」でPDFが届き、適格請求書として使えると公式にあります。法人名の入れ方、日付、紛失時の扱い、App Store・iCloud の購入履歴の探し方を整理します。"><meta property="og:url" content="https://soroecho.com/articles/apple-ryoushuusho/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/apple-ryoushuusho.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Apple の領収書はどこで取る？Apple Store の請求書PDF・宛名・App Store の購入履歴 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Apple の領収書はどこで取る？Apple Store の請求書PDF・宛名・App Store の購入履歴 | そろえ帳"><meta name="twitter:description" content="Apple Online Store で買った Mac・iPhone は、出荷時にメール「請求金額のお知らせ」でPDFが届き、適格請求書として使えると公式にあります。法人名の入れ方、日付、紛失時の扱い、App Store・iCloud の購入履歴の探し方を整理します。"><meta name="twitter:image" content="https://soroecho.com/og/apple-ryoushuusho.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"Apple の領収書はどこで取る？Apple Store の請求書PDF・宛名・App Store の購入履歴","item":"https://soroecho.com/articles/apple-ryoushuusho/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Apple の領収書はどこで取る？Apple Store の請求書PDF・宛名・App Store の購入履歴","description":"Apple Online Store で買った Mac・iPhone は、出荷時にメール「請求金額のお知らせ」でPDFが届き、適格請求書として使えると公式にあります。法人名の入れ方、日付、紛失時の扱い、App Store・iCloud の購入履歴の探し方を整理します。","url":"https://soroecho.com/articles/apple-ryoushuusho/","datePublished":"2026-10-23T00:00:00.000Z","dateModified":"2026-10-23T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/apple-ryoushuusho/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Apple Store（オンライン）で買った製品の領収書はどこで受け取れますか？","acceptedAnswer":{"@type":"Answer","text":"Apple Online Store の公式ページによると、製品の出荷時に、PDFを添付したメールが届きます。件名は「請求金額のお知らせ」です。配送が複数に分かれる場合は、出荷ごとにメールが届きます。このPDFの請求書は、適格請求書保存方式（インボイス制度）に準じた適格請求書として使えると書かれています。"}},{"@type":"Question","name":"Apple の領収書の宛名に会社名を入れるにはどうしますか？","acceptedAnswer":{"@type":"Answer","text":"公式ページでは、宛名はご請求先として登録された名義になります。法人名で発行したいときは、注文時に「これは勤務先の住所です」にチェックを入れて、希望の法人名を入力すると案内されています。すでに発行された書類の名義を後から追加・変更することはできません。"}},{"@type":"Question","name":"Apple の領収書を失くしたら再発行できますか？","acceptedAnswer":{"@type":"Answer","text":"Apple Online Store の公式ページでは、紛失した場合の再発行は承れないとされています。出荷後48時間以上たってもメールが届かない場合は、Apple Online Store に電話（0120-993-993）で連絡するよう案内されています。メールは迷惑メールフォルダも含めて早めに探して保存してください。"}},{"@type":"Question","name":"App Store や iCloud の領収書はインボイス（適格請求書）にあたりますか？","acceptedAnswer":{"@type":"Answer","text":"今回確認した Apple の公式ページからは、App Store・iCloud の領収書メールがインボイスにあたるか、登録番号が載るかは確認できませんでした。Apple Online Store の請求書PDFとは別の書類です。登録の有無は国税庁の適格請求書発行事業者公表サイトで調べられます。個別の判断は税理士や税務署にご相談ください。"}},{"@type":"Question","name":"App Store や iCloud の購入履歴はどこで確認できますか？","acceptedAnswer":{"@type":"Answer","text":"Apple の公式サポートでは、reportaproblem.apple.com か、端末の「アプリと購入履歴」→「購入履歴」で確認できるとされています。購入ごとの領収書はメールで届くため、「Appleからの領収書」「Appleからの請求書」で検索して探します。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>Apple の領収書はどこで取る？Apple Store の請求書PDF・宛名・App Store の購入履歴</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1w2e4fp-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1w2e4fp-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ec1w2e4fp-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1w2e4fp-p)" data-astro-cid-yuatfsof></rect><circle cx="343" cy="47" r="155" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>apple</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>領収書</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>Apple の領収書はどこで取る？Apple Store の請求書PDF・宛名・App Store の購入履歴</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-10-23T00:00:00.000Z" data-astro-cid-sgg5joot>2026年10月23日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約11分</p><aside class="receipt-facts" aria-labelledby="receipt-facts-heading" data-astro-cid-tcbxoyxt><h2 id="receipt-facts-heading" class="receipt-facts__title" data-astro-cid-tcbxoyxt>このサービスの確認済みの事実</h2><dl class="receipt-facts__list" data-astro-cid-tcbxoyxt><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>領収書の出し方</dt><dd data-astro-cid-tcbxoyxt><ul data-astro-cid-tcbxoyxt><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>Apple Online Store で買った製品（Mac・iPhone など）</strong>: 製品の出荷時に、PDFを添付したメール（件名「請求金額のお知らせ」）が届く。配送が複数に分かれる場合は出荷ごと。日付は出荷日。紛失時の再発行は不可。出荷後48時間以上たってもメールが届かない場合は 0120-993-993 に電話</li><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>App Store・Apple メディアサービスの購入履歴</strong>: reportaproblem.apple.com にサインイン、または端末の App Store →「アプリと購入履歴」→「購入履歴」</li><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>App Store・iCloud などの購入ごとの領収書</strong>: メールで「Appleからの領収書」「Appleからの請求書」を検索</li></ul></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>宛名</dt><dd data-astro-cid-tcbxoyxt>宛名を指定できる<span class="receipt-facts__note" data-astro-cid-tcbxoyxt>（Apple Online Store では、注文時に「これは勤務先の住所です」にチェックを入れて法人名を入力する。名義はご請求先として登録された名義で、発行済み書類の名義は後から追加・変更できない。App Store・iCloud の宛名は公式で確認できなかった）</span></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>インボイス</dt><dd data-astro-cid-tcbxoyxt>条件・特例あり<span class="receipt-facts__note" data-astro-cid-tcbxoyxt>（Apple Online Store の請求書PDFは適格請求書として利用可。App Store・iCloud は公式で確認できず）</span></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>登録番号</dt><dd data-astro-cid-tcbxoyxt>公式の案内では確認できず</dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>最終確認日</dt><dd data-astro-cid-tcbxoyxt><time datetime="2026-10-17" data-astro-cid-tcbxoyxt>2026年10月17日</time></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>公式の情報</dt><dd data-astro-cid-tcbxoyxt><ul data-astro-cid-tcbxoyxt><li data-astro-cid-tcbxoyxt><a href="https://www.apple.com/jp/shop/help/receipt" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>Apple Online Store 領収証／各種書類</a></li><li data-astro-cid-tcbxoyxt><a href="https://support.apple.com/ja-jp/118212" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>App StoreやほかのAppleメディアサービスの購入履歴を確認する</a></li><li data-astro-cid-tcbxoyxt><a href="https://support.apple.com/ja-jp/118223" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>Appleから購入したアプリやコンテンツの返金手続きをする</a></li><li data-astro-cid-tcbxoyxt><a href="https://support.apple.com/ja-jp/102083" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>App Store や iTunes Store での購入代金について金融機関から直接確認する</a></li></ul></dd></div></dl><p class="receipt-facts__hub" data-astro-cid-tcbxoyxt><a class="arrow-link" href="/receipts/" data-astro-cid-tcbxoyxt>ほかのサービスの領収書・インボイス対応を見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-tcbxoyxt>→</span></a></p></aside><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#apple-の領収書の結論買ったものによって取り方が違う" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>Apple の領収書の結論：買ったものによって取り方が違う</a></li><li data-astro-cid-sgg5joot><a href="#apple-storeオンラインで買った製品の領収書請求書pdfがメールで届く" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>Apple Store（オンライン）で買った製品の領収書：請求書PDFがメールで届く</a></li><li data-astro-cid-sgg5joot><a href="#app-storeicloud-の購入履歴の見方" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>App Store・iCloud の購入履歴の見方</a></li><li data-astro-cid-sgg5joot><a href="#領収書メールの探し方app-storeicloud-の領収書" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>領収書メールの探し方（App Store・iCloud の領収書）</a></li><li data-astro-cid-sgg5joot><a href="#領収書が見つからないときの確認先" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>領収書が見つからないときの確認先</a></li><li data-astro-cid-sgg5joot><a href="#インボイスはどこまで確認できたか" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>インボイスは、どこまで確認できたか</a></li><li data-astro-cid-sgg5joot><a href="#経費にするときの保存の考え方" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>経費にするときの保存の考え方</a></li><li data-astro-cid-sgg5joot><a href="#領収書の準備チェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>領収書の準備チェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#まとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>まとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="apple-の領収書の結論買ったものによって取り方が違う">Apple の領収書の結論：買ったものによって取り方が違う</h2>
+<p>Apple の領収書は、買ったものによって取り方が分かれます。</p>
+<ul>
+<li><strong>Mac・iPhone などの製品（Apple Online Store で購入）</strong>：製品の出荷時に、PDFを添付したメールが届きます。件名は「請求金額のお知らせ」です。Apple の公式ページには、このPDFの請求書は適格請求書保存方式（インボイス制度）に準じた適格請求書として使えると書かれています。</li>
+<li><strong>アプリ・サブスクリプション・iCloud など</strong>：購入履歴は reportaproblem.apple.com か、端末の「アプリと購入履歴」→「購入履歴」で確認できます。購入ごとの領収書はメールで届くため、「Appleからの領収書」「Appleからの請求書」で検索して探します。</li>
+</ul>
+<p>法人名の宛名は、Apple Online Store では注文時に入れます。発行後に名義を足したり変えたりはできません。日付は購入日ではなく出荷日になります。</p>
+<p>一方、App Store・iCloud の領収書がインボイスにあたるか、Apple の登録番号がどう載るかは、今回確認した公式ページでは確認できませんでした。この記事では、確認できた範囲と確認できなかった範囲を分けて書きます。</p>
+<p>この記事で分かることは次のとおりです。</p>
+<ol>
+<li>Apple Online Store で買った製品の書類（受け取り方、宛名、日付、紛失時）</li>
+<li>App Store・iCloud などの購入履歴の見方（端末別）</li>
+<li>領収書メールの探し方と、見つからないときの確認先</li>
+<li>インボイスについて確認できたことと、できなかったこと</li>
+<li>経費にするときの保存の考え方とチェックリスト</li>
+</ol>
+<p>情報は、2026年10月17日に確認した Apple の公式ページと国税庁の公式ページに基づきます。</p>
+<h2 id="apple-storeオンラインで買った製品の領収書請求書pdfがメールで届く">Apple Store（オンライン）で買った製品の領収書：請求書PDFがメールで届く</h2>
+<p>Apple Online Store の「領収証／各種書類」のページ（<a href="https://www.apple.com/jp/shop/help/receipt">Apple</a>、2026年10月17日確認）の内容を整理します。</p>
+<h3 id="受け取り方出荷時に請求金額のお知らせメール">受け取り方：出荷時に「請求金額のお知らせ」メール</h3>
+<p>公式ページによると、製品の出荷時に、PDFファイルを添付したメールが届きます。メールの件名は「請求金額のお知らせ」です。配送が複数に分かれる場合は、出荷ごとにメールが届きます。</p>
+<p>PDFに含まれる請求書は、適格請求書保存方式（インボイス制度）に準じた適格請求書として使えると、公式に書かれています。対象の支払い方法は、クレジットカード、銀行振込、コンビニ払込、ペイディあと払いプランApple専用、オリコショッピングローンです。</p>
+<h3 id="宛名法人名は注文時に入れる">宛名：法人名は注文時に入れる</h3>
+<p>宛名は、ご請求先として登録された名義になります。公式ページには、すでに発行された書類に明記されている名義を後から追加・変更することはできない、とあります。</p>
+<p>法人名で発行したいときは、注文時に「これは勤務先の住所です」にチェックを入れて、希望の法人名を入力します。個人事業主が屋号を宛名にしたい場合の扱いは、公式ページに書かれていません。注文の前に、画面の入力欄と公式ページの案内を見て確かめてください。</p>
+<h3 id="日付と金額指定できない">日付と金額：指定できない</h3>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>公式ページの内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>日付</td>
+<td>指定できません。Apple Online Store で製品が出荷された日になります。銀行振込・コンビニ払込も出荷日です</td>
+</tr>
+<tr>
+<td>金額</td>
+<td>指定できません。出荷ごとの金額で発行されます。カスタマイズ製品の内訳別の発行はできません</td>
+</tr>
+</tbody>
+</table>
+<p>注文した日や入金した日ではなく、出荷日が書類の日付になります。月末をまたぐ注文では、帳簿に入れる日付に注意してください。</p>
+<h3 id="届かないとき失くしたとき">届かないとき・失くしたとき</h3>
+<ul>
+<li>出荷後48時間以上たってもメールが届かない場合は、Apple Online Store に電話（0120-993-993）で連絡するよう案内されています。</li>
+<li>紛失した場合、再発行は承れないとされています。公式ページには「紛失されないよう十分ご注意ください」とあります。</li>
+</ul>
+<p>届いたメールとPDFは、その日のうちに保存しておくのが安全です。</p>
+<h3 id="店頭や正規取扱店で買った場合">店頭や正規取扱店で買った場合</h3>
+<p>Apple の「Appleデバイスの購入後にレシートを保管する」のページ（<a href="https://support.apple.com/ja-jp/102264">Apple サポート</a>、公開日 2025年03月20日、2026年10月17日確認）では、書類は Apple 正規取扱店が発行したもので、次の内容が必要とされています。</p>
+<ul>
+<li>レシートが判読できること</li>
+<li>デバイスの明確な説明</li>
+<li>デバイスの購入日</li>
+<li>請求書番号またはレシート番号</li>
+<li>デバイスの価格</li>
+<li>販売店の連絡先情報</li>
+</ul>
+<p>このページは保管の条件を示すもので、宛名やインボイスについては触れていません。店頭や正規取扱店での宛名の扱いは、今回の公式ページでは確認できませんでした。</p>
+<h2 id="app-storeicloud-の購入履歴の見方">App Store・iCloud の購入履歴の見方</h2>
+<p>購入履歴は、ウェブか端末のどちらからでも調べられます。アプリ、サブスクリプション（定期的に課金される契約）、音楽、その他の購入済みコンテンツが一覧に出ると、公式に案内されています（<a href="https://support.apple.com/ja-jp/118212">Apple サポート</a>、2026年10月17日確認）。</p>
+<h3 id="ウェブで確認する手順">ウェブで確認する手順</h3>
+<ol>
+<li>reportaproblem.apple.com にアクセスします。</li>
+<li>Apple Account にサインインします。</li>
+<li>購入したアイテムのリストが表示されます。</li>
+</ol>
+<p>何の購入か分からなくても、正確な金額が分かっていれば、その額で検索できます。カード明細に金額だけ残っているときに使えます。</p>
+<h3 id="端末で確認する手順">端末で確認する手順</h3>
+<p>端末ごとの手順は次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>端末</th>
+<th>手順</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>iPhone / iPad</td>
+<td>App Store を開き、写真またはイニシャルをタップ →「アプリと購入履歴」→「購入履歴」</td>
+</tr>
+<tr>
+<td>Mac</td>
+<td>App Store のサイドバー下部の名前 →「アプリと購入履歴」→「購入履歴」</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>Apple Music または Apple TV アプリ → 名前 →「マイアカウントを表示」→「購入履歴」セクション →「すべて見る」</td>
+</tr>
+</tbody>
+</table>
+<p>iPhone / iPad では、購入履歴の上部に初期状態で「過去90日間」と表示されます。これをタップして、絞り込み方法を変えられます。</p>
+<p>iCloud の有料プランの請求がこの履歴に出るかどうかは、今回の公式ページでは確認できていません。まず履歴を開いて、該当する請求があるかを見てください。</p>
+<h2 id="領収書メールの探し方app-storeicloud-の領収書">領収書メールの探し方（App Store・iCloud の領収書）</h2>
+<p>購入ごとの領収書は、メールで届きます。Apple の公式サポートは、「Appleからの領収書」や「Appleからの請求書」というキーワードでメールを検索するよう案内しています（<a href="https://support.apple.com/ja-jp/118223">Apple サポート</a>、2026年10月17日確認）。</p>
+<ol>
+<li>普段使っているメールアプリを開きます。</li>
+<li>検索欄に「Appleからの領収書」と入力します。</li>
+<li>出てこなければ「Appleからの請求書」で検索します。</li>
+<li>該当のメールを開き、購入内容を確認します。</li>
+</ol>
+<p>領収書では、購入内容と、購入時に使われた Apple Account を確認できます。経費の記録では「いつ・何に・いくら」に加え、どのアカウントでの購入かが分かると整理しやすくなります。</p>
+<p>なお、領収書メールの再発行という機能名は、今回確認した公式ページには出てきませんでした。「apple 領収書 再発行」で探している場合は、まず購入履歴とメール検索で現物を探し、見つからなければ次の章の確認に進むとよいでしょう。</p>
+<h2 id="領収書が見つからないときの確認先">領収書が見つからないときの確認先</h2>
+<p>メールが見つからないときは、次の順で確認します。</p>
+<ol>
+<li>別の Apple Account で購入していないかを確認する</li>
+<li>まとめて請求されていないかを確認する</li>
+<li>金融機関のサイトで明細を確認する</li>
+</ol>
+<h3 id="別の-apple-account-を使っていないか">別の Apple Account を使っていないか</h3>
+<p>公式には、別の Apple Account を使ってアイテムを購入した可能性があると案内されています。仕事用と個人用で Apple Account を分けている場合は、両方でサインインして履歴を見てください。</p>
+<h3 id="身に覚えのない請求は">身に覚えのない請求は</h3>
+<p>Apple は、複数の購入アイテムやサブスクリプションの料金を1つにまとめて請求する場合があると案内しています。そのため、カード明細の1行が、複数の購入の合計になっていることがあります。家族が購入した分が含まれていないかも、あわせて確認してください。</p>
+<h3 id="金融機関のサイトで確認する">金融機関のサイトで確認する</h3>
+<p>金融機関の Web サイトやモバイルアプリにサインインし、App Store などの最近の利用明細や、Apple Music・iCloud サービスの料金明細を表示すると、「領収書を表示」などのオプションが出ることがあると、公式にあります（<a href="https://support.apple.com/ja-jp/102083">Apple サポート</a>、2026年10月17日確認）。「出ることがある」とされているため、すべての金融機関で表示されるとは限りません。</p>
+<h2 id="インボイスはどこまで確認できたか">インボイスは、どこまで確認できたか</h2>
+<h3 id="確認できたこと">確認できたこと</h3>
+<ul>
+<li><strong>Apple Online Store の請求書PDF</strong>：インボイス制度に準じた適格請求書として使えると、Apple の公式ページに書かれています（上記のとおり）。</li>
+</ul>
+<h3 id="確認できなかったこと">確認できなかったこと</h3>
+<ul>
+<li>App Store・iCloud の領収書メールがインボイス（適格請求書）にあたるか</li>
+<li>Apple の登録番号（T から始まる番号）。今回確認した公式ページには、番号の記載がありませんでした</li>
+</ul>
+<p>推測や他サイトの情報では補わず、「公式の案内で確認できなかった」とだけ記します。登録番号は、受け取った請求書PDFに載っている番号を、国税庁の<a href="https://www.invoice-kohyo.nta.go.jp/">適格請求書発行事業者公表サイト</a>で確かめてください。</p>
+<h3 id="国税庁が示している基本">国税庁が示している基本</h3>
+<p>インボイス制度について、国税庁は次のように案内しています（<a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6498.htm">タックスアンサー No.6498</a>、2026年10月17日確認）。</p>
+<ul>
+<li>適格請求書は、税務署長の登録を受けた適格請求書発行事業者でなければ、交付できない</li>
+<li>適格請求書などの交付を受けることが困難な一定の場合を除き、一定の事項を記載した帳簿と請求書等の保存が、仕入税額控除（支払った消費税を差し引く仕組み）の要件となる</li>
+</ul>
+<h3 id="あなたの場合の確認方法">あなたの場合の確認方法</h3>
+<ul>
+<li><strong>消費税の課税事業者（インボイスで控除を受けたい側）の場合</strong>：Apple Online Store の請求書PDFに登録番号が載っているかを、実物で確かめます。App Store・iCloud は書類の記載内容を確認してください。</li>
+<li><strong>免税事業者（消費税を納めていない側）の場合</strong>：消費税の仕入税額控除を使わないため、インボイスの有無は消費税の計算に直接は関わらない場合があります。所得税や法人税の記録としての保存は別に考えます。</li>
+</ul>
+<p>インボイスがない場合の控除の原則や経過措置の適用は、状況によって変わります。個別の判断は、税理士や税務署にご確認ください。海外のサービスの消費税については、<a href="/articles/kaigai-saas-shouhizei-invoice/">海外SaaSの消費税とインボイス</a>でも整理しています。</p>
+<h2 id="経費にするときの保存の考え方">経費にするときの保存の考え方</h2>
+<p>国税庁は、取引に伴い作成したり受け取ったりした書類を保存しておく必要があると案内しています（<a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2070.htm">タックスアンサー No.2070</a>、2026年10月17日確認）。Apple Online Store の請求書PDFも、App Store・iCloud の領収書メールも、保存の対象にするかどうかは取引の内容に合わせて判断してください。</p>
+<p>電子データで受け取った領収書の保存方法は、<a href="/articles/ryoushuusho-hozon-e-bunsho-taiou/">領収書の電子データ保存と e 文書対応</a>で扱っています。紙に印刷するだけで足りるかなど、迷ったときに参照してください。</p>
+<p>そもそも Apple の購入が経費になるかは、使い道で変わります。事業に使うアプリや保存容量と、私用の購入が混ざっていないかを確認します。考え方は<a href="/articles/keihi-naru-mono-naranai-mono/">経費になるもの・ならないもの</a>にまとめています。</p>
+<p>あなたの状況による分け方は次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>状況</th>
+<th>考え方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apple Online Store で製品を買った</td>
+<td>請求書PDFを届いた日に保存する。宛名は注文時にしか入れられない</td>
+</tr>
+<tr>
+<td>仕事用と個人用で Apple Account が同じ</td>
+<td>購入履歴から、事業分だけを選んで記録する（私用との按分は税理士・税務署に確認）</td>
+</tr>
+<tr>
+<td>仕事用の Apple Account を分けている</td>
+<td>そのアカウントの履歴とメールを保存の対象にする</td>
+</tr>
+<tr>
+<td>家族と共有している</td>
+<td>まとめ請求に家族分が含まれていないか確認する</td>
+</tr>
+</tbody>
+</table>
+<aside class="cta-box"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">弥生株式会社</p><h3 class="cta-box__title">弥生シリーズ（やよいの青色申告 オンライン など）</h3><p class="cta-box__body">会計・青色申告のクラウドソフト。新規申込が成果条件。</p><a class="cta-box__button" href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E9T4M2+35XE+5ZEMP" data-offer="yayoi" rel="sponsored nofollow noopener" target="_blank">弥生シリーズ（やよいの青色申告 オンライン など）の公式サイトへ</a></aside>
+<p>記帳や申告を会計ソフトでまとめたい場合は、青色申告に対応した<a href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E9T4M2+35XE+5ZEMP" rel="sponsored nofollow noopener" target="_blank">会計ソフト（弥生シリーズ）を見る</a>のも一案です。</p>
+<h2 id="領収書の準備チェックリスト">領収書の準備チェックリスト</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Apple Online Store で買う前に、注文時に「これは勤務先の住所です」にチェックを入れ、法人名を入力した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 出荷後に届く「請求金額のお知らせ」メールのPDFを保存した（再発行はできない）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 出荷後48時間以上たってもメールが届かないときは、0120-993-993 に連絡した</li>
+<li class="task-list-item"><input type="checkbox" disabled> PDFの日付が出荷日であることを踏まえて、帳簿の日付を決めた</li>
+<li class="task-list-item"><input type="checkbox" disabled> PDFに登録番号が載っているかを確認し、国税庁の公表サイトで照合した</li>
+<li class="task-list-item"><input type="checkbox" disabled> App Store・iCloud は、reportaproblem.apple.com か端末で購入履歴を確認した</li>
+<li class="task-list-item"><input type="checkbox" disabled> メールで「Appleからの領収書」「Appleからの請求書」を検索した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 見つからない場合、別の Apple Account やまとめ請求、金融機関のサイトを確認した</li>
+<li class="task-list-item"><input type="checkbox" disabled> App Store・iCloud のインボイスの扱いは、公式で確認できなかった点として、必要なら税理士・税務署に相談した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 領収書のデータを保存した</li>
+</ul>
+<p>ほかのサービスの領収書も探している場合は、<a href="/articles/chatgpt-ryoushuusho-invoice/">ChatGPT の領収書とインボイス</a>、<a href="/articles/mercari-ryoushuusho/">メルカリの領収書</a>、<a href="/articles/rakuten-ryoushuusho/">楽天の領収書</a>、<a href="/articles/yahoo-shopping-ryoushuusho/">Yahoo!ショッピングの領収書</a>も参考になります。</p>
+<h2 id="まとめ">まとめ</h2>
+<p>Apple Online Store で買った Mac や iPhone は、出荷時に件名「請求金額のお知らせ」のメールでPDFの請求書が届き、適格請求書として使えると公式ページにあります。法人名は注文時に「これは勤務先の住所です」にチェックを入れて入力します。日付は出荷日で、紛失しても再発行はできません。</p>
+<p>App Store・iCloud などは、reportaproblem.apple.com や端末の「アプリと購入履歴」で購入履歴を調べ、メールで「Appleからの領収書」「Appleからの請求書」を検索して探します。見つからないときは、別の Apple Account、まとめ請求、金融機関のサイトの順に確認します。</p>
+<p>App Store・iCloud の領収書がインボイスにあたるか、Apple の登録番号は、今回の公式の案内では確認できませんでした。登録の有無は国税庁の公表サイトで調べられます。控除の可否など個別の判断は、税理士や税務署にご相談ください。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Apple Store（オンライン）で買った製品の領収書はどこで受け取れますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>Apple Online Store の公式ページによると、製品の出荷時に、PDFを添付したメールが届きます。件名は「請求金額のお知らせ」です。配送が複数に分かれる場合は、出荷ごとにメールが届きます。このPDFの請求書は、適格請求書保存方式（インボイス制度）に準じた適格請求書として使えると書かれています。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Apple の領収書の宛名に会社名を入れるにはどうしますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式ページでは、宛名はご請求先として登録された名義になります。法人名で発行したいときは、注文時に「これは勤務先の住所です」にチェックを入れて、希望の法人名を入力すると案内されています。すでに発行された書類の名義を後から追加・変更することはできません。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Apple の領収書を失くしたら再発行できますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>Apple Online Store の公式ページでは、紛失した場合の再発行は承れないとされています。出荷後48時間以上たってもメールが届かない場合は、Apple Online Store に電話（0120-993-993）で連絡するよう案内されています。メールは迷惑メールフォルダも含めて早めに探して保存してください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>App Store や iCloud の領収書はインボイス（適格請求書）にあたりますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>今回確認した Apple の公式ページからは、App Store・iCloud の領収書メールがインボイスにあたるか、登録番号が載るかは確認できませんでした。Apple Online Store の請求書PDFとは別の書類です。登録の有無は国税庁の適格請求書発行事業者公表サイトで調べられます。個別の判断は税理士や税務署にご相談ください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>App Store や iCloud の購入履歴はどこで確認できますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>Apple の公式サポートでは、reportaproblem.apple.com か、端末の「アプリと購入履歴」→「購入履歴」で確認できるとされています。購入ごとの領収書はメールで届くため、「Appleからの領収書」「Appleからの請求書」で検索して探します。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://support.apple.com/ja-jp/118212" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Apple サポート App StoreやほかのAppleメディアサービスの購入履歴を確認する</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://support.apple.com/ja-jp/118223" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Apple サポート Appleから購入したアプリやコンテンツの返金手続きをする</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://support.apple.com/ja-jp/102083" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Apple サポート App Store や iTunes Store での購入代金について金融機関から直接確認する</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://support.apple.com/ja-jp/102264" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Apple サポート Appleデバイスの購入後にレシートを保管する</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.apple.com/jp/shop/help/receipt" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Apple Online Store ショッピングのサポート 領収証／各種書類</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6498.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.6498 適格請求書等保存方式（インボイス制度）の概要</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2070.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.2070 帳簿書類等の保存</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.invoice-kohyo.nta.go.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 適格請求書発行事業者公表サイト</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/kakutei-shinkoku/" data-astro-cid-sgg5joot>確定申告・会計ソフト・経費の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/receipts/" data-astro-cid-sgg5joot>サービス別 領収書・インボイス対応一覧を見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

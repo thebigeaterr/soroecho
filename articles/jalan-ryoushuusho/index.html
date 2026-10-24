@@ -1,0 +1,243 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>じゃらん 領収書は誰が出す？宛名・法人利用（JCS）・インボイスまで支払い方法別に整理 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="じゃらんnetの領収書は支払い方法で出し手が変わります。オンラインカード決済はマイページの領収書データ、現地払いはリクルートの法人向け資料で宿が発行とされ、JCSの法人一括決済では領収書は出ません。宛名の指定方法とインボイス登録番号の確認点まで、支払い方法別にわかりやすく整理しました。"><link rel="canonical" href="https://soroecho.com/articles/jalan-ryoushuusho/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="じゃらん 領収書は誰が出す？宛名・法人利用（JCS）・インボイスまで支払い方法別に整理 | そろえ帳"><meta property="og:description" content="じゃらんnetの領収書は支払い方法で出し手が変わります。オンラインカード決済はマイページの領収書データ、現地払いはリクルートの法人向け資料で宿が発行とされ、JCSの法人一括決済では領収書は出ません。宛名の指定方法とインボイス登録番号の確認点まで、支払い方法別にわかりやすく整理しました。"><meta property="og:url" content="https://soroecho.com/articles/jalan-ryoushuusho/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/jalan-ryoushuusho.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="じゃらん 領収書は誰が出す？宛名・法人利用（JCS）・インボイスまで支払い方法別に整理 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="じゃらん 領収書は誰が出す？宛名・法人利用（JCS）・インボイスまで支払い方法別に整理 | そろえ帳"><meta name="twitter:description" content="じゃらんnetの領収書は支払い方法で出し手が変わります。オンラインカード決済はマイページの領収書データ、現地払いはリクルートの法人向け資料で宿が発行とされ、JCSの法人一括決済では領収書は出ません。宛名の指定方法とインボイス登録番号の確認点まで、支払い方法別にわかりやすく整理しました。"><meta name="twitter:image" content="https://soroecho.com/og/jalan-ryoushuusho.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"じゃらん 領収書は誰が出す？宛名・法人利用（JCS）・インボイスまで支払い方法別に整理","item":"https://soroecho.com/articles/jalan-ryoushuusho/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"じゃらん 領収書は誰が出す？宛名・法人利用（JCS）・インボイスまで支払い方法別に整理","description":"じゃらんnetの領収書は支払い方法で出し手が変わります。オンラインカード決済はマイページの領収書データ、現地払いはリクルートの法人向け資料で宿が発行とされ、JCSの法人一括決済では領収書は出ません。宛名の指定方法とインボイス登録番号の確認点まで、支払い方法別にわかりやすく整理しました。","url":"https://soroecho.com/articles/jalan-ryoushuusho/","datePublished":"2026-10-24T00:00:00.000Z","dateModified":"2026-10-24T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/jalan-ryoushuusho/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"じゃらんの領収書は宿とじゃらんのどちらが出しますか？","acceptedAnswer":{"@type":"Answer","text":"支払い方法で変わります。公式ページによると、オンラインカード決済では宿泊施設は領収書を発行せず、予約完了と同時にマイページで領収書データを表示できます。現地払いでは、リクルートの法人向け資料に、宿泊施設で領収書を発行すると書かれています。"}},{"@type":"Question","name":"じゃらんの領収書データの宛名に会社名を入れられますか？","acceptedAnswer":{"@type":"Answer","text":"公式の案内で確認できたのは、予約時に入力した宿泊代表者氏名が明細書欄に反映される点までです。会社名を宛名にできるかは、公式の案内では確認できませんでした。"}},{"@type":"Question","name":"じゃらんコーポレートサービス（JCS）の法人一括決済で領収書は出ますか？","acceptedAnswer":{"@type":"Answer","text":"公式の資料では、法人一括決済の場合は領収書が発行されないとされています。明細は管理画面のデータで確認する形です。資料は2023年11月更新のため、最新の条件は申込み前に公式で確認してください。"}},{"@type":"Question","name":"印刷した領収書データは経理精算に使えますか？","acceptedAnswer":{"@type":"Answer","text":"公式ページでは、電子文書のため印刷しても印紙課税の対象にはならないとされています。一方、印刷した帳票を経理精算に使えるかは、利用者自身が事前に確認するよう案内されています。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>じゃらん 領収書は誰が出す？宛名・法人利用（JCS）・インボイスまで支払い方法別に整理</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec29ilzr-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient></defs><rect width="400" height="225" fill="url(#ec29ilzr-g)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="45" r="51.8" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="355" cy="45" r="81.4" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="355" cy="45" r="111" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="355" cy="45" r="140.6" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="355" cy="45" r="148" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>じゃらん</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>領収書</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>じゃらん 領収書は誰が出す？宛名・法人利用（JCS）・インボイスまで支払い方法別に整理</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-10-24T00:00:00.000Z" data-astro-cid-sgg5joot>2026年10月24日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約8分</p><aside class="receipt-facts" aria-labelledby="receipt-facts-heading" data-astro-cid-tcbxoyxt><h2 id="receipt-facts-heading" class="receipt-facts__title" data-astro-cid-tcbxoyxt>このサービスの確認済みの事実</h2><dl class="receipt-facts__list" data-astro-cid-tcbxoyxt><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>領収書の出し方</dt><dd data-astro-cid-tcbxoyxt><ul data-astro-cid-tcbxoyxt><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>オンラインカード決済</strong>: マイページの「領収書データ表示」から表示（リクルート名義の電子表示）。宿泊施設では領収書は発行されない</li><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>現地払い</strong>: 宿泊施設で領収書を発行（リクルートのじゃらんコーポレートサービス資料の記載）</li><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>じゃらんコーポレートサービスの法人一括決済</strong>: 領収書は発行されない。明細は管理画面のデータで参照。利用宿が適格請求書発行事業者なら、リクルートが適格請求書をまとめて発行（2023年11月の資料）</li></ul></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>宛名</dt><dd data-astro-cid-tcbxoyxt>公式の案内では確認できず<span class="receipt-facts__note" data-astro-cid-tcbxoyxt>（オンラインカード決済の領収書データには、予約時に入力した宿泊代表者氏名が明細書欄に反映される。会社名を宛名にできるかは公式の案内で確認できなかった）</span></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>インボイス</dt><dd data-astro-cid-tcbxoyxt>公式の案内では確認できず<span class="receipt-facts__note" data-astro-cid-tcbxoyxt>（個人向けのオンラインカード決済の領収書データがインボイスにあたるかは公式の案内で確認できなかった。法人一括決済は、リクルートが適格請求書をまとめて発行する旨が2023年11月の資料にある）</span></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>登録番号</dt><dd data-astro-cid-tcbxoyxt>公式の案内では確認できず</dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>最終確認日</dt><dd data-astro-cid-tcbxoyxt><time datetime="2026-10-17" data-astro-cid-tcbxoyxt>2026年10月17日</time></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>公式の情報</dt><dd data-astro-cid-tcbxoyxt><ul data-astro-cid-tcbxoyxt><li data-astro-cid-tcbxoyxt><a href="https://www.jalan.net/jalan/doc/howto/cardkessai.html" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>じゃらんnet オンラインカード決済とは</a></li><li data-astro-cid-tcbxoyxt><a href="https://www.jalan.net/jalan/doc/corporate/manual/JCS_detail.pdf" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>リクルート じゃらんコーポレートサービス資料（2023年11月更新）</a></li></ul></dd></div></dl><p class="receipt-facts__hub" data-astro-cid-tcbxoyxt><a class="arrow-link" href="/receipts/" data-astro-cid-tcbxoyxt>ほかのサービスの領収書・インボイス対応を見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-tcbxoyxt>→</span></a></p></aside><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#じゃらんの領収書は支払い方法で出し手が変わる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>じゃらんの領収書は支払い方法で出し手が変わる</a></li><li data-astro-cid-sgg5joot><a href="#じゃらんの領収書支払い方法別の早見表" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>じゃらんの領収書：支払い方法別の早見表</a></li><li data-astro-cid-sgg5joot><a href="#じゃらんnet-領収書データの出し方オンラインカード決済" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>じゃらんnet 領収書データの出し方（オンラインカード決済）</a></li><li data-astro-cid-sgg5joot><a href="#領収書データの注意点" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>領収書データの注意点</a></li><li data-astro-cid-sgg5joot><a href="#じゃらん-領収書の宛名はどうなる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>じゃらん 領収書の宛名はどうなる？</a></li><li data-astro-cid-sgg5joot><a href="#じゃらん-法人利用じゃらんコーポレートサービスjcs" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>じゃらん 法人利用：じゃらんコーポレートサービス（JCS）</a></li><li data-astro-cid-sgg5joot><a href="#じゃらん-法人一括決済とインボイス" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>じゃらん 法人一括決済とインボイス</a></li><li data-astro-cid-sgg5joot><a href="#国税庁の整理どこまで自分で判断するか" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>国税庁の整理：どこまで自分で判断するか</a></li><li data-astro-cid-sgg5joot><a href="#じゃらん-領収書のチェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>じゃらん 領収書のチェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#次の一歩領収書データを帳簿につなげる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>10</span>次の一歩：領収書データを帳簿につなげる</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="じゃらんの領収書は支払い方法で出し手が変わる">じゃらんの領収書は支払い方法で出し手が変わる</h2>
+<p>じゃらんnetの公式ページでは、オンラインカード決済なら宿では領収書を出さず、予約完了と同時にマイページで「領収書データ」を表示する形です。現地払いについては、リクルートの法人向け資料に「宿泊施設にて領収書を発行」とあります。</p>
+<p>法人向けには「じゃらんコーポレートサービス（JCS）」があります。JCSの法人一括決済では、領収書は発行されません。</p>
+<p>この記事では、次の点を順に整理します。</p>
+<ul>
+<li>支払い方法ごとの領収書の出し手</li>
+<li>領収書データの表示手順と注意点</li>
+<li>宛名について公式案内で分かること</li>
+<li>JCSでの法人利用とインボイスの扱い</li>
+<li>申込み前後のチェックリスト</li>
+</ul>
+<p>内容は2026年10月17日に確認した公式ページと、リクルートの公式資料（2023年11月更新）に基づきます。条件は変わることがあるため、実際の予約前に公式で確かめてください。</p>
+<h2 id="じゃらんの領収書支払い方法別の早見表">じゃらんの領収書：支払い方法別の早見表</h2>
+<p>領収書の出し手は、予約時に選ぶ支払い方法で決まります。まず表で全体を見てください。</p>
+<table>
+<thead>
+<tr>
+<th>支払い方法</th>
+<th>領収書の出し手・形</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>オンラインカード決済</td>
+<td>マイページの領収書データ（リクルート名義の電子表示）。宿泊施設では発行されない</td>
+</tr>
+<tr>
+<td>現地払い</td>
+<td>宿泊施設で領収書を発行（リクルートの法人向け資料の記載）</td>
+</tr>
+<tr>
+<td>JCSの法人一括決済</td>
+<td>領収書は発行されない。明細は管理画面のデータで確認</td>
+</tr>
+</tbody>
+</table>
+<p>なお、「現地払い」の行は、リクルートのJCS資料（法人向け）の記載に基づきます。通常のじゃらんnetの現地払いについて、公式の案内では確認できませんでした。</p>
+<p>オンラインカード決済は、クレジットカードの引落としで宿泊料金を決済するサービスです。公式ページによると、株式会社リクルートが提供する「Airペイ オンライン」を利用しています。</p>
+<p>次の条件にも注意してください。</p>
+<ul>
+<li>会員登録なしの予約（Apple Pay利用を除く）では利用できません。</li>
+<li>じゃらんnetに掲載されている全ての宿泊施設・プランが対象ではありません。</li>
+</ul>
+<p>あなたの場合の分岐は次のとおりです。</p>
+<ul>
+<li><strong>個人事業主で、カード払いを選ぶ場合</strong>：宿には領収書を頼まず、マイページで表示します。</li>
+<li><strong>現地払いを選ぶ場合</strong>：法人向け資料では宿が領収書を発行するとされています。宛名などは宿に確認してください。</li>
+<li><strong>法人一括決済を使う場合</strong>：領収書は出ないため、月の請求書と管理画面の明細で管理します。</li>
+</ul>
+<h2 id="じゃらんnet-領収書データの出し方オンラインカード決済">じゃらんnet 領収書データの出し方（オンラインカード決済）</h2>
+<p>オンラインカード決済の領収書データは、マイページから表示します。公式ページの手順は次のとおりです。</p>
+<ol>
+<li>じゃらんnetの「マイページ」にログインします。</li>
+<li>「領収書データ表示」を選びます。</li>
+<li>領収書が必要な予約を選択します。</li>
+<li>分割表示が可能な予約では、「分割で領収書データを表示」ボタンが表示されます。</li>
+</ol>
+<p>「分割で領収書データを表示」ボタンは、分割表示が可能な予約にだけ出ます。すべての予約に出るわけではありません。</p>
+<p>予約完了と同時に表示できるため、宿で受け取る手間はありません。会員登録なしで予約した場合は、この方法を使えません。</p>
+<p>再表示した場合は、「再発行(＊)」と表示され、＊には再発行回数が入ります。</p>
+<h2 id="領収書データの注意点">領収書データの注意点</h2>
+<p>領収書データには、通常の紙の領収書と違う点があります。公式ページの内容を整理します。</p>
+<ul>
+<li><strong>名義</strong>：「Airペイ オンライン」を提供する株式会社リクルート名での表示です。宿泊施設名ではありません。</li>
+<li><strong>金額</strong>：ポイントやクーポン利用後の金額で表示されます。利用前の金額での表示はできません。</li>
+<li><strong>合算</strong>：複数の予約を合算した領収書データは作れません。</li>
+<li><strong>氏名</strong>：予約時に入力した宿泊代表者氏名が、すべての領収書の明細書欄に一律で反映されます。</li>
+<li><strong>キャンセル料</strong>：クレジットカードで請求されたキャンセル料の領収書データは、宿泊施設から請求が行われたタイミングで表示できます。</li>
+<li><strong>発行・送付</strong>：じゃらん側は領収書の発行・送付のサービスは行っていません。</li>
+<li><strong>印紙</strong>：電子文書なので、印刷しても印紙課税の対象にはなりません。</li>
+<li><strong>経理精算</strong>：Web表示を印刷した帳票を経理精算などに使えるかは、利用者自身が事前に確認するよう案内されています。</li>
+</ul>
+<p>領収書データはポイントやクーポンの利用後の金額で表示されます。プランに表示されていた料金と金額が異なる場合があるため、経費の金額を合わせる際は、この点を頭に入れておくと混乱しません。</p>
+<p>領収書の保存方法は別記事の<a href="/articles/ryoushuusho-hozon-e-bunsho-taiou/">領収書の保存と電子データ対応</a>で整理しています。</p>
+<h2 id="じゃらん-領収書の宛名はどうなる">じゃらん 領収書の宛名はどうなる？</h2>
+<p>領収書データの宛名について、公式の案内で確認できたのは次の点までです。</p>
+<ul>
+<li>予約時に入力した宿泊代表者氏名が、明細書欄に反映される。</li>
+</ul>
+<p>会社名を宛名にできるかどうかは、公式の案内で確認できませんでした。現地払いの領収書の宛名や但し書きの扱いについても、確認できていません。</p>
+<p>そのため、宛名が必要な場面では次のように進めると安全です。</p>
+<ol>
+<li>予約時に入力する宿泊代表者氏名を、精算で使いたい名義と合わせるかどうか決める。</li>
+<li>表示された領収書データの宛名欄を、実際に見て確認する。</li>
+<li>会社名が必要な場合は、宿またはじゃらんに問い合わせる。</li>
+</ol>
+<p>あなたの場合の分岐です。</p>
+<ul>
+<li><strong>個人事業主</strong>：屋号ではなく本人名での表示で足りるかを、自分の経理ルールで確認します。</li>
+<li><strong>法人・小さな会社</strong>：会社の精算ルールが宛名に会社名を求めるなら、予約前に確認したほうが手戻りがありません。</li>
+</ul>
+<h2 id="じゃらん-法人利用じゃらんコーポレートサービスjcs">じゃらん 法人利用：じゃらんコーポレートサービス（JCS）</h2>
+<p>法人で使う場合は、じゃらんコーポレートサービス（JCS）があります。リクルートの公式資料（2023年11月更新）の内容は次のとおりです。</p>
+<ul>
+<li>初期導入費用と月額利用料（ランニングコスト）は発生しない。</li>
+<li>請求は月締めの会社請求。仮払い申請や領収書の管理業務などがなくなる。</li>
+<li>従業員がJCSで予約するには、リクルートIDの登録が必要。</li>
+</ul>
+<p>支払い方法は、法人一括決済のほか、現地払い、オンラインカード決済も選べます。ただし、一部の宿泊プランは指定された方法でしか支払えません。</p>
+<table>
+<thead>
+<tr>
+<th>JCSでの支払い方法</th>
+<th>領収書</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>法人一括決済</td>
+<td>発行されない。明細は管理画面のデータで参照</td>
+</tr>
+<tr>
+<td>現地払い</td>
+<td>宿泊施設で領収書を発行。JCSまたはじゃらんnetのマイページから領収書データも表示可能</td>
+</tr>
+<tr>
+<td>オンラインカード決済</td>
+<td>前述の領収書データ（マイページ）</td>
+</tr>
+</tbody>
+</table>
+<p>資料の日付が2023年11月のため、料金や条件は変わっている可能性があります。申込み前に、公式で最新の条件を確認してください。</p>
+<p>出張の領収書の扱いは<a href="/articles/shinkansen-ryoushuusho/">新幹線の領収書</a>の記事とあわせて見ると、会社のルールをそろえやすくなります。</p>
+<h2 id="じゃらん-法人一括決済とインボイス">じゃらん 法人一括決済とインボイス</h2>
+<p>JCSの資料には、インボイス制度への対応が書かれています。法人一括決済では「媒介者交付特例」というルールを適用します。</p>
+<p>資料の内容は次のとおりです。</p>
+<ul>
+<li>利用した宿が適格請求書発行事業者なら、リクルートが登録番号を記載した適格請求書をまとめて発行する。</li>
+<li>請求書は毎月1枚で管理できる。</li>
+<li>適格事業者でない宿の利用分は、区別できるよう対応される。</li>
+<li>宿が適格事業者かどうかは、予約画面上と実績データ上で判別できる。</li>
+</ul>
+<p>資料にある「請求書見本」は仮のもので、レイアウトや文言は変更の可能性があると明記されています。実際の書式は、利用時に確認してください。</p>
+<p>一方、個人向けのオンラインカード決済の領収書データがインボイス（適格請求書）にあたるか、リクルートの登録番号が何か、公式の案内では確認できませんでした。</p>
+<p>国税庁の特設サイトでは、請求書に限らず、所定の事項が書かれた書類なら、領収書や納品書など名称を問わずインボイスになるとされています。そこで、表示された書類を次の順で自分で見てください。</p>
+<ol>
+<li>登録番号が書かれているか。</li>
+<li>税率ごとの消費税額が書かれているか。</li>
+<li>どちらかが無ければ、宿またはじゃらんに確認する。</li>
+</ol>
+<p>登録番号の見方は<a href="/articles/invoice-touroku-yagou/">インボイス登録と屋号</a>、書類の書き方は<a href="/articles/seikyuusho-kakikata-invoice-taiou/">請求書の書き方とインボイス対応</a>で触れています。</p>
+<h2 id="国税庁の整理どこまで自分で判断するか">国税庁の整理：どこまで自分で判断するか</h2>
+<p>国税庁の案内から、押さえたい点を挙げます。</p>
+<ul>
+<li>適格請求書は、税務署長の登録を受けた適格請求書発行事業者でなければ交付できません（タックスアンサーNo.6498）。</li>
+<li>適格請求書等保存方式では、一定の事項を記載した帳簿と請求書等の保存が、仕入税額控除の要件になります（同上）。</li>
+<li>取引に伴って作成・受領した書類は保存が必要です。請求書や領収書の類は5年間の保存でよい書類に含まれます（タックスアンサーNo.2070）。</li>
+</ul>
+<p>インボイスの確認が必要なのは、仕入税額控除を受ける課税事業者です。</p>
+<p>簡易課税や2割特例を使っている場合の扱いは、国税庁の特設サイトに沿って確認してください。</p>
+<p>宿泊費が経費になるか、私用分をどう分けるかは、<a href="/articles/keihi-naru-mono-naranai-mono/">経費になるもの・ならないもの</a>で説明しています。個別の判断は、税理士または税務署に相談してください。</p>
+<h2 id="じゃらん-領収書のチェックリスト">じゃらん 領収書のチェックリスト</h2>
+<p>予約前と予約後に、次の点を確認します。</p>
+<p><strong>予約前</strong></p>
+<ul>
+<li>支払い方法は何か（オンラインカード決済・現地払い・法人一括決済）。</li>
+<li>選んだプランに、支払い方法の指定はないか。</li>
+<li>会員登録をして予約しているか。</li>
+<li>宛名に会社名が必要か。必要なら問い合わせ先を決めておく。</li>
+</ul>
+<p><strong>予約後・精算時</strong></p>
+<ul>
+<li>マイページで領収書データを表示できたか。</li>
+<li>ポイントやクーポン利用後の金額になっていることを理解しているか。</li>
+<li>複数予約を合算したいときは、別々の領収書で足りるか。</li>
+<li>印刷物が経理精算に使えるか、事前に確認したか。</li>
+<li>課税事業者なら、登録番号と税率ごとの消費税額があるか。</li>
+</ul>
+<p><strong>法人利用（JCS）の場合</strong></p>
+<ul>
+<li>最新の条件を公式で確認したか。</li>
+<li>従業員のリクルートID登録が済んでいるか。</li>
+<li>領収書が出ない前提で、月の請求書と明細の保管ルールを決めたか。</li>
+</ul>
+<h2 id="次の一歩領収書データを帳簿につなげる">次の一歩：領収書データを帳簿につなげる</h2>
+<p>領収書データや請求書を集めたら、日付・金額・取引先を帳簿に記録します。年間を通して記録が増えるため、会計ソフトで管理する方法もあります。</p>
+<aside class="cta-box"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">弥生株式会社</p><h3 class="cta-box__title">弥生シリーズ（やよいの青色申告 オンライン など）</h3><p class="cta-box__body">会計・青色申告のクラウドソフト。新規申込が成果条件。</p><a class="cta-box__button" href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E9T4M2+35XE+5ZEMP" data-offer="yayoi" rel="sponsored nofollow noopener" target="_blank">弥生シリーズ（やよいの青色申告 オンライン など）の公式サイトへ</a></aside>
+<p><a href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E9T4M2+35XE+5ZEMP" rel="sponsored nofollow noopener" target="_blank">青色申告対応のクラウド会計ソフトを見る</a></p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>じゃらんの領収書は宿とじゃらんのどちらが出しますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>支払い方法で変わります。公式ページによると、オンラインカード決済では宿泊施設は領収書を発行せず、予約完了と同時にマイページで領収書データを表示できます。現地払いでは、リクルートの法人向け資料に、宿泊施設で領収書を発行すると書かれています。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>じゃらんの領収書データの宛名に会社名を入れられますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式の案内で確認できたのは、予約時に入力した宿泊代表者氏名が明細書欄に反映される点までです。会社名を宛名にできるかは、公式の案内では確認できませんでした。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>じゃらんコーポレートサービス（JCS）の法人一括決済で領収書は出ますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式の資料では、法人一括決済の場合は領収書が発行されないとされています。明細は管理画面のデータで確認する形です。資料は2023年11月更新のため、最新の条件は申込み前に公式で確認してください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>印刷した領収書データは経理精算に使えますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式ページでは、電子文書のため印刷しても印紙課税の対象にはならないとされています。一方、印刷した帳票を経理精算に使えるかは、利用者自身が事前に確認するよう案内されています。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://www.jalan.net/jalan/doc/howto/cardkessai.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>じゃらんnet オンラインカード決済とは</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.jalan.net/jalan/doc/corporate/manual/JCS_detail.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>リクルート じゃらんコーポレートサービス資料（2023年11月更新）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6498.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.6498</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2070.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.2070</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/invoice_about.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 インボイス制度の特設サイト</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/kakutei-shinkoku/" data-astro-cid-sgg5joot>確定申告・会計ソフト・経費の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/receipts/" data-astro-cid-sgg5joot>サービス別 領収書・インボイス対応一覧を見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>モノタロウの領収書・請求書はインボイス対応？支払方法ごとの書類・宛名・登録番号 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="モノタロウの登録番号は T6140001054380。インボイスにあたる書類は支払方法で変わり、請求書払いは請求書、カードは領収証、代引きは「ご利用明細書」です。宛名の変更、見積書の税、返品時の書類までを公式ヘルプで整理します。"><link rel="canonical" href="https://soroecho.com/articles/monotaro-ryoushuusho/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="モノタロウの領収書・請求書はインボイス対応？支払方法ごとの書類・宛名・登録番号 | そろえ帳"><meta property="og:description" content="モノタロウの登録番号は T6140001054380。インボイスにあたる書類は支払方法で変わり、請求書払いは請求書、カードは領収証、代引きは「ご利用明細書」です。宛名の変更、見積書の税、返品時の書類までを公式ヘルプで整理します。"><meta property="og:url" content="https://soroecho.com/articles/monotaro-ryoushuusho/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/monotaro-ryoushuusho.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="モノタロウの領収書・請求書はインボイス対応？支払方法ごとの書類・宛名・登録番号 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="モノタロウの領収書・請求書はインボイス対応？支払方法ごとの書類・宛名・登録番号 | そろえ帳"><meta name="twitter:description" content="モノタロウの登録番号は T6140001054380。インボイスにあたる書類は支払方法で変わり、請求書払いは請求書、カードは領収証、代引きは「ご利用明細書」です。宛名の変更、見積書の税、返品時の書類までを公式ヘルプで整理します。"><meta name="twitter:image" content="https://soroecho.com/og/monotaro-ryoushuusho.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"モノタロウの領収書・請求書はインボイス対応？支払方法ごとの書類・宛名・登録番号","item":"https://soroecho.com/articles/monotaro-ryoushuusho/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"モノタロウの領収書・請求書はインボイス対応？支払方法ごとの書類・宛名・登録番号","description":"モノタロウの登録番号は T6140001054380。インボイスにあたる書類は支払方法で変わり、請求書払いは請求書、カードは領収証、代引きは「ご利用明細書」です。宛名の変更、見積書の税、返品時の書類までを公式ヘルプで整理します。","url":"https://soroecho.com/articles/monotaro-ryoushuusho/","datePublished":"2026-10-24T00:00:00.000Z","dateModified":"2026-10-24T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/monotaro-ryoushuusho/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"モノタロウの領収書はどこで発行できますか？","acceptedAnswer":{"@type":"Answer","text":"公式ヘルプによると、クレジットカード払いと楽天銀行の注文時支払いは、注文単位の領収証をWEBから発行します。カードは全明細の出荷完了後、翌営業日の15時以降です。注文当月を含めて15ヶ月以内のものが対象で、WEBからのみの提供です。"}},{"@type":"Question","name":"モノタロウの請求書はインボイス（適格請求書）になりますか？","acceptedAnswer":{"@type":"Answer","text":"公式ヘルプでは、モノタロウは適格請求書発行事業者で、登録番号は T6140001054380 とされています。インボイスにあたる書類は支払方法ごとに決まっていて、定期振込は請求書、口座振替は口座振替案内書兼請求書、楽天銀行定期支払いは楽天銀行専用請求書です。"}},{"@type":"Question","name":"モノタロウの代金引換の領収証はインボイスになりますか？","acceptedAnswer":{"@type":"Answer","text":"公式ヘルプでは、代金引換時にお渡しした領収証はインボイスではないとされています。インボイスは、マイページのご購入履歴にある「ご利用明細書」です。"}},{"@type":"Question","name":"モノタロウの領収書や請求書の宛名を変えられますか？","acceptedAnswer":{"@type":"Answer","text":"宛名・送付先・締日支払日は、マイページの「ご請求先情報」で確認できます。ご請求部署名・担当者名の変更は、お問い合わせフォームの「登録内容変更」で受け付けています。ただし、発行済みの請求書の宛名変更や、登録会社以外への宛名・送付先の変更はできません。"}},{"@type":"Question","name":"モノタロウは個人事業主でも登録できますか？","acceptedAnswer":{"@type":"Answer","text":"運営企業のコラム（2026年9月7日更新）によると、monotaro.comの一般登録は特別な契約手続きが不要で、中小企業や個人事業主の利用が多いと案内されています。企業情報と担当者情報を入力して登録し、登録料や年会費は発生しないとされています。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>モノタロウの領収書・請求書はインボイス対応？支払方法ごとの書類・宛名・登録番号</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecwjsyr1-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecwjsyr1-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecwjsyr1-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecwjsyr1-p)" data-astro-cid-yuatfsof></rect><circle cx="328" cy="39" r="132" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>モノタロウ</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>領収書</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>モノタロウの領収書・請求書はインボイス対応？支払方法ごとの書類・宛名・登録番号</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-10-24T00:00:00.000Z" data-astro-cid-sgg5joot>2026年10月24日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約9分</p><p class="cta-inline">モノタロウと使い分けるなら、Amazonビジネスの登録（無料）も選択肢です<a href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">登録ページを見る（公式）</a></p><aside class="receipt-facts" aria-labelledby="receipt-facts-heading" data-astro-cid-tcbxoyxt><h2 id="receipt-facts-heading" class="receipt-facts__title" data-astro-cid-tcbxoyxt>このサービスの確認済みの事実</h2><dl class="receipt-facts__list" data-astro-cid-tcbxoyxt><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>領収書の出し方</dt><dd data-astro-cid-tcbxoyxt><ul data-astro-cid-tcbxoyxt><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>定期振込・楽天銀行定期支払い</strong>: 請求書（楽天銀行は専用請求書）。月締めで郵送またはダウンロード。請求締日の翌営業日16時以降。マイページ &gt; ご請求履歴で直近15カ月分</li><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>口座振替</strong>: 口座振替案内書兼請求書をダウンロード。請求締日の翌営業日16時以降。マイページ &gt; ご請求履歴で直近15カ月分</li><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>クレジットカード・楽天銀行注文時支払い</strong>: 領収証。注文単位でWEBからのみ。カードは全明細の出荷完了後・翌営業日15時以降。注文当月を含め15ヶ月以内</li><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>代金引換</strong>: ご利用明細書（マイページのご購入履歴）。出荷単位でWEBからのみ・15ヶ月以内。受け取り時の領収証はインボイスではない</li></ul></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>宛名</dt><dd data-astro-cid-tcbxoyxt>公式の案内では確認できず<span class="receipt-facts__note" data-astro-cid-tcbxoyxt>（宛名・送付先はマイページ &gt; ご請求先情報で確認可能。ご請求部署名・担当者名の変更はお問い合わせフォーム &gt; 登録内容変更。発行済みの請求書の宛名変更と登録会社以外への変更は不可。領収証の宛名を画面で入れる方法は公式で確認できなかった）</span></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>インボイス</dt><dd data-astro-cid-tcbxoyxt>対応<span class="receipt-facts__note" data-astro-cid-tcbxoyxt>（支払方法ごとにインボイスにあたる書類が決まっている。定期振込は請求書、口座振替は口座振替案内書兼請求書、楽天銀行定期支払いは楽天銀行専用請求書、カード・楽天銀行注文時支払いは領収証、代金引換はご利用明細書（受け取り時の領収証は対象外））</span></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>登録番号</dt><dd data-astro-cid-tcbxoyxt>T6140001054380<span class="receipt-facts__note" data-astro-cid-tcbxoyxt>（<a href="https://help.monotaro.com/app/answers/detail/a_id/299" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>公式ページで確認</a>）</span></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>最終確認日</dt><dd data-astro-cid-tcbxoyxt><time datetime="2026-10-17" data-astro-cid-tcbxoyxt>2026年10月17日</time></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>公式の情報</dt><dd data-astro-cid-tcbxoyxt><ul data-astro-cid-tcbxoyxt><li data-astro-cid-tcbxoyxt><a href="https://help.monotaro.com/app/answers/detail/a_id/299" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>インボイス制度への対応について</a></li><li data-astro-cid-tcbxoyxt><a href="https://help.monotaro.com/app/answers/detail/a_id/299" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>インボイス制度への対応について</a></li><li data-astro-cid-tcbxoyxt><a href="https://help.monotaro.com/app/answers/detail/a_id/31" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>請求書について</a></li><li data-astro-cid-tcbxoyxt><a href="https://procurement.monotaro.com/columns/columns-monotaro-contract/" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>モノタロウは法人契約できる？（間接材購買のコラム）</a></li></ul></dd></div></dl><p class="receipt-facts__hub" data-astro-cid-tcbxoyxt><a class="arrow-link" href="/receipts/" data-astro-cid-tcbxoyxt>ほかのサービスの領収書・インボイス対応を見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-tcbxoyxt>→</span></a></p></aside><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論登録番号は公式に記載ありインボイスにあたる書類は支払方法で変わる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：登録番号は公式に記載あり。インボイスにあたる書類は支払方法で変わる</a></li><li data-astro-cid-sgg5joot><a href="#モノタロウは法人個人事業主でも使える一般登録の仕組み" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>モノタロウは法人・個人事業主でも使える？一般登録の仕組み</a></li><li data-astro-cid-sgg5joot><a href="#支払い方法と請求書払い法人個人事業主は事前の手続きが前提" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>支払い方法と請求書払い：法人・個人事業主は事前の手続きが前提</a></li><li data-astro-cid-sgg5joot><a href="#支払方法ごとの書類どれがインボイスでいつ取れるか" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>支払方法ごとの書類：どれがインボイスで、いつ取れるか</a></li><li data-astro-cid-sgg5joot><a href="#宛名と書類の変更確認できる場所とできないこと" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>宛名と書類の変更：確認できる場所と、できないこと</a></li><li data-astro-cid-sgg5joot><a href="#見積書返品消費税の端数" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>見積書・返品・消費税の端数</a></li><li data-astro-cid-sgg5joot><a href="#インボイスの考え方国税庁の基準とあなたの場合" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>インボイスの考え方：国税庁の基準と、あなたの場合</a></li><li data-astro-cid-sgg5joot><a href="#併用の選択肢ほかの法人向け購入サービスとの違い" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>併用の選択肢：ほかの法人向け購入サービスとの違い</a></li><li data-astro-cid-sgg5joot><a href="#申し込み前のチェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>申し込み前のチェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#まとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>10</span>まとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論登録番号は公式に記載ありインボイスにあたる書類は支払方法で変わる">結論：登録番号は公式に記載あり。インボイスにあたる書類は支払方法で変わる</h2>
+<p>モノタロウの公式ヘルプ「インボイス制度への対応について」には、課税事業者で、適格請求書発行事業者の登録番号は T6140001054380 と書かれています（2026年10月17日確認）。</p>
+<p>インボイスとして使う書類は、支払方法ごとに決まっています。</p>
+<table>
+<thead>
+<tr>
+<th>支払方法</th>
+<th>インボイスにあたる書類</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定期振込</td>
+<td>請求書</td>
+</tr>
+<tr>
+<td>口座振替</td>
+<td>口座振替案内書兼請求書</td>
+</tr>
+<tr>
+<td>楽天銀行定期支払い</td>
+<td>楽天銀行専用請求書</td>
+</tr>
+<tr>
+<td>公費支払</td>
+<td>請求書</td>
+</tr>
+<tr>
+<td>クレジットカード</td>
+<td>領収証</td>
+</tr>
+<tr>
+<td>楽天銀行注文時支払い</td>
+<td>領収証</td>
+</tr>
+<tr>
+<td>代金引換</td>
+<td>ご利用明細書（受け取り時の領収証はインボイスではない）</td>
+</tr>
+</tbody>
+</table>
+<p>インボイスや返還の書類は、WEBからのダウンロードのみの提供です。</p>
+<p>この記事で分かることは次のとおりです。</p>
+<ul>
+<li>法人・個人事業主が一般登録で使えるか</li>
+<li>支払方法ごとの書類、発行の時期、保存できる期間</li>
+<li>宛名の確認と変更の方法</li>
+<li>見積書・返品時の書類・消費税の端数の扱い</li>
+<li>申し込み前のチェックリスト</li>
+</ul>
+<p>情報の取得日は2026年10月17日です。サービスの内容は変わることがあるため、申し込み前に公式の最新の案内を確認してください。</p>
+<h2 id="モノタロウは法人個人事業主でも使える一般登録の仕組み">モノタロウは法人・個人事業主でも使える？一般登録の仕組み</h2>
+<p>運営企業のコラム（2026年9月7日更新）では、登録の方法が大きく2つに分かれています。ひとつは「一般登録」で、もうひとつは中堅〜大企業向けの「エンタープライズモノタロウ」です。コラムには、一般登録は中小企業や個人事業主のユーザーが多く利用していると書かれています。</p>
+<p>一般登録の特徴は、コラムによると次のとおりです。</p>
+<ul>
+<li>monotaro.comのWebサイトから無料で登録できる</li>
+<li>特別な契約手続きは不要</li>
+<li>中小企業や個人事業主のユーザーが多く利用している</li>
+<li>企業情報と担当者情報を入力するだけで登録が完了する</li>
+<li>登録料や年会費は発生しない</li>
+</ul>
+<p>エンタープライズモノタロウは、中堅〜大企業を対象にした企業間契約型のサービスで、一般登録とは別のものです。従業員が少ない会社が最初から契約型を検討する必要があるかどうかは、この記事の範囲では判断できません。必要になった時点で公式の案内を見てください。</p>
+<p>あなたの場合は、次のように考えると整理しやすくなります。</p>
+<table>
+<thead>
+<tr>
+<th>あなたの状況</th>
+<th>考え方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>個人事業主</td>
+<td>一般登録の対象とコラムに書かれています。登録の入力項目は登録画面で確認してください</td>
+</tr>
+<tr>
+<td>開業届をまだ出していない</td>
+<td>登録の可否が開業届の有無に左右されるかは、公式の案内で確認できませんでした</td>
+</tr>
+<tr>
+<td>法人（会社）</td>
+<td>一般登録の対象とコラムに書かれています。法人名で登録するかどうかを先に決めておくと、後の書類の宛名で迷いにくくなります</td>
+</tr>
+</tbody>
+</table>
+<h2 id="支払い方法と請求書払い法人個人事業主は事前の手続きが前提">支払い方法と請求書払い：法人・個人事業主は事前の手続きが前提</h2>
+<p>コラムには、支払い方法として「クレジットカード、代金引換など」が挙げられています。そのうえで、法人・個人事業主は事前に手続きをすると、口座振替や定期振込が可能になると書かれています。</p>
+<p>いわゆる請求書払い（後からまとめて支払う方法）に近いものとして、この記事では定期振込と口座振替を扱います。口座振替は、公式ヘルプ「請求書について」によると、毎月26日（土日祝は翌営業日）の引き落としです。審査や与信の有無は、今回確認した公式ページには書かれていませんでした。</p>
+<p>支払い方法の違いを、確認すべき観点で整理します。</p>
+<table>
+<thead>
+<tr>
+<th>支払い方法</th>
+<th>公式で確認できた点</th>
+<th>申し込み前に確認したい点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>クレジットカード</td>
+<td>コラムに記載あり。書類は領収証</td>
+<td>利用できるカードの種類</td>
+</tr>
+<tr>
+<td>代金引換</td>
+<td>コラムに記載あり。書類は「ご利用明細書」</td>
+<td>手数料の有無、受け取り時の支払い方法</td>
+</tr>
+<tr>
+<td>口座振替・定期振込</td>
+<td>法人・個人事業主は事前手続きで可能。書類は請求書</td>
+<td>手続きの流れ、審査の有無</td>
+</tr>
+</tbody>
+</table>
+<p>また、コラムには簡易的な承認フロー機能も一般登録で使えるとあります。担当者が注文し、別の人が承認する運用をしたい会社は、この機能の範囲をあらためて確認してください。</p>
+<p>従業員5〜30人で備品を買う総務・購買担当は、購入者と承認者を分けられるかが運用上の論点になります。ただし機能の細かい仕様は、公式の案内で確認できていません。</p>
+<h2 id="支払方法ごとの書類どれがインボイスでいつ取れるか">支払方法ごとの書類：どれがインボイスで、いつ取れるか</h2>
+<p>公式ヘルプ「インボイス制度への対応について」と「請求書について」（2026年10月17日確認）の内容を整理します。</p>
+<h3 id="請求書払い定期振込口座振替楽天銀行定期支払い">請求書払い（定期振込・口座振替・楽天銀行定期支払い）</h3>
+<table>
+<thead>
+<tr>
+<th>支払方法</th>
+<th>書類</th>
+<th>単位・入手</th>
+<th>取れる時期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定期振込</td>
+<td>請求書</td>
+<td>月締め。郵送またはダウンロード</td>
+<td>請求締日の翌営業日16時以降</td>
+</tr>
+<tr>
+<td>口座振替</td>
+<td>口座振替案内書兼請求書</td>
+<td>月締め。ダウンロード</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>楽天銀行定期支払い</td>
+<td>楽天銀行専用請求書</td>
+<td>月締め。郵送またはダウンロード</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>公費支払</td>
+<td>請求書</td>
+<td>注文単位。見積書・納品書とともに郵送</td>
+<td>－</td>
+</tr>
+</tbody>
+</table>
+<p>これらは請求書がインボイスにあたります。最新の請求履歴は請求締日の翌営業日16時以降に見られ、当月を含む直近15ヶ月の請求明細と請求書は、マイページの「ご請求履歴」からダウンロードできます。分割発行や、締日前の発行はできません。</p>
+<h3 id="カード楽天銀行注文時支払い代金引換">カード・楽天銀行注文時支払い・代金引換</h3>
+<table>
+<thead>
+<tr>
+<th>支払方法</th>
+<th>書類</th>
+<th>単位</th>
+<th>取れる時期・条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>クレジットカード</td>
+<td>領収証</td>
+<td>注文単位</td>
+<td>全明細の出荷完了後、翌営業日15時以降。WEBからのみ。注文当月を含め15ヶ月以内</td>
+</tr>
+<tr>
+<td>楽天銀行注文時支払い</td>
+<td>領収証</td>
+<td>注文単位</td>
+<td>全明細の出荷完了後。WEBからのみ。15ヶ月以内</td>
+</tr>
+<tr>
+<td>代金引換</td>
+<td>ご利用明細書</td>
+<td>出荷単位</td>
+<td>WEBからのみ。15ヶ月以内</td>
+</tr>
+</tbody>
+</table>
+<p>カードの領収証は、領収日がカード会社へ請求を行った日、発行日が発行ボタンをクリックした日です。楽天銀行注文時支払いの領収日は注文日です。</p>
+<p>領収証への登録番号の記載は、支払方法で違います。カードと楽天銀行注文時支払いの領収証には、登録番号が書かれます。定期振込・口座振替・楽天銀行定期支払いは、請求書がインボイスなので、領収証には登録番号がありません。</p>
+<h3 id="代金引換の領収証はインボイスではない">代金引換の領収証はインボイスではない</h3>
+<p>公式ヘルプには、代金引換時にお渡しした領収証はインボイスではない、と明記されています。インボイスとして使えるのは、マイページのご購入履歴にある「ご利用明細書」です。ご利用明細書には「お客様メモ」欄がありますが、但し書きは変更できません。公的な領収証は、配送業者の領収証（品代金領収証）です。</p>
+<h2 id="宛名と書類の変更確認できる場所とできないこと">宛名と書類の変更：確認できる場所と、できないこと</h2>
+<p>宛名の扱いは、公式ヘルプに次のとおり書かれています。</p>
+<ul>
+<li>宛名・送付先・締日支払日は、マイページの「ご請求先情報」で確認できます。</li>
+<li>ご請求部署名・担当者名を変えたいときは、お問い合わせフォームの「登録内容変更」で受け付けています。</li>
+<li>発行済みの請求書の宛名変更と、登録会社以外への宛名・送付先の変更は、受け付けていません。</li>
+</ul>
+<p>法人名や屋号を宛名にしたいときは、書類を発行する前に、登録内容を直しておくことが大切です。発行済みの書類は直せません。カード払いなどの領収証の宛名を、画面でどう入れるかは、今回確認した公式ページには書かれていませんでした。実際の画面で確かめてください。</p>
+<h2 id="見積書返品消費税の端数">見積書・返品・消費税の端数</h2>
+<h3 id="見積書は税抜税額は載らない">見積書は税抜。税額は載らない</h3>
+<p>公式ヘルプでは、見積書は税抜価格での提供で、実際に請求する税率と消費税額は記載できないとされています。見積書は金額を確認する書類として使い、税額は請求書や領収証で確認します。</p>
+<h3 id="返品したときは請求書返還分">返品したときは「請求書（返還分）」</h3>
+<p>返品があったときは、適格返還請求書として「請求書（返還分）」が発行されます。定期振込などの請求書払いでは発行がなく、翌月の請求で相殺されると公式ヘルプにあります。</p>
+<h3 id="消費税に数円の差が出ることがある">消費税に数円の差が出ることがある</h3>
+<p>インボイス制度の導入に合わせて、モノタロウは消費税の計算方法を変えました。請求単位で、税率ごとに区分した税抜合計に対して計算し、1円未満を四捨五入する方法です。そのため、注文時の画面に出た金額と、請求書の金額に、数円の差が出ることがあります。</p>
+<h3 id="電子帳簿保存法の扱い">電子帳簿保存法の扱い</h3>
+<p>公式ヘルプは、電子帳簿保存法の扱いを「お客さまでご判断ください」としています。ダウンロードした書類は電子取引のデータにあたるため、保存の方法は<a href="/articles/ryoushuusho-hozon-e-bunsho-taiou/">領収書の保存と電子データの扱い</a>で確認してください。経費にできる買い物かどうかは、<a href="/articles/keihi-naru-mono-naranai-mono/">経費になるもの・ならないもの</a>を参考にしてください。</p>
+<h2 id="インボイスの考え方国税庁の基準とあなたの場合">インボイスの考え方：国税庁の基準と、あなたの場合</h2>
+<p>インボイス（適格請求書）について、国税庁のタックスアンサー No.6498は次のように説明しています（2026年10月17日取得）。</p>
+<ul>
+<li>適格請求書は、税務署長の登録を受けた適格請求書発行事業者でなければ交付できない</li>
+<li>適格請求書等保存方式の下では、一定の事項を記載した帳簿と請求書等の保存が仕入税額控除（買った時に払った消費税を差し引ける仕組み）の要件になる</li>
+</ul>
+<p>モノタロウは登録番号を公式ヘルプに載せているため、買い手が見るべき点は、自分の支払方法で受け取る書類が、上の表のどれにあたるかです。たとえば、カード払いなのに請求書を探したり、代金引換で受け取った領収証をそのまま保存したりすると、インボイスとして足りないことがあります。</p>
+<ul>
+<li><strong>課税事業者</strong>：支払方法に合う書類を、WEBからダウンロードして保存します。</li>
+<li><strong>免税事業者の個人事業主</strong>：消費税の仕入税額控除を使わないため、インボイスの有無は消費税の計算に直接は関わらない場合があります。所得税や法人税の記録としての保存は別に考えます。</li>
+</ul>
+<p>登録番号が有効かは、国税庁の<a href="https://www.invoice-kohyo.nta.go.jp/">適格請求書発行事業者公表サイト</a>でも調べられます。個別の判断は、税理士や税務署に相談してください。</p>
+<h2 id="併用の選択肢ほかの法人向け購入サービスとの違い">併用の選択肢：ほかの法人向け購入サービスとの違い</h2>
+<p>モノタロウだけで足りるか迷う場合は、購入先を複数持つ選択肢もあります。比べるときは、商品ではなく、手続きの面で次の軸を見ると中立に判断できます。</p>
+<table>
+<thead>
+<tr>
+<th>比較軸</th>
+<th>確認すること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>登録の条件</td>
+<td>法人・個人事業主で登録できるか、費用がかかるか</td>
+</tr>
+<tr>
+<td>支払い方法</td>
+<td>カード、請求書払い、口座振替の対応</td>
+</tr>
+<tr>
+<td>書類</td>
+<td>領収書・請求書・見積書をどこから出せるか</td>
+</tr>
+<tr>
+<td>承認機能</td>
+<td>購入者と承認者を分けられるか</td>
+</tr>
+</tbody>
+</table>
+<p>Amazonビジネス、モノタロウ、アスクルの違いは、<a href="/articles/amazon-business-monotaro-askul-hikaku/">法人向け購入サービス3社の比較記事</a>で整理しています。Amazonで買った分の書類については、<a href="/articles/amazon-ryoushuusho-dashikata/">Amazonの領収書の出し方</a>と<a href="/articles/amazon-business-ryoushuusho-matomete-hakkou/">まとめて発行する方法</a>も参考になります。</p>
+<p>書類の窓口を分けると、保存や記帳の手間が増えることがあります。併用する場合は、どの購入先から何の書類をもらうかを、事前に決めておくと整理しやすくなります。</p>
+<aside class="cta-box cta-box--subtle"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">Amazonビジネス</p><h3 class="cta-box__title">モノタロウと使い分けるなら、Amazonビジネスの登録（無料）も選択肢です</h3><p class="cta-box__body">取引先ごとに領収書や請求書の出し方が違うため、日用品や事務用品はAmazonビジネスにまとめる使い分けもあります。登録は無料なので、よく買う商品で価格と送料を比べてから決められます。</p><a class="cta-box__button" href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">Amazonビジネスの登録ページへ（公式）</a></aside>
+<h2 id="申し込み前のチェックリスト">申し込み前のチェックリスト</h2>
+<p>登録から支払い、書類の保存までを、順番に確認できる形にまとめます。</p>
+<ol>
+<li>個人事業主か法人かを決め、登録する名義を確認する</li>
+<li>一般登録でよいか、契約型が必要かを判断する（ひとり社長や小規模なら一般登録が基本の入口）</li>
+<li>支払方法を決める（口座振替や定期振込は事前の手続きが必要）</li>
+<li>その支払方法で、インボイスにあたる書類がどれかを上の表で確認する</li>
+<li>宛名の部署名・担当者名は、書類を発行する前にマイページの「ご請求先情報」で確認し、直すなら「登録内容変更」で依頼する</li>
+<li>見積書は税抜で、税額が載らないことを踏まえて使う</li>
+<li>カード・代金引換の書類は15ヶ月以内にWEBからダウンロードする</li>
+<li>受け取った書類の保存場所とルールを決める</li>
+</ol>
+<h2 id="まとめ">まとめ</h2>
+<p>モノタロウの登録番号は、公式ヘルプに T6140001054380 と記載されています。インボイスにあたる書類は支払方法で決まり、請求書払いは請求書（口座振替は口座振替案内書兼請求書、楽天銀行定期支払いは専用請求書）、カードと楽天銀行注文時支払いは領収証、代金引換は「ご利用明細書」です。代金引換の受け取り時の領収証はインボイスではありません。</p>
+<p>書類はWEBからのダウンロードのみで、カードや代金引換のものは15ヶ月以内に取る必要があります。宛名は発行前に整え、発行済みの書類の宛名は直せません。見積書は税抜で税額が載らず、返品では「請求書（返還分）」が発行されます。</p>
+<p>一方、審査や与信の有無、画面での宛名の入力方法は、今回の公式ページでは確認できませんでした。申し込み前に公式ヘルプを読んでおくと安心です。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>モノタロウの領収書はどこで発行できますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式ヘルプによると、クレジットカード払いと楽天銀行の注文時支払いは、注文単位の領収証をWEBから発行します。カードは全明細の出荷完了後、翌営業日の15時以降です。注文当月を含めて15ヶ月以内のものが対象で、WEBからのみの提供です。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>モノタロウの請求書はインボイス（適格請求書）になりますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式ヘルプでは、モノタロウは適格請求書発行事業者で、登録番号は T6140001054380 とされています。インボイスにあたる書類は支払方法ごとに決まっていて、定期振込は請求書、口座振替は口座振替案内書兼請求書、楽天銀行定期支払いは楽天銀行専用請求書です。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>モノタロウの代金引換の領収証はインボイスになりますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式ヘルプでは、代金引換時にお渡しした領収証はインボイスではないとされています。インボイスは、マイページのご購入履歴にある「ご利用明細書」です。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>モノタロウの領収書や請求書の宛名を変えられますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>宛名・送付先・締日支払日は、マイページの「ご請求先情報」で確認できます。ご請求部署名・担当者名の変更は、お問い合わせフォームの「登録内容変更」で受け付けています。ただし、発行済みの請求書の宛名変更や、登録会社以外への宛名・送付先の変更はできません。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>モノタロウは個人事業主でも登録できますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>運営企業のコラム（2026年9月7日更新）によると、monotaro.comの一般登録は特別な契約手続きが不要で、中小企業や個人事業主の利用が多いと案内されています。企業情報と担当者情報を入力して登録し、登録料や年会費は発生しないとされています。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://procurement.monotaro.com/columns/columns-monotaro-contract/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>モノタロウ 間接材購買のコラム「モノタロウは法人契約できる？」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.monotaro.com/main/guide/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>モノタロウ ご利用ガイド一覧</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://help.monotaro.com/app/answers/detail/a_id/299" rel="noopener" target="_blank" data-astro-cid-sgg5joot>モノタロウ ヘルプ インボイス制度への対応について</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://help.monotaro.com/app/answers/detail/a_id/31" rel="noopener" target="_blank" data-astro-cid-sgg5joot>モノタロウ ヘルプ 請求書について</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6498.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.6498 適格請求書等保存方式</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2070.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.2070 帳簿書類等の保存</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.invoice-kohyo.nta.go.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 適格請求書発行事業者公表サイト</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/kakutei-shinkoku/" data-astro-cid-sgg5joot>確定申告・会計ソフト・経費の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/receipts/" data-astro-cid-sgg5joot>サービス別 領収書・インボイス対応一覧を見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

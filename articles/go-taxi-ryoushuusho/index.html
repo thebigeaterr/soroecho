@@ -1,0 +1,227 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GOの領収書はどこで出す？GO Payは車内で出ず、アプリから発行（宛名・インボイスも整理） | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="GOの領収書は支払い方法で出し方が分かれます。GO Payは車内では出ず、アプリの「利用履歴・領収書発行」からPDFをメールで受け取り、車内決済は乗務員から受け取ります。宛名とインボイスの扱いも整理します。"><link rel="canonical" href="https://soroecho.com/articles/go-taxi-ryoushuusho/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="GOの領収書はどこで出す？GO Payは車内で出ず、アプリから発行（宛名・インボイスも整理） | そろえ帳"><meta property="og:description" content="GOの領収書は支払い方法で出し方が分かれます。GO Payは車内では出ず、アプリの「利用履歴・領収書発行」からPDFをメールで受け取り、車内決済は乗務員から受け取ります。宛名とインボイスの扱いも整理します。"><meta property="og:url" content="https://soroecho.com/articles/go-taxi-ryoushuusho/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/go-taxi-ryoushuusho.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="GOの領収書はどこで出す？GO Payは車内で出ず、アプリから発行（宛名・インボイスも整理） — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="GOの領収書はどこで出す？GO Payは車内で出ず、アプリから発行（宛名・インボイスも整理） | そろえ帳"><meta name="twitter:description" content="GOの領収書は支払い方法で出し方が分かれます。GO Payは車内では出ず、アプリの「利用履歴・領収書発行」からPDFをメールで受け取り、車内決済は乗務員から受け取ります。宛名とインボイスの扱いも整理します。"><meta name="twitter:image" content="https://soroecho.com/og/go-taxi-ryoushuusho.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"GOの領収書はどこで出す？GO Payは車内で出ず、アプリから発行（宛名・インボイスも整理）","item":"https://soroecho.com/articles/go-taxi-ryoushuusho/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"GOの領収書はどこで出す？GO Payは車内で出ず、アプリから発行（宛名・インボイスも整理）","description":"GOの領収書は支払い方法で出し方が分かれます。GO Payは車内では出ず、アプリの「利用履歴・領収書発行」からPDFをメールで受け取り、車内決済は乗務員から受け取ります。宛名とインボイスの扱いも整理します。","url":"https://soroecho.com/articles/go-taxi-ryoushuusho/","datePublished":"2026-10-25T00:00:00.000Z","dateModified":"2026-10-25T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/go-taxi-ryoushuusho/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"GOの領収書はアプリから出せますか？","acceptedAnswer":{"@type":"Answer","text":"GO Payで支払った乗車は、アプリの「利用履歴・領収書発行」から発行できます。車内決済の乗車は乗務員から受け取る形で、アプリからは発行できません（GO公式ヘルプ、2026年10月17日確認）。"}},{"@type":"Question","name":"GOの領収書の宛名は空欄でも発行できますか？","acceptedAnswer":{"@type":"Answer","text":"GO Payの領収書は、宛名が空欄でも発行できると公式に案内されています。宛名に会社名を入れられるか、発行後に直せるかは、公式の案内では確認できませんでした。"}},{"@type":"Question","name":"GOの領収書はインボイスになりますか？","acceptedAnswer":{"@type":"Answer","text":"GO Payの場合は、GOの登録番号が印字された電子領収書がアプリから発行できます。車内決済の場合は、各タクシー会社の登録番号が印字された領収書が車内で出ます。登録事業者でない車両では扱いが変わります。"}},{"@type":"Question","name":"GOの領収書メールが届かないときはどうしますか？","acceptedAnswer":{"@type":"Answer","text":"送信元は go-support@goinc.jp です。迷惑メールフォルダの確認と、登録したメールアドレスの「@」などが全角になっていないかの確認が、公式ヘルプで挙げられています。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>GOの領収書はどこで出す？GO Payは車内で出ず、アプリから発行（宛名・インボイスも整理）</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecc6mmmw-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecc6mmmw-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ecc6mmmw-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecc6mmmw-p)" data-astro-cid-yuatfsof></rect><circle cx="353" cy="34" r="120" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>GO</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>領収書</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>GOの領収書はどこで出す？GO Payは車内で出ず、アプリから発行（宛名・インボイスも整理）</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-10-25T00:00:00.000Z" data-astro-cid-sgg5joot>2026年10月25日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約8分</p><aside class="receipt-facts" aria-labelledby="receipt-facts-heading" data-astro-cid-tcbxoyxt><h2 id="receipt-facts-heading" class="receipt-facts__title" data-astro-cid-tcbxoyxt>このサービスの確認済みの事実</h2><dl class="receipt-facts__list" data-astro-cid-tcbxoyxt><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>領収書の出し方</dt><dd data-astro-cid-tcbxoyxt><ul data-astro-cid-tcbxoyxt><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>GO Pay で支払った乗車</strong>: アプリ内の【≡】メニュー＞【利用履歴・領収書発行】から発行。PDFがメール添付で届く。車内では発行されない</li><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>車内決済の乗車</strong>: 車内で乗務員から受け取る。アプリからは発行できない</li></ul></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>宛名</dt><dd data-astro-cid-tcbxoyxt>公式の案内では確認できず<span class="receipt-facts__note" data-astro-cid-tcbxoyxt>（GO Pay の領収書は宛名が空欄でも発行できると公式にある。宛名に会社名を入れられるか、発行後に直せるかは公式の案内で確認できなかった）</span></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>インボイス</dt><dd data-astro-cid-tcbxoyxt>対応<span class="receipt-facts__note" data-astro-cid-tcbxoyxt>（2023年10月1日以降の乗車分は原則インボイス。GO Pay はGOの登録番号入りの電子領収書、車内決済は各タクシー会社の登録番号入りの領収書。登録事業者でない車両では、アプリ配車+車内決済や、流し・乗り場からの乗車はインボイスが出ず車内で非インボイスの領収書になる）</span></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>登録番号</dt><dd data-astro-cid-tcbxoyxt>T2011501015896<span class="receipt-facts__note" data-astro-cid-tcbxoyxt>（<a href="https://support.go.goinc.jp/hc/ja/articles/25883343892761" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>公式ページで確認</a>）</span></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>最終確認日</dt><dd data-astro-cid-tcbxoyxt><time datetime="2026-10-17" data-astro-cid-tcbxoyxt>2026年10月17日</time></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>公式の情報</dt><dd data-astro-cid-tcbxoyxt><ul data-astro-cid-tcbxoyxt><li data-astro-cid-tcbxoyxt><a href="https://support.go.goinc.jp/hc/ja/articles/25883323669913" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>GO サポート＆ガイド 領収書はどのように発行できますか？</a></li><li data-astro-cid-tcbxoyxt><a href="https://support.go.goinc.jp/hc/ja/articles/25883330564377" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>GO サポート＆ガイド GO Pay利用時の領収書発行方法</a></li><li data-astro-cid-tcbxoyxt><a href="https://support.go.goinc.jp/hc/ja/articles/25883343892761" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>GO サポート＆ガイド インボイス制度への対応について</a></li></ul></dd></div></dl><p class="receipt-facts__hub" data-astro-cid-tcbxoyxt><a class="arrow-link" href="/receipts/" data-astro-cid-tcbxoyxt>ほかのサービスの領収書・インボイス対応を見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-tcbxoyxt>→</span></a></p></aside><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#goの領収書は支払い方法で出し方が違う結論とこの記事で分かること" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>GOの領収書は支払い方法で出し方が違う：結論と、この記事で分かること</a></li><li data-astro-cid-sgg5joot><a href="#タクシー領収書の出し方車内決済とgo-payの違い" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>タクシー領収書の出し方：車内決済とGO Payの違い</a></li><li data-astro-cid-sgg5joot><a href="#go-payの領収書を発行する手順go-領収書-発行" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>GO Payの領収書を発行する手順（GO 領収書 発行）</a></li><li data-astro-cid-sgg5joot><a href="#領収書の宛名はどうなる公式で分かること確認できなかったこと" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>領収書の宛名はどうなる？公式で分かること・確認できなかったこと</a></li><li data-astro-cid-sgg5joot><a href="#まとめて発行再発行メールが届かないとき" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>まとめて発行・再発行・メールが届かないとき</a></li><li data-astro-cid-sgg5joot><a href="#領収書の金額と支払い金額が違って見えるとき" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>領収書の金額と支払い金額が違って見えるとき</a></li><li data-astro-cid-sgg5joot><a href="#goの領収書とインボイス公式の整理" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>GOの領収書とインボイス：公式の整理</a></li><li data-astro-cid-sgg5joot><a href="#国税庁の整理タクシーは公共交通機関特例の対象に挙がっていない" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>国税庁の整理：タクシーは公共交通機関特例の対象に挙がっていない</a></li><li data-astro-cid-sgg5joot><a href="#タクシーの紙の領収書についての一般論" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>タクシーの紙の領収書についての一般論</a></li><li data-astro-cid-sgg5joot><a href="#経費にする前のチェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>10</span>経費にする前のチェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#次の一歩領収書を帳簿に入れる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>11</span>次の一歩：領収書を帳簿に入れる</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="goの領収書は支払い方法で出し方が違う結論とこの記事で分かること">GOの領収書は支払い方法で出し方が違う：結論と、この記事で分かること</h2>
+<p>GOの公式ヘルプでは、領収書の出し方は支払い方法で分かれます。GO Payなら車内では出ず、アプリの「利用履歴・領収書発行」からPDFをメールで受け取ります。車内決済なら乗務員から受け取り、アプリからは出せません。</p>
+<p>出張や客先訪問でタクシーを使うと、あとで経費にするために領収書が要ります。ところが「どこで出すのか」「宛名はどうなるのか」「インボイスなのか」は、乗り方と払い方で変わります。</p>
+<p>この記事では、次の内容を順に整理します。内容は2026年10月17日時点で確認した、GOの公式ヘルプと国税庁のページに基づきます。</p>
+<ul>
+<li>支払い方法ごとの領収書の出し方</li>
+<li>GO Payの領収書の発行手順</li>
+<li>宛名について、公式で分かること・確認できなかったこと</li>
+<li>まとめて発行・再発行・メールが届かないとき</li>
+<li>金額が違って見えるとき</li>
+<li>インボイス（適格請求書）の扱い</li>
+<li>経費にする前のチェックリスト</li>
+</ul>
+<h2 id="タクシー領収書の出し方車内決済とgo-payの違い">タクシー領収書の出し方：車内決済とGO Payの違い</h2>
+<p>GOの公式ヘルプ「領収書はどのように発行できますか？」では、お支払い方法によって発行方法が異なると案内されています。まず、自分がどちらで払ったかを思い出すのが入口です。</p>
+<table>
+<thead>
+<tr>
+<th>支払い方法</th>
+<th>領収書を受け取る場所</th>
+<th>補足</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>車内決済</td>
+<td>車内で乗務員から受け取る</td>
+<td>アプリからは領収書を発行できない</td>
+</tr>
+<tr>
+<td>GO Pay</td>
+<td>アプリから発行する</td>
+<td>車内では発行していない。PDFがメールで届く</td>
+</tr>
+</tbody>
+</table>
+<p>車内決済の場合は、公式ヘルプのとおり、車内で乗務員から受け取ります。受け取り忘れたときは、利用履歴にあるタクシー会社の電話番号へ問い合わせる、と案内されています。アプリからは発行できません。</p>
+<p>GO Payの場合は逆で、車内で頼んでも出ません。公式ヘルプによると、GO Payの乗車では車内で領収書を発行していません。理由として、領収書の二重発行を防ぐためと、クーポン利用時や事前確定運賃の注文では車内発行の領収書に正しい金額が適用されないことがあるため、と説明されています。</p>
+<h2 id="go-payの領収書を発行する手順go-領収書-発行">GO Payの領収書を発行する手順（GO 領収書 発行）</h2>
+<p>GO Payで支払った乗車の領収書は、アプリから次の手順で発行します。公式ヘルプ「GO Pay利用時の領収書発行方法」に沿った流れです。</p>
+<ol>
+<li>アプリ内の【≡】メニューから【利用履歴・領収書発行】を選ぶ</li>
+<li>領収書を発行したい利用履歴を選ぶ</li>
+<li>画面内の[領収書を発行する]を選ぶ</li>
+<li>表示されているメールアドレスを確認して送信する</li>
+</ol>
+<p>領収書はPDF形式でメールに添付して送られます。紙での領収書発行の依頼は受け付けていない、と公式に書かれています。</p>
+<p>注意したい条件が3つあります。</p>
+<ul>
+<li>宛名は空欄でも発行できる</li>
+<li>「料金の内訳を表示する」はONでもOFFでも発行できる</li>
+<li>GO Payで未清算があると、領収書は発行できない（決済を完了させる必要がある）</li>
+</ul>
+<p>メールアドレスは送信前の確認画面で表示されます。宛先が違っていると受け取れないので、送る前に見直してください。</p>
+<h2 id="領収書の宛名はどうなる公式で分かること確認できなかったこと">領収書の宛名はどうなる？公式で分かること・確認できなかったこと</h2>
+<p>宛名について、公式ヘルプで確かめられたのは「アプリの画面で宛名は空欄でも発行できる」という点だけです。急ぎで領収書だけ先に出したいときは、空欄のまま発行できます。</p>
+<p>一方で、次の点は公式の案内では確認できませんでした。</p>
+<ul>
+<li>宛名に会社名や屋号を入れられるか</li>
+<li>発行したあとに宛名を直せるか</li>
+</ul>
+<p>確認できなかった点は、推測で書きません。宛名が必要な場面では、発行前にアプリの画面で入力欄があるかを見て、不明ならGOのサポートに問い合わせるのが確実な順序です。</p>
+<p>車内決済の紙の領収書についても、宛名や但し書きをどう頼むかは、GOの公式ヘルプからは確認できませんでした。必要なら、乗車したタクシー会社に確認してください。</p>
+<p>あなたの場合で考えると、次のようになります。</p>
+<ul>
+<li>個人事業主：宛名の要否は、取引の内容や経理のやり方によって変わります。判断が付かないときは、税務署や税理士に確認してください。</li>
+<li>法人・屋号あり：経理のルールで宛名が求められるなら、乗車の前に、宛名が必要かどうかを決めておくと迷いません。</li>
+</ul>
+<h2 id="まとめて発行再発行メールが届かないとき">まとめて発行・再発行・メールが届かないとき</h2>
+<p>経費精算では、複数回の乗車をまとめて処理したい場面が多くなります。GO Payには、まとめて発行する機能があります。</p>
+<p>公式ヘルプによると、GO Payでの乗車が複数回あるときに、領収書をまとめて発行できます。選べる内容は次のとおりです。</p>
+<ul>
+<li>乗車ごとに別々のPDFにするか、1つのPDFにするかを選べる</li>
+<li>利用期間やプロフィールで絞って発行できる</li>
+</ul>
+<p>活用例として、「経費精算のため先月1か月分を発行したい」「1年分の利用履歴から、事業用の支払い方法で乗車した分だけ発行したい」が挙げられています。期間とプロフィールで絞り込めるので、月ごとの処理に使えます。</p>
+<h3 id="再発行">再発行</h3>
+<p>GO Payで支払った乗車の場合だけ、アプリの【≡】メニュー＞【利用履歴・領収書発行】から再発行できます。GO Payでない場合は、利用したタクシー会社に問い合わせてください。</p>
+<h3 id="メールが届かないとき">メールが届かないとき</h3>
+<p>GOからのメールの送信元は <a href="mailto:go-support@goinc.jp">go-support@goinc.jp</a> です。公式ヘルプでは、次の点が挙げられています。</p>
+<ol>
+<li>迷惑メールフォルダに自動で振り分けられていないか</li>
+<li>「@」など一部が全角になっていないか（全角だと届かないことがある）</li>
+</ol>
+<p>公式ヘルプには、ドメイン「@goinc.jp」の受信拒否設定をしていると届かないことがあり、指定受信設定をするとメールが受信できる場合がある、とも書かれています。</p>
+<h2 id="領収書の金額と支払い金額が違って見えるとき">領収書の金額と支払い金額が違って見えるとき</h2>
+<p>車内で受け取った紙の領収書の金額が、アプリの支払い金額と合わないことがあります。公式ヘルプによると、車内で発行された紙の領収書には、手配料やクーポン利用後の金額が反映されません。</p>
+<p>そのため、車内で紙の領収書を受け取った場合、実際の支払い金額と異なる場合があります。領収書の郵送対応などは行っていない、とも書かれています。</p>
+<p>経費にするときは、実際に払った金額と書類の金額が一致しているかを確認します。GO Payの領収書は、アプリの【利用履歴・領収書発行】から確認できる、と公式ヘルプにあります。</p>
+<h2 id="goの領収書とインボイス公式の整理">GOの領収書とインボイス：公式の整理</h2>
+<p>GOの公式ヘルプ「インボイス制度への対応について」では、2023年10月1日以降の乗車分について、原則としてインボイス（適格請求書）が発行されると案内されています。発行する主体は決済方法で異なります。</p>
+<ul>
+<li>GO Payで決済：GOアプリから、GOの登録番号が印字された電子領収書（インボイス）を発行できる</li>
+<li>車内で決済：各タクシー会社の登録番号が印字された領収書（インボイス）が車内で出るので、降車時に受け取る</li>
+</ul>
+<p>GO株式会社の登録番号は T2011501015896 と案内されています。国税庁の<a href="https://www.invoice-kohyo.nta.go.jp/">適格請求書発行事業者公表サイト</a>でも確認できます。</p>
+<h3 id="登録事業者でないタクシーに乗った場合">登録事業者でないタクシーに乗った場合</h3>
+<p>乗ったタクシーが登録事業者でない場合は、配車方式と決済方法でインボイスの出方が変わります。</p>
+<table>
+<thead>
+<tr>
+<th>配車方式</th>
+<th>決済方法</th>
+<th>インボイス</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GOアプリで配車</td>
+<td>GO Pay</td>
+<td>アプリから電子領収書（インボイス）を発行できる</td>
+</tr>
+<tr>
+<td>GOアプリで配車</td>
+<td>車内決済</td>
+<td>発行できない。車内で非インボイスの領収書を受け取る</td>
+</tr>
+<tr>
+<td>乗り場・流しで乗車</td>
+<td>車内決済</td>
+<td>発行できない。車内で非インボイスの領収書を受け取る</td>
+</tr>
+<tr>
+<td>乗り場・流しで乗車</td>
+<td>GO Pay</td>
+<td>原則アプリから発行。車内で非インボイスの領収書を受け取る</td>
+</tr>
+</tbody>
+</table>
+<p>車両ごとの登録番号は、公式の案内では確認できませんでした。また、GOの電子領収書で消費税の内訳がどう載るかも、確認できていません。</p>
+<h2 id="国税庁の整理タクシーは公共交通機関特例の対象に挙がっていない">国税庁の整理：タクシーは公共交通機関特例の対象に挙がっていない</h2>
+<p>インボイスの交付が免除される「公共交通機関特例」があります。国税庁のインボイス制度Q&amp;A（個別編）問42は、対象を3万円未満の次の運送として挙げています。</p>
+<ul>
+<li>船舶による旅客の運送</li>
+<li>バスによる旅客の運送（一般乗合旅客自動車運送事業）</li>
+<li>鉄道・軌道による旅客の運送</li>
+</ul>
+<p>タクシーは、この一覧に挙げられていません。このため、タクシー代を経費にするときは、車内で受け取る領収書や、GOの電子領収書に登録番号が付いているかを確認します。</p>
+<p>ここで関係するのは、課税事業者（消費税を納める事業者）です。免税事業者の人や、簡易課税・2割特例を使う人は、扱いが違う場合があります。ご自身の区分に応じて、国税庁の特設サイトの記載を確認してください。個別の判断は、税理士か税務署に相談するのが筋です。</p>
+<p>電車の領収書は<a href="/articles/shinkansen-ryoushuusho/">新幹線の領収書</a>、高速代は<a href="/articles/etc-ryoushuusho/">ETCの領収書</a>の記事に整理しています。</p>
+<h2 id="タクシーの紙の領収書についての一般論">タクシーの紙の領収書についての一般論</h2>
+<p>国税庁の特設サイトでは、請求書に限らず、所定の事項が記載された書類であれば、領収書や納品書など書類の名称を問わずインボイスになる、とされています。つまり「領収書」と書かれていても、必要な事項があればインボイスとして扱われます。</p>
+<p>なお、適格請求書は税務署長の登録を受けた適格請求書発行事業者でなければ交付できません（国税庁タックスアンサー No.6498）。</p>
+<p>保存についても、国税庁タックスアンサー No.2070に、取引で作成・受領した書類を保存しておく必要があること、5年間の保存でよい書類の例として請求書・見積書・納品書・送り状などが挙げられています。領収書をどの期間保存するかは、ご自身の区分に応じて確認してください。電子データの保管は<a href="/articles/ryoushuusho-hozon-e-bunsho-taiou/">領収書の保存と電子文書の対応</a>を参照してください。</p>
+<h2 id="経費にする前のチェックリスト">経費にする前のチェックリスト</h2>
+<p>タクシー代を帳簿に入れる前に、次を確認してください。</p>
+<ol>
+<li>支払い方法はGO Payか、車内決済か</li>
+<li>GO Payなら未清算がなく、領収書を発行できているか</li>
+<li>車内決済なら、降車時に領収書を受け取ったか</li>
+<li>登録番号（T＋13桁の数字）が印字されているか</li>
+<li>日付・金額・乗車区間が、スケジュールや出張の記録と合っているか</li>
+<li>クーポンや手配料で、書類の金額が実際の支払いとずれていないか</li>
+<li>PDFや紙を、保存場所を決めて残したか</li>
+<li>自分が課税事業者か、免税事業者か、簡易課税・2割特例かを把握しているか</li>
+</ol>
+<p>そもそもタクシー代が経費になるかは、<a href="/articles/keihi-naru-mono-naranai-mono/">経費になるもの・ならないもの</a>で整理しています。請求側の書き方は<a href="/articles/seikyuusho-kakikata-invoice-taiou/">請求書の書き方とインボイス対応</a>、屋号での登録は<a href="/articles/invoice-touroku-yagou/">インボイス登録と屋号</a>も参考になります。</p>
+<h2 id="次の一歩領収書を帳簿に入れる">次の一歩：領収書を帳簿に入れる</h2>
+<p>領収書を受け取ったら、日付・金額・用途をその月のうちに帳簿へ入れておくと、確定申告の時期に慌てません。GO Payの領収書はPDFで残るため、月ごとに絞って発行し、まとめて処理する運用もできます。</p>
+<p>青色申告で帳簿をつけるなら、取引の入力と集計ができるクラウド会計ソフトで管理する方法があります。</p>
+<aside class="cta-box"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">弥生株式会社</p><h3 class="cta-box__title">弥生シリーズ（やよいの青色申告 オンライン など）</h3><p class="cta-box__body">会計・青色申告のクラウドソフト。新規申込が成果条件。</p><a class="cta-box__button" href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E9T4M2+35XE+5ZEMP" data-offer="yayoi" rel="sponsored nofollow noopener" target="_blank">弥生シリーズ（やよいの青色申告 オンライン など）の公式サイトへ</a></aside>
+<p><a href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E9T4M2+35XE+5ZEMP" rel="sponsored nofollow noopener" target="_blank">青色申告対応のクラウド会計ソフトを見る</a></p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>GOの領収書はアプリから出せますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>GO Payで支払った乗車は、アプリの「利用履歴・領収書発行」から発行できます。車内決済の乗車は乗務員から受け取る形で、アプリからは発行できません（GO公式ヘルプ、2026年10月17日確認）。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>GOの領収書の宛名は空欄でも発行できますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>GO Payの領収書は、宛名が空欄でも発行できると公式に案内されています。宛名に会社名を入れられるか、発行後に直せるかは、公式の案内では確認できませんでした。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>GOの領収書はインボイスになりますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>GO Payの場合は、GOの登録番号が印字された電子領収書がアプリから発行できます。車内決済の場合は、各タクシー会社の登録番号が印字された領収書が車内で出ます。登録事業者でない車両では扱いが変わります。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>GOの領収書メールが届かないときはどうしますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>送信元は go-support@goinc.jp です。迷惑メールフォルダの確認と、登録したメールアドレスの「@」などが全角になっていないかの確認が、公式ヘルプで挙げられています。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://support.go.goinc.jp/hc/ja/articles/25883323669913" rel="noopener" target="_blank" data-astro-cid-sgg5joot>GO サポート＆ガイド 領収書はどのように発行できますか？</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://support.go.goinc.jp/hc/ja/articles/25883330564377" rel="noopener" target="_blank" data-astro-cid-sgg5joot>GO サポート＆ガイド GO Pay利用時の領収書発行方法</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://support.go.goinc.jp/hc/ja/articles/25883316069657" rel="noopener" target="_blank" data-astro-cid-sgg5joot>GO サポート＆ガイド 領収書をまとめて発行する方法</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://support.go.goinc.jp/hc/ja/articles/39337270146585" rel="noopener" target="_blank" data-astro-cid-sgg5joot>GO サポート＆ガイド 領収書の発行方法と活用のコツ</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://support.go.goinc.jp/hc/ja/articles/25883336198937" rel="noopener" target="_blank" data-astro-cid-sgg5joot>GO サポート＆ガイド 領収書の再発行は可能ですか？</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://support.go.goinc.jp/hc/ja/articles/25883316207385" rel="noopener" target="_blank" data-astro-cid-sgg5joot>GO サポート＆ガイド 領収書メールが届かない/PDFが添付されてこない</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://support.go.goinc.jp/hc/ja/articles/25883316631193" rel="noopener" target="_blank" data-astro-cid-sgg5joot>GO サポート＆ガイド 領収書の金額と支払い金額が一致していません</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://support.go.goinc.jp/hc/ja/articles/25883343892761" rel="noopener" target="_blank" data-astro-cid-sgg5joot>GO サポート＆ガイド インボイス制度への対応について</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/pdf/qa/01-07.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 インボイス制度に関するQ&amp;A（個別編）問42</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6498.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.6498</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2070.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.2070</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/invoice_about.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 インボイス制度の特設サイト</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.invoice-kohyo.nta.go.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 適格請求書発行事業者公表サイト</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/kakutei-shinkoku/" data-astro-cid-sgg5joot>確定申告・会計ソフト・経費の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/receipts/" data-astro-cid-sgg5joot>サービス別 領収書・インボイス対応一覧を見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

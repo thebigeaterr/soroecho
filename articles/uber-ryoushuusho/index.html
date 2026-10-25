@@ -1,0 +1,227 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Uber 領収書の取り方とインボイス対応｜Uber Eatsも含めて請求書との違いを整理 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="Uber の公式ヘルプでは、領収書とインボイス制度向けの請求書は別の書類です。領収書は請求書の代わりにならないため、Uber の請求書を使います。配車と Uber Eats の取得手順、宛名、車内決済の注意点をまとめます。"><link rel="canonical" href="https://soroecho.com/articles/uber-ryoushuusho/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="Uber 領収書の取り方とインボイス対応｜Uber Eatsも含めて請求書との違いを整理 | そろえ帳"><meta property="og:description" content="Uber の公式ヘルプでは、領収書とインボイス制度向けの請求書は別の書類です。領収書は請求書の代わりにならないため、Uber の請求書を使います。配車と Uber Eats の取得手順、宛名、車内決済の注意点をまとめます。"><meta property="og:url" content="https://soroecho.com/articles/uber-ryoushuusho/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/uber-ryoushuusho.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Uber 領収書の取り方とインボイス対応｜Uber Eatsも含めて請求書との違いを整理 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Uber 領収書の取り方とインボイス対応｜Uber Eatsも含めて請求書との違いを整理 | そろえ帳"><meta name="twitter:description" content="Uber の公式ヘルプでは、領収書とインボイス制度向けの請求書は別の書類です。領収書は請求書の代わりにならないため、Uber の請求書を使います。配車と Uber Eats の取得手順、宛名、車内決済の注意点をまとめます。"><meta name="twitter:image" content="https://soroecho.com/og/uber-ryoushuusho.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"Uber 領収書の取り方とインボイス対応｜Uber Eatsも含めて請求書との違いを整理","item":"https://soroecho.com/articles/uber-ryoushuusho/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Uber 領収書の取り方とインボイス対応｜Uber Eatsも含めて請求書との違いを整理","description":"Uber の公式ヘルプでは、領収書とインボイス制度向けの請求書は別の書類です。領収書は請求書の代わりにならないため、Uber の請求書を使います。配車と Uber Eats の取得手順、宛名、車内決済の注意点をまとめます。","url":"https://soroecho.com/articles/uber-ryoushuusho/","datePublished":"2026-10-25T00:00:00.000Z","dateModified":"2026-10-25T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/uber-ryoushuusho/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Uber の領収書をインボイスの代わりに使えますか？","acceptedAnswer":{"@type":"Answer","text":"Uber の公式ヘルプでは、Uber の領収書は日本のインボイス制度に対応していないため、領収書を請求書として使うことはできないとされています。Uber の請求書を使います。Uber Eats でも同じ案内です。"}},{"@type":"Question","name":"Uber の請求書の宛名を後から変えられますか？","acceptedAnswer":{"@type":"Answer","text":"公式ヘルプによると、一度発行された請求書の宛名を後から変更・再発行することはできません。宛名は Uber アカウントの名前になるため、発行前にアカウント名を希望の宛名へ変更しておきます。"}},{"@type":"Question","name":"Uber Eats の請求書に登録番号が載らないことはありますか？","acceptedAnswer":{"@type":"Answer","text":"あります。公式ヘルプでは、レストランが登録している場合のみ適格請求書発行事業者番号が表示されると案内されています。注文者が事前にレストランや店舗へ、登録の有無を問い合わせて確認するよう求められています。"}},{"@type":"Question","name":"Uber の領収書メールが届かないときはどうしますか？","acceptedAnswer":{"@type":"Answer","text":"公式ヘルプでは、まずスパムや迷惑メールのフォルダに入っていないかを確認するよう案内されています。あわせて、Uber アカウントに登録されているメールアドレスが正しいかも見直します。アプリやWebから領収書を再送することもできます。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>Uber 領収書の取り方とインボイス対応｜Uber Eatsも含めて請求書との違いを整理</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec3inc5z-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient></defs><rect width="400" height="225" fill="url(#ec3inc5z-g)" data-astro-cid-yuatfsof></rect><circle cx="389" cy="58" r="46.9" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="389" cy="58" r="73.7" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="389" cy="58" r="100.5" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="389" cy="58" r="127.3" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="389" cy="58" r="134" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Uber</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>領収書</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>Uber 領収書の取り方とインボイス対応｜Uber Eatsも含めて請求書との違いを整理</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-10-25T00:00:00.000Z" data-astro-cid-sgg5joot>2026年10月25日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約9分</p><aside class="receipt-facts" aria-labelledby="receipt-facts-heading" data-astro-cid-tcbxoyxt><h2 id="receipt-facts-heading" class="receipt-facts__title" data-astro-cid-tcbxoyxt>このサービスの確認済みの事実</h2><dl class="receipt-facts__list" data-astro-cid-tcbxoyxt><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>領収書の出し方</dt><dd data-astro-cid-tcbxoyxt><ul data-astro-cid-tcbxoyxt><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>Uber の乗車の領収書</strong>: 乗車後に登録メールへ自動送信。アプリのアカウントアイコン＞乗車＞過去の乗車＞領収書から、PDFダウンロードまたはメール再送</li><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>インボイス制度向けの請求書（配車）</strong>: 領収書メールの「請求書をダウンロードする」、riders.uber.com/trips、またはアプリの履歴＞請求書を表示。提携タクシー会社・個人タクシー分と Uber 分の2つ</li><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>Uber Eats</strong>: 領収書はアプリのアカウント＞注文履歴＞注文＞領収書を表示。請求書は注文履歴の「請求書を表示」または ubereats.com の過去の注文から。レストラン分と Uber 分の2つ</li></ul></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>宛名</dt><dd data-astro-cid-tcbxoyxt>宛名を指定できる<span class="receipt-facts__note" data-astro-cid-tcbxoyxt>（請求書の宛名は Uber アカウントの名前。発行後の変更・再発行はできないので、事前にアカウント名を変更しておく。領収書の宛名は公式の案内で確認できなかった）</span></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>インボイス</dt><dd data-astro-cid-tcbxoyxt>条件・特例あり<span class="receipt-facts__note" data-astro-cid-tcbxoyxt>（請求書のみ。公式ヘルプは「Uber の領収書は日本のインボイス制度に対応していない」としている。Uber Eats の請求書は、レストランが登録している場合のみ登録番号が表示される）</span></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>登録番号</dt><dd data-astro-cid-tcbxoyxt>公式の案内では確認できず</dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>最終確認日</dt><dd data-astro-cid-tcbxoyxt><time datetime="2026-10-17" data-astro-cid-tcbxoyxt>2026年10月17日</time></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>公式の情報</dt><dd data-astro-cid-tcbxoyxt><ul data-astro-cid-tcbxoyxt><li data-astro-cid-tcbxoyxt><a href="https://help.uber.com/ja-JP/riders/article/%E9%81%A9%E6%A0%BC%E8%AB%8B%E6%B1%82%E6%9B%B8%E7%AD%89%E4%BF%9D%E5%AD%98%E6%96%B9%E5%BC%8F%EF%BC%88%E3%82%A4%E3%83%B3%E3%83%9C%E3%82%A4%E3%82%B9%E5%88%B6%E5%BA%A6%EF%BC%89%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6?nodeId=242e4394-b8cb-4b81-af19-f5d7e01d47f1" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>Uber ヘルプ 適格請求書等保存方式（インボイス制度）について（乗客の方）</a></li><li data-astro-cid-tcbxoyxt><a href="https://help.uber.com/ja-JP/ubereats/restaurants/article/nitelikli-fatura-sistemi?nodeId=e27a1329-c348-4a37-a03f-2ca4d50b2630" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>Uber ヘルプ（Uber Eats）適格請求書等保存方式（インボイス制度）について</a></li><li data-astro-cid-tcbxoyxt><a href="https://help.uber.com/ja-JP/riders/article/%E4%B9%97%E8%BB%8A%E3%81%AE%E9%A0%98%E5%8F%8E%E6%9B%B8%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B?nodeId=9728e3dc-cbe6-4e91-aac2-203d8a8e4461" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>Uber ヘルプ 乗車の領収書を取得する</a></li></ul></dd></div></dl><p class="receipt-facts__hub" data-astro-cid-tcbxoyxt><a class="arrow-link" href="/receipts/" data-astro-cid-tcbxoyxt>ほかのサービスの領収書・インボイス対応を見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-tcbxoyxt>→</span></a></p></aside><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#uber-の領収書とインボイスの結論別の書類として扱う" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>Uber の領収書とインボイスの結論：別の書類として扱う</a></li><li data-astro-cid-sgg5joot><a href="#uber-の領収書と請求書インボイスの違い" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>Uber の領収書と請求書（インボイス）の違い</a></li><li data-astro-cid-sgg5joot><a href="#uber-の領収書の取り方アプリとweb" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>Uber の領収書の取り方（アプリとWeb）</a></li><li data-astro-cid-sgg5joot><a href="#uber-のインボイス請求書は2つに分かれる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>Uber のインボイス（請求書）は2つに分かれる</a></li><li data-astro-cid-sgg5joot><a href="#uber-の請求書の宛名は事前にアカウント名で整える" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>Uber の請求書の宛名は事前にアカウント名で整える</a></li><li data-astro-cid-sgg5joot><a href="#車内決済では領収書の発行者と請求書の名義が異なることがある" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>車内決済では領収書の発行者と請求書の名義が異なることがある</a></li><li data-astro-cid-sgg5joot><a href="#uber-eats-の領収書とインボイス請求書" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>Uber Eats の領収書とインボイス（請求書）</a></li><li data-astro-cid-sgg5joot><a href="#会社アカウントuber-for-businessの領収書" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>会社アカウント（Uber for Business）の領収書</a></li><li data-astro-cid-sgg5joot><a href="#国税庁の整理登録番号は発行者ごとに違う" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>国税庁の整理：登録番号は発行者ごとに違う</a></li><li data-astro-cid-sgg5joot><a href="#経費にする前のチェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>10</span>経費にする前のチェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#次の一歩書類を帳簿につなげる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>11</span>次の一歩：書類を帳簿につなげる</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="uber-の領収書とインボイスの結論別の書類として扱う">Uber の領収書とインボイスの結論：別の書類として扱う</h2>
+<p>Uber の公式ヘルプでは、領収書と、インボイス制度向けの「請求書」は別の書類として説明されています。Uber の領収書は日本のインボイス制度に対応していないため、請求書の代わりには使えません。</p>
+<p>インボイスが必要なときは、Uber が発行する請求書を使う、というのが公式の案内です。配車でも Uber Eats でも同じ考え方です。</p>
+<p>この記事では、次の点を順に整理します。</p>
+<ul>
+<li>領収書と請求書の違い</li>
+<li>配車の領収書・請求書の取り方</li>
+<li>請求書の宛名の注意点</li>
+<li>車内決済で名義が異なる場合</li>
+<li>Uber Eats の取り方と登録番号の見え方</li>
+<li>会社アカウント（Uber for Business）の場合</li>
+<li>国税庁の整理と、経費にする前の確認項目</li>
+</ul>
+<p>画面名や手順は、2026年10月17日に確認した Uber の公式ヘルプに基づきます。アプリの表示は更新されることがあるため、実際の画面と違う場合は公式ヘルプをご確認ください。</p>
+<h2 id="uber-の領収書と請求書インボイスの違い">Uber の領収書と請求書（インボイス）の違い</h2>
+<p>Uber には「領収書」と「請求書」という、役割の違う書類があります。まず違いを表で確認します。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>領収書</th>
+<th>請求書（インボイス制度向け）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>届き方</td>
+<td>乗車が完了すると、登録メールアドレスに自動送信される</td>
+<td>メールのリンク、Web、アプリから自分でダウンロードする</td>
+</tr>
+<tr>
+<td>形式</td>
+<td>アプリでPDFとして取得できる</td>
+<td>PDF形式で発行される</td>
+</tr>
+<tr>
+<td>インボイス制度</td>
+<td>対応していない（公式の案内）</td>
+<td>対応するための書類</td>
+</tr>
+<tr>
+<td>発行元</td>
+<td>乗車ごとに届く領収書</td>
+<td>配車は2種類に分かれる（次の章で説明）</td>
+</tr>
+</tbody>
+</table>
+<p>つまり、メールで届く領収書を保存しただけでは、インボイスの保存としては足りない可能性があります。仕入税額控除（支払った消費税を差し引く仕組み）を受けたい課税事業者の方は、請求書側を取得しておくことになります。</p>
+<p>なお、あなたの事業が免税事業者（消費税の納税義務がない事業者）で、消費税の控除を使わない場合は、取り扱いが変わる場合があります。判断に迷うときは、後述の国税庁の案内や税務署で確認してください。</p>
+<h2 id="uber-の領収書の取り方アプリとweb">Uber の領収書の取り方（アプリとWeb）</h2>
+<p>乗車が完了すると、Uber アカウントに登録されているメールアドレスに領収書が自動で送信されます。メールを探す前に、アプリから取り出す方法も押さえておくと便利です。</p>
+<p>アプリでの手順は次のとおりです。</p>
+<ol>
+<li>アプリ右上のアカウントアイコンをタップする</li>
+<li>「乗車」をタップし、過去の乗車を選ぶ</li>
+<li>乗車料金の内訳を見るため「領収書」をタップする</li>
+<li>画面を一番下までスクロールする</li>
+<li>PDFが必要なら「PDF をダウンロード」、メールで受け取りたいなら「メールを再送」を選ぶ</li>
+</ol>
+<p>メールの再送先は、登録したメールアドレスです。</p>
+<p>Webでは、riders.uber.com にサインインし、メニュー内の「ご乗車」から利用履歴を確認できます。</p>
+<h3 id="メールが届かないとき">メールが届かないとき</h3>
+<p>公式ヘルプでは、まず Uber からのメールがスパム（迷惑メール）フォルダに入っていないかを確認するよう案内されています。あわせて、アカウントに登録しているメールアドレスが今も使っているものかを見直します。</p>
+<p>メールが見当たらなくても、上のアプリの手順で領収書を取り出せます。</p>
+<h2 id="uber-のインボイス請求書は2つに分かれる">Uber のインボイス（請求書）は2つに分かれる</h2>
+<p>配車の請求書は、発行元の異なる2つに分かれます。公式ヘルプでは、Uber は2つの請求書を発行することで、2023年10月1日開始のインボイス制度に対応しているとされています。</p>
+<ol>
+<li>配車サービスを提供する、提携のタクシー会社・個人タクシーが発行する請求書（乗車料金の内訳が記載される）</li>
+<li>Uber プラットフォームの利用手数料やその他サービス料に対して、Uber が発行する請求書</li>
+</ol>
+<p>運賃そのものは1の請求書、Uber への手数料等は2の請求書、という分け方です。経費の帳簿を付けるときは、どちらの金額かを見分けやすいよう、書類を分けて保存すると整理が楽になります。</p>
+<h3 id="請求書のダウンロード方法">請求書のダウンロード方法</h3>
+<p>方法は3通りあります。</p>
+<ol>
+<li>メールの場合: 領収書メールに記載された「請求書をダウンロードする」をタップする</li>
+<li>Webの場合: riders.uber.com/trips にサインインし、「My Trips」から請求書が必要な乗車を選び、「Trip details」を選ぶ</li>
+<li>アプリの場合: アプリを開いて「履歴」をタップし、「利用履歴」から該当の乗車を選ぶ。「請求書を表示」をタップし、「ダウンロード」をタップする</li>
+</ol>
+<h3 id="請求書に載る項目">請求書に載る項目</h3>
+<p>請求書には発行事業者登録番号（QII。適格請求書発行事業者の登録番号のことです）が表示されます。記載されるのは、取引年月日・登録番号・サービスの説明・数量・消費税（JCT。日本の消費税のことです）・金額です。</p>
+<p>提携タクシー会社が発行する請求書には、タクシー会社の連絡先も載っています。忘れ物の問い合わせにも使えます。</p>
+<h2 id="uber-の請求書の宛名は事前にアカウント名で整える">Uber の請求書の宛名は事前にアカウント名で整える</h2>
+<p>請求書の宛名は、Uber アカウントの名前になります。公式ヘルプでは、一度発行された請求書の宛名は、後から変更・再発行できないとされています。</p>
+<p>希望の宛名で発行されるよう、あらかじめアカウント名を変更しておくように、というのが公式の案内です。</p>
+<p>あなたの場合で分けると、次のような考え方になります。</p>
+<ul>
+<li>個人事業主で屋号を宛名にしたい場合: 乗車前に、アカウント名を希望の宛名に変えておく</li>
+<li>法人として利用する場合: 会社名で受け取りたいなら、同様にアカウント名を確認する</li>
+<li>自宅住所を出したくない場合: 請求書の項目に宛名として載るのはアカウント名であり、住所については公式ヘルプに記載がなかったため、ここでは触れません</li>
+</ul>
+<p>領収書（請求書でない方）の宛名については、公式の案内では確認できませんでした。宛名が必要な場面では、請求書を使うのが安全側の進め方です。</p>
+<h2 id="車内決済では領収書の発行者と請求書の名義が異なることがある">車内決済では領収書の発行者と請求書の名義が異なることがある</h2>
+<p>タクシーの車内で決済した場合は、注意点があります。公式ヘルプによると、車内決済の場合、請求書に対応する領収書は、実際に乗車したタクシー事業者から発行されることもあります。</p>
+<p>さらに、車内決済で請求書の名義が「株式会社電脳交通」となっているときは、領収書の発行者と名義が異なるため注意するよう、案内されています。</p>
+<p>実務で気を付ける点は次のとおりです。</p>
+<ul>
+<li>請求書と領収書の名義が違うときは、両方を同じ乗車の書類として保管する</li>
+<li>帳簿のメモ欄に、乗車日と区間を書き添えておく</li>
+<li>名義の扱いに迷うときは、税理士か税務署に確認する</li>
+</ul>
+<p>タクシー全般の領収書の扱いは、<a href="/articles/go-taxi-ryoushuusho/">GO のタクシー領収書の取り方</a>でも整理しています。</p>
+<h2 id="uber-eats-の領収書とインボイス請求書">Uber Eats の領収書とインボイス（請求書）</h2>
+<p>Uber Eats も、配車と同じく領収書と請求書が別です。注文が完了すると、アカウントに登録されたメールアドレスに領収書が送信されます。</p>
+<p>領収書をアプリで確認する手順は次のとおりです。</p>
+<ol>
+<li>アカウントのアイコンをタップする</li>
+<li>「注文履歴」を開く</li>
+<li>確認したい注文を選ぶ</li>
+<li>「領収書を表示」をタップする</li>
+</ol>
+<p>Webでは、左上のメニューから「ご注文内容」を開き、注文を選んで「領収書を表示する」を選びます。</p>
+<h3 id="uber-eats-のインボイス制度向け請求書">Uber Eats のインボイス制度向け請求書</h3>
+<p>Uber Eats でも、請求書は2つあります。</p>
+<ol>
+<li>商品を提供する、レストランが発行する請求書</li>
+<li>Uber プラットフォームの手数料等に対して Uber が発行する請求書</li>
+</ol>
+<p>ダウンロードは次のとおりです。</p>
+<ul>
+<li>アプリ: 「アカウント」→「注文履歴」→該当の注文→「請求書を表示」→「ダウンロード」</li>
+<li>Web: ubereats.com にサインイン→「過去の注文」→該当の注文→「請求書をダウンロード」</li>
+</ul>
+<p>Uber Eats でも、領収書をインボイスとして使うことはできず、宛名は Uber アカウントの名前で、後から変更・再発行はできません。</p>
+<h3 id="登録番号が載るのはレストランが登録している場合のみ">登録番号が載るのはレストランが登録している場合のみ</h3>
+<p>公式ヘルプによれば、請求書には、レストランが登録している場合のみ適格請求書発行事業者番号が表示されます。表示されるかどうかは、注文者があらかじめレストランや店舗へ問い合わせ、Uber 上で登録が済んでいるか確認するよう案内されています。</p>
+<p>仕事で会食や差し入れに使う方は、注文前の確認が手間を減らします。なお、Uber の発行する請求書（手数料等にあたるもの）の中身については、公式の案内で確認できませんでした。</p>
+<h3 id="uber-one-会費の請求書">Uber One 会費の請求書</h3>
+<p>Uber One の会費の請求書は、パソコンからのみ取得できます。ubereats.com にサインインして「Uber One」を開き、「メンバーシップを管理する」から「請求書をダウンロード」を選びます。</p>
+<h2 id="会社アカウントuber-for-businessの領収書">会社アカウント（Uber for Business）の領収書</h2>
+<p>会社のアカウントで Uber for Business を使っている場合は、取得方法が異なります。公式ヘルプによると、Uber プログラム管理者は、個々の乗車や注文の領収書を表示し、アカウントのメールアドレスへコピーを送れます。</p>
+<p>手順の流れは次のとおりです。</p>
+<ol>
+<li>business.uber.com にサインインする</li>
+<li>「アクティビティ」タブを開く</li>
+<li>検索して対象の乗車や注文を探す</li>
+<li>「ダウンロード」で領収書を保存する</li>
+</ol>
+<p>詳しい条件や権限は、公式ヘルプをご確認ください。</p>
+<h2 id="国税庁の整理登録番号は発行者ごとに違う">国税庁の整理：登録番号は発行者ごとに違う</h2>
+<p>国税庁の案内では、適格請求書は、税務署長の登録を受けた適格請求書発行事業者でなければ交付できません（タックスアンサー No.6498）。仕入税額控除の要件として、一定の事項を記載した帳簿と請求書等の保存が求められます。</p>
+<p>また、国税庁の特設サイトでは、所定の事項が記載されていれば、領収書や納品書など書類の名称を問わずインボイスになるとされています。ただし Uber については、公式ヘルプが領収書を対象外と案内しています。まず Uber の案内に沿ってください。</p>
+<p>Uber 社自体の登録番号は、公式ヘルプに載っていませんでした。書類に載る登録番号は、発行する側ごとに違います。登録番号は、書類の実物で確認し、必要なら<a href="https://www.invoice-kohyo.nta.go.jp/">適格請求書発行事業者公表サイト</a>で照合してください。屋号や登録番号の見方は<a href="/articles/invoice-touroku-yagou/">インボイスの登録名と屋号</a>も参考になります。</p>
+<p>関係するのは、課税事業者の方です。免税事業者の方や、簡易課税や2割特例（消費税の納税額を簡単に計算できる制度）を使う方は、国税庁の特設サイトに沿って確認します。個別の判断は税理士か税務署へ相談してください。</p>
+<h2 id="経費にする前のチェックリスト">経費にする前のチェックリスト</h2>
+<p>書類を受け取ったら、帳簿に載せる前に次の点を確認します。</p>
+<ol>
+<li>領収書ではなく、請求書（インボイス）も取得したか</li>
+<li>配車は、タクシー会社発行分と Uber 発行分の2つをそろえたか</li>
+<li>宛名が自分の希望どおりか（後から変更できません）</li>
+<li>請求書に取引年月日・登録番号・消費税・金額が載っているか</li>
+<li>車内決済なら、領収書の発行者と請求書の名義が違わないか</li>
+<li>Uber Eats は、レストランの登録番号が表示されているか</li>
+<li>事業に関係する支出か（私用との区別）</li>
+<li>保存期間を確認したか</li>
+</ol>
+<p>保存について、国税庁のタックスアンサー No.2070 では、取引で受け取った書類を保存しておく必要があり、請求書や領収書などは5年間の保存でよい書類の例にあげられています。ご自身の区分によって期間が異なる場合があるため、確認してください。</p>
+<p>電子データで受け取った書類の保存は<a href="/articles/ryoushuusho-hozon-e-bunsho-taiou/">領収書の電子保存と電子取引への対応</a>、何が経費になるかは<a href="/articles/keihi-naru-mono-naranai-mono/">経費になるもの・ならないもの</a>が参考になります。請求書を自分で出す側になる場合は、<a href="/articles/seikyuusho-kakikata-invoice-taiou/">請求書の書き方とインボイス対応</a>も確認してください。</p>
+<h2 id="次の一歩書類を帳簿につなげる">次の一歩：書類を帳簿につなげる</h2>
+<p>Uber のPDFがそろったら、日付・金額・用途を帳簿へ入力する作業が残ります。毎月の件数が増えると、手入力は負担になります。</p>
+<p>青色申告で帳簿を付けるなら、取引を取り込んで仕訳を管理できる会計ソフトを使う方法があります。比較するときは、対応する申告方法、電子データの保存、費用、サポートを軸に見てください。</p>
+<aside class="cta-box"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">弥生株式会社</p><h3 class="cta-box__title">弥生シリーズ（やよいの青色申告 オンライン など）</h3><p class="cta-box__body">会計・青色申告のクラウドソフト。新規申込が成果条件。</p><a class="cta-box__button" href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E9T4M2+35XE+5ZEMP" data-offer="yayoi" rel="sponsored nofollow noopener" target="_blank">弥生シリーズ（やよいの青色申告 オンライン など）の公式サイトへ</a></aside>
+<p><a href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E9T4M2+35XE+5ZEMP" rel="sponsored nofollow noopener" target="_blank">青色申告対応のクラウド会計ソフトを見る</a></p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Uber の領収書をインボイスの代わりに使えますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>Uber の公式ヘルプでは、Uber の領収書は日本のインボイス制度に対応していないため、領収書を請求書として使うことはできないとされています。Uber の請求書を使います。Uber Eats でも同じ案内です。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Uber の請求書の宛名を後から変えられますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式ヘルプによると、一度発行された請求書の宛名を後から変更・再発行することはできません。宛名は Uber アカウントの名前になるため、発行前にアカウント名を希望の宛名へ変更しておきます。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Uber Eats の請求書に登録番号が載らないことはありますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>あります。公式ヘルプでは、レストランが登録している場合のみ適格請求書発行事業者番号が表示されると案内されています。注文者が事前にレストランや店舗へ、登録の有無を問い合わせて確認するよう求められています。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Uber の領収書メールが届かないときはどうしますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式ヘルプでは、まずスパムや迷惑メールのフォルダに入っていないかを確認するよう案内されています。あわせて、Uber アカウントに登録されているメールアドレスが正しいかも見直します。アプリやWebから領収書を再送することもできます。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://help.uber.com/ja-JP/riders/article/%E4%B9%97%E8%BB%8A%E3%81%AE%E9%A0%98%E5%8F%8E%E6%9B%B8%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B?nodeId=9728e3dc-cbe6-4e91-aac2-203d8a8e4461" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Uber ヘルプ 乗車の領収書を取得する</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://help.uber.com/ja-JP/riders/article/%E4%B9%97%E8%BB%8A%E3%81%AE%E9%A0%98%E5%8F%8E%E6%9B%B8%E3%82%92%E5%85%A5%E6%89%8B%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95?nodeId=846f6cad-6f27-492a-9e0b-d2f056e1298e" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Uber ヘルプ 乗車の領収書を入手する方法</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://help.uber.com/ja-JP/riders/article/%E9%A0%98%E5%8F%8E%E6%9B%B8%E3%82%84%E3%83%A1%E3%83%BC%E3%83%AB%E3%81%8C%E5%B1%8A%E3%81%8B%E3%81%AA%E3%81%84?nodeId=318d9393-23c6-4db2-bf34-f48cf4a169c5" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Uber ヘルプ メールや領収書を受け取っていない</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://help.uber.com/ja-JP/riders/article/%E9%81%A9%E6%A0%BC%E8%AB%8B%E6%B1%82%E6%9B%B8%E7%AD%89%E4%BF%9D%E5%AD%98%E6%96%B9%E5%BC%8F%EF%BC%88%E3%82%A4%E3%83%B3%E3%83%9C%E3%82%A4%E3%82%B9%E5%88%B6%E5%BA%A6%EF%BC%89%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6?nodeId=242e4394-b8cb-4b81-af19-f5d7e01d47f1" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Uber ヘルプ 適格請求書等保存方式（インボイス制度）について（乗客の方）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://help.uber.com/ja-JP/riders/article/vajan-s%C3%B5iduarvet?nodeId=4cca71a5-0a69-4923-9f9f-870efa9356c7" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Uber ヘルプ 乗車の請求書が必要</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://help.uber.com/ja-JP/ubereats/restaurants/article/%E9%A0%98%E5%8F%8E%E6%9B%B8%E3%81%AE%E7%A2%BA%E8%AA%8D%E3%81%A8%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89?nodeId=5638784c-ee2f-409e-9302-aa8d052b132a" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Uber ヘルプ（Uber Eats）領収書の確認方法</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://help.uber.com/ja-JP/ubereats/restaurants/article/nitelikli-fatura-sistemi?nodeId=e27a1329-c348-4a37-a03f-2ca4d50b2630" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Uber ヘルプ（Uber Eats）適格請求書等保存方式（インボイス制度）について</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://help.uber.com/ja-JP/business/article/%E9%85%8D%E8%BB%8A%E3%81%A8%E6%B3%A8%E6%96%87%E3%81%AE%E9%A0%98%E5%8F%8E%E6%9B%B8%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B?nodeId=e03940f8-3b16-4822-b3c6-7c292a96566c" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Uber ヘルプ（Uber for Business）配車と注文の領収書を表示する</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6498.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.6498</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2070.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.2070</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/invoice_about.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 インボイス制度の特設サイト</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.invoice-kohyo.nta.go.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 適格請求書発行事業者公表サイト</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/kakutei-shinkoku/" data-astro-cid-sgg5joot>確定申告・会計ソフト・経費の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/receipts/" data-astro-cid-sgg5joot>サービス別 領収書・インボイス対応一覧を見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Booking.com の領収書は宿泊施設に頼む｜宛名・インボイス・出し方を公式情報で整理 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="Booking.com は宿泊の領収書・請求書を出さず、出すのは宿泊施設です。決済を代行した予約でも同じです。頼み方、宛名の決め方、インボイス（T番号）と海外宿泊の消費税の見方を公式情報の範囲で整理します。"><link rel="canonical" href="https://soroecho.com/articles/booking-com-ryoushuusho/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="Booking.com の領収書は宿泊施設に頼む｜宛名・インボイス・出し方を公式情報で整理 | そろえ帳"><meta property="og:description" content="Booking.com は宿泊の領収書・請求書を出さず、出すのは宿泊施設です。決済を代行した予約でも同じです。頼み方、宛名の決め方、インボイス（T番号）と海外宿泊の消費税の見方を公式情報の範囲で整理します。"><meta property="og:url" content="https://soroecho.com/articles/booking-com-ryoushuusho/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/booking-com-ryoushuusho.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Booking.com の領収書は宿泊施設に頼む｜宛名・インボイス・出し方を公式情報で整理 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Booking.com の領収書は宿泊施設に頼む｜宛名・インボイス・出し方を公式情報で整理 | そろえ帳"><meta name="twitter:description" content="Booking.com は宿泊の領収書・請求書を出さず、出すのは宿泊施設です。決済を代行した予約でも同じです。頼み方、宛名の決め方、インボイス（T番号）と海外宿泊の消費税の見方を公式情報の範囲で整理します。"><meta name="twitter:image" content="https://soroecho.com/og/booking-com-ryoushuusho.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"Booking.com の領収書は宿泊施設に頼む｜宛名・インボイス・出し方を公式情報で整理","item":"https://soroecho.com/articles/booking-com-ryoushuusho/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Booking.com の領収書は宿泊施設に頼む｜宛名・インボイス・出し方を公式情報で整理","description":"Booking.com は宿泊の領収書・請求書を出さず、出すのは宿泊施設です。決済を代行した予約でも同じです。頼み方、宛名の決め方、インボイス（T番号）と海外宿泊の消費税の見方を公式情報の範囲で整理します。","url":"https://soroecho.com/articles/booking-com-ryoushuusho/","datePublished":"2026-10-26T00:00:00.000Z","dateModified":"2026-10-26T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/booking-com-ryoushuusho/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Booking.com は領収書を発行してくれますか？","acceptedAnswer":{"@type":"Answer","text":"Booking.com が宿泊施設向けのヘルプで説明しているところでは、Booking.com はゲストに対する請求書を発行しません。発行する責任があるのは宿泊施設で、Booking.com が決済を代行した予約でも同じです。"}},{"@type":"Question","name":"領収書の宛名を会社名にできますか？","acceptedAnswer":{"@type":"Answer","text":"Booking.com は宿泊施設向けのヘルプで、宛名はゲストの名前、ゲストと合意があれば他の名前で発行するよう施設にお願いしていると説明しています。会社名にしたいときは、前もって宿泊施設に伝えてください。応じるかどうかは宿泊施設の判断になります。"}},{"@type":"Question","name":"Booking.com の予約でインボイス（適格請求書）はもらえますか？","acceptedAnswer":{"@type":"Answer","text":"国内の宿泊なら、領収書を出すのは宿泊施設なので、適格請求書かどうかは施設の領収書にある登録番号（T＋13桁）で見ます。登録番号は国税庁の適格請求書発行事業者公表サイトでも調べられます。"}},{"@type":"Question","name":"海外のホテル代に日本の消費税はかかりますか？","acceptedAnswer":{"@type":"Answer","text":"国税庁のタックスアンサー No.6210 では、国外取引については消費税は課税されない（不課税）とされています。役務の提供は、原則として提供が行われた場所で国内取引かどうかを判定します。個別の判断は税理士・税務署へ相談してください。"}},{"@type":"Question","name":"宿泊施設と連絡がつかないときはどうしますか？","acceptedAnswer":{"@type":"Answer","text":"Booking.com のカスタマーサービスのページに、メッセージを送る窓口と、24時間365日対応の電話の案内があります。カード明細や予約確認書が領収書の代わりになるかは、提出先のルールで決まります。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>Booking.com の領収書は宿泊施設に頼む｜宛名・インボイス・出し方を公式情報で整理</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec3ue3g4-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec3ue3g4-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec3ue3g4-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec3ue3g4-p)" data-astro-cid-yuatfsof></rect><circle cx="381" cy="73" r="136" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>booking.com</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>領収書</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>Booking.com の領収書は宿泊施設に頼む｜宛名・インボイス・出し方を公式情報で整理</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-10-26T00:00:00.000Z" data-astro-cid-sgg5joot>2026年10月26日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約9分</p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論bookingcom-の領収書は宿泊施設に頼む" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：Booking.com の領収書は、宿泊施設に頼む</a></li><li data-astro-cid-sgg5joot><a href="#なぜ-bookingcom-ではなく宿泊施設が領収書を出すのか" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>なぜ Booking.com ではなく宿泊施設が領収書を出すのか</a></li><li data-astro-cid-sgg5joot><a href="#誰がカードに課金するかで変わること予約確認書で支払い先を確かめる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>誰がカードに課金するかで変わること：予約確認書で支払い先を確かめる</a></li><li data-astro-cid-sgg5joot><a href="#領収書の頼み方宿泊施設に連絡する" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>領収書の頼み方：宿泊施設に連絡する</a></li><li data-astro-cid-sgg5joot><a href="#宛名は誰の名前になる会社名にしたいとき" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>宛名は誰の名前になる？会社名にしたいとき</a></li><li data-astro-cid-sgg5joot><a href="#受け取ったら確かめる項目のチェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>受け取ったら確かめる項目のチェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#インボイスと消費税国内の宿泊と海外の宿泊で見方が違う" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>インボイスと消費税：国内の宿泊と海外の宿泊で見方が違う</a></li><li data-astro-cid-sgg5joot><a href="#うまくいかないとき宿泊施設が応じない連絡がつかない" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>うまくいかないとき：宿泊施設が応じない・連絡がつかない</a></li><li data-astro-cid-sgg5joot><a href="#経費精算で困らないための関連記事" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>経費精算で困らないための関連記事</a></li><li data-astro-cid-sgg5joot><a href="#次の一歩出張費や領収書を帳簿にまとめる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>10</span>次の一歩：出張費や領収書を帳簿にまとめる</a></li><li data-astro-cid-sgg5joot><a href="#よくある質問" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>11</span>よくある質問</a></li><li data-astro-cid-sgg5joot><a href="#まとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>12</span>まとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論bookingcom-の領収書は宿泊施設に頼む">結論：Booking.com の領収書は、宿泊施設に頼む</h2>
+<p>Booking.com は、宿泊の領収書・請求書を出しません。出すのは泊まった宿泊施設です。Booking.com が決済を代行した予約でも、この点は変わりません。</p>
+<p>Booking.com 自身が宿泊施設向けのヘルプで、そう説明しています。このヘルプは施設向けに書かれたものですが、ゲスト側が領収書を誰に頼めばよいかを知るうえで、最も直接的な公式の説明です。</p>
+<p>この記事では、次の内容を順に説明します。</p>
+<ul>
+<li>なぜ Booking.com ではなく宿泊施設なのか</li>
+<li>支払いのタイミングと、領収書を頼む相手の整理</li>
+<li>領収書の頼み方と、宛名（会社名）の伝え方</li>
+<li>受け取った領収書で確かめる項目のチェックリスト</li>
+<li>インボイス（T番号）と、海外の宿泊の消費税の見方</li>
+<li>うまくいかないときの相談先</li>
+</ul>
+<p>内容は2026年10月24日に確認した公式ページに基づきます。Booking.com のアプリや予約サイトの画面操作は、公式で確認できた範囲に限り、細かい手順は書きません。</p>
+<h2 id="なぜ-bookingcom-ではなく宿泊施設が領収書を出すのか">なぜ Booking.com ではなく宿泊施設が領収書を出すのか</h2>
+<p>理由は、予約の仕組みにあります。Booking.com は宿泊施設向けのヘルプで、各予約は宿泊施設とゲストとの間に交わされる法的な契約だと説明しています。そのため、ゲストに請求書を発行する責任は Booking.com ではなく宿泊施設にある、という整理です。</p>
+<p>支払いの処理担当者は問われません。同じヘルプには、Booking.com ペイメントによって Booking.com が決済を代行する場合でも、宿泊施設にゲストへ請求書を発行する責任がある、と書かれています。</p>
+<p>現地の法的要件に従い、支払い時にゲストに対する請求書を発行する必要があるとも説明されています。これには、Booking.com ペイメントで支払われた予約を含め、すべての予約が該当するとされています。</p>
+<p>ヘルプの FAQ にも、次の趣旨の記載があります。</p>
+<ul>
+<li>Booking.com はゲストに請求書を発行しているか：いいえ</li>
+<li>宿泊施設には、ゲストの支払い時に請求書を書面かメール、またはその両方で発行する責任がある</li>
+<li>Booking.com が、予約に関する請求書を宿泊施設にもゲストにも送ることはない</li>
+</ul>
+<p>つまり、Booking.com のサイトやメールを探しても、領収書は見つからない前提で動くのが近道です。領収書の出し手は宿泊施設、と覚えておきましょう。</p>
+<h2 id="誰がカードに課金するかで変わること予約確認書で支払い先を確かめる">誰がカードに課金するかで変わること：予約確認書で支払い先を確かめる</h2>
+<p>領収書を頼む相手は宿泊施設ですが、その前に「この予約は、誰が、いつ課金するのか」を確かめておくと、頼むタイミングが分かります。Booking.com のカスタマーサービスのページには、ゲスト向けの FAQ があります。</p>
+<ul>
+<li>通常は、宿泊施設がゲストのカードへ課金する</li>
+<li>Booking.com が決済を代行する場合は、予約確認書にその旨が明記されている</li>
+<li>通常の支払いは、チェックイン時またはチェックアウト時に宿泊施設で行う</li>
+<li>宿泊施設の支払いポリシーによっては、宿泊料金の一部または全額が前払いで課金されることがある。この場合も、予約確認書と支払いポリシーに明記されている</li>
+<li>前払いポリシーがない場合、予約保証のために宿泊施設がカードの事前認証（仮請求）を行うことがある。これは一定額を一時的に確保するもので、実際に料金が請求されることはない</li>
+</ul>
+<p>これを、領収書の観点で表にまとめます。</p>
+<table>
+<thead>
+<tr>
+<th>支払いのタイミング</th>
+<th>誰が課金するか</th>
+<th>領収書を頼む相手</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>チェックイン時・チェックアウト時の支払い</td>
+<td>通常は宿泊施設</td>
+<td>宿泊施設</td>
+</tr>
+<tr>
+<td>前払い（一部または全額）</td>
+<td>予約確認書と支払いポリシーに明記</td>
+<td>宿泊施設</td>
+</tr>
+<tr>
+<td>Booking.com が決済を代行する場合</td>
+<td>予約確認書に明記</td>
+<td>宿泊施設</td>
+</tr>
+<tr>
+<td>事前認証（仮請求）</td>
+<td>実際の請求ではない</td>
+<td>対象外（請求が確定した支払いについて頼む）</td>
+</tr>
+</tbody>
+</table>
+<p>どの行でも、領収書を頼む相手は宿泊施設です。確認の行動としては、予約確認書の支払いに関する記載を見て、課金のタイミングを把握しておく、の一点で足ります。</p>
+<p>カード明細に事前認証の表示が出ても、実際の請求ではないと公式に説明されています。領収書を頼むのは、支払いが確定してからです。</p>
+<h2 id="領収書の頼み方宿泊施設に連絡する">領収書の頼み方：宿泊施設に連絡する</h2>
+<p>Booking.com のカスタマーサービスのページには、「宿泊施設に連絡」という案内があり、「ご滞在に関する詳細は、宿泊施設にお問い合わせいただくのが最適です」と書かれています。領収書もご滞在に関することなので、まず宿泊施設に連絡するのが筋です。</p>
+<p>頼み方は、状況別に次のように考えられます。</p>
+<ol>
+<li>宿泊中に頼む：支払いがチェックイン時かチェックアウト時に宿泊施設で行われるのが通常なので、その支払いのときに、領収書をお願いして宛名を伝える</li>
+<li>前払いの予約で、後から頼む：予約をした後で宿泊施設に連絡を取り、領収書の発行を依頼する</li>
+</ol>
+<p>ここで書いた「支払いのときに頼む」は、公式の支払いの説明（チェックイン時またはチェックアウト時）から導いた進め方です。公式が「フロントで頼むように」と指示しているわけではありません。</p>
+<p>また、予約後に宿泊施設へ連絡する画面の細かい操作手順は、公式の情報で確認できませんでした。予約確認書に載っている宿泊施設の連絡先や、Booking.com 上の案内で確かめてください。</p>
+<p>頼むときは、次の内容を一度に伝えると、やり直しが減ります。</p>
+<ul>
+<li>予約者の名前と、宿泊日</li>
+<li>領収書の宛名（個人名か、会社名か）</li>
+<li>必要な書類の種類（領収書か請求書か）</li>
+<li>受け取り方（書面かメールか）</li>
+</ul>
+<h2 id="宛名は誰の名前になる会社名にしたいとき">宛名は誰の名前になる？会社名にしたいとき</h2>
+<p>宛名については、Booking.com が宿泊施設向けのヘルプで、次のようにお願いしていると説明しています。</p>
+<ul>
+<li>請求書の宛名は、ゲストの名前にして発行してほしい</li>
+<li>ゲストと合意があった場合は、他の名前で発行してほしい</li>
+</ul>
+<p>つまり、何も伝えなければゲスト（予約者）の名前が宛名になるのが基本です。会社名で領収書が必要なときは、他の名前にあたるので、ゲストと宿泊施設の合意が前提になります。</p>
+<p>これは「会社名で出す義務が宿泊施設にある」という意味ではありません。会社名にしたいなら、前もって宿泊施設に伝え、了解を得ておきましょう。</p>
+<p>宿泊施設が会社名の宛名に応じるかどうかは、公式の情報では確認できません。個別の対応は、宿泊施設に直接聞いてください。</p>
+<h2 id="受け取ったら確かめる項目のチェックリスト">受け取ったら確かめる項目のチェックリスト</h2>
+<p>Booking.com は宿泊施設向けのヘルプで、ゲストに対する請求書に載せる項目を挙げています。受け取った書類が経理で使えるかどうかを、この項目に沿って確かめましょう。</p>
+<ul>
+<li>宿泊施設名が載っている</li>
+<li>宿泊施設の連絡先情報が載っている</li>
+<li>ゲストの名前（または合意した宛名）が載っている</li>
+<li>チェックイン日・チェックアウト日が載っている</li>
+<li>客室や宿泊施設の詳細が載っている</li>
+<li>請求総額が載っている</li>
+<li>料金の内訳（宿泊料金・税・清掃費）が載っている</li>
+<li>請求書番号が載っている</li>
+<li>発行日が載っている</li>
+<li>使用された支払い方法が載っている</li>
+</ul>
+<p>同じヘルプは、Booking.com を販売者やブランドとして記載したり言及したりしないよう、宿泊施設に求めています。そのため、受け取った書類に「Booking.com」の名前が載っていなくても、それは異常ではありません。</p>
+<p>書類が宿泊施設の名前で出ているか、が確認の軸です。項目が足りない場合は、その場で宿泊施設に伝えて、追記や再発行をお願いしましょう。</p>
+<h2 id="インボイスと消費税国内の宿泊と海外の宿泊で見方が違う">インボイスと消費税：国内の宿泊と海外の宿泊で見方が違う</h2>
+<p>インボイスと消費税は、泊まる場所で見方が分かれます。個別の判断は税理士・税務署へ相談してください。ここでは公式に確認できた範囲だけを整理します。</p>
+<h3 id="国内の宿泊適格請求書かどうかは宿泊施設の領収書で見る">国内の宿泊：適格請求書かどうかは、宿泊施設の領収書で見る</h3>
+<p>国内の宿泊でも、領収書を出すのは宿泊施設です。したがって、適格請求書（インボイス）にあたるかどうかは、宿泊施設が出した領収書で、登録番号「T＋13桁」があるかを見て確かめます。</p>
+<p>登録番号は、国税庁の適格請求書発行事業者公表サイト（<a href="https://www.invoice-kohyo.nta.go.jp/">https://www.invoice-kohyo.nta.go.jp/</a>）でも調べられます。このページは、トップページへの案内にとどめます。</p>
+<p>前の節のとおり、Booking.com の名前は宿泊施設の請求書には載りません。Booking.com 経由の予約でも、適格請求書の発行元は宿泊施設です。</p>
+<p>領収書に登録番号がない場合に、仕入税額控除がどうなるかは、あなたの課税区分で変わります。この記事では判断せず、税理士・税務署に確認してください。</p>
+<h3 id="海外の宿泊日本の消費税は課税されない">海外の宿泊：日本の消費税は課税されない</h3>
+<p>海外のホテルに泊まった場合は、国税庁のタックスアンサー No.6210（国外取引）が参考になります。</p>
+<ul>
+<li>国外取引については、消費税は課税されない（不課税）</li>
+<li>役務の提供の場合は、一定の取引についての例外はあるが、原則として、その役務の提供が行われた場所で、国内取引かどうかを判定する</li>
+</ul>
+<p>宿泊は、ホテルという場所で行われるサービスの提供です。この国税庁の言葉の範囲で考えると、海外のホテルでの宿泊費には、日本の消費税はかからないと整理できます。例外の有無などの個別の判断は、税理士・税務署へ相談してください。</p>
+<p>海外取引の消費税の別の例として、<a href="/articles/kaigai-saas-shouhizei-invoice/">海外SaaSの消費税とインボイス</a>も参考になります。</p>
+<h2 id="うまくいかないとき宿泊施設が応じない連絡がつかない">うまくいかないとき：宿泊施設が応じない・連絡がつかない</h2>
+<p>宿泊施設が領収書の発行に応じない、あるいは連絡がつかない場合は、Booking.com のカスタマーサービスに相談できます。カスタマーサービスのページには、次の窓口が載っています。</p>
+<ul>
+<li>カスタマーサービスにメッセージを送信：ご予約についての問い合わせを送れる</li>
+<li>カスタマーサービスに電話：緊急の用件がある場合は、24時間365日、国内・国際の電話番号の両方で電話できる</li>
+</ul>
+<p>ただし、Booking.com が領収書そのものを出してくれるとは、公式のページには書かれていません。相談した場合に、どこまで対応してもらえるかは、公式の情報では確認できませんでした。</p>
+<p>領収書が手に入らなかった場合に、カード明細や予約確認書が領収書の代わりになるかは、提出先のルール次第です。事前に、何があれば足りるかを聞いておくと安心です。</p>
+<h2 id="経費精算で困らないための関連記事">経費精算で困らないための関連記事</h2>
+<p>領収書を受け取ったあとの整理は、次の記事にまとめています。</p>
+<ul>
+<li>電子データで受け取った場合の保存：<a href="/articles/ryoushuusho-hozon-e-bunsho-taiou/">領収書の電子保存（e文書）の対応</a></li>
+<li>宿泊費が経費になるかの考え方：<a href="/articles/keihi-naru-mono-naranai-mono/">経費になるもの・ならないもの</a></li>
+<li>別の宿泊サイトの例：<a href="/articles/jalan-ryoushuusho/">じゃらんの領収書</a></li>
+</ul>
+<p>じゃらんの記事では、支払い方法ごとに領収書の出し手が変わる例を整理しています。Booking.com と見比べると、予約サイトごとの違いが分かります。</p>
+<h2 id="次の一歩出張費や領収書を帳簿にまとめる">次の一歩：出張費や領収書を帳簿にまとめる</h2>
+<p>領収書を集めたあとは、日付・金額・取引先を帳簿に記録する作業が残ります。出張が重なる個人事業主や小さな会社では、記録を会計ソフトで管理する方法もあります。</p>
+<aside class="cta-box"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">弥生株式会社</p><h3 class="cta-box__title">弥生シリーズ（やよいの青色申告 オンライン など）</h3><p class="cta-box__body">会計・青色申告のクラウドソフト。新規申込が成果条件。</p><a class="cta-box__button" href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E9T4M2+35XE+5ZEMP" data-offer="yayoi" rel="sponsored nofollow noopener" target="_blank">弥生シリーズ（やよいの青色申告 オンライン など）の公式サイトへ</a></aside>
+<p><a href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E9T4M2+35XE+5ZEMP" rel="sponsored nofollow noopener" target="_blank">弥生の公式サイトで機能と料金を確認する</a></p>
+<p>弥生は、会計・青色申告のクラウドソフトです。新規申込みの条件や料金は、公式サイトで確認してください。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="bookingcom-は領収書を発行してくれますか">Booking.com は領収書を発行してくれますか？</h3>
+<p>Booking.com は、宿泊施設向けのヘルプで、ゲストに対する請求書は発行しないと説明しています。発行する責任があるのは宿泊施設で、決済を代行した予約でも同じです。</p>
+<h3 id="宛名は会社名にできますか">宛名は会社名にできますか？</h3>
+<p>宛名は、ゲストの名前が基本です。ゲストと合意があれば他の名前で発行するよう、Booking.com は宿泊施設にお願いしています。会社名にしたいときは、前もって宿泊施設に伝えてください。</p>
+<h3 id="インボイスの登録番号はどこで確かめますか">インボイスの登録番号はどこで確かめますか？</h3>
+<p>国内の宿泊では、宿泊施設の領収書に載る「T＋13桁」の登録番号を見ます。国税庁の適格請求書発行事業者公表サイトでも調べられます。</p>
+<h3 id="海外のホテル代に日本の消費税はかかりますか">海外のホテル代に日本の消費税はかかりますか？</h3>
+<p>国税庁のタックスアンサー No.6210 では、国外取引は不課税とされています。個別の判断は税理士・税務署へ相談してください。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul>
+<li>Booking.com は領収書・請求書を出さない。出すのは宿泊施設で、決済を代行した予約でも同じ</li>
+<li>支払いのタイミングにかかわらず、領収書を頼む相手は宿泊施設</li>
+<li>宛名は基本的にゲストの名前。会社名にしたいときは、前もって宿泊施設に伝える</li>
+<li>受け取ったら、宿泊施設名・日付・金額・内訳・請求書番号などの項目を確かめる</li>
+<li>国内の宿泊は施設の領収書の登録番号で、海外の宿泊は国税庁 No.6210 の範囲で考える</li>
+<li>宿泊施設と連絡がつかないときは、Booking.com のカスタマーサービスに相談できる</li>
+</ul>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Booking.com は領収書を発行してくれますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>Booking.com が宿泊施設向けのヘルプで説明しているところでは、Booking.com はゲストに対する請求書を発行しません。発行する責任があるのは宿泊施設で、Booking.com が決済を代行した予約でも同じです。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>領収書の宛名を会社名にできますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>Booking.com は宿泊施設向けのヘルプで、宛名はゲストの名前、ゲストと合意があれば他の名前で発行するよう施設にお願いしていると説明しています。会社名にしたいときは、前もって宿泊施設に伝えてください。応じるかどうかは宿泊施設の判断になります。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Booking.com の予約でインボイス（適格請求書）はもらえますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>国内の宿泊なら、領収書を出すのは宿泊施設なので、適格請求書かどうかは施設の領収書にある登録番号（T＋13桁）で見ます。登録番号は国税庁の適格請求書発行事業者公表サイトでも調べられます。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>海外のホテル代に日本の消費税はかかりますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>国税庁のタックスアンサー No.6210 では、国外取引については消費税は課税されない（不課税）とされています。役務の提供は、原則として提供が行われた場所で国内取引かどうかを判定します。個別の判断は税理士・税務署へ相談してください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>宿泊施設と連絡がつかないときはどうしますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>Booking.com のカスタマーサービスのページに、メッセージを送る窓口と、24時間365日対応の電話の案内があります。カード明細や予約確認書が領収書の代わりになるかは、提出先のルールで決まります。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://partner.booking.com/ja/%E3%83%98%E3%83%AB%E3%83%97/%E6%B1%BA%E6%B8%88-%E8%B2%B4%E6%96%BD%E8%A8%AD%E3%81%B8%E3%81%AE%E3%81%8A%E6%94%AF%E6%89%95%E3%81%84-%E8%AB%8B%E6%B1%82%E6%9B%B8/%E3%82%B2%E3%82%B9%E3%83%88-%E6%94%AF%E6%89%95%E3%81%84/%E3%82%B2%E3%82%B9%E3%83%88%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E8%AB%8B%E6%B1%82%E6%9B%B8%E3%81%AE%E9%80%81%E4%BB%98" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Booking.com for Partners ゲストに対する請求書の送付</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-24）</span></li><li data-astro-cid-sgg5joot><a href="https://www.booking.com/customer-service.ja.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Booking.com カスタマーサービス</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-24）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6210.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.6210 国外取引</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-24）</span></li><li data-astro-cid-sgg5joot><a href="https://www.invoice-kohyo.nta.go.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 適格請求書発行事業者公表サイト</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-24）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/kakutei-shinkoku/" data-astro-cid-sgg5joot>確定申告・会計ソフト・経費の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/receipts/" data-astro-cid-sgg5joot>サービス別 領収書・インボイス対応一覧を見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

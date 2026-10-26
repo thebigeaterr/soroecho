@@ -1,0 +1,199 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Amazonビジネスの購買データをCSVでダウンロードする方法｜照合と分析の手順 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="Amazonビジネスの購買データは、購入履歴レポートから期間やフィルターを指定してCSVでダウンロードできます。見られる範囲は権限で決まります。経費照合や分析に使う手順と、文字化けの対処法を解説します。"><link rel="canonical" href="https://soroecho.com/articles/amazon-business-koubai-data/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="Amazonビジネスの購買データをCSVでダウンロードする方法｜照合と分析の手順 | そろえ帳"><meta property="og:description" content="Amazonビジネスの購買データは、購入履歴レポートから期間やフィルターを指定してCSVでダウンロードできます。見られる範囲は権限で決まります。経費照合や分析に使う手順と、文字化けの対処法を解説します。"><meta property="og:url" content="https://soroecho.com/articles/amazon-business-koubai-data/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/amazon-business-koubai-data.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Amazonビジネスの購買データをCSVでダウンロードする方法｜照合と分析の手順 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Amazonビジネスの購買データをCSVでダウンロードする方法｜照合と分析の手順 | そろえ帳"><meta name="twitter:description" content="Amazonビジネスの購買データは、購入履歴レポートから期間やフィルターを指定してCSVでダウンロードできます。見られる範囲は権限で決まります。経費照合や分析に使う手順と、文字化けの対処法を解説します。"><meta name="twitter:image" content="https://soroecho.com/og/amazon-business-koubai-data.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"Amazonビジネスの購買データをCSVでダウンロードする方法｜照合と分析の手順","item":"https://soroecho.com/articles/amazon-business-koubai-data/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Amazonビジネスの購買データをCSVでダウンロードする方法｜照合と分析の手順","description":"Amazonビジネスの購買データは、購入履歴レポートから期間やフィルターを指定してCSVでダウンロードできます。見られる範囲は権限で決まります。経費照合や分析に使う手順と、文字化けの対処法を解説します。","url":"https://soroecho.com/articles/amazon-business-koubai-data/","datePublished":"2026-10-26T00:00:00.000Z","dateModified":"2026-10-26T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/amazon-business-koubai-data/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Amazonビジネスの購買データはどこからダウンロードできますか？","acceptedAnswer":{"@type":"Answer","text":"購入履歴のレポート機能から、レポートを選んで「レポートの生成」を押すとCSVで出力できます。完了するとグリーンの通知バーが表示され、自動でダウンロードされます。"}},{"@type":"Question","name":"購買データは誰でも全件を見られますか？","acceptedAnswer":{"@type":"Answer","text":"いいえ。Root管理者と財務ユーザーは全データ、グループの管理者・財務ユーザーは所属グループと下位グループ、購買依頼者は自分の購入のみが対象です。"}},{"@type":"Question","name":"CSVをExcelで開くとASINや追跡番号が崩れます。どうすればよいですか？","acceptedAnswer":{"@type":"Answer","text":"テキストエディタで開くか、ExcelにCSVをインポートして該当の列を文字列に設定します。公式ヘルプでもこの方法が案内されています。"}},{"@type":"Question","name":"過去に出力したレポートをもう一度取り出せますか？","acceptedAnswer":{"@type":"Answer","text":"ダウンロード履歴から過去分を取得できます。同じ条件を繰り返し使う場合は、テンプレートとして保存し「保存したレポート」から呼び出せます。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>Amazonビジネスの購買データをCSVでダウンロードする方法｜照合と分析の手順</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecnfhvaa-g" x1="0" y1="0" x2="1" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecnfhvaa-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecnfhvaa-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecnfhvaa-p)" data-astro-cid-yuatfsof></rect><circle cx="344" cy="99" r="124" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>amazonビジネス</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>購買データ</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--amazon-business">Amazonビジネス実務</span><h1 data-astro-cid-sgg5joot>Amazonビジネスの購買データをCSVでダウンロードする方法｜照合と分析の手順</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-10-26T00:00:00.000Z" data-astro-cid-sgg5joot>2026年10月26日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約6分</p><p class="cta-inline">Amazonビジネスは法人・個人事業主向けのAmazonアカウントで、登録は無料です。<a href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">公式サイトで詳細を見る</a></p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論購買データは購入履歴のレポートからcsvで取れる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：購買データは「購入履歴のレポート」からCSVで取れる</a></li><li data-astro-cid-sgg5joot><a href="#自分の場合はどうなる権限ごとの見える範囲" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>自分の場合はどうなる？権限ごとの見える範囲</a></li><li data-astro-cid-sgg5joot><a href="#取り出せるレポートの種類と使い分け" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>取り出せるレポートの種類と使い分け</a></li><li data-astro-cid-sgg5joot><a href="#手順csvをダウンロードする流れ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>手順：CSVをダウンロードする流れ</a></li><li data-astro-cid-sgg5joot><a href="#照合分析に使うときの考え方" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>照合・分析に使うときの考え方</a></li><li data-astro-cid-sgg5joot><a href="#excelで列が崩れるときの対処" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>Excelで列が崩れるときの対処</a></li><li data-astro-cid-sgg5joot><a href="#書類が必要なときは注文書類の取得" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>書類が必要なときは「注文書類の取得」</a></li><li data-astro-cid-sgg5joot><a href="#月次で回すためのチェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>月次で回すためのチェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#まとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>まとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論購買データは購入履歴のレポートからcsvで取れる">結論：購買データは「購入履歴のレポート」からCSVで取れる</h2>
+<p>Amazonビジネスの購買データは、購入履歴のレポートで確認・保存でき、CSVでダウンロードもできます。すべてのAmazonビジネス顧客が使える機能です。</p>
+<p>出力できる項目は、注文番号、返品、返金、取引日、件数、支払い方法、発注番号（PO）、購買依頼者、追跡番号、ユーザー定義属性などです。</p>
+<p>ただし、見られる範囲は自分の権限で決まります。まず自分がどの立場かを確認すると、迷いません。</p>
+<p>なお、領収書や請求書をまとめて取りたい場合は、別の記事が向いています。→ <a href="/articles/amazon-business-ryoushuusho-matomete-hakkou/">Amazonビジネスで領収書をまとめて発行する方法</a></p>
+<h2 id="自分の場合はどうなる権限ごとの見える範囲">自分の場合はどうなる？権限ごとの見える範囲</h2>
+<p>CSVに出てくるデータの範囲は、アカウント上の役割によって変わります。ひとり社長で自分が管理者なら、基本的に自分の購入すべてが対象と考えてよいでしょう。</p>
+<table>
+<thead>
+<tr>
+<th>役割</th>
+<th>見られる範囲</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Root管理者</td>
+<td>全データ</td>
+</tr>
+<tr>
+<td>財務ユーザー</td>
+<td>全データ</td>
+</tr>
+<tr>
+<td>グループの管理者・財務ユーザー</td>
+<td>所属するグループと下位グループ</td>
+</tr>
+<tr>
+<td>購買依頼者</td>
+<td>自分の購入のみ</td>
+</tr>
+</tbody>
+</table>
+<p>分岐の目安は次のとおりです。</p>
+<ul>
+<li><strong>ひとり社長・個人事業主で、自分が登録者の場合</strong>：Root管理者にあたるため、全データを対象にできます。</li>
+<li><strong>従業員を招待している場合</strong>：社員が購買依頼者なら、各人は自分の分しか見られません。全体を照合するのは管理者か財務ユーザーの役割です。</li>
+<li><strong>部署ごとにグループを分けている会社の場合</strong>：グループの管理者は自分の部署と下位グループまで。会社全体の数字が必要なら、Root管理者か財務ユーザーに依頼します。</li>
+</ul>
+<p>「データが少ない」「あるはずの注文がない」と感じたら、まず権限を疑ってください。</p>
+<p>個人用アカウントとの違いは、こちらで整理しています。→ <a href="/articles/amazon-business-kojin-chigai/">Amazonビジネスと個人アカウントの違い</a></p>
+<h2 id="取り出せるレポートの種類と使い分け">取り出せるレポートの種類と使い分け</h2>
+<p>レポートは目的別に用意されています。公式ヘルプに挙げられている種類は次の6つです。</p>
+<table>
+<thead>
+<tr>
+<th>レポート</th>
+<th>向いている用途の例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>照合確認</td>
+<td>一定期間の取引をカード明細などと突き合わせる</td>
+</tr>
+<tr>
+<td>注文</td>
+<td>注文単位で購入内容を確認する</td>
+</tr>
+<tr>
+<td>返金</td>
+<td>返金の発生状況を確認する</td>
+</tr>
+<tr>
+<td>発送</td>
+<td>発送や追跡番号を確認する</td>
+</tr>
+<tr>
+<td>商品詳細データ</td>
+<td>商品ごとの内容を細かく見る</td>
+</tr>
+<tr>
+<td>請求書による支払い</td>
+<td>請求書払いの取引を確認する</td>
+</tr>
+</tbody>
+</table>
+<p>経理で最初に使う機会が多いのは、照合確認でしょう。ヘルプでも、一定期間の取引を照合し、カード明細にある身に覚えのない請求を注文番号と突き合わせる使い方が紹介されています。</p>
+<p>返品や返金の列もあるため、「買ったが戻した」分の扱いも同じデータで追えます。</p>
+<h2 id="手順csvをダウンロードする流れ">手順：CSVをダウンロードする流れ</h2>
+<p>操作は大きく「レポートを選ぶ」「条件を決める」「生成する」の3段階です。画面の表記はヘルプの案内に沿って記載しています。</p>
+<ol>
+<li>購入履歴のレポート画面を開きます。[要実演スクショ: 購入履歴のレポート画面]</li>
+<li>使いたいレポート（照合確認、注文など）を選びます。</li>
+<li>期間を決めます。定義済みの期間か、カスタム範囲を選べます。</li>
+<li>必要に応じてフィルターを追加し、列を調整します。[要実演スクショ: 期間・フィルター・列の設定画面]</li>
+<li>「レポートの生成」を押してCSVを作ります。</li>
+<li>完了するとグリーンの通知バーが表示され、ファイルが自動でダウンロードされます。[要実演スクショ: 生成完了の通知バー]</li>
+</ol>
+<p>過去に出したファイルは、ダウンロード履歴から取り直せます。</p>
+<p>毎月同じ条件で出すなら、設定をテンプレートとして保存しておくと便利です。保存したものは「保存したレポート」から呼び出せます。</p>
+<aside class="cta-box cta-box--subtle"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">Amazonビジネス</p><h3 class="cta-box__title">法人・個人事業主向けのAmazonアカウント</h3><p class="cta-box__body">請求書払いや数量割引など、通常のAmazonアカウントにはない機能が使えます。登録は無料です（詳細は公式サイトの案内に基づきます）。</p><a class="cta-box__button" href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">Amazonビジネスの登録ページへ（公式）</a></aside>
+<h2 id="照合分析に使うときの考え方">照合・分析に使うときの考え方</h2>
+<p>CSVが手元にあれば、カード明細や帳簿との突き合わせがしやすくなります。ここでは公式ヘルプにある項目だけを前提に、進め方を示します。</p>
+<ol>
+<li>照合したい期間を決め、同じ期間で照合確認レポートを出します。</li>
+<li>カード明細の請求日と、CSVの取引日を並べます。</li>
+<li>金額が合わないものは、注文番号を手がかりに一件ずつ確認します。</li>
+<li>返品・返金の列を見て、戻した分が差し引かれているかを確認します。</li>
+<li>身に覚えのない請求があれば、注文番号で該当するか調べます。</li>
+</ol>
+<p>分析では、支払い方法、購買依頼者、件数といった列で並べ替えたり集計したりできます。誰が・いつ・どの支払い方法で買ったかを振り返る材料になります。</p>
+<p>発注番号（PO）は、購買分析レポートに表示されます。社内の発注管理番号と結び付けたい場合は、この列が手がかりになります。購買依頼者の列と組み合わせれば、部署や担当者ごとの集計にもつなげられます。</p>
+<p>社内独自の区分で整理したい場合は、ユーザー定義属性の列が使えます。何を属性にしているかは、各社の設定によって異なります。</p>
+<h2 id="excelで列が崩れるときの対処">Excelで列が崩れるときの対処</h2>
+<p>CSVをExcelでそのまま開くと、ASINや追跡番号の表示が崩れることがあります。長い数字や先頭がゼロの文字列が、数値として読み替えられるためです。</p>
+<p>ヘルプでは、次の2つの方法が案内されています。</p>
+<ol>
+<li><strong>テキストエディタで開く</strong>：内容をそのまま確認でき、元のデータを変えずに済みます。</li>
+<li><strong>ExcelにCSVをインポートする</strong>：取り込みの途中で、崩れる列の形式を「文字列」に指定します。</li>
+</ol>
+<p>集計までExcelで行うなら、2の方法が向いています。ダブルクリックで開いて保存し直すと、崩れた状態が上書きされる恐れがあります。</p>
+<p>元のCSVは別名で残し、作業用のコピーで加工する習慣をつけておくと安心です。</p>
+<h2 id="書類が必要なときは注文書類の取得">書類が必要なときは「注文書類の取得」</h2>
+<p>数字の照合だけでなく、書類そのものが必要なこともあります。その場合、「注文書類の取得」で、注文内容・最終見積書・請求書・クレジットノートを一括でダウンロードできます。</p>
+<p>CSVは「数字を並べて確かめる」ためのもの、注文書類は「証憑として保管する」ためのもの、と使い分けると整理しやすくなります。</p>
+<p>領収書や請求書をまとめて取る手順は、次の記事に詳しくまとめています。→ <a href="/articles/amazon-business-ryoushuusho-matomete-hakkou/">Amazonビジネスで領収書をまとめて発行する方法</a></p>
+<p>見積書が必要な場合は、こちらもご覧ください。→ <a href="/articles/amazon-business-mitsumorisho-hakkou/">Amazonビジネスの見積書発行</a></p>
+<aside class="cta-box cta-box--subtle"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">Amazonビジネス</p><h3 class="cta-box__title">法人・個人事業主向けのAmazonアカウント</h3><p class="cta-box__body">請求書払いや数量割引など、通常のAmazonアカウントにはない機能が使えます。登録は無料です（詳細は公式サイトの案内に基づきます）。</p><a class="cta-box__button" href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">Amazonビジネスの登録ページへ（公式）</a></aside>
+<h2 id="月次で回すためのチェックリスト">月次で回すためのチェックリスト</h2>
+<p>毎月の作業にするなら、手順を固定しておくと手間が減ります。</p>
+<ol>
+<li>前月分の期間を指定し、保存したテンプレートでレポートを生成する。</li>
+<li>ダウンロードしたCSVを、元ファイルとして別フォルダに保管する。</li>
+<li>作業用コピーをインポートして開き、ASINや追跡番号を文字列にする。</li>
+<li>カード明細と注文番号・取引日で突き合わせる。</li>
+<li>返品・返金の有無を確認し、帳簿に反映する。</li>
+<li>書類が必要な注文は、注文書類の取得で請求書などを保管する。</li>
+</ol>
+<p>担当者が複数いる場合は、誰がレポートを出すかを決めておきます。権限によって見える範囲が違うため、全体を見る担当は管理者か財務ユーザーにしておくと、抜け漏れを防げます。</p>
+<h2 id="まとめ">まとめ</h2>
+<p>Amazonビジネスの購買データは、購入履歴のレポートからCSVで取り出せます。照合確認レポートを使えば、カード明細との突き合わせにも役立ちます。</p>
+<p>見える範囲は権限で決まるため、足りないときはまず自分の役割を確認してください。Excelで崩れる列は、インポート時に文字列へ指定すれば対処できます。</p>
+<p>最新の画面表記や機能は変わることがあるため、実際の操作前に公式ヘルプも確認してください。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Amazonビジネスの購買データはどこからダウンロードできますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>購入履歴のレポート機能から、レポートを選んで「レポートの生成」を押すとCSVで出力できます。完了するとグリーンの通知バーが表示され、自動でダウンロードされます。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>購買データは誰でも全件を見られますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>いいえ。Root管理者と財務ユーザーは全データ、グループの管理者・財務ユーザーは所属グループと下位グループ、購買依頼者は自分の購入のみが対象です。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>CSVをExcelで開くとASINや追跡番号が崩れます。どうすればよいですか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>テキストエディタで開くか、ExcelにCSVをインポートして該当の列を文字列に設定します。公式ヘルプでもこの方法が案内されています。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>過去に出力したレポートをもう一度取り出せますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>ダウンロード履歴から過去分を取得できます。同じ条件を繰り返し使う場合は、テンプレートとして保存し「保存したレポート」から呼び出せます。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=201997670" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス ヘルプ：購入履歴のレポート</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-12）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=201633590" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス ヘルプ：発注番号</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-12）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/amazon-business-mitsumorisho-hakkou/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1oukbk0-g" x1="0" y1="0" x2="1" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1oukbk0-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1oukbk0-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1oukbk0-p)" data-astro-cid-yuatfsof></rect><circle cx="366" cy="57" r="153" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Amazon</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>見積書</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>出し方</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--amazon-business">Amazonビジネス実務</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>Amazonの見積書の出し方｜カートからPDFで保存する手順（Amazonビジネス・登録無料）</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>Amazonで見積書が必要なときは、登録無料のAmazonビジネスを使います。注文前はカートから参考見積書、注文後は注文履歴から見積書をPDFで保存でき、稟議や経費精算に使えます。個人アカウントしかない場合の考え方と、配送料が載らない・ダウンロードできないときの注意点もまとめました。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-06T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月6日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約12分</p></div></a><a class="card article-card" href="/articles/kojin-jigyou-kaigyoutodoke-nashi-amazon-business-toroku/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1ptehj0-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1ptehj0-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1ptehj0-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1ptehj0-p)" data-astro-cid-yuatfsof></rect><circle cx="363" cy="90" r="176" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>個人事業主</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>開業届なし</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Amazonビジネス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--amazon-business">Amazonビジネス実務</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>Amazonビジネスの登録に必要書類は？開業届なしの個人事業主が用意するもの一覧</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>個人事業主がAmazonビジネスに登録するときは、確認書類を1点提出します。開業届がなくても、過去2年以内の確定申告書B・収支内訳書、インボイスの登録通知書などで代わりになります。公式ヘルプの書類一覧と提出時の注意点、登録手順、屋号の扱いを整理しました。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-06T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月6日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/amazon-business/" data-astro-cid-sgg5joot>Amazonビジネス実務の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/business-prime/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 L4 4"></path><path d="M4 20 L21 20"></path><path d="M7 20 L7 14"></path><path d="M11 20 L11 10"></path><path d="M15 20 L15 15"></path><path d="M19 20 L19 7"></path><path d="M5 16 L20 8"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>Business Prime 損益分岐計算</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>注文回数と送料を入れると、プライムビジネス（旧Businessプライム）の元が取れる回数がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/amazon-business-check/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 9 l2 2 l3.5 -3.5"></path><path d="M8 15 h8"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>Amazonビジネスが必要か判定</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>5つの質問に答えるだけで、Amazonビジネスが「要る」「今は要らない」「どちらでも」のどれかがわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

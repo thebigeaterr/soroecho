@@ -1,0 +1,215 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Microsoft 365 の領収書はどこ？請求書の取り方とインボイスの確認点 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="ビジネス向け Microsoft 365 は公式ヘルプで支払い領収書が提供されないとされ、書類は管理センターの請求書PDFです。個人向けは注文履歴から注文の詳細を印刷します。取り方とインボイスの確認点を解説します。"><link rel="canonical" href="https://soroecho.com/articles/microsoft365-ryoushuusho/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="Microsoft 365 の領収書はどこ？請求書の取り方とインボイスの確認点 | そろえ帳"><meta property="og:description" content="ビジネス向け Microsoft 365 は公式ヘルプで支払い領収書が提供されないとされ、書類は管理センターの請求書PDFです。個人向けは注文履歴から注文の詳細を印刷します。取り方とインボイスの確認点を解説します。"><meta property="og:url" content="https://soroecho.com/articles/microsoft365-ryoushuusho/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/microsoft365-ryoushuusho.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Microsoft 365 の領収書はどこ？請求書の取り方とインボイスの確認点 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Microsoft 365 の領収書はどこ？請求書の取り方とインボイスの確認点 | そろえ帳"><meta name="twitter:description" content="ビジネス向け Microsoft 365 は公式ヘルプで支払い領収書が提供されないとされ、書類は管理センターの請求書PDFです。個人向けは注文履歴から注文の詳細を印刷します。取り方とインボイスの確認点を解説します。"><meta name="twitter:image" content="https://soroecho.com/og/microsoft365-ryoushuusho.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"Microsoft 365 の領収書はどこ？請求書の取り方とインボイスの確認点","item":"https://soroecho.com/articles/microsoft365-ryoushuusho/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Microsoft 365 の領収書はどこ？請求書の取り方とインボイスの確認点","description":"ビジネス向け Microsoft 365 は公式ヘルプで支払い領収書が提供されないとされ、書類は管理センターの請求書PDFです。個人向けは注文履歴から注文の詳細を印刷します。取り方とインボイスの確認点を解説します。","url":"https://soroecho.com/articles/microsoft365-ryoushuusho/","datePublished":"2026-10-28T00:00:00.000Z","dateModified":"2026-10-28T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/microsoft365-ryoushuusho/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Microsoft 365 の領収書はダウンロードできますか？","acceptedAnswer":{"@type":"Answer","text":"ビジネス向けは、公式ヘルプに「支払い領収書は提供されません」とあります。書類は管理センターで取る請求書のPDFです。個人用アカウントで買った場合は、account.microsoft.com/billing の注文履歴から注文の詳細を印刷します。"}},{"@type":"Question","name":"Microsoft 365 管理センターで請求書を見るには、どの権限が必要ですか？","acceptedAnswer":{"@type":"Answer","text":"公式ヘルプでは、少なくとも課金管理者である必要があるとされています。権限がない場合は、課金管理者以上の人に依頼してください。"}},{"@type":"Question","name":"Microsoft 365 Personal の領収書の代わりになる書類はありますか？","acceptedAnswer":{"@type":"Answer","text":"注文履歴の「注文の詳細」を印刷したものが、購入内容を示す書類になります。「税の請求書」が表示される場合は、そこからも取得できます。日本で表示されるかは、公式の案内で確認できませんでした。"}},{"@type":"Question","name":"Microsoft 365 の請求書はインボイス（適格請求書）になりますか？","acceptedAnswer":{"@type":"Answer","text":"Microsoft の日本向けの登録番号は、今回参照した公式ヘルプには載っていませんでした。手元の書類に登録番号と消費税額が書かれているかを確認してください。判断に迷う場合は税理士や税務署に相談してください。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>Microsoft 365 の領収書はどこ？請求書の取り方とインボイスの確認点</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1szh4a5-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1szh4a5-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ec1szh4a5-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1szh4a5-p)" data-astro-cid-yuatfsof></rect><circle cx="332" cy="77" r="144" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Microsoft</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>365</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>領収書</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>Microsoft 365 の領収書はどこ？請求書の取り方とインボイスの確認点</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-10-28T00:00:00.000Z" data-astro-cid-sgg5joot>2026年10月28日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約9分</p><aside class="receipt-facts" aria-labelledby="receipt-facts-heading" data-astro-cid-tcbxoyxt><h2 id="receipt-facts-heading" class="receipt-facts__title" data-astro-cid-tcbxoyxt>このサービスの確認済みの事実</h2><dl class="receipt-facts__list" data-astro-cid-tcbxoyxt><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>領収書の出し方</dt><dd data-astro-cid-tcbxoyxt><ul data-astro-cid-tcbxoyxt><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>ビジネス向け（管理センター）</strong>: Microsoft 365 管理センターの［課金］＞［請求と支払い］（簡易ビューは［製品］＞［請求書の表示］）から請求書のPDF。課金管理者以上の権限が必要。支払い領収書は提供されない</li><li data-astro-cid-tcbxoyxt><strong data-astro-cid-tcbxoyxt>個人用 Microsoft アカウントで購入</strong>: account.microsoft.com/billing の［支払 &amp; 請求］＞［注文履歴］＞［注文の詳細］＞［印刷］。［税の請求書］が表示される場合はそこから</li></ul></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>宛名</dt><dd data-astro-cid-tcbxoyxt>公式の案内では確認できず<span class="receipt-facts__note" data-astro-cid-tcbxoyxt>（管理センターで課金プロファイルを管理できると公式にあるが、請求書の宛名・会社名を直す手順は公式の案内で確認できなかった）</span></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>インボイス</dt><dd data-astro-cid-tcbxoyxt>公式の案内では確認できず<span class="receipt-facts__note" data-astro-cid-tcbxoyxt>（参照した公式ヘルプに日本の登録番号（T番号）の記載はなかった。個人用の「税の請求書」はVATが適用される国・地域でのみ表示される旨があり、日本で表示されるかは確認できなかった）</span></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>登録番号</dt><dd data-astro-cid-tcbxoyxt>公式の案内では確認できず</dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>最終確認日</dt><dd data-astro-cid-tcbxoyxt><time datetime="2026-10-17" data-astro-cid-tcbxoyxt>2026年10月17日</time></dd></div><div data-astro-cid-tcbxoyxt><dt data-astro-cid-tcbxoyxt>公式の情報</dt><dd data-astro-cid-tcbxoyxt><ul data-astro-cid-tcbxoyxt><li data-astro-cid-tcbxoyxt><a href="https://learn.microsoft.com/ja-jp/microsoft-365/commerce/billing-and-payments/view-your-bill-or-invoice?view=o365-worldwide" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>Microsoft 365 管理センターで請求書を表示またはダウンロードする</a></li><li data-astro-cid-tcbxoyxt><a href="https://support.microsoft.com/ja-jp/accounts-billing/view-your-microsoft-store-order-history" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>Microsoft Store の注文履歴を表示する</a></li><li data-astro-cid-tcbxoyxt><a href="https://support.microsoft.com/ja-jp/accounts-billing/tax-invoices-breakdowns-and-registration-numbers-for-microsoft-store" rel="noopener" target="_blank" data-astro-cid-tcbxoyxt>Microsoft Store の税の請求書、内訳、登録番号</a></li></ul></dd></div></dl><p class="receipt-facts__hub" data-astro-cid-tcbxoyxt><a class="arrow-link" href="/receipts/" data-astro-cid-tcbxoyxt>ほかのサービスの領収書・インボイス対応を見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-tcbxoyxt>→</span></a></p></aside><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#microsoft-365-の領収書の結論とこの記事で分かること" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>Microsoft 365 の領収書の結論と、この記事で分かること</a></li><li data-astro-cid-sgg5joot><a href="#契約の種類で入り口が違うmicrosoft-365-請求書の取得先" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>契約の種類で入り口が違う：Microsoft 365 請求書の取得先</a></li><li data-astro-cid-sgg5joot><a href="#ビジネス向けmicrosoft-365-管理センターで請求書をpdfで取る手順" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>ビジネス向け：Microsoft 365 管理センターで請求書をPDFで取る手順</a></li><li data-astro-cid-sgg5joot><a href="#microsoft-365-の領収書は出ない請求書とカード明細で支払いを確認する" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>Microsoft 365 の「領収書」は出ない：請求書とカード明細で支払いを確認する</a></li><li data-astro-cid-sgg5joot><a href="#個人用personal--family-などの注文履歴から取る手順" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>個人用（Personal / Family など）の注文履歴から取る手順</a></li><li data-astro-cid-sgg5joot><a href="#職場アカウントで-microsoft-store-から買った場合" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>職場アカウントで Microsoft Store から買った場合</a></li><li data-astro-cid-sgg5joot><a href="#請求書の宛名会社名はどう扱うか" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>請求書の宛名・会社名はどう扱うか</a></li><li data-astro-cid-sgg5joot><a href="#日本の消費税インボイスの確認点" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>日本の消費税・インボイスの確認点</a></li><li data-astro-cid-sgg5joot><a href="#microsoft-365-請求書領収書のチェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>Microsoft 365 請求書・領収書のチェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#次の一歩取得した請求書を帳簿につなげる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>10</span>次の一歩：取得した請求書を帳簿につなげる</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="microsoft-365-の領収書の結論とこの記事で分かること">Microsoft 365 の領収書の結論と、この記事で分かること</h2>
+<p>Microsoft の公式ヘルプでは、ビジネス向けの Microsoft 365 について「支払い領収書は提供されません」と明記されています。事業で使う場合の書類は、Microsoft 365 管理センターで取る請求書（PDF）です。</p>
+<p>個人用の Microsoft アカウントで買った場合は、account.microsoft.com/billing の注文履歴から「注文の詳細」を開いて印刷します。「税の請求書」が表示される場合は、そこからも取得できます。</p>
+<p>この記事では、次の流れで説明します。</p>
+<ul>
+<li>契約の種類ごとの書類の入り口</li>
+<li>管理センターで請求書PDFを取る手順</li>
+<li>個人用アカウントの注文履歴から取る手順</li>
+<li>宛名の扱いと、日本の消費税・インボイスの確認点</li>
+<li>取得後に確認するチェックリスト</li>
+</ul>
+<p>出典は2026年10月17日に確認した公式ページです。画面の名称や条件は、その後変わる可能性があります。</p>
+<h2 id="契約の種類で入り口が違うmicrosoft-365-請求書の取得先">契約の種類で入り口が違う：Microsoft 365 請求書の取得先</h2>
+<p>同じ「Microsoft 365」でも、どのアカウントで買ったかによって書類の入り口が分かれます。先に自分の契約がどちらかを確認すると、探す場所を間違えません。</p>
+<table>
+<thead>
+<tr>
+<th>契約の種類</th>
+<th>書類の入り口</th>
+<th>主に取れる書類</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ビジネス向け（職場・学校のアカウントで契約）</td>
+<td>Microsoft 365 管理センター</td>
+<td>請求書（PDF）</td>
+</tr>
+<tr>
+<td>個人用の Microsoft アカウントで購入（Personal / Family など）</td>
+<td>account.microsoft.com/billing の注文履歴</td>
+<td>注文の詳細（印刷）、表示される場合は税の請求書</td>
+</tr>
+</tbody>
+</table>
+<p>あなたの場合の分岐は、次のとおりです。</p>
+<ul>
+<li><strong>ビジネス向けを契約している法人・会社</strong>：管理センターが入り口です。</li>
+<li><strong>個人事業主で個人用アカウントのまま購入した</strong>：注文履歴が入り口です。</li>
+<li><strong>個人事業主でビジネス向けを契約した</strong>：管理センターが入り口です。自分に課金管理者以上の権限があるかを確認してください。</li>
+<li><strong>職場アカウントで Microsoft Store から買った</strong>：後述のとおり、注文履歴から管理センターへ移ります。</li>
+</ul>
+<p>Apple や Google 経由で Microsoft 365 を契約した場合の書類については、公式の案内で確認できませんでした。その場合は、契約した窓口の案内をご覧ください。</p>
+<h2 id="ビジネス向けmicrosoft-365-管理センターで請求書をpdfで取る手順">ビジネス向け：Microsoft 365 管理センターで請求書をPDFで取る手順</h2>
+<p>この手順は、Microsoft ビジネス サブスクリプションにのみ適用されると公式に書かれています。実行するには、少なくとも課金管理者の権限が必要です。権限がない場合は、課金管理者以上の人に依頼してください。</p>
+<ol>
+<li>Microsoft 365 管理センターに、職場アカウントでサインインします。</li>
+<li>簡易ビューの場合は、[製品] を選び、[請求書の表示] を選びます。</li>
+<li>ダッシュボード ビューの場合は、[課金] から [請求と支払い] のページを開きます。</li>
+<li>複数の課金アカウントがある場合は、[課金アカウントの変更] で対象を切り替えます。</li>
+<li>一覧から請求書を選ぶと、詳細がオンラインで表示されます。</li>
+<li>PDFが必要なときは、[ダウンロード] を選び、[請求書のダウンロード] を選びます。</li>
+</ol>
+<p>注意点として、オンライン版の請求書とダウンロードしたPDF版は異なると公式に書かれています。保存用には、PDF版を取っておく形が考えられます。</p>
+<p>Microsoft の別の公式ページ「Microsoft Store の税の請求書、内訳、登録番号」（職場アカウント向けの説明）には、請求書について次のように書かれています。請求書は通常、支払い方法への請求後48時間以内に利用できます。請求書には、次の内容が含まれます。</p>
+<ul>
+<li>請求書番号と日付</li>
+<li>注文の詳細と購入したアイテム</li>
+<li>管轄区域別の税の内訳</li>
+<li>使用された支払い方法</li>
+<li>課金プロファイル情報</li>
+</ul>
+<p>サブスクリプションのアイテムは、月次で請求書が作られると案内されています。</p>
+<h2 id="microsoft-365-の領収書は出ない請求書とカード明細で支払いを確認する">Microsoft 365 の「領収書」は出ない：請求書とカード明細で支払いを確認する</h2>
+<p>公式ヘルプには、次の趣旨の注意書きがあります。「Microsoft 365 サービスでは、支払い領収書は提供されません。クレジットまたはデビットカード支払いの場合は、請求書とクレジットまたはデビットカード請求明細書を使用して、支払いに一致します。」</p>
+<p>つまり、領収書という名前の書類を探しても見つからない仕組みです。支払いの証拠は、請求書とカード会社の利用明細を組み合わせて残します。</p>
+<p>一方で、特定の管轄区域では「税受領書」が使える場合があります。使える場合は、[請求と支払い] のページで請求書IDの横にあるメニューに [税受領書のダウンロード] が表示される、と公式に書かれています。日本で表示されるかどうかは、公式の案内で確認できませんでした。ご自身の画面にこの項目があるかを見て判断してください。</p>
+<p>書類の名前については、国税庁の説明が参考になります。インボイスは、請求書に限らず、所定の事項が記載された書類であれば、領収書や納品書など名称を問わずインボイスになるとされています（出典：国税庁 インボイス制度の特設サイト）。そのため、「領収書」の名前がないこと自体は問題ではなく、書類に必要な事項が載っているかが焦点になります。</p>
+<p>領収書と請求書の使い分けの基本は、次の記事も参照してください。</p>
+<ul>
+<li><a href="/articles/ryoushuusho-hozon-e-bunsho-taiou/">領収書・電子書類の保存の考え方</a></li>
+<li><a href="/articles/seikyuusho-kakikata-invoice-taiou/">請求書の書き方とインボイス対応</a></li>
+</ul>
+<h2 id="個人用personal--family-などの注文履歴から取る手順">個人用（Personal / Family など）の注文履歴から取る手順</h2>
+<p>Microsoft アカウントで個人向けのプランを買った場合は、注文履歴から書類を取ります。複数のアカウントを持っている場合は、購入に使ったアカウントでサインインしてください。</p>
+<ol>
+<li>account.microsoft.com/billing で注文履歴のページにサインインします。</li>
+<li>[支払 &amp; 請求] を選び、[注文履歴] を開きます。</li>
+<li>[絞り込み] で、目的の注文と日付範囲を選びます。</li>
+<li>状態が「完了」または「引き換え済み」になっている請求を探します。</li>
+<li>目的の注文から [注文の詳細] を選びます。</li>
+<li>[印刷] を選んで印刷します。ブラウザーの印刷機能でも印刷できると公式に書かれています。</li>
+</ol>
+<p>状態が「進行中」の請求は、まだお支払い方法に計上されていないと公式に書かれています。この段階では、書類としてまだ使えません。</p>
+<p>クレジットカードなどに料金が転記されると、その支払い方法の明細書に金額と説明が表示されます。注文の詳細の印刷と、カード明細を並べて保存しておくと、支払いの確認に使えます。</p>
+<h3 id="税の請求書が出る場合">「税の請求書」が出る場合</h3>
+<p>注文の詳細のページから [税の請求書] を選べる場合があります。ただし、次の点に注意してください。</p>
+<ul>
+<li>リアルタイムでは取得できません。ダウンロードできるようになるまで、通常は48時間から5日かかります。</li>
+<li>公式には「VAT 請求書は、VAT が購入に適用される国/地域でのみ表示されます」とあります。</li>
+<li>日本でこの項目が表示されるかどうかは、公式の案内で確認できませんでした。</li>
+</ul>
+<p>表示されない場合は、注文の詳細の印刷とカード明細を保管する形になります。</p>
+<h2 id="職場アカウントで-microsoft-store-から買った場合">職場アカウントで Microsoft Store から買った場合</h2>
+<p>職場アカウントで Microsoft Store から購入した場合は、注文履歴から管理センターに移ります。公式の手順では、注文履歴で [このアイテムの管理] を選ぶと、Microsoft 365 管理センターで注文が開きます。</p>
+<p>管理センターでは、次の操作ができると案内されています。</p>
+<ul>
+<li>請求書と請求情報にアクセスする</li>
+<li>課金プロファイルを管理する</li>
+<li>支払い履歴を表示する</li>
+</ul>
+<p>つまり、入り口は注文履歴でも、書類を取る場所は前述の管理センターです。権限が必要な点も同じなので、課金管理者以上のアカウントで操作してください。</p>
+<h2 id="請求書の宛名会社名はどう扱うか">請求書の宛名・会社名はどう扱うか</h2>
+<p>経費にする書類では、宛名が屋号や会社名になっているかが気になる場面があります。管理センターでは、課金プロファイルを管理できると公式に書かれています。</p>
+<p>ただし、請求書の宛名や会社名を直す手順の詳細は、公式の案内で確認できませんでした。そのため、ここでは具体的な操作手順は書きません。</p>
+<p>あなたの場合の考え方は、次のとおりです。</p>
+<ul>
+<li><strong>法人</strong>：請求書の宛名が会社名になっているかを、取得したPDFで確認します。</li>
+<li><strong>個人事業主</strong>：屋号か個人名かを、日頃の帳簿の書き方に合わせて確認します。</li>
+<li><strong>宛名を直したい</strong>：管理センターの課金プロファイルの画面と、Microsoft のサポート窓口の案内を確認してください。</li>
+</ul>
+<p>なお、経費にできるかどうかの考え方は、<a href="/articles/keihi-naru-mono-naranai-mono/">経費になるもの・ならないもの</a>で整理しています。</p>
+<h2 id="日本の消費税インボイスの確認点">日本の消費税・インボイスの確認点</h2>
+<p>Microsoft の日本向けの適格請求書発行事業者の登録番号（T番号）は、今回参照した公式ヘルプのいずれにも載っていませんでした。そのため、「インボイスとして使える」「使えない」とは断定できません。</p>
+<p>国税庁によると、適格請求書は、税務署長の登録を受けた適格請求書発行事業者でなければ交付できません。また、インボイス制度の下では、一定の事項を記載した帳簿と請求書等の保存が仕入税額控除の要件になります（出典：国税庁 タックスアンサー No.6498）。</p>
+<p>そこで、まず手元の書類の実物を見て、次の2点を確認してください。</p>
+<ol>
+<li>登録番号（T から始まる番号）が書かれているか</li>
+<li>消費税額（または税率ごとの対価の額）が書かれているか</li>
+</ol>
+<p>登録番号は、国税庁の<a href="https://www.invoice-kohyo.nta.go.jp/">適格請求書発行事業者公表サイト</a>で公表されています。サイトのトップから、ご自身で検索して確かめてください。</p>
+<h3 id="登録番号や消費税額が書かれていない場合">登録番号や消費税額が書かれていない場合</h3>
+<p>国外の事業者から受ける電気通信利用役務の提供については、国税庁が考え方を整理しています（出典：国税庁 タックスアンサー No.6118）。内容は次のとおりです。</p>
+<ul>
+<li>事業者向けの提供は、国内の事業者が「特定課税仕入れ」として申告・納税する（リバースチャージ方式）。</li>
+<li>一般課税で課税売上割合が95パーセント以上の課税期間や、簡易課税制度が適用される課税期間は、当分の間、特定課税仕入れはなかったものとされる。</li>
+<li>免税事業者は、消費税の確定申告等を行う必要がないため、特定課税仕入れを行っても申告等は不要。</li>
+</ul>
+<p>どれに当たるかは、ご自身の課税区分によって変わります。個別の判断は、税理士や税務署に確認してください。海外サービス全般の考え方は、<a href="/articles/kaigai-saas-shouhizei-invoice/">海外SaaSの消費税とインボイス</a>にまとめています。</p>
+<h3 id="保存期間の目安">保存期間の目安</h3>
+<p>取引に伴い作成したり受け取ったりした書類は、保存しておく必要があります。国税庁によると、請求書、見積書、納品書、送り状などは5年間の保存でよい書類の例とされています（出典：国税庁 タックスアンサー No.2070）。</p>
+<h2 id="microsoft-365-請求書領収書のチェックリスト">Microsoft 365 請求書・領収書のチェックリスト</h2>
+<p>取得した書類を、経理に回す前に確認するための一覧です。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 契約の種類（ビジネス向けか、個人用アカウントか）を把握した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 管理センター、または注文履歴から書類を取得した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 管理センターの場合、PDF版をダウンロードした（オンライン版とは異なるため）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 請求書番号、日付、購入内容が書かれている</li>
+<li class="task-list-item"><input type="checkbox" disabled> 宛名が屋号・会社名・個人名のいずれで書かれているか確認した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 登録番号と消費税額の有無を確認した</li>
+<li class="task-list-item"><input type="checkbox" disabled> カード明細書と請求書を組み合わせて保存した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 保存期間（5年が目安の書類）を踏まえ、保管場所を決めた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 判断に迷う点は、税理士または税務署に確認する予定を決めた</li>
+</ul>
+<p>同じ海外サービスでも書類の出方は異なります。他のサービスの例として、<a href="/articles/zoom-ryoushuusho/">Zoom の領収書</a>や<a href="/articles/google-ryoushuusho/">Google の領収書</a>も参考になります。</p>
+<h2 id="次の一歩取得した請求書を帳簿につなげる">次の一歩：取得した請求書を帳簿につなげる</h2>
+<p>請求書とカード明細をそろえたら、あとは帳簿に記録する作業です。毎月届く請求書は、取得から保存、記帳までの流れを決めておくと、月末の作業が軽くなります。</p>
+<aside class="cta-box"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">株式会社マネーフォワード</p><h3 class="cta-box__title">マネーフォワード クラウド</h3><p class="cta-box__body">会計・確定申告・開業届作成などのクラウドサービス。</p><a class="cta-box__button" href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E8M9EI+4JGQ+60WN6" data-offer="moneyforward-cloud" rel="sponsored nofollow noopener" target="_blank">マネーフォワード クラウドの公式サイトへ</a></aside>
+<p><a href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E8M9EI+4JGQ+60WN6" rel="sponsored nofollow noopener" target="_blank">クラウド会計に請求書を取り込む流れを見る</a></p>
+<p>取り込みの可否や読み取りの範囲は、利用するサービスの公式案内で確認してください。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Microsoft 365 の領収書はダウンロードできますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>ビジネス向けは、公式ヘルプに「支払い領収書は提供されません」とあります。書類は管理センターで取る請求書のPDFです。個人用アカウントで買った場合は、account.microsoft.com/billing の注文履歴から注文の詳細を印刷します。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Microsoft 365 管理センターで請求書を見るには、どの権限が必要ですか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式ヘルプでは、少なくとも課金管理者である必要があるとされています。権限がない場合は、課金管理者以上の人に依頼してください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Microsoft 365 Personal の領収書の代わりになる書類はありますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>注文履歴の「注文の詳細」を印刷したものが、購入内容を示す書類になります。「税の請求書」が表示される場合は、そこからも取得できます。日本で表示されるかは、公式の案内で確認できませんでした。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Microsoft 365 の請求書はインボイス（適格請求書）になりますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>Microsoft の日本向けの登録番号は、今回参照した公式ヘルプには載っていませんでした。手元の書類に登録番号と消費税額が書かれているかを確認してください。判断に迷う場合は税理士や税務署に相談してください。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://learn.microsoft.com/ja-jp/microsoft-365/commerce/billing-and-payments/view-your-bill-or-invoice?view=o365-worldwide" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Microsoft Learn: Microsoft 365 管理センターで請求書を表示またはダウンロードする</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://support.microsoft.com/ja-jp/accounts-billing/view-your-microsoft-store-order-history" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Microsoft サポート: Microsoft Store の注文履歴を表示する</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://support.microsoft.com/ja-jp/accounts-billing/tax-invoices-breakdowns-and-registration-numbers-for-microsoft-store" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Microsoft サポート: Microsoft Store の税の請求書、内訳、登録番号</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6118.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.6118 国境を越えた役務の提供に対する消費税の課税</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6498.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.6498 適格請求書等保存方式（インボイス制度）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2070.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.2070 帳簿書類等の保存</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/invoice_about.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 インボイス制度の特設サイト</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.invoice-kohyo.nta.go.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 適格請求書発行事業者公表サイト</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/kakutei-shinkoku/" data-astro-cid-sgg5joot>確定申告・会計ソフト・経費の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/receipts/" data-astro-cid-sgg5joot>サービス別 領収書・インボイス対応一覧を見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

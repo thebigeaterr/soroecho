@@ -1,0 +1,208 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Amazonビジネスでユーザー追加できない原因と対処法｜権限・登録状態・確認手順を整理 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="Amazonビジネスでユーザーを追加できないときは、操作する人の権限、アカウントの種類、招待先のメールアドレスの状態の3点を順に確認すると原因を絞れます。個人事業主と法人の分岐ごとに、確認手順と注意点を解説します。"><link rel="canonical" href="https://soroecho.com/articles/scout-2026-10-12-4/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="Amazonビジネスでユーザー追加できない原因と対処法｜権限・登録状態・確認手順を整理 | そろえ帳"><meta property="og:description" content="Amazonビジネスでユーザーを追加できないときは、操作する人の権限、アカウントの種類、招待先のメールアドレスの状態の3点を順に確認すると原因を絞れます。個人事業主と法人の分岐ごとに、確認手順と注意点を解説します。"><meta property="og:url" content="https://soroecho.com/articles/scout-2026-10-12-4/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/scout-2026-10-12-4.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Amazonビジネスでユーザー追加できない原因と対処法｜権限・登録状態・確認手順を整理 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Amazonビジネスでユーザー追加できない原因と対処法｜権限・登録状態・確認手順を整理 | そろえ帳"><meta name="twitter:description" content="Amazonビジネスでユーザーを追加できないときは、操作する人の権限、アカウントの種類、招待先のメールアドレスの状態の3点を順に確認すると原因を絞れます。個人事業主と法人の分岐ごとに、確認手順と注意点を解説します。"><meta name="twitter:image" content="https://soroecho.com/og/scout-2026-10-12-4.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"Amazonビジネスでユーザー追加できない原因と対処法｜権限・登録状態・確認手順を整理","item":"https://soroecho.com/articles/scout-2026-10-12-4/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Amazonビジネスでユーザー追加できない原因と対処法｜権限・登録状態・確認手順を整理","description":"Amazonビジネスでユーザーを追加できないときは、操作する人の権限、アカウントの種類、招待先のメールアドレスの状態の3点を順に確認すると原因を絞れます。個人事業主と法人の分岐ごとに、確認手順と注意点を解説します。","url":"https://soroecho.com/articles/scout-2026-10-12-4/","datePublished":"2026-10-28T00:00:00.000Z","dateModified":"2026-10-28T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/scout-2026-10-12-4/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"管理者以外でもユーザーを追加できますか？","acceptedAnswer":{"@type":"Answer","text":"一般に、ユーザーの追加や権限の変更は管理者の役割です。管理者権限がないアカウントでは、追加の画面が表示されない、または操作できないことがあります。まず自分の権限を確認し、必要なら管理者に依頼してください。"}},{"@type":"Question","name":"招待メールが相手に届かない場合はどうすればよいですか？","acceptedAnswer":{"@type":"Answer","text":"迷惑メールフォルダの確認、メールアドレスの入力ミスの確認、受信側の受信拒否設定の確認を順に行います。それでも届かない場合は、別のメールアドレスで再度招待するか、Amazonビジネスのカスタマーサービスに相談してください。"}},{"@type":"Question","name":"ひとり社長でも、ユーザー追加は必要ですか？","acceptedAnswer":{"@type":"Answer","text":"自分ひとりで使うだけなら、ユーザー追加は必須ではありません。家族や外部スタッフに発注や閲覧を任せたい場合に、権限を分けて追加するかを検討します。"}},{"@type":"Question","name":"個人事業主で開業届がなくても、ユーザーを追加できますか？","acceptedAnswer":{"@type":"Answer","text":"開業届の有無と、ユーザー追加の可否は別の問題です。登録時に求められる事業者情報の条件は、公式の案内で最新の内容を確認してください。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>Amazonビジネスでユーザー追加できない原因と対処法｜権限・登録状態・確認手順を整理</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1kots2u-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1kots2u-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ec1kots2u-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1kots2u-p)" data-astro-cid-yuatfsof></rect><circle cx="328" cy="84" r="126" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>amazonビジネス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>ユーザー</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>追加</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--amazon-business">Amazonビジネス実務</span><h1 data-astro-cid-sgg5joot>Amazonビジネスでユーザー追加できない原因と対処法｜権限・登録状態・確認手順を整理</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-10-28T00:00:00.000Z" data-astro-cid-sgg5joot>2026年10月28日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約6分</p><p class="cta-inline">Amazonビジネスは法人・個人事業主向けのAmazonアカウントで、登録は無料です。<a href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">公式サイトで詳細を見る</a></p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論追加できないときは権限アカウント招待先の順に確認する" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：追加できないときは「権限・アカウント・招待先」の順に確認する</a></li><li data-astro-cid-sgg5joot><a href="#まず確認する自分は管理者か" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>まず確認する：自分は「管理者」か</a></li><li data-astro-cid-sgg5joot><a href="#次に確認するアカウントの種類と登録状態" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>次に確認する：アカウントの種類と登録状態</a></li><li data-astro-cid-sgg5joot><a href="#招待先の問題を切り分ける" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>招待先の問題を切り分ける</a></li><li data-astro-cid-sgg5joot><a href="#費用と注意点先に確認しておくこと" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>費用と注意点：先に確認しておくこと</a></li><li data-astro-cid-sgg5joot><a href="#それでも解決しないとき" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>それでも解決しないとき</a></li><li data-astro-cid-sgg5joot><a href="#まとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>まとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論追加できないときは権限アカウント招待先の順に確認する">結論：追加できないときは「権限・アカウント・招待先」の順に確認する</h2>
+<p>Amazonビジネスでユーザーを追加できない原因の多くは、次の3つのどれかに当てはまります。操作している人に管理者の権限がない、アカウントの状態が想定と違う、招待先のメールアドレスに問題がある、の3点です。</p>
+<p>この順に確認すれば、原因をかなり絞り込めます。難しい設定は必要ありません。</p>
+<p>なお、画面の名称や表示は変更されることがあります。この記事では公式サイトで案内されている一般的な考え方を軸にし、細かな画面の文言は最新の公式案内で確かめてください。</p>
+<p>確認の全体像は次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>確認する点</th>
+<th>見るところ</th>
+<th>よくある状況</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>操作する人の権限</td>
+<td>自分のアカウントの役割</td>
+<td>管理者ではなく一般の利用者だった</td>
+</tr>
+<tr>
+<td>アカウントの種類</td>
+<td>ビジネス用か、通常の個人用か</td>
+<td>通常の購入用アカウントで操作していた</td>
+</tr>
+<tr>
+<td>招待先の状態</td>
+<td>メールアドレスと受信状況</td>
+<td>入力ミスや迷惑メール振り分け</td>
+</tr>
+</tbody>
+</table>
+<h2 id="まず確認する自分は管理者か">まず確認する：自分は「管理者」か</h2>
+<p>ユーザーの追加は、一般に管理者が行う操作です。ここでいう管理者とは、アカウント全体の設定を変えられる人のことです。</p>
+<p>ひとりで登録した場合、通常は自分が管理者です。ただし、会社の担当者が先に登録していた場合や、取引先に作ってもらった場合は、自分が一般の利用者になっていることがあります。</p>
+<p>次の手順で確認します。</p>
+<ol>
+<li>Amazonビジネスにログインする。</li>
+<li>アカウント設定やビジネス設定の画面を開く。</li>
+<li>ユーザーやグループの管理に関する項目が表示されるか確認する。</li>
+<li>項目が見当たらない場合は、自分の権限を確認する。</li>
+</ol>
+<p>[要実演スクショ: ビジネス設定のユーザー管理画面]</p>
+<p>項目が表示されなければ、権限不足の可能性が高いです。その場合は管理者に依頼するか、管理者権限を自分に移してもらいます。</p>
+<h3 id="あなたの場合どこを見るか">あなたの場合：どこを見るか</h3>
+<ul>
+<li><strong>ひとり社長・個人事業主で自分が登録した</strong>：自分が管理者のはずです。次の章に進んでください。</li>
+<li><strong>以前、税理士や知人に登録を任せた</strong>：管理者がその人になっている可能性があります。管理者のメールアドレスを確認してください。</li>
+<li><strong>会社の総務・購買担当</strong>：社内の管理者が誰かを先に確認します。退職や異動で管理者が不在になっていないかも見てください。</li>
+</ul>
+<h2 id="次に確認するアカウントの種類と登録状態">次に確認する：アカウントの種類と登録状態</h2>
+<p>管理者なのに追加できないときは、ログインしているアカウントを疑います。通常の購入用アカウントと、ビジネス用のアカウントは別の扱いです。</p>
+<p>ビジネス用として登録が済んでいないと、ユーザー管理の機能が使えないことがあります。登録の途中で止まっていないかも確認してください。</p>
+<p>確認の手順は次のとおりです。</p>
+<ol>
+<li>画面上部やアカウント名の表示が、ビジネス用になっているか確認する。</li>
+<li>複数のアカウントを持っている場合は、いま入っているものを確認する。</li>
+<li>登録時の事業者情報の入力が完了しているか確認する。</li>
+<li>審査や確認の案内が届いていないか、登録メールを見直す。</li>
+</ol>
+<p>[要実演スクショ: アカウント切り替え・登録状況の確認画面]</p>
+<p>登録に必要な書類や条件は、個人事業主か法人かで異なる場合があります。開業届を出していない場合の扱いも含め、最新の条件は公式サイトで確認してください。</p>
+<h3 id="あなたの場合個人か法人か">あなたの場合：個人か法人か</h3>
+<ul>
+<li><strong>個人事業主</strong>：屋号や事業者情報の入力状況を確認します。開業届の有無が登録条件にどう関わるかは、公式案内で確かめるのが確実です。</li>
+<li><strong>法人</strong>：法人名や所在地の情報が、登記の内容と合っているか見直します。</li>
+<li><strong>自宅住所を出したくない</strong>：登録する住所の扱いは、請求書や配送先にも関わります。住所の使われ方は、登録前に公式の案内で確認してください。</li>
+</ul>
+<h2 id="招待先の問題を切り分ける">招待先の問題を切り分ける</h2>
+<p>権限とアカウントに問題がなければ、招待先を確認します。追加は、相手にメールで招待を送り、承諾してもらう流れが一般的です。</p>
+<p>そのため、相手側の事情で止まることがよくあります。</p>
+<ol>
+<li>入力したメールアドレスに誤字がないか確認する。</li>
+<li>相手の迷惑メールフォルダや、受信拒否の設定を確認する。</li>
+<li>相手がすでに別のAmazonアカウントでそのメールアドレスを使っていないか確認する。</li>
+<li>招待に期限がある場合は、期限切れでないか確認する。</li>
+<li>解決しなければ、別のメールアドレスで再度招待する。</li>
+</ol>
+<p>3番目は見落としやすい点です。同じメールアドレスが別のアカウントに紐づいていると、招待がうまく進まないことがあります。</p>
+<h3 id="追加する前に決めておきたいこと">追加する前に決めておきたいこと</h3>
+<p>追加できても、権限の範囲が広すぎると不正な購入や情報の見え方に不安が残ります。追加する前に、次の3点を決めておくと安心です。</p>
+<ul>
+<li>発注できる人と、閲覧だけの人を分けるか</li>
+<li>承認が必要な購入の流れを作るか</li>
+<li>退職や契約終了時に、誰が削除するか</li>
+</ul>
+<aside class="cta-box cta-box--subtle"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">Amazonビジネス</p><h3 class="cta-box__title">法人・個人事業主向けのAmazonアカウント</h3><p class="cta-box__body">請求書払いや数量割引など、通常のAmazonアカウントにはない機能が使えます。登録は無料です（詳細は公式サイトの案内に基づきます）。</p><a class="cta-box__button" href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">Amazonビジネスの登録ページへ（公式）</a></aside>
+<h2 id="費用と注意点先に確認しておくこと">費用と注意点：先に確認しておくこと</h2>
+<p>ユーザーの追加そのものに、追加料金が必要かどうかは、プランや時期によって変わる可能性があります。この記事では金額を断定しません。</p>
+<p>確実に決めるために、次の点を公式の料金案内で確認してください。</p>
+<table>
+<thead>
+<tr>
+<th>確認項目</th>
+<th>見る観点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>利用プラン</td>
+<td>追加できる人数に上限があるか</td>
+</tr>
+<tr>
+<td>料金</td>
+<td>ユーザーを増やすと費用が変わるか</td>
+</tr>
+<tr>
+<td>機能の範囲</td>
+<td>承認機能など、プランで差がある機能は何か</td>
+</tr>
+<tr>
+<td>解約・変更</td>
+<td>途中でプランを変えられるか</td>
+</tr>
+</tbody>
+</table>
+<p>料金や条件は更新されます。申し込みの前に、公式サイトの最新の案内を見てください。</p>
+<p>注意点もあります。外部の人にアカウントの権限を渡す場合は、社内の購入ルールを先に決めておきます。経費の処理や領収書の扱いに関わるため、税理士に確認しておくと安心です。</p>
+<h3 id="副読者向け総務購買担当の方へ">副読者向け：総務・購買担当の方へ</h3>
+<p>従業員が複数いる場合は、管理者を1人に固定しないことが大切です。管理者が退職すると、追加も削除もできなくなるおそれがあります。</p>
+<p>予備の管理者を決めておき、担当の引き継ぎ手順を社内で文書にしておくと、止まりにくくなります。</p>
+<h2 id="それでも解決しないとき">それでも解決しないとき</h2>
+<p>ここまでの確認で解決しなければ、Amazonビジネスのカスタマーサービスに問い合わせます。問い合わせの前に、次の情報を手元にそろえると話が早く進みます。</p>
+<ol>
+<li>登録に使っているメールアドレス</li>
+<li>自分の役割（管理者か、一般の利用者か）</li>
+<li>追加しようとした相手のメールアドレス</li>
+<li>表示されたエラーの文言や、操作の流れ</li>
+<li>いつから起きているか</li>
+</ol>
+<p>エラー画面は、画面を保存しておくと状況を正確に伝えられます。</p>
+<p>[要実演スクショ: 追加時に表示されるエラー画面]</p>
+<p>なお、そもそもユーザーを増やす必要があるかも見直してみてください。ひとりで使うだけなら、追加せずに運用できます。家族や外部スタッフに任せたい作業が明確になってから、追加を検討しても遅くありません。</p>
+<aside class="cta-box cta-box--subtle"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">Amazonビジネス</p><h3 class="cta-box__title">法人・個人事業主向けのAmazonアカウント</h3><p class="cta-box__body">請求書払いや数量割引など、通常のAmazonアカウントにはない機能が使えます。登録は無料です（詳細は公式サイトの案内に基づきます）。</p><a class="cta-box__button" href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">Amazonビジネスの登録ページへ（公式）</a></aside>
+<p>詳しい登録条件や最新の機能は、公式サイトで確認できます。</p>
+<h2 id="まとめ">まとめ</h2>
+<p>追加できないときは、権限、アカウントの種類、招待先の順に確認します。この順番なら、短時間で原因を切り分けられます。</p>
+<ul>
+<li>管理者でなければ、管理者に依頼する</li>
+<li>ビジネス用のアカウントで入っているか確かめる</li>
+<li>招待メールの入力と受信状況を見直す</li>
+<li>料金や条件は、公式の最新案内で確認する</li>
+</ul>
+<p>画面の表示や条件は変わることがあるため、迷ったときは公式の案内を優先してください。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>管理者以外でもユーザーを追加できますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>一般に、ユーザーの追加や権限の変更は管理者の役割です。管理者権限がないアカウントでは、追加の画面が表示されない、または操作できないことがあります。まず自分の権限を確認し、必要なら管理者に依頼してください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>招待メールが相手に届かない場合はどうすればよいですか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>迷惑メールフォルダの確認、メールアドレスの入力ミスの確認、受信側の受信拒否設定の確認を順に行います。それでも届かない場合は、別のメールアドレスで再度招待するか、Amazonビジネスのカスタマーサービスに相談してください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>ひとり社長でも、ユーザー追加は必要ですか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>自分ひとりで使うだけなら、ユーザー追加は必須ではありません。家族や外部スタッフに発注や閲覧を任せたい場合に、権限を分けて追加するかを検討します。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>個人事業主で開業届がなくても、ユーザーを追加できますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>開業届の有無と、ユーザー追加の可否は別の問題です。登録時に求められる事業者情報の条件は、公式の案内で最新の内容を確認してください。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://business.amazon.co.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス 公式サイト</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-28）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/amazon-business-mitsumorisho-hakkou/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1oukbk0-g" x1="0" y1="0" x2="1" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1oukbk0-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1oukbk0-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1oukbk0-p)" data-astro-cid-yuatfsof></rect><circle cx="366" cy="57" r="153" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Amazon</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>見積書</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>出し方</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--amazon-business">Amazonビジネス実務</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>Amazonの見積書の出し方｜カートからPDFで保存する手順（Amazonビジネス・登録無料）</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>Amazonで見積書が必要なときは、登録無料のAmazonビジネスを使います。注文前はカートから参考見積書、注文後は注文履歴から見積書をPDFで保存でき、稟議や経費精算に使えます。個人アカウントしかない場合の考え方と、配送料が載らない・ダウンロードできないときの注意点もまとめました。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-06T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月6日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約12分</p></div></a><a class="card article-card" href="/articles/kojin-jigyou-kaigyoutodoke-nashi-amazon-business-toroku/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1ptehj0-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1ptehj0-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1ptehj0-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1ptehj0-p)" data-astro-cid-yuatfsof></rect><circle cx="363" cy="90" r="176" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>個人事業主</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>開業届なし</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Amazonビジネス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--amazon-business">Amazonビジネス実務</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>Amazonビジネスの登録に必要書類は？開業届なしの個人事業主が用意するもの一覧</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>個人事業主がAmazonビジネスに登録するときは、確認書類を1点提出します。開業届がなくても、過去2年以内の確定申告書B・収支内訳書、インボイスの登録通知書などで代わりになります。公式ヘルプの書類一覧と提出時の注意点、登録手順、屋号の扱いを整理しました。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-06T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月6日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/amazon-business/" data-astro-cid-sgg5joot>Amazonビジネス実務の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/business-prime/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 L4 4"></path><path d="M4 20 L21 20"></path><path d="M7 20 L7 14"></path><path d="M11 20 L11 10"></path><path d="M15 20 L15 15"></path><path d="M19 20 L19 7"></path><path d="M5 16 L20 8"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>Business Prime 損益分岐計算</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>注文回数と送料を入れると、プライムビジネス（旧Businessプライム）の元が取れる回数がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/amazon-business-check/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 9 l2 2 l3.5 -3.5"></path><path d="M8 15 h8"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>Amazonビジネスが必要か判定</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>5つの質問に答えるだけで、Amazonビジネスが「要る」「今は要らない」「どちらでも」のどれかがわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

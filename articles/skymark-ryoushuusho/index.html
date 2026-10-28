@@ -1,0 +1,256 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>スカイマークの領収書は WEB表示サービスで出す｜宛名・インボイスを公式情報で整理 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="スカイマークの領収書は「領収書データWEB表示サービス」で出します。Webサイト・予約センター・空港カウンターで買った航空券なら購入日から1年間表示でき、宛名も自由に入れられます。インボイス対応の登録番号と注意点を整理します。"><link rel="canonical" href="https://soroecho.com/articles/skymark-ryoushuusho/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="スカイマークの領収書は WEB表示サービスで出す｜宛名・インボイスを公式情報で整理 | そろえ帳"><meta property="og:description" content="スカイマークの領収書は「領収書データWEB表示サービス」で出します。Webサイト・予約センター・空港カウンターで買った航空券なら購入日から1年間表示でき、宛名も自由に入れられます。インボイス対応の登録番号と注意点を整理します。"><meta property="og:url" content="https://soroecho.com/articles/skymark-ryoushuusho/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/skymark-ryoushuusho.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="スカイマークの領収書は WEB表示サービスで出す｜宛名・インボイスを公式情報で整理 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="スカイマークの領収書は WEB表示サービスで出す｜宛名・インボイスを公式情報で整理 | そろえ帳"><meta name="twitter:description" content="スカイマークの領収書は「領収書データWEB表示サービス」で出します。Webサイト・予約センター・空港カウンターで買った航空券なら購入日から1年間表示でき、宛名も自由に入れられます。インボイス対応の登録番号と注意点を整理します。"><meta name="twitter:image" content="https://soroecho.com/og/skymark-ryoushuusho.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"スカイマークの領収書は WEB表示サービスで出す｜宛名・インボイスを公式情報で整理","item":"https://soroecho.com/articles/skymark-ryoushuusho/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"スカイマークの領収書は WEB表示サービスで出す｜宛名・インボイスを公式情報で整理","description":"スカイマークの領収書は「領収書データWEB表示サービス」で出します。Webサイト・予約センター・空港カウンターで買った航空券なら購入日から1年間表示でき、宛名も自由に入れられます。インボイス対応の登録番号と注意点を整理します。","url":"https://soroecho.com/articles/skymark-ryoushuusho/","datePublished":"2026-10-28T00:00:00.000Z","dateModified":"2026-10-28T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/skymark-ryoushuusho/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"スカイマークの領収書はどこで発行できますか？","acceptedAnswer":{"@type":"Answer","text":"スカイマークの「領収書データWEB表示サービス」で表示します。スカイマークWebサイト、予約センター、空港カウンターで買った航空券が対象で、航空券購入日から最大1年間、電子領収書を表示できます。旅行会社で払った航空券は発行できません。"}},{"@type":"Question","name":"領収書の宛名は自由に書けますか？","acceptedAnswer":{"@type":"Answer","text":"公式ページに「ご希望の宛名をご自由に記載、表示させることができます」と書かれています。宛名は領収書データWEB表示サービスで入れる前提です。"}},{"@type":"Question","name":"スカイマークの領収書はインボイスに対応していますか？","acceptedAnswer":{"@type":"Answer","text":"領収書データWEB表示サービスは適格請求書等保存方式（インボイス）に対応しており、登録番号は T7010801019529 と公式ページに載っています。空港の自動チェックイン機などで出した領収書には実搭乗日が載らない点に注意してください。"}},{"@type":"Question","name":"コンビニで払った場合の領収書はどうなりますか？","acceptedAnswer":{"@type":"Answer","text":"コンビニエンスストアで払うと、代金受領の証明書として領収書等が発行されます。インボイス制度に対応した領収書がほしいときは、領収書データWEB表示サービスを使うよう公式ページが案内しています。"}},{"@type":"Question","name":"3万円未満の航空券なら領収書は不要ですか？","acceptedAnswer":{"@type":"Answer","text":"国税庁Q&A（問41・問42）で交付義務が免除される公共交通機関は、船舶・バス・鉄道による旅客の運送です。飛行機は挙がっていないため、航空券は領収書を保存する前提で動くのが安全です。個別の判断は税理士・税務署へ相談してください。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>スカイマークの領収書は WEB表示サービスで出す｜宛名・インボイスを公式情報で整理</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1azxe0x-g" x1="0" y1="0" x2="1" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1azxe0x-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ec1azxe0x-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1azxe0x-p)" data-astro-cid-yuatfsof></rect><circle cx="330" cy="32" r="124" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>スカイマーク</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>領収書</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>スカイマークの領収書は WEB表示サービスで出す｜宛名・インボイスを公式情報で整理</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-10-28T00:00:00.000Z" data-astro-cid-sgg5joot>2026年10月28日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約8分</p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論スカイマークの領収書は領収書データweb表示サービスで出す" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：スカイマークの領収書は「領収書データWEB表示サービス」で出す</a></li><li data-astro-cid-sgg5joot><a href="#早見表買った場所と払い方で領収書の出し方が変わる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>早見表：買った場所と払い方で、領収書の出し方が変わる</a></li><li data-astro-cid-sgg5joot><a href="#領収書データweb表示サービスでの出し方" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>領収書データWEB表示サービスでの出し方</a></li><li data-astro-cid-sgg5joot><a href="#宛名は自由に入れられる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>宛名は自由に入れられる</a></li><li data-astro-cid-sgg5joot><a href="#インボイス登録番号と実搭乗日の扱いに注意" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>インボイス：登録番号と、実搭乗日の扱いに注意</a></li><li data-astro-cid-sgg5joot><a href="#3万円未満の特例は飛行機には当てはまらない" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>3万円未満の特例は、飛行機には当てはまらない</a></li><li data-astro-cid-sgg5joot><a href="#領収書が表示されないときは" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>領収書が表示されないときは</a></li><li data-astro-cid-sgg5joot><a href="#受け取ったら確かめる項目のチェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>受け取ったら確かめる項目のチェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#経費精算で困らないための関連記事" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>経費精算で困らないための関連記事</a></li><li data-astro-cid-sgg5joot><a href="#次の一歩出張費や領収書を帳簿にまとめる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>10</span>次の一歩：出張費や領収書を帳簿にまとめる</a></li><li data-astro-cid-sgg5joot><a href="#よくある質問" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>11</span>よくある質問</a></li><li data-astro-cid-sgg5joot><a href="#まとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>12</span>まとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論スカイマークの領収書は領収書データweb表示サービスで出す">結論：スカイマークの領収書は「領収書データWEB表示サービス」で出す</h2>
+<p>スカイマークの領収書は、公式の「領収書データWEB表示サービス」で出します。スカイマークWebサイト、予約センター、空港カウンターのどれかで買った航空券なら、購入日から1年間、スカイマークWebサイトで電子領収書を表示できます。</p>
+<p>宛名は、希望のものを自由に入れられます。インボイス（適格請求書等保存方式）にも対応していて、登録番号は T7010801019529 です。</p>
+<p>一方、旅行会社で払った航空券は、このサービスでは発行できません。その場合は、買った旅行会社に聞きます。</p>
+<p>この記事では、次の内容を順に説明します。</p>
+<ul>
+<li>買った場所と払い方ごとの、領収書の出し方（早見表）</li>
+<li>領収書データWEB表示サービスでの表示のしかたと、表示できる期間</li>
+<li>宛名の入れ方と、インボイスで気をつける点</li>
+<li>3万円未満の特例が飛行機に当てはまるか</li>
+<li>領収書が表示されないときの相談先</li>
+<li>受け取ったあとに確かめる項目のチェックリスト</li>
+</ul>
+<p>内容は、2026年10月25日に確認したスカイマークの公式ページと、国税庁のQ&amp;Aに基づきます。公式ページにない画面名や手順は書きません。</p>
+<h2 id="早見表買った場所と払い方で領収書の出し方が変わる">早見表：買った場所と払い方で、領収書の出し方が変わる</h2>
+<p>最初に、全体を表にまとめます。見るのは「どこで買ったか」と「どう払ったか」の2点です。</p>
+<table>
+<thead>
+<tr>
+<th>買った場所</th>
+<th>払い方</th>
+<th>領収書の出し方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>スカイマークWebサイト・予約センター・空港カウンター</td>
+<td>クレジットカード</td>
+<td>領収書データWEB表示サービスで表示する（空港の自動チェックイン機でも受け取れる）</td>
+</tr>
+<tr>
+<td>スカイマークWebサイト・予約センター・空港カウンター</td>
+<td>コンビニエンスストア払い</td>
+<td>代金受領の証明書として領収書等が出る。インボイス対応の領収書がほしければ、領収書データWEB表示サービスを使う</td>
+</tr>
+<tr>
+<td>旅行会社</td>
+<td>旅行会社に払った</td>
+<td>旅行会社に聞く（このサービスでは発行できない）</td>
+</tr>
+</tbody>
+</table>
+<p>表の1行目で、空港の自動チェックイン機でも領収書を受け取れるのは、公式ページが挙げている条件のとおり、スカイマークWebサイト、予約センター、空港カウンターのいずれかでクレジットカードを使って買った場合です。</p>
+<p>ただし、自動チェックイン機で受け取った領収書には、後で説明する注意点があります。インボイスが必要な人は、基本的にWEB表示サービスで出すと考えておくと迷いません。</p>
+<h2 id="領収書データweb表示サービスでの出し方">領収書データWEB表示サービスでの出し方</h2>
+<p>公式ページに載っている手順は、次の2段階です。</p>
+<ol>
+<li>「予約番号から確認」または「照会番号から確認」から、予約内容を確認する</li>
+<li>「領収書を表示する」を選ぶ</li>
+</ol>
+<p>公式ページが示している手順は以上です。予約番号や照会番号をどこで調べるか、画面上でどのボタンを押すかといった細かい操作は、公式の情報では確認できませんでした。実際の画面の案内に沿って進めてください。</p>
+<h3 id="表示できる内容">表示できる内容</h3>
+<p>公式ページには、表示できる内容が次のように書かれています。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>表示できるか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>購入済み航空券の領収情報</td>
+<td>表示可能</td>
+</tr>
+<tr>
+<td>旅程取消時の取消手数料情報</td>
+<td>表示可能</td>
+</tr>
+</tbody>
+</table>
+<p>取消手数料の領収情報も出せるので、旅程を取り消した出張でも、このサービスで確認できます。取消手数料の金額は、記事では扱いません。表示された画面で確かめてください。</p>
+<h3 id="表示できる期間と回数">表示できる期間と回数</h3>
+<ul>
+<li>表示期間：航空券を買った日から1年後まで</li>
+<li>表示回数：表示期間内は何度でも表示できる</li>
+</ul>
+<p>期間内なら何度でも表示できるので、経費精算の締め日までに慌てて出す必要はありません。一方で、1年を過ぎると表示できなくなります。</p>
+<p>出張の精算が遅れがちな人は、予約した時点で領収書を表示して、PDFや印刷などの形で自分の保管場所に保存しておくと安心です。電子データの保存のルールは、<a href="/articles/ryoushuusho-hozon-e-bunsho-taiou/">領収書の電子保存（e文書）の対応</a>にまとめています。</p>
+<h2 id="宛名は自由に入れられる">宛名は自由に入れられる</h2>
+<p>領収書データWEB表示サービスでは、公式ページに「ご希望の宛名をご自由に記載、表示させることができます」と書かれています。会社名、屋号、個人名など、精算先に合わせて入れられます。</p>
+<p>ここで注意したいのは、空港の自動チェックイン機で受け取る領収書です。宛名を自由に入れられると公式が説明しているのは、領収書データWEB表示サービスです。自動チェックイン機で受け取った領収書で、宛名をどう扱えるかは、公式の情報では確認できませんでした。</p>
+<p>宛名を指定したい出張では、最初から領収書データWEB表示サービスで出すほうが、手戻りを減らせます。</p>
+<h2 id="インボイス登録番号と実搭乗日の扱いに注意">インボイス：登録番号と、実搭乗日の扱いに注意</h2>
+<p>領収書データWEB表示サービスについて、公式ページは次のように説明しています。</p>
+<ul>
+<li>消費税法で規定される適格請求書等保存方式（インボイス）に対応している</li>
+<li>スカイマークの適格請求書発行事業者登録番号は T7010801019529</li>
+</ul>
+<p>登録番号が載っているかは、受け取った領収書の画面や印刷物で確かめられます。</p>
+<h3 id="自動チェックイン機などで出した領収書の注意点">自動チェックイン機などで出した領収書の注意点</h3>
+<p>公式ページには、次の注意書きがあります。領収書データWEB表示サービス以外で出した領収書には、「課税資産の譲渡等を行った年月日（実搭乗日）」の記載がありません。</p>
+<p>そのため、適格請求書等がほしい人は、搭乗日の記載がある確認メールや、コンビニエンスストアの控えなどを一緒に保管するよう、公式が案内しています。</p>
+<p>整理すると、次のようになります。</p>
+<table>
+<thead>
+<tr>
+<th>領収書の種類</th>
+<th>実搭乗日の記載</th>
+<th>公式の案内</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>領収書データWEB表示サービスで出した領収書</td>
+<td>インボイス対応と説明されている</td>
+<td>このサービスを使う</td>
+</tr>
+<tr>
+<td>それ以外（空港の自動チェックイン機など）</td>
+<td>載らない</td>
+<td>搭乗日のある確認メールやコンビニの控えも一緒に保管する</td>
+</tr>
+</tbody>
+</table>
+<p>インボイスの扱いは、あなたの課税区分や取引の内容で変わります。個別の判断は税理士・税務署へ相談してください。</p>
+<h2 id="3万円未満の特例は飛行機には当てはまらない">3万円未満の特例は、飛行機には当てはまらない</h2>
+<p>新幹線や電車では、運賃が3万円未満なら領収書の交付が免除される話を聞いたことがあるかもしれません。飛行機の場合は、同じ考え方が通用するのでしょうか。</p>
+<p>国税庁の消費税の軽減税率制度・インボイス制度Q&amp;Aには、次のように書かれています。</p>
+<ul>
+<li>問41：交付義務が免除されるのは、「3万円未満の公共交通機関（船舶、バス又は鉄道）による旅客の運送」</li>
+<li>問42：対象は「船舶による旅客の運送」「バスによる旅客の運送」「鉄道・軌道による旅客の運送」の3つ</li>
+</ul>
+<p>飛行機（航空機）は、この一覧に挙がっていません。この記事で言えるのはここまでです。ですから、航空券は、領収書（適格請求書）を保存する前提で動くのが安全です。</p>
+<p>個別の判断は税理士・税務署へ相談してください。新幹線などの特例を詳しく知りたいときは、<a href="/articles/shinkansen-ryoushuusho/">新幹線の領収書</a>を参照してください。</p>
+<h2 id="領収書が表示されないときは">領収書が表示されないときは</h2>
+<p>公式ページには、次の注意が書かれています。差額精算が必要な状態などでは、領収書が表示されないことがあります。その場合は、スカイマークの予約センターに問い合わせるよう案内されています。</p>
+<p>また、旅行会社で買った航空券の領収書は、このサービスでは出せません。買った旅行会社に聞きます。</p>
+<table>
+<thead>
+<tr>
+<th>状況</th>
+<th>相談先</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>差額精算が必要な状態などで表示されない</td>
+<td>スカイマークの予約センター</td>
+</tr>
+<tr>
+<td>旅行会社で買った・払った</td>
+<td>買った旅行会社</td>
+</tr>
+</tbody>
+</table>
+<p>表示されない原因が、差額精算のほかにどんなケースがあるかは、公式の情報では確認できませんでした。原因の切り分けを自分でしようとせず、予約センターに相談するのが近道です。</p>
+<h2 id="受け取ったら確かめる項目のチェックリスト">受け取ったら確かめる項目のチェックリスト</h2>
+<p>公式ページに書かれた内容の範囲で、受け取った領収書を確認する項目をまとめます。精算に出す前に、一度見ておきましょう。</p>
+<ul>
+<li>宛名が、精算先や帳簿に合わせたものになっている</li>
+<li>登録番号 T7010801019529 が載っている（インボイスが必要な場合）</li>
+<li>領収書データWEB表示サービスで出したものか。空港の自動チェックイン機などで出したものなら、実搭乗日が載っていない</li>
+<li>実搭乗日が載っていない場合、搭乗日のある確認メールやコンビニの控えも一緒に保管している</li>
+<li>金額が、精算する内容と合っている</li>
+<li>取り消した旅程があるときは、取消手数料の情報も確認した</li>
+<li>表示期間（購入日から1年後まで）の内に、保存すべきものを保存した</li>
+</ul>
+<p>金額の数字そのものは、記事では扱いません。表示された画面と、自分の購入記録を照らし合わせてください。</p>
+<h2 id="経費精算で困らないための関連記事">経費精算で困らないための関連記事</h2>
+<p>領収書を受け取ったあとの整理は、次の記事にまとめています。</p>
+<ul>
+<li>電子データで受け取った場合の保存：<a href="/articles/ryoushuusho-hozon-e-bunsho-taiou/">領収書の電子保存（e文書）の対応</a></li>
+<li>出張費が経費になるかの考え方：<a href="/articles/keihi-naru-mono-naranai-mono/">経費になるもの・ならないもの</a></li>
+<li>鉄道の特例を知りたいとき：<a href="/articles/shinkansen-ryoushuusho/">新幹線の領収書</a></li>
+</ul>
+<h2 id="次の一歩出張費や領収書を帳簿にまとめる">次の一歩：出張費や領収書を帳簿にまとめる</h2>
+<p>領収書を集めたあとは、日付・金額・取引先を帳簿に記録する作業が残ります。出張が重なる個人事業主や小さな会社では、記録を会計ソフトで管理する方法もあります。</p>
+<aside class="cta-box"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">弥生株式会社</p><h3 class="cta-box__title">弥生シリーズ（やよいの青色申告 オンライン など）</h3><p class="cta-box__body">会計・青色申告のクラウドソフト。新規申込が成果条件。</p><a class="cta-box__button" href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E9T4M2+35XE+5ZEMP" data-offer="yayoi" rel="sponsored nofollow noopener" target="_blank">弥生シリーズ（やよいの青色申告 オンライン など）の公式サイトへ</a></aside>
+<p><a href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E9T4M2+35XE+5ZEMP" rel="sponsored nofollow noopener" target="_blank">弥生の公式サイトで機能と料金を確認する</a></p>
+<p>弥生は、会計・青色申告のクラウドソフトです。新規申込みの条件や料金は、公式サイトで確認してください。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="スカイマークの領収書はどこで発行できますか">スカイマークの領収書はどこで発行できますか？</h3>
+<p>スカイマークの領収書データWEB表示サービスで表示します。Webサイト、予約センター、空港カウンターで買った航空券が対象で、購入日から最大1年間、電子領収書を表示できます。旅行会社で払った航空券は発行できません。</p>
+<h3 id="宛名は自由に書けますか">宛名は自由に書けますか？</h3>
+<p>公式ページでは、希望の宛名を自由に記載、表示できると案内されています。領収書データWEB表示サービスで入れる前提で考えてください。</p>
+<h3 id="スカイマークの領収書はインボイスに対応していますか">スカイマークの領収書はインボイスに対応していますか？</h3>
+<p>領収書データWEB表示サービスは、インボイスに対応しています。登録番号は T7010801019529 です。空港の自動チェックイン機などで出した領収書には実搭乗日が載らないので、搭乗日のある確認メールなども一緒に保管します。</p>
+<h3 id="コンビニで払った場合はどうなりますか">コンビニで払った場合はどうなりますか？</h3>
+<p>代金受領の証明書として、領収書等が出ます。インボイス対応の領収書がほしいときは、領収書データWEB表示サービスを使うよう、公式ページが案内しています。</p>
+<h3 id="3万円未満なら領収書は不要ですか">3万円未満なら領収書は不要ですか？</h3>
+<p>国税庁Q&amp;Aで交付義務が免除されるのは、船舶・バス・鉄道による旅客の運送です。飛行機は挙がっていません。個別の判断は税理士・税務署へ相談してください。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul>
+<li>スカイマークの領収書は、領収書データWEB表示サービスで出す。購入日から最大1年間、何度でも表示できる</li>
+<li>対象は、Webサイト・予約センター・空港カウンターで買った航空券。旅行会社で払った分は旅行会社に聞く</li>
+<li>宛名は、希望のものを自由に記載、表示できる</li>
+<li>インボイスの登録番号は T7010801019529。WEB表示サービス以外の領収書には実搭乗日が載らない</li>
+<li>3万円未満の特例は、国税庁Q&amp;Aでは船舶・バス・鉄道。飛行機は挙がっていないため、領収書を保存する前提で動く</li>
+<li>表示されないときは、予約センターに問い合わせる</li>
+</ul>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>スカイマークの領収書はどこで発行できますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>スカイマークの「領収書データWEB表示サービス」で表示します。スカイマークWebサイト、予約センター、空港カウンターで買った航空券が対象で、航空券購入日から最大1年間、電子領収書を表示できます。旅行会社で払った航空券は発行できません。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>領収書の宛名は自由に書けますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式ページに「ご希望の宛名をご自由に記載、表示させることができます」と書かれています。宛名は領収書データWEB表示サービスで入れる前提です。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>スカイマークの領収書はインボイスに対応していますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>領収書データWEB表示サービスは適格請求書等保存方式（インボイス）に対応しており、登録番号は T7010801019529 と公式ページに載っています。空港の自動チェックイン機などで出した領収書には実搭乗日が載らない点に注意してください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>コンビニで払った場合の領収書はどうなりますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>コンビニエンスストアで払うと、代金受領の証明書として領収書等が発行されます。インボイス制度に対応した領収書がほしいときは、領収書データWEB表示サービスを使うよう公式ページが案内しています。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>3万円未満の航空券なら領収書は不要ですか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>国税庁Q&amp;A（問41・問42）で交付義務が免除される公共交通機関は、船舶・バス・鉄道による旅客の運送です。飛行機は挙がっていないため、航空券は領収書を保存する前提で動くのが安全です。個別の判断は税理士・税務署へ相談してください。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://www.skymark.co.jp/ja/reservation/web_receipt.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>スカイマーク 領収書データWEB表示サービス</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-25）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/pdf/qa/01-07.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 消費税の軽減税率制度・インボイス制度Q&amp;A（問41・問42）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-25）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/kakutei-shinkoku/" data-astro-cid-sgg5joot>確定申告・会計ソフト・経費の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/receipts/" data-astro-cid-sgg5joot>サービス別 領収書・インボイス対応一覧を見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

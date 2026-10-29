@@ -1,0 +1,249 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>スタバの領収書は買い方で出し方が違う｜モバイルオーダー・カード入金を公式FAQで整理 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="スターバックスの領収書は、店舗ならレジで頼み、モバイルオーダー＆ペイは注文完了メールか注文履歴画面が領収書の代わりで、紙は原則出ません。オンライン入金・オートチャージとeGiftは領収書が出ません。店内飲食の税率とインボイスの見方も、公式FAQの範囲で整理します。"><link rel="canonical" href="https://soroecho.com/articles/starbucks-ryoushuusho/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="スタバの領収書は買い方で出し方が違う｜モバイルオーダー・カード入金を公式FAQで整理 | そろえ帳"><meta property="og:description" content="スターバックスの領収書は、店舗ならレジで頼み、モバイルオーダー＆ペイは注文完了メールか注文履歴画面が領収書の代わりで、紙は原則出ません。オンライン入金・オートチャージとeGiftは領収書が出ません。店内飲食の税率とインボイスの見方も、公式FAQの範囲で整理します。"><meta property="og:url" content="https://soroecho.com/articles/starbucks-ryoushuusho/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/starbucks-ryoushuusho.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="スタバの領収書は買い方で出し方が違う｜モバイルオーダー・カード入金を公式FAQで整理 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="スタバの領収書は買い方で出し方が違う｜モバイルオーダー・カード入金を公式FAQで整理 | そろえ帳"><meta name="twitter:description" content="スターバックスの領収書は、店舗ならレジで頼み、モバイルオーダー＆ペイは注文完了メールか注文履歴画面が領収書の代わりで、紙は原則出ません。オンライン入金・オートチャージとeGiftは領収書が出ません。店内飲食の税率とインボイスの見方も、公式FAQの範囲で整理します。"><meta name="twitter:image" content="https://soroecho.com/og/starbucks-ryoushuusho.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"スタバの領収書は買い方で出し方が違う｜モバイルオーダー・カード入金を公式FAQで整理","item":"https://soroecho.com/articles/starbucks-ryoushuusho/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"スタバの領収書は買い方で出し方が違う｜モバイルオーダー・カード入金を公式FAQで整理","description":"スターバックスの領収書は、店舗ならレジで頼み、モバイルオーダー＆ペイは注文完了メールか注文履歴画面が領収書の代わりで、紙は原則出ません。オンライン入金・オートチャージとeGiftは領収書が出ません。店内飲食の税率とインボイスの見方も、公式FAQの範囲で整理します。","url":"https://soroecho.com/articles/starbucks-ryoushuusho/","datePublished":"2026-10-29T00:00:00.000Z","dateModified":"2026-10-29T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/starbucks-ryoushuusho/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"スタバの店舗で買ったとき、領収書はどうすればもらえますか？","acceptedAnswer":{"@type":"Answer","text":"公式FAQでは、商品購入時にレジで従業員（バリスタ）に申し出ると領収書を発行するとされています。宛名の書き方や宛名を入れられるかは、取得した公式FAQでは確認できなかったため、店舗で聞いてください。"}},{"@type":"Question","name":"モバイルオーダー＆ペイの領収書は紙でもらえますか？","acceptedAnswer":{"@type":"Answer","text":"公式FAQでは、注文完了メールまたは注文履歴画面を領収書として使えるとされ、紙での発行は原則受け付けていないと書かれています。提出先が紙を求めるときは、受け付けてもらえるかを先に確認してください。"}},{"@type":"Question","name":"スターバックス カードにオンラインで入金した分の領収書は出ますか？","acceptedAnswer":{"@type":"Answer","text":"オンライン入金・オートチャージは領収書を発行していないと、公式FAQに書かれています。領収書が必要なときは、店舗で入金すれば領収書を発行しているので、店舗での入金を選びます。"}},{"@type":"Question","name":"スタバの領収書はインボイス（適格請求書）になりますか？","acceptedAnswer":{"@type":"Answer","text":"登録番号や適格請求書としての扱いは、取得した公式FAQでは確認できませんでした。受け取った領収書に「T＋13桁」の登録番号があるかを見て確かめてください。個別の判断は税理士・税務署へ相談してください。"}},{"@type":"Question","name":"店内で飲んだ分と持ち帰りで、消費税の税率は違いますか？","acceptedAnswer":{"@type":"Answer","text":"国税庁のタックスアンサー No.6102 では、標準税率は10パーセント、軽減税率は8パーセントで、外食は軽減税率の対象に含まれないとされています。領収書の税率の欄で、その買い物がどちらで処理されているかを確かめてください。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>スタバの領収書は買い方で出し方が違う｜モバイルオーダー・カード入金を公式FAQで整理</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="eco3il5g-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="eco3il5g-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#eco3il5g-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#eco3il5g-p)" data-astro-cid-yuatfsof></rect><circle cx="323" cy="109" r="163" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>スターバックス</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>領収書</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>スタバの領収書は買い方で出し方が違う｜モバイルオーダー・カード入金を公式FAQで整理</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-10-29T00:00:00.000Z" data-astro-cid-sgg5joot>2026年10月29日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約10分</p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論スタバの領収書は買い方で出し方が変わる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：スタバの領収書は、買い方で出し方が変わる</a></li><li data-astro-cid-sgg5joot><a href="#早見表スタバの領収書の出し方買い方別" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>早見表：スタバの領収書の出し方（買い方別）</a></li><li data-astro-cid-sgg5joot><a href="#店舗で買ったときレジで従業員に申し出る" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>店舗で買ったとき：レジで従業員に申し出る</a></li><li data-astro-cid-sgg5joot><a href="#モバイルオーダーペイメールか履歴画面が領収書の代わり" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>モバイルオーダー＆ペイ：メールか履歴画面が領収書の代わり</a></li><li data-astro-cid-sgg5joot><a href="#スターバックス-カードの入金領収書が出るのは店舗での入金" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>スターバックス カードの入金：領収書が出るのは店舗での入金</a></li><li data-astro-cid-sgg5joot><a href="#egiftデジタル-スターバックス-カード-ギフト領収書は出ない" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>eGift・デジタル スターバックス カード ギフト：領収書は出ない</a></li><li data-astro-cid-sgg5joot><a href="#オンラインストアとビジネスギフトセンターの場合" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>オンラインストアとビジネスギフトセンターの場合</a></li><li data-astro-cid-sgg5joot><a href="#店内飲食と持ち帰りで税率が違う領収書の税率の欄を見る" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>店内飲食と持ち帰りで税率が違う：領収書の税率の欄を見る</a></li><li data-astro-cid-sgg5joot><a href="#インボイス適格請求書かどうかは領収書の登録番号で確かめる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>インボイス（適格請求書）かどうかは、領収書の登録番号で確かめる</a></li><li data-astro-cid-sgg5joot><a href="#受け取ったあとに確かめるチェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>10</span>受け取ったあとに確かめるチェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#経費にするときの注意" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>11</span>経費にするときの注意</a></li><li data-astro-cid-sgg5joot><a href="#次の一歩経費や領収書を帳簿にまとめる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>12</span>次の一歩：経費や領収書を帳簿にまとめる</a></li><li data-astro-cid-sgg5joot><a href="#よくある質問" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>13</span>よくある質問</a></li><li data-astro-cid-sgg5joot><a href="#まとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>14</span>まとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論スタバの領収書は買い方で出し方が変わる">結論：スタバの領収書は、買い方で出し方が変わる</h2>
+<p>スターバックスの領収書は、買い方によって出し方が違います。店舗ではレジで頼みます。モバイルオーダー＆ペイは、注文完了メールか注文履歴画面が領収書の代わりで、紙は原則出ません。</p>
+<p>オンライン入金・オートチャージ、eGift、デジタル スターバックス カード ギフトは、領収書が出ません。これはスターバックスのお客様サポートにある、領収書発行についての公式FAQに書かれている内容です。</p>
+<p>この記事では、打ち合わせや作業でスターバックスを使い、領収書を経費精算に回したい個人事業主や小さな会社の担当者に向けて、次の順に整理します。</p>
+<ul>
+<li>買い方ごとの領収書の出し方（早見表）</li>
+<li>店舗、モバイルオーダー＆ペイ、カード入金それぞれの扱い</li>
+<li>オンラインストアとビジネスギフトセンターでの受け取り方</li>
+<li>店内飲食と持ち帰りの税率、インボイスの見方</li>
+<li>受け取ったあとに確かめるチェックリスト</li>
+</ul>
+<p>内容は2026年10月25日に確認した公式ページに基づきます。アプリの画面名や操作手順は、公式FAQで確認できた範囲を超えて書きません。</p>
+<h2 id="早見表スタバの領収書の出し方買い方別">早見表：スタバの領収書の出し方（買い方別）</h2>
+<p>まず、買い方ごとの扱いを表にまとめます。右の欄は、公式FAQにある注意点です。</p>
+<table>
+<thead>
+<tr>
+<th>買い方</th>
+<th>領収書の出し方</th>
+<th>公式の注意</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>店舗での購入</td>
+<td>購入時にレジで従業員（バリスタ）に申し出る</td>
+<td>申し出ると領収書を発行する</td>
+</tr>
+<tr>
+<td>モバイルオーダー＆ペイ</td>
+<td>注文完了メールまたは注文履歴画面を領収書として使う</td>
+<td>紙での発行は原則受け付けていない</td>
+</tr>
+<tr>
+<td>オンラインストア</td>
+<td>お届け完了後、注文履歴の該当の注文詳細ページからダウンロードする</td>
+<td>お届け完了後に取得できる</td>
+</tr>
+<tr>
+<td>ビジネスギフトセンター</td>
+<td>お届け完了後、注文履歴の該当の注文詳細ページからダウンロードする（対象はスターバックス カード、eGift、法人名入れスターバックス カード）</td>
+<td>請求書や納品書の扱いは別の公式FAQを参照</td>
+</tr>
+<tr>
+<td>eGift</td>
+<td>領収書は発行していない</td>
+<td>領収書は出ない</td>
+</tr>
+<tr>
+<td>デジタル スターバックス カード ギフト</td>
+<td>領収書は発行していない</td>
+<td>領収書は出ない</td>
+</tr>
+<tr>
+<td>オンライン入金・オートチャージ</td>
+<td>領収書は発行していない</td>
+<td>領収書が必要なら店舗で入金する</td>
+</tr>
+<tr>
+<td>店舗での入金</td>
+<td>入金の際に領収書を発行している</td>
+<td>領収書が必要な場合は店舗での入金を案内している</td>
+</tr>
+</tbody>
+</table>
+<p>どの行も、行動に落とすと次のとおりです。店舗なら、支払いのときに領収書を頼みます。モバイルオーダー＆ペイなら、メールか履歴画面を保存します。カードに入金するなら、領収書が必要かどうかで入金の方法を選びます。</p>
+<h2 id="店舗で買ったときレジで従業員に申し出る">店舗で買ったとき：レジで従業員に申し出る</h2>
+<p>店舗で商品を買ったときは、公式FAQに「商品購入時に、レジにて従業員（バリスタ）にお申し付けください。領収書を発行いたします」と書かれています。</p>
+<p>つまり、注文して支払うそのときに、領収書がほしいと伝えるのが基本です。受け取らずに店を出てしまうと、あとから頼めるかどうかは、取得した公式FAQでは確認できませんでした。</p>
+<p>宛名については、書き方も、宛名を入れられるかどうかも、公式FAQでは確認できませんでした。会社名などの宛名が必要なときは、支払いの前に店舗で聞いてください。</p>
+<p>頼むときは、次の点を一度に伝えると、やり直しが減ります。</p>
+<ul>
+<li>領収書が必要であること</li>
+<li>宛名が必要かどうか（入れられるかは店舗で確認）</li>
+<li>支払いが終わる前に頼むこと</li>
+</ul>
+<h2 id="モバイルオーダーペイメールか履歴画面が領収書の代わり">モバイルオーダー＆ペイ：メールか履歴画面が領収書の代わり</h2>
+<p>モバイルオーダー＆ペイで買ったときは、公式FAQに「注文完了メールまたは注文履歴画面を領収書としてご利用いただけます」と書かれています。</p>
+<p>金額などの注文情報は、注文完了メール内の記載、または履歴画面に記載の情報を参照する、とされています。つまり、領収書にあたる情報は、メールか履歴画面の中にあります。</p>
+<p>注意したいのは、紙の扱いです。公式FAQには「紙での発行は原則受け付けておりません」とあります。店舗で受け取るレシートとは別の扱いになる、と考えておきましょう。</p>
+<h3 id="提出先が紙を求めるとき">提出先が紙を求めるとき</h3>
+<p>経費精算の提出先によっては、紙の領収書を求められることがあります。そのときは、注文完了メールや履歴画面の表示で受け付けてもらえるかを、先に確認してください。</p>
+<p>受け付けてもらえるかどうかは、提出先のルールで決まります。電子の書類をどう保存するかは、<a href="/articles/ryoushuusho-hozon-e-bunsho-taiou/">領収書の電子保存（e文書）の対応</a>で整理しています。</p>
+<p>履歴画面の見方や、メールが届かないときの対処など、アプリの細かい操作は、公式FAQでは確認できませんでした。この記事では扱いません。</p>
+<h2 id="スターバックス-カードの入金領収書が出るのは店舗での入金">スターバックス カードの入金：領収書が出るのは店舗での入金</h2>
+<p>スターバックス カードにお金を入れる入金は、方法によって領収書の扱いが分かれます。公式FAQの内容は次のとおりです。</p>
+<ul>
+<li>オンライン入金・オートチャージ：領収書は発行していない</li>
+<li>店舗での入金：領収書を発行している。領収書が必要な場合は、店舗での入金を案内している</li>
+</ul>
+<p>オートチャージは、残高が減ったときに自動で入金される仕組みです。この場合も、公式FAQでは領収書は発行していないとされています。経費にするカードを使うなら、入金の方法を先に決めておくのが安全です。</p>
+<h3 id="入金の領収書とカードで払った商品の領収書">入金の領収書と、カードで払った商品の領収書</h3>
+<p>ここで、帳簿を付けるときの一般的な注意があります。店舗でカードに入金して領収書をもらい、そのカードで飲み物を買ってまた領収書をもらうと、同じお金について書類が2枚になります。</p>
+<p>同じ支出を二重に記録しないよう、どの書類を帳簿の根拠にするかを決めておきましょう。どちらを使うのが正しいか、といった税務上の判断は、この記事では行いません。個別の判断は税理士・税務署へ相談してください。</p>
+<h2 id="egiftデジタル-スターバックス-カード-ギフト領収書は出ない">eGift・デジタル スターバックス カード ギフト：領収書は出ない</h2>
+<p>eGiftの購入と、デジタル スターバックス カード ギフトの購入は、どちらも公式FAQに領収書は発行していないと書かれています。</p>
+<p>取引先への手土産などでこれらを使うと、経費にするための領収書が手元に残りません。領収書が必要な用途では、買い方を先に選んでください。</p>
+<p>法人でスターバックス カードを買う場合は、次の節のビジネスギフトセンターが案内されています。</p>
+<h2 id="オンラインストアとビジネスギフトセンターの場合">オンラインストアとビジネスギフトセンターの場合</h2>
+<h3 id="オンラインストア">オンラインストア</h3>
+<p>オンラインストアで買ったときは、公式FAQに「お届け完了後、ご注文履歴にある該当のご注文詳細ページからダウンロードいただくことが可能です」と書かれています。</p>
+<p>お届けが終わる前は、ダウンロードできる状態になっていない、という読み方になります。急ぎの精算があるときは、お届け日を見込んで動きましょう。</p>
+<h3 id="ビジネスギフトセンター">ビジネスギフトセンター</h3>
+<p>ビジネスギフトセンターでスターバックス カード、eGift、法人名入れスターバックス カードを買った場合も、お届け完了後に、注文履歴の該当の注文詳細ページからダウンロードできるとされています。</p>
+<p>ビジネスギフトセンターで買ったスターバックス カードについては、請求書・領収書・納品書の扱いを説明した別の公式FAQがあります。内容は次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>書類</th>
+<th>公式FAQの内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>請求書・領収書</td>
+<td>注文履歴画面からダウンロードできる</td>
+</tr>
+<tr>
+<td>請求書</td>
+<td>注文完了メールに添付される。クレジットカード払いの場合は、請求書はない</td>
+</tr>
+<tr>
+<td>納品書</td>
+<td>商品に同梱して発送される</td>
+</tr>
+</tbody>
+</table>
+<p>クレジットカード払いだと請求書がない点は、見落としやすいところです。請求書が必要な場合は、支払い方法を決める前に、この点を確かめておきましょう。</p>
+<h2 id="店内飲食と持ち帰りで税率が違う領収書の税率の欄を見る">店内飲食と持ち帰りで税率が違う：領収書の税率の欄を見る</h2>
+<p>スターバックスでは、同じ飲み物や食べ物でも、店内で飲食するか持ち帰るかで消費税の税率が変わる場合があります。国税庁のタックスアンサー No.6102（消費税の軽減税率制度）には、次のように書かれています。</p>
+<ul>
+<li>標準税率は10パーセント（消費税率7.8パーセント、地方消費税率2.2パーセント）</li>
+<li>軽減税率は8パーセント（消費税率6.24パーセント、地方消費税率1.76パーセント）</li>
+<li>外食やケータリング等は軽減税率の対象には含まれない</li>
+<li>外食とは、飲食店業等の事業を営む者が飲食に用いられる設備がある場所において行う食事の提供をいう</li>
+</ul>
+<p>つまり、飲食に用いられる設備がある場所での食事の提供は外食にあたり、軽減税率の対象に含まれません。個別の買い物がどちらにあたるかは、この記事では判断しません。</p>
+<p>行動としては、受け取った領収書の税率の欄を確かめることです。店内で飲んだ分と、持ち帰った分を同じ日にまとめて買った場合も、領収書に載っている税率や金額をそのまま帳簿に写します。判断に迷うときは、税理士・税務署へ相談してください。</p>
+<h2 id="インボイス適格請求書かどうかは領収書の登録番号で確かめる">インボイス（適格請求書）かどうかは、領収書の登録番号で確かめる</h2>
+<p>経費精算で気になるのが、インボイスです。スターバックスの登録番号や、適格請求書としての扱いは、取得した公式FAQでは確認できませんでした。</p>
+<p>そのため、確かめる方法は、受け取った領収書そのものです。領収書に登録番号「T＋13桁」の記載があるかを見てください。モバイルオーダー＆ペイなら、注文完了メールや履歴画面の記載を見ます。</p>
+<p>記載がない場合に、仕入税額控除がどうなるかは、あなたの課税区分によって変わります。この記事では判断せず、税理士・税務署へ相談してください。</p>
+<h2 id="受け取ったあとに確かめるチェックリスト">受け取ったあとに確かめるチェックリスト</h2>
+<p>領収書を受け取ったら、提出する前に次の点を確かめましょう。</p>
+<ul>
+<li>買い方に合った書類を受け取っている（店舗なら領収書、モバイルオーダー＆ペイならメールか履歴画面）</li>
+<li>日付と金額が、実際の支払いと合っている</li>
+<li>店内飲食と持ち帰りの別が分かる形で、税率が書かれている</li>
+<li>登録番号「T＋13桁」の記載がある</li>
+<li>宛名が必要な場合は、店舗で聞いた内容どおりに入っている</li>
+<li>スターバックス カードの入金と商品購入で、同じ支出の書類を二重に持っていない</li>
+<li>電子の書類は、保存場所を決めて残してある</li>
+<li>提出先が紙を求めるなら、電子の書類で受け付けてもらえるか確認した</li>
+</ul>
+<h2 id="経費にするときの注意">経費にするときの注意</h2>
+<p>打ち合わせでの飲食が経費になるかどうかは、目的や状況で判断が変わります。考え方は、<a href="/articles/keihi-naru-mono-naranai-mono/">経費になるもの・ならないもの</a>で整理しています。</p>
+<p>電子の領収書を保存するときの考え方は、<a href="/articles/ryoushuusho-hozon-e-bunsho-taiou/">領収書の電子保存（e文書）の対応</a>にまとめています。</p>
+<p>この記事は、領収書の出し方を整理するものです。経費にできるかどうか、どの勘定科目にするかといった個別の判断は、税理士・税務署へ相談してください。</p>
+<h2 id="次の一歩経費や領収書を帳簿にまとめる">次の一歩：経費や領収書を帳簿にまとめる</h2>
+<p>領収書を集めたあとは、日付・金額・取引先を帳簿に記録する作業が残ります。経費や領収書を帳簿にまとめたい個人事業主は、会計ソフトで管理する方法もあります。</p>
+<aside class="cta-box"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">弥生株式会社</p><h3 class="cta-box__title">弥生シリーズ（やよいの青色申告 オンライン など）</h3><p class="cta-box__body">会計・青色申告のクラウドソフト。新規申込が成果条件。</p><a class="cta-box__button" href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E9T4M2+35XE+5ZEMP" data-offer="yayoi" rel="sponsored nofollow noopener" target="_blank">弥生シリーズ（やよいの青色申告 オンライン など）の公式サイトへ</a></aside>
+<p><a href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E9T4M2+35XE+5ZEMP" rel="sponsored nofollow noopener" target="_blank">弥生の公式サイトで機能と料金を確認する</a></p>
+<p>弥生は、会計・青色申告のクラウドソフトです。新規申込みの条件や料金は、公式サイトで確認してください。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="スタバの店舗で買ったとき領収書はどうすればもらえますか">スタバの店舗で買ったとき、領収書はどうすればもらえますか？</h3>
+<p>公式FAQでは、商品購入時にレジで従業員（バリスタ）に申し出ると、領収書を発行するとされています。宛名の書き方や、宛名を入れられるかどうかは、公式FAQでは確認できなかったため、店舗で聞いてください。</p>
+<h3 id="モバイルオーダーペイの領収書は紙でもらえますか">モバイルオーダー＆ペイの領収書は紙でもらえますか？</h3>
+<p>公式FAQでは、注文完了メールまたは注文履歴画面を領収書として使えるとされています。紙での発行は原則受け付けていません。提出先が紙を求めるときは、受け付けてもらえるかを先に確認してください。</p>
+<h3 id="スターバックス-カードにオンラインで入金した分の領収書は出ますか">スターバックス カードにオンラインで入金した分の領収書は出ますか？</h3>
+<p>オンライン入金・オートチャージは、領収書を発行していません。店舗での入金なら領収書を発行しているので、必要なときは店舗で入金します。</p>
+<h3 id="スタバの領収書はインボイスになりますか">スタバの領収書はインボイスになりますか？</h3>
+<p>登録番号や適格請求書としての扱いは、取得した公式FAQでは確認できませんでした。受け取った領収書で、登録番号「T＋13桁」の記載を確かめてください。</p>
+<h3 id="店内で飲んだ分と持ち帰りで税率は違いますか">店内で飲んだ分と持ち帰りで、税率は違いますか？</h3>
+<p>国税庁 No.6102 では、標準税率は10パーセント、軽減税率は8パーセントで、外食は軽減税率の対象に含まれないとされています。領収書の税率の欄で確かめてください。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul>
+<li>店舗で買ったときは、購入時にレジで従業員（バリスタ）に領収書を頼む</li>
+<li>モバイルオーダー＆ペイは、注文完了メールか注文履歴画面が領収書の代わり。紙は原則出ない</li>
+<li>オンライン入金・オートチャージ、eGift、デジタル スターバックス カード ギフトは領収書が出ない。カードの領収書が必要なら店舗で入金する</li>
+<li>オンラインストアとビジネスギフトセンターは、お届け完了後に注文履歴の注文詳細ページからダウンロードする</li>
+<li>税率は領収書の欄で確かめる。外食は軽減税率の対象に含まれない（国税庁 No.6102）</li>
+<li>インボイスは公式FAQで確認できなかったため、領収書の「T＋13桁」で確かめる</li>
+<li>経費にできるかなどの個別の判断は、税理士・税務署へ相談する</li>
+</ul>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>スタバの店舗で買ったとき、領収書はどうすればもらえますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式FAQでは、商品購入時にレジで従業員（バリスタ）に申し出ると領収書を発行するとされています。宛名の書き方や宛名を入れられるかは、取得した公式FAQでは確認できなかったため、店舗で聞いてください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>モバイルオーダー＆ペイの領収書は紙でもらえますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式FAQでは、注文完了メールまたは注文履歴画面を領収書として使えるとされ、紙での発行は原則受け付けていないと書かれています。提出先が紙を求めるときは、受け付けてもらえるかを先に確認してください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>スターバックス カードにオンラインで入金した分の領収書は出ますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>オンライン入金・オートチャージは領収書を発行していないと、公式FAQに書かれています。領収書が必要なときは、店舗で入金すれば領収書を発行しているので、店舗での入金を選びます。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>スタバの領収書はインボイス（適格請求書）になりますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>登録番号や適格請求書としての扱いは、取得した公式FAQでは確認できませんでした。受け取った領収書に「T＋13桁」の登録番号があるかを見て確かめてください。個別の判断は税理士・税務署へ相談してください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>店内で飲んだ分と持ち帰りで、消費税の税率は違いますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>国税庁のタックスアンサー No.6102 では、標準税率は10パーセント、軽減税率は8パーセントで、外食は軽減税率の対象に含まれないとされています。領収書の税率の欄で、その買い物がどちらで処理されているかを確かめてください。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://starbucks-japan.my.site.com/s/a/2247" rel="noopener" target="_blank" data-astro-cid-sgg5joot>スターバックス お客様サポート 各種サービスの領収書発行について知りたい</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-25）</span></li><li data-astro-cid-sgg5joot><a href="https://starbucks-japan.my.site.com/s/a/000004105" rel="noopener" target="_blank" data-astro-cid-sgg5joot>スターバックス お客様サポート ビジネスギフトセンターで購入したスターバックス カードの請求書・領収書・納品書発行について知りたい</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-25）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6102.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.6102 消費税の軽減税率制度</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-25）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/kakutei-shinkoku/" data-astro-cid-sgg5joot>確定申告・会計ソフト・経費の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/receipts/" data-astro-cid-sgg5joot>サービス別 領収書・インボイス対応一覧を見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

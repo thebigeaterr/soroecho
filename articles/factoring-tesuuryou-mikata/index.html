@@ -1,0 +1,255 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ファクタリングの手数料に相場はない？手取りで比べる計算と見積もりの見方 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="ファクタリングの手数料に公的機関が示した相場はなく、各社の表記も率や差引額など形が異なります。そのため率だけで比べず、手取り額・入金日・手数料以外の費用まで含めて比べるのが結論です。計算例とチェックリスト、金融庁の注意点も整理します。"><link rel="canonical" href="https://soroecho.com/articles/factoring-tesuuryou-mikata/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="ファクタリングの手数料に相場はない？手取りで比べる計算と見積もりの見方 | そろえ帳"><meta property="og:description" content="ファクタリングの手数料に公的機関が示した相場はなく、各社の表記も率や差引額など形が異なります。そのため率だけで比べず、手取り額・入金日・手数料以外の費用まで含めて比べるのが結論です。計算例とチェックリスト、金融庁の注意点も整理します。"><meta property="og:url" content="https://soroecho.com/articles/factoring-tesuuryou-mikata/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/factoring-tesuuryou-mikata.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="ファクタリングの手数料に相場はない？手取りで比べる計算と見積もりの見方 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="ファクタリングの手数料に相場はない？手取りで比べる計算と見積もりの見方 | そろえ帳"><meta name="twitter:description" content="ファクタリングの手数料に公的機関が示した相場はなく、各社の表記も率や差引額など形が異なります。そのため率だけで比べず、手取り額・入金日・手数料以外の費用まで含めて比べるのが結論です。計算例とチェックリスト、金融庁の注意点も整理します。"><meta name="twitter:image" content="https://soroecho.com/og/factoring-tesuuryou-mikata.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"ファクタリングの手数料に相場はない？手取りで比べる計算と見積もりの見方","item":"https://soroecho.com/articles/factoring-tesuuryou-mikata/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"ファクタリングの手数料に相場はない？手取りで比べる計算と見積もりの見方","description":"ファクタリングの手数料に公的機関が示した相場はなく、各社の表記も率や差引額など形が異なります。そのため率だけで比べず、手取り額・入金日・手数料以外の費用まで含めて比べるのが結論です。計算例とチェックリスト、金融庁の注意点も整理します。","url":"https://soroecho.com/articles/factoring-tesuuryou-mikata/","datePublished":"2026-10-31T00:00:00.000Z","dateModified":"2026-10-31T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/factoring-tesuuryou-mikata/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"ファクタリングの手数料に相場はありますか？","acceptedAnswer":{"@type":"Answer","text":"公的機関が示した相場は見当たりません。各社の公式サイトの表記も、一律・範囲・利用額別と形が違います。率の高低ではなく、手取り額と入金日、手数料以外の費用の有無で比べるのが実務的です。"}},{"@type":"Question","name":"手数料以外に費用がかかることはありますか？","acceptedAnswer":{"@type":"Answer","text":"会社によって表記が異なります。公式サイトで手数料以外の費用なしと書く会社もあれば、トップページで確認できない会社もあります。見積もりの段階で、総額と内訳を書面で確認してください。"}},{"@type":"Question","name":"手数料の計算はどうすればよいですか？","acceptedAnswer":{"@type":"Answer","text":"手取りは、請求額から手数料とその他の費用を引いて求めます。あわせて入金日までの日数を確認し、手数料を手取りで割って365を日数で掛けると、比較用の年換算の目安が出せます。"}},{"@type":"Question","name":"手数料が高すぎるときの注意点はありますか？","acceptedAnswer":{"@type":"Answer","text":"金融庁は、高額な手数料や大幅な割引率で契約すると資金繰りが悪化し、多重債務に陥る危険性があると注意しています。買取代金が債権額に比べて著しく低い場合は、偽装ファクタリングの例にも挙げられています。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>ファクタリングの手数料に相場はない？手取りで比べる計算と見積もりの見方</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecid2dnc-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecid2dnc-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ecid2dnc-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecid2dnc-p)" data-astro-cid-yuatfsof></rect><circle cx="353" cy="69" r="173" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>ファクタリング</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>手数料</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>ファクタリングの手数料に相場はない？手取りで比べる計算と見積もりの見方</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-10-31T00:00:00.000Z" data-astro-cid-sgg5joot>2026年10月31日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約8分</p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#ファクタリングの手数料に相場はない率ではなく手取りで比べる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>ファクタリングの手数料に相場はない：率ではなく手取りで比べる</a></li><li data-astro-cid-sgg5joot><a href="#手数料の表し方率一律利用額別と別にかかる費用" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>手数料の表し方：率・一律・利用額別と、別にかかる費用</a></li><li data-astro-cid-sgg5joot><a href="#手数料に影響する要素公式が書いている範囲" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>手数料に影響する要素：公式が書いている範囲</a></li><li data-astro-cid-sgg5joot><a href="#各社の公式の手数料の比較表記の違いを見る" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>各社の公式の手数料の比較：表記の違いを見る</a></li><li data-astro-cid-sgg5joot><a href="#手数料の計算と手取り計算例と年換算の目安" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>手数料の計算と手取り：計算例と年換算の目安</a></li><li data-astro-cid-sgg5joot><a href="#見積もりを比べるときのチェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>見積もりを比べるときのチェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#金融庁の注意高額な手数料と偽装ファクタリング" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>金融庁の注意：高額な手数料と偽装ファクタリング</a></li><li data-astro-cid-sgg5joot><a href="#次の一歩手数料の見方を決めたあとで" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>次の一歩：手数料の見方を決めたあとで</a></li><li data-astro-cid-sgg5joot><a href="#まとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>まとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="ファクタリングの手数料に相場はない率ではなく手取りで比べる">ファクタリングの手数料に相場はない：率ではなく手取りで比べる</h2>
+<p>ファクタリングの手数料について、公的機関が示した相場は見当たりません。各社の公式の表記も「一律」「範囲」「利用額別」と形が違い、率だけを並べても比べられません。</p>
+<p>そのため、比べる軸は「手取り額」「入金日」「手数料以外の費用の有無」の3つにするのが実務的です。金融庁も、高額な手数料で契約すると資金繰りが悪化するおそれがあると注意しています。</p>
+<p>この記事では、手数料の表し方、公式サイトの表記、手取りの計算、見積もりのチェックリストの順に整理します。ファクタリングの仕組みそのものは <a href="/articles/factoring-toha/">ファクタリングとは</a> にまとめています。</p>
+<p>手数料の額は、自分の請求書の金額と入金までの日数に当てはめて計算してはじめて分かります。この記事では、その計算の仕方を示します。</p>
+<h2 id="手数料の表し方率一律利用額別と別にかかる費用">手数料の表し方：率・一律・利用額別と、別にかかる費用</h2>
+<p>公式サイトでの手数料の書き方は、大きく3つに分かれます。どれが良いという話ではなく、書き方によって見積もりの前に分かることが違います。</p>
+<ol>
+<li><strong>一律の率</strong>：「手数料は一律○%」と書く形です。請求額が決まれば、手数料の額を先に計算できます。</li>
+<li><strong>範囲（下限〜上限）</strong>：「○%〜○%」と幅を持たせる形です。実際の率は審査後の見積もりで決まるため、上限で計算して最悪の場合を確認します。</li>
+<li><strong>利用額別の表</strong>：利用額の区分ごとに範囲を示す形です。自分の請求額がどの区分に入るかを見ます。</li>
+</ol>
+<p>もうひとつ大事なのが、手数料に何が含まれるかです。手数料のほかに、振込手数料、登記費用、交通費、印紙代などが別にかかる場合があります。</p>
+<p>公式に「手数料以外の費用なし」と書く会社もあれば、記載を確認できない会社もあります。記載がない場合は、見積もりの段階で内訳を聞いてください。</p>
+<p>率が低く見えても、別の費用が加われば手取りは減ります。逆に率が高めでも、別の費用がなければ総額が近くなることもあります。だから率ではなく総額で見ます。</p>
+<h2 id="手数料に影響する要素公式が書いている範囲">手数料に影響する要素：公式が書いている範囲</h2>
+<p>手数料がどう決まるかは、会社によって公開の度合いが違います。ここでは公式サイトに書かれている範囲だけを挙げます。</p>
+<ul>
+<li><strong>2社間と3社間で範囲が違う</strong>：株式会社No.1とアクセルファクターは、公式の表記で2社間と3社間の範囲を分けています。2社間は利用者と会社だけの契約、3社間は売掛先（請求の相手）も加わる契約です。</li>
+<li><strong>利用額別の表がある</strong>：アクセルファクターは、利用額の区分ごとに範囲を示した表を載せています（下表）。</li>
+<li><strong>審査状況で上下限が変わる</strong>：アクセルファクターは「審査状況によって手数料の上下限が変動することがある」と書いています。</li>
+</ul>
+<p>なお、株式会社No.1は会社名であり、順位や評価を表すものではありません。</p>
+<p>アクセルファクターの手数料表（2026年10月17日時点・<a href="https://accelfacter.co.jp/service/encashment.php">公式ページ</a>）は次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>利用額</th>
+<th>3社間</th>
+<th>2社間</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100万円未満</td>
+<td>4.0%〜10.5%</td>
+<td>4.5%〜12.0%</td>
+</tr>
+<tr>
+<td>100万円以上</td>
+<td>3.0%〜10.0%</td>
+<td>4.0%〜11.0%</td>
+</tr>
+<tr>
+<td>500万円以上</td>
+<td>2.0%〜9.0%</td>
+<td>3.5%〜10.0%</td>
+</tr>
+<tr>
+<td>1,000万円以上</td>
+<td>1.0%〜7.0%</td>
+<td>3.0%〜9.5%</td>
+</tr>
+<tr>
+<td>2,000万円以上</td>
+<td>0.5%〜6.0%</td>
+<td>1.0%〜8.0%</td>
+</tr>
+</tbody>
+</table>
+<p>これらは各社の表記であり、どの条件でどの率になるかは見積もりで決まります。ここに書かれていない要因を、憶測で当てはめることはしません。</p>
+<h2 id="各社の公式の手数料の比較表記の違いを見る">各社の公式の手数料の比較：表記の違いを見る</h2>
+<p>次の表は、各社の公式サイトの表記を2026年10月17日に確認した内容です。表は「その会社の表記であり、実際の条件を保証するものではない」点にご注意ください。</p>
+<table>
+<thead>
+<tr>
+<th>会社</th>
+<th>公式の手数料の表記</th>
+<th>手数料以外の費用の表記</th>
+<th>出典ページ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ラボル</td>
+<td>一律、買取額の10%</td>
+<td>振込手数料などの他の費用も一切かからないと表記</td>
+<td><a href="https://labol.co.jp/">labol.co.jp</a></td>
+</tr>
+<tr>
+<td>ペイトナー</td>
+<td>一律10%の手数料のみ（公式は「請求書の先払い」と表記し、「ファクタリング」の語は使っていない）</td>
+<td>コストは手数料のみと表記</td>
+<td><a href="https://paytner.co.jp/">paytner.co.jp</a></td>
+</tr>
+<tr>
+<td>株式会社No.1</td>
+<td>買取手数料0.5%〜15%（2社間0.5%〜15%、3社間0.5%〜5%）</td>
+<td>なし（登記費用、交通費、印紙代など手数料以外の費用は一切かからないと表記）</td>
+<td><a href="https://no1service.co.jp/factoring-service/">no1service.co.jp</a></td>
+</tr>
+<tr>
+<td>アクセルファクター</td>
+<td>ページにより異なる。サービスページは利用額別の表（前節）、FAQは2社間1〜12%・3社間0.5〜10.5%を目安とし、審査によっては範囲に収まらない場合もあると表記</td>
+<td>手数料以外の費用は一切不要と表記</td>
+<td><a href="https://accelfacter.co.jp/service/encashment.php">サービスページ</a>／<a href="https://accelfacter.co.jp/faq.php">FAQ</a></td>
+</tr>
+<tr>
+<td>QuQuMo online</td>
+<td>率の表記は公式トップで確認できず（審査完了後に買取額と手数料が提示されると表記）</td>
+<td>公式トップでは確認できず</td>
+<td><a href="https://ququmo.net/">ququmo.net</a></td>
+</tr>
+<tr>
+<td>ビートレーディング</td>
+<td>率の表記は公式トップで確認できず（見積りで提示）</td>
+<td>公式トップでは確認できず</td>
+<td><a href="https://betrading.jp/">betrading.jp</a></td>
+</tr>
+</tbody>
+</table>
+<p>アクセルファクターのように、同じ公式サイトでもページによって表記が異なる場合があります。こうした会社は、見積りの段階で自分の条件の率を書面で確認してください。</p>
+<p>率が公式トップに載っていない会社は、載せていないだけで、高い・安いを意味しません。見積もりで出る金額を、次の節の方法で比べてください。</p>
+<p>ペイトナーの「一律10％の手数料のみ」という表記は、<a href="https://px.a8.net/svt/ejp?a8mat=4BEIPB+4RHMA+4PF6+5YJRM" rel="sponsored nofollow noopener" target="_blank">ペイトナーの公式サイト</a>で確認できます。</p>
+<p>審査後に買取額と手数料が提示される流れを、公式サイトで確認したい場合は <a href="https://px.a8.net/svt/ejp?a8mat=4BEIPB+2Z6SY+4JGG+BWVTE" rel="sponsored nofollow noopener" target="_blank">QuQuMo onlineの公式サイトを確認する</a> から見られます。</p>
+<h2 id="手数料の計算と手取り計算例と年換算の目安">手数料の計算と手取り：計算例と年換算の目安</h2>
+<p>手取りは、次の式で求めます。</p>
+<p><strong>手取り＝請求額−手数料−その他の費用</strong></p>
+<h3 id="計算例架空の数字">計算例（架空の数字）</h3>
+<p>請求額100万円、手数料10%、その他の費用なしとします。</p>
+<ol>
+<li>手数料：100万円×10%＝10万円</li>
+<li>手取り：100万円−10万円＝90万円</li>
+</ol>
+<h3 id="年換算の目安計算例">年換算の目安（計算例）</h3>
+<p>同じ手数料でも、入金日までの日数が短い請求書を現金化するほど、年換算した負担は大きくなります。比べやすくするため、手数料を「早く現金化できた90万円に対するコスト」として年換算します。</p>
+<ol>
+<li>手数料÷手取り：10万円÷90万円＝約11.1%</li>
+<li>年換算：11.1%×365÷入金日までの日数</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>入金日までの日数</th>
+<th>計算</th>
+<th>年換算の目安</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>30日</td>
+<td>11.1%×365÷30</td>
+<td>約135%</td>
+</tr>
+<tr>
+<td>60日</td>
+<td>11.1%×365÷60</td>
+<td>約68%</td>
+</tr>
+</tbody>
+</table>
+<p>これは単純計算であり、実際の費用ではありません。複数の見積もりを同じ物差しで並べるための、比較のための見方です。</p>
+<p>見積もりが複数あるときは、「手取り額」と「入金日」の2つを並べ、上の式で年換算を出してください。入金サイクル全体の考え方は <a href="/articles/freelance-nyukin-cycle-shikinguri/">入金サイクルと資金繰り</a> も参考になります。</p>
+<h2 id="見積もりを比べるときのチェックリスト">見積もりを比べるときのチェックリスト</h2>
+<p>見積もりを受け取ったら、次の項目を同じ表に書き出して比べます。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 請求額（買取の対象になる金額）はいくらか</li>
+<li class="task-list-item"><input type="checkbox" disabled> 手数料の額と率はいくらか（上限で計算した額も確認）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 手数料以外の費用（振込手数料・登記費用・交通費・印紙代など）の有無と額</li>
+<li class="task-list-item"><input type="checkbox" disabled> 総額（手数料＋その他の費用）はいくらか</li>
+<li class="task-list-item"><input type="checkbox" disabled> 手取り額（請求額−総額）はいくらか</li>
+<li class="task-list-item"><input type="checkbox" disabled> 入金日はいつか（申込から何日後か）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 2社間か3社間か（売掛先に通知が行くか）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 売掛先が支払えなかったとき、利用者が買い戻す条件（買い戻し条項）があるか</li>
+<li class="task-list-item"><input type="checkbox" disabled> 見積もりの金額は書面やメールで残るか、審査後に変わる可能性はあるか</li>
+<li class="task-list-item"><input type="checkbox" disabled> 契約書の「債権の売買（譲渡）」という内容と、実際の取引内容が合っているか</li>
+</ul>
+<p>特に総額と手取りは、口頭ではなく書面で確かめてください。審査状況で条件が変わる会社もあるため、変わる場合の上限も聞いておくと安心です。</p>
+<h2 id="金融庁の注意高額な手数料と偽装ファクタリング">金融庁の注意：高額な手数料と偽装ファクタリング</h2>
+<p>金融庁は、高額な手数料や大幅な割引率でファクタリングを契約すると、資金繰りが悪化し、多重債務に陥る危険性があると注意喚起しています（<a href="https://www.fsa.go.jp/ordinary/chuui/kinyu_chuui4.html">金融庁の注意喚起</a>）。</p>
+<p>また金融庁は、ファクタリングを債権の売買（債権譲渡）契約と説明しています。債権の買取代金が債権額に比べ著しく低額なものなどは、偽装ファクタリングの例として挙げられています（<a href="https://www.fsa.go.jp/user/factoring.html">金融庁の解説</a>）。</p>
+<p>貸金業の登録の有無は、金融庁の「登録貸金業者情報検索サービス」で確認できるとされています。見積もりの手数料だけでなく、契約の中身も確かめてください。</p>
+<p>個人事業主が利用するときの注意点は、<a href="/articles/factoring-kojin-jigyou-chuui/">個人事業主がファクタリングを使うときの注意</a> に詳しくまとめています。</p>
+<h2 id="次の一歩手数料の見方を決めたあとで">次の一歩：手数料の見方を決めたあとで</h2>
+<p>手数料の見方が決まったら、仕組みの理解、即日入金の見方、入金サイクルの整理の順に進めると迷いにくくなります。</p>
+<ol>
+<li><a href="/articles/factoring-toha/">ファクタリングとは</a>：2社間・3社間の仕組みを確認する</li>
+<li><a href="/articles/factoring-sokujitsu-erabikata/">即日入金の見方と各社の比較</a>：入金日の条件を見る</li>
+<li><a href="/articles/freelance-nyukin-cycle-shikinguri/">入金サイクルと資金繰り</a>：そもそも利用が必要かを見直す</li>
+</ol>
+<aside class="cta-box"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">株式会社No.1</p><h3 class="cta-box__title">株式会社No.1（ファクタリング）</h3><p class="cta-box__body">法人向けの売掛金の買取（ファクタリング）サービス。</p><a class="cta-box__button" href="https://px.a8.net/svt/ejp?a8mat=4BEIPB+3KMEQ+4EKW+5YJRM" data-offer="factoring-no1" rel="sponsored nofollow noopener" target="_blank">株式会社No.1（ファクタリング）の公式サイトへ</a></aside>
+<p>手数料の範囲や「手数料以外の費用」の有無は、見積もりを比べる前に公式の表記で確認できます。株式会社No.1は、公式サイトで買取手数料の範囲を示し、手数料以外の費用はないと表記しています。</p>
+<p>条件の詳細は申込内容によって異なるため、公式の表記と見積もりの内容を照らして確認してください。</p>
+<p><a href="https://px.a8.net/svt/ejp?a8mat=4BEIPB+3KMEQ+4EKW+5YJRM" rel="sponsored nofollow noopener" target="_blank">株式会社No.1の公式サイトで条件を確認する</a></p>
+<h2 id="まとめ">まとめ</h2>
+<p>ファクタリングの手数料に、公的機関が示した相場は見当たりません。各社の表記も一律・範囲・利用額別と形が違うため、率だけでは比べられません。</p>
+<p>比べる軸は、手取り額、入金日、手数料以外の費用の有無です。手取りは「請求額−手数料−その他の費用」で求め、必要なら年換算の目安も出します。</p>
+<p>年換算は単純計算で、実際の費用ではありません。複数の見積もりを同じ物差しに乗せるための見方として使ってください。</p>
+<p>金融庁は、高額な手数料や大幅な割引率に注意を促しています。見積もりはチェックリストで書面を確認し、納得できる条件だけを選びましょう。</p>
+<p>出典はいずれも2026年10月17日に確認した公式ページです。条件は変わることがあるため、申込前に最新の公式情報を確認してください。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>ファクタリングの手数料に相場はありますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公的機関が示した相場は見当たりません。各社の公式サイトの表記も、一律・範囲・利用額別と形が違います。率の高低ではなく、手取り額と入金日、手数料以外の費用の有無で比べるのが実務的です。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>手数料以外に費用がかかることはありますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>会社によって表記が異なります。公式サイトで手数料以外の費用なしと書く会社もあれば、トップページで確認できない会社もあります。見積もりの段階で、総額と内訳を書面で確認してください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>手数料の計算はどうすればよいですか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>手取りは、請求額から手数料とその他の費用を引いて求めます。あわせて入金日までの日数を確認し、手数料を手取りで割って365を日数で掛けると、比較用の年換算の目安が出せます。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>手数料が高すぎるときの注意点はありますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>金融庁は、高額な手数料や大幅な割引率で契約すると資金繰りが悪化し、多重債務に陥る危険性があると注意しています。買取代金が債権額に比べて著しく低い場合は、偽装ファクタリングの例にも挙げられています。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://labol.co.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>ラボル 公式サイト</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://paytner.co.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>ペイトナー 公式サイト</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://no1service.co.jp/factoring-service/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>株式会社No.1 ファクタリングサービス</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://accelfacter.co.jp/service/encashment.php" rel="noopener" target="_blank" data-astro-cid-sgg5joot>アクセルファクター 手数料（サービスページ）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://accelfacter.co.jp/faq.php" rel="noopener" target="_blank" data-astro-cid-sgg5joot>アクセルファクター よくある質問</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://ququmo.net/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>QuQuMo online 公式サイト</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://betrading.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>ビートレーディング 公式サイト</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.fsa.go.jp/ordinary/chuui/kinyu_chuui4.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>金融庁 高額な手数料によるファクタリングに関する注意喚起</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.fsa.go.jp/user/factoring.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>金融庁 ファクタリングの利用に関する注意</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/seikyuusho-shiharai/" data-astro-cid-sgg5joot>請求書・資金繰り・法人カードの記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

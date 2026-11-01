@@ -1,0 +1,266 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Amazonビジネスの送料は無料？3,500円未満の配送料とプライムビジネスで無料になる条件 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="Amazonビジネスで Amazon.co.jp が発送する商品は、通常配送なら注文金額3,500円以上で無料、未満は460円（北海道・九州・沖縄・離島は500円）です。プライムビジネスなら対象商品は金額にかかわらず無料。個人のプライム会員が使える無料の Duo、定期おトク便、出品者の商品の扱いも公式ページで整理します。"><link rel="canonical" href="https://soroecho.com/articles/amazon-business-souryou/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="Amazonビジネスの送料は無料？3,500円未満の配送料とプライムビジネスで無料になる条件 | そろえ帳"><meta property="og:description" content="Amazonビジネスで Amazon.co.jp が発送する商品は、通常配送なら注文金額3,500円以上で無料、未満は460円（北海道・九州・沖縄・離島は500円）です。プライムビジネスなら対象商品は金額にかかわらず無料。個人のプライム会員が使える無料の Duo、定期おトク便、出品者の商品の扱いも公式ページで整理します。"><meta property="og:url" content="https://soroecho.com/articles/amazon-business-souryou/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/amazon-business-souryou.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Amazonビジネスの送料は無料？3,500円未満の配送料とプライムビジネスで無料になる条件 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Amazonビジネスの送料は無料？3,500円未満の配送料とプライムビジネスで無料になる条件 | そろえ帳"><meta name="twitter:description" content="Amazonビジネスで Amazon.co.jp が発送する商品は、通常配送なら注文金額3,500円以上で無料、未満は460円（北海道・九州・沖縄・離島は500円）です。プライムビジネスなら対象商品は金額にかかわらず無料。個人のプライム会員が使える無料の Duo、定期おトク便、出品者の商品の扱いも公式ページで整理します。"><meta name="twitter:image" content="https://soroecho.com/og/amazon-business-souryou.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"Amazonビジネスの送料は無料？3,500円未満の配送料とプライムビジネスで無料になる条件","item":"https://soroecho.com/articles/amazon-business-souryou/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Amazonビジネスの送料は無料？3,500円未満の配送料とプライムビジネスで無料になる条件","description":"Amazonビジネスで Amazon.co.jp が発送する商品は、通常配送なら注文金額3,500円以上で無料、未満は460円（北海道・九州・沖縄・離島は500円）です。プライムビジネスなら対象商品は金額にかかわらず無料。個人のプライム会員が使える無料の Duo、定期おトク便、出品者の商品の扱いも公式ページで整理します。","url":"https://soroecho.com/articles/amazon-business-souryou/","datePublished":"2026-11-01T00:00:00.000Z","dateModified":"2026-11-01T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/amazon-business-souryou/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Amazonビジネスの送料は無料ですか？","acceptedAnswer":{"@type":"Answer","text":"Amazon.co.jp が発送する商品の通常配送は、注文金額が3,500円以上なら無料です。3,500円に満たない場合は、本州・四国（離島を除く）で460円、北海道・九州・沖縄・離島で500円です（Amazonのヘルプ「配送料と配送条件」、2026年11月1日確認）。プライムビジネスに入っていれば、対象商品は注文金額にかかわらず送料無料です。"}},{"@type":"Question","name":"Amazonビジネスで注文すると、送料はかかりますか？","acceptedAnswer":{"@type":"Answer","text":"プライムビジネスに入っていない場合は、注文金額と配送オプションで決まります。通常配送は3,500円未満なら460円または500円、お急ぎ便は510円から、当日お急ぎ便は610円からです。出品者が発送する商品は出品者ごとの配送料です。実際の金額は注文確定画面で確かめてください。"}},{"@type":"Question","name":"個人でAmazonプライム会員なら、ビジネスアカウントでも送料無料になりますか？","acceptedAnswer":{"@type":"Answer","text":"Amazonのヘルプによると、プライムビジネスDuoはユーザー数1名のビジネスアカウントで使えるプランで、個人向けアカウントでAmazonプライム会員に登録している必要があります。登録の際に個人向けアカウントとビジネスアカウントを紐づけます。Duoの料金は公式ページで無料と表示されています。"}},{"@type":"Question","name":"2か所に送ると送料はどうなりますか？","acceptedAnswer":{"@type":"Answer","text":"1回の注文で2か所以上に配送する場合は、配送先ごとに配送料がかかり、3,500円の基準も配送先ごとの注文金額で判定されます。「準備ができた商品から順に発送」を選ぶと、発送ごとに配送料が加算されます。"}},{"@type":"Question","name":"プライムビジネスでどれだけ送料を節約できたか分かりますか？","acceptedAnswer":{"@type":"Answer","text":"プライムビジネスの公式ページのよくある質問によると、プライムビジネス会員であれば、購買分析ダッシュボードで過去12ヵ月分の配送料の割引合計を見られます。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>Amazonビジネスの送料は無料？3,500円未満の配送料とプライムビジネスで無料になる条件</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec18js43z-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient></defs><rect width="400" height="225" fill="url(#ec18js43z-g)" data-astro-cid-yuatfsof></rect><circle cx="358" cy="53" r="49.349999999999994" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="358" cy="53" r="77.55000000000001" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="358" cy="53" r="105.75" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="358" cy="53" r="133.95" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="358" cy="53" r="141" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>amazonビジネス</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>送料</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--amazon-business">Amazonビジネス実務</span><h1 data-astro-cid-sgg5joot>Amazonビジネスの送料は無料？3,500円未満の配送料とプライムビジネスで無料になる条件</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-11-01T00:00:00.000Z" data-astro-cid-sgg5joot>2026年11月1日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約8分</p><p class="cta-inline">送料の条件を自分の注文で確かめるなら、Amazonビジネスの登録（無料）から<a href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">登録ページを見る（公式）</a></p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論3500円以上なら通常配送は無料未満は460円から" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：3,500円以上なら通常配送は無料、未満は460円から</a></li><li data-astro-cid-sgg5joot><a href="#プライムビジネスに入っていないときの配送料" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>プライムビジネスに入っていないときの配送料</a></li><li data-astro-cid-sgg5joot><a href="#送料がかかりやすい注文の仕方" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>送料がかかりやすい注文の仕方</a></li><li data-astro-cid-sgg5joot><a href="#プライムビジネスで無料になる範囲" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>プライムビジネスで無料になる範囲</a></li><li data-astro-cid-sgg5joot><a href="#個人でプライム会員なら-duo-が無料" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>個人でプライム会員なら Duo が無料</a></li><li data-astro-cid-sgg5joot><a href="#プライムビジネスなしでも送料がかからない定期おトク便" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>プライムビジネスなしでも送料がかからない定期おトク便</a></li><li data-astro-cid-sgg5joot><a href="#送料を見積もるときのチェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>送料を見積もるときのチェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#他の購入先との比べ方" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>他の購入先との比べ方</a></li><li data-astro-cid-sgg5joot><a href="#まとめまず注文金額と配送先の数を見る" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>まとめ：まず注文金額と配送先の数を見る</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論3500円以上なら通常配送は無料未満は460円から">結論：3,500円以上なら通常配送は無料、未満は460円から</h2>
+<p>Amazonビジネスで買う場合も、Amazon.co.jp が発送する商品の配送料は、Amazonのヘルプ「配送料と配送条件」（2026年11月1日確認）の基準で考えます。</p>
+<p>通常配送は、注文金額が3,500円以上なら無料です。3,500円に満たないと、本州・四国（離島を除く）で460円、北海道・九州・沖縄・離島で500円がかかります。</p>
+<p>プライムビジネスに入っていれば、対象商品は注文金額にかかわらず送料無料になり、お急ぎ便や日時指定も無料で使えます。個人でAmazonプライム会員なら、ユーザー1名のビジネスアカウント向けの「Duo」が無料と表示されています。</p>
+<table>
+<thead>
+<tr>
+<th>あなたの状況</th>
+<th>通常配送の送料（Amazon.co.jp が発送する商品）</th>
+<th>お急ぎ便・日時指定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>プライムビジネスなし・3,500円以上</td>
+<td>無料</td>
+<td>有料（510円から）</td>
+</tr>
+<tr>
+<td>プライムビジネスなし・3,500円未満</td>
+<td>460円（北海道・九州・沖縄・離島は500円）</td>
+<td>有料（510円から）</td>
+</tr>
+<tr>
+<td>プライムビジネスあり（対象商品）</td>
+<td>注文金額にかかわらず無料</td>
+<td>無料</td>
+</tr>
+</tbody>
+</table>
+<p>この記事で分かることは次のとおりです。</p>
+<ul>
+<li>プライムビジネスに入っていないときの配送料の表</li>
+<li>送料がかかりやすい注文の仕方（2か所に送る・分けて発送する）</li>
+<li>プライムビジネスで無料になる範囲と、無料にならない商品</li>
+<li>個人のプライム会員が使える Duo の条件</li>
+<li>プライムビジネスなしでも送料がかからない定期おトク便</li>
+</ul>
+<p>金額は2026年11月1日に確認した公式ページの表記です。キャンペーンなどで変わることがあるため、最終的には注文確定画面の金額で確かめてください。</p>
+<h2 id="プライムビジネスに入っていないときの配送料">プライムビジネスに入っていないときの配送料</h2>
+<p>Amazonビジネスの公式ページには、プライムビジネスに入っていない場合の配送料だけをまとめたページは見当たりませんでした。</p>
+<p>ただ、プライムビジネスの公式ページのよくある質問は「普段から3,500円以上の注文や大量発注をしているので、プライムビジネスは不要ではないでしょうか？」という問いに答える形になっています。Amazon.co.jp の通常配送の基準（3,500円以上で無料）を前提にした説明です。</p>
+<h3 id="通常配送">通常配送</h3>
+<p>Amazonのヘルプに載っている、Amazon.co.jp が発送する商品の通常配送の配送料（税込）は次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>本州・四国（離島を除く）</th>
+<th>北海道・九州・沖縄・離島</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>注文金額が3,500円以上</td>
+<td>無料</td>
+<td>無料</td>
+</tr>
+<tr>
+<td>注文金額が3,500円未満</td>
+<td>460円</td>
+<td>500円</td>
+</tr>
+</tbody>
+</table>
+<p>ここでいう「注文金額」は、手数料とAmazonギフト券の注文金額を除いた商品小計です。キャンセルで金額が変わったときは、変わった後の金額で判定されます。</p>
+<p>一部のメール便対象商品には100円の配送料がかかり、組み合わせによっては追加で100円かかる場合がある、とも書かれています。</p>
+<p>ヘルプによると、無料になる基準は2024年3月29日に2,000円から3,500円へ、3,500円未満の配送料は2024年11月5日に410円から460円（北海道・九州・沖縄・離島は450円から500円）へ変わりました。以前の情報を見かけたら、日付を確かめてください。</p>
+<h3 id="お急ぎ便日時指定当日配送">お急ぎ便・日時指定・当日配送</h3>
+<p>急ぎの配送オプションは、プライム会員でなければ注文金額にかかわらず配送料がかかります。</p>
+<table>
+<thead>
+<tr>
+<th>配送オプション</th>
+<th>本州・四国（離島を除く）</th>
+<th>北海道・九州（離島を除く）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>お急ぎ便</td>
+<td>510円</td>
+<td>550円（沖縄も550円）</td>
+</tr>
+<tr>
+<td>当日お急ぎ便</td>
+<td>610円</td>
+<td>650円</td>
+</tr>
+<tr>
+<td>お届け日時指定便</td>
+<td>510円</td>
+<td>550円</td>
+</tr>
+</tbody>
+</table>
+<p>離島など一部の地域では、お急ぎ便や日時指定便を選べない場合があります。</p>
+<h2 id="送料がかかりやすい注文の仕方">送料がかかりやすい注文の仕方</h2>
+<p>会社の注文で見落としやすいのが、配送先と発送のまとめ方です。ヘルプには次のように書かれています。</p>
+<ul>
+<li>1回の注文で2か所以上に配送する場合は、配送先ごとに配送料がかかる。3,500円の基準も配送先ごとの注文金額で判定される</li>
+<li>「準備ができた商品から順に発送」を選ぶと、発送ごとに配送料が加算される</li>
+</ul>
+<p>本社と支店に分けて送る注文では、合計が3,500円を超えていても、配送先ごとに3,500円未満なら送料がかかります。拠点ごとの注文金額を見てから分けると、送料の読み違いを減らせます。</p>
+<p>複数の配送先を使う会社は、配送先住所をまとめて登録しておけます。設定の手順は <a href="/articles/amazon-business-haisou-shiji/">Amazonビジネスの配送指示の設定方法</a> にまとめています。</p>
+<h3 id="出品者が発送する商品は別の配送料">出品者が発送する商品は別の配送料</h3>
+<p>ここまでの表は、Amazon.co.jp が発送する商品の配送料です。ヘルプでは、出品者の配送料と配送条件は別のページで案内されています。</p>
+<p>同じ注文に出品者の商品が入っていると、その分は出品者ごとの配送料になることがあります。商品ページの「出荷元」「販売元」を見て、どちらが発送するかを確かめてください。</p>
+<h2 id="プライムビジネスで無料になる範囲">プライムビジネスで無料になる範囲</h2>
+<p>プライムビジネスは、Amazonビジネス向けの有料（Duo は無料）の会員プログラムです。公式ページと配送特典のページには、次の特典が書かれています。</p>
+<ul>
+<li>Amazon.co.jp が発送する商品の通常配送が、注文金額にかかわらず何度でも無料</li>
+<li>対象商品のお急ぎ便（注文確定日から3日以内のお届け）・当日お急ぎ便が無料</li>
+<li>対象の注文で、お届け日時指定便が無料</li>
+<li>プライム対象商品は、一部の特別取扱商品の取扱手数料が無料</li>
+</ul>
+<p>プライムビジネスの公式ページのよくある質問では、「対象商品につきましては、注文金額に関わらず送料無料となります」と答えています。少額の注文でも、お急ぎ便や配送日時の指定を無料で使えるという説明です。</p>
+<h3 id="無料にならないもの">無料にならないもの</h3>
+<p>Amazonのヘルプ「プライムビジネス配送 - 対象商品および配送先住所」によると、商品がプライム対象として表示されるのは、お届け先で選んだ住所が対象地域のときです。</p>
+<p>買う商品の一部だけがプライムビジネスの対象商品なら、対象外の商品には該当する配送料がかかります。カートに入れた商品がすべてプライム対象かどうかを、注文前に見ておくと、送料の読み違いを減らせます。</p>
+<p>また、ヘルプには「プライムビジネスには、Prime VideoやPrime Musicは含まれません」とあります。個人のプライムとは特典の中身が違います。</p>
+<h3 id="プランと年会費">プランと年会費</h3>
+<p>公式ページ（2026年11月1日確認）のプランは次のとおりです。金額はいずれも年額・税込です。</p>
+<table>
+<thead>
+<tr>
+<th>プラン</th>
+<th>対象</th>
+<th>年会費</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Duo</td>
+<td>個人事業主向け（Amazonプライム会員〔個人用〕が対象）</td>
+<td>無料</td>
+</tr>
+<tr>
+<td>Essentials</td>
+<td>最大5人のユーザー</td>
+<td>5,900円</td>
+</tr>
+<tr>
+<td>Small</td>
+<td>最大20人のユーザー</td>
+<td>13,500円</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>最大200人のユーザー</td>
+<td>37,800円</td>
+</tr>
+<tr>
+<td>Unlimited</td>
+<td>ユーザー数無制限</td>
+<td>270,000円</td>
+</tr>
+</tbody>
+</table>
+<p>有料プランが送料の面で元を取れるかは、年間の注文回数と、1回あたりの送料で決まります。計算のしかたは <a href="/articles/business-prime-ryoukin-soneki-bunkiten/">プライムビジネスの料金と損益分岐点</a> で、ケース別に試算しています。</p>
+<p>加入後は、購買分析ダッシュボードで過去12ヵ月分の配送料の割引合計を見られる、と公式のよくある質問にあります。続けるかどうかを、実際の数字で判断できます。</p>
+<h2 id="個人でプライム会員なら-duo-が無料">個人でプライム会員なら Duo が無料</h2>
+<p>個人事業主で、個人のAmazonアカウントでプライム会員に登録しているなら、Duo を確かめる価値があります。</p>
+<p>Amazonのヘルプ「ビジネスアカウントでのプライムの利用」には、次のように書かれています。</p>
+<ul>
+<li>プライムビジネスDuoは、ユーザー数1名のビジネスアカウントで使えるサービス</li>
+<li>利用には、個人向けアカウントでAmazonプライム会員に登録している必要がある</li>
+<li>プライムビジネスに登録する際に、個人向けアカウントとビジネスアカウントを紐づける</li>
+</ul>
+<p>公式ページでは、Duo の特典は「無料のお急ぎ便」「柔軟な配送オプション」と表示されています。</p>
+<p>ユーザーを2人以上にしたい会社や、購買分析・購買コントロールを使いたい場合は、Essentials 以上のプランが対象です。</p>
+<p>個人事業主がビジネスアカウントを作るときの書類は、<a href="/articles/kojin-jigyou-kaigyoutodoke-nashi-amazon-business-toroku/">Amazonビジネスの登録に必要書類は？開業届なしの個人事業主が用意するもの</a> にまとめています。</p>
+<h2 id="プライムビジネスなしでも送料がかからない定期おトク便">プライムビジネスなしでも送料がかからない定期おトク便</h2>
+<p>毎月使う消耗品なら、定期おトク便も選択肢です。Amazonビジネスの「配送」ページには、次のように書かれています。</p>
+<ul>
+<li>対象商品を表示価格から最大10%の割引で購入できる</li>
+<li>おまとめ割引で追加5%割引</li>
+<li>プライム会員でなくても、配送料無料</li>
+</ul>
+<p>コピー用紙・飲料・清掃用品のように、量と頻度が決まっている物は定期おトク便、急ぎの物や少額の物はプライムビジネス、と分けて考えられます。</p>
+<h2 id="送料を見積もるときのチェックリスト">送料を見積もるときのチェックリスト</h2>
+<p>注文前と、プライムビジネスに入るか決める前に、次を確かめておくと判断しやすくなります。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 1回の注文金額が3,500円以上になることが多いか</li>
+<li class="task-list-item"><input type="checkbox" disabled> 本社・支店など、2か所以上に分けて送る注文があるか</li>
+<li class="task-list-item"><input type="checkbox" disabled> お急ぎ便や日時指定を使う頻度はどれくらいか</li>
+<li class="task-list-item"><input type="checkbox" disabled> 出品者が発送する商品をよく買うか（Amazon.co.jp の基準とは別）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 毎月決まって買う消耗品があるか（定期おトク便の対象か）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 個人のアカウントでプライム会員か（Duo の対象か）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 注文確定画面で、実際の配送料を見たか</li>
+</ul>
+<h2 id="他の購入先との比べ方">他の購入先との比べ方</h2>
+<p>送料の基準は購入先ごとに違います。アスクル・モノタロウとの取扱点数・請求書払い・送料・納期の違いは、<a href="/articles/amazon-business-monotaro-askul-hikaku/">アスクル・モノタロウ・Amazonビジネスの違いを比較</a> で整理しています。</p>
+<p>Amazonの個人アカウントとビジネスアカウントの違い（価格・請求書・支払い方法）は、<a href="/articles/amazon-business-kojin-chigai/">Amazonビジネスと個人アカウントの違い</a> を見てください。</p>
+<p>Amazonビジネスの登録は無料（公式サイトの表記）です。登録してから普段買う商品を入れて、注文確定画面で送料を見てから、プライムビジネスに入るかを決める順番でも遅くありません。</p>
+<aside class="cta-box cta-box--subtle"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">Amazonビジネス</p><h3 class="cta-box__title">送料の条件を自分の注文で確かめるなら、Amazonビジネスの登録（無料）から</h3><p class="cta-box__body">登録は無料（公式サイトの表記）です。プライムビジネスは無料の Duo（個人のプライム会員が対象）から有料プランまであり、登録後に普段の注文金額と回数を見てから選べます。</p><a class="cta-box__button" href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">Amazonビジネスの登録ページへ（公式）</a></aside>
+<h2 id="まとめまず注文金額と配送先の数を見る">まとめ：まず注文金額と配送先の数を見る</h2>
+<p>Amazonビジネスで Amazon.co.jp が発送する商品は、通常配送なら3,500円以上で無料、未満は460円（北海道・九州・沖縄・離島は500円）です。お急ぎ便は510円から、当日お急ぎ便は610円からかかります。</p>
+<p>2か所以上に送ると配送先ごとに判定され、出品者が発送する商品は別の配送料になります。</p>
+<p>プライムビジネスなら、対象商品は注文金額にかかわらず送料無料で、お急ぎ便や日時指定も無料です。個人でプライム会員の個人事業主は、無料の Duo が使えるかを最初に確かめてください。</p>
+<p>金額や条件は変わることがあります。注文の前に、公式ページと注文確定画面で最新の内容を確かめてください。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Amazonビジネスの送料は無料ですか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>Amazon.co.jp が発送する商品の通常配送は、注文金額が3,500円以上なら無料です。3,500円に満たない場合は、本州・四国（離島を除く）で460円、北海道・九州・沖縄・離島で500円です（Amazonのヘルプ「配送料と配送条件」、2026年11月1日確認）。プライムビジネスに入っていれば、対象商品は注文金額にかかわらず送料無料です。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Amazonビジネスで注文すると、送料はかかりますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>プライムビジネスに入っていない場合は、注文金額と配送オプションで決まります。通常配送は3,500円未満なら460円または500円、お急ぎ便は510円から、当日お急ぎ便は610円からです。出品者が発送する商品は出品者ごとの配送料です。実際の金額は注文確定画面で確かめてください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>個人でAmazonプライム会員なら、ビジネスアカウントでも送料無料になりますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>Amazonのヘルプによると、プライムビジネスDuoはユーザー数1名のビジネスアカウントで使えるプランで、個人向けアカウントでAmazonプライム会員に登録している必要があります。登録の際に個人向けアカウントとビジネスアカウントを紐づけます。Duoの料金は公式ページで無料と表示されています。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>2か所に送ると送料はどうなりますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>1回の注文で2か所以上に配送する場合は、配送先ごとに配送料がかかり、3,500円の基準も配送先ごとの注文金額で判定されます。「準備ができた商品から順に発送」を選ぶと、発送ごとに配送料が加算されます。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>プライムビジネスでどれだけ送料を節約できたか分かりますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>プライムビジネスの公式ページのよくある質問によると、プライムビジネス会員であれば、購買分析ダッシュボードで過去12ヵ月分の配送料の割引合計を見られます。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=201911210" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon 配送料と配送条件（Amazonカスタマーサービス）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-01）</span></li><li data-astro-cid-sgg5joot><a href="https://business.amazon.co.jp/ja/prime-business" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス プライムビジネス（料金プラン・よくある質問）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-01）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/businessprime/deliverybenefits" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon 迅速で無料のビジネス配送（Businessプライムの配送特典）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-01）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=202195950" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon プライムビジネス配送 - 対象商品および配送先住所（Amazonカスタマーサービス）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-01）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=201633530" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon ビジネスアカウントでのプライムの利用（Amazonカスタマーサービス）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-01）</span></li><li data-astro-cid-sgg5joot><a href="https://business.amazon.co.jp/ja/shipping-delivery" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス 配送</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-01）</span></li><li data-astro-cid-sgg5joot><a href="https://business.amazon.co.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス公式サイト</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-09-12）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/amazon-business-mitsumorisho-hakkou/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1oukbk0-g" x1="0" y1="0" x2="1" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1oukbk0-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1oukbk0-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1oukbk0-p)" data-astro-cid-yuatfsof></rect><circle cx="366" cy="57" r="153" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Amazon</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>見積書</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>出し方</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--amazon-business">Amazonビジネス実務</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>Amazonの見積書の出し方｜カートからPDFで保存する手順（Amazonビジネス・登録無料）</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>Amazonで見積書が必要なときは、登録無料のAmazonビジネスを使います。注文前はカートから参考見積書、注文後は注文履歴から見積書をPDFで保存でき、稟議や経費精算に使えます。個人アカウントしかない場合の考え方と、配送料が載らない・ダウンロードできないときの注意点もまとめました。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-06T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月6日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約12分</p></div></a><a class="card article-card" href="/articles/kojin-jigyou-kaigyoutodoke-nashi-amazon-business-toroku/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1ptehj0-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1ptehj0-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1ptehj0-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1ptehj0-p)" data-astro-cid-yuatfsof></rect><circle cx="363" cy="90" r="176" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>個人事業主</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>開業届なし</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Amazonビジネス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--amazon-business">Amazonビジネス実務</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>Amazonビジネスの登録に必要書類は？開業届なしの個人事業主が用意するもの一覧</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>個人事業主がAmazonビジネスに登録するときは、確認書類を1点提出します。開業届がなくても、過去2年以内の確定申告書B・収支内訳書、インボイスの登録通知書などで代わりになります。公式ヘルプの書類一覧と提出時の注意点、登録手順、屋号の扱いを整理しました。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-06T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月6日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/amazon-business/" data-astro-cid-sgg5joot>Amazonビジネス実務の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/business-prime/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 L4 4"></path><path d="M4 20 L21 20"></path><path d="M7 20 L7 14"></path><path d="M11 20 L11 10"></path><path d="M15 20 L15 15"></path><path d="M19 20 L19 7"></path><path d="M5 16 L20 8"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>Business Prime 損益分岐計算</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>注文回数と送料を入れると、プライムビジネス（旧Businessプライム）の元が取れる回数がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/amazon-business-check/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 9 l2 2 l3.5 -3.5"></path><path d="M8 15 h8"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>Amazonビジネスが必要か判定</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>5つの質問に答えるだけで、Amazonビジネスが「要る」「今は要らない」「どちらでも」のどれかがわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>マイナポータル 確定申告 連携 やり方｜個人事業主が準備から入力までを進める手順 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="マイナポータル連携を使えば、控除証明書などのデータを確定申告書へ自動で取り込め、入力の手間とミスを減らせます。個人事業主が事前に用意するもの、連携から入力までの手順、つまずきやすい点、売上と経費の扱いまでを整理しました。"><link rel="canonical" href="https://soroecho.com/articles/scout-2026-10-12-7/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="マイナポータル 確定申告 連携 やり方｜個人事業主が準備から入力までを進める手順 | そろえ帳"><meta property="og:description" content="マイナポータル連携を使えば、控除証明書などのデータを確定申告書へ自動で取り込め、入力の手間とミスを減らせます。個人事業主が事前に用意するもの、連携から入力までの手順、つまずきやすい点、売上と経費の扱いまでを整理しました。"><meta property="og:url" content="https://soroecho.com/articles/scout-2026-10-12-7/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/scout-2026-10-12-7.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="マイナポータル 確定申告 連携 やり方｜個人事業主が準備から入力までを進める手順 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="マイナポータル 確定申告 連携 やり方｜個人事業主が準備から入力までを進める手順 | そろえ帳"><meta name="twitter:description" content="マイナポータル連携を使えば、控除証明書などのデータを確定申告書へ自動で取り込め、入力の手間とミスを減らせます。個人事業主が事前に用意するもの、連携から入力までの手順、つまずきやすい点、売上と経費の扱いまでを整理しました。"><meta name="twitter:image" content="https://soroecho.com/og/scout-2026-10-12-7.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"マイナポータル 確定申告 連携 やり方｜個人事業主が準備から入力までを進める手順","item":"https://soroecho.com/articles/scout-2026-10-12-7/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"マイナポータル 確定申告 連携 やり方｜個人事業主が準備から入力までを進める手順","description":"マイナポータル連携を使えば、控除証明書などのデータを確定申告書へ自動で取り込め、入力の手間とミスを減らせます。個人事業主が事前に用意するもの、連携から入力までの手順、つまずきやすい点、売上と経費の扱いまでを整理しました。","url":"https://soroecho.com/articles/scout-2026-10-12-7/","datePublished":"2026-11-02T00:00:00.000Z","dateModified":"2026-11-02T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/scout-2026-10-12-7/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"マイナポータル連携をすれば、売上や経費も自動で入りますか？","acceptedAnswer":{"@type":"Answer","text":"入りません。連携で取り込めるのは、保険料や医療費などの控除に関する情報が中心です。事業の売上や経費は、帳簿や会計ソフトで集計した数字を自分で入力します。"}},{"@type":"Question","name":"開業届を出していなくても連携は使えますか？","acceptedAnswer":{"@type":"Answer","text":"連携は、確定申告をする個人であれば開業届の有無に関係なく使えます。ただし開業届は、青色申告などの扱いに関わる別の手続きです。"}},{"@type":"Question","name":"マイナンバーカードがなくても確定申告はできますか？","acceptedAnswer":{"@type":"Answer","text":"できます。ただし、マイナポータル連携やスマートフォンでの電子申告は、基本的にマイナンバーカードを使う方法です。カードがない場合の方法は国税庁の案内で確認してください。"}},{"@type":"Question","name":"連携した内容は、そのまま信用して提出してよいですか？","acceptedAnswer":{"@type":"Answer","text":"取り込んだ金額は、手元の証明書や通知と見比べてから提出することをおすすめします。取り込みの時期や対象外の項目によって、反映されていない場合があります。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>マイナポータル 確定申告 連携 やり方｜個人事業主が準備から入力までを進める手順</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec17pfgwo-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec17pfgwo-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec17pfgwo-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec17pfgwo-p)" data-astro-cid-yuatfsof></rect><circle cx="327" cy="34" r="158" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>マイナポータル</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>確定申告</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>連携</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>マイナポータル 確定申告 連携 やり方｜個人事業主が準備から入力までを進める手順</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-11-02T00:00:00.000Z" data-astro-cid-sgg5joot>2026年11月2日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約6分</p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論連携は控除の入力を減らす仕組みで事業の数字は別に用意する" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：連携は「控除の入力を減らす仕組み」で、事業の数字は別に用意する</a></li><li data-astro-cid-sgg5joot><a href="#連携でできることとできないこと" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>連携でできることと、できないこと</a></li><li data-astro-cid-sgg5joot><a href="#始める前に準備するもの" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>始める前に準備するもの</a></li><li data-astro-cid-sgg5joot><a href="#連携の手順確定申告書等作成コーナーを使う場合" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>連携の手順（確定申告書等作成コーナーを使う場合）</a></li><li data-astro-cid-sgg5joot><a href="#売上と経費はどこで数字を作るか" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>売上と経費は、どこで数字を作るか</a></li><li data-astro-cid-sgg5joot><a href="#つまずきやすい点と対処" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>つまずきやすい点と対処</a></li><li data-astro-cid-sgg5joot><a href="#あなたの場合はどうするか" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>あなたの場合はどうするか</a></li><li data-astro-cid-sgg5joot><a href="#申告までの段取りと提出前の確認" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>申告までの段取りと提出前の確認</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論連携は控除の入力を減らす仕組みで事業の数字は別に用意する">結論：連携は「控除の入力を減らす仕組み」で、事業の数字は別に用意する</h2>
+<p>マイナポータル連携とは、保険料や医療費などの控除に関する情報を、確定申告書へ自動で取り込む仕組みです。入力の手間と転記ミスを減らせます。</p>
+<p>一方で、個人事業主にとって中心となる売上と経費は、連携では入りません。ここは会計ソフトや帳簿で集計した数字を使います。</p>
+<p>この記事では、準備するもの、操作の流れ、つまずきやすい点を順に説明します。料金や対象項目は年によって変わることがあるため、最終確認は公式ページで行ってください。</p>
+<h2 id="連携でできることとできないこと">連携でできることと、できないこと</h2>
+<p>連携でできることは、各種の控除証明書などのデータを、国税庁の確定申告書等作成コーナーに取り込むことです。紙の証明書を見ながら金額を打ち込む作業が減ります。</p>
+<p>対象になる項目は、制度の更新に合わせて広がってきました。そのため「自分の控除が対象か」は、申告する年の公式案内で確認するのが確実です。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>連携で入るか</th>
+<th>補足</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>各種控除に関する情報（保険料・医療費など）</td>
+<td>対象のものは入る</td>
+<td>対象の範囲は年により変わる</td>
+</tr>
+<tr>
+<td>事業の売上</td>
+<td>入らない</td>
+<td>帳簿・会計ソフトから入力</td>
+</tr>
+<tr>
+<td>事業の経費</td>
+<td>入らない</td>
+<td>領収書や取引明細を集計して入力</td>
+</tr>
+<tr>
+<td>青色申告の決算書の数字</td>
+<td>入らない</td>
+<td>会計ソフトで作成した内容を使う</td>
+</tr>
+<tr>
+<td>基本情報（氏名・住所など）</td>
+<td>カード読み取り時に入る場合がある</td>
+<td>表示内容は必ず目で確認</td>
+</tr>
+</tbody>
+</table>
+<p>つまり、連携は申告書の「控除」の側を楽にするものです。「売上と経費」の側は、日々の記帳がそのまま作業量になります。</p>
+<h2 id="始める前に準備するもの">始める前に準備するもの</h2>
+<p>準備不足で途中で止まるケースが多いため、先に次の四つをそろえます。</p>
+<ol>
+<li>マイナンバーカード（有効期限内のもの）</li>
+<li>利用者証明用電子証明書の暗証番号（数字4桁）と、署名用電子証明書の暗証番号（英数字6〜16桁）</li>
+<li>カードを読み取れる環境（対応するスマートフォン、またはICカードリーダー）</li>
+<li>マイナポータルのアカウントと、国税庁の確定申告書等作成コーナーを使える端末</li>
+</ol>
+<p>暗証番号を忘れていたり、入力を続けて間違えてロックされたりすると、市区町村の窓口での手続きが必要になることがあります。申告期限の直前に慌てないよう、早めに確認しておくと安心です。</p>
+<p>[要実演スクショ: マイナポータルのログイン画面（カード読み取り前）]</p>
+<h2 id="連携の手順確定申告書等作成コーナーを使う場合">連携の手順（確定申告書等作成コーナーを使う場合）</h2>
+<p>画面の表記は更新されることがあります。ここでは大まかな流れを示します。</p>
+<ol>
+<li>国税庁の確定申告書等作成コーナーを開き、申告書の作成を始める。</li>
+<li>提出方法でマイナンバーカード方式（e-Tax）を選ぶ。</li>
+<li>控除に関する情報の入力画面で、マイナポータル連携を選ぶ。</li>
+<li>画面の案内に従い、マイナポータルへログインしてカードを読み取る。</li>
+<li>取り込む情報にチェックを入れ、確認画面で内容に同意する。</li>
+<li>申告書の画面に戻り、取り込まれた金額が反映されているか確認する。</li>
+</ol>
+<p>[要実演スクショ: 確定申告書等作成コーナーのマイナポータル連携選択画面]</p>
+<p>[要実演スクショ: 取り込み項目の選択画面と反映後の入力画面]</p>
+<p>反映された金額は、そのまま信じず、手元の証明書や通知と見比べます。取り込みの時期が遅い項目や、対象外の項目は反映されないことがあるためです。</p>
+<h2 id="売上と経費はどこで数字を作るか">売上と経費は、どこで数字を作るか</h2>
+<p>連携が終わっても、事業の数字がなければ申告書は完成しません。ここでは「数字をどこで作るか」の考え方を整理します。</p>
+<p>方法は大きく三つあります。</p>
+<ul>
+<li>帳簿を手書きや表計算で作り、申告書に手入力する</li>
+<li>会計ソフトで記帳し、申告書のデータを作る</li>
+<li>税理士に記帳や申告を依頼する</li>
+</ul>
+<p>選ぶときの比較軸は、次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>比較軸</th>
+<th>確認すること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>記帳の手間</td>
+<td>銀行口座やカードの明細を自動で取り込めるか</td>
+</tr>
+<tr>
+<td>申告書との接続</td>
+<td>作成したデータを電子申告へ渡せるか</td>
+</tr>
+<tr>
+<td>青色申告への対応</td>
+<td>決算書の作成に対応しているか</td>
+</tr>
+<tr>
+<td>料金</td>
+<td>申告する年の公式料金ページで、必要な機能が含まれるプランか</td>
+</tr>
+<tr>
+<td>相談先</td>
+<td>操作や制度で迷ったときの問い合わせ方法</td>
+</tr>
+</tbody>
+</table>
+<p>会計ソフトを使う場合、マイナポータル連携に対応したものもあります。連携の入口がソフト側にあるか、国税庁のコーナー側にあるかは、サービスごとに異なります。</p>
+<aside class="cta-box"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">株式会社マネーフォワード</p><h3 class="cta-box__title">マネーフォワード クラウド確定申告</h3><p class="cta-box__body">個人事業主向けの確定申告・記帳のクラウドサービス。</p><a class="cta-box__button" href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E97P0A+4JGQ+C3J0H" data-offer="mf-kakutei-shinkoku" rel="sponsored nofollow noopener" target="_blank">マネーフォワード クラウド確定申告の公式サイトへ</a></aside>
+<p>事業の記帳から申告書の作成までを一つの流れでまとめたい場合は、<a href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E97P0A+4JGQ+C3J0H" rel="sponsored nofollow noopener" target="_blank">確定申告ソフトを見る</a>で、対応する機能や料金を公式の情報で確認できます。連携の対象や操作は、申告する年の案内もあわせて確認してください。</p>
+<h2 id="つまずきやすい点と対処">つまずきやすい点と対処</h2>
+<p>よくあるつまずきは、次の四つです。</p>
+<ol>
+<li><strong>暗証番号の種類を取り違える</strong>：連携では複数の暗証番号を使い分けます。どの画面でどの番号を求められているか、表示をよく読みます。</li>
+<li><strong>カードの読み取りに失敗する</strong>：スマートフォンのケースを外す、カードの位置をずらすなどで改善する場合があります。</li>
+<li><strong>取り込んだはずの金額がない</strong>：対象外の項目か、データがまだ届いていない可能性があります。その場合は、証明書を見て手入力します。</li>
+<li><strong>途中保存を忘れる</strong>：作成途中のデータは、保存しないと消えることがあります。区切りごとに保存します。</li>
+</ol>
+<p>また、連携で入力が楽になった分、確認が雑にならないようにしましょう。提出後の誤りは、訂正の手間が増えます。</p>
+<p>[要実演スクショ: 取り込み結果の確認画面]</p>
+<h2 id="あなたの場合はどうするか">あなたの場合はどうするか</h2>
+<p>状況別に、進め方の目安を示します。</p>
+<p><strong>開業届を出していない、または出す前の場合</strong>
+開業届と確定申告は別の手続きです。連携は申告のための機能なので、開業届の有無にかかわらず使えます。ただし、青色申告を考えているなら、申請の期限や条件を国税庁の案内で先に確認してください。</p>
+<p><strong>今年に独立したばかりで、売上が少ない場合</strong>
+売上が小さくても、事業の収入や経費は記録しておく必要があります。連携で控除の入力を減らし、浮いた時間を記帳にまわすのが現実的です。</p>
+<p><strong>法人にした場合</strong>
+法人の決算申告は、個人の確定申告とは別の手続きです。ただし代表者個人の所得や控除の申告で、連携を使う場面はあります。法人側は税理士や会計ソフトの案内に沿って進めます。</p>
+<p><strong>自宅住所を出したくない場合</strong>
+申告書には、原則として申告者の住所を記載します。住所の扱いに不安があるときは、管轄の税務署に、どの住所を書くべきか相談するのが確実です。この記事では個別の取り扱いを断定しません。</p>
+<p><strong>マイナンバーカードを持っていない場合</strong>
+連携は基本的にカードを使います。カードを作る期間も考え、申告時期から逆算して早めに動きます。カードを使わない申告方法は、国税庁の案内で確認できます。</p>
+<h2 id="申告までの段取りと提出前の確認">申告までの段取りと提出前の確認</h2>
+<p>最後に、申告までの流れを確認します。</p>
+<ol>
+<li>年間の売上と経費を帳簿や会計ソフトで締める</li>
+<li>国税庁のコーナーで申告書の作成を始める</li>
+<li>マイナポータル連携で控除情報を取り込む</li>
+<li>売上・経費の数字を入力または取り込む</li>
+<li>控除額と納める税額を、手元の資料と見比べて確認する</li>
+<li>e-Taxで送信し、受信通知を保存する</li>
+</ol>
+<p>提出後に受け取る受信通知や、控えのデータは、保管しておきます。融資や取引先への提出などで、所得の証明が必要になる場面があるためです。</p>
+<p>連携は便利ですが、申告の責任は申告者本人にあります。不明点は、税務署の案内窓口や税理士に確認しながら進めてください。</p>
+<p>制度や画面は更新されることがあります。実際に操作する前に、以下の公式ページで最新の案内を確認しましょう。</p>
+<ul>
+<li>国税庁 e-Tax：<a href="https://www.e-tax.nta.go.jp/">https://www.e-tax.nta.go.jp/</a></li>
+<li>確定申告書等作成コーナー：<a href="https://www.keisan.nta.go.jp/">https://www.keisan.nta.go.jp/</a></li>
+<li>マイナポータル：<a href="https://myna.go.jp/">https://myna.go.jp/</a></li>
+</ul>
+<aside class="cta-box"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">株式会社マネーフォワード</p><h3 class="cta-box__title">マネーフォワード クラウド確定申告</h3><p class="cta-box__body">個人事業主向けの確定申告・記帳のクラウドサービス。</p><a class="cta-box__button" href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E97P0A+4JGQ+C3J0H" data-offer="mf-kakutei-shinkoku" rel="sponsored nofollow noopener" target="_blank">マネーフォワード クラウド確定申告の公式サイトへ</a></aside>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>マイナポータル連携をすれば、売上や経費も自動で入りますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>入りません。連携で取り込めるのは、保険料や医療費などの控除に関する情報が中心です。事業の売上や経費は、帳簿や会計ソフトで集計した数字を自分で入力します。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>開業届を出していなくても連携は使えますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>連携は、確定申告をする個人であれば開業届の有無に関係なく使えます。ただし開業届は、青色申告などの扱いに関わる別の手続きです。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>マイナンバーカードがなくても確定申告はできますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>できます。ただし、マイナポータル連携やスマートフォンでの電子申告は、基本的にマイナンバーカードを使う方法です。カードがない場合の方法は国税庁の案内で確認してください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>連携した内容は、そのまま信用して提出してよいですか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>取り込んだ金額は、手元の証明書や通知と見比べてから提出することをおすすめします。取り込みの時期や対象外の項目によって、反映されていない場合があります。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://www.e-tax.nta.go.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 e-Tax（国税電子申告・納税システム）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-02）</span></li><li data-astro-cid-sgg5joot><a href="https://www.keisan.nta.go.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 確定申告書等作成コーナー</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-02）</span></li><li data-astro-cid-sgg5joot><a href="https://myna.go.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>マイナポータル</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-02）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/kakutei-shinkoku/" data-astro-cid-sgg5joot>確定申告・会計ソフト・経費の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

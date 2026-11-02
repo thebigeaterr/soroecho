@@ -1,0 +1,264 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>IKEAの領収書｜店舗はレシートから変換、オンラインは納品明細書、見積書の頼み方 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="IKEAの領収書は買い方で取り方が変わります。店舗はレシート情報から領収証の発行ページで変換（購入後365日以内・1回限り）、オンラインストアは届いたあとにメールで届く納品明細書が領収書の扱いです。手書きと再発行は行っていません。見積書、IKEA for Business、インボイス番号まで公式の案内で整理します。"><link rel="canonical" href="https://soroecho.com/articles/ikea-ryoushuusho/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="IKEAの領収書｜店舗はレシートから変換、オンラインは納品明細書、見積書の頼み方 | そろえ帳"><meta property="og:description" content="IKEAの領収書は買い方で取り方が変わります。店舗はレシート情報から領収証の発行ページで変換（購入後365日以内・1回限り）、オンラインストアは届いたあとにメールで届く納品明細書が領収書の扱いです。手書きと再発行は行っていません。見積書、IKEA for Business、インボイス番号まで公式の案内で整理します。"><meta property="og:url" content="https://soroecho.com/articles/ikea-ryoushuusho/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/ikea-ryoushuusho.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="IKEAの領収書｜店舗はレシートから変換、オンラインは納品明細書、見積書の頼み方 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="IKEAの領収書｜店舗はレシートから変換、オンラインは納品明細書、見積書の頼み方 | そろえ帳"><meta name="twitter:description" content="IKEAの領収書は買い方で取り方が変わります。店舗はレシート情報から領収証の発行ページで変換（購入後365日以内・1回限り）、オンラインストアは届いたあとにメールで届く納品明細書が領収書の扱いです。手書きと再発行は行っていません。見積書、IKEA for Business、インボイス番号まで公式の案内で整理します。"><meta name="twitter:image" content="https://soroecho.com/og/ikea-ryoushuusho.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"IKEAの領収書｜店舗はレシートから変換、オンラインは納品明細書、見積書の頼み方","item":"https://soroecho.com/articles/ikea-ryoushuusho/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"IKEAの領収書｜店舗はレシートから変換、オンラインは納品明細書、見積書の頼み方","description":"IKEAの領収書は買い方で取り方が変わります。店舗はレシート情報から領収証の発行ページで変換（購入後365日以内・1回限り）、オンラインストアは届いたあとにメールで届く納品明細書が領収書の扱いです。手書きと再発行は行っていません。見積書、IKEA for Business、インボイス番号まで公式の案内で整理します。","url":"https://soroecho.com/articles/ikea-ryoushuusho/","datePublished":"2026-11-02T00:00:00.000Z","dateModified":"2026-11-02T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/ikea-ryoushuusho/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"IKEAの領収書はどこでもらえますか？","acceptedAnswer":{"@type":"Answer","text":"公式の案内では、店舗で買った場合はレシートの情報から「領収証の発行ページ」で領収書を発行します。オンラインで買った場合は、商品のお届け後にEメールで届く「納品明細書」を領収書として使います。"}},{"@type":"Question","name":"IKEAで手書きの領収書は出してもらえますか？","acceptedAnswer":{"@type":"Answer","text":"公式のよくあるご質問には「レシートや納品明細書の再発行および手書きの領収書の発行は行っておりません」と書かれています。"}},{"@type":"Question","name":"IKEAの領収書の宛名は変えられますか？","acceptedAnswer":{"@type":"Answer","text":"納品明細書の宛名は、注文時に請求先へ入力した名前と住所が載り、法人の場合は会社名のみが載る、と案内されています。注文後に宛先の名前は変更できません。店舗のレシートから変換する場合は、法人情報（会社名など）を追加できると案内されています。"}},{"@type":"Question","name":"IKEAで見積書はもらえますか？","acceptedAnswer":{"@type":"Answer","text":"カスタマーサポートセンターに問い合わせると、メールで受け取れると案内されています。作成日当日の商品の合計金額を確かめるもので、在庫の確保はできず、購入済み商品の見積書は作れません。"}},{"@type":"Question","name":"IKEAの領収書はインボイス（適格請求書）の登録番号がありますか？","acceptedAnswer":{"@type":"Answer","text":"公式のよくあるご質問によると、イケアのインボイス制度の事業者番号は T1040001021866 で、購入時のレシートや納品明細書に記載されているとされています。手元の書類で確かめ、個別の判断は税理士・税務署に確認してください。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>IKEAの領収書｜店舗はレシートから変換、オンラインは納品明細書、見積書の頼み方</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec19z31k6-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec19z31k6-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ec19z31k6-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec19z31k6-p)" data-astro-cid-yuatfsof></rect><circle cx="344" cy="59" r="172" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>IKEA</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>領収書</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--amazon-business">Amazonビジネス実務</span><h1 data-astro-cid-sgg5joot>IKEAの領収書｜店舗はレシートから変換、オンラインは納品明細書、見積書の頼み方</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-11-02T00:00:00.000Z" data-astro-cid-sgg5joot>2026年11月2日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約9分</p><p class="cta-inline">IKEAと使い分けるなら、Amazonビジネスの登録（無料）も選択肢です<a href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">登録ページを見る（公式）</a></p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論店舗はレシートを領収書に変換オンラインは納品明細書" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：店舗は「レシートを領収書に変換」、オンラインは「納品明細書」</a></li><li data-astro-cid-sgg5joot><a href="#店舗で買った分レシートの情報から領収証を発行する" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>店舗で買った分：レシートの情報から領収証を発行する</a></li><li data-astro-cid-sgg5joot><a href="#オンラインストアの領収書商品のお届け後に届く納品明細書" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>オンラインストアの領収書：商品のお届け後に届く納品明細書</a></li><li data-astro-cid-sgg5joot><a href="#宛名見積書の扱い" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>宛名・見積書の扱い</a></li><li data-astro-cid-sgg5joot><a href="#ikea-for-business公式に書いてある範囲" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>IKEA for Business：公式に書いてある範囲</a></li><li data-astro-cid-sgg5joot><a href="#ikeaのインボイス事業者番号は公式のよくあるご質問に書かれている" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>IKEAのインボイス：事業者番号は公式のよくあるご質問に書かれている</a></li><li data-astro-cid-sgg5joot><a href="#経理に出す前のチェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>経理に出す前のチェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#併用の選択肢購入先ごとに書類の取り方が違う" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>併用の選択肢：購入先ごとに書類の取り方が違う</a></li><li data-astro-cid-sgg5joot><a href="#よくある質問とまとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>よくある質問とまとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論店舗はレシートを領収書に変換オンラインは納品明細書">結論：店舗は「レシートを領収書に変換」、オンラインは「納品明細書」</h2>
+<p>IKEAの公式のよくあるご質問「レシート、領収証、見積書などについて教えてください。」（2026年11月1日取得）によると、領収書の取り方は買い方で分かれます。</p>
+<p>店舗で買った場合は、レシートの情報から「領収証の発行ページ」で領収書を発行します。オンラインで買った場合は、商品のお届け後にEメールで届く「納品明細書」を領収書として使います。</p>
+<table>
+<thead>
+<tr>
+<th>買い方</th>
+<th>領収書にあたる書類</th>
+<th>取り方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>店舗</td>
+<td>レシートから変換した領収証</td>
+<td>領収証の発行ページで発行。購入後365日以内のレシートに限り、1レシートにつき1回だけ</td>
+</tr>
+<tr>
+<td>オンラインストア</td>
+<td>納品明細書</td>
+<td>商品のお届け後にEメールで届く。宛名は注文時の「請求先」</td>
+</tr>
+<tr>
+<td>IKEA for Business（請求書払い）</td>
+<td>請求書（購入後に送られる）</td>
+<td>銀行振込で支払う。申込と審査の条件は公式ページを確認</td>
+</tr>
+</tbody>
+</table>
+<p>どの買い方でも、公式のよくあるご質問には「レシートや納品明細書の再発行および手書きの領収書の発行は行っておりません」と書かれています。</p>
+<p>この記事で分かることは次のとおりです。</p>
+<ul>
+<li>店舗のレシートを領収書に変換する方法と、期限・回数の条件</li>
+<li>オンラインストアの納品明細書が届く時期と、宛名の決まり方</li>
+<li>見積書の頼み方と、できないこと</li>
+<li>IKEA for Business の請求書払いについて、公式に書いてある範囲</li>
+<li>インボイスの事業者番号の確認と、経理に出す前のチェックリスト</li>
+</ul>
+<p>画面の表記や条件は変わることがあります。実際の画面と公式の最新の案内で確かめてください。</p>
+<h2 id="店舗で買った分レシートの情報から領収証を発行する">店舗で買った分：レシートの情報から領収証を発行する</h2>
+<p>公式の案内では、イケアの店舗で買った場合は、レシートの情報から領収書を発行できます。発行は、公式サイトの「領収証の発行ページ」で行います。</p>
+<p>条件として、次の点が書かれています。</p>
+<ul>
+<li>購入後365日以内のレシートに限る</li>
+<li>形式変換は1レシートにつき1回限り有効</li>
+<li>法人のお客さまは、会社名などの法人情報を追加できる</li>
+</ul>
+<p>公式の案内は、レシートを持ち帰ってから、ウェブで変換する流れです。発行ページの入力項目や画面の流れは、今回の取得では読み取れなかったため、この記事では書きません。実際のページで確かめてください。</p>
+<p>1回限りの変換なので、宛名の会社名は入力前に経理で決まっている表記を確かめておくと、やり直しの手間がありません。レシートの再発行はされないため、変換が済むまでレシートは保管してください。</p>
+<h3 id="ikea-familyの購入履歴でレシートを見る方法">IKEA Familyの購入履歴でレシートを見る方法</h3>
+<p>公式の案内には、IKEA FamilyメンバーまたはIKEA Business Networkのお客さまは、アカウントにログインして購入履歴にアクセスすると、購入履歴やレシートをオンラインで確認できる、と書かれています。</p>
+<p>注意書きとして、購入時にIKEA Familyのアカウントが登録されていなかった場合は、その購入のレシートを取得できない、とされています。会員番号を出して買ったかどうかで、あとから見られる範囲が変わります。</p>
+<h2 id="オンラインストアの領収書商品のお届け後に届く納品明細書">オンラインストアの領収書：商品のお届け後に届く納品明細書</h2>
+<p>IKEAオンラインストアで買った場合は、公式の案内で、商品のお届け後にEメールで送られる「納品明細書」を領収書として使うとされています。納品明細書は、注文確認メールにも添付されている、とも書かれています。</p>
+<p>宛名については、次の決まりが案内されています。</p>
+<ul>
+<li>納品明細書の宛名は、注文時に「請求先」へ入力した名前と住所が載る</li>
+<li>法人のお客さまの場合は、宛名に会社名のみが載る</li>
+<li>注文後に宛先の名前は変更できない</li>
+</ul>
+<p>つまり、会社名宛にしたい注文は、注文の入力のときに請求先を会社名にしておく必要があります。あとから直せないので、注文を確定する前に請求先の表記を見直してください。</p>
+<h3 id="配送先と請求先を分けたとき">配送先と請求先を分けたとき</h3>
+<p>公式のよくあるご質問「配送先と別の場所にレシートを送って欲しい。」には、配送先と請求先を分けて注文した場合、商品のお届け後に、請求先に入力したEメールアドレス宛に納品明細書が届く、と書かれています。納品明細書は領収書として使えます。</p>
+<p>事務所に商品を届け、書類は経理担当のメールに送る、といった分け方がこの案内に当てはまります。</p>
+<h3 id="公式で確認できなかったこと">公式で確認できなかったこと</h3>
+<p>今回確認した公式ページでは、次の点は確認できませんでした。</p>
+<ul>
+<li>納品明細書がお届けの何日後までに届くか</li>
+<li>納品明細書をメール以外の方法で再取得する手順</li>
+<li>ストア受取やリモートショッピングなど、買い方ごとの書類の違い</li>
+</ul>
+<p>届かないときの連絡先は、公式サイトの「お問い合わせ」ページから確認してください。</p>
+<h2 id="宛名見積書の扱い">宛名・見積書の扱い</h2>
+<p>宛名と但し書きの扱いは、買い方で次のように分かれます。</p>
+<table>
+<thead>
+<tr>
+<th>場面</th>
+<th>公式に書かれていること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>店舗のレシートの変換</td>
+<td>法人情報（会社名など）を追加できる</td>
+</tr>
+<tr>
+<td>オンラインの納品明細書</td>
+<td>請求先の名前・住所が載り、法人は会社名のみ。注文後は変更できない</td>
+</tr>
+<tr>
+<td>手書きの領収書</td>
+<td>発行は行っていない</td>
+</tr>
+<tr>
+<td>但し書き</td>
+<td>今回確認した公式ページでは、書き方や指定の可否は確認できなかった</td>
+</tr>
+</tbody>
+</table>
+<h3 id="見積書は問い合わせてメールで受け取る">見積書は問い合わせて、メールで受け取る</h3>
+<p>見積書が必要な場合は、公式の案内で、カスタマーサポートセンターへ問い合わせると、メールで渡される、とされています。</p>
+<p>渡される見積書について、次の留意点が書かれています。</p>
+<ul>
+<li>作成日当日の商品の合計金額を確かめるためのもの</li>
+<li>在庫の確保はできない</li>
+<li>在庫状況によって出荷店舗が変わることがあり、配送料は含まれない場合がある</li>
+<li>商品価格やサービス料金は変更されることがある</li>
+<li>購入済み商品の見積書は作れない</li>
+</ul>
+<p>キッチンや収納家具など、プランニングが必要な商品は、各種プランニングサービスを使うよう案内されています。稟議や相見積もりで見積書が要るときは、買う前に頼んでください。見積書の一般的な考え方は<a href="/articles/amazon-business-mitsumorisho-hakkou/">Amazonビジネスの見積書の発行</a>でも整理しています。</p>
+<h2 id="ikea-for-business公式に書いてある範囲">IKEA for Business：公式に書いてある範囲</h2>
+<p>IKEAの法人向けのページ「IKEA for Business～法人様向けメンバーシップクラブ」には、法人・自営業向けの「IKEA Business Network」が案内されています。入会費・年会費は無料と書かれています。</p>
+<p>メンバーの特典として、ページには次のものが並んでいます。</p>
+<ul>
+<li>メンバー限定価格（IKEA Family価格での買い物）</li>
+<li>法人向けのインテリア相談</li>
+<li>請求書払い</li>
+<li>福利厚生サポート</li>
+<li>ドリンクバーの割引</li>
+</ul>
+<p>法人専用の電話窓口と、メンバー専用のオンラインページも案内されています。メンバー専用のオンラインページには、銀行振込での支払いや見積り依頼などのサービスがある、と書かれています。</p>
+<h3 id="請求書払い専用アカウントカード">請求書払い専用アカウントカード</h3>
+<p>請求書払いについては、専用のページ「請求書払い専用アカウントカード」に、次のように書かれています。</p>
+<ul>
+<li>購入後に送られる請求書に従って、銀行振込で決済する</li>
+<li>店舗とIKEAオンラインストアのどちらでも使える</li>
+<li>支払いは請求書発行日から最長60日間</li>
+<li>電子請求書の確認サービスで、請求書をダウンロードできる（初回登録が必要）</li>
+<li>取引には、あらかじめ与信限度額が設定される</li>
+<li>振込手数料など、支払いにかかる手数料はお客さま負担</li>
+<li>食品・飲食代、IKEAギフトカードの支払いには使えない</li>
+</ul>
+<p>申込の必要書類は、法人は法人の印鑑証明書（発行から3か月以内）、個人事業主は個人の印鑑証明書と、確定申告の書類または開廃業等届出書、と案内されています。内容と条件は変わることがあるため、申し込む前に公式ページで確かめてください。</p>
+<p>請求書払いの対象のキャンペーンも案内されていますが、期間や条件の細かい決まりがあるため、この記事では内容を書きません。</p>
+<p>この記事では、IKEA for Business を使うべきかどうかや、通常の買い方との優劣は判断しません。会社の購入の頻度や、経理が求める書類の形で変わります。なお、請求書払いで買った分のレシートや納品明細書の形式は、今回確認した公式ページでは確認できませんでした。</p>
+<h2 id="ikeaのインボイス事業者番号は公式のよくあるご質問に書かれている">IKEAのインボイス：事業者番号は公式のよくあるご質問に書かれている</h2>
+<p>公式のよくあるご質問には、イケアのインボイス制度（適格請求書等保存方式）の事業者番号は T1040001021866 で、購入時のレシートや納品明細書に記載されている、と書かれています。</p>
+<p>ここで大事なのは、受け取った書類そのもので確かめることです。</p>
+<ul>
+<li>「T」から始まる13桁の番号が書かれているか</li>
+<li>書類の名称が、領収証（変換後）か納品明細書か請求書か</li>
+<li>日付・金額・買った物の内容が読み取れるか</li>
+</ul>
+<p>領収証の発行ページで変換した書類の登録番号の載り方は、今回の取得では確認できませんでした。実際に発行した書類で見てください。登録番号が有効かどうかは、国税庁の適格請求書発行事業者公表サイトでも調べられますが、この記事では内容を取得していません。仕入税額控除の可否など個別の判断は、税理士または税務署へ相談してください。登録番号の基本は<a href="/articles/invoice-touroku-yagou/">インボイスの登録番号と屋号</a>、書類の保存は<a href="/articles/ryoushuusho-hozon-e-bunsho-taiou/">領収書の保存と電子データの扱い</a>で整理しています。</p>
+<h2 id="経理に出す前のチェックリスト">経理に出す前のチェックリスト</h2>
+<p>公式ページに書かれている事実の範囲で、確認したい項目を並べます。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 店舗で買ったか、オンラインストアで買ったかを分けた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 店舗の分は、購入後365日以内のレシートを、領収証の発行ページで変換した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 変換は1レシートにつき1回限りなので、会社名の表記を入力前に確かめた</li>
+<li class="task-list-item"><input type="checkbox" disabled> オンラインの分は、商品のお届け後に届く納品明細書を受け取った</li>
+<li class="task-list-item"><input type="checkbox" disabled> 注文の入力のとき、請求先を会社名にした（注文後は宛先を変更できない）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 配送先と請求先を分けた注文は、請求先のメールアドレスで受け取れるか確かめた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 見積書が必要な分は、買う前にカスタマーサポートセンターへ頼んだ</li>
+<li class="task-list-item"><input type="checkbox" disabled> レシートや納品明細書は再発行されないため、受け取ったその場で保管した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 手書きの領収書は発行されないと理解している</li>
+<li class="task-list-item"><input type="checkbox" disabled> 書類に「T＋13桁」の事業者番号があるか確かめた</li>
+</ul>
+<h2 id="併用の選択肢購入先ごとに書類の取り方が違う">併用の選択肢：購入先ごとに書類の取り方が違う</h2>
+<p>ここまで見たように、IKEAは店舗かオンラインか、請求書払いを使うかで、書類の形と取り方が変わります。家具は IKEA、消耗品や事務用品は別の買い先、と分けると、書類を集める場所もそれぞれ違います。</p>
+<p>買い先を複数持つときは、手続きの面で次の点を並べると比べやすくなります。</p>
+<table>
+<thead>
+<tr>
+<th>比べる点</th>
+<th>確認すること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>登録の条件</td>
+<td>費用はかかるか、事業者でなければ登録できないか</td>
+</tr>
+<tr>
+<td>支払方法</td>
+<td>カード、請求書払いなどの種類と、審査の有無</td>
+</tr>
+<tr>
+<td>書類の取り方</td>
+<td>領収書・請求書をどの画面から、いつ取れるか</td>
+</tr>
+<tr>
+<td>書類の発行元</td>
+<td>販売店か運営会社か、登録番号はあるか</td>
+</tr>
+</tbody>
+</table>
+<p>Amazonビジネスは、公式サイトの表記では登録が無料です（2026年9月12日確認）。請求書払いは、公式ページによると招待制で審査があり、締め日から30日の支払期限です（2026年10月22日確認）。IKEA とどちらが合うかは、買う物や受け取り方、支払いの流れで変わるため、この記事では優劣をつけません。</p>
+<p>3社の違いは<a href="/articles/amazon-business-monotaro-askul-hikaku/">アマゾンビジネス・モノタロウ・アスクルの比較記事</a>で整理しています。モノタロウの書類は<a href="/articles/monotaro-ryoushuusho/">モノタロウの領収書・請求書の記事</a>、アスクルの書類は<a href="/articles/askul-ryoushuusho/">アスクルの領収書・請求書の記事</a>を見てください。</p>
+<aside class="cta-box cta-box--subtle"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">Amazonビジネス</p><h3 class="cta-box__title">IKEAと使い分けるなら、Amazonビジネスの登録（無料）も選択肢です</h3><p class="cta-box__body">家具は IKEA、消耗品や事務用品は別の買い先、と分ける会社は少なくありません。買い先ごとに領収書の取り方が違うので、書類を集める手間も増えます。Amazonビジネスは公式サイトの表記で登録無料です。請求書払いは審査のある招待制なので、条件は公式で確かめてから選べます。</p><a class="cta-box__button" href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">Amazonビジネスの登録ページへ（公式）</a></aside>
+<h2 id="よくある質問とまとめ">よくある質問とまとめ</h2>
+<h3 id="領収書と領収証と納品明細書は同じですか">領収書と領収証と納品明細書は同じですか</h3>
+<p>IKEAの公式ページでは「領収書」「領収証」の両方の表記が使われ、オンラインの納品明細書は「領収書としてお使いいただけます」とされています。経理が求める書類の名前と、手元の書類の名称が合うかを見てください。</p>
+<h3 id="レシートを無くしたらどうなりますか">レシートを無くしたらどうなりますか</h3>
+<p>公式のよくあるご質問では、レシートの再発行は行っていません。IKEA Familyの会員番号を出して買った場合は、購入履歴からデジタルレシートを確かめられます。</p>
+<h3 id="まとめ">まとめ</h3>
+<p>IKEAの領収書は、買い方で取り方が違います。店舗の分は、購入後365日以内のレシートの情報から、領収証の発行ページで1回だけ変換します。オンラインストアの分は、商品のお届け後に届く納品明細書を領収書として使い、宛名は注文時の請求先で決まります。手書きの領収書とレシートの再発行は行っていません。</p>
+<p>見積書はカスタマーサポートセンターに頼みます。法人は IKEA for Business の請求書払いも案内されていますが、条件は公式ページで確かめてください。インボイスの事業者番号は、公式のよくあるご質問で T1040001021866 とされています。受け取った書類で「T＋13桁」を確かめ、税務の個別の判断は税理士・税務署へ相談してください。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>IKEAの領収書はどこでもらえますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式の案内では、店舗で買った場合はレシートの情報から「領収証の発行ページ」で領収書を発行します。オンラインで買った場合は、商品のお届け後にEメールで届く「納品明細書」を領収書として使います。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>IKEAで手書きの領収書は出してもらえますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式のよくあるご質問には「レシートや納品明細書の再発行および手書きの領収書の発行は行っておりません」と書かれています。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>IKEAの領収書の宛名は変えられますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>納品明細書の宛名は、注文時に請求先へ入力した名前と住所が載り、法人の場合は会社名のみが載る、と案内されています。注文後に宛先の名前は変更できません。店舗のレシートから変換する場合は、法人情報（会社名など）を追加できると案内されています。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>IKEAで見積書はもらえますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>カスタマーサポートセンターに問い合わせると、メールで受け取れると案内されています。作成日当日の商品の合計金額を確かめるもので、在庫の確保はできず、購入済み商品の見積書は作れません。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>IKEAの領収書はインボイス（適格請求書）の登録番号がありますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式のよくあるご質問によると、イケアのインボイス制度の事業者番号は T1040001021866 で、購入時のレシートや納品明細書に記載されているとされています。手元の書類で確かめ、個別の判断は税理士・税務署に確認してください。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://www.ikea.com/jp/ja/customer-service/knowledge/articles/947cf36f-bec3-4dc8-a8d1-63f5247edb4e.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>IKEA レシート、領収証、見積書などについて教えてください。</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-01）</span></li><li data-astro-cid-sgg5joot><a href="https://www.ikea.com/jp/ja/customer-service/knowledge/articles/ed85d430-4402-46c9-g451-53df38f929g5.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>IKEAオンラインストア 配送先と別の場所にレシートを送って欲しい。</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-01）</span></li><li data-astro-cid-sgg5joot><a href="https://www.ikea.com/jp/ja/receipt-conversion/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>IKEA 領収書発行（領収証の発行ページ）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-01）</span></li><li data-astro-cid-sgg5joot><a href="https://www.ikea.com/jp/ja/ikea-business/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>IKEA for Business 法人様向けメンバーシップクラブ</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-01）</span></li><li data-astro-cid-sgg5joot><a href="https://www.ikea.com/jp/ja/ikea-business/business-payment-account-pub99f8f6d0/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>IKEA for Business 請求書払い専用アカウントカード</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-01）</span></li><li data-astro-cid-sgg5joot><a href="https://business.amazon.co.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス公式サイト</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-09-12）</span></li><li data-astro-cid-sgg5joot><a href="https://business.amazon.co.jp/ja/solutions/payment-options/pay-by-invoice" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス 請求書払い</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-22）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/amazon-business-mitsumorisho-hakkou/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1oukbk0-g" x1="0" y1="0" x2="1" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1oukbk0-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1oukbk0-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1oukbk0-p)" data-astro-cid-yuatfsof></rect><circle cx="366" cy="57" r="153" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Amazon</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>見積書</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>出し方</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--amazon-business">Amazonビジネス実務</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>Amazonの見積書の出し方｜カートからPDFで保存する手順（Amazonビジネス・登録無料）</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>Amazonで見積書が必要なときは、登録無料のAmazonビジネスを使います。注文前はカートから参考見積書、注文後は注文履歴から見積書をPDFで保存でき、稟議や経費精算に使えます。個人アカウントしかない場合の考え方と、配送料が載らない・ダウンロードできないときの注意点もまとめました。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-06T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月6日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約12分</p></div></a><a class="card article-card" href="/articles/kojin-jigyou-kaigyoutodoke-nashi-amazon-business-toroku/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1ptehj0-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1ptehj0-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1ptehj0-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1ptehj0-p)" data-astro-cid-yuatfsof></rect><circle cx="363" cy="90" r="176" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>個人事業主</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>開業届なし</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Amazonビジネス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--amazon-business">Amazonビジネス実務</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>Amazonビジネスの登録に必要書類は？開業届なしの個人事業主が用意するもの一覧</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>個人事業主がAmazonビジネスに登録するときは、確認書類を1点提出します。開業届がなくても、過去2年以内の確定申告書B・収支内訳書、インボイスの登録通知書などで代わりになります。公式ヘルプの書類一覧と提出時の注意点、登録手順、屋号の扱いを整理しました。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-06T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月6日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/amazon-business/" data-astro-cid-sgg5joot>Amazonビジネス実務の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/receipts/" data-astro-cid-sgg5joot>サービス別 領収書・インボイス対応一覧を見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/business-prime/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 L4 4"></path><path d="M4 20 L21 20"></path><path d="M7 20 L7 14"></path><path d="M11 20 L11 10"></path><path d="M15 20 L15 15"></path><path d="M19 20 L19 7"></path><path d="M5 16 L20 8"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>Business Prime 損益分岐計算</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>注文回数と送料を入れると、プライムビジネス（旧Businessプライム）の元が取れる回数がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/amazon-business-check/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 9 l2 2 l3.5 -3.5"></path><path d="M8 15 h8"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>Amazonビジネスが必要か判定</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>5つの質問に答えるだけで、Amazonビジネスが「要る」「今は要らない」「どちらでも」のどれかがわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

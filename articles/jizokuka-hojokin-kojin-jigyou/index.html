@@ -1,0 +1,401 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>小規模事業者持続化補助金の個人事業主向け申請手順｜必要書類・開業届・補助上限（第20回） | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="個人事業主も小規模事業者持続化補助金（一般型・通常枠）に申請できます。第20回の締切は2026年12月15日17時で、確定申告書の写し（開業直後は開業届と売上台帳）と事業支援計画書（様式4）が要ります。補助上限は50万円、特例で最大250万円です。"><link rel="canonical" href="https://soroecho.com/articles/jizokuka-hojokin-kojin-jigyou/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="小規模事業者持続化補助金の個人事業主向け申請手順｜必要書類・開業届・補助上限（第20回） | そろえ帳"><meta property="og:description" content="個人事業主も小規模事業者持続化補助金（一般型・通常枠）に申請できます。第20回の締切は2026年12月15日17時で、確定申告書の写し（開業直後は開業届と売上台帳）と事業支援計画書（様式4）が要ります。補助上限は50万円、特例で最大250万円です。"><meta property="og:url" content="https://soroecho.com/articles/jizokuka-hojokin-kojin-jigyou/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/jizokuka-hojokin-kojin-jigyou.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="小規模事業者持続化補助金の個人事業主向け申請手順｜必要書類・開業届・補助上限（第20回） — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="小規模事業者持続化補助金の個人事業主向け申請手順｜必要書類・開業届・補助上限（第20回） | そろえ帳"><meta name="twitter:description" content="個人事業主も小規模事業者持続化補助金（一般型・通常枠）に申請できます。第20回の締切は2026年12月15日17時で、確定申告書の写し（開業直後は開業届と売上台帳）と事業支援計画書（様式4）が要ります。補助上限は50万円、特例で最大250万円です。"><meta name="twitter:image" content="https://soroecho.com/og/jizokuka-hojokin-kojin-jigyou.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"小規模事業者持続化補助金の個人事業主向け申請手順｜必要書類・開業届・補助上限（第20回）","item":"https://soroecho.com/articles/jizokuka-hojokin-kojin-jigyou/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"小規模事業者持続化補助金の個人事業主向け申請手順｜必要書類・開業届・補助上限（第20回）","description":"個人事業主も小規模事業者持続化補助金（一般型・通常枠）に申請できます。第20回の締切は2026年12月15日17時で、確定申告書の写し（開業直後は開業届と売上台帳）と事業支援計画書（様式4）が要ります。補助上限は50万円、特例で最大250万円です。","url":"https://soroecho.com/articles/jizokuka-hojokin-kojin-jigyou/","datePublished":"2026-11-03T00:00:00.000Z","dateModified":"2026-11-03T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/jizokuka-hojokin-kojin-jigyou/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"個人事業主でも小規模事業者持続化補助金に申請できますか。","acceptedAnswer":{"@type":"Answer","text":"できます。第20回公募要領（第8版）では、個人事業主は「商工業者であること」が条件で、従業員は商業・サービス業で5人以下、製造業その他で20人以下です。申請時点で開業していることも必要で、開業届上の開業日が申請日より後の人は対象外とされています。"}},{"@type":"Question","name":"開業届は申請に必要ですか。","acceptedAnswer":{"@type":"Answer","text":"決算期を一度も迎えていない個人事業主は、確定申告書の代わりに、開業日が書かれた開業届の写しと売上台帳等を出します。開業後に決算期を1回以上迎えている人は確定申告書の写しを出し、公募要領はこの場合の提出書類に開業届の写しを挙げていません。"}},{"@type":"Question","name":"確定申告をまだしていない開業1年目でも申請できますか。","acceptedAnswer":{"@type":"Answer","text":"開業していて事業の実態があれば申請できます。決算期を一度も迎えていない場合は、開業届の写しと、開業以降に売上が発生していることを示す売上台帳等（任意様式）を添付します。売上台帳には事業所得と判断できる売上の記載が必要です。"}},{"@type":"Question","name":"個人事業主の補助上限はいくらですか。","acceptedAnswer":{"@type":"Answer","text":"通常枠は50万円、補助率は2/3です。インボイス特例の要件を満たすと50万円、賃金引上げ特例は150万円、両方で200万円が上乗せされ、最大250万円です。賃金引上げ特例は、算定対象の従業員がいない月があると対象外とされています。特例の要件を満たさないと、補助金全体が交付されません。"}},{"@type":"Question","name":"通常枠と創業型は同時に申請できますか。","acceptedAnswer":{"@type":"Answer","text":"できません。どちらか一方だけを申請します。創業型は、創業後1年以内で、認定市区町村が発行する特定創業支援等事業の証明書がある人が対象で、補助上限は200万円です。通常枠で採択され補助事業を実施した事業者は、創業型に申請できません。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>小規模事業者持続化補助金の個人事業主向け申請手順｜必要書類・開業届・補助上限（第20回）</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecqpobrv-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient></defs><rect width="400" height="225" fill="url(#ecqpobrv-g)" data-astro-cid-yuatfsof></rect><circle cx="383" cy="59" r="58.8" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="383" cy="59" r="92.4" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="383" cy="59" r="126" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="383" cy="59" r="159.6" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="383" cy="59" r="168" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>小規模事業者持続…</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>個人事業主</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>小規模事業者持続化補助金の個人事業主向け申請手順｜必要書類・開業届・補助上限（第20回）</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-11-03T00:00:00.000Z" data-astro-cid-sgg5joot>2026年11月3日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約16分</p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論個人事業主も申請できる第20回は2026年12月15日17時締切で書類は確定申告書の写し開業直後は開業届と売上台帳" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：個人事業主も申請できる。第20回は2026年12月15日17時締切で、書類は確定申告書の写し（開業直後は開業届と売上台帳）</a></li><li data-astro-cid-sgg5joot><a href="#対象になるか個人事業主の条件" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>対象になるか：個人事業主の条件</a></li><li data-astro-cid-sgg5joot><a href="#必要書類個人事業主が手元で用意するもの" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>必要書類：個人事業主が手元で用意するもの</a></li><li data-astro-cid-sgg5joot><a href="#申請の順番gビズidプライムから電子申請まで" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>申請の順番：GビズIDプライムから電子申請まで</a></li><li data-astro-cid-sgg5joot><a href="#補助上限と特例個人事業主の場合" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>補助上限と特例：個人事業主の場合</a></li><li data-astro-cid-sgg5joot><a href="#創業型との違い個人事業主が迷う点" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>創業型との違い：個人事業主が迷う点</a></li><li data-astro-cid-sgg5joot><a href="#つまずきやすい点" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>つまずきやすい点</a></li><li data-astro-cid-sgg5joot><a href="#申請前のチェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>申請前のチェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#よくある質問とまとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>よくある質問とまとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論個人事業主も申請できる第20回は2026年12月15日17時締切で書類は確定申告書の写し開業直後は開業届と売上台帳">結論：個人事業主も申請できる。第20回は2026年12月15日17時締切で、書類は確定申告書の写し（開業直後は開業届と売上台帳）</h2>
+<p>小規模事業者持続化補助金＜一般型 通常枠＞の第20回公募要領（第8版・2026年7月21日付、2026年11月3日取得）によると、個人事業主（商工業者）は補助対象です。従業員数は商業・サービス業で5人以下、製造業その他で20人以下で、申請時点で開業していることが条件です。</p>
+<p>申請は電子申請システムのみで、締切は2026年12月15日（火）17:00です。地域の商工会・商工会議所へ事業支援計画書（様式4）を依頼できるのは、それより11日早い12月4日（金）までです。</p>
+<p>補助上限は50万円（特例を使うと最大250万円）、補助率は2/3です。補助金は後払いで、審査があり、不採択になることもあります。</p>
+<p>用意する書類は、開業してからの経過で変わります。</p>
+<table>
+<thead>
+<tr>
+<th>あなたの状況</th>
+<th>確定申告書の写し</th>
+<th>開業届の写し</th>
+<th>売上台帳等</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>開業後、決算期を1回以上迎えた</td>
+<td>必要（所得額に関わらず）</td>
+<td>不要</td>
+<td>不要</td>
+</tr>
+<tr>
+<td>開業して決算期を一度も迎えていない</td>
+<td>不要（代わりに右の2つを出す）</td>
+<td>必要（開業日が書かれたもの）</td>
+<td>必要（任意様式）</td>
+</tr>
+</tbody>
+</table>
+<p>申請時点で開業していない人は補助対象外です。開業届を出していても、開業届上の開業日が申請日より後なら対象外になります。</p>
+<p>この記事で分かることは次のとおりです。</p>
+<ul>
+<li>対象になる条件と、従業員数の数え方</li>
+<li>手元で用意する書類と、開業直後の扱い</li>
+<li>GビズIDプライムから電子申請までの順番と、第20回の日程</li>
+<li>補助上限・特例と、創業型との違い</li>
+</ul>
+<p>この記事は第20回（一般型 通常枠）の内容で、事務局サイトは2026年11月3日に確認しました。回次や条件は変わることがあります。第16回までの名称は＜一般型＞、第17回から＜一般型・通常枠＞なので、古い解説の金額や書類は別の回のものです。</p>
+<h2 id="対象になるか個人事業主の条件">対象になるか：個人事業主の条件</h2>
+<p>公募要領（第8版）P.4〜5と、第20回「申請時によくあるご質問」（以下、よくあるご質問）によると、個人事業主は「商工業者であること」が条件です。個人事業主に関わる部分は次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>確認する点</th>
+<th>公募要領・よくあるご質問の記載</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>従業員数</td>
+<td>常時使用する従業員が、商業・サービス業（宿泊業・娯楽業を除く）は5人以下、宿泊業・娯楽業と製造業その他は20人以下。パートタイム労働者は数える。派遣社員、試用期間中の人、会社役員、同居の親族従業員、日雇労働者、短期の雇用（2か月以内、季節的業務で4か月以内）の人は数えない（Q2-3〜2-5）</td>
+</tr>
+<tr>
+<td>開業と事業の実態</td>
+<td>申請時点で開業していない創業予定者は対象外。開業届を出していても、開業日が申請日より後、または申請時点までに事業を始めていなければ対象外。採択後に分かった場合は、採択・交付決定の取り消しもある</td>
+</tr>
+<tr>
+<td>職業</td>
+<td>医師・歯科医師・助産師は対象外。弁護士・税理士・行政書士などの士業と経営コンサルタントは対象（Q2-2）</td>
+</tr>
+<tr>
+<td>農林水産業</td>
+<td>系統出荷による収入のみの個人農業者（個人の林業・水産業者も同様）は対象外。農作物の加工や料理の提供などの事業に必要な経費は補助対象</td>
+</tr>
+<tr>
+<td>会員か</td>
+<td>商工会・商工会議所の会員でなくても申請できる（Q2-1）</td>
+</tr>
+</tbody>
+</table>
+<p>従業員数の上限は、業種で変わります。第20回参考資料（2026年10月）P.2によると、仕入れた商品をそのまま売る事業や、個人の技能をその場で提供する事業は「商業・サービス業」です。流通性のあるモノ（ソフトウェアなど無形のものを含む）を作る事業や、他者のモノに加工して価値を付ける事業は「製造業その他」です。</p>
+<p>区分が難しい事業は「その他」として、20人以下の基準を使います。申請システムの「主たる業種」は、この考え方で選びます（Q4-5）。</p>
+<p>次のケースは、申請できないか、条件があります（公募要領P.1、P.5、P.23〜24、よくあるご質問）。</p>
+<ul>
+<li>同じ受付締切回への応募は1件だけです。複数の屋号を使っている人や、1人で2つの事業を営んでいる人も1件です（Q2-8、Q5-1）</li>
+<li>創業型と同時には申請できません（Q2-11）</li>
+<li>国の他の補助金と同じ内容の事業は対象外です（P.7、Q3-5）</li>
+<li>過去に持続化補助金で採択され補助事業を実施した人は、事業効果および賃金引上げ等状況報告書（様式第14）の提出などの条件があります（P.5）</li>
+</ul>
+<p>申請期間中に個人事業主から法人に変わる予定がある人は、変更後の法人が要件を満たせば申請できます。事務局への届け出が必要です（Q2-7）。</p>
+<h2 id="必要書類個人事業主が手元で用意するもの">必要書類：個人事業主が手元で用意するもの</h2>
+<p>公募要領（第8版）P.26〜28の「申請に必要な書類」によると、個人事業主（表では「個人」）が用意する書類は次のとおりです。様式1・2・3・5・6は電子申請システムに直接入力するので、添付は要りません。</p>
+<table>
+<thead>
+<tr>
+<th>書類</th>
+<th>必要な人</th>
+<th>手元で用意するもの・注意（公募要領の記載）</th>
+<th>添付のファイル名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>事業支援計画書（様式4）</td>
+<td>全員</td>
+<td>地域の商工会・商工会議所が発行する。受付締切（12月4日）以降の依頼は、いかなる理由があってもできない</td>
+<td>発行後に反映またはアップロード</td>
+</tr>
+<tr>
+<td>直近の確定申告書の写し（第一表・第二表）</td>
+<td>開業後に決算期を1回以上迎えた人</td>
+<td>所得額に関わらず提出。マイナンバーが記載されていれば、番号が見えないよう黒塗りする</td>
+<td>確定申告書第一表（事業者名）、確定申告書第二表（事業者名）</td>
+</tr>
+<tr>
+<td>収支内訳書（1・2面）または所得税青色申告決算書（1〜4面）の写し</td>
+<td>同上</td>
+<td>確定申告書と一緒に提出。第19回の手引きでは、白色申告は収支内訳書、青色申告は青色申告決算書と案内</td>
+<td>収支内訳書（事業者名）、または所得税青色申告決算書（事業者名）</td>
+</tr>
+<tr>
+<td>開業届の写し</td>
+<td>決算期を一度も迎えていない人だけ</td>
+<td>申請の時点で開業していることが分かるもの。開業日が記載されていない開業届は無効</td>
+<td>開業届（事業者名）</td>
+</tr>
+<tr>
+<td>売上台帳等の写し（任意様式）</td>
+<td>決算期を一度も迎えていない人だけ</td>
+<td>開業以降に売上が発生していることを示す。事業所得と判断できる売上の記載が必要（Q4-2）</td>
+<td>売上台帳（事業者名）</td>
+</tr>
+</tbody>
+</table>
+<p>添付できる形式は、pdf・png・jpg・doc・xlsxなどです。所定の場所に添付されていない場合や、パスワードなどで内容を確認できない場合は、審査ができないと書かれています。マイナンバー（12桁）の提供は不要で、書類に載っていれば番号を黒塗りします（P.23）。</p>
+<h3 id="確定申告書を出す人決算期を1回以上迎えた人">確定申告書を出す人（決算期を1回以上迎えた人）</h3>
+<p>開業してから決算期を1回以上迎えている場合は、所得額に関わらず確定申告書の写しを提出します（P.27）。赤字でも少額でも、確定申告書は必要です。</p>
+<p>この回の締切（2026年12月15日）は、2026年分の確定申告の期間より前です。国税庁のタックスアンサー（No.2020、令和8年4月1日現在法令等。2026年11月3日取得）によると、申告期間は原則として翌年の2月16日から3月15日です。</p>
+<p>そのため、この回で出す「直近の確定申告書」は、通常は2026年に申告した2025年分です。</p>
+<p>第19回の申請システム操作手引き（公募申請）では、画面でまず「決算期を1度でも迎えていますか」を選びます。「はい」なら、直近1期の売上高・売上総利益・経常利益を入力して、確定申告書を添付します。</p>
+<p>第20回の手引きは、2026年11月3日時点の事務局サイトでは確認できませんでした。申告の流れは、<a href="/articles/kojin-jigyou-kakutei-shinkoku-nagare/">個人事業主の確定申告の流れ</a>で整理しています。</p>
+<h3 id="開業して間もない人決算期を一度も迎えていない">開業して間もない人（決算期を一度も迎えていない）</h3>
+<p>決算期を一度も迎えていない場合は、確定申告書の代わりに、開業届の写しと、開業以降に売上が発生していることを示す売上台帳等（任意様式）の写しを出します（P.27）。</p>
+<p>売上台帳には、事業所得と判断できる売上の記載が必要です（Q4-2）。副業で始めた人は、事業所得か雑所得かの判断を税務署または税理士に相談してください。</p>
+<p>「決算期を一度も迎えていない」が個人事業主ではいつを指すのか、公募要領とよくあるご質問には個人事業主向けの説明が見当たりませんでした。</p>
+<p>創業型のよくあるご質問（第4回）Q4-2は、確定申告書を出せない場合を「確定申告を一度も行っていない等で確定申告書が提出できない事業者」と書いています。境目にいる人は、様式4を依頼する商工会・商工会議所で確認してください。</p>
+<p>開業届や確定申告書の「写し」について、受付印の有無やe-Taxの控えの形を指定する記載は、今回確認した公募要領・よくあるご質問・参考資料に見当たりませんでした。</p>
+<p>どの形で出せるかは、窓口に確かめてください。開業届の控えの取り方（窓口・郵送・e-Tax）は、<a href="/articles/kaigyou-todoke-kakikata-teishutsu/">開業届の書き方と提出方法</a>で整理しています。</p>
+<p>開業届の写しが必要な人が、まだ開業届を出していない場合は、申請の前に出す必要があります。開業届上の開業日が申請日より後だと対象外で、申請時点で開業の実態がない場合も対象外です（Q2-6）。開業日は、実際に事業を始めた日で記入してください。</p>
+<aside class="cta-box"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">弥生株式会社</p><h3 class="cta-box__title">弥生 起業・開業ナビ（かんたん開業届／かんたん会社設立）</h3><p class="cta-box__body">開業届や会社設立書類を無料で作成できる起業支援サービス。</p><a class="cta-box__button" href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+DZ3BQ2+35XE+HXD0Y" data-offer="yayoi-kigyo-navi" rel="sponsored nofollow noopener" target="_blank">弥生 起業・開業ナビ（かんたん開業届／かんたん会社設立）の公式サイトへ</a></aside>
+<h3 id="特例で追加する書類希望する人だけ">特例で追加する書類（希望する人だけ）</h3>
+<p>公募要領（第8版）P.28〜31によると、個人事業主に関わる主な追加書類は次のとおりです。経営力向上計画の認定書など、加点ごとの書類も同じ範囲に載っています。</p>
+<table>
+<thead>
+<tr>
+<th>希望するもの</th>
+<th>追加で用意するもの</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>インボイス特例</td>
+<td>宣誓・同意書（様式9。システム上でチェック）。登録済みなら適格請求書発行事業者の登録通知書の写し。e-Taxで登録手続中なら登録申請データの「受信通知」。郵送で手続き中や申請がまだの場合は、申請時の提出は不要で、実績報告時に登録通知書の写しを出す</td>
+</tr>
+<tr>
+<td>賃金引上げ特例</td>
+<td>誓約・同意書（様式7。システム上でチェック）。赤字事業者（補助率3/4）は、直近1年に税務署へ提出した確定申告書第一表の写し</td>
+</tr>
+</tbody>
+</table>
+<h2 id="申請の順番gビズidプライムから電子申請まで">申請の順番：GビズIDプライムから電子申請まで</h2>
+<p>公募要領（第8版）P.3、P.22〜23によると、申請の流れは次のとおりです。</p>
+<ol>
+<li>対象になるかを確認し、事業を営む地区（商工会か商工会議所か）を調べる。窓口の調べ方は、商工会と商工会議所の違いの記事で整理しています</li>
+<li>GビズIDプライムのアカウントを取得する。取得方法の詳細は、GビズIDプライムの取得方法も参照してください</li>
+<li>電子申請システムで、経営計画・補助事業計画（様式2・3）を入力し、申請内容を印刷する。特例や加点の書類もこの時点で用意する</li>
+<li>地域の商工会・商工会議所に、事業支援計画書（様式4）の発行を依頼する（12月4日まで）</li>
+<li>様式4が反映（商工会地区）またはアップロード（商工会議所地区）されたら、必要書類をそろえて申請する（12月15日17:00まで）</li>
+<li>採択発表（2027年3月頃の予定）を待つ</li>
+</ol>
+<p>GビズIDの公式ページ（2026年11月3日取得）によると、GビズIDプライムは無償で、審査にかかる時間はオンライン申請で最短即日、書類申請で最大1か月です。オンライン申請には、マイナンバーカードと、読み取りできるスマートフォンが必要です。</p>
+<p>公募要領P.23は「アカウントの取得には数週間程度を要する」と注意し、暫定GビズIDプライムは使えないとしています。</p>
+<p>電子申請システムの入力も様式4の依頼も、アカウントができてからなので、期限から逆算して早めに動きます。</p>
+<table>
+<thead>
+<tr>
+<th>第20回の項目</th>
+<th>日付（商工会議所地区・商工会地区の事務局サイト、2026年11月3日取得）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>申請受付開始</td>
+<td>2026年11月5日（木）</td>
+</tr>
+<tr>
+<td>事業支援計画書（様式4）発行の受付締切</td>
+<td>2026年12月4日（金）</td>
+</tr>
+<tr>
+<td>申請受付締切</td>
+<td>2026年12月15日（火）17:00</td>
+</tr>
+<tr>
+<td>採択発表</td>
+<td>2027年3月頃（予定）</td>
+</tr>
+<tr>
+<td>見積書等の提出期限</td>
+<td>2028年2月29日（火）</td>
+</tr>
+<tr>
+<td>補助事業実施期間</td>
+<td>交付決定日から2028年3月31日（金）まで</td>
+</tr>
+</tbody>
+</table>
+<p>予定は変更される場合があります。2026年11月3日時点で、商工会地区の事務局ページは第20回の電子申請を「準備中」としています。電子申請システム（jizokuka-portal.info）は、商工会地区・商工会議所地区のどちらも同じサイトで、郵送の申請は受け付けません。</p>
+<p>審査は書類だけで行われます。公募要領P.32によると、採択審査は非公開で、提案内容に関するヒアリングはなく、審査結果の内容についての問い合わせにも応じないとされています。様式2は、各項目最大4,000文字（Word4枚程度）が目安です（Q4-7）。</p>
+<p>採択後も手続きが続きます。公募要領とよくあるご質問によると、発注・契約・支出ができるのは交付決定日以降で、採択発表日は開始日ではありません（Q5-2）。支払いは銀行振込が大原則で、1取引10万円超（税抜き）の現金払いは、旅費などを除いて認められません（P.21）。</p>
+<p>補助金は、補助金額の確定を受けた事業年度の収益として、所得税の課税対象になると公募要領P.26に書かれています。税務の個別の判断は、税理士または税務署に相談してください。</p>
+<p>補助金は後払いなので、立て替える資金の考え方は、<a href="/articles/shikin-choutatsu-houhou-kojin-jigyou/">資金調達の方法を個人事業主向けに整理した記事</a>も参考になります。</p>
+<h2 id="補助上限と特例個人事業主の場合">補助上限と特例：個人事業主の場合</h2>
+<p>公募要領（第8版）P.7〜11と、中小企業庁の概要（令和8年5月27日時点版。2026年11月3日取得）によると、補助上限と補助率は次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>区分</th>
+<th>補助上限</th>
+<th>条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>通常枠</td>
+<td>50万円</td>
+<td>補助率2/3</td>
+</tr>
+<tr>
+<td>インボイス特例を使う</td>
+<td>50万円の上乗せ（合計100万円）</td>
+<td>インボイス特例の要件を満たす</td>
+</tr>
+<tr>
+<td>賃金引上げ特例を使う</td>
+<td>150万円の上乗せ（合計200万円）</td>
+<td>賃金引上げ特例の要件を満たす。赤字事業者は補助率3/4</td>
+</tr>
+<tr>
+<td>両方の特例を使う</td>
+<td>200万円の上乗せ（合計250万円）</td>
+<td>両方の要件を満たす</td>
+</tr>
+</tbody>
+</table>
+<p>補助金の額は、補助対象経費の合計に補助率をかけた額です（P.11）。補助率が2/3なので、上限の50万円を受け取るには、補助対象経費が75万円分（自己負担25万円）必要になる計算です。消費税の扱いは、参考資料P.13で確認してください。</p>
+<p>補助の対象は、経営計画に基づく販路開拓などの取り組みに使う、機械装置等費、広報費、ウェブサイト関連費、展示会等出展費、旅費、新商品開発費、借料、委託・外注費の8区分です（P.3）。</p>
+<h3 id="インボイス特例">インボイス特例</h3>
+<p>公募要領P.8によると、2021年9月30日から2023年9月30日の属する課税期間で一度でも免税事業者だった事業者、または2023年10月1日以降に創業した事業者のうち、適格請求書発行事業者の登録を受けた事業者が対象です。登録は、補助事業の終了時点で受けている必要があります。</p>
+<p>要件を満たさない場合は、上乗せ部分だけでなく、補助金全体が交付されません。登録の際の屋号の扱いは、<a href="/articles/invoice-touroku-yagou/">インボイス登録と屋号の扱いの記事</a>で整理しています。</p>
+<h3 id="賃金引上げ特例">賃金引上げ特例</h3>
+<p>公募要領P.9〜11によると、2028年3月31日までの12か月で、従業員1人あたりの給与支給総額が前年同月の12か月より年平均3.0％以上増えた事業者が対象です。ここでいう従業員には、代表者・役員・専従者は含まれません。</p>
+<p>比べる期間のいずれかの月に算定対象の従業員がいない場合は、特例の対象外と書かれています（P.10、Q6-7）。従業員を雇っていない個人事業主や、従業員が家族専従者だけの個人事業主は、当てはまるかどうかを事前に窓口で確認してください。</p>
+<p>赤字事業者として補助率3/4を使う条件は、個人事業主の場合、直近1年の確定申告書第一表の「課税される所得金額」がゼロ以下であることです（P.11）。一度も申告・決算期を迎えていない場合は、赤字事業者の要件を確認できないため対象外とされています（Q6-2）。</p>
+<h2 id="創業型との違い個人事業主が迷う点">創業型との違い：個人事業主が迷う点</h2>
+<p>開業して間もない人は、「小規模事業者持続化補助金＜創業型＞」も候補になります。創業型の第4回公募要領（第8版・2026年5月27日付）と中小企業庁の概要（2026年11月3日取得）によると、通常枠との違いは次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>比べる点</th>
+<th>通常枠（第20回）</th>
+<th>創業型（第4回）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>補助上限</td>
+<td>50万円（特例込みで最大250万円）</td>
+<td>200万円（インボイス特例で50万円上乗せ、最大250万円）</td>
+</tr>
+<tr>
+<td>補助率</td>
+<td>2/3（賃金引上げ特例の赤字事業者は3/4）</td>
+<td>2/3</td>
+</tr>
+<tr>
+<td>特例</td>
+<td>インボイス特例、賃金引上げ特例</td>
+<td>インボイス特例のみ</td>
+</tr>
+<tr>
+<td>主な要件</td>
+<td>小規模事業者であること。開業していること</td>
+<td>支援を受けた日と開業日が、公募締切から起算して過去1か年の間（第4回は2025年12月15日〜2026年12月15日）。個人事業主は本人が支援を受けていること</td>
+</tr>
+<tr>
+<td>追加で必要な書類</td>
+<td>なし</td>
+<td>認定市区町村が発行する、特定創業支援等事業の支援を受けた証明書の写し。開業届の写し。創業計画書等（策定している場合）</td>
+</tr>
+</tbody>
+</table>
+<p>創業型も、受付開始は2026年11月5日、申請の締切は12月15日17:00、様式4の依頼は原則12月4日までで、通常枠と同じ日程です。</p>
+<p>通常枠と創業型は、同時に申請できません（通常枠のよくあるご質問Q2-11、創業型のQ2-12）。申請した後に申請の種類を変えることもできません（創業型Q6-13）。</p>
+<p>創業型で注意する点は次のとおりです。</p>
+<ul>
+<li>開業日は、開業届の「開業・廃業等日」で判断します。書類の発行日や提出日ではありません（創業型P.7）</li>
+<li>特定創業支援等事業の最終受講日が、2025年12月15日から2026年12月15日の間である必要があります。証明書は、実施元の認定市区町村が発行したものに限ります（創業型Q6-3、Q6-6）</li>
+<li>通常枠で採択され補助事業を実施した事業者は、創業型に申請できません（創業型Q2-9）</li>
+</ul>
+<p>どちらの枠が合うかは、開業日と、特定創業支援等事業の受講状況で変わります。判断は、様式4を依頼する商工会・商工会議所や、市区町村の創業担当窓口に相談してください。</p>
+<h2 id="つまずきやすい点">つまずきやすい点</h2>
+<p>公募要領とよくあるご質問が注意している点を、個人事業主向けにまとめます。</p>
+<ul>
+<li>申請の代行や第三者の支援を受けるときは、高額なアドバイス料金への注意が書かれています（P.1）。商工会・商工会議所を除く第三者の支援を受けたのに、様式2へ相手方と金額を書かないと、虚偽の報告として不採択・交付決定の取り消しになります。支払いがなくても名称は入力し、金額は0円と書きます。後払いの成功報酬などがある場合は、支払う予定の額を書きます（Q4-11）</li>
+<li>GビズIDプライムのアカウントとパスワードを第三者に教えることは、GビズIDの利用規約第11条に反します（P.1）。社外の代理人だけでは、商工会・商工会議所への相談も様式4の依頼もできません（P.22）</li>
+<li>補助金の応募書類・実績報告書などの作成にかかる費用や、税務申告・決算書の作成のために税理士などへ払う費用は、補助対象外です（P.17、P.19、P.20）</li>
+<li>広報費とウェブサイト関連費は、それだけでは申請できません。それぞれ補助金交付申請額の上限は30万円（税込）です（P.13〜14）</li>
+<li>補助金事務局を名乗って補助金を紹介する事案が起きています。事務局は個人に個別に紹介・斡旋しないと、事務局サイト（2026年8月28日の案内）が注意しています</li>
+<li>様式4の依頼は、経営計画・補助事業計画の入力と印刷、特例の書類の用意が済んでから行います（P.22）。計画づくりに時間がかかる人ほど、早めに動いてください</li>
+</ul>
+<h2 id="申請前のチェックリスト">申請前のチェックリスト</h2>
+<p>公式に書かれている事実の範囲で、確認したい項目を並べます。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 事業を営む場所が商工会地区か商工会議所地区かを調べた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 従業員数が、業種の区分ごとの上限（5人以下または20人以下）に収まっている</li>
+<li class="task-list-item"><input type="checkbox" disabled> 申請時点で開業していて、開業届上の開業日が申請日より後になっていない</li>
+<li class="task-list-item"><input type="checkbox" disabled> 決算期を1回以上迎えた人は、確定申告書の写し（第一表・第二表、収支内訳書または青色申告決算書）をそろえた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 決算期を一度も迎えていない人は、開業日が書かれた開業届の写しと売上台帳等を用意した</li>
+<li class="task-list-item"><input type="checkbox" disabled> マイナンバーが載っている書類は、番号が見えないよう黒塗りした</li>
+<li class="task-list-item"><input type="checkbox" disabled> GビズIDプライムのアカウントを取得した（暫定アカウントは使えない）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 経営計画・補助事業計画（様式2・3）を入力し、申請内容を印刷した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 事業支援計画書（様式4）の発行を、12月4日までに依頼した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 特例を使う場合は、要件と追加書類を確認した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 通常枠と創業型のどちらで申請するかを決めた（同時申請はできない）</li>
+</ul>
+<h2 id="よくある質問とまとめ">よくある質問とまとめ</h2>
+<h3 id="個人事業主の決算期とは何ですか">個人事業主の「決算期」とは何ですか</h3>
+<p>公募要領には、個人事業主の決算期がいつを指すかの説明が見当たりませんでした。創業型のよくあるご質問は、確定申告を一度も行っていない等で確定申告書が提出できない事業者の書類を示しています。迷う場合は、様式4を依頼する窓口に確認してください。</p>
+<h3 id="補助金はいつ入金されますか">補助金はいつ入金されますか</h3>
+<p>補助金は後払いです。第20回の採択発表は2027年3月頃の予定で、交付決定は採択発表から概ね1〜2か月かかる場合があります。補助事業は、交付決定日から2028年3月31日までに終えます。</p>
+<p>商工会地区の事務局サイト（2026年8月5日の案内）によると、実績報告の審査には提出から3〜4週間程度かかり、不備の修正が複数回あると、補助金額の確定までに3か月程度かかることがあります。確定のあとに請求し、入金されます。</p>
+<h3 id="まとめ">まとめ</h3>
+<p>個人事業主も、申請時点で開業していて、従業員数が上限以内なら、小規模事業者持続化補助金＜一般型 通常枠＞に申請できます。第20回の締切は2026年12月15日17:00で、事業支援計画書（様式4）の依頼は12月4日までです。</p>
+<p>書類は、決算期を1回以上迎えた人は確定申告書の写し、一度も迎えていない人は開業届の写しと売上台帳等です。補助上限は50万円、特例を使うと最大250万円ですが、特例の要件を満たさないと補助金全体が交付されません。</p>
+<p>条件や書類は回ごとに変わります。申請前に、商工会地区と商工会議所地区の事務局サイトで最新の公募要領を確かめ、判断に迷う点は商工会・商工会議所の窓口に相談してください。税務の個別の判断は、税理士・税務署に相談してください。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>個人事業主でも小規模事業者持続化補助金に申請できますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>できます。第20回公募要領（第8版）では、個人事業主は「商工業者であること」が条件で、従業員は商業・サービス業で5人以下、製造業その他で20人以下です。申請時点で開業していることも必要で、開業届上の開業日が申請日より後の人は対象外とされています。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>開業届は申請に必要ですか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>決算期を一度も迎えていない個人事業主は、確定申告書の代わりに、開業日が書かれた開業届の写しと売上台帳等を出します。開業後に決算期を1回以上迎えている人は確定申告書の写しを出し、公募要領はこの場合の提出書類に開業届の写しを挙げていません。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>確定申告をまだしていない開業1年目でも申請できますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>開業していて事業の実態があれば申請できます。決算期を一度も迎えていない場合は、開業届の写しと、開業以降に売上が発生していることを示す売上台帳等（任意様式）を添付します。売上台帳には事業所得と判断できる売上の記載が必要です。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>個人事業主の補助上限はいくらですか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>通常枠は50万円、補助率は2/3です。インボイス特例の要件を満たすと50万円、賃金引上げ特例は150万円、両方で200万円が上乗せされ、最大250万円です。賃金引上げ特例は、算定対象の従業員がいない月があると対象外とされています。特例の要件を満たさないと、補助金全体が交付されません。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>通常枠と創業型は同時に申請できますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>できません。どちらか一方だけを申請します。創業型は、創業後1年以内で、認定市区町村が発行する特定創業支援等事業の証明書がある人が対象で、補助上限は200万円です。通常枠で採択され補助事業を実施した事業者は、創業型に申請できません。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://www.chusho.meti.go.jp/keiei/shokibo/jizoku/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>中小企業庁 小規模事業者持続化補助金について</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.chusho.meti.go.jp/koukai/yosan/r8/jizoku.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>中小企業庁 持続化補助金（通常枠）の概要（令和8年5月27日時点版）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.chusho.meti.go.jp/koukai/yosan/r8/jizoku_sougyo.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>中小企業庁 持続化補助金（創業型）の概要（令和8年5月27日）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://r6.jizokukahojokin.info/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>商工会議所地区 補助金事務局 小規模事業者持続化補助金＜一般型 通常枠＞（第20回の日程）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://r6.jizokukahojokin.info/doc/r6_koubover8_ip20.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>第20回公募 公募要領（第8版、2026年7月21日付）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://r6.jizokukahojokin.info/doc/r6_qa_ip20.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>第20回 申請時によくあるご質問（一般型 通常枠）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://r6.jizokukahojokin.info/doc/r6_sanko_ip20.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>第20回公募 参考資料（2026年10月）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://official.jizokukanb.com/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>商工会地区 補助金事務局 小規模事業者持続化補助金【一般型・通常枠】（トップ・新着情報）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://official.jizokukanb.com/shinsei/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>商工会地区 補助金事務局 小規模事業者持続化補助金【一般型・通常枠】（申請について）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://r6.jizokukahojokin.info/sogyo/doc/r6_koubover8_sogyo4.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>小規模事業者持続化補助金＜創業型＞ 第4回公募 公募要領（第8版、2026年5月27日付）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://r6.jizokukahojokin.info/sogyo/doc/r6_qa_sogyo4.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>小規模事業者持続化補助金＜創業型＞ 第4回 申請時によくあるご質問</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.jizokuka-portal.info/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>小規模事業者持続化補助金＜一般型＞申請システム</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://r6.jizokukahojokin.info/doc/r6_koubomanual_ip0306.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>第19回公募 申請システム操作手引き（公募申請）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://gbiz-id.go.jp/top/apply/account_select.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>GビズID 申請アカウントの選択</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2020.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.2020 確定申告</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.yayoi-kk.co.jp/kigyo/starting/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>弥生 かんたん開業届</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/kaisha-setsuritsu/" data-astro-cid-sgg5joot>会社設立・開業の手続きの記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

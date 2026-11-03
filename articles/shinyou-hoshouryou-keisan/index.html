@@ -1,0 +1,834 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>信用保証協会の保証料の計算方法｜式・9つの料率区分・分割係数・繰上返済の返戻 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="信用保証協会の保証料は「借入額×保証料率×保証期間（月数）÷12」で計算し、均等分割返済は分割係数（0.55〜0.70）を掛けます。料率は9区分から協会が決め、自分では判定できません。東京・埼玉・神奈川・千葉の公式ページで、計算例・補助・返戻を整理します。"><link rel="canonical" href="https://soroecho.com/articles/shinyou-hoshouryou-keisan/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="信用保証協会の保証料の計算方法｜式・9つの料率区分・分割係数・繰上返済の返戻 | そろえ帳"><meta property="og:description" content="信用保証協会の保証料は「借入額×保証料率×保証期間（月数）÷12」で計算し、均等分割返済は分割係数（0.55〜0.70）を掛けます。料率は9区分から協会が決め、自分では判定できません。東京・埼玉・神奈川・千葉の公式ページで、計算例・補助・返戻を整理します。"><meta property="og:url" content="https://soroecho.com/articles/shinyou-hoshouryou-keisan/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/shinyou-hoshouryou-keisan.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="信用保証協会の保証料の計算方法｜式・9つの料率区分・分割係数・繰上返済の返戻 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="信用保証協会の保証料の計算方法｜式・9つの料率区分・分割係数・繰上返済の返戻 | そろえ帳"><meta name="twitter:description" content="信用保証協会の保証料は「借入額×保証料率×保証期間（月数）÷12」で計算し、均等分割返済は分割係数（0.55〜0.70）を掛けます。料率は9区分から協会が決め、自分では判定できません。東京・埼玉・神奈川・千葉の公式ページで、計算例・補助・返戻を整理します。"><meta name="twitter:image" content="https://soroecho.com/og/shinyou-hoshouryou-keisan.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"信用保証協会の保証料の計算方法｜式・9つの料率区分・分割係数・繰上返済の返戻","item":"https://soroecho.com/articles/shinyou-hoshouryou-keisan/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"信用保証協会の保証料の計算方法｜式・9つの料率区分・分割係数・繰上返済の返戻","description":"信用保証協会の保証料は「借入額×保証料率×保証期間（月数）÷12」で計算し、均等分割返済は分割係数（0.55〜0.70）を掛けます。料率は9区分から協会が決め、自分では判定できません。東京・埼玉・神奈川・千葉の公式ページで、計算例・補助・返戻を整理します。","url":"https://soroecho.com/articles/shinyou-hoshouryou-keisan/","datePublished":"2026-11-03T00:00:00.000Z","dateModified":"2026-11-03T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/shinyou-hoshouryou-keisan/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"保証協会の保証料はどう計算しますか。","acceptedAnswer":{"@type":"Answer","text":"東京・埼玉・神奈川・千葉の信用保証協会の公式ページは、期日一括返済なら「借入額×保証料率×保証期間（月数）÷12」、均等分割返済ならこれに分割係数を掛けると書いています。分割係数は返済が25回以上で0.55、2〜6回で0.70です。据置期間があるときは、据置部分と分割返済部分に分けて合計します。"}},{"@type":"Question","name":"保証料率の区分は自分で調べられますか。","acceptedAnswer":{"@type":"Answer","text":"確認した公式ページには、自分で判定する方法は載っていません。料率は経営状況に応じた9区分から協会が決め、東京信用保証協会は評価の仕組みと個別企業の結果は開示されないと書いています。目安は決算書の直近2期分を用意して協会に照会し、最終の料率は保証決定のときに決まります。貸借対照表がなく財務評価ができない場合は区分5が適用されると、東京・埼玉・神奈川・千葉の公式ページにあります。"}},{"@type":"Question","name":"保証料に国や自治体の補助はありますか。","acceptedAnswer":{"@type":"Answer","text":"制度によってあります。神奈川県は「原油・原材料高騰等対策特別融資」の保証料の1/2を補助し、協会の受付日は令和9年3月31日までと案内されています（2026年10月19日のお知らせ）。国の補助がある協調支援型特別保証制度は、千葉県信用保証協会のページで、資格要件1）に当たる令和8年4月1日〜令和9年3月31日の申込なら区分5の1.15%のうち0.38%が補助され、負担は0.77%です。対象の制度・期間・率は融資制度ごとに違うため、申込む制度の案内で確かめてください。"}},{"@type":"Question","name":"保証料は分割で払えますか。","acceptedAnswer":{"@type":"Answer","text":"条件を満たし、協会が承認した場合に分割できます。埼玉県と神奈川県の協会は保証期間が2年を超える場合、千葉県の協会は保証期間が2年を超えるもので承認を受けた場合と書いています。東京信用保証協会は、東京都制度融資で保証料の補助を受けるときは分割支払ができないとしています。"}},{"@type":"Question","name":"繰上返済すると保証料は戻りますか。","acceptedAnswer":{"@type":"Answer","text":"最終期限の前に完済した場合、協会の規定で保証料の一部が返戻されることがあります。返戻額が1,000円以下のときは対象外で、完済報告の遅れや返済状況によっては返戻できないこともあります（東京・千葉）。返戻の可否と額は協会が決めるため、完済の前に協会か金融機関へ確かめてください。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>信用保証協会の保証料の計算方法｜式・9つの料率区分・分割係数・繰上返済の返戻</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1h26lc6-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1h26lc6-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ec1h26lc6-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1h26lc6-p)" data-astro-cid-yuatfsof></rect><circle cx="374" cy="93" r="157" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>保証協会</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>保証料</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>計算</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>信用保証協会の保証料の計算方法｜式・9つの料率区分・分割係数・繰上返済の返戻</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-11-03T00:00:00.000Z" data-astro-cid-sgg5joot>2026年11月3日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約20分</p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論保証料は借入額料率期間で出せる決まらないのは料率の区分だけ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：保証料は「借入額×料率×期間」で出せる。決まらないのは料率の区分だけ</a></li><li data-astro-cid-sgg5joot><a href="#計算式の読み方保証期間据置期間分割係数端数" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>計算式の読み方：保証期間・据置期間・分割係数・端数</a></li><li data-astro-cid-sgg5joot><a href="#料率の区分9区分の料率表と区分の決まり方" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>料率の区分：9区分の料率表と、区分の決まり方</a></li><li data-astro-cid-sgg5joot><a href="#計算例1期日一括返済借入1500万円12か月区分5" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>計算例1：期日一括返済（借入1,500万円・12か月・区分5）</a></li><li data-astro-cid-sgg5joot><a href="#計算例2分割返済借入2000万円72か月据置12か月区分5" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>計算例2：分割返済（借入2,000万円・72か月・据置12か月・区分5）</a></li><li data-astro-cid-sgg5joot><a href="#割引上乗せ補助料率が変わる場合" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>割引・上乗せ・補助：料率が変わる場合</a></li><li data-astro-cid-sgg5joot><a href="#保証料の払い方原則は融資の実行時に一括分割払いには条件がある" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>保証料の払い方：原則は融資の実行時に一括。分割払いには条件がある</a></li><li data-astro-cid-sgg5joot><a href="#繰上返済したとき完済すると保証料の一部が戻ることがある" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>繰上返済したとき：完済すると保証料の一部が戻ることがある</a></li><li data-astro-cid-sgg5joot><a href="#各協会のシミュレーター料率は自分で入力する" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>各協会のシミュレーター：料率は自分で入力する</a></li><li data-astro-cid-sgg5joot><a href="#申込む前のチェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>10</span>申込む前のチェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#よくある質問とまとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>11</span>よくある質問とまとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論保証料は借入額料率期間で出せる決まらないのは料率の区分だけ">結論：保証料は「借入額×料率×期間」で出せる。決まらないのは料率の区分だけ</h2>
+<p>信用保証協会の保証料は、期日一括返済なら「借入額 × 保証料率 × 保証期間（月数）÷ 12」で計算します。均等分割返済では、これに分割係数（0.55〜0.70）を掛けます。東京・埼玉・神奈川・千葉の各信用保証協会の公式ページ（2026年11月3日取得）が、同じ形の式を載せています。</p>
+<p>自分で決められないのは保証料率です。料率は経営状況に応じた9つの区分から協会が決めます。東京信用保証協会のページは、評価の仕組みと個別企業の結果は開示されていないと書いています。目安は、決算書を用意して協会に照会します。</p>
+<table>
+<thead>
+<tr>
+<th>返済方法</th>
+<th>計算式</th>
+<th>式を載せている公式ページ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>期日一括返済</td>
+<td>借入額 × 保証料率 × 保証期間（月数）÷ 12</td>
+<td>東京・埼玉・神奈川・千葉</td>
+</tr>
+<tr>
+<td>均等分割返済（据置なし）</td>
+<td>借入額 × 保証料率 × 保証期間（月数）÷ 12 × 分割係数</td>
+<td>東京・埼玉・神奈川・千葉</td>
+</tr>
+<tr>
+<td>均等分割返済（据置あり）</td>
+<td>据置部分と分割返済部分を別々に計算して合計（次の章）</td>
+<td>東京・埼玉・千葉</td>
+</tr>
+<tr>
+<td>確定日保証（当座貸越根保証など）</td>
+<td>借入額（極度額）× 保証料率 × 保証期間（日数）÷ 365</td>
+<td>東京・埼玉・神奈川・千葉</td>
+</tr>
+</tbody>
+</table>
+<p>保証協会に払う費用は、保証料だけです。東京信用保証協会は、調査料・登録料・用紙代・手数料・相談料などはないと書いています。全国信用保証協会連合会のよくあるご質問も、保証の利用に必要なのは信用保証料だけだと説明しています。</p>
+<p>ただし保証料は保険料ではありません。協会が代位弁済（借りた人に代わって金融機関へ支払うこと）をしたあとも、借りた側は協会へ弁済を続けます（同連合会の信用保証料のページ）。</p>
+<p>この記事で分かることは次のとおりです。</p>
+<ul>
+<li>返済方法ごとの式と、分割係数の表</li>
+<li>9区分の料率表と、区分の決まり方・確かめ方</li>
+<li>一括返済と分割返済の計算例（公式の計算例との照合つき）</li>
+<li>割引、上乗せ、国や自治体の補助</li>
+<li>保証料の払い方と、繰上返済のときの返戻</li>
+<li>各協会のシミュレーターの場所</li>
+</ul>
+<p>料率や制度は、協会ごと・時期ごとに変わります。この記事は協会名を明記し、申込む協会の最新ページで確かめることを前提に書いています。</p>
+<p>融資の全体像は、<a href="/articles/shikin-choutatsu-houhou-kojin-jigyou/">資金調達の方法を個人事業主向けに整理した記事</a>で扱っています。</p>
+<h2 id="計算式の読み方保証期間据置期間分割係数端数">計算式の読み方：保証期間・据置期間・分割係数・端数</h2>
+<p>式に入れる数字の意味を、東京・埼玉・千葉の公式ページの説明に沿って整理します。</p>
+<h3 id="保証期間と据置期間">保証期間と据置期間</h3>
+<p>保証期間は月数で入れます。当座貸越根保証のような確定日保証だけは、日数を365で割る日割りです。</p>
+<p>据置期間は、融資を受けた月から第1回の返済月までのうち、元金の返済が猶予されている期間です。</p>
+<p>東京信用保証協会の計算例のページ（更新日2022年1月31日）は、信用保証書に「7か月目から返済」とあれば、据置期間は7か月 − 1か月 = 6か月と説明しています。同協会のシミュレーションの説明では、翌月から返済が始まるなら0か月、翌々月なら1か月です。</p>
+<h3 id="分割係数">分割係数</h3>
+<p>分割係数は、分割返済で残高が年々減ることを考慮して、返済回数に応じて保証料を軽くするための掛け目です。東京・埼玉・神奈川の公式ページに同じ表があります。</p>
+<table>
+<thead>
+<tr>
+<th>分割返済の回数</th>
+<th>均等分割係数</th>
+<th>不均等分割係数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2回以上6回以下</td>
+<td>0.70</td>
+<td>0.77</td>
+</tr>
+<tr>
+<td>7回以上12回以下</td>
+<td>0.65</td>
+<td>0.72</td>
+</tr>
+<tr>
+<td>13回以上24回以下</td>
+<td>0.60</td>
+<td>0.66</td>
+</tr>
+<tr>
+<td>25回以上</td>
+<td>0.55</td>
+<td>0.61</td>
+</tr>
+</tbody>
+</table>
+<p>千葉県信用保証協会の表も同じ数字です。大阪信用保証協会は、均等分割は同じ数字で、不均等分割を0.770・0.715・0.660・0.605と書いています。</p>
+<p>均等分割は、毎回の元金返済額が同額で、返済の間隔も同じ返済方法です（東京信用保証協会のシミュレーションの説明）。最終回だけ金額が違っても、その金額が期中の返済額の2倍を超えなければ「均等分割」として入力してよいと、同協会は書いています。元利均等返済も同様です。</p>
+<h3 id="端数の扱い">端数の扱い</h3>
+<p>東京信用保証協会の計算例は、各計算の結果を円未満切捨てとしています。埼玉・神奈川・千葉のページでは、端数処理の記載を確認できませんでした。この記事の計算例は、端数が出ない条件で作った概算です。</p>
+<h2 id="料率の区分9区分の料率表と区分の決まり方">料率の区分：9区分の料率表と、区分の決まり方</h2>
+<p>保証料率（年率）は、経営状況に応じた9つの区分から適用されます（全国信用保証協会連合会、東京・埼玉・神奈川・千葉の各協会）。数字が大きい区分ほど、料率は低くなります。</p>
+<h3 id="基本の料率一般保証">基本の料率（一般保証）</h3>
+<p>埼玉・神奈川・千葉の公式ページが載せている、責任共有制度の対象になる一般保証の料率です。神奈川と千葉は、対象外の保証の料率も載せています。</p>
+<table>
+<thead>
+<tr>
+<th>区分</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>責任共有保証料率（％）</td>
+<td>1.90</td>
+<td>1.75</td>
+<td>1.55</td>
+<td>1.35</td>
+<td>1.15</td>
+<td>1.00</td>
+<td>0.80</td>
+<td>0.60</td>
+<td>0.45</td>
+</tr>
+<tr>
+<td>責任共有制度の対象外（％）</td>
+<td>2.20</td>
+<td>2.00</td>
+<td>1.80</td>
+<td>1.60</td>
+<td>1.35</td>
+<td>1.10</td>
+<td>0.90</td>
+<td>0.70</td>
+<td>0.50</td>
+</tr>
+</tbody>
+</table>
+<p>責任共有制度とは、保証協会と金融機関が連携して中小企業を支援する仕組みです（全国信用保証協会連合会）。対象になる保証には「責任共有保証料率」、対象外の保証には別の料率が使われます（神奈川県信用保証協会）。</p>
+<p>対象外の例として、千葉県信用保証協会は小口零細企業保証制度、創業関連保証、危機関連保証を挙げています。</p>
+<h3 id="東京は融資額で料率が分かれる">東京は融資額で料率が分かれる</h3>
+<p>東京信用保証協会の料率表（2026年6月23日更新のPDF）は、一般保証を「一企業に係る保証付融資合計額」と担保の有無でも分けています。数字は年率（％）です。</p>
+<table>
+<thead>
+<tr>
+<th>融資合計額・担保</th>
+<th>区分1</th>
+<th>区分2</th>
+<th>区分3</th>
+<th>区分4</th>
+<th>区分5</th>
+<th>区分6</th>
+<th>区分7</th>
+<th>区分8</th>
+<th>区分9</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>500万円以下</td>
+<td>1.27</td>
+<td>1.16</td>
+<td>1.03</td>
+<td>0.90</td>
+<td>0.77</td>
+<td>0.66</td>
+<td>0.53</td>
+<td>0.40</td>
+<td>0.30</td>
+</tr>
+<tr>
+<td>500万円超1,000万円以下</td>
+<td>1.55</td>
+<td>1.43</td>
+<td>1.27</td>
+<td>1.10</td>
+<td>0.94</td>
+<td>0.82</td>
+<td>0.65</td>
+<td>0.49</td>
+<td>0.35</td>
+</tr>
+<tr>
+<td>1,000万円超・有担保</td>
+<td>1.80</td>
+<td>1.65</td>
+<td>1.45</td>
+<td>1.25</td>
+<td>1.05</td>
+<td>0.90</td>
+<td>0.70</td>
+<td>0.50</td>
+<td>0.35</td>
+</tr>
+<tr>
+<td>1,000万円超・無担保</td>
+<td>1.90</td>
+<td>1.75</td>
+<td>1.55</td>
+<td>1.35</td>
+<td>1.15</td>
+<td>1.00</td>
+<td>0.80</td>
+<td>0.60</td>
+<td>0.45</td>
+</tr>
+</tbody>
+</table>
+<p>東京信用保証協会は、小口の利用には引き下げた料率を適用していると書いています。1,000万円以下なら上限が1.55％、500万円以下なら上限が1.27％です。東京都制度融資は、一般保証より低い料率で、上限が1.49％（一部の区分を除く）とされています。</p>
+<p>埼玉・神奈川・千葉の料率の表には、金額で分けた行はありません。小口の料率や金額の区切りは協会ごとに違うため、申込む協会の料率表で確かめます。</p>
+<h3 id="区分の決まり方">区分の決まり方</h3>
+<p>区分は、決算書の内容をもとに協会が決めます。公式ページに書かれている手順は次のとおりです。</p>
+<ol>
+<li>保証申込日の直前の決算（2期分ある場合は2期分）の貸借対照表と損益計算書をもとに、CRD協会のリスク評価モデルで区分を判定する（東京信用保証協会の料率表の注）</li>
+<li>直前の決算に貸借対照表がない場合は、区分5の料率を適用する（同上）</li>
+<li>区分は保証の諾否とともに決まり、「信用保証決定のお知らせ」で料率と保証料が通知される（大阪信用保証協会）</li>
+</ol>
+<p>CRDは、中小企業の財務データを集めたデータベースです。東京信用保証協会は、評価に関する一連の仕組みと個別企業の結果は機密情報にあたるため開示されないと書いています。自分で区分を計算する方法は、確認した公式ページには載っていませんでした。</p>
+<h3 id="区分5になる場合">区分5になる場合</h3>
+<p>財務評価ができない場合の料率が区分5です。公式ページに書かれている該当例は次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>協会</th>
+<th>区分5が適用される場合</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>東京</td>
+<td>直前の決算に貸借対照表がない場合</td>
+</tr>
+<tr>
+<td>埼玉</td>
+<td>創業者や個人事業主で、貸借対照表を作成していないなど財務評価ができない場合</td>
+</tr>
+<tr>
+<td>神奈川</td>
+<td>個人事業主で貸借対照表と損益計算書を作成していない方、創業者など財務評価ができない場合</td>
+</tr>
+<tr>
+<td>千葉</td>
+<td>新規創業者で最初の事業年度の決算がない場合、個人事業主で貸借対照表を作成していない場合、連帯債務での借入の場合</td>
+</tr>
+</tbody>
+</table>
+<p>個人事業主の決算書や確定申告の書類づくりは、<a href="/articles/kojin-jigyou-kakutei-shinkoku-nagare/">個人事業主の確定申告の流れ</a>で整理しています。個別の税務は、税理士に相談してください。</p>
+<h3 id="事前に目安を知る方法">事前に目安を知る方法</h3>
+<p>東京信用保証協会は、事前に料率と保証料の目安を知りたいときは、本店・支店の保証課に照会するよう案内しています。用意するものは、確定申告書（決算書）の直近2期分です。区分を正確に判定するため、直近決算時点の裏書手形と割引手形の残高も伝えます。</p>
+<p>事前に知らされるのはあくまで目安で、最終的な料率は保証決定の際に決まります。大阪信用保証協会も、保証決定の前の問い合わせには見込みで答えるが、確定した料率ではないと書いています。</p>
+<h3 id="区分に関係なく一律になる保証">区分に関係なく一律になる保証</h3>
+<p>セーフティネット保証など、区分にかかわらず一律の料率になる制度もあります（東京・埼玉）。同じ制度でも、協会ごとに数字が違います。</p>
+<table>
+<thead>
+<tr>
+<th>協会</th>
+<th>セーフティネット 1〜4号・6号</th>
+<th>セーフティネット 5号・7号・8号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>神奈川（シミュレーターのページ）</td>
+<td>1.00％</td>
+<td>0.85％</td>
+</tr>
+<tr>
+<td>埼玉（協会制度の料率一覧、2026年4月1日現在）</td>
+<td>0.90％</td>
+<td>0.77％</td>
+</tr>
+<tr>
+<td>千葉（保証料計算シミュレーションのページ）</td>
+<td>0.80％</td>
+<td>0.68％</td>
+</tr>
+</tbody>
+</table>
+<p>東京信用保証協会は、セーフティネット保証は料率が低く設定されている一方で、経営状況の良い事業者は一般保証のほうが料率が低くなる場合もあると書いています。どちらを選ぶかは、協会や金融機関に相談して決めます。</p>
+<p>創業関連保証のように、一律の料率の制度は他にもあります。東京信用保証協会の責任共有外の料率表では、創業関連保険を使う保証が、500万円以下で年0.35％、500万円超1,000万円以下で0.50％、1,000万円超で0.60％です。埼玉県信用保証協会の料率一覧（協会制度）では、創業関連保証が0.90％です。</p>
+<p>創業時の融資の流れは、<a href="/articles/kaigyou-shikin-meyasu-sougyou-yuushi-tetsuzuki/">開業資金の目安と創業融資の手順</a>にまとめています。</p>
+<h2 id="計算例1期日一括返済借入1500万円12か月区分5">計算例1：期日一括返済（借入1,500万円・12か月・区分5）</h2>
+<p>期日一括返済の例です。区分5の責任共有保証料率1.15％を使います。東京の1,000万円超・無担保の行と、埼玉・神奈川・千葉の基本料率が同じ数字です。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>借入額</td>
+<td>15,000,000円</td>
+</tr>
+<tr>
+<td>保証料率（区分5）</td>
+<td>年1.15％</td>
+</tr>
+<tr>
+<td>保証期間</td>
+<td>12か月</td>
+</tr>
+<tr>
+<td>計算</td>
+<td>15,000,000円 × 1.15％ × 12 ÷ 12</td>
+</tr>
+<tr>
+<td>保証料</td>
+<td>172,500円</td>
+</tr>
+</tbody>
+</table>
+<p>同じ借入額と期間で、区分だけを変えると次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>区分</th>
+<th>料率</th>
+<th>保証料（15,000,000円・12か月）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>区分1</td>
+<td>1.90％</td>
+<td>285,000円</td>
+</tr>
+<tr>
+<td>区分5</td>
+<td>1.15％</td>
+<td>172,500円</td>
+</tr>
+<tr>
+<td>区分9</td>
+<td>0.45％</td>
+<td>67,500円</td>
+</tr>
+</tbody>
+</table>
+<p>東京の表で融資合計額が500万円以下・区分5なら、料率は0.77％です。500万円 × 0.77％ × 12 ÷ 12 = 38,500円になります。</p>
+<h2 id="計算例2分割返済借入2000万円72か月据置12か月区分5">計算例2：分割返済（借入2,000万円・72か月・据置12か月・区分5）</h2>
+<p>据置期間がある分割返済の例です。13か月目から毎月返済すると、返済は60回です。25回以上なので、均等分割係数は0.55になります。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>借入額</td>
+<td>20,000,000円</td>
+</tr>
+<tr>
+<td>保証期間</td>
+<td>72か月（据置12か月、返済60回）</td>
+</tr>
+<tr>
+<td>保証料率（区分5）</td>
+<td>年1.15％</td>
+</tr>
+<tr>
+<td>分割係数（25回以上・均等）</td>
+<td>0.55</td>
+</tr>
+<tr>
+<td>据置部分の計算</td>
+<td>20,000,000円 × 1.15％ × 12 ÷ 12 = 230,000円</td>
+</tr>
+<tr>
+<td>分割返済部分の計算</td>
+<td>20,000,000円 × 1.15％ × (72 − 12) ÷ 12 × 0.55 = 632,500円</td>
+</tr>
+<tr>
+<td>保証料（合計）</td>
+<td>862,500円</td>
+</tr>
+</tbody>
+</table>
+<h3 id="同じ条件で9区分を比べる">同じ条件で9区分を比べる</h3>
+<p>借入2,000万円・保証期間60か月・据置なし・毎月均等返済（係数0.55）で、区分ごとの保証料を計算すると次のとおりです。式は「20,000,000円 × 料率 × 60 ÷ 12 × 0.55」です。</p>
+<table>
+<thead>
+<tr>
+<th>区分</th>
+<th>料率（％）</th>
+<th>保証料</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1.90</td>
+<td>1,045,000円</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1.75</td>
+<td>962,500円</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1.55</td>
+<td>852,500円</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1.35</td>
+<td>742,500円</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1.15</td>
+<td>632,500円</td>
+</tr>
+<tr>
+<td>6</td>
+<td>1.00</td>
+<td>550,000円</td>
+</tr>
+<tr>
+<td>7</td>
+<td>0.80</td>
+<td>440,000円</td>
+</tr>
+<tr>
+<td>8</td>
+<td>0.60</td>
+<td>330,000円</td>
+</tr>
+<tr>
+<td>9</td>
+<td>0.45</td>
+<td>247,500円</td>
+</tr>
+</tbody>
+</table>
+<p>区分1と区分9では、同じ借入でも保証料が4倍以上違います。ただし、これは公式の式と表に当てはめた概算です。実際の保証料は、保証決定のときの料率で決まります。</p>
+<h3 id="公式の計算例との照合">公式の計算例との照合</h3>
+<p>式が合っているかは、公式ページの計算例で確かめられます。次の6例は、この記事の式で同じ答えになります。</p>
+<table>
+<thead>
+<tr>
+<th>協会</th>
+<th>条件</th>
+<th>公式の計算例の答え</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>東京</td>
+<td>1,200万円・年1.15％・24か月・満期一括</td>
+<td>276,000円</td>
+</tr>
+<tr>
+<td>東京</td>
+<td>1,200万円・年1.15％・24か月・均等分割・係数0.60</td>
+<td>165,600円</td>
+</tr>
+<tr>
+<td>東京</td>
+<td>1,200万円・年1.15％・60か月・7か月目から返済（据置6か月）・係数0.55</td>
+<td>据置部分69,000円＋分割返済部分341,550円＝410,550円</td>
+</tr>
+<tr>
+<td>埼玉</td>
+<td>1,000万円・年1.15％・6か月・期日一括</td>
+<td>57,500円</td>
+</tr>
+<tr>
+<td>埼玉</td>
+<td>1,000万円・年1.15％・60か月・据置なし・係数0.55</td>
+<td>316,250円</td>
+</tr>
+<tr>
+<td>埼玉</td>
+<td>同じ条件で据置6か月</td>
+<td>据置部分57,500円＋分割返済部分284,625円＝342,125円</td>
+</tr>
+</tbody>
+</table>
+<p>当座貸越根保証のような確定日保証は日割りです。埼玉県信用保証協会の例では、極度額1,000万円・年1.15％・730日で、10,000,000円 × 1.15％ × 730 ÷ 365 = 230,000円です。</p>
+<h2 id="割引上乗せ補助料率が変わる場合">割引・上乗せ・補助：料率が変わる場合</h2>
+<h3 id="割引">割引</h3>
+<p>公式ページに書かれている主な割引は次のとおりです。対象にならない保証制度もあります。</p>
+<table>
+<thead>
+<tr>
+<th>割引</th>
+<th>内容</th>
+<th>出どころ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>有担保</td>
+<td>担保の提供で0.1％割引（埼玉の県・市町村制度融資は0.03％）</td>
+<td>東京・埼玉・神奈川</td>
+</tr>
+<tr>
+<td>会計参与</td>
+<td>会計参与の設置で0.1％割引。東京と神奈川は、個人事業者は対象外と書いている</td>
+<td>東京・埼玉・神奈川・愛知</td>
+</tr>
+<tr>
+<td>監査報告書</td>
+<td>公認会計士・監査法人の監査報告書の写しで0.1％割引</td>
+<td>東京</td>
+</tr>
+</tbody>
+</table>
+<p>大阪信用保証協会は、有担保の責任共有保証料率に一律10％の割引を実施すると書いています。区分5なら、通常の1.05％が0.95％になります。協会ごとに独自の割引もあり、愛知県信用保証協会には、要件を満たす場合の事業承継応援割引（0.10％）があります。</p>
+<h3 id="上乗せ">上乗せ</h3>
+<p>保証料率を上乗せする代わりに、経営者保証を付けない制度（事業者選択型経営者保証非提供制度）があります。東京信用保証協会の料率表の注と千葉県信用保証協会のページは、0.25％または0.45％の上乗せと書いています。</p>
+<h3 id="国や自治体の補助">国や自治体の補助</h3>
+<p>補助のある制度では、保証料の一部を国や自治体が負担します。制度ごとに、対象・率・受付期限が違います。</p>
+<table>
+<thead>
+<tr>
+<th>補助の主体</th>
+<th>内容</th>
+<th>出どころ（2026年11月3日取得）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>国（協調支援型特別保証制度。金融機関のプロパー融資と保証付き融資を組み合わせる制度）</td>
+<td>資格要件1）に当たる令和8年4月1日〜令和9年3月31日の申込で、区分5は料率1.15％から補助0.38％を引いた0.77％が負担</td>
+<td>千葉県信用保証協会</td>
+</tr>
+<tr>
+<td>神奈川県（原油・原材料高騰等対策特別融資）</td>
+<td>信用保証料の1/2を県が補助。協会の受付日は令和9年3月31日まで</td>
+<td>神奈川県信用保証協会（2026年10月19日のお知らせ）</td>
+</tr>
+<tr>
+<td>市町村（愛知県内の一部）</td>
+<td>保証料等の助成が受けられる場合がある。各市町村のホームページで確認</td>
+<td>愛知県信用保証協会</td>
+</tr>
+</tbody>
+</table>
+<p>協調支援型特別保証制度の千葉県の表は、区分1から9まで、補助後の負担率を載せています。区分5の0.77％は、埼玉県信用保証協会の料率一覧（同じ申込期間の行）とも一致します。</p>
+<p>補助を使うときの注意点が、公式ページにあります。</p>
+<ul>
+<li>協調支援型特別保証制度は、条件変更で追加で生じる保証料が国の補助の対象外（千葉）</li>
+<li>同制度は、有担保・会計参与などの割引が適用されない（千葉）</li>
+<li>料率の一覧が補助後の負担率で書かれている場合がある。条件変更のときの保証料は、補助を加えない料率で計算する（埼玉）</li>
+<li>東京都制度融資で保証料の補助を受けるときは、分割支払ができない（東京）</li>
+</ul>
+<p>自分の融資に補助があるかは、融資制度の案内ページか、金融機関・協会で確かめます。</p>
+<h2 id="保証料の払い方原則は融資の実行時に一括分割払いには条件がある">保証料の払い方：原則は融資の実行時に一括。分割払いには条件がある</h2>
+<p>保証料は、原則として保証付融資の実行時に払います。受領の事務は金融機関が行い、金融機関が協会へ送金します（東京信用保証協会の計算例のページ）。神奈川・大阪の協会も、融資実行時に一括で払うと書いています。</p>
+<h3 id="分割払いの条件">分割払いの条件</h3>
+<p>保証料の分割払いは、協会が承認した場合に限られます。公式ページに書かれている条件は次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>協会</th>
+<th>分割払いができる条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>東京</td>
+<td>保証申込時または条件変更申込時に「信用保証料分割支払承認依頼書」を出し、協会が承認した場合。東京都制度融資で保証料の補助を受けるときは不可</td>
+</tr>
+<tr>
+<td>埼玉</td>
+<td>保証期間が2年を超える場合（根保証は1年を超える場合）に、希望により分割できる</td>
+</tr>
+<tr>
+<td>神奈川</td>
+<td>保証期間が2年を超える場合（当座貸越根保証などは1年を超える場合）に、分割できる</td>
+</tr>
+<tr>
+<td>千葉</td>
+<td>保証期間が2年を超えるもので、承認依頼書を出し協会が承認した場合</td>
+</tr>
+</tbody>
+</table>
+<p>分割しても、保証料の総額は変わりません。東京信用保証協会の分割支払のページ（更新日2022年1月31日）の例は、貸付金額2,000万円・保証期間10年・据置6か月で、保証料が1,545,750円です。</p>
+<p>これを5回に分けると、貸付時が35％、満1年後が30％、満2年後が20％、満3年後が10％、満4年後が5％になります。</p>
+<table>
+<thead>
+<tr>
+<th>回</th>
+<th>時期</th>
+<th>割合</th>
+<th>金額</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第1回</td>
+<td>貸付時</td>
+<td>35％</td>
+<td>541,013円</td>
+</tr>
+<tr>
+<td>第2回</td>
+<td>満1年後</td>
+<td>30％</td>
+<td>463,725円</td>
+</tr>
+<tr>
+<td>第3回</td>
+<td>満2年後</td>
+<td>20％</td>
+<td>309,150円</td>
+</tr>
+<tr>
+<td>第4回</td>
+<td>満3年後</td>
+<td>10％</td>
+<td>154,575円</td>
+</tr>
+<tr>
+<td>第5回</td>
+<td>満4年後</td>
+<td>5％</td>
+<td>77,287円</td>
+</tr>
+</tbody>
+</table>
+<p>2回目以降は、支払期日までに本人と金融機関へ協会から通知されます（東京信用保証協会）。千葉県信用保証協会は、保証期間ごとの分割割合の表を載せています。たとえば保証期間が8年超10年以下なら、5回で35％・30％・20％・10％・5％で、東京の例と同じです。</p>
+<h2 id="繰上返済したとき完済すると保証料の一部が戻ることがある">繰上返済したとき：完済すると保証料の一部が戻ることがある</h2>
+<h3 id="返戻の条件">返戻の条件</h3>
+<p>東京信用保証協会の返戻手続のページ（更新日2022年1月31日）は、最終約定期限の前に保証付融資を完済した場合、協会の規定により保証料の一部を返戻することがあると書いています。埼玉・神奈川も、保証期日の前に完済した場合は一部を返戻する場合があると書いています。返戻には手続が必要です（次の項）。</p>
+<p>公式ページに書かれている条件は次のとおりです。</p>
+<ul>
+<li>返戻する額が1,000円以下なら対象外（東京・埼玉・千葉。大阪は1,000円未満は返戻しない）</li>
+<li>完済の報告が著しく遅れた場合（東京）や、返済状況によっては、返戻できないことがある（東京・千葉）</li>
+<li>保証料は、違算の場合を除いて返戻しない原則で、保証期日前の完済は例外（埼玉・神奈川）</li>
+<li>返戻するかは、取引状況などにより協会が適当と認めた場合（大阪）</li>
+</ul>
+<h3 id="返戻の手続">返戻の手続</h3>
+<p>自己資金で繰上完済した場合の流れは、東京信用保証協会が次のとおり案内しています。</p>
+<ol>
+<li>金融機関が、完済後に協会へ完済報告をする</li>
+<li>協会が、返戻する保証料があれば「保証料返戻のお知らせ」と「保証料返戻口座確認書」を送る</li>
+<li>借りた側が、振込先などを書いて、返送期限内に返送する</li>
+<li>協会が、指定の口座へ振り込む</li>
+</ol>
+<p>同じ金融機関で、完済を条件にした新しい保証付融資に借り換える場合は、手続が違います。新規保証の申込時に、信用保証依頼書の「この貸付で完済する保証がある場合」の欄へ返戻口座などを書きます。完済後、協会がその口座へ振り込みます。</p>
+<p>千葉県信用保証協会は、口座の記入漏れや誤りがあると返戻の完了に時間がかかると書いています。</p>
+<h3 id="借換保証の差引計算">借換保証の差引計算</h3>
+<p>借換保証では、新しい保証料から、借り換える保証の返戻保証料を引いて払うこともできます（東京・埼玉・神奈川）。東京信用保証協会は、新規保証の料が返戻保証料より少ない場合、保証料を分割で払う場合、返済方法が不均等の場合などは、差引計算を使えないと書いています。</p>
+<h3 id="返戻額の計算例">返戻額の計算例</h3>
+<p>東京信用保証協会の返戻の計算例（PDF）は、期限一括返済の例を次のように示しています。貸付金額1,200万円・保証期間24か月・年1.35％で、当初の保証料は324,000円です。貸付の実行から6か月後に繰上完済した場合の返戻保証料を計算します。PDFの例の日付は平成19年です。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>数字</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>保証期間</td>
+<td>731日</td>
+</tr>
+<tr>
+<td>完済時点の未経過期間</td>
+<td>548日</td>
+</tr>
+<tr>
+<td>年単位で残る未経過期間（年区分未経過期間）</td>
+<td>365日</td>
+</tr>
+<tr>
+<td>① 年区分の未経過分（100％）</td>
+<td>324,000円 × 365 ÷ 731 = 161,778円</td>
+</tr>
+<tr>
+<td>② 残りの端数分（90％）</td>
+<td>（242,889円 − 161,778円）× 90％ = 72,999円（242,889円 = 324,000円 × 548 ÷ 731）</td>
+</tr>
+<tr>
+<td>返戻保証料</td>
+<td>① + ② = 234,777円</td>
+</tr>
+</tbody>
+</table>
+<p>各計算は円未満切捨てです。</p>
+<p>同じPDFの例2は、貸付金額1,200万円・60か月・年1.35％・係数0.55の均等分割返済です。貸付から2年6か月後に完済した場合、未経過期間の比を二乗する式を使い、返戻保証料は107,259円です。二乗するのは、全体に対する未経過部分の面積の比を出すためと、PDFは説明しています。</p>
+<p>式は返済方法で変わるため、実際の額は協会の計算によります。</p>
+<h3 id="一部だけ返す場合">一部だけ返す場合</h3>
+<p>全額ではなく一部を繰上げて返す場合について、千葉県信用保証協会は次のとおり書いています。期日一括返済の保証付融資を一部内入する場合、保証期間が変わらなければ条件変更の手続は要りません。条件変更の手続をすると、保証料が再計算され、一部が返戻されることがあります。</p>
+<h2 id="各協会のシミュレーター料率は自分で入力する">各協会のシミュレーター：料率は自分で入力する</h2>
+<p>各協会のシミュレーターは、どれも保証料率を自分で入力または選択する形です。区分が分からないときは、まず区分5で計算し、区分1と区分9で幅を見ます。区分5は、財務評価ができない場合に適用される区分です（前の章）。</p>
+<table>
+<thead>
+<tr>
+<th>協会</th>
+<th>シミュレーター</th>
+<th>入力する項目</th>
+<th>注意の記載</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>東京</td>
+<td><a href="https://www.cgc-tokyo.or.jp/business/simulation/gfsimulation.html">信用保証料簡易シミュレーション</a></td>
+<td>返済方法、借入金額（万円）、保証期間、据置期間、保証料率。分割係数は自動判定</td>
+<td>目安であり、実際と違う場合がある。不均等分割や条件変更は非対応。入力した情報は外部に送信されないと記載</td>
+</tr>
+<tr>
+<td>神奈川</td>
+<td><a href="https://www.cgc-kanagawa.or.jp/guide/rates/simulator/">信用保証料シミュレーター</a></td>
+<td>融資金額（万円）、保証期間、保証料率、返済方法（一括・均等分割）、据置期間</td>
+<td>概算であり、実際と違う場合がある</td>
+</tr>
+<tr>
+<td>千葉</td>
+<td><a href="https://www.chiba-cgc.or.jp/support/simulation/">保証料計算シミュレーション</a></td>
+<td>返済方法、借入金額（万円）、借入期間（か月）、保証料率</td>
+<td>据置期間がある場合や不均等分割は計算方法が変わると記載</td>
+</tr>
+<tr>
+<td>大阪</td>
+<td><a href="https://www.cgc-osaka.jp/guide/calculator/">保証料シミュレーション</a></td>
+<td>借入金額（千円）、保証期間、保証料率、返済方法（一括・元金均等分割）</td>
+<td>据置期間がある場合や不均等分割は計算できないと記載</td>
+</tr>
+<tr>
+<td>愛知</td>
+<td><a href="https://www.cgc-aichi.or.jp/charges/premium_simulation/">保証料シミュレーション</a></td>
+<td>返済方法、借入金額（円）、保証期間、据置期間、保証料率</td>
+<td>概算であり、不均等分割は試算できないと記載</td>
+</tr>
+<tr>
+<td>埼玉</td>
+<td>シミュレーターは確認できず</td>
+<td>計算式と計算例は<a href="https://www.cgc-saitama.or.jp/use/charge-calc.html">信用保証料の計算方法</a>、料率は<a href="https://www.cgc-saitama.or.jp/use/charge-list.html">信用保証料率一覧表</a></td>
+<td>サイトマップ（2026年11月3日確認）に保証料のシミュレーターはなかった</td>
+</tr>
+</tbody>
+</table>
+<p>料率の確認先は、東京が<a href="https://www.cgc-tokyo.or.jp/business/guarantee_fee/system.html">信用保証料率の体系</a>、神奈川が<a href="https://www.cgc-kanagawa.or.jp/guide/rates/">信用保証料のページ</a>、千葉が<a href="https://www.chiba-cgc.or.jp/guidance/fee/">信用保証料について</a>です。</p>
+<p>ほかの都道府県の協会は、全国信用保証協会連合会の<a href="https://www.zenshinhoren.or.jp/guarantee-system/hoshoryo/">信用保証料のページ</a>から「お近くの信用保証協会」をたどれます。</p>
+<h2 id="申込む前のチェックリスト">申込む前のチェックリスト</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 申込む融資制度が、責任共有の対象か、料率が一律の制度かを、金融機関か協会に聞いた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 決算書の直近2期分を用意し、協会へ料率区分の目安を照会した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 貸借対照表がない創業者・個人事業主は、区分5が適用される場合があると理解した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 借入額、保証期間、返済方法（一括か分割か、据置期間、返済回数）を決めた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 公式の式で概算し、協会のシミュレーターで区分5と区分1・9の幅を確かめた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 有担保・会計参与などの割引と、経営者保証を付けない場合の上乗せを確認した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 国・県・市町村の補助があるか、受付期限はいつかを制度ごとに確認した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 保証料の払い方（融資実行時に一括か、分割か）と、分割の条件を確認した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 繰上返済や借換のときの返戻の扱いを、協会か金融機関に聞いた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 最終の料率と保証料は、保証決定のときに確定すると理解した</li>
+</ul>
+<p>決算書や税務の個別の判断は、<a href="/articles/zeirishi-sagashikata-hiyou-souba/">税理士の探し方の記事</a>を参考に、税理士へ相談してください。</p>
+<h2 id="よくある質問とまとめ">よくある質問とまとめ</h2>
+<h3 id="保証協会の保証料はどう計算しますか">保証協会の保証料はどう計算しますか</h3>
+<p>期日一括返済は「借入額 × 保証料率 × 保証期間（月数）÷ 12」です。均等分割返済は、これに分割係数を掛けます。25回以上の返済なら0.55、2〜6回なら0.70です。据置期間があれば、据置部分と分割返済部分を分けて合計します。</p>
+<h3 id="保証料率の区分は自分で調べられますか">保証料率の区分は自分で調べられますか</h3>
+<p>確認した公式ページには、自分で区分を判定する方法は載っていません。決算書の直近2期分を用意して協会に照会すると、目安が聞けます。貸借対照表がなく財務評価ができない場合は、区分5になります。</p>
+<h3 id="保証料に国や自治体の補助はありますか">保証料に国や自治体の補助はありますか</h3>
+<p>制度によってあります。神奈川県の原油・原材料高騰等対策特別融資は、保証料の1/2を県が補助します。協調支援型特別保証制度は、国の補助があります。対象の制度・期間・率は、融資制度の案内で確かめてください。</p>
+<h3 id="保証料は分割で払えますか">保証料は分割で払えますか</h3>
+<p>保証期間が2年を超えるなどの条件を満たし、協会が承認した場合にできます。東京都制度融資で補助を受けるときは、東京信用保証協会では分割できません。</p>
+<h3 id="繰上返済すると保証料は戻りますか">繰上返済すると保証料は戻りますか</h3>
+<p>最終期限の前に完済すると、一部が返戻されることがあります。返戻額が1,000円以下なら対象外です。完済報告の遅れなどで返戻されない場合もあります。</p>
+<h3 id="まとめ">まとめ</h3>
+<p>保証協会の保証料は、公式の式と料率表で概算できます。期日一括返済は「借入額 × 料率 × 期間（月数）÷ 12」、分割返済は分割係数を掛けます。計算に入れる料率だけは、決算書をもとに協会が決める9区分のどれかで、自分では判定できません。</p>
+<p>見積もりは、区分5を基準に、区分1と区分9で幅を見ます。割引、上乗せ、国や自治体の補助、分割払い、繰上返済のときの返戻は、協会と融資制度ごとに違います。申込む協会の最新ページと、保証決定のときの「信用保証決定のお知らせ」で確かめてください。個別の判断は、協会、金融機関、税理士へ相談してください。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>保証協会の保証料はどう計算しますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>東京・埼玉・神奈川・千葉の信用保証協会の公式ページは、期日一括返済なら「借入額×保証料率×保証期間（月数）÷12」、均等分割返済ならこれに分割係数を掛けると書いています。分割係数は返済が25回以上で0.55、2〜6回で0.70です。据置期間があるときは、据置部分と分割返済部分に分けて合計します。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>保証料率の区分は自分で調べられますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>確認した公式ページには、自分で判定する方法は載っていません。料率は経営状況に応じた9区分から協会が決め、東京信用保証協会は評価の仕組みと個別企業の結果は開示されないと書いています。目安は決算書の直近2期分を用意して協会に照会し、最終の料率は保証決定のときに決まります。貸借対照表がなく財務評価ができない場合は区分5が適用されると、東京・埼玉・神奈川・千葉の公式ページにあります。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>保証料に国や自治体の補助はありますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>制度によってあります。神奈川県は「原油・原材料高騰等対策特別融資」の保証料の1/2を補助し、協会の受付日は令和9年3月31日までと案内されています（2026年10月19日のお知らせ）。国の補助がある協調支援型特別保証制度は、千葉県信用保証協会のページで、資格要件1）に当たる令和8年4月1日〜令和9年3月31日の申込なら区分5の1.15%のうち0.38%が補助され、負担は0.77%です。対象の制度・期間・率は融資制度ごとに違うため、申込む制度の案内で確かめてください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>保証料は分割で払えますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>条件を満たし、協会が承認した場合に分割できます。埼玉県と神奈川県の協会は保証期間が2年を超える場合、千葉県の協会は保証期間が2年を超えるもので承認を受けた場合と書いています。東京信用保証協会は、東京都制度融資で保証料の補助を受けるときは分割支払ができないとしています。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>繰上返済すると保証料は戻りますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>最終期限の前に完済した場合、協会の規定で保証料の一部が返戻されることがあります。返戻額が1,000円以下のときは対象外で、完済報告の遅れや返済状況によっては返戻できないこともあります（東京・千葉）。返戻の可否と額は協会が決めるため、完済の前に協会か金融機関へ確かめてください。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://www.zenshinhoren.or.jp/guarantee-system/hoshoryo/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>全国信用保証協会連合会 信用保証料</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.zenshinhoren.or.jp/question/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>全国信用保証協会連合会 よくあるご質問</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.cgc-tokyo.or.jp/business/guarantee_fee/index.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>東京信用保証協会 信用保証料</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.cgc-tokyo.or.jp/business/guarantee_fee/calculation.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>東京信用保証協会 信用保証料の計算例（更新日 2022年1月31日）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.cgc-tokyo.or.jp/business/guarantee_fee/system.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>東京信用保証協会 信用保証料率の体系（更新日 2026年6月23日）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.cgc-tokyo.or.jp/business/guarantee_fee/system.files/cgc_sinyouhosyouryouritu_20260623.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>東京信用保証協会 信用保証料率表（PDF、6月23日更新）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.cgc-tokyo.or.jp/business/guarantee_fee/discount.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>東京信用保証協会 信用保証料率の割引</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.cgc-tokyo.or.jp/business/guarantee_fee/installments.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>東京信用保証協会 信用保証料の分割支払</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.cgc-tokyo.or.jp/business/guarantee_fee/return.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>東京信用保証協会 信用保証料の返戻手続</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.cgc-tokyo.or.jp/business/guarantee_fee/return.files/cgc_henrei-calculate.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>東京信用保証協会 信用保証料返戻の計算例（PDF）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.cgc-tokyo.or.jp/business/guarantee_fee/offset.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>東京信用保証協会 信用保証料の差引計算</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.cgc-tokyo.or.jp/business/simulation/gfsimulation.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>東京信用保証協会 信用保証料簡易シミュレーション</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.cgc-saitama.or.jp/use/charge.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>埼玉県信用保証協会 信用保証料について</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.cgc-saitama.or.jp/use/charge-calc.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>埼玉県信用保証協会 信用保証料の計算方法</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.cgc-saitama.or.jp/use/charge-list.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>埼玉県信用保証協会 信用保証料率一覧表（2026年4月1日現在）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.cgc-saitama.or.jp/sitemap/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>埼玉県信用保証協会 サイトマップ</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.cgc-kanagawa.or.jp/guide/rates/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>神奈川県信用保証協会 信用保証料</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.cgc-kanagawa.or.jp/guide/rates/simulator/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>神奈川県信用保証協会 信用保証料シミュレーター</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.cgc-kanagawa.or.jp/seido/genyu_hojo20270331/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>神奈川県信用保証協会 「原油・原材料高騰等対策特別融資」の保証料補助について（2026年10月19日）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.chiba-cgc.or.jp/guidance/fee/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>千葉県信用保証協会 信用保証料について</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.chiba-cgc.or.jp/support/simulation/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>千葉県信用保証協会 保証料計算シミュレーション</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.chiba-cgc.or.jp/guarantee/kyoutyou/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>千葉県信用保証協会 協調支援型特別保証制度</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.cgc-osaka.jp/guide/charge/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>大阪信用保証協会 信用保証料について</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.cgc-osaka.jp/guide/calculator/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>大阪信用保証協会 保証料シミュレーション</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.cgc-aichi.or.jp/charges/waribiki/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>愛知県信用保証協会 保証料率の割引・保証料の助成</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.cgc-aichi.or.jp/charges/premium_simulation/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>愛知県信用保証協会 保証料シミュレーション</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/sonota/" data-astro-cid-sgg5joot>その他の開業準備の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

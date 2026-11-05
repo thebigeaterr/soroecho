@@ -1,0 +1,478 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GビズIDプライムの取得方法｜オンライン申請と書類申請の違い・日数・必要なもの | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="GビズIDプライムの取得方法は、マイナンバーカードとスマホで申請するオンライン申請（最短即日）と、印鑑証明書を郵送する書類申請（最大1か月）の2つです。状況別の選び方、必要なもの、審査状況の確認、2026年の変更点を公式の案内で整理します。"><link rel="canonical" href="https://soroecho.com/articles/gbizid-prime-shutoku/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="GビズIDプライムの取得方法｜オンライン申請と書類申請の違い・日数・必要なもの | そろえ帳"><meta property="og:description" content="GビズIDプライムの取得方法は、マイナンバーカードとスマホで申請するオンライン申請（最短即日）と、印鑑証明書を郵送する書類申請（最大1か月）の2つです。状況別の選び方、必要なもの、審査状況の確認、2026年の変更点を公式の案内で整理します。"><meta property="og:url" content="https://soroecho.com/articles/gbizid-prime-shutoku/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/gbizid-prime-shutoku.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="GビズIDプライムの取得方法｜オンライン申請と書類申請の違い・日数・必要なもの — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="GビズIDプライムの取得方法｜オンライン申請と書類申請の違い・日数・必要なもの | そろえ帳"><meta name="twitter:description" content="GビズIDプライムの取得方法は、マイナンバーカードとスマホで申請するオンライン申請（最短即日）と、印鑑証明書を郵送する書類申請（最大1か月）の2つです。状況別の選び方、必要なもの、審査状況の確認、2026年の変更点を公式の案内で整理します。"><meta name="twitter:image" content="https://soroecho.com/og/gbizid-prime-shutoku.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"GビズIDプライムの取得方法｜オンライン申請と書類申請の違い・日数・必要なもの","item":"https://soroecho.com/articles/gbizid-prime-shutoku/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"GビズIDプライムの取得方法｜オンライン申請と書類申請の違い・日数・必要なもの","description":"GビズIDプライムの取得方法は、マイナンバーカードとスマホで申請するオンライン申請（最短即日）と、印鑑証明書を郵送する書類申請（最大1か月）の2つです。状況別の選び方、必要なもの、審査状況の確認、2026年の変更点を公式の案内で整理します。","url":"https://soroecho.com/articles/gbizid-prime-shutoku/","datePublished":"2026-11-05T00:00:00.000Z","dateModified":"2026-11-05T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/gbizid-prime-shutoku/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"GビズIDプライムは何日で取得できますか。","acceptedAnswer":{"@type":"Answer","text":"GビズIDの公式ページ（2026年11月3日取得）では、マイナンバーカードを使うオンライン申請は最短で即日、印鑑証明書などを郵送する書類申請は最大1か月とされています。書類申請の1か月は、申請書類がGビズID運用センターに届き、不備がない場合の上限です。"}},{"@type":"Question","name":"個人事業主でもGビズIDプライムを取得できますか。","acceptedAnswer":{"@type":"Answer","text":"できます。プライムは法人代表者と個人事業主向けのアカウントです。オンライン申請では登記情報は不要です。書類申請では、市区町村発行の印鑑登録証明書の原本（発行日から3か月以内）と、その実印が要ります。"}},{"@type":"Question","name":"マイナンバーカードがなくても取得できますか。","acceptedAnswer":{"@type":"Answer","text":"書類申請で取得できます。ただし審査は最大1か月かかります。SMSを受信できるスマートフォンまたは携帯電話は、書類申請でも必要です。"}},{"@type":"Question","name":"2026年にGビズIDで変わったことは何ですか。","acceptedAnswer":{"@type":"Answer","text":"2026年7月9日に、プライムとメンバーのアカウントに有効期限（発行日から2年3か月）が設けられました。同じ日に、書類申請の審査期間が最大2週間から最大1か月に変わり、不備のあった提出書類は返送されなくなりました。法人代表者のオンライン審査は24時間365日になりました。"}},{"@type":"Question","name":"GビズIDにログインできないときは、何から確認しますか。","acceptedAnswer":{"@type":"Answer","text":"公式のよくある質問の分類に沿って、ログイン先（GビズIDのマイページか行政サービスか）、パスワード、認証（アプリ・SMS・メール）、スマホの機種変更や紛失、有効期限切れの順に確認します。解決しないときは、GビズIDヘルプデスク（0570-023-797、平日9:00〜17:00）に問い合わせます。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>GビズIDプライムの取得方法｜オンライン申請と書類申請の違い・日数・必要なもの</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecl2lt6i-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecl2lt6i-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecl2lt6i-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecl2lt6i-p)" data-astro-cid-yuatfsof></rect><circle cx="367" cy="95" r="143" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>gビズid</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>取得</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>方法</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>GビズIDプライムの取得方法｜オンライン申請と書類申請の違い・日数・必要なもの</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-11-05T00:00:00.000Z" data-astro-cid-sgg5joot>2026年11月5日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約20分</p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論gビズidプライムはマイナンバーカードがあればオンライン申請最短即日なければ書類申請最大1か月" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：GビズIDプライムは、マイナンバーカードがあればオンライン申請（最短即日）、なければ書類申請（最大1か月）</a></li><li data-astro-cid-sgg5joot><a href="#プライムメンバーエントリーの違い" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>プライム・メンバー・エントリーの違い</a></li><li data-astro-cid-sgg5joot><a href="#申請前チェックの4つの質問で申請方法が決まる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>申請前チェックの4つの質問で、申請方法が決まる</a></li><li data-astro-cid-sgg5joot><a href="#オンライン申請の手順と必要なもの" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>オンライン申請の手順と、必要なもの</a></li><li data-astro-cid-sgg5joot><a href="#書類申請の手順と必要なもの" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>書類申請の手順と、必要なもの</a></li><li data-astro-cid-sgg5joot><a href="#法人代表者と個人事業主で変わる点" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>法人代表者と個人事業主で変わる点</a></li><li data-astro-cid-sgg5joot><a href="#日数の目安と2026年7月に変わったこと" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>日数の目安と、2026年7月に変わったこと</a></li><li data-astro-cid-sgg5joot><a href="#2026年のgビズidの変更点2025年12月からの流れ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>2026年のGビズIDの変更点（2025年12月からの流れ）</a></li><li data-astro-cid-sgg5joot><a href="#審査状況の確かめ方と審査完了後の手続き" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>審査状況の確かめ方と、審査完了後の手続き</a></li><li data-astro-cid-sgg5joot><a href="#申請中につまずきやすい点" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>10</span>申請中につまずきやすい点</a></li><li data-astro-cid-sgg5joot><a href="#ログインできないときは公式faqの分類に沿って順に確認する" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>11</span>ログインできないときは、公式FAQの分類に沿って順に確認する</a></li><li data-astro-cid-sgg5joot><a href="#取得したあと補助金助成金の申請に進む前に" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>12</span>取得したあと：補助金・助成金の申請に進む前に</a></li><li data-astro-cid-sgg5joot><a href="#よくある質問とまとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>13</span>よくある質問とまとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論gビズidプライムはマイナンバーカードがあればオンライン申請最短即日なければ書類申請最大1か月">結論：GビズIDプライムは、マイナンバーカードがあればオンライン申請（最短即日）、なければ書類申請（最大1か月）</h2>
+<p>GビズIDの公式ページ（<a href="https://gbiz-id.go.jp/top/apply/account_select.html">申請アカウントの選択</a>・<a href="https://gbiz-id.go.jp/top/faq/faq.html">よくある質問</a>ほか、2026年11月3日取得）によると、プライムの取り方は2つです。</p>
+<p>マイナンバーカードと、カードを読み取れるスマートフォンがあれば、オンライン申請です。審査は最短で即日とされています。</p>
+<p>使えない場合は、申請書と印鑑証明書を郵送する書類申請で、審査は最大1か月です。どちらになるかは、公式の「申請前チェック」への答えで決まります。</p>
+<table>
+<thead>
+<tr>
+<th>あなたの状況</th>
+<th>申請方法</th>
+<th>公式の日数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>カードもスマホも使え、暗証番号2つも分かる</td>
+<td>オンライン申請</td>
+<td>最短で即日</td>
+</tr>
+<tr>
+<td>マイナンバーカードがない</td>
+<td>書類申請</td>
+<td>最大1か月</td>
+</tr>
+<tr>
+<td>読み取れるスマホがない</td>
+<td>書類申請</td>
+<td>最大1か月</td>
+</tr>
+<tr>
+<td>暗証番号をどちらか忘れた</td>
+<td>再設定してオンライン、または書類申請</td>
+<td>書類は最大1か月</td>
+</tr>
+</tbody>
+</table>
+<p>主に要るものは次のとおりです。</p>
+<ul>
+<li><strong>オンライン申請</strong>：マイナンバーカード、カードを読み取れるスマートフォン（GビズIDアプリを入れる）、パソコンなど、メールアドレス</li>
+<li><strong>書類申請</strong>：申請書、印鑑（登録）証明書の原本、登録印、プリンタ、パソコンなど、メールアドレス</li>
+</ul>
+<p>どちらの申請でも、SMSを受信できるスマートフォンまたは携帯電話が要ります。持っていないと、プライムを新規に取得できないと公式のよくある質問に書かれています。</p>
+<p>この記事で分かることは次のとおりです。</p>
+<ul>
+<li>プライム・メンバー・エントリーの違いと、補助金の電子申請に使える種類</li>
+<li>申請前チェックの質問の順番と、状況別の申請方法</li>
+<li>オンライン申請・書類申請それぞれの手順と必要なもの</li>
+<li>法人代表者と個人事業主で変わる点</li>
+<li>日数の目安と、2026年の変更点（アカウントの有効期限など）</li>
+<li>審査状況の確認方法と、ログインできないときの確認順</li>
+</ul>
+<p>画面や条件は変わることがあります。申請の前に、公式の最新の案内で確かめてください。</p>
+<h2 id="プライムメンバーエントリーの違い">プライム・メンバー・エントリーの違い</h2>
+<p>GビズIDには、プライム・メンバー・エントリーの3種類があります。公式トップページ（2026年11月3日取得）とよくある質問の内容を、表にまとめました。</p>
+<table>
+<thead>
+<tr>
+<th>種類</th>
+<th>取る人</th>
+<th>作り方</th>
+<th>使える範囲</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>プライム</td>
+<td>法人代表者・個人事業主</td>
+<td>審査あり</td>
+<td>すべて</td>
+</tr>
+<tr>
+<td>メンバー</td>
+<td>プライムを持つ組織の従業員</td>
+<td>プライムが作成</td>
+<td>サービスごとに制限</td>
+</tr>
+<tr>
+<td>エントリー</td>
+<td>事業をしている人</td>
+<td>審査なし</td>
+<td>サービスごとに制限</td>
+</tr>
+</tbody>
+</table>
+<p>表の補足は次のとおりです。</p>
+<ul>
+<li>プライムは、府省・地方公共団体の職員も取れます。審査は、オンライン申請か書類申請で行われます</li>
+<li>メンバーは、プライムまたは管理者権限のメンバーが作ります。書類審査は不要です</li>
+<li>エントリーは、事業をしている人や組織の従業員が、審査なしでオンラインで即時に作れます</li>
+<li>スマートフォンまたは携帯電話は、プライムとメンバーで必要で、エントリーでは不要です</li>
+</ul>
+<p>利用料金は無料です。ただし、将来にわたり無料であることを保証するものではない、と公式のよくある質問に書かれています。</p>
+<p>プライムを取れば、エントリーを別に取る必要はありません。プライムとエントリーの両方を取得することは、できないとされています。</p>
+<h3 id="補助金の電子申請に使えるアカウント">補助金の電子申請に使えるアカウント</h3>
+<p>使えるアカウントの種類は、行政サービスごとに決まっています。GビズIDの「行政サービス一覧」（2026年11月3日取得）の表記は、補助金の申請システムでは次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>行政サービス（一覧の表記）</th>
+<th>使える種類</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jグランツ</td>
+<td>プライム、メンバー</td>
+</tr>
+<tr>
+<td>小規模事業者持続化補助金＜一般型＞申請システム</td>
+<td>プライム、メンバー</td>
+</tr>
+<tr>
+<td>デジタル化・AI導入補助金（旧：IT導入補助金）</td>
+<td>プライム</td>
+</tr>
+<tr>
+<td>新事業進出・ものづくり商業サービス補助金 電子申請システム</td>
+<td>プライム</td>
+</tr>
+<tr>
+<td>中小企業新事業進出補助金</td>
+<td>プライム</td>
+</tr>
+<tr>
+<td>中小企業省力化投資補助事業 一般型・カタログ注文型</td>
+<td>プライム</td>
+</tr>
+</tbody>
+</table>
+<p>エントリーが使えるサービスも一覧にはあります（e-Govなど）が、上の補助金の申請システムはプライムかメンバーです。補助金が目的なら、プライムを取る前提で進めます。</p>
+<p>メンバーは、プライムを取った人が従業員のために作るアカウントなので、先にプライムが要ります。</p>
+<h2 id="申請前チェックの4つの質問で申請方法が決まる">申請前チェックの4つの質問で、申請方法が決まる</h2>
+<p>GビズIDのプライム申請は、トップページの「GビズIDアカウントの作成をはじめる」から「プライムアカウントを申請する」を選び、申請前チェックに進みます。</p>
+<p>公式の申請前チェックは、次の順に質問されます。各ページの設問と、「次へ」ボタンの行き先から整理しました。</p>
+<ol>
+<li>申請するのは、個人事業主か、法人代表者・府省・地方公共団体の職員かを選びます。事業形態ごとに、次のページが分かれます</li>
+<li>マイナンバーカードを持っているか。持っていれば質問3へ、持っていなければ書類申請の案内へ進みます</li>
+<li>カードを読み取れるスマートフォンが手元にあるか。あれば質問4へ、なければ書類申請の案内へ進みます</li>
+<li>カードの暗証番号（数字4桁）とパスワード（英数字6〜16桁）を、両方覚えているか
+<ul>
+<li>両方覚えていれば、オンライン申請の案内へ進みます</li>
+<li>どちらか一方でも忘れていれば、暗証番号の再設定の案内へ進みます（書類申請に進むリンクもあります）</li>
+</ul>
+</li>
+</ol>
+<p>公式は、次のマイナンバーカードは利用できないとしています。</p>
+<ul>
+<li>有効期限（10年）が切れたカード</li>
+<li>署名用電子証明書が入っていない、または署名用電子証明書の有効期限（5年）が切れているカード</li>
+<li>顔認証マイナンバーカード（カード表面の追記欄に顔認証と書かれたもの）</li>
+<li>スマホ搭載マイナンバーカード</li>
+</ul>
+<p>これらしかない場合は、オンライン申請は使えません。電子証明書の更新や新規発行は、住民登録のある市区町村の窓口で行うと、よくある質問に書かれています。</p>
+<h2 id="オンライン申請の手順と必要なもの">オンライン申請の手順と、必要なもの</h2>
+<p>オンライン申請は、パソコンなどで申請内容を入力し、スマートフォンのGビズIDアプリでマイナンバーカードを読み取る方法です。クイックマニュアル（<a href="https://gbiz-id.go.jp/top/manual/pdf/QuickManual_Prime_sole-proprietor.pdf">個人事業主編</a>・<a href="https://gbiz-id.go.jp/top/manual/pdf/QuickManual_Prime_corporation.pdf">法人代表者編</a>、ともにver1.6 2026年9月）とよくある質問から整理しました。</p>
+<p>必要なものは次のとおりです。</p>
+<ul>
+<li><strong>マイナンバーカード</strong>：署名用電子証明書が入った、有効なカードです。前の章の4種類は使えません</li>
+<li><strong>暗証番号2つ</strong>：署名用電子証明書暗証番号（英数字6〜16桁）と、券面事項入力補助用暗証番号（数字4桁）です。誤入力が続くとロックされます（前者5回、後者3回）</li>
+<li><strong>スマートフォン</strong>：カードを読み取れる機種に、GビズIDアプリを入れます。SMSを受け取れる電話番号も要ります。パソコンやICカードリーダライタでは、カードを読み取れません</li>
+<li><strong>申請用の端末</strong>：パソコンかタブレットです。スマートフォンでも申請できます</li>
+<li><strong>メールアドレス</strong>：アカウントIDになります。gbiz-id.go.jpドメインからのメールを受信できるようにしておきます</li>
+<li><strong>法人代表者のみ</strong>：登記情報とマイナンバーカードの情報が一致している必要があります。不一致だと、オンライン申請が完了しません</li>
+</ul>
+<p>カードを読み取れるスマートフォンの機種は、GビズIDが案内する<a href="https://www.jpki.go.jp/prepare/pdf/nfclist.pdf">マイナンバーカードに対応したNFCスマートフォン一覧</a>（PDF、令和8年8月27日作成）で確認します。</p>
+<p>GビズIDアプリの動作環境は、Androidが2026年9月30日からAndroid 11以上に変わりました。iPhoneは引き続き使えるとされています。</p>
+<h3 id="オンライン申請の流れ">オンライン申請の流れ</h3>
+<ol>
+<li>スマートフォンにGビズIDアプリを入れます。App StoreかGoogle Playで「GビズID」と検索します。ダウンロードに課金は発生しません</li>
+<li>パソコンでGビズIDのトップを開き、「GビズIDアカウントの作成をはじめる」→「プライムアカウントを申請する」→「事前チェックに進む」を選びます</li>
+<li>4つの質問に答え、「オンライン申請を開始する」を押します</li>
+<li>アカウントIDにするメールアドレスを入力し、利用規約に同意します。届いたメール（件名は「【GビズID】ワンタイムパスワードの通知」）のワンタイムパスワードを、30分以内に入力します</li>
+<li>申請情報を入力します
+<ul>
+<li>個人事業主：屋号、代表者氏名フリガナ、連絡先住所、SMS受信用電話番号、ログインパスワードなど</li>
+<li>法人代表者：法人番号など。「法人情報取得」ボタンを押すと、法人名と所在地が自動で入ります</li>
+</ul>
+</li>
+<li>内容を確認して「この内容で登録する」を押します。この時点で、手続きの再開と審査状況の確認に使うGビズIDエントリーが作られます</li>
+<li>画面のQRコードをGビズIDアプリで読み取り、アプリの案内でマイナンバーカードを読み取ります。QRコードの有効期限は10分です</li>
+<li>パソコンの画面に戻り、表示内容を確認して「この内容で登録する」を押すと、審査が始まります</li>
+<li>審査完了と表示されたら、「アプリ認証を設定する」から、ログイン用のアプリ認証を設定します。アカウント作成後に、マイページから設定することもできます</li>
+<li>登録したSMS受信用電話番号に届くワンタイムパスワードを入力して完了です。メールの受信後30分以内に入力します</li>
+</ol>
+<p>マニュアルには、SMS認証が完了するとアカウント種別がプライムに変わるので、いったんログアウトして再度ログインするよう書かれています。</p>
+<h2 id="書類申請の手順と必要なもの">書類申請の手順と、必要なもの</h2>
+<p>書類申請は、サイトで申請内容を入力して申請書を印刷し、印鑑（登録）証明書と一緒にGビズID運用センターへ郵送する方法です。マイナンバーカードが使えない人は、こちらになります。</p>
+<p>必要なものは次のとおりです。</p>
+<ul>
+<li><strong>申請書</strong>：サイトで入力して印刷する、GビズIDプライム登録申請書です（個人事業主用、法人用）</li>
+<li><strong>証明書の原本</strong>：個人事業主は市区町村発行の印鑑登録証明書、法人は法務局発行の印鑑証明書です。どちらも発行日から3か月以内で、コピーは使えません</li>
+<li><strong>押印</strong>：個人事業主は印鑑登録証明書の実印、法人は代表者印を押します</li>
+<li><strong>そのほか</strong>：プリンタ（印刷できる環境）、パソコンなど、メールアドレス、SMSを受信できるスマートフォンまたは携帯電話</li>
+</ul>
+<h3 id="書類申請の流れ">書類申請の流れ</h3>
+<ol>
+<li>申請前チェックの結果から、または「書類申請へ進む」から、書類申請を始めます</li>
+<li>メールアドレスを入力し、届いたワンタイムパスワードで確認します</li>
+<li>事業者の基本情報、アカウント利用者の情報、SMS受信用電話番号、ログインパスワードを入力して送信します。この時点で、エントリーのアカウントが作られます</li>
+<li>画面の案内に従って進み、申請書をダウンロードして印刷します。画面を閉じた後でも、マイページの「GビズIDプライム審査状況」から再度ダウンロードできます</li>
+<li>「作成日」欄に手書きで日付を書き、「実印欄」に印鑑登録証明書の実印（法人は代表者印）を押します</li>
+<li>申請書と印鑑（登録）証明書の原本を、「〒530-8532 GビズID運用センター宛」に郵送します</li>
+<li>審査が終わると、メールやマイページで案内が届きます。SMS認証をして完了です</li>
+</ol>
+<p>郵送先は、郵便番号（個別番号）と宛名だけで届きます。郵便料金は通常の郵便物と同じです。日本郵便のみの取り扱いで、宅配業者のサービスは使えません。</p>
+<h3 id="書類申請で失敗しやすい点">書類申請で失敗しやすい点</h3>
+<ul>
+<li>印刷した後の申請書は修正できません。手書きで直した申請書は無効です。誤りに気づいたら、マイページの「GビズIDプライム審査状況」から「申請をキャンセルする」を押し、「GビズIDプライムへの変更」から再申請します</li>
+<li>事業所所在地、代表者名、生年月日が、印鑑（登録）証明書の記載と異なると、書類不備になり審査を完了できません</li>
+<li>提出した書類は、審査結果にかかわらず返送されません。コピーを申請書類として出すことはできないので、控えが要るときは、原本を郵送する前にコピーを取ります</li>
+<li>不備があったときの内容は、マイページと登録したメールアドレスに通知されます。再申請は「GビズIDプライムへの変更」からです（2026年7月以降の取り扱い）</li>
+</ul>
+<h2 id="法人代表者と個人事業主で変わる点">法人代表者と個人事業主で変わる点</h2>
+<p>同じプライムでも、法人代表者と個人事業主では、使う情報と書類が違います。公式のよくある質問とクイックマニュアルの内容を整理しました。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>個人事業主</th>
+<th>法人代表者</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>オンライン申請の登記情報</td>
+<td>不要</td>
+<td>一致が必要</td>
+</tr>
+<tr>
+<td>入力する番号</td>
+<td>屋号など</td>
+<td>法人番号（13桁）</td>
+</tr>
+<tr>
+<td>書類申請の証明書</td>
+<td>印鑑登録証明書</td>
+<td>印鑑証明書</td>
+</tr>
+<tr>
+<td>証明書の発行元</td>
+<td>市区町村</td>
+<td>法務局</td>
+</tr>
+<tr>
+<td>押印</td>
+<td>実印</td>
+<td>代表者印</td>
+</tr>
+<tr>
+<td>取得できる数</td>
+<td>1アカウント</td>
+<td>法人ごとに1つ</td>
+</tr>
+</tbody>
+</table>
+<p>表の補足は次のとおりです。</p>
+<ul>
+<li><strong>オンライン申請（法人）</strong>：登記情報とマイナンバーカードの情報が一致している必要があります。引っ越しなどで更新していないと、オンライン申請が完了しません。個人事業主は、登記情報が不要です</li>
+<li><strong>書類申請の「所在地」欄（個人事業主）</strong>：印鑑登録証明書に書かれた住所を入力します。事務所の住所が違うときは、「連絡先住所」に入力します</li>
+<li><strong>法人番号</strong>：国税庁が指定する13桁の番号です。登記所の手続きで使う12桁の会社法人等番号ではありません</li>
+<li><strong>所在地（法人）</strong>：「法人情報取得」ボタンで入ります。外国に本店がある法人は、国税庁に登録されている国内の主たる事務所等の所在地が登録されます</li>
+<li><strong>取得できる数</strong>：個人事業主は1アカウントです。法人は法人ごとに1つで、代表者が複数いれば代表者ごとに取得できます。同じ人が同一法人で複数取ることはできません</li>
+</ul>
+<p>個人事業主のプライムは、公式のよくある質問で「事業を営む個人」が対象とされています。</p>
+<p>今回確認した公式ページには、開業届の提出を条件とする記載は確認できませんでした。開業届の出し方は、<a href="/articles/kaigyou-todoke-kakikata-teishutsu/">開業届の書き方と提出方法</a>で整理しています。</p>
+<p>これから法人を作る人は、法人設立ワンストップサービスを使うと、設立の手続きの中でプライムを作れます。公式には、専用のクイックマニュアル（法人設立ワンストップサービス編）があります。</p>
+<h2 id="日数の目安と2026年7月に変わったこと">日数の目安と、2026年7月に変わったこと</h2>
+<p>日数は、申請方法で大きく違います。公式の記載を表にしました（2026年11月3日取得）。</p>
+<table>
+<thead>
+<tr>
+<th>手続き</th>
+<th>公式の日数の目安</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>オンライン申請でプライムを取る</td>
+<td>最短で即日</td>
+</tr>
+<tr>
+<td>書類申請でプライムを取る</td>
+<td>最大1か月</td>
+</tr>
+<tr>
+<td>有効期限の更新（オンライン申請）</td>
+<td>最短で即日</td>
+</tr>
+<tr>
+<td>有効期限の更新（書類申請）</td>
+<td>最大1か月</td>
+</tr>
+</tbody>
+</table>
+<p>表の補足は次のとおりです。</p>
+<ul>
+<li><strong>オンライン申請</strong>：申請アカウントの選択ページは「最短で即日」、よくある質問の表は「即日～数日」と書いています</li>
+<li><strong>書類申請</strong>：書類がGビズID運用センターに届き、不備がない場合の上限です。申請状況によっては、これより早く終わる場合もあります</li>
+</ul>
+<p>2026年7月9日に、書類申請の審査期間は「最大2週間」から「最大1か月」に変わりました（公式トップのお知らせ）。古い情報を見かけたときは、この変更前の数字の可能性があります。</p>
+<p>補助金の申請期限がある場合は、GビズIDが間に合わないことも考えておきます。</p>
+<p>厚生労働省の業務改善助成金の電子申請マニュアル（2026年9月1日版）は、「GビズIDの発行が間に合わないことに伴う申請期日の猶予は想定してございません」と書いています。他の補助金は、それぞれの事務局の案内で確かめてください。</p>
+<h2 id="2026年のgビズidの変更点2025年12月からの流れ">2026年のGビズIDの変更点（2025年12月からの流れ）</h2>
+<p>2025年12月から2026年11月にかけての主な変更を、公式のよくある質問とお知らせから拾いました（2026年11月3日取得）。</p>
+<ul>
+<li><strong>2025年12月17日</strong>：メールワンタイムパスワード認証が使えるようになりました。行政サービスへのログイン時のSMS認証は、2025年12月16日以降使えません。アプリ認証かメールワンタイムパスワード認証を設定していないと、行政サービスにログインできません</li>
+<li><strong>2026年3月26日</strong>：アプリ認証が、ブラウザに出る数字4桁の認証コードをアプリに入力する方式になりました。古いバージョンのアプリでは、認証が使えません</li>
+<li><strong>2026年7月9日（有効期限）</strong>：プライムとメンバーのアカウントに、有効期限が設けられました。発行日から2年3か月です</li>
+<li><strong>2026年7月9日（審査）</strong>：法人代表者のオンライン審査が、24時間365日になりました。書類申請の審査期間は最大1か月になり、不備のあった提出書類は返送されなくなりました</li>
+<li><strong>2026年9月30日</strong>：GビズIDアプリ（Android）の動作環境が、Android 11以上になりました</li>
+<li><strong>2026年11月24日20:00〜25日1:00頃</strong>：システムメンテナンスで、GビズIDの全ての機能が使えません（トップページの予告）</li>
+</ul>
+<h3 id="アカウントの有効期限">アカウントの有効期限</h3>
+<p>有効期限は、2026年7月9日に導入されました。公式の<a href="https://gbiz-id.go.jp/top/account_expiry/account_expiry.html">アカウントの有効期限</a>のページ（2026年11月3日取得）の内容は次のとおりです。</p>
+<ul>
+<li>対象は、プライムとメンバーです。エントリーには有効期限がありません</li>
+<li>有効期間は、アカウント発行日から2年3か月です。導入日より前に作ったアカウントは、導入日から2年3か月で、2028年10月ごろまで有効です</li>
+<li>有効期限の確認と更新は、マイページで行います。自動では更新されません。更新手続きの完了通知が届いた日から、あらためて2年3か月です</li>
+<li>プライムの更新では、本人確認が行われます。原則はマイナンバーカードを使うオンライン申請です。最大1か月ほどかかることがあるため、余裕をもって行うよう書かれています</li>
+<li>期限の3か月前、1か月前、2週間前と、期限を過ぎた後に、メールとマイページで知らせが出ます</li>
+<li>期限が切れると、行政サービスへのログイン、メンバーの作成、委任・受任の申請などができなくなります。切れた後も、マイページで更新できます。アカウント情報や利用履歴は削除されません</li>
+</ul>
+<p>トップページには、「現時点で、利用者の皆さまに直ちに行っていただく手続はありません」と書かれています。初回の期限切れは、2028年10月ごろの想定です。</p>
+<h2 id="審査状況の確かめ方と審査完了後の手続き">審査状況の確かめ方と、審査完了後の手続き</h2>
+<p>申請後の状況は、3つの方法で確かめられます。</p>
+<ul>
+<li><strong>マイページで見る</strong>：申請時に決めたアカウントIDとパスワードでログインし、メニューの「GビズIDプライム審査状況」を開きます。申請中は、手続きの再開と確認用に作られたエントリーでログインします</li>
+<li><strong>マイページを使わずに見る</strong>：<a href="https://gbiz-id.go.jp/top/self_solving/self_solving.html">アカウントセルフ解決サービス</a>の「申請状況確認」を使います。申請書を作成した日から2か月以内のものが対象です</li>
+<li><strong>メールで知る</strong>：審査が完了すると、メールが届きます。クイックマニュアルでは、件名は「【GビズID】GビズIDプライム登録申請の審査完了のお知らせ」です</li>
+</ul>
+<p>審査が完了したら、SMS認証をしてプライムを有効にします。</p>
+<ol>
+<li>メールに書かれたURLを開きます。または、マイページにログインして、「審査が完了しました。プライムアカウントを有効化するにはSMS認証が必要です。」の表示から、「審査状況を確認する」→「SMS認証を行う」を押します</li>
+<li>登録したSMS受信用電話番号に届くワンタイムパスワードを入力します。メールの受信後30分以内です</li>
+<li>完了すると、アカウント種別がプライムに変わります。いったんログアウトして、再度ログインします</li>
+</ol>
+<p>審査完了のメールが届かなくても、マイページに「審査が完了しました」と出ていれば、「SMS認証を行う」から進められます。メールの再送は、アカウントセルフ解決サービスの「マイページを使わない審査メールの再送」で行えます。</p>
+<p>メールが届かないときは、迷惑メール設定を確認し、gbiz-id.go.jpドメインからのメールを受信できるようにします。</p>
+<h2 id="申請中につまずきやすい点">申請中につまずきやすい点</h2>
+<p>公式のよくある質問に書かれている、申請中の代表的なつまずきです。</p>
+<ul>
+<li><strong>「既に登録済みです」と出る</strong>：そのアカウントID（メールアドレス）でログインします。パスワードが不明なら再設定します。プライムを申請済みの場合や、入力途中で中断した場合は、すでにエントリーが作られています</li>
+<li><strong>「同一法人内に同名でプライムアカウントが登録されているため、申請ができません」と出る</strong>：別のメールアドレスで取得済みでないか、アカウントセルフ解決サービスの「アカウント登録確認」で調べます</li>
+<li><strong>申請を途中でやめてしまった</strong>：マイページにログインし、「GビズIDプライムへの変更」から再開します。パスワードを入力する前に中断した場合は、最初からやり直します</li>
+<li><strong>手続きが長引いた</strong>：全体で30分以上かかると、セキュリティのため手続きが中止されます。入力中に30分操作しなかった場合も、入力中の情報は無効になります。入力したアカウントIDでマイページにログインし、「GビズIDプライムへの変更」から進めます</li>
+<li><strong>QRコードが使えない</strong>：QRコードの有効期限は10分で、再表示すると前のQRコードは無効になります。再表示は最大3回までです</li>
+<li><strong>スマートフォン1台で操作していて、画面が切り替わらない</strong>：GビズIDアプリを一度表示し、アプリを閉じずにブラウザへ切り替えて、画面を再度表示します（法人代表者編のマニュアル）</li>
+<li><strong>SMS受信用電話番号を間違えた</strong>：マイページの「GビズIDプライム審査状況」から申請をキャンセルし、「GビズIDプライムへの変更」から再申請します。060から始まる番号は、SMS受信用として登録できません</li>
+<li><strong>「全角で入力してください」と出る</strong>：登録できない漢字があります。公式の「代替漢字一覧」で置き換えます（例：髙→高）</li>
+<li><strong>カードが読み取れない</strong>：通信状態、マイナンバーカード以外をかざしていないか、カードの近くに他のカードがないかを確認します。スマホによって、かざす位置が違います</li>
+<li><strong>暗証番号を忘れた、ロックされた</strong>：市区町村の窓口で初期化・再設定します。署名用パスワードは、利用者証明用電子証明書の暗証番号（4桁）が分かれば、コンビニ等でも再設定できます</li>
+<li><strong>法人のオンライン申請ができない</strong>：法人情報の確認に使う関連システムのメンテナンス中は、法人のオンライン申請が使えません。公式のお知らせでは、2026年9月16日から10月20日付だけで4回案内されています。個人事業主の申請は通常どおりです</li>
+<li><strong>法人の画面で「審査不可」と出た</strong>：ヘルプデスクに連絡するよう、法人代表者編のマニュアルに書かれています</li>
+</ul>
+<h2 id="ログインできないときは公式faqの分類に沿って順に確認する">ログインできないときは、公式FAQの分類に沿って順に確認する</h2>
+<p>公式のよくある質問は、ログインできない原因を「ログイン・認証」「メール・SMS・通知が届かない」「アカウント有効期限切れ」などに分けています。それに沿って、確認する順に並べました。</p>
+<ol>
+<li><strong>どこにログインしようとしているか</strong>：GビズIDのマイページでは、アカウントの管理はできますが、行政手続きはできません。行政手続きは、行政サービスのページからGビズIDでログインします</li>
+<li><strong>パスワード</strong>：ログイン画面の「パスワードを忘れた方はこちら」から再設定します。連続で10回間違えると、パスワードがロックされます</li>
+<li><strong>アプリ認証</strong>：アプリ認証待ち画面から進まないときは、次を確認します
+<ul>
+<li>ブラウザに出た4桁の認証コードを、アプリに正しく入力したか。認証コードは5分以内に入力します</li>
+<li>ブラウザのJavaScriptが有効か</li>
+</ul>
+</li>
+<li><strong>通知が来ない</strong>：GビズIDアプリを手動で起動して、認証コードを入力します
+<ul>
+<li>画面が出ないときは、アプリ内の「ホーム」をタップします</li>
+<li>それでも駄目なら、アプリ認証を解除して設定し直します</li>
+</ul>
+</li>
+<li><strong>行政サービスへのログイン</strong>：SMS認証は使えません。アプリ認証かメールワンタイムパスワード認証を設定します。メールワンタイムパスワードの有効期限は30分です</li>
+<li><strong>スマホの機種変更・アプリの削除</strong>
+<ul>
+<li>機種変更の前に、マイページでアプリ認証を解除します</li>
+<li>解除せずに変えた場合や、アプリを削除した場合は、アカウントセルフ解決サービスの「スマートフォンアプリ認証解除」を使います</li>
+<li>解除したあとは、SMS認証でマイページにログインできます</li>
+</ul>
+</li>
+<li><strong>SMSが届かない、スマホを紛失・解約した</strong>
+<ul>
+<li>電話番号、受信拒否設定、電波、他のSMSが届くかを確認します</li>
+<li>解決しないときは、プライムのみ使えるアカウント復旧を使います。SMSを受信できるスマホ又は携帯電話と電話番号、マイナンバーカードが要ります</li>
+</ul>
+</li>
+<li><strong>アカウントIDを忘れた</strong>：プライムはアカウント復旧、エントリーはアカウント登録確認を使います</li>
+<li><strong>有効期限切れ</strong>：マイページで更新します。切れている間は、行政サービスへのログインなどができません</li>
+</ol>
+<p><a href="https://gbiz-id.go.jp/top/account_recovery/online_recovery.html">アカウント復旧</a>は、オンラインで行えない場合、電話・書類を使う手続きになり、復旧まで最大1か月かかると書かれています。</p>
+<p>GビズIDアプリを使っている人は、アプリ認証を解除する前にアプリを削除しないでください。アプリページには、削除すると認証設定が使えなくなり、再設定が必要になると書かれています。</p>
+<p>それでも解決しないときは、<a href="https://gbiz-id.go.jp/top/contact/contact.html">GビズIDヘルプデスク</a>に問い合わせます。電話は0570-023-797で、受付は平日の9:00〜17:00です（土・日・祝日、年末年始を除く）。メールは順番に回答するため、返信に数日かかる場合があります。</p>
+<h2 id="取得したあと補助金助成金の申請に進む前に">取得したあと：補助金・助成金の申請に進む前に</h2>
+<p>GビズIDを取っただけでは、補助金の申請は終わりません。申請先の行政サービス（Jグランツなど）のページから、GビズIDでログインして手続きします。</p>
+<p>専門家に手続きを任せるときは、GビズIDの委任機能があります。公式のよくある質問では、委任する側も受ける側も、プライムを持っていることが前提です。</p>
+<p>委任に対応しているかは、行政サービスごとに違い、一覧の「委任対応」の欄で確かめられます。</p>
+<p>制度ごとの記事は、次を見てください。</p>
+<ul>
+<li>個人事業主の設備や販路の補助金は、<a href="/articles/jizokuka-hojokin-kojin-jigyou/">小規模事業者持続化補助金（個人事業主）の記事</a></li>
+<li>最低賃金の引上げに合わせた設備投資は、業務改善助成金の申請方法</li>
+<li>融資や補助金を含めた資金調達の全体像は、<a href="/articles/shikin-choutatsu-houhou-kojin-jigyou/">個人事業主の資金調達の方法</a></li>
+</ul>
+<p>補助金や助成金は、制度ごとに申請期間と要件が決まっています。採択や支給の判断は、各制度の事務局や担当の窓口が行います。個別の事情は、事務局や専門家に相談してください。</p>
+<h2 id="よくある質問とまとめ">よくある質問とまとめ</h2>
+<h3 id="gビズidプライムの有効期限はいま何かする必要がありますか">GビズIDプライムの有効期限は、いま何かする必要がありますか</h3>
+<p>公式トップには、現時点で利用者が直ちに行う手続きはないと書かれています。初回の期限切れは2028年10月ごろの想定です。期限が近づくと、メールとマイページで知らせが出ます。</p>
+<h3 id="プライムを取れば補助金をすぐ申請できますか">プライムを取れば、補助金をすぐ申請できますか</h3>
+<p>申請先のシステムにGビズIDでログインして、各制度の手順で申請します。申請期間は制度ごとに決まっています。GビズIDが間に合わなくても、期日が延びるとは限りません。</p>
+<h3 id="メンバーだけ取れば足りますか">メンバーだけ取れば足りますか</h3>
+<p>メンバーは、プライムを取った人が従業員のために作るアカウントです。プライムがないと作れません。事業主本人が取るのは、プライムです。</p>
+<h3 id="まとめ">まとめ</h3>
+<p>GビズIDプライムは、マイナンバーカードと読み取れるスマートフォンがあればオンライン申請で、最短で即日です。使えない場合は書類申請で、印鑑（登録）証明書を郵送し、審査は最大1か月です。どちらも、SMSを受信できるスマートフォンか携帯電話が要ります。</p>
+<p>公式の申請前チェックは、事業形態、マイナンバーカード、読み取れるスマホ、2つの暗証番号の順に聞かれます。法人代表者は登記情報とカードの情報の一致、個人事業主は書類申請の所在地の書き方が、つまずきやすい点です。</p>
+<p>2026年7月9日から、プライムとメンバーには有効期限（2年3か月）があり、書類申請の審査期間は最大1か月、不備の書類は返送されません。</p>
+<p>ログインできないときは、ログイン先、パスワード、認証、端末の変更、有効期限の順に確認します。解決しなければ、ヘルプデスクに問い合わせます。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>GビズIDプライムは何日で取得できますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>GビズIDの公式ページ（2026年11月3日取得）では、マイナンバーカードを使うオンライン申請は最短で即日、印鑑証明書などを郵送する書類申請は最大1か月とされています。書類申請の1か月は、申請書類がGビズID運用センターに届き、不備がない場合の上限です。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>個人事業主でもGビズIDプライムを取得できますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>できます。プライムは法人代表者と個人事業主向けのアカウントです。オンライン申請では登記情報は不要です。書類申請では、市区町村発行の印鑑登録証明書の原本（発行日から3か月以内）と、その実印が要ります。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>マイナンバーカードがなくても取得できますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>書類申請で取得できます。ただし審査は最大1か月かかります。SMSを受信できるスマートフォンまたは携帯電話は、書類申請でも必要です。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>2026年にGビズIDで変わったことは何ですか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>2026年7月9日に、プライムとメンバーのアカウントに有効期限（発行日から2年3か月）が設けられました。同じ日に、書類申請の審査期間が最大2週間から最大1か月に変わり、不備のあった提出書類は返送されなくなりました。法人代表者のオンライン審査は24時間365日になりました。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>GビズIDにログインできないときは、何から確認しますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式のよくある質問の分類に沿って、ログイン先（GビズIDのマイページか行政サービスか）、パスワード、認証（アプリ・SMS・メール）、スマホの機種変更や紛失、有効期限切れの順に確認します。解決しないときは、GビズIDヘルプデスク（0570-023-797、平日9:00〜17:00）に問い合わせます。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://gbiz-id.go.jp/top/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>GビズID（トップページ・お知らせ）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://gbiz-id.go.jp/top/apply/account_select.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>GビズID 申請アカウントの選択</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://gbiz-id.go.jp/top/faq/faq.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>GビズID よくある質問</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://gbiz-id.go.jp/top/apply/prime_representative.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>GビズID プライム申請前チェック</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://gbiz-id.go.jp/top/manual/manual.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>GビズID ご利用ガイド</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://gbiz-id.go.jp/top/manual/pdf/QuickManual_Prime_sole-proprietor.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>GビズIDクイックマニュアル プライム編（個人事業主）ver1.6 2026年9月</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://gbiz-id.go.jp/top/manual/pdf/QuickManual_Prime_corporation.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>GビズIDクイックマニュアル プライム編（法人代表者）ver1.6 2026年9月</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://gbiz-id.go.jp/top/account_expiry/account_expiry.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>GビズID アカウントの有効期限</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://gbiz-id.go.jp/top/self_solving/self_solving.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>GビズID アカウントセルフ解決サービス</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://gbiz-id.go.jp/top/account_recovery/online_recovery.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>GビズID アカウント復旧について</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://gbiz-id.go.jp/top/service_list/service_list.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>GビズID 行政サービス一覧</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://gbiz-id.go.jp/top/app/app.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>GビズID GビズIDアプリについて</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.jpki.go.jp/prepare/pdf/nfclist.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>公的個人認証サービス マイナンバーカードに対応したNFCスマートフォン一覧（令和8年8月27日作成）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://gbiz-id.go.jp/top/news_list/news_list.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>GビズID 過去のお知らせ</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://gbiz-id.go.jp/top/contact/contact.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>GビズID ご意見・お問合せ</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.mhlw.go.jp/content/11200000/001734001.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>厚生労働省 業務改善助成金 電子申請マニュアル（Jグランツ）2026年9月1日版</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/sonota/" data-astro-cid-sgg5joot>その他の開業準備の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

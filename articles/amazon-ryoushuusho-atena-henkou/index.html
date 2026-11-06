@@ -1,0 +1,333 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Amazonの領収書の宛名変更｜個人アカウントは案内なし、会社名ならAmazonビジネス | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="Amazonの公式ヘルプ（2026年11月5日確認）には、個人アカウントの領収書の宛名を変更する方法の案内がありません。経費精算は宛名なしで足りるか経理に確認し、会社名入りの請求書が要るなら、これからの注文はAmazonビジネス（登録無料）で買う方法があります。"><link rel="canonical" href="https://soroecho.com/articles/amazon-ryoushuusho-atena-henkou/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="Amazonの領収書の宛名変更｜個人アカウントは案内なし、会社名ならAmazonビジネス | そろえ帳"><meta property="og:description" content="Amazonの公式ヘルプ（2026年11月5日確認）には、個人アカウントの領収書の宛名を変更する方法の案内がありません。経費精算は宛名なしで足りるか経理に確認し、会社名入りの請求書が要るなら、これからの注文はAmazonビジネス（登録無料）で買う方法があります。"><meta property="og:url" content="https://soroecho.com/articles/amazon-ryoushuusho-atena-henkou/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/amazon-ryoushuusho-atena-henkou.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Amazonの領収書の宛名変更｜個人アカウントは案内なし、会社名ならAmazonビジネス — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Amazonの領収書の宛名変更｜個人アカウントは案内なし、会社名ならAmazonビジネス | そろえ帳"><meta name="twitter:description" content="Amazonの公式ヘルプ（2026年11月5日確認）には、個人アカウントの領収書の宛名を変更する方法の案内がありません。経費精算は宛名なしで足りるか経理に確認し、会社名入りの請求書が要るなら、これからの注文はAmazonビジネス（登録無料）で買う方法があります。"><meta name="twitter:image" content="https://soroecho.com/og/amazon-ryoushuusho-atena-henkou.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"Amazonの領収書の宛名変更｜個人アカウントは案内なし、会社名ならAmazonビジネス","item":"https://soroecho.com/articles/amazon-ryoushuusho-atena-henkou/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Amazonの領収書の宛名変更｜個人アカウントは案内なし、会社名ならAmazonビジネス","description":"Amazonの公式ヘルプ（2026年11月5日確認）には、個人アカウントの領収書の宛名を変更する方法の案内がありません。経費精算は宛名なしで足りるか経理に確認し、会社名入りの請求書が要るなら、これからの注文はAmazonビジネス（登録無料）で買う方法があります。","url":"https://soroecho.com/articles/amazon-ryoushuusho-atena-henkou/","datePublished":"2026-11-06T00:00:00.000Z","dateModified":"2026-11-06T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/amazon-ryoushuusho-atena-henkou/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Amazonの個人アカウントの領収書の宛名は、変更できますか？","acceptedAnswer":{"@type":"Answer","text":"Amazonの公式ヘルプ（2026年11月5日確認）には、個人アカウントの領収書の宛名を変更する方法も、宛名欄の扱いの説明も書かれていません。そのため、変えられるとも変えられないとも言えません。印刷する前に、領収書／購入明細書の画面で宛名にあたる箇所の表示を確かめ、会社の経費精算に使うなら経理に確認してください。"}},{"@type":"Question","name":"宛名のない領収書は、経費精算で使えますか？","acceptedAnswer":{"@type":"Answer","text":"受け付けるかどうかは、会社の経理のルールで決まります。Amazonのヘルプは、注文履歴の印刷できる支払い明細書を、経費報告書に使える正式な適格請求書（または区分記載請求書）と案内しています。国税庁は、小売業などが交付する簡易インボイスは宛名を省略してよく、宛名がなくても不備とは限らないと説明しています。経理に、宛名なしで精算できるかを確かめてください。"}},{"@type":"Question","name":"会社名が入った請求書が欲しいときは、どうすればよいですか？","acceptedAnswer":{"@type":"Answer","text":"Amazonビジネスの適格請求書には、受取人の会社名または団体名を含めることができます（含まれていない場合は適格簡易請求書として使える、とヘルプにあります）。会社名と請求先住所の修正はメールで依頼でき、今後の注文はビジネスアカウントの設定で詳細を更新します。ただし、PDF形式の適格請求書の再発行には対応していません。"}},{"@type":"Question","name":"印刷した領収書に、会社名を手書きしてもよいですか？","acceptedAnswer":{"@type":"Answer","text":"Amazonの公式ヘルプには、手書きについての記載がありません。国税庁のQ&A（問92）は、受け取った適格請求書の誤りを買手が自分で追記・修正することは原則できないとしていますが、宛名の手書きにあてはまるかは確認できませんでした。会社の経理か税理士に確認してください。事実と違う名前は書かないでください。"}},{"@type":"Question","name":"過去に個人アカウントで買った注文を、ビジネスアカウントに移せますか？","acceptedAnswer":{"@type":"Answer","text":"公式ヘルプでは確認できませんでした。確認できたのは、会社名と請求先住所の修正をメールで依頼できること、今後の注文に正しい適格請求書を出すにはビジネスアカウントの設定で詳細を更新する必要があること、PDFの再発行には対応しないことです。切り替えるなら、これからの注文からです。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>Amazonの領収書の宛名変更｜個人アカウントは案内なし、会社名ならAmazonビジネス</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec7an3in-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient></defs><rect width="400" height="225" fill="url(#ec7an3in-g)" data-astro-cid-yuatfsof></rect><circle cx="344" cy="43" r="61.949999999999996" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="344" cy="43" r="97.35000000000001" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="344" cy="43" r="132.75" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="344" cy="43" r="168.15" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="344" cy="43" r="177" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>amazon</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>領収書</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>宛名</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--amazon-business">Amazonビジネス実務</span><h1 data-astro-cid-sgg5joot>Amazonの領収書の宛名変更｜個人アカウントは案内なし、会社名ならAmazonビジネス</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-11-06T00:00:00.000Z" data-astro-cid-sgg5joot>2026年11月6日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約13分</p><p class="cta-inline">会社名の入った請求書が要るなら、これからの注文はAmazonビジネスの登録（無料）から<a href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">登録ページを見る（公式）</a></p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論個人アカウントの領収書の宛名を変える方法は公式ヘルプに書かれていない" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：個人アカウントの領収書の宛名を変える方法は、公式ヘルプに書かれていない</a></li><li data-astro-cid-sgg5joot><a href="#印刷する前に自分の画面で宛名にあたる箇所を確かめる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>印刷する前に、自分の画面で宛名にあたる箇所を確かめる</a></li><li data-astro-cid-sgg5joot><a href="#会社の経費精算で使うとき宛名のない領収書で足りるかは経理が決める" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>会社の経費精算で使うとき：宛名のない領収書で足りるかは経理が決める</a></li><li data-astro-cid-sgg5joot><a href="#印刷して宛名を手書きする前に知っておきたいこと" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>印刷して宛名を手書きする前に知っておきたいこと</a></li><li data-astro-cid-sgg5joot><a href="#自分の事業で使うときこれからの注文はamazonビジネスで会社名を入れる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>自分の事業で使うとき：これからの注文はAmazonビジネスで会社名を入れる</a></li><li data-astro-cid-sgg5joot><a href="#発行印刷まわりの疑問スマホ時期出品者社判郵送" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>発行・印刷まわりの疑問：スマホ、時期、出品者、社判、郵送</a></li><li data-astro-cid-sgg5joot><a href="#電子データで受け取った領収書印刷して手書きしてもデータの保存の代わりにはならない" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>電子データで受け取った領収書：印刷して手書きしても、データの保存の代わりにはならない</a></li><li data-astro-cid-sgg5joot><a href="#宛名で困らないためのチェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>宛名で困らないためのチェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#よくある質問とまとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>よくある質問とまとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論個人アカウントの領収書の宛名を変える方法は公式ヘルプに書かれていない">結論：個人アカウントの領収書の宛名を変える方法は、公式ヘルプに書かれていない</h2>
+<p>Amazonの公式ヘルプ（2026年11月5日確認）には、個人アカウントの領収書の宛名を変更する方法は書かれていません。宛名欄をどう扱うかの説明も、領収書に関するヘルプのページには見当たりませんでした。</p>
+<p>そのため、この記事は「変えられる」とも「変えられない」とも書きません。宛名が必要な理由ごとに、公式ヘルプと国税庁の情報で確かめられる範囲と、次の動き方を整理します。</p>
+<table>
+<thead>
+<tr>
+<th>宛名が必要な理由</th>
+<th>公式で確かめられること</th>
+<th>次の動き</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>会社の経費精算（従業員）</td>
+<td>Amazon：印刷できる支払い明細書は、経費報告書に使える正式な適格請求書（または区分記載請求書）。国税庁：小売業などは宛名を省略した簡易インボイスを交付できる</td>
+<td>宛名のない領収書で精算できるか、経理に確認する</td>
+</tr>
+<tr>
+<td>自分の事業の経費（個人事業主・社長）</td>
+<td>同上。Amazonビジネスの適格請求書には、受取人の会社名または団体名を含めることができる</td>
+<td>会社名入りの書類が要るなら、これからの注文はAmazonビジネスで買う</td>
+</tr>
+<tr>
+<td>すでに出た書類の会社名を直したい</td>
+<td>個人アカウントは案内なし。Amazonビジネスは会社名と請求先住所の修正をメールで依頼できるが、PDFは再発行しない</td>
+<td>個人アカウントはまず画面を確かめる。ビジネスは設定を整えて次の注文から</td>
+</tr>
+</tbody>
+</table>
+<p>この記事で分かることは次のとおりです。</p>
+<ul>
+<li>印刷する前に、自分の画面で確かめること</li>
+<li>会社の経費精算で、宛名のない領収書が使えるかを決めるのは誰か</li>
+<li>印刷した領収書に手書きで書き足す前に知っておきたいこと</li>
+<li>Amazonビジネスで会社名を入れる方法と、修正でできないこと</li>
+<li>スマホでの印刷、発行の時期、出品者の商品、社判、郵送の扱い</li>
+<li>電子データで受け取った領収書の保存</li>
+</ul>
+<p>情報の確認日は2026年11月5日です。画面や制度は変わることがあるため、手続きの前に公式の最新の案内を確認してください。</p>
+<h2 id="印刷する前に自分の画面で宛名にあたる箇所を確かめる">印刷する前に、自分の画面で宛名にあたる箇所を確かめる</h2>
+<p>Amazonの公式ヘルプ「領収書の印刷」によると、領収書は注文履歴から確認、印刷できます。手順は次のとおりです。</p>
+<ol>
+<li>注文履歴にアクセスする</li>
+<li>該当の注文の「領収書等」を選ぶ</li>
+<li>「領収書／購入明細書」を選ぶ</li>
+<li>ブラウザの印刷オプションを選んで、印刷する</li>
+</ol>
+<p>確認した個人向けの領収書のヘルプ（印刷、発行可否と記載内容、発行のタイミング、インボイス）には、「宛名」という記載がありませんでした。</p>
+<p>「領収書の発行可否、記載内容について」のページに書かれているのは、出品者名が発行者として印刷されること、社判を押せないこと、支払い方法ごとの発行元などです。宛名の説明はありません。</p>
+<p>検索すると、宛名の扱いについて説明が分かれているページがあります。画面は変わることがあり、公式ヘルプでは確かめられないため、この記事ではどれも事実としては書きません。</p>
+<p>そこで、印刷する前に、開いた領収書／購入明細書の画面で、宛名にあたる箇所に何が表示されているかを自分の目で確かめてください。結果によって、次の動き方が変わります。</p>
+<table>
+<thead>
+<tr>
+<th>画面で確かめた結果</th>
+<th>次の動き</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>宛名にあたる箇所が見当たらない、または空いている</td>
+<td>宛名なしで受け付けてもらえるか、経理に確認する（下の「会社の経費精算で使うとき」）</td>
+</tr>
+<tr>
+<td>自分の個人名が表示されている</td>
+<td>会社の経費なら、そのことを経理に伝える（国税庁の扱いは、同じ見出しの下で説明します）</td>
+</tr>
+<tr>
+<td>必要な名前がすでに表示されている</td>
+<td>そのまま印刷して使う</td>
+</tr>
+</tbody>
+</table>
+<p>印刷の細かい手順や、アプリでは印刷できない点は、<a href="/articles/amazon-ryoushuusho-dashikata/">Amazonの領収書の出し方</a>にまとめています。</p>
+<h2 id="会社の経費精算で使うとき宛名のない領収書で足りるかは経理が決める">会社の経費精算で使うとき：宛名のない領収書で足りるかは経理が決める</h2>
+<h3 id="amazonは支払い明細書を経費報告書に使える書類と案内している">Amazonは、支払い明細書を経費報告書に使える書類と案内している</h3>
+<p>Amazonの公式ヘルプ「領収書の発行可否、記載内容について」には、「注文履歴に表示される印刷可能な支払い明細書は、経費報告書に使用できる正式な適格請求書（または区分記載請求書）です」と書かれています。</p>
+<p>このページは、宛名の有無や、宛名に何が表示されるかには触れていません。</p>
+<h3 id="国税庁小売業などは宛名を省略した簡易インボイスを交付できる">国税庁：小売業などは宛名を省略した簡易インボイスを交付できる</h3>
+<p><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/invoice_about.htm">国税庁の「インボイス制度について」</a>には、不特定多数の者に対して販売等を行う小売業、飲食店業、タクシー業では、記載事項の一部を省略した簡易インボイスを交付できるとあります。</p>
+<p>簡易インボイスについて、同じページには「宛先は省略してOK」とあり、「受け取ったインボイスに宛名等の記載がなくても、不備ではなく簡易インボイスである場合がありますのでご注意ください」とも書かれています。</p>
+<p>また、書類の名称は問われず、所定の事項が記載されていれば、領収書や納品書でもインボイスになると説明されています。</p>
+<p><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/qa_01.htm">国税庁のQ&amp;A</a>（令和8年5月改訂）の問24と問58で、適格請求書と適格簡易請求書の違いを整理すると、次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>適格請求書</th>
+<th>適格簡易請求書</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>書類の交付を受ける事業者の氏名または名称（宛名）</td>
+<td>記載する</td>
+<td>記載は不要</td>
+</tr>
+<tr>
+<td>税率ごとの消費税額等と適用税率</td>
+<td>両方を記載する</td>
+<td>どちらか一方でよい</td>
+</tr>
+<tr>
+<td>交付できる事業者</td>
+<td>適格請求書発行事業者</td>
+<td>適格請求書発行事業者のうち、小売業、飲食店業、写真業、旅行業、タクシー業などの事業を行う者</td>
+</tr>
+</tbody>
+</table>
+<p>問24には、小売業として行う課税資産の譲渡等は「その形態を問わず」適格簡易請求書を交付できる、とも書かれています。</p>
+<p>Amazonの領収書が簡易インボイスにあたるのかは、個人向けのヘルプでは確認できませんでした。</p>
+<p>Amazonビジネスの適格請求書のヘルプには「適格請求書に受取人の会社名または団体名が含まれていない場合は、そのドキュメントを適格簡易請求書として使用できます」とありますが、これはビジネスアカウントの書類についての説明です。</p>
+<p>インボイスの見分け方は、<a href="/articles/amazon-ryoushuusho-tekikaku-seikyuusho/">Amazonのインボイス対応の見分け方</a>で整理しています。</p>
+<h3 id="受け付けるかどうかは会社の経理のルール次第">受け付けるかどうかは、会社の経理のルール次第</h3>
+<p>簡易インボイスで宛名を省略してよいことと、会社の経費精算が宛名のない領収書を受け付けるかは、別の話です。後者は会社の経理のルールで決まります。</p>
+<p>また、国税庁のここまでの説明は、消費税のインボイスの記載事項についてです。所得税や法人税の経費として、領収書に宛名が必要かどうかは、今回確認した国税庁のページでは確認できませんでした。</p>
+<p>経理には、次の3つを確かめてください。</p>
+<ol>
+<li>宛名のない領収書（支払い明細書）で精算できるか</li>
+<li>宛名が必要なら、会社名、部署名、個人名のどれを求めているか</li>
+<li>印刷した領収書に、宛名を手書きで書き足してよいか</li>
+</ol>
+<p>聞くときの文面の例です。</p>
+<blockquote>
+<p>Amazonの個人アカウントで買った備品の領収書（支払い明細書）を、経費精算に出したいです。宛名に会社名が入っていない状態でも、受け付けてもらえるでしょうか。宛名が必要な場合は、何と書けばよいか教えてください。</p>
+</blockquote>
+<p>経理担当者がいない個人事業主やひとり社長は、宛名のない書類で足りるかを、税理士に聞くか、国税庁のインボイス制度のページに案内されている消費税軽減税率・インボイスコールセンターなどの相談方法で確かめます。</p>
+<h3 id="宛名に従業員の名前が入っているとき">宛名に従業員の名前が入っているとき</h3>
+<p>国税庁のQ&amp;Aの問94－2は、従業員が事業に必要な消耗品を自分で買い、受け取った適格簡易請求書の宛名に従業員名が書かれている場合を扱っています。</p>
+<p>宛名が従業員名のままだと、そのまま保存しても会社は仕入税額控除を行えないのが原則です。ただし、その従業員が会社に所属していることが分かる名簿などを併せて保存していれば、差し支えないとされています。</p>
+<p>名簿などがなく従業員を特定できない場合は、従業員が作成した立替金精算書の交付を受けて保存することが必要とされています。</p>
+<p>これは会社が消費税の仕入税額控除を受けるための扱いです。自分の領収書をどう処理するかは、経理担当者か税理士の判断になります。</p>
+<h2 id="印刷して宛名を手書きする前に知っておきたいこと">印刷して宛名を手書きする前に知っておきたいこと</h2>
+<p>印刷した領収書に会社名を手書きで書き足してよいか、という疑問があります。Amazonの公式ヘルプには、この方法についての記載がありません。</p>
+<p>国税庁のQ&amp;Aの問92には、買手である課税事業者が交付を受けた適格請求書または適格簡易請求書の記載事項に誤りがあったときの対応が書かれています。売手に修正した書類の交付を求めるのが原則で、買手が自分で追記や修正を行うことは原則としてできません。</p>
+<p>宛名の記載がないこと自体は、簡易インボイスなら誤りとは限りません（上で説明したとおりです）。問92が宛名の手書きにそのままあてはまるのかは、国税庁のQ&amp;Aからは判断できませんでした。</p>
+<p>手書きを認めるかどうかは、会社の経理のルールか、税理士の判断になります。</p>
+<p>書き足す場合も、実際の購入者と違う名前や、事実と違う内容を書き加えることはしないでください。</p>
+<h2 id="自分の事業で使うときこれからの注文はamazonビジネスで会社名を入れる">自分の事業で使うとき：これからの注文はAmazonビジネスで会社名を入れる</h2>
+<p>会社名（または団体名）の入った書類がこれからも繰り返し必要なら、個人アカウントの領収書を直そうとするより、買うアカウントを切り替える方法があります。</p>
+<p>Amazonの公式ヘルプ「Amazonビジネスの適格請求書の発行について」によると、Amazonビジネスのお客様は、Amazon、または登録番号を持つ出品者の商品を買うと適格請求書を受け取れます。</p>
+<p>この適格請求書には、受取人の会社名または団体名を含めることができます。含まれていない場合は、そのドキュメントを適格簡易請求書として使用できる、ともヘルプに書かれています。</p>
+<aside class="cta-box cta-box--subtle"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">Amazonビジネス</p><h3 class="cta-box__title">会社名の入った請求書が要るなら、これからの注文はAmazonビジネスの登録（無料）から</h3><p class="cta-box__body">Amazonビジネスの適格請求書には、受取人の会社名または団体名を含めることができます。会社名と請求先住所の修正はメールで依頼でき、今後の注文に正しい請求書を出すには、ビジネスアカウントの設定で詳細を更新します。登録は無料（公式サイトの表記）で、個人アカウントと切り替えて使えます。</p><a class="cta-box__button" href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">Amazonビジネスの登録ページへ（公式）</a></aside>
+<h3 id="会社名や請求先住所を直したいとき修正はメールpdfの再発行はしない">会社名や請求先住所を直したいとき：修正はメール、PDFの再発行はしない</h3>
+<p>Amazonの公式ヘルプ「適格請求書の修正」（ヘルプの分類は「ビジネスアカウントを管理する」）には、次のことが書かれています。</p>
+<ul>
+<li>Amazonはメールによる適格請求書の修正に対応するが、PDF形式による適格請求書の再発行には対応しない</li>
+<li>依頼に応じて、適格請求書の会社名と請求先住所の修正に対応する</li>
+<li>今後の注文に対して正しい適格請求書を発行するには、ビジネスアカウントの設定で詳細を更新する必要がある</li>
+</ul>
+<p>このページが示しているのは、ビジネスアカウントの手順です。個人アカウントの領収書で同じ依頼ができるかは、書かれていませんでした。</p>
+<p>登録したら、最初の注文の前に、ビジネスアカウントの設定の詳細が正しいかを確かめておくと、直す手間を減らせます。</p>
+<h3 id="個人アカウントとamazonビジネスの違い宛名まわり">個人アカウントと、Amazonビジネスの違い（宛名まわり）</h3>
+<table>
+<thead>
+<tr>
+<th>比べる点</th>
+<th>個人アカウント</th>
+<th>Amazonビジネス</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>会社名（宛名）の変更</td>
+<td>公式ヘルプでは案内を確認できなかった</td>
+<td>会社名と請求先住所の修正をメールで依頼できる</td>
+</tr>
+<tr>
+<td>発行済みPDFの再発行</td>
+<td>公式ヘルプでは確認できなかった</td>
+<td>対応しない</td>
+</tr>
+<tr>
+<td>今後の注文の適格請求書</td>
+<td>公式ヘルプでは確認できなかった</td>
+<td>ビジネスアカウントの設定で詳細を更新する必要がある</td>
+</tr>
+<tr>
+<td>書類の入手先</td>
+<td>注文履歴の「領収書等」</td>
+<td>注文履歴の「領収書等」、または購買データ</td>
+</tr>
+<tr>
+<td>書類が出る時期</td>
+<td>注文商品が発送されると表示される</td>
+<td>注文が発送されてから24時間後に入手できる</td>
+</tr>
+</tbody>
+</table>
+<h3 id="個人事業主の屋号や氏名は">個人事業主の屋号や氏名は</h3>
+<p>個人事業主の屋号や氏名が、適格請求書のどの欄にどう表示されるかは、公式ヘルプでは確認できませんでした。登録や設定の画面で入力する項目を、実際に確かめてください。</p>
+<p>登録に必要な書類は、<a href="/articles/kojin-jigyou-kaigyoutodoke-nashi-amazon-business-toroku/">Amazonビジネスの登録に必要書類は？</a>にまとめています。</p>
+<h3 id="すでに個人アカウントで買った分は">すでに個人アカウントで買った分は</h3>
+<p>個人アカウントの過去の注文を、ビジネスアカウントに移せるか、移すと書類の会社名が変わるかは、公式ヘルプでは確認できませんでした。この記事では、できるとは書きません。</p>
+<p>切り替えるなら、これからの注文からです。Amazonの公式ヘルプ「Amazonのビジネスアカウントと個人アカウントを切り替える」によると、アカウントの切り替え機能で、ビジネスアカウントと個人アカウントを行き来できます。</p>
+<p>共有デバイスでは、この機能を使わないよう勧められています。ビジネス用と個人用の購入を区別したいときは、専用のAmazonビジネスアプリが案内されています。</p>
+<p>個人アカウントとの違いは、<a href="/articles/amazon-business-kojin-chigai/">Amazonビジネスと個人アカウントの違い</a>にまとめています。</p>
+<h3 id="会社がすでにamazonビジネスを使っているとき">会社がすでにAmazonビジネスを使っているとき</h3>
+<p>Amazonの公式ヘルプ「支払い明細書や適格請求書を取得する」によると、書類を取れる範囲は役割で決まります。購買依頼者は自分が行った注文の分、グループ管理者と会計担当者はグループ内の注文、アカウント管理者はアカウントのすべての注文です。</p>
+<p>会社にAmazonビジネスのアカウントがあるなら、個人アカウントではなく、会社のアカウントで買えるかを総務や経理に聞く方法があります。</p>
+<h2 id="発行印刷まわりの疑問スマホ時期出品者社判郵送">発行・印刷まわりの疑問：スマホ、時期、出品者、社判、郵送</h2>
+<p>宛名のほかに、領収書を出すときに出てくる疑問を、Amazonの公式ヘルプ（2026年11月5日確認）の記載でまとめます。</p>
+<table>
+<thead>
+<tr>
+<th>疑問</th>
+<th>公式ヘルプの答え</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>スマホで印刷できますか</td>
+<td>Amazonショッピングアプリからは、領収書／購入明細書を印刷できません。モバイルウェブサイトなら、iOSはSafariの共有からプリント、AndroidはChromeの共有から印刷します。一部の注文は対象外で、その場合はパソコンのサイトの注文履歴から印刷します</td>
+</tr>
+<tr>
+<td>いつから印刷できますか</td>
+<td>注文商品が発送されると、領収書等が注文履歴に表示されます。発送されるまでは、閲覧も印刷もできません</td>
+</tr>
+<tr>
+<td>出品者の商品の領収書は誰が発行しますか</td>
+<td>出品者名が、領収書の発行者として印刷されます。適格請求書の登録番号の有無は、Amazonビジネスのビジネスアカウントを除き、出品者に直接問い合わせる必要があります</td>
+</tr>
+<tr>
+<td>社判は押してもらえますか</td>
+<td>Amazon.co.jpでも出品者でも、社判の捺印は承っていません</td>
+</tr>
+<tr>
+<td>紙の領収書を郵送してもらえますか</td>
+<td>セキュリティ上の理由で、Amazonでは領収書の印刷と郵送を承っていません。注文履歴のリンクから、何度でも再発行できます</td>
+</tr>
+<tr>
+<td>コンビニ払いのときの領収書は</td>
+<td>コンビニ払い、ATM払い、ネットバンキング払い、電子マネー払いは、各支払い窓口が発行する受領書等を使います。購入明細書と適格請求書は注文履歴で確認できます</td>
+</tr>
+</tbody>
+</table>
+<p>宛名のように公式ヘルプに書かれていないことを確実に知りたいときは、Amazonのカスタマーサービスに問い合わせて確かめてください。</p>
+<h2 id="電子データで受け取った領収書印刷して手書きしてもデータの保存の代わりにはならない">電子データで受け取った領収書：印刷して手書きしても、データの保存の代わりにはならない</h2>
+<p>Amazonの領収書をPDFなどのデータで保存したときは、国税庁の電子帳簿保存法のルールも関わります。<a href="https://www.nta.go.jp/law/joho-zeikaishaku/sonota/jirei/4-3.htm">国税庁の電子帳簿保存法一問一答</a>の【電子取引関係】（令和8年7月）には、次のことが書かれています。</p>
+<ul>
+<li>問5：インターネットのホームページからダウンロードした領収書等のデータ（PDFファイル等）や、ホームページ上に表示される領収書等のスクリーンショットを使う場合も、電子取引にあたる。取引情報のデータを所定の方法で保存しなければならず、出力した書面は保存書類として取り扱わない</li>
+<li>問30・問31：データを要件に沿って保存したうえで、書面に出力して、ほかの書類と一緒に整理することは問題ない</li>
+<li>問12：従業員が会社の経費を立て替え、領収書を電子データで受け取った場合は、会社としての電子取引にあたる。会社として従業員から集約して保存・管理することが望ましい</li>
+</ul>
+<p>出力した書面は保存書類として扱われないため、印刷した紙に手書きで書き足しても、元の電子データを残す必要があることは変わりません。データの保存には、改ざんを防ぐ措置や、検索できる状態にすることなどの要件があります（問30）。</p>
+<p>なお、消費税の仕入税額控除については、電子インボイスを整然とした形式および明瞭な状態で出力した書面を保存する場合も、適用を受けられるとされています（問5）。</p>
+<p>保存の義務があるのは、所得税（源泉徴収に係るものを除く）と法人税の保存義務者で、個人事業者や法人がこれにあたります（問1）。</p>
+<h2 id="宛名で困らないためのチェックリスト">宛名で困らないためのチェックリスト</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 領収書／購入明細書を開き、印刷する前に、宛名にあたる箇所の表示を確かめた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 注文は発送済みか確かめた（発送前は表示されない）</li>
+<li class="task-list-item"><input type="checkbox" disabled> パソコンか、スマホのブラウザで操作している（アプリでは印刷できない）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 経理に、宛名のない書類で精算できるかを確かめた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 手書きで書き足すなら、会社か税理士に認められるかを確かめた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 書き足す内容は、事実と同じものだけにした</li>
+<li class="task-list-item"><input type="checkbox" disabled> 会社名入りの書類がこれからも要るなら、ビジネスアカウントの設定の詳細を確かめた</li>
+<li class="task-list-item"><input type="checkbox" disabled> PDFなどの電子データは、消さずに保存している</li>
+</ul>
+<h2 id="よくある質問とまとめ">よくある質問とまとめ</h2>
+<h3 id="請求書の宛名を変えたいときは">「請求書」の宛名を変えたいときは</h3>
+<p>個人アカウントの注文履歴の「領収書等」から開ける書類には、「領収書／購入明細書」と、条件に合う注文の「明細書／適格請求書」があります。</p>
+<p>請求書払い（Amazonビジネスの支払い方法）の請求書は、ビジネスアカウントの設定ページの請求書情報からダウンロードでき、適格請求書として使えます。</p>
+<p>どの書類の宛名も、個人アカウントで変更する方法は公式ヘルプで確認できませんでした。会社名と請求先住所の修正を依頼できると書かれているのは、Amazonビジネスの適格請求書です。</p>
+<h3 id="まとめ">まとめ</h3>
+<p>Amazonの公式ヘルプ（2026年11月5日確認）には、個人アカウントの領収書の宛名を変更する方法も、宛名欄の扱いの説明も書かれていませんでした。印刷する前に自分の画面で宛名にあたる箇所を確かめ、会社の経費精算で使うなら、宛名のない書類で受け付けるか経理に確認します。</p>
+<p>Amazonは、注文履歴の支払い明細書を経費報告書に使える正式な適格請求書と案内しています。国税庁は、小売業などの簡易インボイスで宛名を省略してよいとしています。手書きで書き足してよいかは、会社の経理か税理士の判断で、事実と違う名前は書かないでください。</p>
+<p>自分の事業で会社名の入った書類が要るなら、これからの注文をAmazonビジネスで買う方法があります。登録は無料です（公式サイトの表記）。会社名と請求先住所の修正はメールで依頼できますが、PDFの再発行はしません。</p>
+<p>過去の注文の移し替えは、公式ヘルプでは確認できませんでした。税務の個別の判断は、税理士または税務署に相談してください。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Amazonの個人アカウントの領収書の宛名は、変更できますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>Amazonの公式ヘルプ（2026年11月5日確認）には、個人アカウントの領収書の宛名を変更する方法も、宛名欄の扱いの説明も書かれていません。そのため、変えられるとも変えられないとも言えません。印刷する前に、領収書／購入明細書の画面で宛名にあたる箇所の表示を確かめ、会社の経費精算に使うなら経理に確認してください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>宛名のない領収書は、経費精算で使えますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>受け付けるかどうかは、会社の経理のルールで決まります。Amazonのヘルプは、注文履歴の印刷できる支払い明細書を、経費報告書に使える正式な適格請求書（または区分記載請求書）と案内しています。国税庁は、小売業などが交付する簡易インボイスは宛名を省略してよく、宛名がなくても不備とは限らないと説明しています。経理に、宛名なしで精算できるかを確かめてください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>会社名が入った請求書が欲しいときは、どうすればよいですか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>Amazonビジネスの適格請求書には、受取人の会社名または団体名を含めることができます（含まれていない場合は適格簡易請求書として使える、とヘルプにあります）。会社名と請求先住所の修正はメールで依頼でき、今後の注文はビジネスアカウントの設定で詳細を更新します。ただし、PDF形式の適格請求書の再発行には対応していません。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>印刷した領収書に、会社名を手書きしてもよいですか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>Amazonの公式ヘルプには、手書きについての記載がありません。国税庁のQ&amp;A（問92）は、受け取った適格請求書の誤りを買手が自分で追記・修正することは原則できないとしていますが、宛名の手書きにあてはまるかは確認できませんでした。会社の経理か税理士に確認してください。事実と違う名前は書かないでください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>過去に個人アカウントで買った注文を、ビジネスアカウントに移せますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式ヘルプでは確認できませんでした。確認できたのは、会社名と請求先住所の修正をメールで依頼できること、今後の注文に正しい適格請求書を出すにはビジネスアカウントの設定で詳細を更新する必要があること、PDFの再発行には対応しないことです。切り替えるなら、これからの注文からです。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=GRPUHK7RCNVRBURD" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「領収書の印刷」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-05）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=GFF6QTXBZFE7PAKY" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「領収書の発行可否、記載内容について」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-05）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=GKUNKPD8Y7BJ37FQ" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「領収書等が発行されるタイミングについて」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-05）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=TgeQoI2TC9jEOh0mQf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「インボイス（適格請求書）について」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-05）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=TqfyqCFhWbzAUh2Th5" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「Amazonビジネスの適格請求書の発行について」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-05）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=TRpfnPQH98IDU2kkAN" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「適格請求書の修正」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-05）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=202119460" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「支払い明細書や適格請求書を取得する」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-05）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=TCthycvaJ6zmE5NlON" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「Amazonのビジネスアカウントと個人アカウントを切り替える」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-05）</span></li><li data-astro-cid-sgg5joot><a href="https://business.amazon.co.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス公式サイト</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-05）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/invoice_about.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 インボイス制度について</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-05）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/qa_01.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 消費税の仕入税額控除制度における適格請求書等保存方式に関するQ＆A（令和8年5月改訂）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-05）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/law/joho-zeikaishaku/sonota/jirei/4-3.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 電子帳簿保存法一問一答（電子取引関係、令和8年7月）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-05）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/amazon-business-mitsumorisho-hakkou/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1oukbk0-g" x1="0" y1="0" x2="1" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1oukbk0-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1oukbk0-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1oukbk0-p)" data-astro-cid-yuatfsof></rect><circle cx="366" cy="57" r="153" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Amazon</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>見積書</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>出し方</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--amazon-business">Amazonビジネス実務</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>Amazonの見積書の出し方｜カートからPDFで保存する手順（Amazonビジネス・登録無料）</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>Amazonで見積書が必要なときは、登録無料のAmazonビジネスを使います。注文前はカートから参考見積書、注文後は注文履歴から見積書をPDFで保存でき、稟議や経費精算に使えます。個人アカウントしかない場合の考え方と、配送料が載らない・ダウンロードできないときの注意点もまとめました。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-06T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月6日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約12分</p></div></a><a class="card article-card" href="/articles/kojin-jigyou-kaigyoutodoke-nashi-amazon-business-toroku/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1ptehj0-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1ptehj0-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1ptehj0-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1ptehj0-p)" data-astro-cid-yuatfsof></rect><circle cx="363" cy="90" r="176" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>個人事業主</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>開業届なし</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Amazonビジネス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--amazon-business">Amazonビジネス実務</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>Amazonビジネスの登録に必要書類は？開業届なしの個人事業主が用意するもの一覧</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>個人事業主がAmazonビジネスに登録するときは、確認書類を1点提出します。開業届がなくても、過去2年以内の確定申告書B・収支内訳書、インボイスの登録通知書などで代わりになります。公式ヘルプの書類一覧と提出時の注意点、登録手順、屋号の扱いを整理しました。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-06T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月6日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/amazon-business/" data-astro-cid-sgg5joot>Amazonビジネス実務の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/receipts/" data-astro-cid-sgg5joot>サービス別 領収書・インボイス対応一覧を見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/business-prime/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 L4 4"></path><path d="M4 20 L21 20"></path><path d="M7 20 L7 14"></path><path d="M11 20 L11 10"></path><path d="M15 20 L15 15"></path><path d="M19 20 L19 7"></path><path d="M5 16 L20 8"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>Business Prime 損益分岐計算</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>注文回数と送料を入れると、プライムビジネス（旧Businessプライム）の元が取れる回数がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/amazon-business-check/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 9 l2 2 l3.5 -3.5"></path><path d="M8 15 h8"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>Amazonビジネスが必要か判定</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>5つの質問に答えるだけで、Amazonビジネスが「要る」「今は要らない」「どちらでも」のどれかがわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

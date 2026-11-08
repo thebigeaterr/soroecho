@@ -1,0 +1,281 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Amazonの領収書が表示されない・出ない時｜原因の早見表と、「注文の詳細」しか開かない時の確認順 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="Amazonの領収書が出ない原因を、公式ヘルプで確かめられる未発送・支払い方法・アプリ・スマホの対象外の4つと、PCで「注文の詳細」しか開かない利用者の報告に分けて整理しました。症状別の早見表と、カスタマーサービスに伝える4点の文例つきです。"><link rel="canonical" href="https://soroecho.com/articles/amazon-ryoushuusho-hyouji-sarenai/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="Amazonの領収書が表示されない・出ない時｜原因の早見表と、「注文の詳細」しか開かない時の確認順 | そろえ帳"><meta property="og:description" content="Amazonの領収書が出ない原因を、公式ヘルプで確かめられる未発送・支払い方法・アプリ・スマホの対象外の4つと、PCで「注文の詳細」しか開かない利用者の報告に分けて整理しました。症状別の早見表と、カスタマーサービスに伝える4点の文例つきです。"><meta property="og:url" content="https://soroecho.com/articles/amazon-ryoushuusho-hyouji-sarenai/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/amazon-ryoushuusho-hyouji-sarenai.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Amazonの領収書が表示されない・出ない時｜原因の早見表と、「注文の詳細」しか開かない時の確認順 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Amazonの領収書が表示されない・出ない時｜原因の早見表と、「注文の詳細」しか開かない時の確認順 | そろえ帳"><meta name="twitter:description" content="Amazonの領収書が出ない原因を、公式ヘルプで確かめられる未発送・支払い方法・アプリ・スマホの対象外の4つと、PCで「注文の詳細」しか開かない利用者の報告に分けて整理しました。症状別の早見表と、カスタマーサービスに伝える4点の文例つきです。"><meta name="twitter:image" content="https://soroecho.com/og/amazon-ryoushuusho-hyouji-sarenai.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"Amazonの領収書が表示されない・出ない時｜原因の早見表と、「注文の詳細」しか開かない時の確認順","item":"https://soroecho.com/articles/amazon-ryoushuusho-hyouji-sarenai/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Amazonの領収書が表示されない・出ない時｜原因の早見表と、「注文の詳細」しか開かない時の確認順","description":"Amazonの領収書が出ない原因を、公式ヘルプで確かめられる未発送・支払い方法・アプリ・スマホの対象外の4つと、PCで「注文の詳細」しか開かない利用者の報告に分けて整理しました。症状別の早見表と、カスタマーサービスに伝える4点の文例つきです。","url":"https://soroecho.com/articles/amazon-ryoushuusho-hyouji-sarenai/","datePublished":"2026-11-08T00:00:00.000Z","dateModified":"2026-11-08T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/amazon-ryoushuusho-hyouji-sarenai/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Amazonで領収書が出ない・表示されないのは、なぜですか？","acceptedAnswer":{"@type":"Answer","text":"公式ヘルプ（2026年11月8日確認）から確かめられる理由は4つです。商品が未発送（発送されるまで領収書等は閲覧・印刷できない）、支払い方法がコンビニ払い・ATM払い・ネットバンキング払い・電子マネー払い（Amazonは領収書を発行せず、各支払い窓口の受領書等を使う）、アプリで操作している（アプリでは印刷できない）、スマホのブラウザで開いたがその注文が印刷の対象外、です。このほかに、PCで「注文の詳細」しか開かないという利用者の報告が2025年6月ごろから続いていますが、公式ヘルプには記載が見つかりませんでした。"}},{"@type":"Question","name":"「領収書等」を押すと「注文の詳細」しか開かないのは、仕様変更ですか？","acceptedAnswer":{"@type":"Answer","text":"どちらとも言えません。確認した公式ヘルプ8ページ（2026年11月8日）には、その画面が開く説明も、仕様変更や不具合のお知らせも見つかりませんでした。「スマホのブラウザでは従来の領収書が出た」「サポートから注文の詳細が領収書の代わりになると案内された」などの報告がありますが、公式の説明ではなく、同じ結果になるとは限りません。試す順は症状2の節にまとめています。"}},{"@type":"Question","name":"コンビニ払いやATM払いの注文でも、領収書は出せますか？","acceptedAnswer":{"@type":"Answer","text":"公式ヘルプでは、コンビニ払い・ATM払い・ネットバンキング払い・電子マネー払いの注文について、Amazonでは領収書を発行しないとされています。各支払い窓口から発行される受領書等を使い、購入明細書とインボイス（適格請求書）はAmazon.co.jpの注文履歴で確認できます。経理がその書類で受け付けるかは、会社が決めます。"}},{"@type":"Question","name":"Amazonの領収書がスマホで見つからない・印刷できないのは、なぜですか？","acceptedAnswer":{"@type":"Answer","text":"公式ヘルプは、Amazonショッピングアプリからは領収書／購入明細書を印刷できないとしています。iPhoneはSafari、AndroidはChromeアプリでモバイルウェブサイトの注文履歴を開きます。モバイルウェブサイトにも一部対象外の注文があり、その場合はPCサイトの注文履歴から印刷します。"}},{"@type":"Question","name":"領収書が出ないとき、Amazonに紙の領収書を郵送してもらえますか？","acceptedAnswer":{"@type":"Answer","text":"できません。公式ヘルプには、セキュリティ上の理由で、Amazonでは領収書の印刷および郵送を承っていない、とあります。領収書／購入明細書のリンクからは何度でも再発行できます。出ない注文は、カスタマーサービスに注文番号などを伝えて相談します。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>Amazonの領収書が表示されない・出ない時｜原因の早見表と、「注文の詳細」しか開かない時の確認順</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1lykhy2-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1lykhy2-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ec1lykhy2-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1lykhy2-p)" data-astro-cid-yuatfsof></rect><circle cx="369" cy="103" r="155" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>amazon</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>領収書</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>表示されない</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--amazon-business">Amazonビジネス実務</span><h1 data-astro-cid-sgg5joot>Amazonの領収書が表示されない・出ない時｜原因の早見表と、「注文の詳細」しか開かない時の確認順</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-11-08T00:00:00.000Z" data-astro-cid-sgg5joot>2026年11月8日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約11分</p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論発送済みかアプリかを確かめ早見表で自分の症状の行を探す" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：「発送済みか」「アプリか」を確かめ、早見表で自分の症状の行を探す</a></li><li data-astro-cid-sgg5joot><a href="#最初に確かめる2つ発送済みかアプリで操作していないか" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>最初に確かめる2つ：発送済みか、アプリで操作していないか</a></li><li data-astro-cid-sgg5joot><a href="#症状1領収書等がない領収書にあたる書類がないとき" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>症状1：「領収書等」がない、領収書にあたる書類がないとき</a></li><li data-astro-cid-sgg5joot><a href="#症状2pcで注文の詳細印刷可能な注文概要しか開かないのは仕様変更不具合" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>症状2：PCで「注文の詳細」「印刷可能な注文概要」しか開かないのは、仕様変更？不具合？</a></li><li data-astro-cid-sgg5joot><a href="#症状3書類は開くのに印刷pdf保存ができないときは" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>症状3：書類は開くのに、印刷・PDF保存ができないときは？</a></li><li data-astro-cid-sgg5joot><a href="#症状4同じ時期の注文のうちこの1件だけ領収書が出ないときは" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>症状4：同じ時期の注文のうち、この1件だけ領収書が出ないときは？</a></li><li data-astro-cid-sgg5joot><a href="#カスタマーサービスに伝える4点と文例" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>カスタマーサービスに伝える4点と文例</a></li><li data-astro-cid-sgg5joot><a href="#チェックリストとまとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>チェックリストとまとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論発送済みかアプリかを確かめ早見表で自分の症状の行を探す">結論：「発送済みか」「アプリか」を確かめ、早見表で自分の症状の行を探す</h2>
+<p>Amazonの公式ヘルプ（2026年11月8日確認）から確かめられる、領収書が出ない・印刷できない理由は、未発送、支払い方法（コンビニ払い・ATM払い・ネットバンキング払い・電子マネー払い）、アプリでの操作、スマホのブラウザで対象外の注文、の4つです。</p>
+<p>このほかに、PCで「領収書等」を押しても「注文の詳細」や「印刷可能な注文概要」しか開かない、という利用者の報告が2025年6月ごろから続いています。公式ヘルプには、この件の記載が見つかりませんでした。</p>
+<p>下の早見表で自分の症状の行を探し、「最初の一手」から試します。決まらないときは、上の行から順に当てはめます。それでも出ないときは、カスタマーサービスに4点（注文番号・支払い方法・端末とブラウザ・表示された画面の名前）を伝えます。</p>
+<table>
+<thead>
+<tr>
+<th>症状</th>
+<th>考えられる原因</th>
+<th>最初の一手</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>買ったばかりで「領収書等」が見当たらない</td>
+<td>未発送。発送までは閲覧・印刷できない（公式）</td>
+<td>発送を待つ。Amazonビジネスは発送の24時間後から（症状1）</td>
+</tr>
+<tr>
+<td>支払いがコンビニ・ATM・ネットバンキング・電子マネー</td>
+<td>Amazonは領収書を発行せず、窓口の受領書等を使う（公式）</td>
+<td>窓口の受領書等を探す。購入明細書とインボイスは注文履歴にある（症状1）</td>
+</tr>
+<tr>
+<td>スマホで印刷できない</td>
+<td>アプリでは印刷不可。スマホのブラウザにも対象外の注文がある（公式）</td>
+<td>SafariかChromeで開き直す。対象外ならPCサイトから（最初に確かめる2つ）</td>
+</tr>
+<tr>
+<td>PCで「注文の詳細」「印刷可能な注文概要」が開く</td>
+<td>公式に記載なし。2025年6月ごろからの利用者の報告</td>
+<td>スマホのブラウザで公式の手順どおりに開く。「明細書／適格請求書」を見る（症状2）</td>
+</tr>
+<tr>
+<td>書類は開くが、印刷・PDF保存ができない</td>
+<td>アプリ、対象外の注文、印刷方法が端末やブラウザで異なること（公式）</td>
+<td>アプリでないかと、対象外でないかを確かめる（症状3）</td>
+</tr>
+<tr>
+<td>他の注文は出るのに、この1件だけ出ない</td>
+<td>発送・支払い方法・販売元の違い</td>
+<td>出る注文と3点を見比べる（症状4）</td>
+</tr>
+<tr>
+<td>プライム会費の領収書が見つからない</td>
+<td>プライム会員情報から開く（公式）</td>
+<td><a href="/articles/amazon-ryoushuusho-dashikata/">Amazonの領収書の出し方</a>の手順で開く</td>
+</tr>
+</tbody>
+</table>
+<p>公式ヘルプにあることには「公式」、利用者の投稿には「報告」と付けて区別します。項目名は公式ヘルプの記載にそろえているため、実際の画面と名前がずれていたら、その名前を控えてください。</p>
+<h2 id="最初に確かめる2つ発送済みかアプリで操作していないか">最初に確かめる2つ：発送済みか、アプリで操作していないか</h2>
+<h3 id="1-その注文は発送されているか">1. その注文は発送されているか</h3>
+<p>公式ヘルプ「領収書等が発行されるタイミングについて」には、領収書等（領収書、適格請求書または支払い明細書）は、注文のステータスによっては閲覧・印刷ができない場合がある、とあります。商品が発送されると注文履歴に表示され、発送されるまでは閲覧も印刷もできません。「支払い明細書について」にも、注文が発送され次第、支払い明細書が注文履歴に表示される、とあります。</p>
+<p>発送前に領収書を出す方法は、確認した公式ヘルプには見つかりませんでした。精算の期限が先に来るなら、経理に早めに伝えてください。</p>
+<h3 id="2-アプリではなくブラウザで開いているか">2. アプリではなく、ブラウザで開いているか</h3>
+<p>公式ヘルプ「領収書を印刷したい場合」は、Amazonショッピングアプリからは領収書／購入明細書を印刷できない、としています。スマホでは、モバイルウェブサイト（スマホのブラウザで開くAmazonのサイト）の注文履歴から開きます。iPhoneはSafari、AndroidはChromeアプリです。</p>
+<p>モバイルウェブサイトにも「一部対象外のご注文があります」とありますが、どの注文かは書かれていません。アプリの場合と対象外のときは、PCサイトの注文履歴から印刷します。操作の流れは、Amazonの領収書をスマホで出す方法にあります。</p>
+<h2 id="症状1領収書等がない領収書にあたる書類がないとき">症状1：「領収書等」がない、領収書にあたる書類がないとき</h2>
+<h3 id="発送済みでも支払い方法で領収書が出ない注文がある">発送済みでも、支払い方法で領収書が出ない注文がある</h3>
+<p>公式ヘルプ「領収書の発行可否、記載内容について」には、領収書は通常、注文履歴から利用できるが、お支払い方法によっては発行されない場合がある、とあります。支払い方法ごとの表は次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>支払い方法</th>
+<th>領収書の発行（公式の表）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>クレジットカード、携帯決済、あと払い（ペイディ）、PayPay（ペイペイ）、Amazon.co.jpギフトカード、Amazonポイント、パートナーポイント、メルペイ、au PAY</td>
+<td>発行される。Amazon.co.jpの注文履歴で発行される</td>
+</tr>
+<tr>
+<td>コンビニ払い、ATM払い、ネットバンキング払い、電子マネー払い</td>
+<td>各支払い窓口から発行される受領書等を使う。購入明細書とインボイス（適格請求書）は、注文履歴で確認できる</td>
+</tr>
+<tr>
+<td>（Amazonビジネスの場合）請求書払い</td>
+<td>銀行振込控をもって領収書と代える</td>
+</tr>
+</tbody>
+</table>
+<p>別のページ「【Q】領収書が欲しい」も、コンビニ払い・ATM払い・ネットバンキング払い・電子マネー払いの場合は、Amazonでは領収書を発行しない、と答えています。</p>
+<p>表の2行目か迷うときは、公式ヘルプ「コンビニ、ATM、ネット銀行、電子マネー払い」の例（ネットバンキング払いはドコモSMTBネット銀行・auじぶん銀行、電子マネー払いは楽天Edy・モバイルSuica・支払秘書）と見比べます。</p>
+<p>窓口の受領書等をなくしたときの再発行の方法は、確認した公式ヘルプには書かれていません。その窓口に聞いてください。</p>
+<p>表の1行目の支払い方法なのに、発送済みの注文で領収書が出ないときは、公式の表のとおりなら発行されるはずの注文です。症状2へ進み、それでも出なければカスタマーサービスに問い合わせます。</p>
+<h3 id="amazonビジネスの注文は発送の24時間後から">Amazonビジネスの注文は、発送の24時間後から</h3>
+<p>Amazonビジネスの公式ヘルプ「支払い明細書や適格請求書を取得する」によると、支払い明細書や適格請求書は、注文が発送されてから24時間後に入手できるようになります。表示するには、注文履歴で該当する注文詳細の横にある「領収書等」リンクを選びます。</p>
+<p>取り方の全体と、役割ごとに見られる範囲は、<a href="/articles/amazon-business-ryoushuusho-matomete-hakkou/">Amazonビジネスの領収書を一括でダウンロードする方法</a>にまとめています。</p>
+<h2 id="症状2pcで注文の詳細印刷可能な注文概要しか開かないのは仕様変更不具合">症状2：PCで「注文の詳細」「印刷可能な注文概要」しか開かないのは、仕様変更？不具合？</h2>
+<p>結論は、どちらとも言えません。公式ヘルプに記載がなく、利用者の報告が2025年6月ごろから続いているためです。</p>
+<h3 id="公式ヘルプに書かれていること2026年11月8日確認">公式ヘルプに書かれていること（2026年11月8日確認）</h3>
+<p>公式が案内しているのは、「領収書等」から「領収書／購入明細書」または「明細書／適格請求書」を選び、ブラウザの印刷オプションで印刷する手順です。</p>
+<p>確認した公式ヘルプ8ページ（出典の一覧を参照）には、「注文の詳細」や「印刷可能な注文概要」が開くという説明も、仕様変更や不具合のお知らせも、「注文の詳細が領収書の代わりになる」という案内も見つかりませんでした。</p>
+<h3 id="2025年6月ごろからの利用者の報告公式ではありません">2025年6月ごろからの利用者の報告（公式ではありません）</h3>
+<p>PCで「領収書等」→「領収書／購入明細書」を選んでも、「注文の詳細」や「印刷可能な注文概要」の画面しか開かない、という投稿が続いています。出所と時期は次のとおりです。</p>
+<ul>
+<li>Q&amp;Aサイト（Yahoo!知恵袋）：2025年6〜9月の複数の質問</li>
+<li>利用者コミュニティ（マイネ王）：2025年6月20日</li>
+<li>note：個人の投稿（2025年6月から「注文概要」しか出ない、という内容）</li>
+<li>ニュースサイト：2025年11月7日</li>
+<li>個人ブログ：2026年11月5日</li>
+</ul>
+<p>報告の中身は、そろっていません。</p>
+<ul>
+<li>スマホのブラウザでは、従来の領収書が出た</li>
+<li>Amazonギフトカード残高で払った注文は、領収書が出た</li>
+<li>サポートに問い合わせたところ、「注文の詳細が領収書の代わりになる」と案内された</li>
+</ul>
+<p>どれも利用者や第三者の記述で、Amazonの公式な説明ではありません。同じ結果になるとは限らず、原因を特定できる材料は、確認した範囲にはありませんでした。</p>
+<p>2025年後半〜2026年の解説記事には、スマホのブラウザで「印刷可能な注文概要」や「明細書／適格請求書」を選ぶ手順を載せたものもあります。</p>
+<h3 id="試す順公式の手順に沿って">試す順：公式の手順に沿って</h3>
+<p>原因が分からないので、公式ヘルプが案内している経路から順に試します。</p>
+<ol>
+<li><strong>スマホのブラウザで、公式の手順どおりに開く。</strong> iPhoneはSafari、AndroidはChromeアプリでAmazonにログインし、注文履歴から「領収書等」→「領収書／購入明細書」を選びます。報告にある「スマホなら従来の領収書が出た」を確かめる試し方ですが、出る保証はありません。</li>
+<li><strong>「明細書／適格請求書」が選べるか見る。</strong> 公式ヘルプは、注文履歴に表示される印刷可能な支払い明細書を、経費報告書に使用できる正式な適格請求書（または区分記載請求書）と案内しています。</li>
+<li><strong>それでも「領収書」と書かれた書類が必要なら、カスタマーサービスへ。</strong> 次の節の4点を伝えます。</li>
+</ol>
+<p>「注文の詳細」の画面を領収書の代わりに出せるかは、公式ヘルプに案内が見つからず、提出先のルールで決まります。「明細書／適格請求書」で足りるかも、提出先が決めます。</p>
+<p>書類の名前ごとの扱いは、<a href="/articles/amazon-ryoushuusho-seikyuusho-shikanai/">Amazonの領収書が「請求書」しかない時</a>で整理しています。</p>
+<h2 id="症状3書類は開くのに印刷pdf保存ができないときは">症状3：書類は開くのに、印刷・PDF保存ができないときは？</h2>
+<p>公式ヘルプの印刷の手順は、「ブラウザの印刷オプションを選択して、印刷します」です。次の順に確かめます。</p>
+<ol>
+<li><strong>アプリで開いていないか。</strong> アプリからは印刷できません（公式）。</li>
+<li><strong>スマホのブラウザで、対象外の注文ではないか。</strong> その場合は、PCサイトの注文履歴から印刷します（公式）。</li>
+<li><strong>端末やブラウザの違いではないか。</strong> 印刷方法は端末やブラウザによって異なる、とあります（公式）。</li>
+</ol>
+<p>Amazonに紙で送ってもらうことはできません。公式ヘルプには、セキュリティ上の理由で、Amazonでは領収書の印刷および郵送を承っていない、とあります。</p>
+<p>一方、領収書は領収書／購入明細書のリンクから何度でも再発行できると書かれているため、印刷に失敗したら出し直せます。</p>
+<p>ヘルプにPDF保存の手順は書かれていません。一般には、印刷の画面で保存先にPDFを選べる場合があります（端末とブラウザによります）。</p>
+<p>ポップアップのブロックなど個別の設定についての記載も、見つかりませんでした。別のブラウザで同じ書類を開く方法もありますが、Amazonが案内している手順ではありません。</p>
+<p>PCでの基本の出し方は<a href="/articles/amazon-ryoushuusho-dashikata/">Amazonの領収書の出し方</a>、スマホでのPDF保存と提出はAmazonの領収書をスマホで出す方法にあります。</p>
+<h2 id="症状4同じ時期の注文のうちこの1件だけ領収書が出ないときは">症状4：同じ時期の注文のうち、この1件だけ領収書が出ないときは？</h2>
+<p>出る注文と出ない注文を並べて、違いを3点見比べます。</p>
+<table>
+<thead>
+<tr>
+<th>見比べる点</th>
+<th>見方</th>
+<th>公式ヘルプの記載</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>発送の状態</td>
+<td>出ない注文だけ、未発送ではないか</td>
+<td>発送されるまで、領収書等は閲覧・印刷できない</td>
+</tr>
+<tr>
+<td>支払い方法</td>
+<td>出ない注文だけ、コンビニ払い・ATM払い・ネットバンキング払い・電子マネー払いではないか</td>
+<td>該当する場合、Amazonは領収書を発行しない（症状1の表）</td>
+</tr>
+<tr>
+<td>販売元</td>
+<td>出ない注文だけ、出品者が販売元ではないか</td>
+<td>出品者の商品の領収書には、出品者名が領収書発行者として印刷される</td>
+</tr>
+</tbody>
+</table>
+<p>3点とも同じなのに1件だけ出ないときは、公式の説明では判断できません。違いを添えて、カスタマーサービスに相談します。</p>
+<p>「明細書／適格請求書」が選べない注文もあります。公式ヘルプ「インボイス（適格請求書）について」によると、注文履歴から確認・印刷できる条件は、販売元がAmazon.co.jpであること、または出品者が適格請求書発行事業者で、登録番号をAmazonに登録していることです。</p>
+<p>出品者の登録の有無は、Amazonビジネスのビジネスアカウントを除き、出品者に直接問い合わせる必要がある、とされています。見分け方は、<a href="/articles/amazon-ryoushuusho-tekikaku-seikyuusho/">Amazonのインボイス対応の見分け方</a>で説明しています。</p>
+<p>領収書そのものが表示されない出品者の注文の問い合わせ先は、公式ヘルプに書かれていません。ここでは、注文履歴を表示しているAmazonのカスタマーサービスへ先に相談する前提にしています。</p>
+<h2 id="カスタマーサービスに伝える4点と文例">カスタマーサービスに伝える4点と文例</h2>
+<p>ここまで試しても出ないときは、カスタマーサービスに相談します。連絡の方法は、Amazonの案内に従ってください。最初に次の4点を伝えておくと、状況が伝わりやすくなります。</p>
+<table>
+<thead>
+<tr>
+<th>伝える点</th>
+<th>書き方の例</th>
+<th>伝える理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>注文番号</td>
+<td>注文履歴に表示されている番号</td>
+<td>注文を特定するため</td>
+</tr>
+<tr>
+<td>支払い方法</td>
+<td>クレジットカード／コンビニ払い／Amazonギフトカード など</td>
+<td>公式の表で、領収書が出るかが分かれるため</td>
+</tr>
+<tr>
+<td>端末とブラウザ</td>
+<td>WindowsのPC＋Chrome／iPhone＋Safari／Amazonショッピングアプリ</td>
+<td>アプリは印刷不可で、スマホのブラウザにも対象外の注文があるため（公式）</td>
+</tr>
+<tr>
+<td>表示された画面の名前</td>
+<td>「領収書／購入明細書」を選んだら、「注文の詳細」が開いた</td>
+<td>領収書以外の画面かを、名前で伝えるため</td>
+</tr>
+</tbody>
+</table>
+<p>文例です。〔　〕の中は、自分の内容に書き換えます。</p>
+<blockquote>
+<p>注文番号〔　〕の領収書を取得したいのですが、注文履歴で「領収書等」から「領収書／購入明細書」を選ぶと、領収書ではなく〔「注文の詳細」〕の画面が開きます。支払い方法は〔クレジットカード〕、使っている端末とブラウザは〔WindowsのPCのChrome〕です。スマホのブラウザ〔Safari〕でも開いてみましたが、〔同じ画面でした〕。経費精算に使うため、領収書として使える書類をどこから取得できるか教えてください。</p>
+</blockquote>
+<p>問い合わせの返事を待つ間に、経理には事情を伝えておきます。いまある書類で足りるかの聞き方は、<a href="/articles/amazon-ryoushuusho-seikyuusho-shikanai/">Amazonの領収書が「請求書」しかない時</a>に文例があります。</p>
+<h2 id="チェックリストとまとめ">チェックリストとまとめ</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 発送済みで、アプリではなくPCかスマホのブラウザで開いている（Amazonビジネスは発送から24時間後）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 支払い方法を確かめた（コンビニ払い・ATM払い・ネットバンキング払い・電子マネー払いは、窓口の受領書等）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 「領収書等」を開いて、出てくる項目と画面の名前を控えた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 「注文の詳細」などが開くときは、スマホのブラウザで公式の手順どおりに開き直した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 「明細書／適格請求書」が選べるか見て、その書類で足りるかを提出先に聞いた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 他の注文と、発送・支払い方法・販売元を見比べた</li>
+<li class="task-list-item"><input type="checkbox" disabled> カスタマーサービスに4点を伝え、期限に間に合わないことを経理に先に伝えた</li>
+</ul>
+<h3 id="まとめ">まとめ</h3>
+<p>PCで「注文の詳細」などしか開かないときは、スマホのブラウザ、「明細書／適格請求書」の順に試し、それでも要るときはカスタマーサービスに4点を伝えます。</p>
+<p>画面や条件は変わることがあるため、手続きの前に公式の最新の案内を確かめてください。税務の個別の判断は、税理士または税務署に相談してください。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Amazonで領収書が出ない・表示されないのは、なぜですか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式ヘルプ（2026年11月8日確認）から確かめられる理由は4つです。商品が未発送（発送されるまで領収書等は閲覧・印刷できない）、支払い方法がコンビニ払い・ATM払い・ネットバンキング払い・電子マネー払い（Amazonは領収書を発行せず、各支払い窓口の受領書等を使う）、アプリで操作している（アプリでは印刷できない）、スマホのブラウザで開いたがその注文が印刷の対象外、です。このほかに、PCで「注文の詳細」しか開かないという利用者の報告が2025年6月ごろから続いていますが、公式ヘルプには記載が見つかりませんでした。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>「領収書等」を押すと「注文の詳細」しか開かないのは、仕様変更ですか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>どちらとも言えません。確認した公式ヘルプ8ページ（2026年11月8日）には、その画面が開く説明も、仕様変更や不具合のお知らせも見つかりませんでした。「スマホのブラウザでは従来の領収書が出た」「サポートから注文の詳細が領収書の代わりになると案内された」などの報告がありますが、公式の説明ではなく、同じ結果になるとは限りません。試す順は症状2の節にまとめています。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>コンビニ払いやATM払いの注文でも、領収書は出せますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式ヘルプでは、コンビニ払い・ATM払い・ネットバンキング払い・電子マネー払いの注文について、Amazonでは領収書を発行しないとされています。各支払い窓口から発行される受領書等を使い、購入明細書とインボイス（適格請求書）はAmazon.co.jpの注文履歴で確認できます。経理がその書類で受け付けるかは、会社が決めます。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Amazonの領収書がスマホで見つからない・印刷できないのは、なぜですか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式ヘルプは、Amazonショッピングアプリからは領収書／購入明細書を印刷できないとしています。iPhoneはSafari、AndroidはChromeアプリでモバイルウェブサイトの注文履歴を開きます。モバイルウェブサイトにも一部対象外の注文があり、その場合はPCサイトの注文履歴から印刷します。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>領収書が出ないとき、Amazonに紙の領収書を郵送してもらえますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>できません。公式ヘルプには、セキュリティ上の理由で、Amazonでは領収書の印刷および郵送を承っていない、とあります。領収書／購入明細書のリンクからは何度でも再発行できます。出ない注文は、カスタマーサービスに注文番号などを伝えて相談します。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=GRPUHK7RCNVRBURD" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「【Amazon】領収書を印刷したい場合」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=GKUNKPD8Y7BJ37FQ" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「【Amazon】領収書のダウンロードと印刷方法」（領収書等が発行されるタイミングについて）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=GFF6QTXBZFE7PAKY" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「【Amazon】領収書の発行可否、記載内容について」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=G4M33F6BWMYDTRZU" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「支払い明細書について」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=TZQR9CIMrzLCGPuruQ" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「【Q】領収書が欲しい」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=G4ST3CMRP9PA32MV" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「【Amazon】コンビニ、ATM、ネット銀行、電子マネー払い」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=202119460" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「支払い明細書や適格請求書を取得する」（Amazonビジネス）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=TgeQoI2TC9jEOh0mQf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「インボイス（適格請求書）について」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/amazon-business-mitsumorisho-hakkou/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1oukbk0-g" x1="0" y1="0" x2="1" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1oukbk0-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1oukbk0-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1oukbk0-p)" data-astro-cid-yuatfsof></rect><circle cx="366" cy="57" r="153" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Amazon</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>見積書</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>出し方</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--amazon-business">Amazonビジネス実務</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>Amazonの見積書の出し方｜カートからPDFで保存する手順（Amazonビジネス・登録無料）</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>Amazonで見積書が必要なときは、登録無料のAmazonビジネスを使います。注文前はカートから参考見積書、注文後は注文履歴から見積書をPDFで保存でき、稟議や経費精算に使えます。個人アカウントしかない場合の考え方と、配送料が載らない・ダウンロードできないときの注意点もまとめました。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-06T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月6日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約12分</p></div></a><a class="card article-card" href="/articles/kojin-jigyou-kaigyoutodoke-nashi-amazon-business-toroku/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1ptehj0-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1ptehj0-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1ptehj0-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1ptehj0-p)" data-astro-cid-yuatfsof></rect><circle cx="363" cy="90" r="176" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>個人事業主</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>開業届なし</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Amazonビジネス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--amazon-business">Amazonビジネス実務</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>Amazonビジネスの登録に必要書類は？開業届なしの個人事業主が用意するもの一覧</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>個人事業主がAmazonビジネスに登録するときは、確認書類を1点提出します。開業届がなくても、過去2年以内の確定申告書B・収支内訳書、インボイスの登録通知書などで代わりになります。公式ヘルプの書類一覧と提出時の注意点、登録手順、屋号の扱いを整理しました。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-06T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月6日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/amazon-business/" data-astro-cid-sgg5joot>Amazonビジネス実務の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/receipts/" data-astro-cid-sgg5joot>サービス別 領収書・インボイス対応一覧を見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/business-prime/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 L4 4"></path><path d="M4 20 L21 20"></path><path d="M7 20 L7 14"></path><path d="M11 20 L11 10"></path><path d="M15 20 L15 15"></path><path d="M19 20 L19 7"></path><path d="M5 16 L20 8"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>Business Prime 損益分岐計算</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>注文回数と送料を入れると、プライムビジネス（旧Businessプライム）の元が取れる回数がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/amazon-business-check/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 9 l2 2 l3.5 -3.5"></path><path d="M8 15 h8"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>Amazonビジネスが必要か判定</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>5つの質問に答えるだけで、Amazonビジネスが「要る」「今は要らない」「どちらでも」のどれかがわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

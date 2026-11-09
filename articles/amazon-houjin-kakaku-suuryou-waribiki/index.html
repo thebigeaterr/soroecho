@@ -1,0 +1,231 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Amazonの法人価格とは｜表示の見方・数量割引・個人アカウントとの違い | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="Amazonの法人価格は、Amazonビジネスの利用者だけが対象の割引価格で、個人アカウントでは使えません。対象は一部の商品で随時変わります。取消し線の見方、数量割引の条件と依頼、登録無料で使う手順を公式ヘルプで整理します。"><link rel="canonical" href="https://soroecho.com/articles/amazon-houjin-kakaku-suuryou-waribiki/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="Amazonの法人価格とは｜表示の見方・数量割引・個人アカウントとの違い | そろえ帳"><meta property="og:description" content="Amazonの法人価格は、Amazonビジネスの利用者だけが対象の割引価格で、個人アカウントでは使えません。対象は一部の商品で随時変わります。取消し線の見方、数量割引の条件と依頼、登録無料で使う手順を公式ヘルプで整理します。"><meta property="og:url" content="https://soroecho.com/articles/amazon-houjin-kakaku-suuryou-waribiki/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/amazon-houjin-kakaku-suuryou-waribiki.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Amazonの法人価格とは｜表示の見方・数量割引・個人アカウントとの違い — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Amazonの法人価格とは｜表示の見方・数量割引・個人アカウントとの違い | そろえ帳"><meta name="twitter:description" content="Amazonの法人価格は、Amazonビジネスの利用者だけが対象の割引価格で、個人アカウントでは使えません。対象は一部の商品で随時変わります。取消し線の見方、数量割引の条件と依頼、登録無料で使う手順を公式ヘルプで整理します。"><meta name="twitter:image" content="https://soroecho.com/og/amazon-houjin-kakaku-suuryou-waribiki.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"Amazonの法人価格とは｜表示の見方・数量割引・個人アカウントとの違い","item":"https://soroecho.com/articles/amazon-houjin-kakaku-suuryou-waribiki/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Amazonの法人価格とは｜表示の見方・数量割引・個人アカウントとの違い","description":"Amazonの法人価格は、Amazonビジネスの利用者だけが対象の割引価格で、個人アカウントでは使えません。対象は一部の商品で随時変わります。取消し線の見方、数量割引の条件と依頼、登録無料で使う手順を公式ヘルプで整理します。","url":"https://soroecho.com/articles/amazon-houjin-kakaku-suuryou-waribiki/","datePublished":"2026-11-09T00:00:00.000Z","dateModified":"2026-11-09T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/amazon-houjin-kakaku-suuryou-waribiki/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Amazonの法人価格は、個人アカウントでも使えますか？","acceptedAnswer":{"@type":"Answer","text":"使えません。公式ヘルプ「Amazonビジネス価格細則」（2026年11月8日確認）は、法人価格を「Amazonビジネスのサービス利用者のみを対象とした割引きが適用された価格」と説明しています。使うには、Amazonビジネスに登録します。登録は無料（公式の登録ページの表記）で、個人事業主は確認書類を1点提出します。事業をしていない個人の登録条件は、今回読んだ公式ページに記載が見つかりませんでした。"}},{"@type":"Question","name":"法人価格は何％安くなりますか？","acceptedAnswer":{"@type":"Answer","text":"一律の割引率は、今回読んだ公式ページ（価格細則・一括注文・中小企業向けのページ）に見つかりませんでした。法人価格が付くのは一部の商品だけで、対象は随時変わります。出品者の商品では、金額も出品者が商品ごとに設定します。商品ページの取消し線の価格が参考価格か個人向け価格かを見て、個人向けの価格や送料込みの合計と見比べてください。"}},{"@type":"Question","name":"数量割引は何個から使えますか？依頼もできますか？","acceptedAnswer":{"@type":"Answer","text":"何個からかは商品ごとに違います。公式ヘルプでは、数量割引は一部の商品で一定の数量を買ったときにだけ適用され、対象の商品と数量は随時変わるとされています。割引の依頼はできますが、適用は保証されません。対象商品の「カートに入れる」ボタンの上にある見積りの依頼から進みます。公式の相見積もりのページは、購入金額100万円超または購入数999個超の大口の購入を対象として説明しています。"}},{"@type":"Question","name":"法人価格が表示されない商品があるのはなぜですか？","acceptedAnswer":{"@type":"Answer","text":"法人価格は一部の商品にだけ適用され、対象は随時変わるためです（価格細則）。出品者の商品は出品者が設定するので、設定の変更で付いたり外れたりします。個人アカウントで見ているときも対象外なので、ビジネスアカウントに切り替えて確かめてください。"}},{"@type":"Question","name":"法人価格の「設定」はどこでしますか？","acceptedAnswer":{"@type":"Answer","text":"買う側が法人価格を設定する画面は、今回読んだ公式ページには出てきません。条件はAmazonビジネスの利用者であることです。出品者として付けたい場合は、セラーセントラルの「全在庫の管理」で設定します（出品者向けヘルプ「法人価格と数量割引の編集」、2026年11月8日確認）。数量割引は、先に法人価格を設定してから、数量の区切りと割引を追加します。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>Amazonの法人価格とは｜表示の見方・数量割引・個人アカウントとの違い</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecl1m2e9-g" x1="0" y1="0" x2="1" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecl1m2e9-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecl1m2e9-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecl1m2e9-p)" data-astro-cid-yuatfsof></rect><circle cx="368" cy="117" r="134" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>amazon</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人価格</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--amazon-business">Amazonビジネス実務</span><h1 data-astro-cid-sgg5joot>Amazonの法人価格とは｜表示の見方・数量割引・個人アカウントとの違い</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-11-09T00:00:00.000Z" data-astro-cid-sgg5joot>2026年11月9日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約9分</p><p class="cta-inline">法人価格や数量割引を使うなら、Amazonビジネスの登録（無料）から<a href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">登録ページを見る（公式）</a></p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論法人価格はamazonビジネスの利用者だけが対象の割引価格個人アカウントでは使えない" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：法人価格は「Amazonビジネスの利用者だけが対象」の割引価格。個人アカウントでは使えない</a></li><li data-astro-cid-sgg5joot><a href="#法人価格とは公式ヘルプの定義と似た名前の価格との違い" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>法人価格とは：公式ヘルプの定義と、似た名前の価格との違い</a></li><li data-astro-cid-sgg5joot><a href="#個人アカウントでは使えない使うにはamazonビジネスに登録無料" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>個人アカウントでは使えない：使うにはAmazonビジネスに登録（無料）</a></li><li data-astro-cid-sgg5joot><a href="#取消し線の見方何と比べた割引なのか" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>取消し線の見方：何と比べた割引なのか</a></li><li data-astro-cid-sgg5joot><a href="#どれくらい安いか割引率は商品ごとに違う" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>どれくらい安いか：割引率は商品ごとに違う</a></li><li data-astro-cid-sgg5joot><a href="#数量割引とは一定の数量で適用依頼はできるが保証はない" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>数量割引とは：一定の数量で適用。依頼はできるが保証はない</a></li><li data-astro-cid-sgg5joot><a href="#法人価格が見えないとき買う前の確認リスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>法人価格が見えないとき・買う前の確認リスト</a></li><li data-astro-cid-sgg5joot><a href="#法人価格の設定について買う側と出品者側" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>法人価格の「設定」について：買う側と出品者側</a></li><li data-astro-cid-sgg5joot><a href="#まとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>まとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論法人価格はamazonビジネスの利用者だけが対象の割引価格個人アカウントでは使えない">結論：法人価格は「Amazonビジネスの利用者だけが対象」の割引価格。個人アカウントでは使えない</h2>
+<p>Amazonの法人価格は、Amazonビジネスの利用者だけを対象にした、割引が適用された価格です。個人アカウントのままでは対象になりません。使うなら、Amazonビジネスに登録します。登録は無料です（公式の登録ページの表記）。</p>
+<p>公式ヘルプ「Amazonビジネス価格細則」（最終更新日は2021年7月26日、2026年11月8日に読んだ内容）などで分かることは次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>知りたいこと</th>
+<th>分かること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>法人価格とは</td>
+<td>Amazonビジネスのサービス利用者のみを対象に、割引が適用された価格</td>
+</tr>
+<tr>
+<td>全商品にあるか</td>
+<td>ない。一部の商品だけで、対象の商品は随時変わる</td>
+</tr>
+<tr>
+<td>個人アカウントで使えるか</td>
+<td>使えない。対象はAmazonビジネスの利用者のみ</td>
+</tr>
+<tr>
+<td>何％安いか</td>
+<td>商品によって違う。一律の割引率は、今回読んだ公式ページに見つからなかった</td>
+</tr>
+<tr>
+<td>数量割引とは</td>
+<td>一定の数量を買ったときだけ適用される割引。依頼はできるが、適用は保証されない</td>
+</tr>
+</tbody>
+</table>
+<p>画面の表示や条件は変わることがあります。実際の商品ページと、公式の最新の案内で確かめてください。</p>
+<h2 id="法人価格とは公式ヘルプの定義と似た名前の価格との違い">法人価格とは：公式ヘルプの定義と、似た名前の価格との違い</h2>
+<p>公式ヘルプは、法人価格を「Amazonビジネスのサービス利用者のみを対象とした割引きが適用された価格」と説明しています。法人価格は一部の商品にだけ適用され、対象となる商品は随時変更されます。以前に見た法人価格が、いまは付いていないこともあります。</p>
+<p>出品者（Amazon以外の売主）の商品では、法人価格は出品者が商品ごとに設定します。出品者向けのヘルプ（セラーセントラルで公開されているページ）では、同じ仕組みが「法人割引」とも呼ばれます。</p>
+<p>名前が似ていて間違えやすい価格が、あと2つあります。</p>
+<ul>
+<li>卸売価格：特定の顧客区分（例：卸売業者、ブランドの認定販売代理店、免許を持つ美容師）に属する利用者向けの、特定の商品の個別の価格設定です。法人価格とは別の仕組みで、提供するとき、Amazonが購入した商品の情報（事業所や配送先の住所を含む）を供給元と共有することがある、と公式ヘルプにあります</li>
+<li>過去価格：一部の商品で表示される、直近90日間に販売実績がある価格の中央値です。法人価格や卸売価格は計算から除かれます</li>
+</ul>
+<h2 id="個人アカウントでは使えない使うにはamazonビジネスに登録無料">個人アカウントでは使えない：使うにはAmazonビジネスに登録（無料）</h2>
+<p>法人価格の対象は、Amazonビジネスのサービス利用者のみです。個人のAmazonアカウントで買う限り、法人価格の対象にはなりません。公式ヘルプは、Amazonビジネスに登録していないお客様が買える価格を「個人向け価格」と呼んでいます。</p>
+<p>数量割引も、Amazonビジネスの利用者向けです。公式ヘルプ（価格細則）は、数量割引を受けられる場合があるのを「Amazonビジネスのサービス利用者」としています。</p>
+<p>自分が使えるかどうかは、立場で分かれます。</p>
+<table>
+<thead>
+<tr>
+<th>あなたの状況</th>
+<th>法人価格・数量割引を使うには</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>会社がすでにAmazonビジネスを使っている</td>
+<td>管理者にメールで招待してもらい、ビジネスアカウントで買う</td>
+</tr>
+<tr>
+<td>会社はまだ使っていない（総務・購買担当）</td>
+<td>会社名などの事業者情報を入力して登録する。手順は<a href="/articles/amazon-houjin-account-tsukurikata/">法人アカウントの作り方</a></td>
+</tr>
+<tr>
+<td>個人事業主</td>
+<td>確認書類を1点用意して登録する。開業届のほか、過去2年以内の確定申告書B・収支内訳書、インボイスの登録通知書なども使える（公式ヘルプ、2026年10月時点）。開業届がないときは<a href="/articles/kojin-jigyou-kaigyoutodoke-nashi-amazon-business-toroku/">開業届なしの登録方法</a></td>
+</tr>
+<tr>
+<td>立替払いの会社員</td>
+<td>自分の個人アカウントでは対象外。会社のアカウントで買えるかを総務に聞く</td>
+</tr>
+<tr>
+<td>事業をしていない個人</td>
+<td>登録ページは「組織を代表してこのビジネスアカウントを作成すること」への同意を求めています。事業をしていない個人の登録条件は、記載が見つかりませんでした</td>
+</tr>
+</tbody>
+</table>
+<p>登録は無料です。公式の登録ページは「無料のAmazonビジネスアカウントを作成しましょう」と案内しています。今の個人アカウントは使えなくなりません。違いは<a href="/articles/amazon-business-kojin-chigai/">Amazonビジネスと個人アカウントの違い</a>で、登録前の注意点（請求書払いの審査など）は<a href="/articles/scout-2026-09-16-4/">個人事業主のデメリットと請求書払い</a>で整理しています。</p>
+<p>法人価格の対象として公式ヘルプに書かれているのは「Amazonビジネスのサービス利用者」で、有料のプライムビジネス会員とは書かれていません。一括注文のページにも、一括購入のためにPrime Business会員になる必要はない、とあります。プライムビジネスは、法人価格とは別のプランです（<a href="/articles/business-prime-ryoukin-soneki-bunkiten/">料金と損益分岐点</a>）。</p>
+<aside class="cta-box cta-box--subtle"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">Amazonビジネス</p><h3 class="cta-box__title">法人価格や数量割引を使うなら、Amazonビジネスの登録（無料）から</h3><p class="cta-box__body">法人価格と数量割引は、Amazonビジネスの利用者だけが対象です。登録は無料（公式の登録ページの表記）で、今の個人アカウントは使えなくなりません。付くのは一部の商品なので、登録後によく買う商品の商品ページで、法人価格や数量割引の表示があるかを確かめられます。買う物のほとんどが対象外なら、メリットは小さくなります。</p><a class="cta-box__button" href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">Amazonビジネスの登録ページへ（公式）</a></aside>
+<h2 id="取消し線の見方何と比べた割引なのか">取消し線の見方：何と比べた割引なのか</h2>
+<p>公式ヘルプによると、法人価格が表示される場合、法人価格と比べる価格（比較価格）に取消し線が付きます。比較価格は、商品によって次の2通りです。</p>
+<table>
+<thead>
+<tr>
+<th>商品の状態</th>
+<th>取消し線の価格（比較価格）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>参考価格が登録されている商品</td>
+<td>参考価格（メーカー等が広く告知している価格。一般にメーカー希望小売価格）</td>
+</tr>
+<tr>
+<td>参考価格の登録がない商品</td>
+<td>Amazonビジネスに登録していないお客様がその商品を買える価格（個人向け価格）</td>
+</tr>
+</tbody>
+</table>
+<p>見るときの注意点は3つです。</p>
+<ol>
+<li>取消し線が参考価格のときは、いま個人アカウントで買える価格と同じとは限りません。実際の差を知りたいときは、同じ商品の個人向けの価格と見比べます</li>
+<li>売主がAmazon以外の出品者の場合、参考価格はその売主から提供された情報のことがあります</li>
+<li>価格は常に変動します。見比べるなら同じ日の同じ時間帯に行い、金額は注文を確定する前の画面で確かめます</li>
+</ol>
+<p>承認を取るための見積書にも注意が必要です。注文前にダウンロードする参考見積書には、注文確定時に適用される割引が反映されません（公式ヘルプ「購入見積書をダウンロード」）。実際の請求額と違うことがあるので、<a href="/articles/amazon-business-mitsumorisho-hakkou/">Amazonの見積書の出し方</a>で2種類の違いを確かめてください。</p>
+<h2 id="どれくらい安いか割引率は商品ごとに違う">どれくらい安いか：割引率は商品ごとに違う</h2>
+<p>今回読んだ公式ページ（価格細則、一括注文、中小企業・個人事業主向けのページ）には、法人価格の割引率を一律に示した記述は見つかりませんでした。そのため、この記事では「何％安い」とは書きません。分かっている範囲は次のとおりです。</p>
+<ul>
+<li>公式の登録ページには、法人価格や数量割引として「個人向けのAmazonよりさらに安い価格で購入が可能」とあります。ただし価格細則では、法人価格は一部の商品にだけ適用されます</li>
+<li>割引の大きさは出品者が決めます。出品者向けのヘルプでは、出品者が法人価格を入力し、数量割引は「割引率」か「固定価格」で設定すると説明されています</li>
+<li>標準価格（出品者が通常の購入者向けに付けている価格）以上の法人価格は、法人・個人事業主のお客様に表示されない、と出品者向けのヘルプにあります。表示されている法人価格は、その出品者の標準価格より低いことになります</li>
+</ul>
+<p>実際の差は、商品ページの取消し線の価格と、個人向けの価格を見比べて確かめます。</p>
+<h2 id="数量割引とは一定の数量で適用依頼はできるが保証はない">数量割引とは：一定の数量で適用。依頼はできるが保証はない</h2>
+<p>公式ヘルプ（価格細則）の説明は次のとおりです。</p>
+<ul>
+<li>Amazonビジネスの利用者は、一定の大量購入について数量割引を受けられる場合がある</li>
+<li>一部の商品で、その商品を一定の数量買ったときにだけ適用される</li>
+<li>対象の商品と数量は随時変わる</li>
+<li>数量割引は依頼できるが、適用は保証されない</li>
+</ul>
+<p>公式の登録ページには、購入数によって割引が大きくなる「数量割引」もご利用いただける、とあります。「何個から」は商品ごとに違うので、商品ページで確かめます。公式の一括注文のページにも、最低注文数量は対象商品によって変わる、とあります。</p>
+<h3 id="数量割引のしくみ出品者が数量の区切りと割引を決める">数量割引のしくみ：出品者が数量の区切りと割引を決める</h3>
+<p>出品者向けの公式ヘルプ（セラーセントラル）には、出品者の設定のしかたが書かれています。買う側から見ると、次の点が参考になります。</p>
+<ul>
+<li>数量割引は、法人価格を設定したうえで作ります。先に法人価格が必要です</li>
+<li>「何個以上か」の区切り（しきい値）と、割引を出品者が決めます。割引は「割引率」か「固定価格」（商品1点あたりの価格）で指定します</li>
+<li>ヘルプの設定例は「最低数量10で5%割引」です。この設定だと、10点を法人価格の5%割引で買えます。説明のための例で、実際の商品の割引率ではありません</li>
+<li>法人価格を削除すると、それに付いた数量割引も自動で削除されます</li>
+</ul>
+<p>つまり、数量割引は法人価格をさらに下げる仕組みで、区切りの数量も割引も、商品ごと・出品者ごとに違います。出品者の設定変更で、あとから変わることもあります。</p>
+<h3 id="依頼のしかた見積依頼相見積もり">依頼のしかた：見積依頼（相見積もり）</h3>
+<p>公式の一括注文のページには、見積依頼ツールで、対象商品の大量購入に対して割引価格を依頼できる、とあります。対象商品の商品詳細ページで、「カートに入れる」ボタンの上にある見積りの依頼のリンクから進みます。</p>
+<p>相見積もり（複数の売主から見積りを取ること）の公式ページには、次の案内があります。</p>
+<ul>
+<li>購入金額が100万円を超える、または購入数が999個を超える大口の購入が対象として説明されている</li>
+<li>数量、目標価格、購入予定日、納品期限、郵便番号などを入力して依頼する</li>
+<li>売主は通常1〜2営業日以内に見積りを返す。見積価格は受け取ってから最低7日間固定される（売主が独自の期限を設けることもある）</li>
+<li>送った依頼は直接編集できない。数量を変えるときは、新しい依頼を作る</li>
+</ul>
+<p>依頼しても、数量割引が適用される保証はありません（価格細則）。少量の購入なら、まず商品ページに数量割引の表示があるかを見るのが現実的です。</p>
+<h2 id="法人価格が見えないとき買う前の確認リスト">法人価格が見えないとき・買う前の確認リスト</h2>
+<p>法人価格が出ないときは、次の順に見ます。</p>
+<ol>
+<li>ビジネスアカウントで見ているか。個人アカウントの画面は対象外です。公式ヘルプでは、デスクトップブラウザなら「[貴社名]のアカウント」メニューの「アカウントの切り替え」から切り替えます</li>
+<li>その商品に法人価格が付いているか。付くのは一部の商品だけです</li>
+<li>売主がAmazonか出品者か。出品者の商品は、出品者の設定で付いたり外れたりします</li>
+<li>以前に見た表示から変わっていないか。対象の商品は随時変わります</li>
+</ol>
+<p>公式の登録ページは、仕事用のメールアドレスでの登録を推奨しています。一方、アカウントの切り替え機能は、GmailやYahooなどの無料メールを使っているビジネスアカウントで使えるものです。会社のメールアドレスのアカウントでは使えない、と公式ページにあります。共有のパソコンでは、この機能を使わないよう公式ヘルプが勧めています。</p>
+<p>買う前のチェックリストです。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> ビジネスアカウントで商品ページを開いた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 取消し線の価格が、参考価格か個人向け価格かを見た</li>
+<li class="task-list-item"><input type="checkbox" disabled> 数量割引がある商品は、何個から適用かを見た</li>
+<li class="task-list-item"><input type="checkbox" disabled> 送料を含めたレジ画面の合計金額で比べた（<a href="/articles/amazon-business-souryou/">Amazonビジネスの送料</a>）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 承認用の見積書や、大口の見積依頼が要るかを考えた</li>
+</ul>
+<h2 id="法人価格の設定について買う側と出品者側">法人価格の「設定」について：買う側と出品者側</h2>
+<p>買う側が法人価格を設定する画面は、今回読んだ公式ページには出てきませんでした。買う側の条件は、Amazonビジネスの利用者であることです。</p>
+<p>出品者として法人価格を付けたい場合は、セラーセントラルの「全在庫の管理」で設定します。出品者向けの公式ヘルプ「法人価格と数量割引の編集」に手順があります。数量割引は、先に法人価格を設定してから、しきい値と割引を追加します。手順は更新されることがあるので、設定する前に最新のヘルプを見てください。</p>
+<h2 id="まとめ">まとめ</h2>
+<p>法人価格は、Amazonビジネスの利用者だけが対象の割引価格で、一部の商品にだけ付き、対象は随時変わります。個人アカウントのままでは使えません。数量割引は、一定の数量を買ったときだけ適用され、依頼はできても適用は保証されません。割引率は商品ごと、出品者ごとに違い、公式に一律の数字は見つかりませんでした。</p>
+<p>使うなら、Amazonビジネスに登録します（無料）。登録後は、よく買う商品で、法人価格と数量割引の表示、取消し線の価格、送料を含めた合計を見比べて決めてください。</p>
+<p>法人価格のほかにも、個人アカウントにはない機能があります。<a href="/articles/amazon-ryoushuusho-ikkatsu-download/">領収書の一括ダウンロード</a>と<a href="/articles/amazon-seikyuusho-barai-yarikata/">請求書払い</a>も見てください。工具・文具の通販との比べ方は<a href="/articles/amazon-business-monotaro-askul-hikaku/">アマゾンビジネス・モノタロウ・アスクルの比較</a>に、梱包資材をまとめて買う場合の考え方は<a href="/articles/housou-shizai-houjin-matomegai-waribiki/">梱包資材の法人まとめ買い</a>にあります。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Amazonの法人価格は、個人アカウントでも使えますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>使えません。公式ヘルプ「Amazonビジネス価格細則」（2026年11月8日確認）は、法人価格を「Amazonビジネスのサービス利用者のみを対象とした割引きが適用された価格」と説明しています。使うには、Amazonビジネスに登録します。登録は無料（公式の登録ページの表記）で、個人事業主は確認書類を1点提出します。事業をしていない個人の登録条件は、今回読んだ公式ページに記載が見つかりませんでした。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>法人価格は何％安くなりますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>一律の割引率は、今回読んだ公式ページ（価格細則・一括注文・中小企業向けのページ）に見つかりませんでした。法人価格が付くのは一部の商品だけで、対象は随時変わります。出品者の商品では、金額も出品者が商品ごとに設定します。商品ページの取消し線の価格が参考価格か個人向け価格かを見て、個人向けの価格や送料込みの合計と見比べてください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>数量割引は何個から使えますか？依頼もできますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>何個からかは商品ごとに違います。公式ヘルプでは、数量割引は一部の商品で一定の数量を買ったときにだけ適用され、対象の商品と数量は随時変わるとされています。割引の依頼はできますが、適用は保証されません。対象商品の「カートに入れる」ボタンの上にある見積りの依頼から進みます。公式の相見積もりのページは、購入金額100万円超または購入数999個超の大口の購入を対象として説明しています。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>法人価格が表示されない商品があるのはなぜですか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>法人価格は一部の商品にだけ適用され、対象は随時変わるためです（価格細則）。出品者の商品は出品者が設定するので、設定の変更で付いたり外れたりします。個人アカウントで見ているときも対象外なので、ビジネスアカウントに切り替えて確かめてください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>法人価格の「設定」はどこでしますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>買う側が法人価格を設定する画面は、今回読んだ公式ページには出てきません。条件はAmazonビジネスの利用者であることです。出品者として付けたい場合は、セラーセントラルの「全在庫の管理」で設定します（出品者向けヘルプ「法人価格と数量割引の編集」、2026年11月8日確認）。数量割引は、先に法人価格を設定してから、数量の区切りと割引を追加します。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=GUKKCM63WPRVL86G" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「Amazonビジネス価格細則」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/business/register/org/landing" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス 無料アカウントの作成ページ</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://business.amazon.co.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス公式サイト</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://business.amazon.co.jp/ja/solutions/bulk-buying" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス「一括注文」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://business.amazon.co.jp/ja/solutions/bulk-buying/request-for-quote" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス「相見積もり機能」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://business.amazon.co.jp/ja/industries/small-business" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス「中小企業・個人事業主」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://business.amazon.co.jp/ja/solutions/team-management/account-switching" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス「アカウント切り替え」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=TCthycvaJ6zmE5NlON" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「Amazonのビジネスアカウントと個人アカウントを切り替える」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=202114920" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス公式ヘルプ「購入見積書をダウンロード」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=202114940" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス 個人事業主の確認書類（Amazon公式ヘルプ）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-01）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=201633260" rel="noopener" target="_blank" data-astro-cid-sgg5joot>ビジネスアカウントへのユーザーの追加（Amazon公式ヘルプ）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-12）</span></li><li data-astro-cid-sgg5joot><a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/G201958240?locale=ja-JP" rel="noopener" target="_blank" data-astro-cid-sgg5joot>セラーセントラル 出品者ヘルプ「法人価格と数量割引の編集」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/G201958320?locale=ja-JP" rel="noopener" target="_blank" data-astro-cid-sgg5joot>セラーセントラル 出品者ヘルプ「法人価格と数量割引の削除」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/G6ADCY95R5HWLD84?locale=ja-JP" rel="noopener" target="_blank" data-astro-cid-sgg5joot>セラーセントラル 出品者ヘルプ「法人割引の分析情報（BDI）」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/amazon-business-mitsumorisho-hakkou/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1oukbk0-g" x1="0" y1="0" x2="1" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1oukbk0-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1oukbk0-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1oukbk0-p)" data-astro-cid-yuatfsof></rect><circle cx="366" cy="57" r="153" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Amazon</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>見積書</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>出し方</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--amazon-business">Amazonビジネス実務</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>Amazonの見積書の出し方｜カートからPDFで保存する手順（Amazonビジネス・登録無料）</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>Amazonで見積書が必要なときは、登録無料のAmazonビジネスを使います。注文前はカートから参考見積書、注文後は注文履歴から見積書をPDFで保存でき、稟議や経費精算に使えます。個人アカウントしかない場合の考え方と、配送料が載らない・ダウンロードできないときの注意点もまとめました。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-06T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月6日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約12分</p></div></a><a class="card article-card" href="/articles/kojin-jigyou-kaigyoutodoke-nashi-amazon-business-toroku/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1ptehj0-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1ptehj0-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1ptehj0-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1ptehj0-p)" data-astro-cid-yuatfsof></rect><circle cx="363" cy="90" r="176" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>個人事業主</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>開業届なし</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Amazonビジネス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--amazon-business">Amazonビジネス実務</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>Amazonビジネスの登録に必要書類は？開業届なしの個人事業主が用意するもの一覧</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>個人事業主がAmazonビジネスに登録するときは、確認書類を1点提出します。開業届がなくても、過去2年以内の確定申告書B・収支内訳書、インボイスの登録通知書などで代わりになります。公式ヘルプの書類一覧と提出時の注意点、登録手順、屋号の扱いを整理しました。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-06T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月6日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/amazon-business/" data-astro-cid-sgg5joot>Amazonビジネス実務の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/business-prime/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 L4 4"></path><path d="M4 20 L21 20"></path><path d="M7 20 L7 14"></path><path d="M11 20 L11 10"></path><path d="M15 20 L15 15"></path><path d="M19 20 L19 7"></path><path d="M5 16 L20 8"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>Business Prime 損益分岐計算</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>注文回数と送料を入れると、プライムビジネス（旧Businessプライム）の元が取れる回数がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/amazon-business-check/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 9 l2 2 l3.5 -3.5"></path><path d="M8 15 h8"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>Amazonビジネスが必要か判定</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>5つの質問に答えるだけで、Amazonビジネスが「要る」「今は要らない」「どちらでも」のどれかがわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

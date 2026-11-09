@@ -1,0 +1,361 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Amazonビジネスアプリとは｜個人のショッピングアプリとの違い・できること・切り替え方 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="Amazonビジネスアプリは、個人向けのAmazonショッピングアプリとは別の無料アプリで、Amazonビジネスのアカウントでログインして使います。違い、できること、仕事用と個人用の分け方、公式ヘルプの切り替え手順と共有端末の注意点を整理します。"><link rel="canonical" href="https://soroecho.com/articles/amazon-business-app/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="Amazonビジネスアプリとは｜個人のショッピングアプリとの違い・できること・切り替え方 | そろえ帳"><meta property="og:description" content="Amazonビジネスアプリは、個人向けのAmazonショッピングアプリとは別の無料アプリで、Amazonビジネスのアカウントでログインして使います。違い、できること、仕事用と個人用の分け方、公式ヘルプの切り替え手順と共有端末の注意点を整理します。"><meta property="og:url" content="https://soroecho.com/articles/amazon-business-app/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/amazon-business-app.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Amazonビジネスアプリとは｜個人のショッピングアプリとの違い・できること・切り替え方 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Amazonビジネスアプリとは｜個人のショッピングアプリとの違い・できること・切り替え方 | そろえ帳"><meta name="twitter:description" content="Amazonビジネスアプリは、個人向けのAmazonショッピングアプリとは別の無料アプリで、Amazonビジネスのアカウントでログインして使います。違い、できること、仕事用と個人用の分け方、公式ヘルプの切り替え手順と共有端末の注意点を整理します。"><meta name="twitter:image" content="https://soroecho.com/og/amazon-business-app.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"Amazonビジネスアプリとは｜個人のショッピングアプリとの違い・できること・切り替え方","item":"https://soroecho.com/articles/amazon-business-app/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Amazonビジネスアプリとは｜個人のショッピングアプリとの違い・できること・切り替え方","description":"Amazonビジネスアプリは、個人向けのAmazonショッピングアプリとは別の無料アプリで、Amazonビジネスのアカウントでログインして使います。違い、できること、仕事用と個人用の分け方、公式ヘルプの切り替え手順と共有端末の注意点を整理します。","url":"https://soroecho.com/articles/amazon-business-app/","datePublished":"2026-11-09T00:00:00.000Z","dateModified":"2026-11-09T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/amazon-business-app/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Amazonビジネスアプリは無料ですか？登録しなくても使えますか？","acceptedAnswer":{"@type":"Answer","text":"アプリの入手は、App StoreとGoogle Playの表示で無料です。使うときは、Amazonビジネスのアカウントでログインします。公式の登録ページでは、アカウントの登録も無料（最低利用金額や利用期間の設定なし）と案内されています。アカウントがない場合は、先に登録してください（2026年11月8日確認）。"}},{"@type":"Question","name":"個人のAmazonショッピングアプリで、ビジネスアカウントの買い物はできますか？","acceptedAnswer":{"@type":"Answer","text":"公式ヘルプは、ビジネス用の購入と個人用の購入を区別しておくには、専用のAmazonビジネスアプリを使うよう案内しています。ショッピングアプリの画面でビジネスアカウントに切り替える手順は、今回読んだ公式の案内では見つかりませんでした。公式サイトの「アカウント切り替え」のページには、ウェブブラウザでもモバイルアプリでも切り替えられるとありますが、アプリの画面での手順は書かれていません。"}},{"@type":"Question","name":"仕事用と個人用の買い物を、同じスマホで分けられますか？","acceptedAnswer":{"@type":"Answer","text":"分けられます。個人は「Amazonショッピングアプリ」、仕事は「Amazonビジネスアプリ」と、アプリを分ける方法を公式ヘルプが案内しています。ブラウザでは「アカウントの切り替え」で行き来もできますが、共有デバイスでは使わないよう勧められています。公式サイトでは、この切り替えは無料のEメールドメイン（GmailやYahooなど）のビジネスアカウントが対象で、会社のドメインのアドレスでは使えないとされています。"}},{"@type":"Question","name":"iPadやタブレットでも使えますか？","acceptedAnswer":{"@type":"Answer","text":"App Storeの説明には「iPadは正式にサポートしていません」、Google Playの説明には「タブレットは正式にサポートしていません」とあります。正式なサポートの対象外です。"}},{"@type":"Question","name":"アプリで見積書や領収書は取れますか？","acceptedAnswer":{"@type":"Answer","text":"公式のアプリ紹介ページの機能一覧には、見積書のダウンロードも領収書の印刷も載っていません。載っているのは、「注文」ページでの請求書のダウンロードと購買状況の確認です。見積書や領収書は、スマホのブラウザでAmazonビジネスにログインして取る手順を、サイト内の記事にまとめています。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>Amazonビジネスアプリとは｜個人のショッピングアプリとの違い・できること・切り替え方</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec14pgow5-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec14pgow5-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ec14pgow5-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec14pgow5-p)" data-astro-cid-yuatfsof></rect><circle cx="322" cy="84" r="126" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>amazon</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>ビジネス</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>アプリ</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--amazon-business">Amazonビジネス実務</span><h1 data-astro-cid-sgg5joot>Amazonビジネスアプリとは｜個人のショッピングアプリとの違い・できること・切り替え方</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-11-09T00:00:00.000Z" data-astro-cid-sgg5joot>2026年11月9日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約8分</p><p class="cta-inline">仕事用の買い物を個人と分けるなら、Amazonビジネスの登録（無料）から始めます<a href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">登録ページを見る（公式）</a></p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論仕事用の専用アプリが別にありamazonビジネスのアカウントでログインして使います" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：仕事用の専用アプリが別にあり、Amazonビジネスのアカウントでログインして使います</a></li><li data-astro-cid-sgg5joot><a href="#個人のショッピングアプリとビジネスアプリは何が違うのか" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>個人のショッピングアプリとビジネスアプリは、何が違うのか</a></li><li data-astro-cid-sgg5joot><a href="#ビジネスアプリでできること公式の機能一覧" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>ビジネスアプリでできること：公式の機能一覧</a></li><li data-astro-cid-sgg5joot><a href="#個人アカウントではできずamazonビジネスなら使えること" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>個人アカウントではできず、Amazonビジネスなら使えること</a></li><li data-astro-cid-sgg5joot><a href="#仕事用と個人用の買い物を分ける3つの方法" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>仕事用と個人用の買い物を分ける3つの方法</a></li><li data-astro-cid-sgg5joot><a href="#アプリの入れ方と使い始め方" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>アプリの入れ方と使い始め方</a></li><li data-astro-cid-sgg5joot><a href="#つまずきやすい点" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>つまずきやすい点</a></li><li data-astro-cid-sgg5joot><a href="#確認リストとまとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>確認リストとまとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論仕事用の専用アプリが別にありamazonビジネスのアカウントでログインして使います">結論：仕事用の専用アプリが別にあり、Amazonビジネスのアカウントでログインして使います</h2>
+<p>Amazonビジネスアプリは、個人向けの「Amazonショッピングアプリ」とは別の、仕事の購買用のアプリです。ストアでの名前は「Amazonビジネス: B2B ショッピングアプリ」で、iPhoneはApp Store、AndroidはGoogle Playから無料で入れられます。</p>
+<p>ログインするのは、個人のAmazonアカウントではなく、Amazonビジネスのアカウントです。公式のアプリ紹介ページは、ビジネスアカウントにログインすることで、個人の買い物とは別にビジネス用の購買ができると案内しています。</p>
+<p>公式ヘルプは、仕事用と個人用の購入を区別するには、このビジネスアプリを使うよう案内しています。ブラウザでは「アカウントの切り替え」も使えますが、条件があり、共有の端末では勧められていません。</p>
+<p>アカウントの登録は無料です。持っていない人は、先に登録してからアプリを使います。以下は、公式のアプリ紹介ページ、ストア、Amazonの公式ヘルプなどを2026年11月8日に読んだ内容です。</p>
+<table>
+<thead>
+<tr>
+<th>あなたの状況</th>
+<th>最初の一歩</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Amazonビジネスに登録済みで、スマホから使いたい</td>
+<td>アプリを入れ、ビジネスアカウントでログインする</td>
+</tr>
+<tr>
+<td>登録を考えている個人事業主・法人</td>
+<td>先にAmazonビジネスに登録する。アプリは、そのアカウントで使う</td>
+</tr>
+<tr>
+<td>会社の購買を任された従業員</td>
+<td>管理者に招待を頼む。会社のアカウントでの選択と支出は、管理者に表示される</td>
+</tr>
+<tr>
+<td>共有するスマホ</td>
+<td>「アカウントの切り替え」は使わない（公式ヘルプの推奨）</td>
+</tr>
+</tbody>
+</table>
+<aside class="cta-box cta-box--subtle"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">Amazonビジネス</p><h3 class="cta-box__title">仕事用の買い物を個人と分けるなら、Amazonビジネスの登録（無料）から始めます</h3><p class="cta-box__body">アプリは、Amazonビジネスのアカウントでログインして使います。公式の登録ページでは、登録は無料で、最低利用金額や利用期間の設定もないと案内されています。法人価格、注文の承認、購入品リストの共有は、ビジネスアカウントの機能です。</p><a class="cta-box__button" href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">Amazonビジネスの登録ページへ（公式）</a></aside>
+<h2 id="個人のショッピングアプリとビジネスアプリは何が違うのか">個人のショッピングアプリとビジネスアプリは、何が違うのか</h2>
+<p>2つは別のアプリです。ビジネスアプリのストアの説明には、「Amazonショッピングアプリは個人向け、Amazonビジネスアプリは仕事向けで使い分け」とあります。</p>
+<table>
+<thead>
+<tr>
+<th>比べる点</th>
+<th>Amazonショッピングアプリ（個人向け）</th>
+<th>Amazonビジネスアプリ（仕事向け）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ストアでの名前</td>
+<td>Amazon ショッピングアプリ</td>
+<td>Amazonビジネス: B2B ショッピングアプリ</td>
+</tr>
+<tr>
+<td>使うアカウント</td>
+<td>個人のAmazonアカウント</td>
+<td>Amazonビジネスのアカウントにログインして使う</td>
+</tr>
+<tr>
+<td>想定する人</td>
+<td>個人の買い物</td>
+<td>法人・個人事業主</td>
+</tr>
+<tr>
+<td>価格</td>
+<td>個人向け価格</td>
+<td>法人価格が適用された商品を買える（一部の商品）</td>
+</tr>
+<tr>
+<td>リスト</td>
+<td>「ほしい物リスト」</td>
+<td>「購入品リスト」。ビジネスアカウント内で共有できる</td>
+</tr>
+<tr>
+<td>注文の承認</td>
+<td>ストアの説明に記載なし</td>
+<td>注文依頼の承認と、承認依頼のプッシュ通知</td>
+</tr>
+</tbody>
+</table>
+<p>2つとも、App Storeの提供元は「AMZN Mobile LLC」です。探すときは、ストアでの名前で見分けます。公式ヘルプは、ビジネス用の購入と個人用の購入を区別しておくには、専用のAmazonビジネスアプリを使うよう案内しています。</p>
+<h2 id="ビジネスアプリでできること公式の機能一覧">ビジネスアプリでできること：公式の機能一覧</h2>
+<p>公式のアプリ紹介ページと、ストアの説明にある機能です。</p>
+<table>
+<thead>
+<tr>
+<th>機能</th>
+<th>公式の説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>購入品リスト</td>
+<td>よく買う商品のリストを作り、組織内で共有できる</td>
+</tr>
+<tr>
+<td>バーコード・画像検索</td>
+<td>スキャンして、価格の比較、在庫確認、法人価格の確認ができる（カメラへのアクセスが必要）</td>
+</tr>
+<tr>
+<td>注文依頼の承認</td>
+<td>どこにいても承認できる。注文の更新や承認依頼のプッシュ通知を有効にできる</td>
+</tr>
+<tr>
+<td>アカウント管理</td>
+<td>支払い方法、配送先住所、購買ルール、購買コントロールを管理できる</td>
+</tr>
+<tr>
+<td>注文ページ</td>
+<td>請求書をダウンロードし、購買状況を確認できる</td>
+</tr>
+<tr>
+<td>受領記録</td>
+<td>商品のバーコードをスキャンして受領記録を完了し、経理部門に支払い処理を指示できる。ビジネスアカウントの設定で、受領の追跡を有効にして使う</td>
+</tr>
+<tr>
+<td>一括注文</td>
+<td>数量を問わず、特別価格で買える（法人価格・数量割引の対象は一部の商品）</td>
+</tr>
+<tr>
+<td>シングルサインオン（SSO）</td>
+<td>組織の認証情報でワンクリックでログインできる。管理者が設定する。ストアの説明では「今後リリース予定」の機能にも挙がっている</td>
+</tr>
+</tbody>
+</table>
+<p>個人事業主がひとりで使うなら、承認する相手がいないため、承認の機能の出番は少なくなります。</p>
+<p>公式のアプリ紹介ページの一覧には、見積書のダウンロードと領収書の印刷は載っていません。スマホのブラウザから取る手順は、<a href="/articles/amazon-business-mitsumorisho-hakkou/">見積書の出し方</a>と<a href="/articles/amazon-ryoushuusho-dashikata/">領収書の出し方</a>にあります。</p>
+<h2 id="個人アカウントではできずamazonビジネスなら使えること">個人アカウントではできず、Amazonビジネスなら使えること</h2>
+<p>アプリの価値は、中にあるビジネスアカウントの機能にあります。次の機能は、公式の案内でAmazonビジネスの利用者向けと説明されています。個人向けのショッピングアプリのストアの説明には、書かれていません。</p>
+<table>
+<thead>
+<tr>
+<th>できること</th>
+<th>公式の説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>仕事用の購買を分ける</td>
+<td>個人アカウントとビジネスアカウントで、支払いや注文内容を個別に管理できる</td>
+</tr>
+<tr>
+<td>法人価格</td>
+<td>Amazonビジネスのサービス利用者のみを対象にした割引価格。一部の商品だけで、対象は随時変わる</td>
+</tr>
+<tr>
+<td>数量割引</td>
+<td>一定の大量購入で受けられる場合がある。適用は保証されない</td>
+</tr>
+<tr>
+<td>注文の承認</td>
+<td>商品カテゴリー、購入金額、部門などの条件で、承認ルートを設定できる</td>
+</tr>
+<tr>
+<td>購入品リストの共有</td>
+<td>ビジネスアカウント内で共有できる</td>
+</tr>
+<tr>
+<td>領収書のまとめ取り</td>
+<td>購買データの「注文履歴データ」から、一度に最大2,000件の請求書をダウンロードできる</td>
+</tr>
+</tbody>
+</table>
+<p>法人価格が出る商品では、比べる価格に取消し線が付きます。仕組みは<a href="/articles/amazon-houjin-kakaku-suuryou-waribiki/">法人価格と数量割引の記事</a>、承認の設定は<a href="/articles/amazon-business-kounyuu-shounin-rule-settei/">承認フローの設定方法</a>、領収書のまとめ取りは<a href="/articles/amazon-business-ryoushuusho-matomete-hakkou/">領収書をまとめて発行する方法</a>にあります。</p>
+<aside class="cta-box cta-box--subtle"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">Amazonビジネス</p><h3 class="cta-box__title">仕事用の買い物を個人と分けるなら、Amazonビジネスの登録（無料）から始めます</h3><p class="cta-box__body">アプリは、Amazonビジネスのアカウントでログインして使います。公式の登録ページでは、登録は無料で、最低利用金額や利用期間の設定もないと案内されています。法人価格、注文の承認、購入品リストの共有は、ビジネスアカウントの機能です。</p><a class="cta-box__button" href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">Amazonビジネスの登録ページへ（公式）</a></aside>
+<h2 id="仕事用と個人用の買い物を分ける3つの方法">仕事用と個人用の買い物を分ける3つの方法</h2>
+<p>公式サイトは、分けると個人の費用と会社の経費・支払い情報を別々に管理でき、個人のデータや購買履歴を会社のアカウントから切り離せると説明しています。</p>
+<table>
+<thead>
+<tr>
+<th>分け方</th>
+<th>やり方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① アプリを分ける</td>
+<td>個人は「Amazonショッピングアプリ」、仕事は「Amazonビジネスアプリ」を使う。公式ヘルプが、区別する方法として案内している</td>
+</tr>
+<tr>
+<td>② アカウントを切り替える</td>
+<td>ブラウザの「アカウントの切り替え」で、同じ端末で2つのアカウントを行き来する</td>
+</tr>
+<tr>
+<td>③ アカウントを別に作る</td>
+<td>登録のとき、個人とは別にビジネスアカウントを作る</td>
+</tr>
+</tbody>
+</table>
+<h3 id="の切り替え方amazon公式ヘルプ">②の切り替え方（Amazon公式ヘルプ）</h3>
+<table>
+<thead>
+<tr>
+<th>端末</th>
+<th>手順</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>パソコンのブラウザ</td>
+<td>「[貴社名]のアカウント」のメニューで「アカウントの切り替え」を選ぶ。アカウントを追加するときは「アカウントの追加」からサインインし、使うアカウントを選ぶ</td>
+</tr>
+<tr>
+<td>スマホのブラウザ</td>
+<td>画面左上のメニューから「アカウントの切り替え」を選ぶ。アカウントを追加するときは「アカウントの追加」からサインインし、使うアカウントを選ぶ</td>
+</tr>
+</tbody>
+</table>
+<p>アプリの画面での手順は、今回読んだ公式の案内では見つかりませんでした。公式サイトの「アカウント切り替え」のページには、ブラウザでもモバイルアプリでも切り替えられるとあります。使える条件と共有端末の注意は、後の「つまずきやすい点」にまとめます。</p>
+<h3 id="のアカウントの作り方amazonビジネスの登録ページの案内">③のアカウントの作り方（Amazonビジネスの登録ページの案内）</h3>
+<table>
+<thead>
+<tr>
+<th>いまの使い方</th>
+<th>登録ページの案内</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>個人のメールで、個人用の注文</td>
+<td>会社のメールで、個人とは別にビジネスアカウントを新しく作る。個人アカウントを移行すると、注文履歴や支払い方法が管理者全員に見える</td>
+</tr>
+<tr>
+<td>個人のメールで、会社用の注文</td>
+<td>別に新しく作る。過去の注文履歴を引き継ぎたいときだけ、個人アカウントを移行する</td>
+</tr>
+<tr>
+<td>会社のメールで、個人用の注文</td>
+<td>ビジネスアカウントを新しく作り、会社のアドレスをそちらに紐づける。個人アカウントのアドレスは別のアドレスに変えられる</td>
+</tr>
+<tr>
+<td>会社のメールで、会社用の注文だけ</td>
+<td>個人アカウントをビジネスアカウントに移行する。履歴や住所、支払い方法は管理者全員と共有される</td>
+</tr>
+</tbody>
+</table>
+<p>個人事業主の登録は<a href="/articles/kojin-jigyou-kaigyoutodoke-nashi-amazon-business-toroku/">開業届なしでも登録できるか</a>、法人は<a href="/articles/amazon-houjin-account-tsukurikata/">法人アカウントの作り方</a>、個人アカウントとの違いの全体は<a href="/articles/amazon-business-kojin-chigai/">Amazonビジネスと個人アカウントの違い</a>を見てください。</p>
+<h2 id="アプリの入れ方と使い始め方">アプリの入れ方と使い始め方</h2>
+<ol>
+<li><strong>アカウントを用意する。</strong> 登録済みなら、そのアカウントを使います。持っていなければ、先にAmazonビジネスに登録します。会社に加わる人は、管理者に招待を頼みます</li>
+<li><strong>アプリを入れる。</strong> iPhoneは<a href="https://apps.apple.com/jp/app/id1498197033">App Store</a>、Androidは<a href="https://play.google.com/store/apps/details?id=com.amazon.mShop.android.business.shopping&amp;hl=ja">Google Play</a>で、「Amazonビジネス: B2B ショッピングアプリ」を入れます。パソコンで<a href="https://business.amazon.co.jp/ja/solutions/mobile-app">公式のアプリ紹介ページ</a>を開き、QRコードを読み取る方法もあります</li>
+<li><strong>ビジネスアカウントでログインする。</strong> 個人のAmazonアカウントではなく、Amazonビジネスのアカウントです</li>
+<li><strong>通知とカメラを許可する。</strong> 承認依頼などのプッシュ通知を有効にできます。バーコードと画像の検索には、カメラへのアクセスが必要です（ストアの説明）</li>
+<li><strong>使い始める。</strong> 購入品リストを作る、バーコードで価格・在庫・法人価格を見る、承認依頼に答える、の順で試します</li>
+</ol>
+<h2 id="つまずきやすい点">つまずきやすい点</h2>
+<table>
+<thead>
+<tr>
+<th>つまずき</th>
+<th>公式から分かること</th>
+<th>次の一手</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>どのアカウントでログインするか迷う</td>
+<td>ビジネスアプリは、Amazonビジネスのアカウントにログインして使う（公式のアプリ紹介ページ）。個人向けのショッピングアプリは、個人のAmazonアカウントで使うのが前提</td>
+<td>アプリごとに、使うアカウントを決めておく</td>
+</tr>
+<tr>
+<td>共有のスマホで切り替えたい</td>
+<td>公式ヘルプは、他のユーザーによるアカウントへのアクセスを防ぐため、共有デバイスでは切り替え機能を使わないよう勧めている</td>
+<td>共有の端末にビジネスアカウントを入れるかは、会社のルールや管理者に確認する</td>
+</tr>
+<tr>
+<td>切り替えのメニューが出ない</td>
+<td>公式サイトの「アカウント切り替え」のページでは、使えるのはGmailやYahooなど無料のEメールドメインのビジネスアカウントで、会社のドメインのアドレスでは使えない。公式ヘルプのページには、この条件は書かれていない</td>
+<td>会社のドメインのアドレスなら、①のアプリを分ける方法にする</td>
+</tr>
+<tr>
+<td>iPadなどのタブレットで使いたい</td>
+<td>ストアの説明に、iPadやタブレットは「正式にサポートしていません」とある</td>
+<td>スマホで使う</td>
+</tr>
+<tr>
+<td>バーコード検索が動かない</td>
+<td>カメラへのアクセスが必要（ストアの説明）</td>
+<td>端末の設定で、アプリにカメラを許可しているか見る</td>
+</tr>
+<tr>
+<td>承認依頼の通知が届かない</td>
+<td>プッシュ通知は有効にできる（公式）</td>
+<td>アプリと端末の通知設定を見る。承認ルールは管理者に確認する</td>
+</tr>
+<tr>
+<td>見積書や領収書が見当たらない</td>
+<td>アプリ紹介ページの機能一覧に載っていない</td>
+<td>ブラウザで取る</td>
+</tr>
+</tbody>
+</table>
+<h2 id="確認リストとまとめ">確認リストとまとめ</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Amazonビジネスのアカウントがある（なければ登録、会社に加わる人は招待を頼んだ）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 個人のアカウントではなく、ビジネスアカウントでログインした</li>
+<li class="task-list-item"><input type="checkbox" disabled> 共有の端末ではない（共有なら「アカウントの切り替え」を使わない）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 承認依頼の通知と、バーコード検索のカメラを許可した</li>
+</ul>
+<p>Amazonビジネスアプリは、個人向けとは別の無料アプリで、Amazonビジネスのアカウントでログインして使います。法人価格、注文の承認、購入品リストの共有は、ビジネスアカウントの機能で、アカウントがなければ先に登録します。</p>
+<p>見積書や領収書は、ブラウザで取ります。画面や機能は変わるため、最新の案内は公式で確かめてください。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Amazonビジネスアプリは無料ですか？登録しなくても使えますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>アプリの入手は、App StoreとGoogle Playの表示で無料です。使うときは、Amazonビジネスのアカウントでログインします。公式の登録ページでは、アカウントの登録も無料（最低利用金額や利用期間の設定なし）と案内されています。アカウントがない場合は、先に登録してください（2026年11月8日確認）。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>個人のAmazonショッピングアプリで、ビジネスアカウントの買い物はできますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式ヘルプは、ビジネス用の購入と個人用の購入を区別しておくには、専用のAmazonビジネスアプリを使うよう案内しています。ショッピングアプリの画面でビジネスアカウントに切り替える手順は、今回読んだ公式の案内では見つかりませんでした。公式サイトの「アカウント切り替え」のページには、ウェブブラウザでもモバイルアプリでも切り替えられるとありますが、アプリの画面での手順は書かれていません。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>仕事用と個人用の買い物を、同じスマホで分けられますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>分けられます。個人は「Amazonショッピングアプリ」、仕事は「Amazonビジネスアプリ」と、アプリを分ける方法を公式ヘルプが案内しています。ブラウザでは「アカウントの切り替え」で行き来もできますが、共有デバイスでは使わないよう勧められています。公式サイトでは、この切り替えは無料のEメールドメイン（GmailやYahooなど）のビジネスアカウントが対象で、会社のドメインのアドレスでは使えないとされています。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>iPadやタブレットでも使えますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>App Storeの説明には「iPadは正式にサポートしていません」、Google Playの説明には「タブレットは正式にサポートしていません」とあります。正式なサポートの対象外です。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>アプリで見積書や領収書は取れますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式のアプリ紹介ページの機能一覧には、見積書のダウンロードも領収書の印刷も載っていません。載っているのは、「注文」ページでの請求書のダウンロードと購買状況の確認です。見積書や領収書は、スマホのブラウザでAmazonビジネスにログインして取る手順を、サイト内の記事にまとめています。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://business.amazon.co.jp/ja/solutions/mobile-app" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス「ビジネスアプリ」（公式のアプリ紹介ページ）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://apps.apple.com/jp/app/amazon%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9-b2b-%E3%82%B7%E3%83%A7%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E3%82%A2%E3%83%97%E3%83%AA/id1498197033" rel="noopener" target="_blank" data-astro-cid-sgg5joot>App Store「Amazonビジネス: B2B ショッピングアプリ」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://play.google.com/store/apps/details?id=com.amazon.mShop.android.business.shopping&amp;hl=ja" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Google Play「Amazonビジネス: B2B ショッピングアプリ」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://apps.apple.com/jp/app/amazon-%E3%82%B7%E3%83%A7%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E3%82%A2%E3%83%97%E3%83%AA/id374254473" rel="noopener" target="_blank" data-astro-cid-sgg5joot>App Store「Amazon ショッピングアプリ」（個人向け）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://play.google.com/store/apps/details?id=com.amazon.mShop.android.shopping&amp;hl=ja" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Google Play「Amazon ショッピングアプリ」（個人向け）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=TCthycvaJ6zmE5NlON" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「Amazonのビジネスアカウントと個人アカウントを切り替える」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://business.amazon.co.jp/ja/solutions/team-management/account-switching" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス「アカウント切り替え」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://business.amazon.co.jp/ja/solutions/team-management" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス「チームのアカウント管理」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://business.amazon.co.jp/ja/register" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス「アカウント登録」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=GUKKCM63WPRVL86G" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス価格細則（Amazon公式ヘルプ）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=202119460" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス ヘルプ「支払い明細書や適格請求書を取得する」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-01）</span></li><li data-astro-cid-sgg5joot><a href="https://business.amazon.co.jp/ja/learn/setting-up-approval-rules" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス【設定ガイド】購買/承認ルールの設定方法</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://business.amazon.co.jp/ja/solutions/streamlined-purchasing/3-way-match" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス「受領記録機能」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://business.amazon.co.jp/ja/solutions/systems-integration/single-sign-on" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス「シングルサインオン（SSO）」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/amazon-business-mitsumorisho-hakkou/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1oukbk0-g" x1="0" y1="0" x2="1" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1oukbk0-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1oukbk0-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1oukbk0-p)" data-astro-cid-yuatfsof></rect><circle cx="366" cy="57" r="153" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Amazon</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>見積書</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>出し方</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--amazon-business">Amazonビジネス実務</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>Amazonの見積書の出し方｜カートからPDFで保存する手順（Amazonビジネス・登録無料）</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>Amazonで見積書が必要なときは、登録無料のAmazonビジネスを使います。注文前はカートから参考見積書、注文後は注文履歴から見積書をPDFで保存でき、稟議や経費精算に使えます。個人アカウントしかない場合の考え方と、配送料が載らない・ダウンロードできないときの注意点もまとめました。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-06T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月6日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約12分</p></div></a><a class="card article-card" href="/articles/kojin-jigyou-kaigyoutodoke-nashi-amazon-business-toroku/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1ptehj0-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1ptehj0-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1ptehj0-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1ptehj0-p)" data-astro-cid-yuatfsof></rect><circle cx="363" cy="90" r="176" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>個人事業主</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>開業届なし</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Amazonビジネス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--amazon-business">Amazonビジネス実務</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>Amazonビジネスの登録に必要書類は？開業届なしの個人事業主が用意するもの一覧</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>個人事業主がAmazonビジネスに登録するときは、確認書類を1点提出します。開業届がなくても、過去2年以内の確定申告書B・収支内訳書、インボイスの登録通知書などで代わりになります。公式ヘルプの書類一覧と提出時の注意点、登録手順、屋号の扱いを整理しました。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-06T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月6日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/amazon-business/" data-astro-cid-sgg5joot>Amazonビジネス実務の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/business-prime/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 L4 4"></path><path d="M4 20 L21 20"></path><path d="M7 20 L7 14"></path><path d="M11 20 L11 10"></path><path d="M15 20 L15 15"></path><path d="M19 20 L19 7"></path><path d="M5 16 L20 8"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>Business Prime 損益分岐計算</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>注文回数と送料を入れると、プライムビジネス（旧Businessプライム）の元が取れる回数がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/amazon-business-check/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 9 l2 2 l3.5 -3.5"></path><path d="M8 15 h8"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>Amazonビジネスが必要か判定</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>5つの質問に答えるだけで、Amazonビジネスが「要る」「今は要らない」「どちらでも」のどれかがわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

@@ -1,0 +1,605 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>経営事項審査（経審）の流れ｜決算変更届から結果通知まで・手数料・有効期間・必要書類 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="経営事項審査（経審）は、公共工事を元請で受ける建設業者が受ける審査です。決算変更届、経営状況分析、経営規模等評価・総合評定値の請求、結果通知書の順に進み、有効期間は審査基準日から1年7か月です。手数料と必要書類を、東京都の説明書（令和8年9月版）などで整理します。"><link rel="canonical" href="https://soroecho.com/articles/keiei-jikou-shinsa-nagare/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="経営事項審査（経審）の流れ｜決算変更届から結果通知まで・手数料・有効期間・必要書類 | そろえ帳"><meta property="og:description" content="経営事項審査（経審）は、公共工事を元請で受ける建設業者が受ける審査です。決算変更届、経営状況分析、経営規模等評価・総合評定値の請求、結果通知書の順に進み、有効期間は審査基準日から1年7か月です。手数料と必要書類を、東京都の説明書（令和8年9月版）などで整理します。"><meta property="og:url" content="https://soroecho.com/articles/keiei-jikou-shinsa-nagare/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/keiei-jikou-shinsa-nagare.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="経営事項審査（経審）の流れ｜決算変更届から結果通知まで・手数料・有効期間・必要書類 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="経営事項審査（経審）の流れ｜決算変更届から結果通知まで・手数料・有効期間・必要書類 | そろえ帳"><meta name="twitter:description" content="経営事項審査（経審）は、公共工事を元請で受ける建設業者が受ける審査です。決算変更届、経営状況分析、経営規模等評価・総合評定値の請求、結果通知書の順に進み、有効期間は審査基準日から1年7か月です。手数料と必要書類を、東京都の説明書（令和8年9月版）などで整理します。"><meta name="twitter:image" content="https://soroecho.com/og/keiei-jikou-shinsa-nagare.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"経営事項審査（経審）の流れ｜決算変更届から結果通知まで・手数料・有効期間・必要書類","item":"https://soroecho.com/articles/keiei-jikou-shinsa-nagare/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"経営事項審査（経審）の流れ｜決算変更届から結果通知まで・手数料・有効期間・必要書類","description":"経営事項審査（経審）は、公共工事を元請で受ける建設業者が受ける審査です。決算変更届、経営状況分析、経営規模等評価・総合評定値の請求、結果通知書の順に進み、有効期間は審査基準日から1年7か月です。手数料と必要書類を、東京都の説明書（令和8年9月版）などで整理します。","url":"https://soroecho.com/articles/keiei-jikou-shinsa-nagare/","datePublished":"2026-11-11T00:00:00.000Z","dateModified":"2026-11-11T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/keiei-jikou-shinsa-nagare/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"経営事項審査は誰が受けるのですか。","acceptedAnswer":{"@type":"Answer","text":"公共工事を発注者から直接請け負おうとする建設業者が受けなければならない審査です（建設業法第27条の23）。受ける業種の建設業許可が前提で、東京都の説明書は、結果通知書の交付の時点で許可がない場合は結果通知書を交付できないと書いています。"}},{"@type":"Question","name":"経営事項審査の流れを教えてください。","acceptedAnswer":{"@type":"Answer","text":"東京都の説明書（令和8年9月版）では、決算変更届を出したうえで、登録経営状況分析機関に経営状況分析を申請し、経営状況分析結果通知書を受け取ります。そのあと、許可行政庁に経営規模等評価の申請と総合評定値の請求をして、結果通知書の交付を受けます。入札参加資格審査は、各発注者に申請します。"}},{"@type":"Question","name":"経営事項審査の有効期間はどのくらいですか。","acceptedAnswer":{"@type":"Answer","text":"審査基準日（直前の決算日）から1年7か月です。建設業法施行規則第18条の2は、請負契約を締結する日の1年7月前の日の直後の事業年度終了の日以降に、経営事項審査を受けていなければならないと定めています。毎年受けないと、結果通知書の有効期限が切れて空白ができます。"}},{"@type":"Question","name":"経営事項審査の手数料はいくらですか。","acceptedAnswer":{"@type":"Answer","text":"国土交通省の案内では、経営規模等評価の申請が8,100円に審査対象業種1種類につき2,300円を加えた額、総合評定値の請求が400円に1種類につき200円を加えた額です。東京都の表では、1業種で合計11,000円です。経営状況分析の手数料は、登録経営状況分析機関ごとに定められています。"}},{"@type":"Question","name":"経営事項審査は電子申請でできますか。","acceptedAnswer":{"@type":"Answer","text":"できます。東京都はJCIPによる電子申請を受け付けており、審査の予約は不要です。GビズIDプライムが要り、手数料の納付はPay-easyのみです。結果通知書は紙で郵送され、標準処理期間は申請受付から19日（閉庁日を含まない）です。合併・譲渡・承継・会社分割などの特殊な経審は、電子申請の対象外です。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>経営事項審査（経審）の流れ｜決算変更届から結果通知まで・手数料・有効期間・必要書類</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1nfduvp-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1nfduvp-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ec1nfduvp-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1nfduvp-p)" data-astro-cid-yuatfsof></rect><circle cx="383" cy="59" r="146" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>経営事項審査</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>流れ</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>経営事項審査（経審）の流れ｜決算変更届から結果通知まで・手数料・有効期間・必要書類</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-11-11T00:00:00.000Z" data-astro-cid-sgg5joot>2026年11月11日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約19分</p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論経審は決算変更届--経営状況分析--経営規模等評価総合評定値の請求--結果通知書の順有効期間は審査基準日から1年7か月" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：経審は「決算変更届 → 経営状況分析 → 経営規模等評価・総合評定値の請求 → 結果通知書」の順。有効期間は審査基準日から1年7か月</a></li><li data-astro-cid-sgg5joot><a href="#経審とは誰が受けるのか何を評価するのか" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>経審とは：誰が受けるのか、何を評価するのか</a></li><li data-astro-cid-sgg5joot><a href="#手順1決算変更届事業年度終了届を出す" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>手順1：決算変更届（事業年度終了届）を出す</a></li><li data-astro-cid-sgg5joot><a href="#手順2登録経営状況分析機関で経営状況分析を受ける" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>手順2：登録経営状況分析機関で経営状況分析を受ける</a></li><li data-astro-cid-sgg5joot><a href="#手順3経営規模等評価を申請し総合評定値を請求する" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>手順3：経営規模等評価を申請し、総合評定値を請求する</a></li><li data-astro-cid-sgg5joot><a href="#手順4結果通知書を受け取る" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>手順4：結果通知書を受け取る</a></li><li data-astro-cid-sgg5joot><a href="#手順5入札参加資格審査に使う" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>手順5：入札参加資格審査に使う</a></li><li data-astro-cid-sgg5joot><a href="#有効期間審査基準日から1年7か月" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>有効期間：審査基準日から1年7か月</a></li><li data-astro-cid-sgg5joot><a href="#手数料経営規模等評価総合評定値は審査対象の業種の数で決まる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>手数料：経営規模等評価・総合評定値は審査対象の業種の数で決まる</a></li><li data-astro-cid-sgg5joot><a href="#必要書類東京都知事許可窓口審査の場合" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>10</span>必要書類（東京都知事許可・窓口審査の場合）</a></li><li data-astro-cid-sgg5joot><a href="#電子申請jcipで受ける場合" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>11</span>電子申請（JCIP）で受ける場合</a></li><li data-astro-cid-sgg5joot><a href="#令和8年7月1日以降の申請で変わった点" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>12</span>令和8年7月1日以降の申請で変わった点</a></li><li data-astro-cid-sgg5joot><a href="#つまずきやすい点" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>13</span>つまずきやすい点</a></li><li data-astro-cid-sgg5joot><a href="#経審前のチェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>14</span>経審前のチェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#よくある質問とまとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>15</span>よくある質問とまとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論経審は決算変更届--経営状況分析--経営規模等評価総合評定値の請求--結果通知書の順有効期間は審査基準日から1年7か月">結論：経審は「決算変更届 → 経営状況分析 → 経営規模等評価・総合評定値の請求 → 結果通知書」の順。有効期間は審査基準日から1年7か月</h2>
+<p>経営事項審査（経審）は、公共工事を発注者から直接請け負おうとする建設業者が受けなければならない審査です。国土交通省の公式ページと建設業法第27条の23（e-Gov法令検索）に書かれています（どちらも2026年11月3日取得）。</p>
+<p>進め方は、東京都の経営事項審査申請説明書（都知事許可業者用、令和8年9月版）に沿うと、決算変更届、経営状況分析、経営規模等評価の申請と総合評定値の請求、結果通知書の受け取りの順です。</p>
+<p>結果通知書の有効期間は、審査基準日（直前の決算日）から1年7か月です。</p>
+<table>
+<thead>
+<tr>
+<th>順番</th>
+<th>やること</th>
+<th>出す先</th>
+<th>東京都などの目安</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>決算変更届（事業年度終了届）を出す</td>
+<td>許可行政庁</td>
+<td>事業年度終了後4か月以内</td>
+</tr>
+<tr>
+<td>2</td>
+<td>経営状況分析を申請し、経営状況分析結果通知書を受け取る</td>
+<td>登録経営状況分析機関</td>
+<td>機関による。CIICは原則3営業日以内に結果通知書を発送</td>
+</tr>
+<tr>
+<td>3</td>
+<td>経営規模等評価を申請し、総合評定値を請求する</td>
+<td>許可行政庁</td>
+<td>窓口は予約制。電子申請は予約不要</td>
+</tr>
+<tr>
+<td>4</td>
+<td>経営規模等評価結果通知書と総合評定値通知書を受け取る</td>
+<td>許可行政庁</td>
+<td>標準処理期間は窓口22日、電子申請19日（どちらも閉庁日を含まない）</td>
+</tr>
+<tr>
+<td>5</td>
+<td>入札参加資格審査に使う</td>
+<td>各発注者</td>
+<td>発注者ごとに確認する</td>
+</tr>
+</tbody>
+</table>
+<p>この記事で分かることは次のとおりです。</p>
+<ul>
+<li>経審を誰が受けるのか、何を評価するのか</li>
+<li>5つの手順ごとの、出す先・書類・費用</li>
+<li>有効期間の数え方と、空白を作らないための考え方</li>
+<li>電子申請（JCIP）と、令和8年7月1日以降の申請で変わった点</li>
+</ul>
+<p>この記事は、東京都知事許可の業者の場合を中心に書いています。大臣許可の業者は、本店所在地を管轄する地方整備局等に申請します。東京都内に主たる営業所がある大臣許可の業者は、関東地方整備局が審査します（東京都の説明書P.2）。</p>
+<p>他の都道府県は、予約方法や受付時間、標準処理期間が違うことがあります。許可を受けた都道府県の説明書で確認してください。</p>
+<h2 id="経審とは誰が受けるのか何を評価するのか">経審とは：誰が受けるのか、何を評価するのか</h2>
+<h3 id="誰が受けるのか">誰が受けるのか</h3>
+<p>建設業法第27条の23第1項は、公共性のある施設または工作物に関する建設工事で政令で定めるものを、発注者から直接請け負おうとする建設業者は、その経営に関する客観的事項について審査を受けなければならないと定めています。</p>
+<p>公共工事を、元請として受けるかどうかが分かれ目です。民間工事だけを受ける業者に、経審を受ける義務があるとは、この条文には書かれていません。</p>
+<p>経審を受けるには、その業種の建設業許可が必要です。東京都の説明書P.1は、申請時に許可があっても、結果通知書の交付の時点で廃業などにより許可がない場合は、結果通知書を交付できないと書いています。</p>
+<p>許可の更新と時期が重なる業者は、<a href="/articles/kensetsugyou-kyoka-koushin/">建設業許可の更新手続きの記事</a>も合わせて確認してください。</p>
+<h3 id="経審は入札参加資格のすべてではない">経審は入札参加資格のすべてではない</h3>
+<p>国土交通省の「経営事項審査及び総合評定値の請求について」によると、公共工事の各発注機関は、競争入札に参加しようとする建設業者の資格審査を行います。発注機関は、欠格要件に該当しないかを審査したうえで、客観的事項と主観的事項の審査結果を点数化し、順位付けと格付けをします。</p>
+<p>このうち客観的事項の審査が、経営事項審査です。経審の結果通知書は、発注者の審査に使う材料の1つです。</p>
+<h3 id="評価の項目と審査する機関">評価の項目と、審査する機関</h3>
+<p>東京都の説明書P.3によると、審査項目と審査する機関は次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>審査項目</th>
+<th>主な内容</th>
+<th>審査する機関</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>経営規模（X）</td>
+<td>完成工事高（X1）、自己資本額と利払前税引前償却前利益の額（X2）</td>
+<td>東京都知事（許可行政庁）</td>
+</tr>
+<tr>
+<td>技術力（Z）</td>
+<td>技術職員数、元請完成工事高</td>
+<td>東京都知事（許可行政庁）</td>
+</tr>
+<tr>
+<td>その他の審査項目・社会性等（W）</td>
+<td>建設工事の担い手の育成・確保、建設業の営業継続、防災活動への貢献、法令遵守、建設業の経理、研究開発、建設機械の保有、認証・登録の状況</td>
+<td>東京都知事（許可行政庁）</td>
+</tr>
+<tr>
+<td>経営状況（Y）</td>
+<td>純支払利息比率、負債回転期間、総資本売上総利益率、売上高経常利益率、自己資本対固定資産比率、自己資本比率、営業キャッシュフロー、利益剰余金</td>
+<td>登録経営状況分析機関</td>
+</tr>
+</tbody>
+</table>
+<p>総合評定値（P）は、経営状況分析（Y）の結果と、経営規模等評価（X、Z、W）の結果から算出します。国土交通省の資料（令和8年7月1日施行の改正の資料）では、P＝0.25×X1＋0.15×X2＋0.20×Y＋0.25×Z＋0.15×Wです。</p>
+<p>総合評定値は、許可行政庁に請求があった場合だけ通知されます（東京都の説明書P.3）。国土交通省は、総合評定値の請求を任意としつつ、発注者によっては請求を義務付けている場合があると書いています。</p>
+<h2 id="手順1決算変更届事業年度終了届を出す">手順1：決算変更届（事業年度終了届）を出す</h2>
+<p>経審は、決算（審査基準日の決算）の内容を点数にする審査です。東京都の説明書P.1の流れでは、まず変更届出書（決算報告用）を出し、そのあとでインターネットから審査の予約をします。</p>
+<p>説明書P.4は、申請日までの確認事項として、審査対象の事業年度の変更届出書（決算報告用）を提出したか、申請に必要な書類に不足や記入漏れがないか、申請書類と確認資料の金額が合っているかを挙げています。</p>
+<p>決算変更届の期限は、事業年度終了後4か月以内です（建設業法第11条第2項）。書類の中身と、出し忘れたときの扱いは、<a href="/articles/kensetsugyou-kyoka-koushin/">建設業許可の更新手続きの記事</a>の「決算変更届」の節で整理しています。</p>
+<p>決算書や財務諸表は、税理士に作成を頼むことがあります。探し方と費用の見方は、<a href="/articles/zeirishi-sagashikata-hiyou-souba/">税理士の探し方の記事</a>にまとめています。</p>
+<p>登録経営状況分析機関に財務諸表などの訂正届を出した場合は、変更届出書（別紙8）の訂正についても、建設業課に出す必要があります（説明書P.9）。</p>
+<h2 id="手順2登録経営状況分析機関で経営状況分析を受ける">手順2：登録経営状況分析機関で経営状況分析を受ける</h2>
+<h3 id="経営状況分析とは">経営状況分析とは</h3>
+<p>建設業法第27条の24第1項は、経営状況分析を、国土交通大臣の登録を受けた登録経営状況分析機関が行うと定めています。結果は、経営状況分析結果通知書で受け取ります。</p>
+<p>登録経営状況分析機関は、申請者が選べます（東京都の説明書P.2）。国土交通省の一覧（令和7年1月現在、2026年11月3日取得）には10機関が載っています。申請の時期や方法は、それぞれの機関に問い合わせるよう書かれています。</p>
+<h3 id="申請に必要な書類ciicの例">申請に必要な書類（CIICの例）</h3>
+<p>機関によって様式や運用は違います。一例として、一般財団法人建設業情報管理センター（CIIC）の提出書類一覧（2026年11月3日取得）を整理します。</p>
+<table>
+<thead>
+<tr>
+<th>書類</th>
+<th>内容・注意</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>経営状況分析申請書</td>
+<td>当財団の様式</td>
+</tr>
+<tr>
+<td>審査基準日直前1年分の財務諸表等</td>
+<td>CIICに初めて申請する場合は3期分。法人は様式第15号から第17号の2、個人は様式第18号・第19号</td>
+</tr>
+<tr>
+<td>減価償却実施額を確認できる書類（当期・前期）</td>
+<td>法人は税務申告書別表16(1)(2)等の写し。個人は青色申告書一式または収支内訳書一式の写し。減価償却実施額が0なら不要</td>
+</tr>
+<tr>
+<td>建設業許可通知書の写し、または建設業許可証明書の写し</td>
+<td>商号、代表者、所在地などに変更があれば変更届の写しも付ける</td>
+</tr>
+<tr>
+<td>委任状の写し</td>
+<td>代理人が申請する場合</td>
+</tr>
+<tr>
+<td>換算報告書</td>
+<td>決算期を変更して、当期決算が12か月に満たない場合</td>
+</tr>
+</tbody>
+</table>
+<p>個人の減価償却の確認書類に個人番号（マイナンバー）が載っている場合は、塗りつぶしてから送るよう、CIICの一覧に書かれています。</p>
+<h3 id="費用と日数ciicの例">費用と日数（CIICの例）</h3>
+<p>登録経営状況分析機関の手数料は、機関ごとに決まっています（国土交通省の「経営事項審査及び総合評定値の請求について」）。</p>
+<p>CIICの料金プランのページと料金改定のお知らせ（2026年11月3日取得）によると、令和8年11月1日からの料金は次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>プラン</th>
+<th>料金（税込）</th>
+<th>結果通知書の発行まで</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>電子申請プラン</td>
+<td>13,000円</td>
+<td>2〜3営業日以内</td>
+</tr>
+<tr>
+<td>郵送申請プラン</td>
+<td>14,000円</td>
+<td>3営業日以内</td>
+</tr>
+<tr>
+<td>電子申請スピードプラン</td>
+<td>22,000円</td>
+<td>24時間以内（書類に不備がない場合）</td>
+</tr>
+</tbody>
+</table>
+<p>電子申請プランと郵送申請プランでは、結果通知書を郵送で受け取る場合に別に500円かかり、電子で受け取る場合（e結果通知またはコンビニ受取）は無料です。スピードプランは、電子でも郵送でも受け取りの費用がかかりません。日数は、書類に不備がない場合の目安で、追加資料が必要になると延びます。</p>
+<p>他の機関の料金や日数は、それぞれの機関のページで確認します。</p>
+<h3 id="経営状況分析結果通知書は原本を使う">経営状況分析結果通知書は原本を使う</h3>
+<p>経営規模等評価の申請と総合評定値の請求を同時に行う場合は、経営状況分析を先に受け、結果通知書を取っておく必要があります（CIICの案内）。</p>
+<p>東京都の説明書P.2は、結果通知書を原本で審査当日に持参するよう求めています。ない場合は、審査を中止し、再度予約し直すこともあると書かれています。</p>
+<h2 id="手順3経営規模等評価を申請し総合評定値を請求する">手順3：経営規模等評価を申請し、総合評定値を請求する</h2>
+<h3 id="申請の種類は3つ多くはを選ぶ">申請の種類は3つ。多くは①を選ぶ</h3>
+<p>東京都の説明書P.1によると、申請の種類は次の3つで、申請者が選びます。</p>
+<ol>
+<li>「経営規模等評価結果通知書」と「総合評定値通知書」の両方を申請する</li>
+<li>「経営規模等評価結果通知書」だけを申請する</li>
+<li>「総合評定値通知書」だけを申請する</li>
+</ol>
+<p>説明書は、東京都をはじめ国や他の地方公共団体の多くが、公共工事の入札参加資格審査で総合評定値を有していることを条件にしているとして、①の選択を案内しています。入札先の条件は、各発注者に確認します。</p>
+<h3 id="誰が出せるかどこに出すか">誰が出せるか、どこに出すか</h3>
+<p>東京都の説明書P.2によると、書類を提出できるのは、個人の申請者は本人、法人は役員や従業員等、または行政書士（補助者を含む）と弁護士です。代理申請は、委任状を付けます。</p>
+<p>出す先は、知事許可の業者は許可を受けている知事、大臣許可の業者は地方整備局長等です（国土交通省）。</p>
+<h3 id="窓口で受ける場合東京都">窓口で受ける場合（東京都）</h3>
+<p>東京都の経営事項審査のページ（更新日2026年9月10日）と説明書によると、窓口の審査は次のように進みます。</p>
+<ol>
+<li>変更届出書（決算報告用）を出し、経営状況分析結果通知書を受け取る</li>
+<li>予約システムで審査日を予約する</li>
+<li>予約した日時に、都庁第二本庁舎3階南側の審査窓口へ行き、審査を受ける</li>
+<li>審査が終わったら、確認窓口で手数料を納め、受付をする</li>
+<li>申請書の副本（正本の写し）が返され、結果通知書は後日、郵送で届く</li>
+</ol>
+<p>予約は、令和7年5月1日以降の審査日時から、予約システムによる予約に限られます。窓口、電話、予約申込票では予約できません。</p>
+<p>予約時間に遅れると、審査の順番を変更することがあります。書類の不備で審査が終わらなかった場合は、再来で審査を受けます。再来は予約が要りません（説明書P.7）。</p>
+<p>審査が終わり、申請書が受理されたあとは、申請書の内容を変更できません（説明書P.7、東京都のページ）。</p>
+<h3 id="初めて受ける人へ">初めて受ける人へ</h3>
+<p>東京都は、初めて経営事項審査を受ける人に、事前に相談コーナーで予備調査（書類の不足がないかなど）を受けるよう案内しています（電子申請の案内P.3）。</p>
+<p>相談コーナーは、都庁第二本庁舎3階南側の建設業課内にあります。平日の午前9時30分から11時30分、午後1時から4時30分で、電話（代表03-5321-1111、内線30-657・658・659）でも相談できます。</p>
+<p>技術職員が40名を超える場合、建設機械が8台以上ある場合、確認対象の工事が20件を超える場合などは、書類を事前に預けて確認を受ける仕組みがあります。持ち込みの期限は、審査日のおおむね1か月前までです（説明書P.5）。電子申請では、事前確認は不要です。</p>
+<h2 id="手順4結果通知書を受け取る">手順4：結果通知書を受け取る</h2>
+<p>東京都の説明書P.4によると、東京都知事許可の業者の結果通知書の交付に要する標準処理期間は、22日（閉庁日を含まない）です。この期間を過ぎても届かない場合は、建設業指導担当に問い合わせます。結果通知書は再発行できません。</p>
+<p>電子申請の場合の標準処理期間は、申請受付から19日（閉庁日を含まない）です。標準処理期間には、手数料の納付にかかる期間と補正の期間は含まれません（東京都の電子申請の案内P.4）。</p>
+<p>経営事項審査の結果は、CIICのウェブサイトで公表されます（全国の許可建設業者が対象）。東京都知事許可の業者は、都民情報ルームでも閲覧できます（説明書P.7）。公表されるのは、有効期間内の結果通知書で、有効期間内に複数回受けた場合は直近のものだけです（東京都のページ）。</p>
+<h2 id="手順5入札参加資格審査に使う">手順5：入札参加資格審査に使う</h2>
+<p>結果通知書を受け取ったあとは、入札に参加したい発注者の資格審査に申請します。東京都のページは、入札参加手続等については、各自治体の契約の発注者に問い合わせるよう案内しています。</p>
+<p>説明書P.3は、指名競争入札の参加資格審査などに合わせて経審を申請するときは、結果通知書の有効期限に注意するよう書いています。結果通知書の有効期限が切れると、公共工事発注者が作る指名競争入札用名簿に名前が載っていても、公共工事の請負契約を結べません（説明書P.4）。</p>
+<h2 id="有効期間審査基準日から1年7か月">有効期間：審査基準日から1年7か月</h2>
+<h3 id="数え方">数え方</h3>
+<p>建設業法施行規則第18条の2（e-Gov法令検索）は、建設業者は、公共工事について発注者と請負契約を締結する日の1年7月前の日の直後の事業年度終了の日以降に、経営事項審査を受けていなければならないと定めています。</p>
+<p>東京都の説明書P.3は、これを、請負契約を締結する日の1年7か月前の日の直後の事業年度終了の日（審査基準日）以降に、結果通知書の交付を受けていることだと説明しています。</p>
+<p>CIICの案内（2026年11月3日取得）も、有効期間は審査基準日から1年7か月で、次の年度の結果通知書を有効期限までに受け取る必要があると書いています。</p>
+<h3 id="日付の例">日付の例</h3>
+<table>
+<thead>
+<tr>
+<th>決算日（審査基準日）</th>
+<th>有効期限</th>
+<th>出どころ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12月31日</td>
+<td>1年7か月後の7月31日</td>
+<td>東京都の説明書P.4の図</td>
+</tr>
+<tr>
+<td>3月31日</td>
+<td>1年7か月後の10月30日</td>
+<td>CIICの案内の例（年は省いて月日だけ示す）</td>
+</tr>
+</tbody>
+</table>
+<p>資料によって、月末の数え方が1日違って見えます。期限ぎりぎりを狙わず、次の結果通知書は余裕をもって受け取ります。</p>
+<p>たとえば3月決算の業者は、決算変更届の期限が7月31日、前期の結果通知書の有効期限が10月30日（CIICの例）です。この間に、経営状況分析、審査の予約と審査、結果通知書の交付（標準処理期間22日）までを終えます。</p>
+<h3 id="空白を作らない">空白を作らない</h3>
+<p>説明書P.4は、前期決算での結果通知書の有効期限と、当期決算での結果通知書の交付を受けるまでの間をあけないようにと書いています。</p>
+<p>また、審査は、申請日（審査が終わって申請書が受理された日）の直前の決算日を基準にします。12月31日決算の会社が、前年12月31日決算に基づいて申請するなら、新たな決算日（当年12月31日）の前日までに申請します。当年12月31日以降は、できません（説明書P.4）。</p>
+<h2 id="手数料経営規模等評価総合評定値は審査対象の業種の数で決まる">手数料：経営規模等評価・総合評定値は審査対象の業種の数で決まる</h2>
+<h3 id="国土交通省の案内">国土交通省の案内</h3>
+<p>国土交通省の「経営事項審査及び総合評定値の請求について」（2026年11月3日取得）によると、手数料は次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>手数料</th>
+<th>金額</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>経営状況分析</td>
+<td>登録経営状況分析機関へ直接問い合わせる</td>
+</tr>
+<tr>
+<td>経営規模等評価の申請</td>
+<td>8,100円に、審査対象業種1種類につき2,300円を加えた額</td>
+</tr>
+<tr>
+<td>総合評定値の請求</td>
+<td>400円に、審査対象業種1種類につき200円を加えた額</td>
+</tr>
+</tbody>
+</table>
+<h3 id="東京都の手数料一覧説明書p6">東京都の手数料一覧（説明書P.6）</h3>
+<p>東京都の説明書の一覧表の、1〜5業種の分です。「合計」は、経営規模等評価の申請と総合評定値の請求を同時にする場合の額です。</p>
+<table>
+<thead>
+<tr>
+<th>審査対象の業種数</th>
+<th>合計</th>
+<th>経営規模等評価</th>
+<th>総合評定値の請求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1業種</td>
+<td>11,000円</td>
+<td>10,400円</td>
+<td>600円</td>
+</tr>
+<tr>
+<td>2業種</td>
+<td>13,500円</td>
+<td>12,700円</td>
+<td>800円</td>
+</tr>
+<tr>
+<td>3業種</td>
+<td>16,000円</td>
+<td>15,000円</td>
+<td>1,000円</td>
+</tr>
+<tr>
+<td>4業種</td>
+<td>18,500円</td>
+<td>17,300円</td>
+<td>1,200円</td>
+</tr>
+<tr>
+<td>5業種</td>
+<td>21,000円</td>
+<td>19,600円</td>
+<td>1,400円</td>
+</tr>
+</tbody>
+</table>
+<p>納め方は、審査が終わったあとに、手数料の受付で現金またはキャッシュレス決済で払います（説明書P.6）。「経営事項審査確認書」の太枠内を記入し、現金と一緒に持参します（東京都のページ）。電子申請は、Pay-easyの電子納付のみです。</p>
+<p>経営状況分析の手数料は別です。分析機関に払います。</p>
+<h2 id="必要書類東京都知事許可窓口審査の場合">必要書類（東京都知事許可・窓口審査の場合）</h2>
+<p>東京都の説明書（令和8年9月版）P.8〜10の「申請に必要な提出書類一覧」を整理します。書類の数は多いので、全体は説明書の一覧で確認してください。</p>
+<h3 id="必須の書類は7点">必須の書類は7点</h3>
+<p>説明書P.8は、次の①から⑦を必須書類としています。</p>
+<table>
+<thead>
+<tr>
+<th>書類</th>
+<th>部数など</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① 経営事項審査確認書</td>
+<td>1部</td>
+</tr>
+<tr>
+<td>② 経営規模等評価申請書・総合評定値請求書</td>
+<td>正本、副本（正本の写し）</td>
+</tr>
+<tr>
+<td>③ 工事種類別完成工事高・工事種類別元請完成工事高</td>
+<td>正本、副本</td>
+</tr>
+<tr>
+<td>④ その他の審査項目（社会性等）</td>
+<td>正本、副本</td>
+</tr>
+<tr>
+<td>⑤ 技術職員名簿</td>
+<td>正本、副本</td>
+</tr>
+<tr>
+<td>⑥ 経営状況分析結果通知書</td>
+<td>原本を提出し、副本には写しを綴じる</td>
+</tr>
+<tr>
+<td>⑦ 直前3年の各事業年度における工事施工金額</td>
+<td>1部</td>
+</tr>
+</tbody>
+</table>
+<h3 id="該当する場合だけ出す書類">該当する場合だけ出す書類</h3>
+<p>次の⑧から⑯は、該当する場合に出します（説明書P.8）。</p>
+<ul>
+<li>工事経歴書（経営事項審査用の要件を満たしていない場合など）</li>
+<li>建設機械の保有状況一覧表（保有台数が1台以上の場合）</li>
+<li>経理処理の適正を確認した旨の書類</li>
+<li>継続雇用制度の適用を受けている技術職員名簿</li>
+<li>CPD単位を取得した技術者名簿、技能者名簿</li>
+<li>建設工事に従事する者の就業履歴を蓄積するために必要な措置を実施した旨の誓約書と同意書</li>
+<li>「建設技能者を大切にする企業の自主宣言制度」に関する誓約書</li>
+<li>「資本性借入金」該当証明書</li>
+</ul>
+<h3 id="提示する確認資料主なもの">提示する確認資料（主なもの）</h3>
+<p>申請書に書いた内容を裏付ける資料は、提出と記載がなければ、提示だけで足ります（説明書P.8〜10）。主なものは次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>確認資料</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>建設業許可通知書または許可証明書</td>
+<td>申請時点で有効なもの</td>
+</tr>
+<tr>
+<td>建設業許可申請書（別とじを含む）、変更届出書（副本）</td>
+<td>現在有効な副本一式、前回の許可更新から今回までに出した副本</td>
+</tr>
+<tr>
+<td>変更届出書（決算報告用）（副本）</td>
+<td>完成工事高を2年平均にするなら直近2年分、3年平均なら直近3年分。財務諸表を含む</td>
+</tr>
+<tr>
+<td>前回の経営事項審査申請書類</td>
+<td>副本一式（新規は不要）</td>
+</tr>
+<tr>
+<td>技術職員、経営業務の管理責任者、営業所技術者等の常勤性・恒常的雇用関係の確認資料</td>
+<td>審査基準日と前審査基準日の分</td>
+</tr>
+<tr>
+<td>合格証明書、免状、監理技術者資格者証、講習修了証などの写し</td>
+<td>技術職員名簿に載せた人の分</td>
+</tr>
+<tr>
+<td>建設業退職金共済、退職金一時金制度や企業年金、法定外労災補償制度の資料</td>
+<td>審査基準日に係る資料</td>
+</tr>
+<tr>
+<td>消費税確定申告書の控え、消費税納税証明書その1（税務署発行）</td>
+<td>審査基準日に係る資料</td>
+</tr>
+<tr>
+<td>契約書類</td>
+<td>審査基準日に係る資料の写し</td>
+</tr>
+</tbody>
+</table>
+<p>初めて経審を受ける人（新規）や、前期の決算に基づく申請を受けずに今期の申請をする人は、これに加えて、最初に受けた建設業許可の通知書、経営状況分析機関に出した財務諸表、消費税確定申告書の控え、建設業許可を取る前の完成工事高の証明（許可を取る前の工事がある場合）などが要ります（説明書P.8、P.10）。</p>
+<p>審査基準日に係る資料は、決算日が令和8年3月31日なら、令和8年3月、令和8年、令和7年度の資料です（説明書P.10）。</p>
+<h3 id="工事経歴書の整合を事前に確かめる">工事経歴書の整合を事前に確かめる</h3>
+<p>説明書P.9は、決算変更届の財務諸表（損益計算書）と完成工事高を、「直前3年の各事業年度における工事施工金額」で確認するので、事前に整合性を確認しておくよう求めています。</p>
+<p>決算変更届と経審の書類で金額が食い違わないよう、提出前に、年度ごとの金額を見比べておきます。</p>
+<h2 id="電子申請jcipで受ける場合">電子申請（JCIP）で受ける場合</h2>
+<p>東京都の「経営事項審査における電子申請のご案内（Ver.3、令和8年9月10日）」（2026年11月3日取得）によると、東京都は、令和5年10月23日に経営事項審査の電子申請の受付を始めました。</p>
+<h3 id="窓口との違い">窓口との違い</h3>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>窓口</th>
+<th>電子申請</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>審査の予約</td>
+<td>予約システムで予約</td>
+<td>不要</td>
+</tr>
+<tr>
+<td>事前確認</td>
+<td>技術職員40名超などで必要</td>
+<td>不要（技術職員名簿の通番を確認資料に付ける）</td>
+</tr>
+<tr>
+<td>手数料の納付</td>
+<td>現金またはキャッシュレス決済</td>
+<td>Pay-easyのみ。現金は不可</td>
+</tr>
+<tr>
+<td>結果通知書</td>
+<td>紙を郵送</td>
+<td>紙を郵送（電子の交付はない）</td>
+</tr>
+<tr>
+<td>標準処理期間</td>
+<td>22日（閉庁日を含まない）</td>
+<td>19日（閉庁日を含まない）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="準備するもの">準備するもの</h3>
+<ul>
+<li>GビズIDプライム（代理人が申請するときは、申請者と代理人の両方のアカウントが必要）</li>
+<li>確認書類のPDFファイル（1つの確認書類につき1ファイル）</li>
+</ul>
+<p>GビズIDの公式ページ（2026年11月3日取得）によると、プライムアカウントは無償で、審査の時間はオンライン申請で最短即日、書類申請で最大1か月です。東京都の案内は、取得に申請後2〜3週間かかると書いています。</p>
+<p>消費税納税証明書その1や、技術検定の合格証明書などは、システムの連携で添付を省略できる場合があります（東京都の案内P.4〜5）。</p>
+<h3 id="電子申請の対象外">電子申請の対象外</h3>
+<p>事業者が、合併・譲渡・承継・会社分割をした場合などの特殊な経営事項審査は、電子申請の対象外です。説明書P.87〜92を確認し、建設業指導担当に事前に相談するよう案内されています。</p>
+<p>システムの操作の質問は、JCIPのヘルプデスク（0570-033-730、平日9時から17時）に問い合わせます（国土交通省のJCIPのページ）。</p>
+<h2 id="令和8年7月1日以降の申請で変わった点">令和8年7月1日以降の申請で変わった点</h2>
+<p>国土交通省の「経営事項審査の主な改正事項（令和8年2月6日公布、令和8年7月1日施行）」（2026年11月3日取得）によると、令和8年7月1日以降の申請に、次の改正が適用されます。</p>
+<table>
+<thead>
+<tr>
+<th>区分</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>新設</td>
+<td>「建設技能者を大切にする企業の自主宣言制度」の宣言の有無を、W（社会性等）の加点項目に追加（5点）。審査基準日が宣言日以降で、宣言書と誓約書が出されている場合に加点</td>
+</tr>
+<tr>
+<td>配点の見直し</td>
+<td>「建設工事に従事する者の就業履歴を蓄積するために必要な措置の実施状況」の配点を15点から10点に</td>
+</tr>
+<tr>
+<td>拡大</td>
+<td>建設機械の保有状況の加点対象に、「不整地運搬車」と「アスファルト・フィニッシャ」を追加</td>
+</tr>
+<tr>
+<td>削除</td>
+<td>雇用保険、健康保険、厚生年金保険の加入状況の評価項目（各マイナス40点）を削除</td>
+</tr>
+</tbody>
+</table>
+<p>削除の理由は、令和2年10月に社会保険の加入が建設業の許可・更新の要件に加わり、令和7年10月以降に経審を受ける企業は社会保険加入に係る許可要件を満たすことになるからだと、国土交通省の資料に書かれています。</p>
+<p>この改正で、その他の審査項目（社会性等）と総合評定値の最低点が変わります。JCIPのページは、施行日の前後にJCIPで申請する場合は注意が必要だと案内しています。東京都も、経営事項審査の基準が令和8年7月1日以降の審査日時から改正されると案内しています。</p>
+<h2 id="つまずきやすい点">つまずきやすい点</h2>
+<p>東京都の説明書と東京都のページが注意している点を、順番にまとめます。</p>
+<ul>
+<li>経営状況分析結果通知書がない。申請書類や結果通知書がない場合は、審査をその場で中止し、新たに予約し直すことになります（説明書P.7）</li>
+<li>書類の不備が多く、再来でも対応できない。予約の取り直しをお願いすることがあります（説明書P.7）</li>
+<li>審査対象の事業年度の決算変更届が出ていない。申請前の確認事項として挙げられています（説明書P.4）</li>
+<li>申請書が受理されたあとに、内容を直したくなる。受理後は申請書の内容を変更できません（説明書P.7）</li>
+<li>予約の変更。審査日当日の変更はできません。やむを得ず変更・取消しをするときは、建設業課受付（電話03-5321-1111、内線30-691）に連絡し、取り消したあとで改めて予約します（説明書P.2）</li>
+<li>結果通知書の有効期限の空白。前期の有効期限と、当期の結果通知書の交付の間をあけないようにします（説明書P.4）</li>
+<li>虚偽の申請。東京都のページは、虚偽の申請は監督処分（営業停止など）の対象になると書いています。建設業法第50条第4号は、経営状況分析や経営規模等評価の申請書に虚偽の記載をして提出したときの罰則（6月以下の拘禁刑又は100万円以下の罰金）を定めています</li>
+</ul>
+<p>審査には、申請内容を十分に把握している人が来るよう求められています（説明書P.7）。書類の記載内容について、確認資料のどこに書いてあるかを聞かれるので、該当部分に付箋を付けておくよう案内されています。</p>
+<h2 id="経審前のチェックリスト">経審前のチェックリスト</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 審査基準日（直前の決算日）を確認し、その決算の決算変更届を出した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 前回の結果通知書の有効期限を確認し、次の結果通知書を受け取る日までに空白ができない日程を組んだ</li>
+<li class="task-list-item"><input type="checkbox" disabled> 登録経営状況分析機関を選び、経営状況分析を申請した（財務諸表、減価償却実施額の確認書類などを用意）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 経営状況分析結果通知書（原本）を受け取った</li>
+<li class="task-list-item"><input type="checkbox" disabled> 経営規模等評価申請書・総合評定値請求書など、必須の7点を作った</li>
+<li class="task-list-item"><input type="checkbox" disabled> 技術職員名簿の人の資格証・常勤性の確認資料、決算変更届の副本（2年分または3年分）をそろえた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 決算変更届の財務諸表と、工事施工金額・工事経歴書の金額が合っていることを確かめた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 予約システムで審査日を予約した（電子申請なら、GビズIDプライムの取得と書類のPDF化）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 手数料を用意した（東京都の窓口は審査のあとに納付）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 入札に参加したい発注者の、資格審査の申請時期と必要書類を確認した</li>
+</ul>
+<h2 id="よくある質問とまとめ">よくある質問とまとめ</h2>
+<h3 id="経審を受けないと公共工事の入札に出られませんか">経審を受けないと、公共工事の入札に出られませんか</h3>
+<p>建設業法第27条の23は、公共工事を発注者から直接請け負おうとする建設業者は、経営事項審査を受けなければならないと定めています。そのうえで、入札に参加できるかどうかは、各発注者の資格審査で決まります（国土交通省）。</p>
+<h3 id="個人事業主でも経審を受けられますか">個人事業主でも経審を受けられますか</h3>
+<p>東京都の説明書P.2は、書類を提出できる人として、個人の申請者は本人と書いています。経営状況分析は、個人は個人用の財務諸表（様式第18号・第19号）で受けます（CIICの提出書類一覧）。</p>
+<p>許可を受けた業種の経審であることが前提です。許可については、<a href="/articles/kensetsugyou-kyoka-torikata/">建設業許可の取り方の記事</a>で整理しています。</p>
+<h3 id="まとめ">まとめ</h3>
+<p>経営事項審査は、公共工事を発注者から直接請け負おうとする建設業者が受けなければならない審査です。決算変更届、経営状況分析、経営規模等評価の申請と総合評定値の請求、結果通知書の受け取りの順に進みます。</p>
+<p>結果通知書の有効期間は、審査基準日から1年7か月です。毎年決算を迎えるたびに、前の通知書の有効期限が切れる前に、次の通知書を受け取れるよう日程を組みます。</p>
+<p>手数料は、経営規模等評価と総合評定値で、東京都の表では1業種で合計11,000円です。経営状況分析は、機関ごとの手数料が別にかかります。令和8年7月1日以降の申請では、評価項目が一部変わっています。</p>
+<p>予約方法、受付時間、標準処理期間は、都道府県によって違います。申請の前に、許可を受けた行政庁の最新の説明書で確認してください。個別の判断は、許可行政庁の窓口や行政書士に相談してください。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>経営事項審査は誰が受けるのですか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公共工事を発注者から直接請け負おうとする建設業者が受けなければならない審査です（建設業法第27条の23）。受ける業種の建設業許可が前提で、東京都の説明書は、結果通知書の交付の時点で許可がない場合は結果通知書を交付できないと書いています。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>経営事項審査の流れを教えてください。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>東京都の説明書（令和8年9月版）では、決算変更届を出したうえで、登録経営状況分析機関に経営状況分析を申請し、経営状況分析結果通知書を受け取ります。そのあと、許可行政庁に経営規模等評価の申請と総合評定値の請求をして、結果通知書の交付を受けます。入札参加資格審査は、各発注者に申請します。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>経営事項審査の有効期間はどのくらいですか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>審査基準日（直前の決算日）から1年7か月です。建設業法施行規則第18条の2は、請負契約を締結する日の1年7月前の日の直後の事業年度終了の日以降に、経営事項審査を受けていなければならないと定めています。毎年受けないと、結果通知書の有効期限が切れて空白ができます。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>経営事項審査の手数料はいくらですか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>国土交通省の案内では、経営規模等評価の申請が8,100円に審査対象業種1種類につき2,300円を加えた額、総合評定値の請求が400円に1種類につき200円を加えた額です。東京都の表では、1業種で合計11,000円です。経営状況分析の手数料は、登録経営状況分析機関ごとに定められています。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>経営事項審査は電子申請でできますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>できます。東京都はJCIPによる電子申請を受け付けており、審査の予約は不要です。GビズIDプライムが要り、手数料の納付はPay-easyのみです。結果通知書は紙で郵送され、標準処理期間は申請受付から19日（閉庁日を含まない）です。合併・譲渡・承継・会社分割などの特殊な経審は、電子申請の対象外です。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://www.mlit.go.jp/totikensangyo/const/1_6_bt_000161.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国土交通省 経営事項審査</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.mlit.go.jp/totikensangyo/const/1_6_bt_000153.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国土交通省 経営事項審査及び総合評定値の請求について</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.mlit.go.jp/totikensangyo/const/1_6_bt_000091.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国土交通省 登録経営状況分析機関一覧</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.mlit.go.jp/tochi_fudousan_kensetsugyo/const/tochi_fudousan_kensetsugyo_const_fr1_000001_00088.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国土交通省 経営事項審査の主な改正事項（令和8年2月6日公布）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.mlit.go.jp/tochi_fudousan_kensetsugyo/const/content/001982604.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国土交通省 経営事項審査の主な改正事項（令和8年7月1日施行、PDF）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.mlit.go.jp/tochi_fudousan_kensetsugyo/const/tochi_fudousan_kensetsugyo_const_tk1_000001_00019.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国土交通省 建設業許可・経営事項審査電子申請システム（JCIP）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://laws.e-gov.go.jp/law/324AC0000000100" rel="noopener" target="_blank" data-astro-cid-sgg5joot>e-Gov法令検索 建設業法（昭和24年法律第100号）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://laws.e-gov.go.jp/law/324M50004000014" rel="noopener" target="_blank" data-astro-cid-sgg5joot>e-Gov法令検索 建設業法施行規則（昭和24年建設省令第14号）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.toshiseibi.metro.tokyo.lg.jp/kenchiku_kaihatsu/kenchiku_shidou/gyosya_shido/sinsa" rel="noopener" target="_blank" data-astro-cid-sgg5joot>東京都都市整備局 経営事項審査</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.toshiseibi.metro.tokyo.lg.jp/kenchiku_kaihatsu/kenchiku_shidou/gyosya_shido/sinsa/keiei_sinsei" rel="noopener" target="_blank" data-astro-cid-sgg5joot>東京都都市整備局 経営事項審査 説明書、申請書類及び記載要領</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.toshiseibi.metro.tokyo.lg.jp/documents/d/toshiseibi/2026-09-08-001309-108" rel="noopener" target="_blank" data-astro-cid-sgg5joot>東京都 経営事項審査申請説明書（都知事許可業者用、令和8年9月版）P.1〜11（PDF）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.toshiseibi.metro.tokyo.lg.jp/documents/d/toshiseibi/2026-09-09-133316-193" rel="noopener" target="_blank" data-astro-cid-sgg5joot>東京都 経営事項審査における電子申請のご案内（Ver.3、PDF）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.ciic.or.jp/kyoka/keiei/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>CIIC（一般財団法人建設業情報管理センター） 経営事項審査と経営状況分析</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.ciic.or.jp/analysis/application/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>CIIC 経営状況分析 申請のお手続き</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.ciic.or.jp/analysis/plan/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>CIIC 経営状況分析 料金プランのご案内</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.ciic.or.jp/topics/analysis/post7919/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>CIIC 経営状況分析の料金改定のお知らせ</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.ciic.or.jp/wp-content/uploads/2016/01/syoruiichiran.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>CIIC 経営状況分析の申請に必要な提出書類（PDF）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://gbiz-id.go.jp/top/apply/account_select.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>GビズID 申請アカウントの選択</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約8分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/sonota/" data-astro-cid-sgg5joot>その他の開業準備の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

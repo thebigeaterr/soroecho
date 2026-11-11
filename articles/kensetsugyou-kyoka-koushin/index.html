@@ -1,0 +1,509 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>建設業許可の更新手続き｜期限（30日前まで）・必要書類・手数料・決算変更届・電子申請 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="建設業許可の更新は、有効期間（5年）が終わる30日前までに申請します。東京都の手引（令和8年度）では受付は2か月前から。手数料は知事許可・大臣許可とも5万円で、決算変更届などの届出が出ていないと受け付けられません。必要書類、期限後の扱い、電子申請も整理します。"><link rel="canonical" href="https://soroecho.com/articles/kensetsugyou-kyoka-koushin/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="建設業許可の更新手続き｜期限（30日前まで）・必要書類・手数料・決算変更届・電子申請 | そろえ帳"><meta property="og:description" content="建設業許可の更新は、有効期間（5年）が終わる30日前までに申請します。東京都の手引（令和8年度）では受付は2か月前から。手数料は知事許可・大臣許可とも5万円で、決算変更届などの届出が出ていないと受け付けられません。必要書類、期限後の扱い、電子申請も整理します。"><meta property="og:url" content="https://soroecho.com/articles/kensetsugyou-kyoka-koushin/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/kensetsugyou-kyoka-koushin.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="建設業許可の更新手続き｜期限（30日前まで）・必要書類・手数料・決算変更届・電子申請 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="建設業許可の更新手続き｜期限（30日前まで）・必要書類・手数料・決算変更届・電子申請 | そろえ帳"><meta name="twitter:description" content="建設業許可の更新は、有効期間（5年）が終わる30日前までに申請します。東京都の手引（令和8年度）では受付は2か月前から。手数料は知事許可・大臣許可とも5万円で、決算変更届などの届出が出ていないと受け付けられません。必要書類、期限後の扱い、電子申請も整理します。"><meta name="twitter:image" content="https://soroecho.com/og/kensetsugyou-kyoka-koushin.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"建設業許可の更新手続き｜期限（30日前まで）・必要書類・手数料・決算変更届・電子申請","item":"https://soroecho.com/articles/kensetsugyou-kyoka-koushin/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"建設業許可の更新手続き｜期限（30日前まで）・必要書類・手数料・決算変更届・電子申請","description":"建設業許可の更新は、有効期間（5年）が終わる30日前までに申請します。東京都の手引（令和8年度）では受付は2か月前から。手数料は知事許可・大臣許可とも5万円で、決算変更届などの届出が出ていないと受け付けられません。必要書類、期限後の扱い、電子申請も整理します。","url":"https://soroecho.com/articles/kensetsugyou-kyoka-koushin/","datePublished":"2026-11-11T00:00:00.000Z","dateModified":"2026-11-11T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/kensetsugyou-kyoka-koushin/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"建設業許可の更新はいつまでに申請しますか。","acceptedAnswer":{"@type":"Answer","text":"許可の有効期間（5年）が満了する日の30日前までです。建設業法施行規則第5条に定められています。東京都知事許可の手引（令和8年度）では、受付期間は満了日の2か月前から30日前までと案内されています。許可日が8月5日なら満了日は8月4日で、受付開始は6月4日（土日祝日なら翌開庁日）です。"}},{"@type":"Question","name":"建設業許可の更新にはいくらかかりますか。","acceptedAnswer":{"@type":"Answer","text":"国土交通省の案内では、知事許可の更新も大臣許可の更新も、許可手数料は5万円です。東京都の手引では、一般建設業と特定建設業を同時に更新するなど組み合わせると加算されます（例は5万円と5万円で10万円）。受け付けられた後に取り下げた場合、手数料は返却されないと手引に書かれています。"}},{"@type":"Question","name":"決算変更届を出していなくても更新できますか。","acceptedAnswer":{"@type":"Answer","text":"東京都の手引は、必要な届出のない状態では更新申請を受け付けられないと案内しています。決算変更届（事業年度終了届）は、事業年度が終わってから4か月以内に出す届出です（建設業法第11条第2項）。更新の前に、前回の許可から今回までに必要な届出が済んでいるかを確認します。"}},{"@type":"Question","name":"更新の期限を過ぎてしまったらどうなりますか。","acceptedAnswer":{"@type":"Answer","text":"更新申請が満了日までに受理されていれば、処分が出るまで従前の許可は有効です。間に合わずに満了日を過ぎると、許可は失効します。許可が必要な工事を請け負うには許可を取り直すことになり、失効前に結んだ契約の工事は施工できますが、失効後2週間以内に注文者へ通知します（建設業法第29条の3）。"}},{"@type":"Question","name":"更新は電子申請でできますか。","acceptedAnswer":{"@type":"Answer","text":"できます。国土交通省の建設業許可・経営事項審査電子申請システム（JCIP）で受け付けられ、利用にはGビズIDが要ります。東京都の案内では、手数料の納付はPay-easyのみで、最も古い許可の有効期間満了日の30日前を過ぎた日以降の申請は電子申請では受け付けられず、窓口へ相談するよう案内されています。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>建設業許可の更新手続き｜期限（30日前まで）・必要書類・手数料・決算変更届・電子申請</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecrgusf4-g" x1="0" y1="0" x2="1" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecrgusf4-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ecrgusf4-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecrgusf4-p)" data-astro-cid-yuatfsof></rect><circle cx="380" cy="38" r="169" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>建設業許可</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>更新</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>建設業許可の更新手続き｜期限（30日前まで）・必要書類・手数料・決算変更届・電子申請</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-11-11T00:00:00.000Z" data-astro-cid-sgg5joot>2026年11月11日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約18分</p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論期限は有効期間満了の30日前まで更新の前に決算変更届などの届出が済んでいることが条件" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：期限は有効期間満了の30日前まで。更新の前に、決算変更届などの届出が済んでいることが条件</a></li><li data-astro-cid-sgg5joot><a href="#更新の期限満了日の30日前まで東京都は受付が2か月前から" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>更新の期限：満了日の30日前まで（東京都は受付が2か月前から）</a></li><li data-astro-cid-sgg5joot><a href="#更新の前に済ませる決算変更届事業年度終了届と変更届" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>更新の前に済ませる：決算変更届（事業年度終了届）と変更届</a></li><li data-astro-cid-sgg5joot><a href="#更新に必要な書類東京都知事許可一般建設業の場合" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>更新に必要な書類（東京都知事許可・一般建設業の場合）</a></li><li data-astro-cid-sgg5joot><a href="#手数料知事許可も大臣許可も5万円" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>手数料：知事許可も大臣許可も5万円</a></li><li data-astro-cid-sgg5joot><a href="#窓口郵送電子申請のどれで出すか" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>窓口・郵送・電子申請のどれで出すか</a></li><li data-astro-cid-sgg5joot><a href="#期限を過ぎたとき失効と許可の取り直し" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>期限を過ぎたとき：失効と、許可の取り直し</a></li><li data-astro-cid-sgg5joot><a href="#更新後に確認すること" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>更新後に確認すること</a></li><li data-astro-cid-sgg5joot><a href="#電子申請jcipで更新するとき" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>電子申請（JCIP）で更新するとき</a></li><li data-astro-cid-sgg5joot><a href="#更新で見落としやすい点" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>10</span>更新で見落としやすい点</a></li><li data-astro-cid-sgg5joot><a href="#更新前のチェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>11</span>更新前のチェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#よくある質問とまとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>12</span>よくある質問とまとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論期限は有効期間満了の30日前まで更新の前に決算変更届などの届出が済んでいることが条件">結論：期限は有効期間満了の30日前まで。更新の前に、決算変更届などの届出が済んでいることが条件</h2>
+<p>建設業許可の更新は、許可の有効期間（5年）が満了する日の30日前までに申請します。国土交通省の公式ページと建設業法施行規則第5条（e-Gov法令検索）に、同じ内容が書かれています（どちらも2026年11月3日取得）。</p>
+<p>東京都知事許可の場合、東京都の「建設業許可申請・変更の手引（令和8年度）」では、受付期間は満了日の2か月前から30日前までです。手数料は、知事許可も大臣許可も5万円です。</p>
+<p>更新の前提は、毎年の決算変更届（事業年度終了届）などの届出が出ていることです。手引は、必要な届出のない状態では更新申請を受け付けられないと案内しています。</p>
+<table>
+<thead>
+<tr>
+<th>今の状況</th>
+<th>まずすること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>満了日まで2か月以上ある</td>
+<td>決算変更届と変更届が出ているかを確認し、書類を集める</td>
+</tr>
+<tr>
+<td>満了日の2か月前から30日前まで</td>
+<td>受付期間。窓口・郵送・電子申請のどれかで申請する</td>
+</tr>
+<tr>
+<td>満了日の30日前を過ぎたが、満了日の前</td>
+<td>電子申請は受け付けられない（東京都）。建設業課の窓口に相談する</td>
+</tr>
+<tr>
+<td>満了日を過ぎ、更新申請が受理されていない</td>
+<td>許可は失効している。許可を取り直す</td>
+</tr>
+</tbody>
+</table>
+<p>この記事で分かることは次のとおりです。</p>
+<ul>
+<li>更新の期限と、受付が始まる日の数え方</li>
+<li>更新の前に出しておく届出（決算変更届・変更届）</li>
+<li>更新に必要な書類と手数料</li>
+<li>期限を過ぎたときに起きること</li>
+<li>電子申請（JCIP）で更新するときの注意</li>
+</ul>
+<p>この記事は、東京都知事許可（一般建設業）の手引を中心に書いています。受付期間や書類は都道府県で違うことがあるので、許可を受けた都道府県の手引で確認してください。大臣許可は、本店所在地を管轄する地方整備局に提出します。</p>
+<h2 id="更新の期限満了日の30日前まで東京都は受付が2か月前から">更新の期限：満了日の30日前まで（東京都は受付が2か月前から）</h2>
+<h3 id="有効期間と満了日の数え方">有効期間と満了日の数え方</h3>
+<p>建設業法第3条第3項（e-Gov法令検索、2026年11月3日取得）は、許可は5年ごとに更新を受けなければ、その期間の経過によって効力を失うと定めています。</p>
+<p>東京都の手引（令和8年度、2026年11月3日取得）P.6によると、有効期間は、許可のあった日から5年目の許可日に対応する日の前日に満了します。許可日が8月5日なら、満了日は5年後の8月4日です。</p>
+<h3 id="申請の締切と受付開始の日">申請の締切と受付開始の日</h3>
+<p>建設業法施行規則第5条は、更新を受けようとする者は有効期間満了の日の30日前までに許可申請書を提出しなければならないと定めています。東京都の手引P.14は、更新申請の受付期間を「有効期間が満了する日の2か月前から30日前まで」としています。</p>
+<p>手引の例（許可日が8月5日の場合）を日付にすると、次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>日付</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>許可日</td>
+<td>8月5日</td>
+</tr>
+<tr>
+<td>有効期間の満了日</td>
+<td>8月4日</td>
+</tr>
+<tr>
+<td>更新申請の受付開始（満了日の2か月前）</td>
+<td>6月4日（土日祝日なら翌開庁日）</td>
+</tr>
+<tr>
+<td>更新申請の締切（満了日の30日前）</td>
+<td>7月5日</td>
+</tr>
+</tbody>
+</table>
+<p>東京都は、知事許可の業者に更新期限到来のお知らせを郵送しています。手引は「許可有効期間に注意して申請手続を行ってください」と書いているので、通知の到着を待たずに、許可通知書で満了日を確認します。</p>
+<h3 id="許可が複数あるときは許可の一本化ができる">許可が複数あるときは「許可の一本化」ができる</h3>
+<p>手引P.14によると、許可日の異なる許可を二つ以上受けている業者は、先に満了を迎える許可の更新申請のときに、有効期間が残っている他の許可も同時に1件の更新として申請できます。これを「許可の一本化」（許可の有効期間の調整）といい、各許可の許可日をそろえられます。</p>
+<p>更新申請と業種追加申請を同時に出して一本化できるのは、有効期間が満了する日の30日前までに受付が可能な場合に限られます。東京都の郵送受付のページ（2026年11月3日取得）も、入金の時点で有効期限まで30日以上ある場合に限ると書いています。</p>
+<h3 id="満了日までに処分が出ないときの扱い">満了日までに処分が出ないときの扱い</h3>
+<p>建設業法第3条第4項は、更新の申請があった場合に、有効期間の満了の日までに処分がされないときは、従前の許可は、満了後も処分がされるまでの間はなおその効力を有すると定めています。手引P.6も、更新申請が受理されていれば、満了後でも許可・不許可の処分があるまでは従前の許可が有効だと書いています。</p>
+<p>この場合に更新が許可されたときの新しい有効期間は、従前の有効期間の満了の日の翌日から数えます（同条第5項）。</p>
+<h2 id="更新の前に済ませる決算変更届事業年度終了届と変更届">更新の前に済ませる：決算変更届（事業年度終了届）と変更届</h2>
+<h3 id="届出がないと更新は受け付けられない">届出がないと、更新は受け付けられない</h3>
+<p>東京都の手引P.85は、許可後に変更事項などがあった場合は変更・廃業届出書を速やかに提出するよう求めています。そのうえで「必要な届出のない状態では、般・特新規申請、業種追加申請、更新申請又は事前認可申請は受付できません」と書き、提出がない場合は罰則規定（法第50条等）があるとしています。</p>
+<p>建設業法第50条第2号（e-Gov法令検索）は、第11条第1項から第4項までの書類を提出せず、または虚偽の記載をして提出したときは、6月以下の拘禁刑又は100万円以下の罰金に処すると定めています。</p>
+<p>東京都の電子申請のページ（2026年11月3日取得）も、前回の申請・届出から今回の申請までに必要な届出が行われているかを、事前に確認するよう求めています。</p>
+<h3 id="届出の種類と期限">届出の種類と期限</h3>
+<p>手引P.85の「許可後の手続」の表を整理すると、届出の期限は次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>届出事項</th>
+<th>届出期間</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>決算報告（決算変更届）</td>
+<td>事業年度終了後4か月以内</td>
+</tr>
+<tr>
+<td>商号、営業所の名称・所在地・電話番号・郵便番号、営業所の新設・廃止、営業所の業種の追加・廃止、資本金額、役員等・代表者（申請人）、支配人の変更</td>
+<td>変更後30日以内</td>
+</tr>
+<tr>
+<td>建設業法施行令第3条の使用人、常勤役員等（経管）、営業所技術者等（専技）、健康保険等の加入状況の変更</td>
+<td>変更後2週間以内</td>
+</tr>
+</tbody>
+</table>
+<p>営業所技術者等（専技）の変更を伴う営業所の新設・廃止、業種の追加・廃止は、変更後2週間以内に届け出ます（手引の注記）。</p>
+<p>決算変更届の「4か月以内」の根拠は、建設業法第11条第2項です。3月31日が決算日なら、7月31日までに出します。</p>
+<h3 id="決算変更届に入れる書類東京都の例">決算変更届に入れる書類（東京都の例）</h3>
+<p>手引P.86によると、東京都知事許可の決算変更届には、次の書類を入れます。</p>
+<ul>
+<li>変更届出書（決算報告用）、工事経歴書、直前3年の各事業年度における工事施工金額</li>
+<li>財務諸表（法人は様式第15号から第17号の3、個人は様式第18号・第19号）</li>
+<li>事業報告書（特例有限会社を除く株式会社のみ。任意様式）</li>
+<li>使用人数・定款・健康保険等の加入状況（すでに提出した内容から変更がある場合のみ）</li>
+<li>別とじ表紙と、事業税の納税証明書</li>
+</ul>
+<p>事業税の納税証明書は、法人は法人事業税、個人は個人事業税のものです。個人で事業税が課税されない場合などは、税務署が発行する申告所得税の納税証明書（その2）で、摘要欄に「事業所得金額」の記載があるものを使います（手引P.86）。</p>
+<p>年度の表記は、都税事務所と税務署で異なります。手引の例では、令和7年度の決算変更届なら、都税事務所の証明書は「令和8年度」、税務署の証明書は「令和7年分」です。</p>
+<p>決算変更届は、窓口のほか、郵送でも出せます（東京都の郵送受付のページ）。電子申請（JCIP）でも、決算変更届を含む各種変更届を出せます（手引P.18）。</p>
+<h3 id="数字の元になる決算書と相談先">数字の元になる決算書と、相談先</h3>
+<p>決算変更届の財務諸表や工事経歴書は、帳簿と決算書から作ります。決算書づくりを税理士に頼むかどうかは、<a href="/articles/zeirishi-sagashikata-hiyou-souba/">税理士の探し方と費用の見方の記事</a>で整理しています。</p>
+<p>個人事業主は、確定申告のために付けている帳簿が元になります。申告の流れは、<a href="/articles/kojin-jigyou-kakutei-shinkoku-nagare/">個人事業主の確定申告の流れ</a>にまとめています。</p>
+<h3 id="届出が漏れていたとき">届出が漏れていたとき</h3>
+<p>出し漏れた届出を、あとからどう出すかは、手引の該当ページには書かれていません。東京都は、手引の表紙と建設業許可のページで、相談コーナー（平日の午前9時30分から11時30分、午後1時から4時30分。代表03-5321-1111、内線30-657・658・659）を案内しています。更新の期限が近づく前に、早めに相談します。</p>
+<h2 id="更新に必要な書類東京都知事許可一般建設業の場合">更新に必要な書類（東京都知事許可・一般建設業の場合）</h2>
+<p>手引P.20〜21の「許可申請書、添付書類及び確認資料一覧」（東京都知事許可の場合）の、更新の列を整理します。「提出」は手引で◎（提出する書類）とされているもの、「前回のコピーで可」は○（前回申請から記載事項が変わらなければ前回のコピーでよい書類）、「場合により」は△（必要に応じて提出する書類）です。</p>
+<h3 id="本冊申請書と一覧表">本冊（申請書と一覧表）</h3>
+<table>
+<thead>
+<tr>
+<th>書類</th>
+<th>更新での扱い</th>
+<th>補足</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>建設業許可申請書（様式第1号）</td>
+<td>提出</td>
+<td>記入例は手引P.26</td>
+</tr>
+<tr>
+<td>役員等の一覧表（別紙1）</td>
+<td>提出</td>
+<td>役員等と事業主を記入する</td>
+</tr>
+<tr>
+<td>営業所一覧表（更新）（別紙2(2)）</td>
+<td>提出</td>
+<td>更新用の様式</td>
+</tr>
+<tr>
+<td>営業所技術者等一覧表（別紙4）</td>
+<td>提出</td>
+<td></td>
+</tr>
+<tr>
+<td>使用人数（様式第4号）</td>
+<td>提出</td>
+<td></td>
+</tr>
+<tr>
+<td>誓約書（様式第6号）</td>
+<td>提出</td>
+<td>欠格要件に該当しない旨</td>
+</tr>
+<tr>
+<td>令3条の使用人の一覧表（様式第11号）</td>
+<td>場合により</td>
+<td>従たる営業所を置いた場合、または個人事業主で支配人を登記した場合</td>
+</tr>
+<tr>
+<td>定款（法人のみ）</td>
+<td>前回のコピーで可</td>
+<td></td>
+</tr>
+<tr>
+<td>営業の沿革（様式第20号）、所属建設業者団体（様式第20号の2）、主要取引金融機関名（様式第20号の3）</td>
+<td>提出</td>
+<td>所属団体は該当なしでも作成する</td>
+</tr>
+<tr>
+<td>健康保険等の加入状況（様式第7号の3）</td>
+<td>提出</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="別とじと確認資料">別とじと確認資料</h3>
+<table>
+<thead>
+<tr>
+<th>書類</th>
+<th>更新での扱い</th>
+<th>補足</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>別とじ表紙</td>
+<td>提出</td>
+<td></td>
+</tr>
+<tr>
+<td>常勤役員等（経営業務の管理責任者等）証明書（様式第7号または第7号の2）と略歴書</td>
+<td>提出</td>
+<td>証明者別に作成する</td>
+</tr>
+<tr>
+<td>営業所技術者等の技術者要件を証明する書類、実務経験証明書</td>
+<td>前回のコピーで可</td>
+<td>営業所技術者等証明書（様式第8号）は、更新の列では対象外</td>
+</tr>
+<tr>
+<td>許可申請者の住所、生年月日等に関する調書（様式第12号）</td>
+<td>提出</td>
+<td>法人は役員等について作成する</td>
+</tr>
+<tr>
+<td>株主（出資者）調書（様式第14号、法人のみ）</td>
+<td>提出</td>
+<td>該当者がいなくても作成する</td>
+</tr>
+<tr>
+<td>登記事項証明書（履歴事項全部証明書、発行後3か月以内）</td>
+<td>提出（法人）</td>
+<td>個人は原則不要。屋号や支配人の登記がある場合は必要</td>
+</tr>
+<tr>
+<td>登記されていないことの証明書、身分証明書（どちらも発行後3か月以内）</td>
+<td>提出</td>
+<td></td>
+</tr>
+<tr>
+<td>常勤役員等（経管）と直接補佐者の確認資料、営業所技術者等（専技）の確認資料</td>
+<td>提出</td>
+<td>更新では、経営経験や実務経験を証明する資料は不要</td>
+</tr>
+<tr>
+<td>健康保険・厚生年金・雇用保険の加入証明資料</td>
+<td>提出</td>
+<td>手引P.72〜73</td>
+</tr>
+<tr>
+<td>営業所の確認資料</td>
+<td>場合により</td>
+<td>手引P.74</td>
+</tr>
+<tr>
+<td>役員等氏名一覧表</td>
+<td>提出</td>
+<td>本冊の「役員等の一覧表」とは別の様式</td>
+</tr>
+</tbody>
+</table>
+<h3 id="更新では出さなくてよい書類">更新では出さなくてよい書類</h3>
+<p>手引の更新の列で「対象外」とされている主な書類は、次のとおりです。</p>
+<ul>
+<li>工事経歴書（様式第2号）、直前3年の各事業年度における工事施工金額（様式第3号）</li>
+<li>財務諸表</li>
+<li>事業税の納税証明書</li>
+<li>預金残高証明書または融資証明書</li>
+<li>許可通知書の写し（許可換え新規の場合だけ必要）</li>
+</ul>
+<p>工事経歴書と財務諸表は、毎年の決算変更届で出す書類です（手引P.86）。更新のときに慌てて作るのではなく、毎年出しておくことが更新の準備になります。</p>
+<h3 id="常勤性の確認書類が令和8年7月1日から変わりました">常勤性の確認書類が令和8年7月1日から変わりました</h3>
+<p>東京都の「令和8年度手引の主な変更点」（2026年11月3日取得）によると、常勤性を確認する資料のうち、「健康保険証」と「マイナンバーカード（マイナ保険証）の表面」の写しは、次のいずれかの写しに置き換わりました。</p>
+<ul>
+<li>健康保険の資格確認書の写し（有効期限以内のもの）。「資格情報のお知らせ」は別の書類なので、取り違えないようにします</li>
+<li>運転免許証の写し（有効期限以内のもの、両面）</li>
+<li>発行後3か月以内の住民票（個人番号と住民票コードを省略したもの）</li>
+</ul>
+<h3 id="様式部数書類作成ソフト">様式、部数、書類作成ソフト</h3>
+<p>様式は東京都の手引のページからダウンロードできます。提出部数は、正本・副本・電算入力用紙が各1部です（手引P.12）。副本は申請者の控えで、受付後に受付年月日・受付番号を押印して返されます。</p>
+<p>国土交通省の「許可申請の手続き」のページは、申請書類の作成ができる無料ソフトとして、一般財団法人建設業情報管理センター、ワイズ公共データシステム株式会社、株式会社NKBの各ソフトのページを案内しています。</p>
+<p>手引は、申請手続の代理は法律で行政書士または弁護士に限られると案内しています。書類提出の際に身分証明書の提示を求める場合があるとも書かれています。</p>
+<h2 id="手数料知事許可も大臣許可も5万円">手数料：知事許可も大臣許可も5万円</h2>
+<p>国土交通省の「許可申請の手続き」（2026年11月3日取得）によると、更新の許可手数料は次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>区分</th>
+<th>更新の手数料</th>
+<th>納め方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>都道府県知事許可</td>
+<td>5万円</td>
+<td>収入証紙による場合と現金による場合があり、都道府県で異なる</td>
+</tr>
+<tr>
+<td>国土交通大臣許可</td>
+<td>5万円</td>
+<td>収入印紙を許可申請書にはり付ける（消印はしない）</td>
+</tr>
+</tbody>
+</table>
+<p>東京都の手引P.12では、更新は5万円で、組み合わせると加算されます。一般建設業と特定建設業を同時に更新する場合は5万円と5万円で10万円、業種追加と更新を同時に申請する場合も5万円と5万円で10万円です。</p>
+<p>東京都の窓口では、現金とキャッシュレス決済で納められます。郵送では現金書留などで送り、電子申請ではPay-easyの電子納付に限られます（手引P.11、P.18）。</p>
+<p>窓口で手数料を納める申請は、午後4時までに発券機で番号札を取る必要があります。午後4時以降に発券すると入金できず、受け付けられません（手引の表紙・P.12）。</p>
+<p>納めた手数料は戻りません。手引P.15は、受け付けられた後に申請を取り下げても、手数料は還付しないと書いています。国土交通省の建設業許可事務ガイドラインも、更新と業種追加の手数料は返還しない取り扱いです。</p>
+<p>証明書の取得費用など、手数料以外の実費は、公式ページには金額が書かれていません。</p>
+<h2 id="窓口郵送電子申請のどれで出すか">窓口・郵送・電子申請のどれで出すか</h2>
+<p>東京都知事許可の更新は、3つの方法で出せます。</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>東京都の案内</th>
+<th>注意すること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>窓口</td>
+<td>都庁第二本庁舎3階南側の建設業課。申請の受付は午前9時から午後4時まで（手引P.12）</td>
+<td>手数料はその場で納める</td>
+</tr>
+<tr>
+<td>郵送</td>
+<td>更新申請は郵送できる場合がある（郵送受付のページ）</td>
+<td>追加申請や、許可要件にかかる変更届で窓口審査が必要なもの、般・特新規、認可申請を伴う更新は郵送できない</td>
+</tr>
+<tr>
+<td>電子申請</td>
+<td>国土交通省のJCIPで受け付ける（手引P.18）</td>
+<td>GビズIDが要る。手数料はPay-easyのみ</td>
+</tr>
+</tbody>
+</table>
+<p>郵送には、時間の面で注意が要ります。東京都の郵送受付のページ（更新日2026年7月1日）によると、有効期限がおおむね10日以内に迫っている更新は、郵送できる場合でも、来庁して窓口で入金します。</p>
+<p>同ページは、受付は入金後になり、有効期限内に発送しても東京都への到着が有効期限後になる場合、許可は失効してしまうと注意しています。</p>
+<h2 id="期限を過ぎたとき失効と許可の取り直し">期限を過ぎたとき：失効と、許可の取り直し</h2>
+<h3 id="満了日を過ぎたときの許可の扱い">満了日を過ぎたときの許可の扱い</h3>
+<table>
+<thead>
+<tr>
+<th>状況</th>
+<th>許可の扱い</th>
+<th>出どころ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>満了日までに更新申請が受理されている</td>
+<td>処分があるまで、従前の許可が有効</td>
+<td>建設業法第3条第4項、手引P.6</td>
+</tr>
+<tr>
+<td>審査の結果、満了後に不許可になった</td>
+<td>不許可の処分までは従前の許可が有効。その間に結んだ契約の工事は、失効後も続けて施工できる</td>
+<td>建設業許可事務ガイドライン</td>
+</tr>
+<tr>
+<td>満了日までに更新申請が受理されていない</td>
+<td>許可は失効する</td>
+<td>手引P.6</td>
+</tr>
+</tbody>
+</table>
+<p>手引P.6は、更新の手続を怠ると、期間の満了とともに建設業許可の効力を失うと書いています。</p>
+<h3 id="失効したあとに起きること">失効したあとに起きること</h3>
+<ol>
+<li>許可が必要な工事を新たに請け負えません。許可を受けずに建設業を営むと、3年以下の拘禁刑又は300万円以下の罰金です（建設業法第47条第1号、e-Gov法令検索）。</li>
+<li>失効前に結んだ請負契約の工事は施工できます。ただし、許可が失効した後2週間以内に、その旨を注文者に通知します（同法第29条の3第1項）。</li>
+<li>注文者は、通知を受けた日、または失効を知った日から30日以内に限り、その請負契約を解除できます（同条第5項）。</li>
+<li>許可を取り直すには、「新規」の申請になります。国土交通省の「許可申請の手続き」は、現在有効な許可をどの許可行政庁からも受けていない者が申請する場合を「新規」としています。</li>
+</ol>
+<p>新規の手数料は、知事許可で9万円です（更新は5万円）。経営経験などの確認資料も、更新では不要でも、新規では必要です（手引P.57）。取り直しの手順は、<a href="/articles/kensetsugyou-kyoka-torikata/">建設業許可の取り方の記事</a>で整理しています。</p>
+<h3 id="経営事項審査や入札への影響">経営事項審査や入札への影響</h3>
+<p>公共工事を元請で受けている業者は、許可が失効すると経営事項審査にも影響します。東京都の経営事項審査の説明書（令和8年9月版）P.1は、申請時に許可があっても、結果通知書の交付の時点で廃業などにより許可がない場合は、結果通知書を交付できないと書いています。</p>
+<p>経営事項審査の流れは、<a href="/articles/keiei-jikou-shinsa-nagare/">経営事項審査の流れの記事</a>にまとめています。</p>
+<h3 id="30日前を過ぎてしまったとき">30日前を過ぎてしまったとき</h3>
+<p>満了日の30日前を過ぎた場合の受付の扱いは、東京都の手引には書かれていません。東京都の電子申請のページは、30日前を過ぎた日以降の申請は電子申請では受け付けられないので、窓口で相談するよう案内しています。</p>
+<p>迷ったら、期限が迫る前に建設業課へ電話で相談します。</p>
+<h2 id="更新後に確認すること">更新後に確認すること</h2>
+<ol>
+<li>許可通知書の発送時期が変わっています。東京都は、令和8年4月1日以降に受け付ける更新申請の許可通知書を、審査が終わり次第すみやかに発送します（約1か月）。以前は、有効期間満了の日に発送していました（東京都のリーフレット、手引P.15）</li>
+<li>通知書が届いたら、許可の有効期間を確認します。手引P.15が、受領後に有効期間を確認するよう書いています</li>
+<li>許可通知書は再交付されません。紛失したときは、建設業許可証明書（1通400円）を使います（手引P.15〜16）</li>
+<li>店舗と工事現場に掲げる標識の許可年月日は、更新のたびに変わります（手引P.17、建設業法第40条）</li>
+</ol>
+<p>東京都の標準処理期間は、許可申請書の受付後25日（土日祝日などの閉庁日を除く）です（手引P.15）。補正があると、これより延びることがあります。</p>
+<p>建設業許可証明書は、更新許可申請中に相手方へ許可を有していることを証明する場合などに使えます（手引P.16）。許可情報は、国土交通省の「建設業者・宅建業者等企業情報検索システム」でも確認できると手引は案内しています。</p>
+<h2 id="電子申請jcipで更新するとき">電子申請（JCIP）で更新するとき</h2>
+<p>国土交通省の「建設業許可・経営事項審査電子申請システム（JCIP）」のページ（2026年11月3日取得）によると、建設業許可や経営事項審査の電子申請は、令和5年1月から受け付けが始まっています。</p>
+<p>東京都の手引P.18は、電子申請でできる建設業許可の手続きとして、新規、許可換え新規、般・特新規、業種追加、更新の各申請と、決算変更届を含む各種変更届、廃業届を挙げています。事業承継等の認可申請は対象外です。</p>
+<h3 id="電子申請の準備と手順">電子申請の準備と手順</h3>
+<ol>
+<li>GビズIDを取得します。GビズIDの公式ページ（2026年11月3日取得）によると、プライムアカウントは無償で、審査の時間はオンライン申請で最短即日、書類申請で最大1か月です。オンライン申請にはマイナンバーカードと、読み取りできるスマートフォンが要ります</li>
+<li>JCIPで申請書類を作り、確認資料を添付して送信します</li>
+<li>東京都から手数料の納付の案内が届いたら、Pay-easyで納付します</li>
+<li>審査の途中で、補正の指示が出ることがあります。関連する申請・届出は、できるだけ同じ日にまとめて出します（東京都のページ）</li>
+</ol>
+<p>東京都は、新規にGビズIDを取る場合に2週間程度かかると案内しています（電子申請のページ）。更新の期限から逆算して、取得を先に済ませます。</p>
+<h3 id="電子申請では受け付けられない場合東京都">電子申請では受け付けられない場合（東京都）</h3>
+<p>東京都の電子申請のページによると、次の場合は電子申請ではなく、窓口で受け付けます。</p>
+<ul>
+<li>最も古い許可の有効期間が満了する日の30日前を過ぎた日以降の申請</li>
+<li>経営経験や実務経験を請求書などで示し、その期間が5年を超える場合</li>
+<li>常勤役員等（経管）に関する申請・届出のうち、建設業法施行規則第7条第1号イ(1)に該当する場合などを除くもの</li>
+</ul>
+<p>更新だけを出す場合に当てはまりやすいのは、1つ目です。経管の交代や業種追加などを同時に出すときは、残りの2つにも当てはまらないかを、手引と電子申請のページで確認します。</p>
+<h3 id="電子申請の注意点">電子申請の注意点</h3>
+<p>東京都のページは、システム上は必須でも手引では提出不要としている書類があると案内しています。その場合は、東京都が用意した代用様式を添付します。手引とシステムの表示が違うときは、手引に従います。</p>
+<p>更新のときの営業所技術者等の常勤性確認書類は、「その他確認書類」に「営業所技術者等常勤性確認資料」として添付します。</p>
+<p>電子申請で出した書類のうち、閲覧の対象となっているものは、「建設業許可電子閲覧システム」でインターネット上に公開されます（手引P.18、国土交通省のJCIPのページ）。</p>
+<p>操作の質問は、JCIPのヘルプデスク（0570-033-730、平日9時から17時）に問い合わせます。東京都は、システムの操作についての質問には答えられないと案内しています。</p>
+<h2 id="更新で見落としやすい点">更新で見落としやすい点</h2>
+<ul>
+<li>要件を欠いたまま更新を迎えない。国土交通省の「許可の要件」のページは、許可を取得した後に経営業務の管理責任者等が退職して後任がいない場合などは、要件欠如で許可の取消し（建設業法第29条第1項第1号）になると書いています。退職者が出たら、変更届を2週間以内に出します</li>
+<li>社会保険の加入。令和2年10月1日以降の申請（更新を含む）は、適切な社会保険に加入していることが許可の要件です。加入していない場合は許可されません（手引P.72）</li>
+<li>欠格要件。更新を受けようとする者に問われる欠格要件は、建設業法第8条のうち第1号と、第7号から第14号です（国土交通省の「許可の要件」）。破産者で復権を得ない者、拘禁刑以上の刑や罰金刑から5年を経過しない者、暴力団員などが含まれます</li>
+<li>証明書の有効期限。登記されていないことの証明書、身分証明書、登記事項証明書は、発行後3か月以内のものを出します（手引P.21）</li>
+<li>法人成りや組織変更。個人から法人への変更は、事前認可の申請をしない場合は新規申請になります（手引P.13）。法人化の判断は、<a href="/articles/kojin-jigyou-houjinka-handan/">個人事業主の法人化で変わること</a>で整理しています</li>
+</ul>
+<h2 id="更新前のチェックリスト">更新前のチェックリスト</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 許可通知書で有効期間の満了日を確認し、受付開始日と締切日（30日前）を書き出した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 前回の許可（更新）から今回までの、毎年の決算変更届が出ている</li>
+<li class="task-list-item"><input type="checkbox" disabled> 商号・所在地・役員・経管・営業所技術者等などの変更届が出ている</li>
+<li class="task-list-item"><input type="checkbox" disabled> 経管と営業所技術者等が、いま常勤で在籍している</li>
+<li class="task-list-item"><input type="checkbox" disabled> 健康保険・厚生年金・雇用保険の加入状況が、様式第7号の3の内容と合っている</li>
+<li class="task-list-item"><input type="checkbox" disabled> 登記されていないことの証明書、身分証明書、登記事項証明書は、発行後3か月以内のものをそろえた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 手数料（5万円。組み合わせで加算）を用意した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 窓口・郵送・電子申請のどれで出すかを決めた（満了日が近いときは窓口）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 電子申請なら、GビズIDを取得済みである</li>
+</ul>
+<h2 id="よくある質問とまとめ">よくある質問とまとめ</h2>
+<h3 id="許可通知書が届くまで許可は有効ですか">許可通知書が届くまで、許可は有効ですか</h3>
+<p>更新申請が受理されていれば、処分があるまで従前の許可は有効です（建設業法第3条第4項）。東京都は、更新の許可通知書を審査が終わり次第すみやかに発送します。届いたら、新しい有効期間を確認します。</p>
+<h3 id="行政書士に頼まないと更新できませんか">行政書士に頼まないと更新できませんか</h3>
+<p>自分で更新を出してはいけないという記載は、東京都の手引にはありません。手引は、申請手続の代理は法律で行政書士または弁護士に限られると案内しています。</p>
+<p>代理を頼むかどうかは、書類の量と期限までの余裕で決めます。費用は、依頼先の見積もりで確認します。個別の判断は、東京都の建設業課の相談コーナーや、行政書士に相談してください。</p>
+<h3 id="まとめ">まとめ</h3>
+<p>建設業許可の更新は、有効期間（5年）が満了する日の30日前までに申請します。東京都知事許可の受付は、満了日の2か月前から30日前までです。</p>
+<p>手数料は知事許可・大臣許可とも5万円で、組み合わせると加算されます。更新の前に、毎年の決算変更届や変更届が出ていないと、東京都は更新申請を受け付けません。</p>
+<p>期限を過ぎると許可は失効し、取り直しは新規申請になります。電子申請は、30日前を過ぎると東京都では受け付けられません。</p>
+<p>手引の内容は毎年度変わります。申請の前に、許可を受けた行政庁の最新の手引で確認してください。個別の判断は、許可行政庁の窓口や行政書士に相談してください。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>建設業許可の更新はいつまでに申請しますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>許可の有効期間（5年）が満了する日の30日前までです。建設業法施行規則第5条に定められています。東京都知事許可の手引（令和8年度）では、受付期間は満了日の2か月前から30日前までと案内されています。許可日が8月5日なら満了日は8月4日で、受付開始は6月4日（土日祝日なら翌開庁日）です。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>建設業許可の更新にはいくらかかりますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>国土交通省の案内では、知事許可の更新も大臣許可の更新も、許可手数料は5万円です。東京都の手引では、一般建設業と特定建設業を同時に更新するなど組み合わせると加算されます（例は5万円と5万円で10万円）。受け付けられた後に取り下げた場合、手数料は返却されないと手引に書かれています。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>決算変更届を出していなくても更新できますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>東京都の手引は、必要な届出のない状態では更新申請を受け付けられないと案内しています。決算変更届（事業年度終了届）は、事業年度が終わってから4か月以内に出す届出です（建設業法第11条第2項）。更新の前に、前回の許可から今回までに必要な届出が済んでいるかを確認します。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>更新の期限を過ぎてしまったらどうなりますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>更新申請が満了日までに受理されていれば、処分が出るまで従前の許可は有効です。間に合わずに満了日を過ぎると、許可は失効します。許可が必要な工事を請け負うには許可を取り直すことになり、失効前に結んだ契約の工事は施工できますが、失効後2週間以内に注文者へ通知します（建設業法第29条の3）。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>更新は電子申請でできますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>できます。国土交通省の建設業許可・経営事項審査電子申請システム（JCIP）で受け付けられ、利用にはGビズIDが要ります。東京都の案内では、手数料の納付はPay-easyのみで、最も古い許可の有効期間満了日の30日前を過ぎた日以降の申請は電子申請では受け付けられず、窓口へ相談するよう案内されています。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://www.mlit.go.jp/totikensangyo/const/1_6_bt_000080.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国土交通省 建設業の許可とは</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.mlit.go.jp/totikensangyo/const/1_6_bt_000082.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国土交通省 許可の要件</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.mlit.go.jp/totikensangyo/const/1_6_bt_000086.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国土交通省 許可申請の手続き</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.mlit.go.jp/totikensangyo/const/1_6_bt_000087.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国土交通省 許可後の手続き</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.mlit.go.jp/tochi_fudousan_kensetsugyo/const/tochi_fudousan_kensetsugyo_const_tk1_000001_00019.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国土交通省 建設業許可・経営事項審査電子申請システム（JCIP）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.mlit.go.jp/totikensangyo/const/content/001860019.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国土交通省 建設業許可事務ガイドライン（令和7年2月1日から適用）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://laws.e-gov.go.jp/law/324AC0000000100" rel="noopener" target="_blank" data-astro-cid-sgg5joot>e-Gov法令検索 建設業法（昭和24年法律第100号）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://laws.e-gov.go.jp/law/324M50004000014" rel="noopener" target="_blank" data-astro-cid-sgg5joot>e-Gov法令検索 建設業法施行規則（昭和24年建設省令第14号）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.toshiseibi.metro.tokyo.lg.jp/kenchiku_kaihatsu/kenchiku_shidou/gyosya_shido/kensetsu" rel="noopener" target="_blank" data-astro-cid-sgg5joot>東京都都市整備局 建設業許可（建設業許可のご案内）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.toshiseibi.metro.tokyo.lg.jp/kenchiku_kaihatsu/kenchiku_shidou/gyosya_shido/kensetsu/kensetsu_kyoka_tebiki3" rel="noopener" target="_blank" data-astro-cid-sgg5joot>東京都都市整備局 建設業許可 手引、申請書類等（令和8年度）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.toshiseibi.metro.tokyo.lg.jp/documents/d/toshiseibi/2026-09-04-143143-026" rel="noopener" target="_blank" data-astro-cid-sgg5joot>東京都 建設業許可申請・変更の手引（令和8年度）一括版（PDF）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.toshiseibi.metro.tokyo.lg.jp/documents/d/toshiseibi/2026-09-08-095058-510" rel="noopener" target="_blank" data-astro-cid-sgg5joot>東京都 令和8年度手引の主な変更点（PDF）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.toshiseibi.metro.tokyo.lg.jp/kenchiku_kaihatsu/kenchiku_shidou/gyosya_shido/kensetsu/kensetsu_joukinsei" rel="noopener" target="_blank" data-astro-cid-sgg5joot>東京都都市整備局 常勤性確認書類の取り扱い変更のお知らせ</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.toshiseibi.metro.tokyo.lg.jp/documents/d/toshiseibi/koshin-kyokatuchi-leaflet-2026-pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>東京都 建設業許可更新申請の許可通知書発送時期の見直しについて（PDF）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.toshiseibi.metro.tokyo.lg.jp/kenchiku_kaihatsu/kenchiku_shidou/gyosya_shido/kensetsu/denshi_kyoka_oshirase" rel="noopener" target="_blank" data-astro-cid-sgg5joot>東京都都市整備局 建設業許可の電子申請について</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.toshiseibi.metro.tokyo.lg.jp/kenchiku_kaihatsu/kenchiku_shidou/gyosya_shido/kensetsu/r2_yuusoutaiou" rel="noopener" target="_blank" data-astro-cid-sgg5joot>東京都都市整備局 建設業許可関係書類の郵送受付について</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://gbiz-id.go.jp/top/apply/account_select.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>GビズID 申請アカウントの選択</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約8分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/sonota/" data-astro-cid-sgg5joot>その他の開業準備の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

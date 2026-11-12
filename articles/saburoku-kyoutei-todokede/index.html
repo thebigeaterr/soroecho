@@ -1,0 +1,572 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>36協定の届出方法と期限｜初めて出す会社の順番・様式の選び方・電子申請 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="時間外・休日労働をさせるなら、36協定を結び、有効期間が始まる前に事業場を管轄する労働基準監督署へ届け出ます。限度時間内なら様式第9号、超えるなら第9号の2を使い、窓口・郵送・電子申請で出せることを、厚生労働省の資料で整理します。"><link rel="canonical" href="https://soroecho.com/articles/saburoku-kyoutei-todokede/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="36協定の届出方法と期限｜初めて出す会社の順番・様式の選び方・電子申請 | そろえ帳"><meta property="og:description" content="時間外・休日労働をさせるなら、36協定を結び、有効期間が始まる前に事業場を管轄する労働基準監督署へ届け出ます。限度時間内なら様式第9号、超えるなら第9号の2を使い、窓口・郵送・電子申請で出せることを、厚生労働省の資料で整理します。"><meta property="og:url" content="https://soroecho.com/articles/saburoku-kyoutei-todokede/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/saburoku-kyoutei-todokede.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="36協定の届出方法と期限｜初めて出す会社の順番・様式の選び方・電子申請 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="36協定の届出方法と期限｜初めて出す会社の順番・様式の選び方・電子申請 | そろえ帳"><meta name="twitter:description" content="時間外・休日労働をさせるなら、36協定を結び、有効期間が始まる前に事業場を管轄する労働基準監督署へ届け出ます。限度時間内なら様式第9号、超えるなら第9号の2を使い、窓口・郵送・電子申請で出せることを、厚生労働省の資料で整理します。"><meta name="twitter:image" content="https://soroecho.com/og/saburoku-kyoutei-todokede.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"36協定の届出方法と期限｜初めて出す会社の順番・様式の選び方・電子申請","item":"https://soroecho.com/articles/saburoku-kyoutei-todokede/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"36協定の届出方法と期限｜初めて出す会社の順番・様式の選び方・電子申請","description":"時間外・休日労働をさせるなら、36協定を結び、有効期間が始まる前に事業場を管轄する労働基準監督署へ届け出ます。限度時間内なら様式第9号、超えるなら第9号の2を使い、窓口・郵送・電子申請で出せることを、厚生労働省の資料で整理します。","url":"https://soroecho.com/articles/saburoku-kyoutei-todokede/","datePublished":"2026-11-12T00:00:00.000Z","dateModified":"2026-11-12T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/saburoku-kyoutei-todokede/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"36協定届は、いつまでにどこへ出しますか。","acceptedAnswer":{"@type":"Answer","text":"協定の有効期間が始まる前までに、事業場の所在地を管轄する労働基準監督署へ出します。厚生労働省の36協定パンフレット（令和8年9月版）は、届出をしなければ有効な36協定届にならないと書き、有効期間の開始前までの届出を求めています。届出の何日前までという日数の決まりは、確認した公式ページに書かれていませんでした。"}},{"@type":"Question","name":"初めて出すとき、どの様式を使いますか。","acceptedAnswer":{"@type":"Answer","text":"時間外労働が月45時間・年360時間の限度時間に収まるなら、様式第9号（一般条項）です。臨時的な特別の事情で限度時間を超える必要があるときは、様式第9号の2（1枚目が一般条項、2枚目が特別条項）です。建設事業、自動車運転の業務、医業に従事する医師が含まれる場合や、新技術・新商品の研究開発業務の場合は、別の様式があります。"}},{"@type":"Question","name":"労働者代表は誰を選べばよいですか。","acceptedAnswer":{"@type":"Answer","text":"労働者の過半数で組織する労働組合があればその労働組合、なければ労働者の過半数を代表する者と協定を結びます。過半数代表者は、管理監督者でないこと、協定を結ぶ者を選ぶことを明らかにして投票や挙手などで選ばれたこと、使用者の意向で選ばれたものでないことが条件です（労働基準法施行規則第6条の2）。数える対象は、パートやアルバイトを含む事業場のすべての労働者です。"}},{"@type":"Question","name":"窓口に行かずに出せますか。","acceptedAnswer":{"@type":"Answer","text":"電子申請でできます。e-Govのほか、厚生労働省の「確かめよう労働条件」にある電子申請様式作成支援ツールが使えます。電子署名・電子証明書の添付は不要です。e-Govの電子申請はパソコンで行い、スマートフォンから届出はできません。"}},{"@type":"Question","name":"毎年出し直す必要がありますか。","acceptedAnswer":{"@type":"Answer","text":"厚生労働省の36協定パンフレット（令和8年9月版）は、有効期間を1年とすることが望ましいと書いています。有効期間が終わる前に、次の期間の協定を結んで届け出ます。作成支援ツールには、有効期間が満了する30日前のリマインドメールと、前回の内容を複写する機能があります。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>36協定の届出方法と期限｜初めて出す会社の順番・様式の選び方・電子申請</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="eca0p2js-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="eca0p2js-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#eca0p2js-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#eca0p2js-p)" data-astro-cid-yuatfsof></rect><circle cx="386" cy="78" r="152" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>36協定</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>届出</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>36協定の届出方法と期限｜初めて出す会社の順番・様式の選び方・電子申請</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-11-12T00:00:00.000Z" data-astro-cid-sgg5joot>2026年11月12日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約25分</p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論有効期間が始まる前までに事業場を管轄する労働基準監督署へ36協定届を出す" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：有効期間が始まる前までに、事業場を管轄する労働基準監督署へ36協定届を出す</a></li><li data-astro-cid-sgg5joot><a href="#36協定が要る場合と要らない場合" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>36協定が要る場合と、要らない場合</a></li><li data-astro-cid-sgg5joot><a href="#期限協定の有効期間が始まる前までに出す" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>期限：協定の有効期間が始まる前までに出す</a></li><li data-astro-cid-sgg5joot><a href="#提出先事業場ごとに所在地を管轄する労働基準監督署へ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>提出先：事業場ごとに、所在地を管轄する労働基準監督署へ</a></li><li data-astro-cid-sgg5joot><a href="#方法窓口郵送電子申請の違い" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>方法：窓口・郵送・電子申請の違い</a></li><li data-astro-cid-sgg5joot><a href="#様式の選び方状況別にどの様式と記載例を使うか" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>様式の選び方：状況別に、どの様式と記載例を使うか</a></li><li data-astro-cid-sgg5joot><a href="#労働者代表の選び方過半数労働組合がなければ過半数代表者を選ぶ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>労働者代表の選び方：過半数労働組合がなければ、過半数代表者を選ぶ</a></li><li data-astro-cid-sgg5joot><a href="#書き方様式第9号で迷いやすい欄" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>書き方：様式第9号で迷いやすい欄</a></li><li data-astro-cid-sgg5joot><a href="#特別条項様式第9号の2で増える項目" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>特別条項（様式第9号の2）で増える項目</a></li><li data-astro-cid-sgg5joot><a href="#出す前のチェックとつまずきやすい点" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>10</span>出す前のチェックと、つまずきやすい点</a></li><li data-astro-cid-sgg5joot><a href="#毎年の更新有効期間が終わる前に結び直して出す" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>11</span>毎年の更新：有効期間が終わる前に結び直して出す</a></li><li data-astro-cid-sgg5joot><a href="#届け出たあと周知と割増賃金" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>12</span>届け出たあと：周知と割増賃金</a></li><li data-astro-cid-sgg5joot><a href="#出さなかったとき遅れたとき" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>13</span>出さなかったとき・遅れたとき</a></li><li data-astro-cid-sgg5joot><a href="#相談先労働基準監督署働き方改革推進支援センター" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>14</span>相談先：労働基準監督署・働き方改革推進支援センター</a></li><li data-astro-cid-sgg5joot><a href="#よくある質問とまとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>15</span>よくある質問とまとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論有効期間が始まる前までに事業場を管轄する労働基準監督署へ36協定届を出す">結論：有効期間が始まる前までに、事業場を管轄する労働基準監督署へ36協定届を出す</h2>
+<p>36協定届は、法定労働時間（1日8時間・1週40時間）を超えて働かせる、または法定の休日に働かせる場合に、協定の有効期間が始まる前までに、事業場を管轄する労働基準監督署へ出します。厚生労働省の<a href="https://www.mhlw.go.jp/content/11200000/001738076.pdf">36協定パンフレット</a>（令和8年9月版。2026年11月5日取得）は、届出をしなければ有効な36協定届にはならないと書いています。</p>
+<p>期限は「届出から何日以内」ではなく、有効期間の始まる前までです。方法は、窓口、郵送、電子申請（e-Gov、または「確かめよう労働条件」の作成支援ツール）です。</p>
+<p>使う様式は、時間外労働が月45時間・年360時間の限度時間に収まるなら様式第9号、臨時的な特別の事情でそれを超えるなら様式第9号の2です。建設業・自動車運転・医師は、別の様式があります。</p>
+<p>初めて出すときの順番と期限は、次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>順番</th>
+<th>やること</th>
+<th>期限・時期</th>
+<th>出どころ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>36協定が要るかを判断する（1日8時間・1週40時間を超える、または法定の休日に働かせる見込みがあるか）</td>
+<td>時間外・休日労働をさせる前</td>
+<td>36協定パンフレット、労働基準法第32条・第35条・第36条</td>
+</tr>
+<tr>
+<td>2</td>
+<td>協定の有効期間の始まる日と、時間外労働を数え始める起算日を決める</td>
+<td>届出の前</td>
+<td>36協定パンフレット（記載例①）</td>
+</tr>
+<tr>
+<td>3</td>
+<td>労働者代表を決める（過半数労働組合がなければ、過半数代表者を選ぶ）</td>
+<td>協定を結ぶ前</td>
+<td>労働基準法施行規則第6条の2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>様式を選び、協定の内容を決めて記入し、労使で協定を結ぶ</td>
+<td>有効期間の始まる前</td>
+<td>労働基準法施行規則第16条、様式第9号・第9号の2</td>
+</tr>
+<tr>
+<td>5</td>
+<td>事業場を管轄する労働基準監督署に届け出る</td>
+<td>有効期間の始まる前まで</td>
+<td>36協定パンフレット（STEP3）</td>
+</tr>
+<tr>
+<td>6</td>
+<td>届け出た協定を、労働者に周知する</td>
+<td>届出のあと</td>
+<td>労働基準法第106条、36協定パンフレット</td>
+</tr>
+<tr>
+<td>7</td>
+<td>次の有効期間の協定を結び直して、また届け出る</td>
+<td>有効期間が終わる前（支援ツールのリマインドは満了の30日前）</td>
+<td>36協定パンフレット、リーフレット</td>
+</tr>
+</tbody>
+</table>
+<p>この記事で分かることは次のとおりです。</p>
+<ul>
+<li>36協定届が要る場合と、要らない場合</li>
+<li>期限の考え方と、初めて出すときの順番</li>
+<li>提出先と、窓口・郵送・電子申請の違い</li>
+<li>様式（第9号・第9号の2ほか）の選び方と、書き方</li>
+<li>労働者代表の選び方と、毎年の更新</li>
+</ul>
+<p>この記事は、36協定パンフレット、様式第9号・第9号の2（記載心得）、e-Gov法令検索の労働基準法と同法施行規則（以下「労基則」）を中心に、2026年11月5日に確認した内容です。条文は、この日に施行されている版です。施行前の改正（2027年4月1日・2028年12月23日施行分）も確かめましたが、ここで引用した条文は変わりません。</p>
+<p>様式や運用は変わることがあります。出す前に、労働基準監督署の最新の案内を確かめてください。</p>
+<h2 id="36協定が要る場合と要らない場合">36協定が要る場合と、要らない場合</h2>
+<p>36協定パンフレットによると、36協定とは、事業主が労働者に法定労働時間を超える時間外労働や休日労働をさせる場合に、事業主と事業場の労働者代表との間で結ぶ協定です。労働基準法は、労働時間を原則として1日8時間・1週40時間以内、休日を原則として毎週少なくとも1回と定めています（第32条・第35条。e-Gov法令検索、2026年11月5日取得）。</p>
+<p>状況別に整理すると、次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>状況</th>
+<th>36協定と届出</th>
+<th>出どころ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1日8時間または1週40時間を超える労働が見込まれる</td>
+<td>必要（結んで届け出る）</td>
+<td>36協定パンフレット</td>
+</tr>
+<tr>
+<td>法定の休日（毎週少なくとも1回、または4週間を通じて4日以上）に働かせる</td>
+<td>必要</td>
+<td>36協定パンフレット、労働基準法第35条</td>
+</tr>
+<tr>
+<td>1日8時間・1週40時間を超える労働が見込まれない</td>
+<td>不要</td>
+<td>36協定パンフレット（判断の図）</td>
+</tr>
+<tr>
+<td>常時10人未満で、物品の販売・配給・保管・賃貸や理容、映画の映写・演劇などの興行、保健衛生、旅館・飲食店などの接客娯楽の事業</td>
+<td>1週の法定労働時間が44時間になる特例がある（1日は8時間のまま）</td>
+<td>労基則第25条の2</td>
+</tr>
+<tr>
+<td>満18歳未満の人</td>
+<td>36協定を結んでも、時間外・休日労働をさせられない</td>
+<td>労働基準法第60条第1項</td>
+</tr>
+</tbody>
+</table>
+<p>基準は、会社が決めた所定労働時間ではなく、法定労働時間です。様式第9号の記載心得も、延長できる時間数には法定労働時間を超える時間数を書き、所定労働時間を超える時間数は任意で併記すると定めています。</p>
+<p>36協定パンフレットも労働基準法第36条の条文も、従業員数による除外を設けていません。従業員が少ない会社でも、法定労働時間を超えて働かせる見込みがあれば、手続きの対象になると読めます。</p>
+<h3 id="36協定は残業を命じる根拠そのものではない">36協定は、残業を命じる根拠そのものではない</h3>
+<p>スタートアップ労働条件（厚生労働省）の「時間外労働の上限について」（2026年11月5日取得）は、36協定には、法定労働時間を超えて働かせても労働基準法違反に問われないという効果（免罰効果）があるだけだと説明しています。労働者に残業の義務を課すものではなく、残業の義務は、労働契約か就業規則にその旨が定められていることで生じるとされています。</p>
+<p>つまり、36協定を届け出ただけでは、従業員に残業を命じる根拠にはなりません。就業規則や雇用契約の書き方は、労働基準監督署や社会保険労務士に確認してください。</p>
+<h3 id="満18歳未満の人と申し出で制限される人">満18歳未満の人と、申し出で制限される人</h3>
+<p>労働基準法第60条第1項は、第36条の規定を満18歳に満たない者には適用しないと定めています。高校生のアルバイトなど満18歳未満の人には、36協定があっても時間外・休日労働をさせられません。</p>
+<p>同じスタートアップ労働条件のページは、妊産婦、小学校就学前の子を育てる人、法定の家族を介護する人などは、申し出があれば時間外・休日労働が制限されると案内しています。制限の中身は、同ページで確認できます。</p>
+<h2 id="期限協定の有効期間が始まる前までに出す">期限：協定の有効期間が始まる前までに出す</h2>
+<p>36協定パンフレットの「届出後のチェックポイント」（2026年11月5日取得）は、36協定は、協定を結んだあと所轄の労働基準監督署に届出を行わなければ有効な36協定届にならないと書いています。そのうえで、有効期間の開始前までに届け出るよう求めています。</p>
+<p>つまり締切は、協定の有効期間が始まる日の前です。たとえば有効期間を2027年4月1日から1年間にするなら、前日の2027年3月31日までに届け出る、と数えると安全です。これは公式の書き方を当てはめた計算です。</p>
+<p>届出の何日前までという日数の決まりは、今回確認した公式ページに書かれていませんでした。パンフレットの記載は「有効期間の開始前まで」です。</p>
+<h3 id="初めて出すときは有効期間の始まりを自分で決める">初めて出すときは、有効期間の始まりを自分で決める</h3>
+<p>36協定パンフレットの記載例①は、協定の有効期間の始期は、会社の1年の始期や賃金の締め日に合わせると運用しやすいと説明しています。有効期間は1年とすることが望ましいとも書かれています。</p>
+<p>1か月と1年の時間外労働を数え始める「起算日」も、同じく会社の1年の始期や賃金の締め日に合わせると運用しやすいとされています。</p>
+<p>時間外・休日労働が必要になりうる日より前に有効期間が始まるように決めて、その前に届け出る、という順番になります。なお、労働基準法は、36協定で時間外労働を認める対象期間を1年間に限っています（第36条第2項第2号）。</p>
+<h3 id="3月中旬から下旬は混みやすい">3月中旬から下旬は混みやすい</h3>
+<p>スタートアップ労働条件の「電子申請様式作成支援ツールについて」（2026年11月5日取得）は、例年3月中旬から下旬に36協定届等の電子申請が集中し、処理に時間がかかる場合があると書いています。可能な限りこの時期を避けて、早めに申請するよう求めています。</p>
+<p>有効期間を4月1日に合わせる場合は、届出の時期がこの時期と重なります。早めの準備が必要です。</p>
+<h2 id="提出先事業場ごとに所在地を管轄する労働基準監督署へ">提出先：事業場ごとに、所在地を管轄する労働基準監督署へ</h2>
+<p>労基則第16条第1項（e-Gov法令検索、2026年11月5日取得）は、36協定の届出を、様式第9号（特別条項を定める場合は様式第9号の2）により、所轄の労働基準監督署長にしなければならないと定めています。</p>
+<p>36協定パンフレットは、36協定を事業場ごとに締結し、事業場の管轄監督署へ届け出るよう書いています。同じ場所にある事業部門は原則として1つの事業場、別の場所にある事業部門は原則として別々の事業場です。営業部門と製造部門が別の住所なら、それぞれ36協定を結び、それぞれの管轄署へ届け出ます。</p>
+<p>管轄の労働基準監督署は、厚生労働省の<a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/location.html">全国労働基準監督署の所在案内</a>（2026年11月5日取得。都道府県別）で調べます。「確かめよう労働条件」の作成支援ツールなら、事業場の所在地を入力すると所轄の署が自動で選ばれると、厚生労働省のリーフレット（令和8年2月）が説明しています。</p>
+<h3 id="店舗や営業所が複数あるとき">店舗や営業所が複数あるとき</h3>
+<p>厚生労働省の「労働基準法等の規定に基づく届出等の電子申請について」（2026年11月5日取得）は、時間外・休日労働協定届は本社一括届出ができると案内しています。一括届出事業場一覧作成ツールで作ったCSVファイルを添付して申請します。</p>
+<p>2024年2月の電子申請パンフレット（2026年11月5日取得）によると、36協定届の一括届出は、労働保険番号、事業の種類・名称・所在地、労働者数、協定成立年月日、労働者側の協定当事者を除いて、協定の内容が同じであることが条件です。電子申請なら、労働者代表が事業場ごとに違っていても一括届出ができます。</p>
+<h2 id="方法窓口郵送電子申請の違い">方法：窓口・郵送・電子申請の違い</h2>
+<p>厚生労働省は、先ほどの「労働基準法等の規定に基づく届出等の電子申請について」のページ（2026年11月5日取得）で、「来署・郵送の負担軽減による届出・申請の業務効率化のため、是非とも電子申請をご利用下さい」と呼びかけています。この書き方から、窓口に出向く方法と、郵送する方法でも届け出られることが分かります。</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>用意するもの</th>
+<th>公式の案内で確認できたこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>窓口（来署）</td>
+<td>様式第9号などを印刷したもの</td>
+<td>厚労省は電子申請を「来署・郵送の負担軽減」のためと案内している。窓口の受付時間は、確認した厚労省のページに書かれていなかった</td>
+</tr>
+<tr>
+<td>郵送</td>
+<td>同上</td>
+<td>返信用封筒や控えの扱いなど、書面で出すときの細かい決まりは、確認した厚労省のページに書かれていなかった</td>
+</tr>
+<tr>
+<td>e-Gov電子申請</td>
+<td>パソコン、アカウント（e-GovアカウントのほかGビズIDなどでもログインできる）</td>
+<td>パソコン上だけで手続きが完了する。電子署名・電子証明書の添付は不要（一部手続きを除く）。スマートフォンからは届出できない</td>
+</tr>
+<tr>
+<td>「確かめよう労働条件」の電子申請様式作成支援ツール</td>
+<td>GビズID、またはスタートアップ労働条件のアカウント</td>
+<td>入力フォームで届出書類を作って電子申請する。届出先の自動選択、次回のリマインドと複写の機能がある</td>
+</tr>
+</tbody>
+</table>
+<p>書面で出すときの受付時間や、同封するものは、届出先の労働基準監督署に確認してください。</p>
+<p>e-Govのトップページ（2026年11月5日取得）には、GビズIDやオープンIDでログインできると書かれています。電子申請はパソコンのアプリケーションで行い、スマートフォンからは届出できません。処理状況の確認は、スマートフォンからもできます。</p>
+<h3 id="e-govで出す流れ">e-Govで出す流れ</h3>
+<p>2024年2月の電子申請パンフレットは、36協定届を例に、次の順番で説明しています。画面の表示は、その後変わっていることがあります。</p>
+<ol>
+<li>事前準備をする。アカウントの準備、ブラウザの設定、アプリケーションのインストールの3つです。</li>
+<li>e-Govにログインして「手続検索」を開き、「時間外労働」などのキーワードで手続を探す。</li>
+<li>申請書を入力する。基本情報（法人は法人番号が必須）、申請様式、添付書類（労使協定書などは任意）、提出先の労働基準監督署の順です。</li>
+<li>内容を確認して「提出」を押す。提出後は、自分の画面だけでは取下げや添付書類の差し替えができません。必要なときは到達番号を確認して、提出先の労働基準監督署に連絡します。</li>
+<li>「申請案件一覧」で処理状況を確認し、電子公文書をダウンロードする。主な手続では、受付印のイメージが付いた控えもダウンロードできます。</li>
+</ol>
+<p>厚生労働省の「労働局・労働基準監督署への申請・届出はオンラインをご活用ください」（2026年11月5日取得）は、電子署名・電子証明書の添付は不要だと案内しています（一部手続きを除く）。2024年2月のパンフレットは、令和3年4月1日から不要になったと書いています。</p>
+<h3 id="確かめよう労働条件の作成支援ツール">「確かめよう労働条件」の作成支援ツール</h3>
+<p>厚生労働省の労働条件総合情報サイト<a href="https://www.check-roudou.mhlw.go.jp/">確かめよう労働条件</a>（2026年11月5日取得）のトップページは、「電子申請様式作成支援ツール」を、36協定届などを労働基準監督署に届出が可能な書面にして電子申請できるものとして紹介しています。</p>
+<p>ツールの案内ページ（<a href="https://www.startup-roudou.mhlw.go.jp/support_1.html">電子申請様式作成支援ツールについて</a>、2026年11月5日取得）によると、入力フォームに必要項目を入力して、届出に使える資料を作れます。対象は、36協定届、1年単位の変形労働時間制に関する協定届、就業規則（変更）届です。</p>
+<p>ログインには、GビズID、またはスタートアップ労働条件のアカウントが要ります。GビズIDを使わない場合は、メールアドレスとパスワードで会員登録します（会員登録及びログイン方法のマニュアル、2026年11月5日取得）。GビズIDの取り方は、<a href="/articles/gbizid-prime-shutoku/">GビズIDプライムの取得方法の記事</a>で整理しています。</p>
+<p>使い方は2通りです。ツール上で届出書類を作り、労使協定を結んだうえで電子申請する方法と、ツール外で作った労使協定の内容を入力し、書類を添付して電子申請する方法です。</p>
+<p>リーフレット（令和8年2月）によると、36協定届は、有効期間が満了する30日前にリマインドメールが届きます。次回は、前回の内容を複写して、変更点だけ直して届け出られます。リマインドの受け取りは、会員登録の画面でチェックを入れて希望します。</p>
+<h2 id="様式の選び方状況別にどの様式と記載例を使うか">様式の選び方：状況別に、どの様式と記載例を使うか</h2>
+<p>様式は、厚生労働省の<a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/roudoukijunkankei.html">主要様式ダウンロードコーナー（労働基準法等関係主要様式）</a>（2026年11月5日取得）からダウンロードします。様式第9号と第9号の2は、Word形式で配布されています。</p>
+<p>36協定パンフレットの判断の流れは、次の2つの質問です。</p>
+<ol>
+<li>1日8時間または1週40時間を超える労働が見込まれるか。見込まれなければ、36協定は不要です。</li>
+<li>見込まれる場合、「臨時的な特別の事情がある」ときに、月45時間または年360時間を超える時間外労働が見込まれるか。見込まれなければ様式第9号（一般条項のみ）、見込まれれば様式第9号の2（1枚目が一般条項、2枚目が特別条項）です。</li>
+</ol>
+<p>状況別の様式は、次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>状況</th>
+<th>使う様式</th>
+<th>記載例・案内</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>時間外労働が月45時間・年360時間の限度時間に収まる（休日労働を定めてもよい）</td>
+<td>様式第9号（一般条項）</td>
+<td>36協定パンフレットの記載例①</td>
+</tr>
+<tr>
+<td>臨時的な特別の事情があるときに限り、月45時間・年360時間を超えて時間外労働をさせる必要がある</td>
+<td>様式第9号の2（1枚目が一般条項、2枚目が特別条項）</td>
+<td>36協定パンフレットの記載例②</td>
+</tr>
+<tr>
+<td>新技術・新商品の研究開発業務に従事する労働者に、時間外・休日労働をさせる</td>
+<td>様式第9号の3</td>
+<td>主要様式ダウンロードコーナーに様式を掲載</td>
+</tr>
+<tr>
+<td>建設事業（災害時の復旧・復興の事業を含む）が含まれる</td>
+<td>様式第9号の3の2（一般条項）、第9号の3の3（特別条項）</td>
+<td>主要様式ダウンロードコーナーが、記載例のパンフレットを案内</td>
+</tr>
+<tr>
+<td>自動車運転の業務が含まれる</td>
+<td>様式第9号の3の4（一般条項）、第9号の3の5（特別条項）</td>
+<td>同上（タクシー・ハイヤー、トラック、バスの各パンフレット）</td>
+</tr>
+<tr>
+<td>医業に従事する医師（特定医師）が含まれる</td>
+<td>様式第9号の4（一般条項）、第9号の5（特別条項）</td>
+<td>同上</td>
+</tr>
+</tbody>
+</table>
+<p>労基則第16条は、研究開発業務の届出を第9号の3（第2項）と定めています。労使委員会などの決議として届け出るときの様式（第9号の6・第9号の7）は、東京労働局の「時間外・休日労働に関する協定届（36協定届）」のページ（2026年11月5日取得）の様式一覧に載っています。</p>
+<h3 id="記載例の見方">記載例の見方</h3>
+<p>36協定パンフレットの記載例①は、各種商品小売業の例です。時間外労働をさせる具体的事由に「受注の集中」「クレーム対応」「棚卸」、業務の種類に「商品管理」「接客」「購買・経理」、労働者代表の選出方法に「投票による選挙」と書かれています。</p>
+<p>記載例②は、同じ業務・人数で特別条項を定めた例です。臨時的に限度時間を超える場合は「突発的な仕様変更」「大規模なクレームへの対応」「納品トラブル」、手続は「労働者代表への通知」と書かれています。</p>
+<p>健康福祉確保措置は、①（医師による面接指導）と⑦（心とからだの相談窓口の設置）を選び、具体的な内容を書く例です。</p>
+<h3 id="古い様式を使い回さない">古い様式を使い回さない</h3>
+<p>主要様式ダウンロードコーナーでは、様式第9号・第9号の2・第9号の3の2から第9号の5までの更新日が、令和7年6月1日と表示されています。以前の年に使った様式のコピーを使い回さず、配布元の最新版を使ってください。</p>
+<p>東京労働局のページは、協定の有効期間が令和6年4月1日以降のものに使う「新様式」と、令和6年3月31日以前のものに使う「旧様式」を分けて載せています。たとえば、旧様式の第9号の4は「適用猶予期間中の適用猶予事業・業務」用で、新様式の第9号の4は「医業に従事する医師を含む場合」（一般条項）用です。様式の番号だけで探さず、状況に合った様式名を確かめてください。</p>
+<h2 id="労働者代表の選び方過半数労働組合がなければ過半数代表者を選ぶ">労働者代表の選び方：過半数労働組合がなければ、過半数代表者を選ぶ</h2>
+<p>労働基準法第36条第1項は、協定を結ぶ相手を、事業場の労働者の過半数で組織する労働組合がある場合はその労働組合、ない場合は労働者の過半数を代表する者と定めています。労働組合がない事業場では、過半数代表者を選びます。</p>
+<p>過半数代表者の条件は、次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>内容</th>
+<th>出どころ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数える対象</td>
+<td>正社員だけでなく、パートやアルバイトを含む、事業場のすべての労働者</td>
+<td>36協定パンフレット</td>
+</tr>
+<tr>
+<td>なれない人</td>
+<td>管理監督者。労働条件の決定その他の労務管理について、経営者と一体的な立場にある人を指す</td>
+<td>労基則第6条の2、36協定パンフレット</td>
+</tr>
+<tr>
+<td>選び方</td>
+<td>協定を結ぶ者を選ぶことを明らかにして、投票、挙手などの方法で選ぶ</td>
+<td>労基則第6条の2</td>
+</tr>
+<tr>
+<td>避けること</td>
+<td>使用者の意向に基づいて選ぶこと</td>
+<td>労基則第6条の2</td>
+</tr>
+<tr>
+<td>使用者の義務</td>
+<td>代表者であること、なろうとしたこと、正当な行為をしたことを理由に不利益な取扱いをしない。協定の事務を円滑にできるよう、必要な配慮をする</td>
+<td>労基則第6条の2第3項・第4項</td>
+</tr>
+</tbody>
+</table>
+<p>36協定パンフレットは、選出手続を、労働者の過半数がその人の選出を支持していることが明確になる民主的な手続と説明しています。投票、挙手、労働者による話合い、持ち回り決議などが例に挙げられています。</p>
+<p>過半数の数え方の例です。事業場の労働者が、パートとアルバイトを含めて全部で7人なら、過半数は4人以上です。4人以上がその人の選出を支持していることが分かる形にします。</p>
+<h3 id="届出書のチェック欄と選出方法の欄">届出書のチェック欄と選出方法の欄</h3>
+<p>様式第9号と第9号の2には、選出方法を書く欄と、3種類のチェック欄があります。1つ目は時間外・休日労働の合計時間の上限（月100時間未満、2〜6か月平均で80時間以内）、2つ目は過半数労働組合または過半数代表者であること、3つ目は過半数代表者の要件を満たすことです。</p>
+<p>様式の記載心得は、合計時間の上限のチェック欄にチェックがないと、有効な協定にならないと書いています（記載心得7）。代表者の要件のチェック欄は、要件を満たしていても、チェックがなければ届出の形式上の要件に適合しないと書かれています（記載心得8）。</p>
+<p>従業員が1人や2人の事業場で、誰を代表者にするかの具体例は、今回確認した公式ページに書かれていませんでした。迷うときは、届出先の労働基準監督署の相談コーナーに確認してください。</p>
+<h2 id="書き方様式第9号で迷いやすい欄">書き方：様式第9号で迷いやすい欄</h2>
+<p>様式第9号の裏面の記載心得と、36協定パンフレットの記載例①（2026年11月5日取得）から、迷いやすい欄を整理します。</p>
+<table>
+<thead>
+<tr>
+<th>欄</th>
+<th>書く内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>労働保険番号</td>
+<td>「保険関係成立届」の控えや、「労働保険年度更新申告書」に書かれている番号</td>
+</tr>
+<tr>
+<td>法人番号</td>
+<td>国税庁の「法人番号公表サイト」から確認できる番号</td>
+</tr>
+<tr>
+<td>事業の名称</td>
+<td>会社名に、支店名・工場名・営業所名などの事業場名まで書く</td>
+</tr>
+<tr>
+<td>協定の有効期間</td>
+<td>始期は会社の1年の始期や賃金の締め日に合わせると運用しやすい。有効期間は1年とすることが望ましい（記載例は「〇年〇月〇日から1年間」）</td>
+</tr>
+<tr>
+<td>時間外労働をさせる必要のある具体的事由</td>
+<td>時間外労働が必要になる事由を具体的に書く（記載例は「受注の集中」「クレーム対応」「棚卸」）</td>
+</tr>
+<tr>
+<td>業務の種類</td>
+<td>時間外労働をさせる業務を具体的に書く。業務の区分を細分化して、範囲を明確にする</td>
+</tr>
+<tr>
+<td>労働者数</td>
+<td>時間外労働をさせることができる労働者の数。満18歳以上の者の数を書く</td>
+</tr>
+<tr>
+<td>延長することができる時間数</td>
+<td>1日、1か月（45時間まで）、1年（360時間まで）のそれぞれに、法定労働時間を超える時間数を書く。定める時間数は必要最小限にとどめる。所定労働時間を超える時間数は任意</td>
+</tr>
+<tr>
+<td>起算日</td>
+<td>1か月と1年の時間外労働を数え始める日。有効期間と同じく、会社の1年の始期や賃金の締め日に合わせると運用しやすい</td>
+</tr>
+<tr>
+<td>休日労働</td>
+<td>具体的事由、業務の種類、労働者数、所定休日（任意）、労働させることができる法定休日の日数、始業及び終業の時刻を書く。日数はできる限り少なく、時間数はできる限り短くする</td>
+</tr>
+<tr>
+<td>協定の成立年月日</td>
+<td>労働者代表と協定を結んだ日付</td>
+</tr>
+<tr>
+<td>労働者代表の職名・氏名、選出方法</td>
+<td>管理監督者は代表者になれない。選出方法は、実際に行った方法（記載例は「投票による選挙」）</td>
+</tr>
+<tr>
+<td>使用者の職名・氏名</td>
+<td>令和3年4月1日以降、使用者の押印・署名は不要</td>
+</tr>
+</tbody>
+</table>
+<p>労働保険番号が付く保険関係成立届の手続きは、<a href="/articles/koyou-hoken-tekiyou-jigyousho-secchi/">雇用保険適用事業所設置届の記事</a>で、初めて雇うときの順番として整理しています。</p>
+<p>e-Govの申請者情報では、申請者が法人の場合に法人番号の入力が必須とされています（電子申請パンフレット）。法人でない事業主の紙の様式の書き方は、今回確認した資料に書かれていませんでした。</p>
+<h3 id="様式の欄と行が足りないとき">様式の「②」欄と、行が足りないとき</h3>
+<p>様式の時間外労働の欄は、①「下記②に該当しない労働者」と、②「1年単位の変形労働時間制により労働する労働者」に分かれています。記載心得4によると、②は対象期間が3か月を超える1年単位の変形労働時間制で働く人だけの欄で、上限は1か月42時間・1年320時間と、①より短くなります。</p>
+<p>労働基準法第36条第4項も、この場合の限度時間を、1か月42時間・1年320時間と定めています。</p>
+<p>記入欄が足りないときは、同じ様式を追加で使います。必要のある事項だけ記入すれば足りると、記載心得10に書かれています。</p>
+<h3 id="様式そのものを協定にするとき">様式そのものを協定にするとき</h3>
+<p>記載心得9は、様式第9号を協定としても使えることを前提に、協定の当事者である労使双方の合意があることが、協定上明らかになるような方法で結ぶよう求めています。届出用の様式とは別に協定書を作る場合も、e-Govでは労使協定書などを任意で添付できます（電子申請パンフレット）。</p>
+<h2 id="特別条項様式第9号の2で増える項目">特別条項（様式第9号の2）で増える項目</h2>
+<p>様式第9号の2は、1枚目が一般条項、2枚目が特別条項です。特別条項は、通常予見することのできない業務量の大幅な増加等に伴い、臨時的に限度時間を超えて労働させる必要がある場合に定められます（労働基準法第36条第5項）。</p>
+<p>36協定パンフレットは、限度時間を超えられるのは「臨時的な特別の事情がある」場合に限り、恒常的な長時間労働を招くおそれのあるものは認められないと書いています。例として、予算・決算業務、ボーナス商戦に伴う業務の繁忙、納期のひっ迫、大規模なクレームへの対応、機械トラブルへの対応が挙げられています。</p>
+<p>特別条項の上限は、労働基準法第36条第5項・第6項に定められています。様式第9号の2の2枚目の項目と、上限は次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>内容・上限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>臨時的に限度時間を超えて労働させることができる場合</td>
+<td>臨時的な特別の事情を具体的に書く</td>
+</tr>
+<tr>
+<td>1か月の時間数</td>
+<td>時間外労働と休日労働を合算した時間数。100時間未満に限る</td>
+</tr>
+<tr>
+<td>1年の時間数</td>
+<td>時間外労働のみの時間数（休日労働は含まない）。720時間以内に限る</td>
+</tr>
+<tr>
+<td>限度時間を超えて労働させることができる回数</td>
+<td>1か月の限度時間（45時間）を超えられる月数。6回以内に限る</td>
+</tr>
+<tr>
+<td>2〜6か月の平均</td>
+<td>時間外労働と休日労働の合計の、1か月当たりの平均が80時間以内（チェック欄で確認）</td>
+</tr>
+<tr>
+<td>限度時間を超えた労働に係る割増賃金率</td>
+<td>1か月・1年のそれぞれに書く。法定の割増率（25%）を超える率とするよう努める（36協定パンフレット）</td>
+</tr>
+<tr>
+<td>限度時間を超えて労働させる場合における手続</td>
+<td>記載例②は「労働者代表への通知」</td>
+</tr>
+<tr>
+<td>健康及び福祉を確保するための措置</td>
+<td>該当する番号と、具体的内容を書く</td>
+</tr>
+<tr>
+<td>起算日</td>
+<td>一般条項に書いた起算日と同じ日付</td>
+</tr>
+</tbody>
+</table>
+<p>健康及び福祉を確保するための措置は、36協定パンフレットの一覧から選びます。①医師による面接指導、②深夜業（22時〜5時）の回数制限、③終業から始業までの休息時間の確保（勤務間インターバル）、④代償休日・特別な休暇の付与、⑤健康診断、⑥連続休暇の取得、⑦心とからだの相談窓口の設置、⑧配置転換、⑨産業医等による助言・指導や保健指導、⑩その他（労使間で検討のうえ具体的に記載）です。</p>
+<p>措置の実施状況の記録は、有効期間中と、有効期間の満了後5年間、保存しなければなりません（労基則第17条第2項）。</p>
+<p>様式第9号の記載心得3は、協定に書いた時間数にかかわらず、時間外労働と休日労働の合計が1か月100時間以上になった場合や、2〜6か月の平均が80時間を超えた場合は、労働基準法違反になると書いています。罰則は、6か月以下の拘禁刑または30万円以下の罰金です（労働基準法第119条）。</p>
+<h2 id="出す前のチェックとつまずきやすい点">出す前のチェックと、つまずきやすい点</h2>
+<p>36協定パンフレットの「届出前のチェックポイント」は、次の3点です。</p>
+<ul>
+<li>事業場ごとに締結して、管轄署へ届け出ているか</li>
+<li>特別条項の事由が、臨時的な特別の事情か</li>
+<li>特別条項の時間数を、最小限にとどめているか</li>
+</ul>
+<p>そのほか、公式の記載から、つまずきやすい点を整理します。</p>
+<table>
+<thead>
+<tr>
+<th>つまずきやすい点</th>
+<th>公式の記載</th>
+<th>避け方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>有効期間が始まったあとに届け出た</td>
+<td>届出がなければ有効な36協定届にならず、届出は有効期間の開始前までに行うよう求められている（36協定パンフレット）</td>
+<td>始期を先に決めて、その前に出す。3月中旬から下旬は電子申請が集中する</td>
+</tr>
+<tr>
+<td>チェック欄の記入漏れ</td>
+<td>チェックがないと有効な協定にならない、または届出の形式上の要件に適合しない（記載心得7・8）</td>
+<td>3種類のチェック欄を、出す前に見直す</td>
+</tr>
+<tr>
+<td>社長が代表者を指名した、管理監督者を代表者にした</td>
+<td>管理監督者でないこと、使用者の意向で選ばれたものでないことが条件（労基則第6条の2）</td>
+<td>選ぶことを明らかにして、投票や挙手で選ぶ</td>
+</tr>
+<tr>
+<td>店舗や営業所ごとに出していない</td>
+<td>事業場ごとに締結し、届け出る（36協定パンフレット）</td>
+<td>所在地ごとに、管轄の署を確認する</td>
+</tr>
+<tr>
+<td>満18歳未満の人を含めて時間数を決めた</td>
+<td>第36条は満18歳未満の人に適用されない（労働基準法第60条第1項）</td>
+<td>労働者数の欄は満18歳以上の人。18歳未満には時間外・休日労働をさせない</td>
+</tr>
+<tr>
+<td>特別条項の事由を「忙しいとき」などと書いた</td>
+<td>臨時的な特別の事情に限る。恒常的な長時間労働を招くおそれのあるものは認められない（36協定パンフレット）</td>
+<td>記載例②のように、臨時的な事情を具体的に書く</td>
+</tr>
+<tr>
+<td>古い様式を使った</td>
+<td>様式は更新される（主要様式ダウンロードコーナー）</td>
+<td>配布元の最新版を使う</td>
+</tr>
+<tr>
+<td>届け出たが、労働者に周知していない</td>
+<td>届け出た協定を、労働者に周知する（36協定パンフレット、労働基準法第106条）</td>
+<td>届出のあとに周知する</td>
+</tr>
+</tbody>
+</table>
+<p>36協定パンフレットは、「36協定で定める時間外労働及び休日労働について留意すべき事項に関する指針」の内容も紹介しています。時間外労働や休日労働は必要最小限にとどめること、36協定の範囲内で働かせた場合でも安全配慮義務を負うこと、限度時間を超える時間は限度時間にできる限り近づけること、休日労働の日数をできる限り少なくし、時間数をできる限り短くすることです。</p>
+<h2 id="毎年の更新有効期間が終わる前に結び直して出す">毎年の更新：有効期間が終わる前に結び直して出す</h2>
+<p>36協定パンフレットは、有効期間は1年とすることが望ましいと書いています。有効期間が終わったあとも時間外・休日労働をさせるなら、次の有効期間の協定を結び、その有効期間が始まる前までに届け出ます。</p>
+<p>届出書には、毎回、選出方法の欄と3種類のチェック欄があります。前の年と同じ人を代表者にする場合も、記入とチェックが要ります。</p>
+<p>労基則第16条第3項は、36協定を更新しようとするときは、使用者が更新する旨の協定を労働基準監督署長に届け出ることで、様式による届出に代えられると定めています。</p>
+<p>ただし、36協定パンフレットや電子申請パンフレットが説明するのは、様式第9号・第9号の2での届出です。更新の協定の書き方を示した案内は、今回確認した公式ページに見当たりませんでした。どちらで出すかは、届出先の労働基準監督署に確認してください。</p>
+<p>作成支援ツールを使うと、有効期間が満了する30日前にリマインドメールが届き、前回の内容を複写して、変更点だけ直せます（リーフレット、令和8年2月）。</p>
+<p>有効期間の途中で、人数や時間数を変えたいときの扱いは、今回確認した公式ページに書かれていませんでした。この場合も、労働基準監督署に確認してください。</p>
+<h2 id="届け出たあと周知と割増賃金">届け出たあと：周知と割増賃金</h2>
+<p>労働基準法第106条は、36協定を、常時各作業場の見やすい場所へ掲示するか備え付ける、書面を交付するなどの方法で、労働者に周知させなければならないと定めています。労基則第52条の2は、方法として、掲示・備付け、書面の交付、電子ファイルに記録して各作業場で労働者がいつでも確認できる機器を設置する方法を挙げています。</p>
+<p>36協定パンフレットも、所轄の労働基準監督署に届け出た36協定は、各作業場の見やすい場所へ備え付ける、書面を交付するなどの方法で、労働者に周知するよう書いています。</p>
+<p>36協定を届け出ても、時間外・休日の労働には割増賃金の支払いが必要です。労働基準法第37条第1項は、通常の賃金の2割5分以上5割以下の範囲で政令が定める率以上の割増賃金を支払うよう定めています。</p>
+<p>1か月に60時間を超える時間外労働は、5割以上です。具体的な率や計算は、労働基準監督署や社会保険労務士に確認してください。</p>
+<h2 id="出さなかったとき遅れたとき">出さなかったとき・遅れたとき</h2>
+<p>36協定を届け出ないまま、法定労働時間を超えて働かせるとどうなるか。労働基準法第119条第1号は、第32条（労働時間）、第35条（休日）、第36条第6項、第37条（割増賃金）などに違反した者を、6か月以下の拘禁刑または30万円以下の罰金に処すると定めています（e-Gov法令検索、2026年11月5日取得）。</p>
+<p>36協定パンフレットは、届出をしなければ有効な36協定届にならないと書いています。有効期間の始期を過ぎてから届け出た場合の扱いは、今回確認した公式ページに書かれていませんでした。</p>
+<p>気づいた時点で、所轄の労働基準監督署に相談してください。個別の判断は、社会保険労務士にも確認できます。</p>
+<h2 id="相談先労働基準監督署働き方改革推進支援センター">相談先：労働基準監督署・働き方改革推進支援センター</h2>
+<p>36協定パンフレットは、36協定の締結に関する相談先として、労働基準監督署の「労働時間相談・支援コーナー」と、各都道府県に設置されている働き方改革推進支援センターを挙げています。センターでは、労務管理に関する専門家が相談を受けます。</p>
+<p>電子申請様式作成支援ツールのページは、36協定届の作成方法などの質問は、働き方改革推進支援センターや社会保険労務士に問い合わせるよう案内しています。労働時間などの制度の質問は、都道府県労働局や労働基準監督署です。</p>
+<p>初めて人を雇ったときは、36協定のほかにも手続きがあります。健康保険・厚生年金保険の手続きは、<a href="/articles/shakai-hoken-shinki-tekiyou-todoke/">社会保険の新規適用届の記事</a>で整理しています。会社を設立した直後の届出の全体は、<a href="/articles/houjin-setsuritsu-go-tetsuzuki-ichiran/">法人設立後にやることの手続き一覧</a>にまとめています。</p>
+<h2 id="よくある質問とまとめ">よくある質問とまとめ</h2>
+<h3 id="パートやアルバイトも過半数の人数に数えますか">パートやアルバイトも、過半数の人数に数えますか</h3>
+<p>36協定パンフレットは、過半数を数える対象を、正社員だけでなく、パートやアルバイトなど事業場のすべての労働者としています。過半数代表者も、すべての労働者の過半数を代表している必要があります。</p>
+<h3 id="社長が代表者を決めてもよいですか">社長が代表者を決めてもよいですか</h3>
+<p>使用者が指名して決めることは認められません。労基則第6条の2は、過半数代表者が、使用者の意向に基づき選出されたものでないことを条件にしています。協定を結ぶ者を選ぶことを明らかにして、投票、挙手などで選びます。</p>
+<h3 id="36協定を出せば従業員は残業しなければなりませんか">36協定を出せば、従業員は残業しなければなりませんか</h3>
+<p>スタートアップ労働条件によると、36協定は、法定労働時間を超えて働かせても労働基準法違反に問われない効果があるだけです。労働者に残業の義務を課すものではなく、義務は労働契約か就業規則の定めで生じます。</p>
+<h3 id="就業規則の届出と36協定届は同じですか">就業規則の届出と、36協定届は同じですか</h3>
+<p>別の届出です。労働基準法第89条は、常時10人以上の労働者を使用する使用者に、就業規則の作成と届出を求めています。36協定には、条文に従業員数による除外が書かれていません。</p>
+<p>作成支援ツールでは、36協定届と就業規則（変更）届の両方を電子申請できます。</p>
+<h3 id="まとめ">まとめ</h3>
+<p>36協定届は、法定労働時間を超えて働かせる、または法定の休日に働かせる場合に、有効期間が始まる前までに、事業場を管轄する労働基準監督署へ出します。届出をしなければ、有効な協定になりません。</p>
+<p>様式は、限度時間（月45時間・年360時間）に収まるなら様式第9号、臨時的な特別の事情で超えるなら様式第9号の2です。協定は、過半数労働組合、なければ過半数代表者と結びます。代表者は、管理監督者でなく、使用者の意向でなく、投票や挙手などで選ばれた人です。</p>
+<p>電子申請は、e-Govか、「確かめよう労働条件」の作成支援ツールでできます。有効期間は1年とすることが望ましいので、毎年、終わる前に結び直して届け出ます。</p>
+<p>個別の判断が必要な点は、労働基準監督署・働き方改革推進支援センターの窓口に相談してください。法律の判断は、社会保険労務士にも確認できます。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>36協定届は、いつまでにどこへ出しますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>協定の有効期間が始まる前までに、事業場の所在地を管轄する労働基準監督署へ出します。厚生労働省の36協定パンフレット（令和8年9月版）は、届出をしなければ有効な36協定届にならないと書き、有効期間の開始前までの届出を求めています。届出の何日前までという日数の決まりは、確認した公式ページに書かれていませんでした。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>初めて出すとき、どの様式を使いますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>時間外労働が月45時間・年360時間の限度時間に収まるなら、様式第9号（一般条項）です。臨時的な特別の事情で限度時間を超える必要があるときは、様式第9号の2（1枚目が一般条項、2枚目が特別条項）です。建設事業、自動車運転の業務、医業に従事する医師が含まれる場合や、新技術・新商品の研究開発業務の場合は、別の様式があります。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>労働者代表は誰を選べばよいですか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>労働者の過半数で組織する労働組合があればその労働組合、なければ労働者の過半数を代表する者と協定を結びます。過半数代表者は、管理監督者でないこと、協定を結ぶ者を選ぶことを明らかにして投票や挙手などで選ばれたこと、使用者の意向で選ばれたものでないことが条件です（労働基準法施行規則第6条の2）。数える対象は、パートやアルバイトを含む事業場のすべての労働者です。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>窓口に行かずに出せますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>電子申請でできます。e-Govのほか、厚生労働省の「確かめよう労働条件」にある電子申請様式作成支援ツールが使えます。電子署名・電子証明書の添付は不要です。e-Govの電子申請はパソコンで行い、スマートフォンから届出はできません。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>毎年出し直す必要がありますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>厚生労働省の36協定パンフレット（令和8年9月版）は、有効期間を1年とすることが望ましいと書いています。有効期間が終わる前に、次の期間の協定を結んで届け出ます。作成支援ツールには、有効期間が満了する30日前のリマインドメールと、前回の内容を複写する機能があります。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://www.mhlw.go.jp/content/11200000/001738076.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>厚生労働省 パンフレット「時間外労働や休日労働をさせる場合には「36協定」が必要です」（令和8年9月版）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-05）</span></li><li data-astro-cid-sgg5joot><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/roudoukijunkankei.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>厚生労働省 主要様式ダウンロードコーナー（労働基準法等関係主要様式）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-05）</span></li><li data-astro-cid-sgg5joot><a href="https://www.mhlw.go.jp/content/11200000/001695822.docx" rel="noopener" target="_blank" data-astro-cid-sgg5joot>厚生労働省 時間外労働・休日労働に関する協定届 様式第9号（一般条項）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-05）</span></li><li data-astro-cid-sgg5joot><a href="https://www.mhlw.go.jp/content/11200000/001695823.docx" rel="noopener" target="_blank" data-astro-cid-sgg5joot>厚生労働省 時間外労働・休日労働に関する協定届 様式第9号の2（特別条項）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-05）</span></li><li data-astro-cid-sgg5joot><a href="https://laws.e-gov.go.jp/law/322AC0000000049" rel="noopener" target="_blank" data-astro-cid-sgg5joot>e-Gov法令検索 労働基準法（昭和22年法律第49号）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-05）</span></li><li data-astro-cid-sgg5joot><a href="https://laws.e-gov.go.jp/law/322M40000100023" rel="noopener" target="_blank" data-astro-cid-sgg5joot>e-Gov法令検索 労働基準法施行規則（昭和22年厚生省令第23号）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-05）</span></li><li data-astro-cid-sgg5joot><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/denshishinsei.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>厚生労働省 労働局・労働基準監督署への申請・届出はオンラインをご活用ください</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-05）</span></li><li data-astro-cid-sgg5joot><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000184033.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>厚生労働省 労働基準法等の規定に基づく届出等の電子申請について</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-05）</span></li><li data-astro-cid-sgg5joot><a href="https://www.mhlw.go.jp/content/11200000/000716053.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>厚生労働省 リーフレット「確かめよう労働条件」から電子申請ができるようになりました（令和8年2月）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-05）</span></li><li data-astro-cid-sgg5joot><a href="https://www.mhlw.go.jp/content/11200000/000919894.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>厚生労働省 パンフレット「36協定届」や「就業規則（変更）届」など労働基準法などの電子申請（2024年2月）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-05）</span></li><li data-astro-cid-sgg5joot><a href="https://www.startup-roudou.mhlw.go.jp/support_1.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>スタートアップ労働条件（厚生労働省） 電子申請様式作成支援ツールについて</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-05）</span></li><li data-astro-cid-sgg5joot><a href="https://www.startup-roudou.mhlw.go.jp/pdf/36tool_manual_login.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>スタートアップ労働条件（厚生労働省） 会員登録及びログイン方法について（PDF）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-05）</span></li><li data-astro-cid-sgg5joot><a href="https://www.startup-roudou.mhlw.go.jp/36_pact.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>スタートアップ労働条件（厚生労働省） 時間外労働の上限について</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-05）</span></li><li data-astro-cid-sgg5joot><a href="https://www.check-roudou.mhlw.go.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>確かめよう労働条件（厚生労働省）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-05）</span></li><li data-astro-cid-sgg5joot><a href="https://shinsei.e-gov.go.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>e-Gov電子申請 トップ</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-05）</span></li><li data-astro-cid-sgg5joot><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/location.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>厚生労働省 全国労働基準監督署の所在案内</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-05）</span></li><li data-astro-cid-sgg5joot><a href="https://jsite.mhlw.go.jp/tokyo-roudoukyoku/hourei_seido_tetsuzuki/roudoukijun_keiyaku/36_kyoutei.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>東京労働局 時間外・休日労働に関する協定届（36協定届）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-05）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約8分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/sonota/" data-astro-cid-sgg5joot>その他の開業準備の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

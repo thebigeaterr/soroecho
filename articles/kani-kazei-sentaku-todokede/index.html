@@ -1,0 +1,362 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>簡易課税制度選択届出書の期限と書き方｜2割特例・3割特例が終わったあとの選び方 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="簡易課税制度選択届出書は、使いたい課税期間の初日の前日までに出すのが原則です。2割特例・3割特例を使った翌課税期間なら、その申告期限までに出せます。状況別の期限、書き方、本則課税との比べ方、やめるときの2年の縛りを国税庁の案内で整理します。"><link rel="canonical" href="https://soroecho.com/articles/kani-kazei-sentaku-todokede/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="簡易課税制度選択届出書の期限と書き方｜2割特例・3割特例が終わったあとの選び方 | そろえ帳"><meta property="og:description" content="簡易課税制度選択届出書は、使いたい課税期間の初日の前日までに出すのが原則です。2割特例・3割特例を使った翌課税期間なら、その申告期限までに出せます。状況別の期限、書き方、本則課税との比べ方、やめるときの2年の縛りを国税庁の案内で整理します。"><meta property="og:url" content="https://soroecho.com/articles/kani-kazei-sentaku-todokede/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/kani-kazei-sentaku-todokede.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="簡易課税制度選択届出書の期限と書き方｜2割特例・3割特例が終わったあとの選び方 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="簡易課税制度選択届出書の期限と書き方｜2割特例・3割特例が終わったあとの選び方 | そろえ帳"><meta name="twitter:description" content="簡易課税制度選択届出書は、使いたい課税期間の初日の前日までに出すのが原則です。2割特例・3割特例を使った翌課税期間なら、その申告期限までに出せます。状況別の期限、書き方、本則課税との比べ方、やめるときの2年の縛りを国税庁の案内で整理します。"><meta name="twitter:image" content="https://soroecho.com/og/kani-kazei-sentaku-todokede.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"簡易課税制度選択届出書の期限と書き方｜2割特例・3割特例が終わったあとの選び方","item":"https://soroecho.com/articles/kani-kazei-sentaku-todokede/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"簡易課税制度選択届出書の期限と書き方｜2割特例・3割特例が終わったあとの選び方","description":"簡易課税制度選択届出書は、使いたい課税期間の初日の前日までに出すのが原則です。2割特例・3割特例を使った翌課税期間なら、その申告期限までに出せます。状況別の期限、書き方、本則課税との比べ方、やめるときの2年の縛りを国税庁の案内で整理します。","url":"https://soroecho.com/articles/kani-kazei-sentaku-todokede/","datePublished":"2026-11-12T00:00:00.000Z","dateModified":"2026-11-12T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/kani-kazei-sentaku-todokede/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"簡易課税制度選択届出書は、いつまでに出せばよいですか？","acceptedAnswer":{"@type":"Answer","text":"原則は、簡易課税を使いたい課税期間の初日の前日までです。個人事業者が令和9年分から使うなら、令和8年12月31日までです。2割特例か3割特例を使って申告した翌課税期間なら、その課税期間の確定申告期限までに出せば、その課税期間から使えます。免税事業者が登録を受けた課税期間は、その課税期間中に出せば、その課税期間から使えます（国税庁、2026年11月8日確認）。"}},{"@type":"Question","name":"2割特例が終わったあと、何も出さないとどうなりますか？","acceptedAnswer":{"@type":"Answer","text":"出さなければ、簡易課税は使えません。2割特例・3割特例を使える課税期間は、その特例で申告できます。使えない課税期間は、仕入れの消費税額を実額で計算する一般課税（本則課税）で申告します。2割特例と3割特例は届出が要らず、申告書に付記して使います。個人事業者は令和9年分・令和10年分に3割特例を使えますが、法人は使えません（国税庁のインボイスQ&A、令和8年度税制改正特集）。"}},{"@type":"Question","name":"簡易課税と3割特例は、どちらが納める税額が少なくなりますか？","acceptedAnswer":{"@type":"Answer","text":"3割特例は売上げの消費税額の30%です。簡易課税は「100%－みなし仕入率」で、第1種10%、第2種20%、第3種30%、第4種40%、第5種50%、第6種60%です（この記事での計算）。国税庁のQ&Aは、卸売業や小売業は簡易課税のほうが少なくなると考えられるとしています。多額の設備投資の年は、一般課税なら還付が生じる場合がありますが、簡易課税や3割特例では通常生じません。"}},{"@type":"Question","name":"簡易課税をやめたいときは、いつ、どう出しますか？","acceptedAnswer":{"@type":"Answer","text":"「消費税簡易課税制度選択不適用届出書」を、やめたい課税期間の初日の前日までに、納税地の税務署長へ出します。ただし、事業を廃止した場合を除き、適用を始めた課税期間の初日から2年を経過する日の属する課税期間の初日以後でなければ出せません。個人事業者や1年決算の法人は、原則として、選んだ課税期間の翌課税期間の初日以後です（国税庁、2026年11月8日確認）。"}},{"@type":"Question","name":"届出書を出し忘れたら、あとから間に合わせる方法はありますか？","acceptedAnswer":{"@type":"Answer","text":"国税庁の「やむを得ない事情」の特例は、災害などで提出できない状態になった場合などが対象で、届出書の提出を忘れていた場合は当たらないと書かれています。2割特例か3割特例を使った翌課税期間なら、その課税期間の申告期限まで出せる特例があるので、まず自分が当たるかを確かめます。迷うときは税務署か税理士に確認してください。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>簡易課税制度選択届出書の期限と書き方｜2割特例・3割特例が終わったあとの選び方</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecktyv4d-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecktyv4d-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecktyv4d-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecktyv4d-p)" data-astro-cid-yuatfsof></rect><circle cx="358" cy="66" r="135" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="184" fill="#fff" font-size="38" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>簡易課税制度選択…</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>簡易課税制度選択届出書の期限と書き方｜2割特例・3割特例が終わったあとの選び方</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-11-12T00:00:00.000Z" data-astro-cid-sgg5joot>2026年11月12日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約13分</p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論簡易課税は届出が要る期限は原則初日の前日2割3割特例のあとは申告期限" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：簡易課税は届出が要る。期限は原則「初日の前日」、2割・3割特例のあとは「申告期限」</a></li><li data-astro-cid-sgg5joot><a href="#2割特例は終わった-個人は令和8年分まで法人は決算期で違う" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>2割特例は終わった？ 個人は令和8年分まで、法人は決算期で違う</a></li><li data-astro-cid-sgg5joot><a href="#簡易課税制度とは-みなし仕入率と納める税額の割合" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>簡易課税制度とは？ みなし仕入率と、納める税額の割合</a></li><li data-astro-cid-sgg5joot><a href="#簡易課税本則課税3割特例のどれが得-数字で比べる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>簡易課税・本則課税・3割特例のどれが得？ 数字で比べる</a></li><li data-astro-cid-sgg5joot><a href="#自分の数字で決めきれないときは税理士に比べてもらう" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>自分の数字で決めきれないときは、税理士に比べてもらう</a></li><li data-astro-cid-sgg5joot><a href="#届出書の書き方欄ごとの要点" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>届出書の書き方：欄ごとの要点</a></li><li data-astro-cid-sgg5joot><a href="#出し方と受付時間e-taxか窓口年末は税務署が閉まる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>出し方と受付時間：e-Taxか窓口。年末は税務署が閉まる</a></li><li data-astro-cid-sgg5joot><a href="#簡易課税をやめるには-不適用届出書と2年の縛り" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>簡易課税をやめるには？ 不適用届出書と「2年の縛り」</a></li><li data-astro-cid-sgg5joot><a href="#見落としやすい4つの点" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>見落としやすい4つの点</a></li><li data-astro-cid-sgg5joot><a href="#飲食料品を扱う人は令和9年4月からの特例も確認する" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>10</span>飲食料品を扱う人は、令和9年4月からの特例も確認する</a></li><li data-astro-cid-sgg5joot><a href="#提出前のチェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>11</span>提出前のチェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#まとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>12</span>まとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論簡易課税は届出が要る期限は原則初日の前日2割3割特例のあとは申告期限">結論：簡易課税は届出が要る。期限は原則「初日の前日」、2割・3割特例のあとは「申告期限」</h2>
+<p>簡易課税制度選択届出書は、簡易課税を使いたい課税期間の初日の前日までに、納税地の税務署長へ出すのが原則です（国税庁の<a href="https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/shohi/annai/1461_13.htm">手続案内 D1-22</a>）。個人事業者の課税期間は暦年なので、令和9年（2027年）分から使うなら、令和8年12月31日までです。</p>
+<p>2割特例か3割特例を使って申告した翌課税期間なら、特例があります。その課税期間の確定申告期限までに出せば、その課税期間から簡易課税を使えます。この特例を使うと、その課税期間が終わって数字が出てから、簡易課税にするかを決められます。</p>
+<p>令和8年分で2割特例を使った個人事業者が令和9年分から使う場合の期限は、令和10年3月31日です（国税庁のリーフレット）。</p>
+<p>2割特例と3割特例は、届出なしで、申告書に付記すれば使えます。簡易課税は、原則として事前の届出が要ります（国税庁のインボイスQ&amp;A問114・問114-2・問117）。出し忘れは、国税庁の「やむを得ない事情」の特例の対象になりません（No.6633）。</p>
+<table>
+<thead>
+<tr>
+<th>状況</th>
+<th>簡易課税にしたい課税期間</th>
+<th>届出書の期限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>個人事業者。令和7年分で2割特例を使った</td>
+<td>令和8年分から</td>
+<td>令和9年3月31日</td>
+</tr>
+<tr>
+<td>個人事業者。令和8年分で2割特例を使った</td>
+<td>令和9年分から</td>
+<td>令和10年3月31日</td>
+</tr>
+<tr>
+<td>個人事業者。令和10年分で3割特例を使った</td>
+<td>令和11年分から</td>
+<td>令和12年4月1日</td>
+</tr>
+<tr>
+<td>3月決算の法人。令和9年3月期で2割特例を使った</td>
+<td>令和10年3月期から</td>
+<td>令和10年5月31日</td>
+</tr>
+<tr>
+<td>12月決算の法人。令和8年12月期で2割特例を使った</td>
+<td>令和9年12月期から</td>
+<td>令和10年2月29日</td>
+</tr>
+<tr>
+<td>免税事業者が登録を受けた課税期間から使いたい</td>
+<td>その課税期間から</td>
+<td>その課税期間中（個人は12月31日）</td>
+</tr>
+<tr>
+<td>上のどれでもない（本則課税で申告していたなど）</td>
+<td>たとえば令和9年分から</td>
+<td>令和8年12月31日（初日の前日）</td>
+</tr>
+</tbody>
+</table>
+<p>上の5行は、国税庁のリーフレット、パンフレット、Q&amp;A問117にある例です（2026年11月8日時点）。下の2行は、国税庁の手続案内（D1-22）とインボイスQ&amp;A問9の規定に、この記事で日付を当てはめました。</p>
+<p>法人が確定申告書の提出期限の特例を受けているときは、延長された期限が届出書の期限です。申告期限が土日祝日や12月29日〜31日に当たるときは、その翌日です（インボイスQ&amp;A問117）。令和8年9月30日以前に終了する課税期間（9月決算の令和8年9月期など）は、期限がその課税期間の末日までで、すでに過ぎています（D1-22）。</p>
+<h2 id="2割特例は終わった-個人は令和8年分まで法人は決算期で違う">2割特例は終わった？ 個人は令和8年分まで、法人は決算期で違う</h2>
+<p>2割特例は、令和8年9月30日までの日の属する課税期間で終わります（国税庁）。9月30日を過ぎても、個人事業者は令和8年分の確定申告まで使えます。令和9年分・令和10年分は、個人事業者だけが3割特例を使えます。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>2割特例が使える最後の課税期間</th>
+<th>3割特例</th>
+<th>特例が使えなくなる最初の課税期間</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>個人事業者</td>
+<td>令和8年分</td>
+<td>令和9年分・令和10年分</td>
+<td>令和11年分</td>
+</tr>
+<tr>
+<td>法人（3月決算）</td>
+<td>令和9年3月期</td>
+<td>使えない</td>
+<td>令和10年3月期</td>
+</tr>
+<tr>
+<td>法人（12月決算）</td>
+<td>令和8年12月期</td>
+<td>使えない</td>
+<td>令和9年12月期</td>
+</tr>
+</tbody>
+</table>
+<p>右の列の課税期間からは、簡易課税か、仕入れの消費税額を実額で計算する一般課税（本則課税）のどちらかで申告します。</p>
+<p>3割特例の主な条件は、個人事業者であること、基準期間（適用を受ける年の2年前）の課税売上高が1,000万円以下であること、インボイス発行事業者の登録を受けていることです（国税庁の令和8年度税制改正特集）。フローチャートには、前年1月〜6月の特定期間の課税売上高が1,000万円以下であることなどの条件もあります。</p>
+<p>基準期間の課税売上高が1,000万円を超えると、2割特例も3割特例も使えません（問115・問115-2）。簡易課税は5,000万円以下なら使えるため（国税庁 No.6505）、1,000万円を超えた人は、簡易課税か本則課税から選びます。</p>
+<h2 id="簡易課税制度とは-みなし仕入率と納める税額の割合">簡易課税制度とは？ みなし仕入率と、納める税額の割合</h2>
+<p>簡易課税制度は、売上げに係る消費税額をもとに、仕入れに係る消費税額をみなし仕入率で計算できる制度です。届出をした課税事業者が、基準期間（個人は前々年、法人は原則として前々事業年度）の課税売上高が5,000万円以下の課税期間に使えます（国税庁のタックスアンサー No.6505）。</p>
+<p>納付税額の計算に、仕入れのインボイスの入手・保存は要りません。所得税などの面では、領収書や請求書の保存が引き続き必要です（国税庁のインボイス特設サイト）。</p>
+<table>
+<thead>
+<tr>
+<th>事業区分</th>
+<th>みなし仕入率</th>
+<th>納める税額の割合</th>
+<th>主な事業</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第1種</td>
+<td>90%</td>
+<td>10%</td>
+<td>卸売業</td>
+</tr>
+<tr>
+<td>第2種</td>
+<td>80%</td>
+<td>20%</td>
+<td>小売業、農林漁業（飲食料品の譲渡に係る事業に限る）</td>
+</tr>
+<tr>
+<td>第3種</td>
+<td>70%</td>
+<td>30%</td>
+<td>農林漁業（飲食料品を除く）、鉱業、建設業、製造業、電気・ガス・熱供給・水道業</td>
+</tr>
+<tr>
+<td>第4種</td>
+<td>60%</td>
+<td>40%</td>
+<td>上記以外（具体的には飲食店業など）</td>
+</tr>
+<tr>
+<td>第5種</td>
+<td>50%</td>
+<td>50%</td>
+<td>運輸通信業、金融・保険業、サービス業（飲食店業を除く）</td>
+</tr>
+<tr>
+<td>第6種</td>
+<td>40%</td>
+<td>60%</td>
+<td>不動産業</td>
+</tr>
+</tbody>
+</table>
+<p>みなし仕入率と事業区分は、国税庁の表のとおりです（No.6505・No.6509）。「納める税額の割合」は、納付税額が「売上げの消費税額 − 売上げの消費税額 × みなし仕入率」で決まること（令和8年度税制改正特集）から、返品や値引きがないとして計算しました。</p>
+<p>この割合で比べると、簡易課税が2割特例（20%）より少ないのは第1種だけで、第2種は同じです。第3種は3割特例（30%）と同じで、第4種〜第6種は3割特例より多くなります。2割特例を使ってきたサービス業（第5種）の個人事業者は、20%から簡易課税の50%に上がります。令和9年分・令和10年分は、3割特例（30%）のほうが少なくなります。</p>
+<p>事業区分で迷いやすい点は、次のとおりです。</p>
+<ul>
+<li>事業区分は、原則として課税資産の譲渡等ごとに判定します（No.6509）。2種類以上の事業があるのに売上げを区分していないと、区分していない部分には、そのうち一番低いみなし仕入率が使われます。1種類の事業が全体の75%以上なら、その事業のみなし仕入率を全体に使えます（No.6505）</li>
+<li>国税庁の質疑応答事例では、ソフトウェア業、デザイン業、著述・芸術家業、経営コンサルタント業は第5種、出版業は第3種、飲食店は第4種とされています。ただし目安なので、<a href="https://www.nta.go.jp/law/shitsugi/shohi/20/02.htm">事業区分のフローチャート</a>で確かめます</li>
+</ul>
+<h2 id="簡易課税本則課税3割特例のどれが得-数字で比べる">簡易課税・本則課税・3割特例のどれが得？ 数字で比べる</h2>
+<p>本則課税は、売上げの消費税額から、実際に払った課税仕入れ等の消費税額を引いて、納める税額を出します（国税庁 No.6355）。課税仕入れには、商品、原材料、機械や器具備品、広告宣伝費、通信費、外注費などが入り、給与は入りません（No.6451）。簡易課税は、実額の代わりに、みなし仕入率で引きます。</p>
+<p>次の表は、この記事で置いた数字での試算です。課税売上（税込）1,100万円、すべて標準税率10%、返品や値引きなし、仕入先はすべてインボイス発行事業者とします。売上げの消費税額は100万円です。</p>
+<p>国の消費税（7.8%）と地方消費税（2.2%、消費税額の22/78）を合わせて10%で数えますが、割合は国税分だけでも同じです（No.6303）。</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>条件</th>
+<th>納める税額（国・地方の合計）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本則課税</td>
+<td>課税仕入れ（税込）220万円（売上の20%）</td>
+<td>80万円</td>
+</tr>
+<tr>
+<td>本則課税</td>
+<td>課税仕入れ（税込）550万円（売上の50%）</td>
+<td>50万円</td>
+</tr>
+<tr>
+<td>本則課税</td>
+<td>課税仕入れ（税込）770万円（売上の70%）</td>
+<td>30万円</td>
+</tr>
+<tr>
+<td>簡易課税（第5種）</td>
+<td>みなし仕入率50%</td>
+<td>50万円</td>
+</tr>
+<tr>
+<td>簡易課税（第3種）</td>
+<td>みなし仕入率70%</td>
+<td>30万円</td>
+</tr>
+<tr>
+<td>3割特例（個人の令和9・10年分）</td>
+<td></td>
+<td>30万円</td>
+</tr>
+<tr>
+<td>2割特例（令和8年分まで）</td>
+<td></td>
+<td>20万円</td>
+</tr>
+</tbody>
+</table>
+<p>見方は、次のとおりです。</p>
+<ul>
+<li>標準税率だけなら、課税仕入れ（税込）が売上（税込）の何%かを、みなし仕入率と比べます。みなし仕入率より大きければ本則課税、小さければ簡易課税のほうが、納める税額は少なくなります（この記事での計算）。給与は課税仕入れに入らないので、経費の大半が人件費の事業は、本則課税の控除が小さくなります</li>
+<li>本則課税は、仕入先がインボイス発行事業者でないと、原則として控除できません。経過措置で、令和8年10月1日からは70%を控除できますが、帳簿への記載などの条件があります（No.6355、国税庁のパンフレット）</li>
+<li>多額の設備投資で、課税仕入れ等の消費税額が売上げの消費税額を上回るとき、一般課税なら還付が生じます。簡易課税や3割特例では、通常生じません（インボイスQ&amp;A問117-3）</li>
+<li>国税庁のQ&amp;Aは、卸売業は簡易課税のほうが2割特例より、小売業は簡易課税のほうが3割特例より、納める税額が少なくなると考えられるとしています（問117-2、問117-3）</li>
+</ul>
+<h2 id="自分の数字で決めきれないときは税理士に比べてもらう">自分の数字で決めきれないときは、税理士に比べてもらう</h2>
+<p>有利不利は、事業区分、課税仕入れの実額、設備投資の予定などで変わります。顧問の税理士がいれば、その人に比べてもらうのが早いです。いなければ、税理士を探す入口の一つとして、紹介サービスがあります。</p>
+<p>弥生の税理士紹介サービスは、公式ページによると、起業に関する悩みに沿って税理士・会計事務所を無料で紹介するサービスで、紹介は完全無料と書かれています。「起業後の会計処理や決算が不安な方へ」の項目には、法人税、地方税、消費税、減価償却などをまとめてプロに相談したい、という例があります。簡易課税の届出や選び方が相談の対象に入るかは、公式ページでは見つかりませんでした。申し込むときに内容を伝えて確かめてください。</p>
+<aside class="cta-box"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">弥生株式会社</p><h3 class="cta-box__title">弥生の税理士紹介サービス</h3><p class="cta-box__body">条件に合う税理士を弥生が紹介する、起業・開業ナビの税理士紹介サービス。</p><a class="cta-box__button" href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+DZ3BQ2+35XE+HXD0Y" data-offer="yayoi-zeirishi-shoukai" rel="sponsored nofollow noopener" target="_blank">弥生の税理士紹介サービスの公式サイトへ</a></aside>
+<p><a href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+DZ3BQ2+35XE+HXD0Y" rel="sponsored nofollow noopener" target="_blank">弥生の税理士紹介サービスの公式サイト</a>で、申込方法と紹介の流れを確かめられます。依頼したあとの報酬は、公式ページでは見つからなかったため、見積もりで確かめます。探し方は<a href="/articles/zeirishi-sagashikata-hiyou-souba/">税理士の探し方</a>、費用の目安は<a href="/articles/kojin-jigyou-zeirishi-hiyou-souba/">個人事業主が税理士に頼む費用の相場</a>にあります。</p>
+<p>相談には、事業の内容、基準期間の課税売上高、課税仕入れの見込み、設備投資の予定、2割特例・3割特例を使った課税期間を持っていきます。</p>
+<h2 id="届出書の書き方欄ごとの要点">届出書の書き方：欄ごとの要点</h2>
+<p>様式は、国税庁の<a href="https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/shohi/annai/1461_13.htm">手続案内のページ</a>にあります。制度は改正されることがあるため、提出前に確かめてください。欄ごとの要点は、国税庁の記載要領と様式のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>欄</th>
+<th>書くこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>提出先・納税地・氏名または名称</td>
+<td>納税地を所轄する税務署長あてに、納税地と氏名（法人は名称・代表者氏名・法人番号）を書きます。様式に「個人の方は個人番号の記載は不要です」とあります</td>
+</tr>
+<tr>
+<td>特例の欄</td>
+<td>2割特例・3割特例の翌課税期間の特例、または登録した課税期間中の特例で出すときに、数字の1を書きます</td>
+</tr>
+<tr>
+<td>① 適用開始課税期間</td>
+<td>簡易課税を使いたい課税期間の初日と末日</td>
+</tr>
+<tr>
+<td>② ①の基準期間</td>
+<td>①の基準期間の初日と末日（個人は前々年、法人は原則として前々事業年度）</td>
+</tr>
+<tr>
+<td>③ ②の課税売上高</td>
+<td>基準期間の課税資産の譲渡等の対価の額の合計額（消費税額・地方消費税額を含まない金額）。輸出取引の売上高を含み、売上げに係る対価の返還等の金額（税抜き）を含みません。基準期間が1年に満たない法人は、月数で割って12倍にします</td>
+</tr>
+<tr>
+<td>事業の内容・事業区分</td>
+<td>具体的な事業内容と、該当する事業区分を算用数字で（第一種事業なら1）</td>
+</tr>
+<tr>
+<td>提出要件の確認</td>
+<td>イ〜ニに当てはまるときだけ「はい」にして、その項目を書きます。当てはまらなければ「いいえ」です</td>
+</tr>
+<tr>
+<td>参考事項・税理士署名</td>
+<td>参考になる事項があれば書きます。税理士に頼むときは税理士署名の欄を使います</td>
+</tr>
+</tbody>
+</table>
+<p>記載例（この記事での当てはめ）は、令和8年分で2割特例を使った個人事業者が、小売業として令和9年分から簡易課税にする場合です。</p>
+<ul>
+<li>特例の欄：1</li>
+<li>① 適用開始課税期間：令和9年1月1日から令和9年12月31日</li>
+<li>② ①の基準期間：令和7年1月1日から令和7年12月31日</li>
+<li>③ ②の課税売上高：令和7年分の課税売上高（税抜き）</li>
+<li>事業区分：2（小売業）</li>
+<li>提出期限：令和10年3月31日</li>
+</ul>
+<h2 id="出し方と受付時間e-taxか窓口年末は税務署が閉まる">出し方と受付時間：e-Taxか窓口。年末は税務署が閉まる</h2>
+<p>提出先は納税地を所轄する税務署長です。個人事業主は、e-Taxソフト（WEB版）の「マイページ」から届出できます。パソコンのe-Taxソフトで作って出すことも、書面で作って持参か送付で出すこともできます（国税庁 D1-22）。</p>
+<p>税務署の総合窓口の受付時間は、令和8年10月1日から全ての税務署で、原則として午前9時から午後3時です。土曜日、日曜日、祝日、年末年始（12月29日から1月3日）は執務を行っていません（同）。</p>
+<p>12月31日が期限の個人事業者が窓口に出せる最後の平日は、12月28日（月）です（この記事での計算）。初日の前日が年末のとき期限が延びるかどうかは、読んだ手続案内・記載要領・Q&amp;Aには見つかりませんでした。延びる前提にせず、e-Taxか早めの窓口で出すのが安全です。e-Taxの利用可能時間は、<a href="https://www.e-tax.nta.go.jp/info_center/index.html">e-Taxの案内</a>で確かめてください。</p>
+<h2 id="簡易課税をやめるには-不適用届出書と2年の縛り">簡易課税をやめるには？ 不適用届出書と「2年の縛り」</h2>
+<p>やめるときは「消費税簡易課税制度選択不適用届出書」を、やめたい課税期間の初日の前日までに、納税地の税務署長へ出します（国税庁 D1-23）。</p>
+<p>ただし、事業を廃止した場合を除き、簡易課税の適用を始めた課税期間の初日から2年を経過する日の属する課税期間の初日以後でなければ、出せません。個人事業者と事業年度が1年の法人は、原則として、簡易課税を選んだ課税期間の翌課税期間の初日以後です（記載要領）。</p>
+<p>たとえば令和9年分から簡易課税にすると、不適用届出書は令和10年1月1日以後でなければ出せません。令和11年分から本則課税に戻すなら、令和10年12月31日までに出します。令和9年分と令和10年分は、やめられません（この記事での当てはめ）。</p>
+<p>基準期間の課税売上高が5,000万円を超えた課税期間は、簡易課税を使えませんが、届出の効力は残ります。その後に5,000万円以下へ戻ると、不適用届出書を出していない限り、再び簡易課税が適用されます（国税庁 No.6505のQ&amp;A）。</p>
+<h2 id="見落としやすい4つの点">見落としやすい4つの点</h2>
+<ul>
+<li><strong>出し忘れの救済は原則ない</strong>：国税庁の「やむを得ない事情」の特例は、災害などで提出できない状態になった場合などが対象です。届出書の提出を忘れていた場合は当たりません（No.6633）</li>
+<li><strong>登録した課税期間の期限は「その課税期間中」</strong>：課税期間の末日が日曜日、祝日、12月29日〜31日でも、翌日にはなりません。個人は12月31日までです（インボイスQ&amp;A問9・問117-2）</li>
+<li><strong>設備を買うと、届出が出せない場合がある</strong>：課税事業者選択届出書を出して課税事業者になってから2年以内の人や、新設法人などは、税抜100万円以上の設備（調整対象固定資産）を買うと、一定期間は届出書を出せません。出したあとの同じ課税期間に買うと、届出はなかったものとされます（記載要領）。登録の経過措置で課税事業者になった人は、課税選択届出書を出していません（インボイスQ&amp;A問115の注）。迷うときは税務署か税理士へ</li>
+<li><strong>簡易課税でも、登録を続ける限りインボイスは出す</strong>：簡易課税は消費税の計算方法の選択です。取引先（課税事業者）から求められたときは、適格請求書を交付する義務があります（インボイスQ&amp;A問10）。書き方は<a href="/articles/seikyuusho-kakikata-invoice-taiou/">請求書の書き方とインボイス対応</a>にあります</li>
+</ul>
+<h2 id="飲食料品を扱う人は令和9年4月からの特例も確認する">飲食料品を扱う人は、令和9年4月からの特例も確認する</h2>
+<p>国税庁の令和8年9月のQ&amp;Aには、飲食料品の消費税率を令和9年4月1日から令和11年3月31日までの2年間、1%（国・地方合計）に引き下げる内容があります。国税庁は、これを「法案が国会に提出され、審議を経た上で可決・成立した場合のもの」と断っています。簡易課税に関わる点は、次の2つです。</p>
+<ul>
+<li>簡易課税では、業種区分にかかわらず、飲食料品の譲渡（1%対象）の売上税額と同額の仕入税額を計上します。残りの売上税額には、みなし仕入率を掛けます。2割特例・3割特例でも同様です</li>
+<li>飲食料品の譲渡を行い簡易課税を使っている事業者は、令和9年4月1日の属する課税期間中に不適用届出書を出せば、その課税期間から本則課税で申告できます。その課税期間は2年の縛りの対象外で、届出書の「参考事項」欄に「飲食料品特例」と書きます</li>
+</ul>
+<p>決める前に、国税庁の<a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/zeiritsuhikisage.htm">消費税率引下げ特設サイト</a>で、最新の内容を確かめてください。</p>
+<h2 id="提出前のチェックリスト">提出前のチェックリスト</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 自分の課税期間と、2割特例・3割特例を使った課税期間を確かめた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 簡易課税にしたい課税期間と、届出書の期限（初日の前日か、申告期限か）を決めた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 事業区分（第何種）を決め、課税仕入れの実額を見込んで、本則課税や3割特例と比べた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 設備投資の予定と、基準期間の課税売上高（5,000万円以下）を確かめた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 提出要件の確認欄（イ〜ニ）に当てはまらないか確かめ、特例で出すときは特例の欄に1を書いた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 年末が期限なら、税務署が閉まる12月29日より前か、e-Taxで出す</li>
+</ul>
+<h2 id="まとめ">まとめ</h2>
+<p>簡易課税は、事前に届出書を出さないと使えません。原則の期限は課税期間の初日の前日で、個人事業者の令和9年分からなら令和8年12月31日です。2割特例か3割特例を使った翌課税期間なら、その課税期間の申告期限までに出せば、その課税期間から使えます。</p>
+<p>納める税額は、簡易課税が売上げの消費税額の10〜60%（第1種〜第6種）、3割特例が30%、2割特例が20%です。本則課税とは、みなし仕入率と課税仕入れの割合で比べます。簡易課税は2年はやめられず、出し忘れの救済もないため、期限は先にカレンダーに入れてください。個別の判断は、税務署か税理士に確認してください。所得税の申告は<a href="/articles/kojin-jigyou-kakutei-shinkoku-nagare/">個人事業主の確定申告の流れ</a>にあります。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>簡易課税制度選択届出書は、いつまでに出せばよいですか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>原則は、簡易課税を使いたい課税期間の初日の前日までです。個人事業者が令和9年分から使うなら、令和8年12月31日までです。2割特例か3割特例を使って申告した翌課税期間なら、その課税期間の確定申告期限までに出せば、その課税期間から使えます。免税事業者が登録を受けた課税期間は、その課税期間中に出せば、その課税期間から使えます（国税庁、2026年11月8日確認）。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>2割特例が終わったあと、何も出さないとどうなりますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>出さなければ、簡易課税は使えません。2割特例・3割特例を使える課税期間は、その特例で申告できます。使えない課税期間は、仕入れの消費税額を実額で計算する一般課税（本則課税）で申告します。2割特例と3割特例は届出が要らず、申告書に付記して使います。個人事業者は令和9年分・令和10年分に3割特例を使えますが、法人は使えません（国税庁のインボイスQ&amp;A、令和8年度税制改正特集）。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>簡易課税と3割特例は、どちらが納める税額が少なくなりますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>3割特例は売上げの消費税額の30%です。簡易課税は「100%－みなし仕入率」で、第1種10%、第2種20%、第3種30%、第4種40%、第5種50%、第6種60%です（この記事での計算）。国税庁のQ&amp;Aは、卸売業や小売業は簡易課税のほうが少なくなると考えられるとしています。多額の設備投資の年は、一般課税なら還付が生じる場合がありますが、簡易課税や3割特例では通常生じません。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>簡易課税をやめたいときは、いつ、どう出しますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>「消費税簡易課税制度選択不適用届出書」を、やめたい課税期間の初日の前日までに、納税地の税務署長へ出します。ただし、事業を廃止した場合を除き、適用を始めた課税期間の初日から2年を経過する日の属する課税期間の初日以後でなければ出せません。個人事業者や1年決算の法人は、原則として、選んだ課税期間の翌課税期間の初日以後です（国税庁、2026年11月8日確認）。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>届出書を出し忘れたら、あとから間に合わせる方法はありますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>国税庁の「やむを得ない事情」の特例は、災害などで提出できない状態になった場合などが対象で、届出書の提出を忘れていた場合は当たらないと書かれています。2割特例か3割特例を使った翌課税期間なら、その課税期間の申告期限まで出せる特例があるので、まず自分が当たるかを確かめます。迷うときは税務署か税理士に確認してください。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6505.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「No.6505 簡易課税制度」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6505_qa.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「No.6505 簡易課税制度」のQ&amp;A（簡易課税制度選択届出書の効力）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6509.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「No.6509 簡易課税制度の事業区分」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/shohi/annai/1461_13.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「D1-22 消費税簡易課税制度選択届出手続」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/law/tsutatsu/kobetsu/kansetsu/951225/pdf2/youshiki_074.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「消費税簡易課税制度選択届出書」（様式、PDF）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/law/tsutatsu/kobetsu/kansetsu/951225/pdf2/youryou_074.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「消費税簡易課税制度選択届出書の記載要領等」（PDF）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/shohi/annai/1461_14.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「D1-23 消費税簡易課税制度選択不適用届出手続」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/shohi/annai/pdf/1461_14_youryou.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「消費税簡易課税制度選択不適用届出書の記載要領等」（PDF）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6633.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「No.6633 やむを得ない事情により簡易課税制度選択届出書の提出が間に合わなかった場合」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/invoice-review/index.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「令和8年度税制改正特集」（インボイス制度特設サイト）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/invoice-review/pdf/0026004-099-01-1.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「インボイス制度に関する令和8年度税制改正について」（リーフレット、PDF）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/invoice-review/pdf/0026004-099-01-2.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「令和8年度税制改正特集」（パンフレット、PDF）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/pdf/0026004-066_01.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「インボイス制度に関するお知らせ（個人事業者の方へ）」（PDF）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/pdf/0026004-066_02.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「インボイス制度に関するお知らせ（法人の方へ）」（PDF）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/pdf/qa/01-01.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「消費税の仕入税額控除制度における適格請求書等保存方式に関するQ＆A」（令和8年5月改訂、PDF）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/invoice_about.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「インボイス制度の概要」（インボイス制度特設サイト）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6303.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「No.6303 消費税および地方消費税の税率」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6355.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「No.6355 課税売上げと課税仕入れ」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6451.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「No.6451 仕入税額控除の対象となるもの」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6601.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「No.6601 申告と納税」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/law/shitsugi/shohi/20/02.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「質疑応答事例 簡易課税の事業区分について（フローチャート）」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/law/shitsugi/shohi/20/05.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「質疑応答事例 日本標準産業分類からみた事業区分」（情報通信業ほか）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/law/shitsugi/shohi/20/07.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「質疑応答事例 日本標準産業分類からみた事業区分」（専門・技術サービス業、飲食サービス業ほか）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/zeiritsuhikisage.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「消費税率引下げ特設サイト」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/pdf/0026008-127_qa.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「飲食料品に係る２年間の消費税率引下げに関するＱ＆Ａ」（令和8年9月、PDF）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.e-tax.nta.go.jp/info_center/index.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>e-Tax「e-Taxの利用可能時間」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.yayoi-kk.co.jp/kigyo/zeirishi-shoukai/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>弥生「税理士紹介サービス（起業・開業ナビ）」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約8分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/zeirishi/" data-astro-cid-sgg5joot>税理士に頼むの記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

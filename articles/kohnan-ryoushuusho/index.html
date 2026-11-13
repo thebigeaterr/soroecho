@@ -1,0 +1,244 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>コーナンの領収書の取り方｜店舗のレシートとコーナンeショップの領収証の違い | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="コーナンの領収書は買い方で書類が変わります。店舗はレシート、コーナンeショップは会員のマイページで出荷後に領収証をダウンロードし、店舗受取はレシートが領収証になります。請求書は発行されません。登録番号の確認場所と、経理に出す前のチェックも公式の案内で整理します。"><link rel="canonical" href="https://soroecho.com/articles/kohnan-ryoushuusho/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="コーナンの領収書の取り方｜店舗のレシートとコーナンeショップの領収証の違い | そろえ帳"><meta property="og:description" content="コーナンの領収書は買い方で書類が変わります。店舗はレシート、コーナンeショップは会員のマイページで出荷後に領収証をダウンロードし、店舗受取はレシートが領収証になります。請求書は発行されません。登録番号の確認場所と、経理に出す前のチェックも公式の案内で整理します。"><meta property="og:url" content="https://soroecho.com/articles/kohnan-ryoushuusho/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/kohnan-ryoushuusho.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="コーナンの領収書の取り方｜店舗のレシートとコーナンeショップの領収証の違い — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="コーナンの領収書の取り方｜店舗のレシートとコーナンeショップの領収証の違い | そろえ帳"><meta name="twitter:description" content="コーナンの領収書は買い方で書類が変わります。店舗はレシート、コーナンeショップは会員のマイページで出荷後に領収証をダウンロードし、店舗受取はレシートが領収証になります。請求書は発行されません。登録番号の確認場所と、経理に出す前のチェックも公式の案内で整理します。"><meta name="twitter:image" content="https://soroecho.com/og/kohnan-ryoushuusho.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"コーナンの領収書の取り方｜店舗のレシートとコーナンeショップの領収証の違い","item":"https://soroecho.com/articles/kohnan-ryoushuusho/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"コーナンの領収書の取り方｜店舗のレシートとコーナンeショップの領収証の違い","description":"コーナンの領収書は買い方で書類が変わります。店舗はレシート、コーナンeショップは会員のマイページで出荷後に領収証をダウンロードし、店舗受取はレシートが領収証になります。請求書は発行されません。登録番号の確認場所と、経理に出す前のチェックも公式の案内で整理します。","url":"https://soroecho.com/articles/kohnan-ryoushuusho/","datePublished":"2026-11-13T00:00:00.000Z","dateModified":"2026-11-13T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/kohnan-ryoushuusho/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"コーナンの領収書はどこでもらえますか？","acceptedAnswer":{"@type":"Answer","text":"店舗で買った分は、公式の案内にある店舗のレシートが手元に残る書類です。コーナンeショップの注文は、会員のマイページの注文履歴から、商品の出荷後に領収証をダウンロードします。「ネットで注文、店舗で受取」の場合は、受取店舗で発行するレシートが領収証になります。"}},{"@type":"Question","name":"コーナンで手書きの領収書は出してもらえますか？","acceptedAnswer":{"@type":"Answer","text":"今回確認した公式ページでは、店舗での手書きの領収書や宛名入りの領収書の可否は確認できませんでした。必要なときは、買った店舗のレジで確かめてください。eショップは、宛名や但し書きを注文の「コメント欄」に書く方法が公式に案内されています。"}},{"@type":"Question","name":"コーナンeショップで請求書は発行されますか？","acceptedAnswer":{"@type":"Answer","text":"公式のよくあるご質問では「請求書は発行していません」とされ、お支払い方法で使える領収証を代わりに使うよう案内されています。NP後払い・NP掛け払いは、請求書兼お届け明細書の「払込受領書」などが領収証の扱いです。"}},{"@type":"Question","name":"コーナンのレシートはインボイス（適格請求書）に対応していますか？","acceptedAnswer":{"@type":"Answer","text":"ポケットカードのよくあるご質問では、レシートの最下部にインボイス制度の登録番号（T3120101003135）があり、税率ごとに区分した消費税額等が記載されているとされています。手元のレシートに登録番号があるかを見て、個別の判断は税理士・税務署に確認してください。"}},{"@type":"Question","name":"コーナンeショップの領収証はスマートフォンで取れますか？","acceptedAnswer":{"@type":"Answer","text":"公式ページでは、スマートフォンでは領収証のダウンロードはできず、パソコンを使うか、画面下部のPC版に切り替えるよう案内されています。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>コーナンの領収書の取り方｜店舗のレシートとコーナンeショップの領収証の違い</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1oiprg2-g" x1="0" y1="0" x2="1" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1oiprg2-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ec1oiprg2-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1oiprg2-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="96" r="158" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>コーナン</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>領収書</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--amazon-business">Amazonビジネス実務</span><h1 data-astro-cid-sgg5joot>コーナンの領収書の取り方｜店舗のレシートとコーナンeショップの領収証の違い</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-11-13T00:00:00.000Z" data-astro-cid-sgg5joot>2026年11月13日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約8分</p><p class="cta-inline">コーナンと使い分けるなら、Amazonビジネスの登録（無料）も選択肢です<a href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">登録ページを見る（公式）</a></p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論コーナンの領収書は店舗のレシートとeショップの領収証で取り方が違う" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：コーナンの領収書は「店舗のレシート」と「eショップの領収証」で取り方が違う</a></li><li data-astro-cid-sgg5joot><a href="#店舗で買った分レシートが基本手書きの領収書は公式では確認できなかった" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>店舗で買った分：レシートが基本。手書きの領収書は公式では確認できなかった</a></li><li data-astro-cid-sgg5joot><a href="#コーナンeショップの領収証会員のマイページから出荷後にダウンロード" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>コーナンeショップの領収証：会員のマイページから、出荷後にダウンロード</a></li><li data-astro-cid-sgg5joot><a href="#コーナンのインボイスの確認レシートの最下部と領収証の登録番号" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>コーナンのインボイスの確認：レシートの最下部と、領収証の登録番号</a></li><li data-astro-cid-sgg5joot><a href="#経理に出す前のチェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>経理に出す前のチェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#併用の選択肢購入先ごとに書類の取り方が違う" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>併用の選択肢：購入先ごとに書類の取り方が違う</a></li><li data-astro-cid-sgg5joot><a href="#よくある質問とまとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>よくある質問とまとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論コーナンの領収書は店舗のレシートとeショップの領収証で取り方が違う">結論：コーナンの領収書は「店舗のレシート」と「eショップの領収証」で取り方が違う</h2>
+<p>コーナンの公式ページ（コーナンeショップのご利用ガイドとよくあるご質問、2026年11月1日取得）によると、書類の取り方は買い方で分かれます。</p>
+<p>店舗で買った分は、店舗のレシートが手元に残ります。コーナンeショップの注文は、会員のマイページから、商品の出荷後に領収証をダウンロードします。「ネットで注文、店舗で受取」は、受取店舗で発行するレシートが領収証の扱いです。</p>
+<table>
+<thead>
+<tr>
+<th>買い方</th>
+<th>手元に残す書類</th>
+<th>取り方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>店舗で買う</td>
+<td>レシート（手書きの可否は公式では確認できなかった）</td>
+<td>買った店舗に確かめる</td>
+</tr>
+<tr>
+<td>コーナンeショップ（宅配）・クレジットカード</td>
+<td>領収証（WEB）、カード会社のご利用明細</td>
+<td>会員のマイページ「注文履歴一覧」から、商品の出荷後にダウンロード</td>
+</tr>
+<tr>
+<td>コーナンeショップ・店舗受取</td>
+<td>受取店舗のレシート</td>
+<td>マイページからは発行できない</td>
+</tr>
+<tr>
+<td>コーナンeショップ・NP後払い／NP掛け払い</td>
+<td>受領書、振込明細等</td>
+<td>当社事業者登録番号付きと案内されている</td>
+</tr>
+<tr>
+<td>コーナンeショップ・代金引換</td>
+<td>宅配伝票控え（領収証）</td>
+<td>運送会社から渡される</td>
+</tr>
+</tbody>
+</table>
+<p>この記事で分かることは次のとおりです。</p>
+<ul>
+<li>店舗のレシートと、手書きの領収書について公式で分かる範囲</li>
+<li>コーナンeショップで領収証をダウンロードする条件と手順</li>
+<li>請求書は発行されない点と、宛名の変え方</li>
+<li>インボイスの登録番号の確認場所</li>
+<li>経理に出す前のチェックリスト</li>
+</ul>
+<p>画面の表記や条件は変わることがあります。実際の画面と公式の最新の案内で確かめてください。</p>
+<h2 id="店舗で買った分レシートが基本手書きの領収書は公式では確認できなかった">店舗で買った分：レシートが基本。手書きの領収書は公式では確認できなかった</h2>
+<p>店舗で買った商品の書類について、今回確認した公式ページに、手書きの領収書や宛名入り領収書の可否を書いたものはありませんでした。そのため、この記事では「出してもらえる」「出してもらえない」のどちらも断定しません。</p>
+<p>公式に書かれていることは次の2点です。</p>
+<ul>
+<li>コーナンeショップのよくあるご質問では、店舗で買った商品はeショップでは承れず、店舗で買った方は各店舗へ問い合わせるよう案内されています</li>
+<li>「ネットで注文、店舗で受取」では、商品のお引渡し時に渡されるレシートと、メーカー保証書を合わせて保管するよう案内されています</li>
+</ul>
+<p>宛名や但し書きが必要なときは、会計のときにレジで頼み、何が出るのかをその場で確かめるのが現実的です。経理の規程でレシートが認められるかどうかも、先に経理へ確かめておくと二度手間になりません。</p>
+<h3 id="店舗受取でqrコード決済を使ったとき">店舗受取でQRコード決済を使ったとき</h3>
+<p>店舗受取サービスの案内には、「店外ロッカー」でQRコード決済をした場合、レシートは発行されないと書かれています。必要なときは店舗従業員に連絡するよう案内されています。経理にレシートが要る場合は、受け取りのときに頼んでください。</p>
+<h2 id="コーナンeショップの領収証会員のマイページから出荷後にダウンロード">コーナンeショップの領収証：会員のマイページから、出荷後にダウンロード</h2>
+<p>コーナンeショップの領収証発行は、会員様限定のサービスです。個人向けストア、法人向けストアのどちらでも発行できます。入会費・年会費は無料と案内されています。</p>
+<p>領収証は、商品の出荷後に、マイページの注文履歴からダウンロードします。公式ページの手順は次のとおりです。</p>
+<ol>
+<li>会員ログインし、「マイページ」へ進む</li>
+<li>「注文履歴一覧」を選ぶ</li>
+<li>出力したい注文の「注文番号」をクリックする</li>
+<li>注文履歴の詳細で、詳細情報を入力して発行する</li>
+<li>領収書に注文内容の明細が記載される</li>
+</ol>
+<p>スマートフォンでは領収証のダウンロードはできません。パソコンを使うか、画面下部のPC版に切り替えるよう案内されています。</p>
+<h3 id="お支払い方法で領収証にあたる書類が変わる">お支払い方法で、領収証にあたる書類が変わる</h3>
+<p>よくあるご質問には、支払方法ごとの扱いが書かれています。</p>
+<table>
+<thead>
+<tr>
+<th>お支払い方法</th>
+<th>領収証にあたる書類</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>コンビニ、銀行・ゆうちょATM</td>
+<td>各金融機関の「受領書」「振込明細」等</td>
+</tr>
+<tr>
+<td>クレジットカード</td>
+<td>カード会社の「ご利用明細」</td>
+</tr>
+<tr>
+<td>代金引換</td>
+<td>運送会社から渡される「宅配伝票控え（領収証）」</td>
+</tr>
+<tr>
+<td>NP後払い</td>
+<td>請求書兼お届け明細書の「払込受領書」</td>
+</tr>
+</tbody>
+</table>
+<p>上記以外の領収証を希望する場合は、注文の最終ページの「コメント欄」に、金額・宛名・但し書き・送付先を書く方法が案内されています。この領収証には「再発行」（カード払いは「クレジットカード売上」）と表示されます。</p>
+<p>注意点として、次の条件が書かれています。</p>
+<ul>
+<li>日付なしの領収証発行は受け付けていない</li>
+<li>日付は入金日での発行（クレジットカードは出荷日が入金日）</li>
+<li>メーカー直送の領収証は同送できず、出荷完了後に別途郵送の手配になる</li>
+</ul>
+<h3 id="宛名を会社名にするには">宛名を会社名にするには</h3>
+<p>コンビニや銀行・ゆうちょATMの支払控えの宛名が個人名になる場合があります。公式のよくあるご質問によると、宛名は「ご注文主様のお名前」です。会社名にしたいときは、ご注文主様のお名前を法人名に変更して注文するよう案内されています。</p>
+<p>注文の確定後に気づいたときは、いまの注文を一度キャンセルし、あらためて注文するよう案内されています。会社の備品を買う担当者は、注文する前に注文者の名前を見ておくと安心です。</p>
+<h3 id="請求書は発行されない">請求書は発行されない</h3>
+<p>よくあるご質問には、「請求書は発行していません」と書かれています。お支払い方法で使える領収証を代わりに使うよう案内されています。</p>
+<p>NP後払い・NP掛け払いは、請求書が商品に同梱されたり、別便の場合は商品が届く前に発送されたりする場合があると案内されています。これは決済の請求書で、コーナンが出す請求書とは別の書類です。支払期限は請求書の記載に従ってください。</p>
+<h2 id="コーナンのインボイスの確認レシートの最下部と領収証の登録番号">コーナンのインボイスの確認：レシートの最下部と、領収証の登録番号</h2>
+<p>ポケットカードのよくあるご質問「コーナンのレシートはインボイス対応してますか？」には、次のように書かれています。</p>
+<ul>
+<li>レシートの最下部に、インボイス制度における登録番号（T3120101003135）がある</li>
+<li>適用税率や税率ごとに区分した消費税額等は、対応した内訳で記載されている</li>
+</ul>
+<p>コーナンeショップの公式ページには、WEBからダウンロードできる領収証に「当社事業者登録番号付き」と案内されています。ただし、店舗払い・NP後払い・NP掛け払いは除くとされています。NP後払い・NP掛け払いの受領書や振込明細等は、別の箇所で「当社事業者登録番号付き」と書かれています。</p>
+<p>ここで大事なのは、手元の書類で確かめることです。</p>
+<ul>
+<li>「T」から始まる13桁の登録番号が書かれているか</li>
+<li>書類の名称が、レシートか領収証か受領書か</li>
+<li>税率ごとの消費税額が書かれているか</li>
+</ul>
+<p>登録番号が有効かどうかは、国税庁の適格請求書発行事業者公表サイトで調べられますが、この記事では内容を取得していません。仕入税額控除の可否など個別の判断は、税理士または税務署へ相談してください。登録番号の基本は<a href="/articles/invoice-touroku-yagou/">インボイスの登録番号と屋号</a>、書類の保存は<a href="/articles/ryoushuusho-hozon-e-bunsho-taiou/">領収書の保存と電子データの扱い</a>で整理しています。</p>
+<p>なお、今回の公式ページでは、コーナンPROの店舗やカードに特有の領収書の取り方は確認できませんでした。そのような買い方をした場合は、買った店舗や案内元へ確かめてください。</p>
+<h2 id="経理に出す前のチェックリスト">経理に出す前のチェックリスト</h2>
+<p>公式ページに書かれている事実の範囲で、確認したい項目を並べます。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 店舗で買ったか、コーナンeショップで買ったかを分けた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 店舗の分は、レシートの金額・日付と、経理が求める書類（宛名など）が合うかを店舗で確かめた</li>
+<li class="task-list-item"><input type="checkbox" disabled> eショップの領収証は、会員ログイン後のマイページ「注文履歴一覧」から、商品の出荷後に取った</li>
+<li class="task-list-item"><input type="checkbox" disabled> ダウンロードはパソコンで行った（スマートフォンでは行えない）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 宛名を会社名にしたい注文は、注文前にご注文主様のお名前を法人名にした</li>
+<li class="task-list-item"><input type="checkbox" disabled> 支払方法（カード、コンビニ、ATM、代金引換、NP後払い等）に合う書類を取った</li>
+<li class="task-list-item"><input type="checkbox" disabled> 店舗受取の分は、受取店舗のレシートを受け取った（QRコード決済では発行されないため、必要なら従業員に頼んだ）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 請求書は発行されないと理解し、領収証や受領書で代用している</li>
+<li class="task-list-item"><input type="checkbox" disabled> 書類に「T＋13桁」の登録番号があるか確かめた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 日付なしの領収証は受け付けられないと理解している</li>
+</ul>
+<h2 id="併用の選択肢購入先ごとに書類の取り方が違う">併用の選択肢：購入先ごとに書類の取り方が違う</h2>
+<p>ここまで見たように、コーナンは店舗かeショップか、支払方法は何かで、書類が変わります。購入先が複数あると、書類を集める場所も取り方もそれぞれ違います。</p>
+<p>備品や資材の買い先を分けて持つ方法もあります。手続きの面では、次の点を並べると比べやすくなります。</p>
+<table>
+<thead>
+<tr>
+<th>比べる点</th>
+<th>確認すること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>登録の条件</td>
+<td>費用はかかるか、事業者でなければ登録できないか</td>
+</tr>
+<tr>
+<td>支払方法</td>
+<td>カード、請求書払いなどの種類と、審査の有無</td>
+</tr>
+<tr>
+<td>書類の取り方</td>
+<td>領収書・請求書をどの画面から、いつ取れるか</td>
+</tr>
+<tr>
+<td>書類の発行元</td>
+<td>販売店か運営会社か、登録番号はあるか</td>
+</tr>
+</tbody>
+</table>
+<p>Amazonビジネスは、公式サイトの表記では登録が無料です（2026年9月12日確認）。請求書払いは、公式ページによると招待制で審査があり、締め日から30日の支払期限です（2026年10月22日確認）。コーナンとどちらが合うかは、買う物や受け取り方、支払いの流れで変わるため、この記事では優劣をつけません。</p>
+<p>3社の違いは<a href="/articles/amazon-business-monotaro-askul-hikaku/">アマゾンビジネス・モノタロウ・アスクルの比較記事</a>で整理しています。モノタロウの書類は<a href="/articles/monotaro-ryoushuusho/">モノタロウの領収書・請求書の記事</a>、アスクルの書類は<a href="/articles/askul-ryoushuusho/">アスクルの領収書・請求書の記事</a>、Amazonで買った分は<a href="/articles/amazon-ryoushuusho-dashikata/">Amazonの領収書の出し方</a>を見てください。</p>
+<aside class="cta-box cta-box--subtle"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">Amazonビジネス</p><h3 class="cta-box__title">コーナンと使い分けるなら、Amazonビジネスの登録（無料）も選択肢です</h3><p class="cta-box__body">買い先が変わると、領収書の取り方も変わります。備品や資材の買い先を複数持つなら、Amazonビジネスは公式サイトの表記で登録無料です。請求書払いは審査のある招待制なので、条件は公式で確かめてから選べます。</p><a class="cta-box__button" href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">Amazonビジネスの登録ページへ（公式）</a></aside>
+<h2 id="よくある質問とまとめ">よくある質問とまとめ</h2>
+<h3 id="領収書と領収証は同じですか">領収書と領収証は同じですか</h3>
+<p>コーナンの公式ページでは「領収証」「領収書」の両方の表記が使われています。経理が求める書類の名前と、手元の書類の名称が合うかを見てください。</p>
+<h3 id="eショップで領収証が取れないときは">eショップで領収証が取れないときは</h3>
+<p>領収証は商品の出荷後にダウンロードします。店舗受取の分や、店舗払いの分はマイページから発行できないと案内されています。スマートフォンでは取れないため、パソコンで操作します。</p>
+<h3 id="まとめ">まとめ</h3>
+<p>コーナンの領収書は、買い方で取り方が違います。店舗で買った分は店舗のレシートで、手書きの領収書の可否は公式では確認できなかったため、買った店舗に確かめます。コーナンeショップは、会員のマイページの注文履歴から、商品の出荷後に領収証をダウンロードします。請求書は発行されず、支払方法ごとの領収証にあたる書類を使います。</p>
+<p>インボイスは、ポケットカードのよくあるご質問で、レシートの最下部に登録番号があるとされています。受け取った書類で「T＋13桁」を確かめてください。税務の個別の判断は、税理士・税務署へ相談してください。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>コーナンの領収書はどこでもらえますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>店舗で買った分は、公式の案内にある店舗のレシートが手元に残る書類です。コーナンeショップの注文は、会員のマイページの注文履歴から、商品の出荷後に領収証をダウンロードします。「ネットで注文、店舗で受取」の場合は、受取店舗で発行するレシートが領収証になります。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>コーナンで手書きの領収書は出してもらえますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>今回確認した公式ページでは、店舗での手書きの領収書や宛名入りの領収書の可否は確認できませんでした。必要なときは、買った店舗のレジで確かめてください。eショップは、宛名や但し書きを注文の「コメント欄」に書く方法が公式に案内されています。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>コーナンeショップで請求書は発行されますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式のよくあるご質問では「請求書は発行していません」とされ、お支払い方法で使える領収証を代わりに使うよう案内されています。NP後払い・NP掛け払いは、請求書兼お届け明細書の「払込受領書」などが領収証の扱いです。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>コーナンのレシートはインボイス（適格請求書）に対応していますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>ポケットカードのよくあるご質問では、レシートの最下部にインボイス制度の登録番号（T3120101003135）があり、税率ごとに区分した消費税額等が記載されているとされています。手元のレシートに登録番号があるかを見て、個別の判断は税理士・税務署に確認してください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>コーナンeショップの領収証はスマートフォンで取れますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式ページでは、スマートフォンでは領収証のダウンロードはできず、パソコンを使うか、画面下部のPC版に切り替えるよう案内されています。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://www.kohnan-eshop.com/shop/pages/payment.aspx" rel="noopener" target="_blank" data-astro-cid-sgg5joot>コーナンeショップ お支払い方法について</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-01）</span></li><li data-astro-cid-sgg5joot><a href="https://www.kohnan-eshop.com/shop/pages/faq.aspx" rel="noopener" target="_blank" data-astro-cid-sgg5joot>コーナンeショップ よくあるご質問Q&amp;A</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-01）</span></li><li data-astro-cid-sgg5joot><a href="https://www.kohnan-eshop.com/shop/pages/aboutorder.aspx" rel="noopener" target="_blank" data-astro-cid-sgg5joot>コーナンeショップ ご注文について</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-01）</span></li><li data-astro-cid-sgg5joot><a href="https://www.kohnan-eshop.com/shop/pages/uketori.aspx" rel="noopener" target="_blank" data-astro-cid-sgg5joot>コーナンeショップ 店舗受取サービス</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-01）</span></li><li data-astro-cid-sgg5joot><a href="https://pc-faq.pocketcard.co.jp/%E3%82%B3%E3%83%BC%E3%83%8A%E3%83%B3%E3%81%AE%E3%83%AC%E3%82%B7%E3%83%BC%E3%83%88%E3%81%AF%E3%82%A4%E3%83%B3%E3%83%9C%E3%82%A4%E3%82%B9%E5%AF%BE%E5%BF%9C%E3%81%97%E3%81%A6%E3%81%BE%E3%81%99%E3%81%8B%EF%BC%9F-67db62ec30067667db2d11be" rel="noopener" target="_blank" data-astro-cid-sgg5joot>ポケットカード コーナンのレシートはインボイス対応してますか？</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-01）</span></li><li data-astro-cid-sgg5joot><a href="https://business.amazon.co.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス公式サイト</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-09-12）</span></li><li data-astro-cid-sgg5joot><a href="https://business.amazon.co.jp/ja/solutions/payment-options/pay-by-invoice" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス 請求書払い</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-22）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/amazon-business-mitsumorisho-hakkou/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1oukbk0-g" x1="0" y1="0" x2="1" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1oukbk0-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1oukbk0-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1oukbk0-p)" data-astro-cid-yuatfsof></rect><circle cx="366" cy="57" r="153" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Amazon</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>見積書</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>出し方</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--amazon-business">Amazonビジネス実務</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>Amazonの見積書の出し方｜カートからPDFで保存する手順（Amazonビジネス・登録無料）</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>Amazonで見積書が必要なときは、登録無料のAmazonビジネスを使います。注文前はカートから参考見積書、注文後は注文履歴から見積書をPDFで保存でき、稟議や経費精算に使えます。個人アカウントしかない場合の考え方と、配送料が載らない・ダウンロードできないときの注意点もまとめました。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-06T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月6日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約12分</p></div></a><a class="card article-card" href="/articles/kojin-jigyou-kaigyoutodoke-nashi-amazon-business-toroku/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1ptehj0-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1ptehj0-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1ptehj0-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1ptehj0-p)" data-astro-cid-yuatfsof></rect><circle cx="363" cy="90" r="176" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>個人事業主</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>開業届なし</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Amazonビジネス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--amazon-business">Amazonビジネス実務</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>Amazonビジネスの登録に必要書類は？開業届なしの個人事業主が用意するもの一覧</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>個人事業主がAmazonビジネスに登録するときは、確認書類を1点提出します。開業届がなくても、過去2年以内の確定申告書B・収支内訳書、インボイスの登録通知書などで代わりになります。公式ヘルプの書類一覧と提出時の注意点、登録手順、屋号の扱いを整理しました。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-06T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月6日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/amazon-business/" data-astro-cid-sgg5joot>Amazonビジネス実務の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/receipts/" data-astro-cid-sgg5joot>サービス別 領収書・インボイス対応一覧を見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/business-prime/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 L4 4"></path><path d="M4 20 L21 20"></path><path d="M7 20 L7 14"></path><path d="M11 20 L11 10"></path><path d="M15 20 L15 15"></path><path d="M19 20 L19 7"></path><path d="M5 16 L20 8"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>Business Prime 損益分岐計算</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>注文回数と送料を入れると、プライムビジネス（旧Businessプライム）の元が取れる回数がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/amazon-business-check/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 9 l2 2 l3.5 -3.5"></path><path d="M8 15 h8"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>Amazonビジネスが必要か判定</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>5つの質問に答えるだけで、Amazonビジネスが「要る」「今は要らない」「どちらでも」のどれかがわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

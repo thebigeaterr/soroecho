@@ -1,0 +1,400 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Amazonの請求書の出し方｜ダウンロード・印刷の手順と、出ないときの確認点 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="Amazonの請求書は注文履歴から出します。インボイスが要るときは「領収書等」の「明細書／適格請求書」、パッケージの請求書は「請求書を表示する」。Amazonビジネスは発送の24時間後から最大2,000件。ダウンロードできない原因の確認表つきです。"><link rel="canonical" href="https://soroecho.com/articles/amazon-seikyuusho-download-insatsu/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="Amazonの請求書の出し方｜ダウンロード・印刷の手順と、出ないときの確認点 | そろえ帳"><meta property="og:description" content="Amazonの請求書は注文履歴から出します。インボイスが要るときは「領収書等」の「明細書／適格請求書」、パッケージの請求書は「請求書を表示する」。Amazonビジネスは発送の24時間後から最大2,000件。ダウンロードできない原因の確認表つきです。"><meta property="og:url" content="https://soroecho.com/articles/amazon-seikyuusho-download-insatsu/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/amazon-seikyuusho-download-insatsu.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Amazonの請求書の出し方｜ダウンロード・印刷の手順と、出ないときの確認点 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Amazonの請求書の出し方｜ダウンロード・印刷の手順と、出ないときの確認点 | そろえ帳"><meta name="twitter:description" content="Amazonの請求書は注文履歴から出します。インボイスが要るときは「領収書等」の「明細書／適格請求書」、パッケージの請求書は「請求書を表示する」。Amazonビジネスは発送の24時間後から最大2,000件。ダウンロードできない原因の確認表つきです。"><meta name="twitter:image" content="https://soroecho.com/og/amazon-seikyuusho-download-insatsu.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"Amazonの請求書の出し方｜ダウンロード・印刷の手順と、出ないときの確認点","item":"https://soroecho.com/articles/amazon-seikyuusho-download-insatsu/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Amazonの請求書の出し方｜ダウンロード・印刷の手順と、出ないときの確認点","description":"Amazonの請求書は注文履歴から出します。インボイスが要るときは「領収書等」の「明細書／適格請求書」、パッケージの請求書は「請求書を表示する」。Amazonビジネスは発送の24時間後から最大2,000件。ダウンロードできない原因の確認表つきです。","url":"https://soroecho.com/articles/amazon-seikyuusho-download-insatsu/","datePublished":"2026-11-13T00:00:00.000Z","dateModified":"2026-11-13T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/amazon-seikyuusho-download-insatsu/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Amazonの請求書は、どこから出せますか？","acceptedAnswer":{"@type":"Answer","text":"個人アカウントでは注文履歴から出します。インボイス（適格請求書）が要るときは、該当の注文の「領収書等」から「明細書／適格請求書」を選び、ブラウザの印刷オプションで印刷します。販売元がAmazon.co.jpか、登録番号をAmazonに登録した出品者の注文が対象です。パッケージの請求書は、日付範囲を選んで注文を探し、「請求書を表示する」から開きます。Amazonビジネスは、発送の24時間後から注文履歴の「領収書等」で取れます（公式ヘルプ、2026年11月8日確認）。"}},{"@type":"Question","name":"Amazonの請求書をPDFでダウンロードするには、どうしますか？","acceptedAnswer":{"@type":"Answer","text":"個人アカウントの公式ヘルプには、ダウンロードボタンの手順が見つかりませんでした。案内されているのは、書類を開いてブラウザの印刷オプションで印刷する方法です。PDFで残すなら、印刷画面の保存先でPDFを選べるかを確かめます。これはブラウザ側の機能で、Amazonの案内ではありません。Amazonビジネスは、購買データの注文履歴データから一度に最大2,000件をダウンロードできます。"}},{"@type":"Question","name":"Amazonの請求書が出ない・ダウンロードできないのは、なぜですか？","acceptedAnswer":{"@type":"Answer","text":"公式ヘルプから確かめられる主な理由は4つです。まだ発送されていない（発送までは閲覧も印刷もできず、Amazonビジネスは発送の24時間後から）、アプリで操作している（アプリでは印刷できない）、「明細書／適格請求書」の条件に合わない注文（出品者が登録番号をAmazonに登録していない）、支払い方法がコンビニ払いなどで領収書が出ない、です。Amazonビジネスでは、役割による見られる範囲の違いも関わります。"}},{"@type":"Question","name":"Amazonビジネスの請求書は、何件までまとめて取れますか？","acceptedAnswer":{"@type":"Answer","text":"購買データの「注文履歴データ」ページで「注文関連書類をダウンロードする」ボタンを使うと、一度に最大2,000の請求書をダウンロードできます。請求書払いを使っている場合は、「請求書情報」から請求書を1つずつ、または一度に最大2,000件をZIPでダウンロードできます。見られる範囲は役割で決まり、購買依頼者は自分の注文だけです。"}},{"@type":"Question","name":"Amazonの見積書は、請求書の代わりになりますか？","acceptedAnswer":{"@type":"Answer","text":"別の書類です。Amazonビジネスの見積書は、注文確定手続き中にダウンロードする参考見積書と、注文確定後に購買データから取る見積書の2種類で、日本語ではどちらも「見積書」という題名になります。参考見積書には、注文確定時に適用される割引が反映されません。今回読んだ公式ヘルプは、見積書を請求書や領収書の代わりとは案内していないため、経理に出す書類の名前は、提出先に確かめてください。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>Amazonの請求書の出し方｜ダウンロード・印刷の手順と、出ないときの確認点</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1r49tpn-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient></defs><rect width="400" height="225" fill="url(#ec1r49tpn-g)" data-astro-cid-yuatfsof></rect><circle cx="342" cy="65" r="47.25" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="342" cy="65" r="74.25" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="342" cy="65" r="101.25" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="342" cy="65" r="128.25" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="342" cy="65" r="135" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>amazon</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>請求書</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--amazon-business">Amazonビジネス実務</span><h1 data-astro-cid-sgg5joot>Amazonの請求書の出し方｜ダウンロード・印刷の手順と、出ないときの確認点</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-11-13T00:00:00.000Z" data-astro-cid-sgg5joot>2026年11月13日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約14分</p><p class="cta-inline">会社名の入った請求書をまとめて取りたいなら、Amazonビジネスの登録（無料）から<a href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">登録ページを見る（公式）</a></p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論個人アカウントは注文履歴からamazonビジネスは発送の24時間後から最大2000件" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：個人アカウントは注文履歴から、Amazonビジネスは発送の24時間後から最大2,000件</a></li><li data-astro-cid-sgg5joot><a href="#amazonの請求書はどれ公式ヘルプに出てくる4つの書類" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>Amazonの「請求書」はどれ？公式ヘルプに出てくる4つの書類</a></li><li data-astro-cid-sgg5joot><a href="#個人アカウントで請求書を出す手順パソコン" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>個人アカウントで請求書を出す手順（パソコン）</a></li><li data-astro-cid-sgg5joot><a href="#ダウンロードと印刷は何が違う公式の手順はブラウザの印刷まで" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>「ダウンロード」と「印刷」は何が違う？公式の手順はブラウザの印刷まで</a></li><li data-astro-cid-sgg5joot><a href="#amazonビジネスの請求書はいつから何件まで取れる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>Amazonビジネスの請求書は、いつから・何件まで取れる？</a></li><li data-astro-cid-sgg5joot><a href="#請求書が出ないダウンロードできないのはなぜ確認表" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>請求書が出ない・ダウンロードできないのはなぜ？確認表</a></li><li data-astro-cid-sgg5joot><a href="#見積書納品書請求書払いは請求書とは別の書類" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>見積書・納品書・請求書払いは、請求書とは別の書類</a></li><li data-astro-cid-sgg5joot><a href="#個人アカウントのままでよいamazonビジネスを検討する場面" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>個人アカウントのままでよい？Amazonビジネスを検討する場面</a></li><li data-astro-cid-sgg5joot><a href="#出す前のチェックリストとまとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>出す前のチェックリストとまとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論個人アカウントは注文履歴からamazonビジネスは発送の24時間後から最大2000件">結論：個人アカウントは注文履歴から、Amazonビジネスは発送の24時間後から最大2,000件</h2>
+<p>公式ヘルプ（2026年11月8日確認）によると、領収書、適格請求書、支払い明細書は、注文が発送されると注文履歴に表示されます。請求書の「発行」を探すときは、まず注文履歴を開きます。</p>
+<p>どの書類を開くかは、アカウントと使い道で変わります。個人アカウントの入り口は注文履歴です。アプリでは印刷できず、スマホのブラウザにも対象外の注文があり、その場合はパソコンのサイトの注文履歴から印刷するよう案内されています。</p>
+<p>インボイス（適格請求書）が要るときは、該当の注文の「領収書等」から「明細書／適格請求書」を選びます。パッケージの請求書（納品書が同梱されていないときに印刷できる請求書）は、注文履歴の「請求書を表示する」から開きます。公式ヘルプが「経費報告書に使用できる正式な適格請求書（または区分記載請求書）」と案内しているのは、注文履歴に表示される印刷可能な支払い明細書です。</p>
+<table>
+<thead>
+<tr>
+<th>あなたの場合</th>
+<th>出す書類</th>
+<th>出し方（公式ヘルプの項目名）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>個人アカウントで買い、インボイス（適格請求書）が要る</td>
+<td>明細書／適格請求書</td>
+<td>注文履歴 → 該当の注文の「領収書等」→「明細書／適格請求書」→ ブラウザの印刷。販売元がAmazon.co.jpか、登録番号をAmazonに登録した出品者の注文だけ</td>
+</tr>
+<tr>
+<td>個人アカウントで買い、会社の経費精算に出す</td>
+<td>支払い明細書、または領収書</td>
+<td>公式ヘルプは、注文履歴の印刷可能な支払い明細書を「経費報告書に使用できる正式な適格請求書（または区分記載請求書）」と案内。受け付ける書類の名前は会社が決めるので、先に経理へ聞く（<a href="/articles/amazon-ryoushuusho-seikyuusho-shikanai/">請求書しかない時</a>）</td>
+</tr>
+<tr>
+<td>個人アカウントで、パッケージの請求書がほしい</td>
+<td>請求書</td>
+<td>注文履歴 → 日付範囲を選ぶ →「請求書を表示する」→「このページを記録用に印刷する」</td>
+</tr>
+<tr>
+<td>個人アカウントで、領収書がほしい</td>
+<td>領収書／購入明細書</td>
+<td>注文履歴 →「領収書等」→「領収書／購入明細書」（<a href="/articles/amazon-ryoushuusho-dashikata/">領収書の出し方</a>）</td>
+</tr>
+<tr>
+<td>Amazonビジネスで買った</td>
+<td>支払い明細書・適格請求書</td>
+<td>発送の24時間後から、注文履歴の「領収書等」。まとめては購買データの「注文履歴データ」で最大2,000件</td>
+</tr>
+<tr>
+<td>Amazonビジネスの請求書払い</td>
+<td>請求書払いの請求書</td>
+<td>ビジネスアカウントの設定 →「請求書情報」。領収書の代わりは銀行振込控</td>
+</tr>
+<tr>
+<td>注文の前に金額を出したい</td>
+<td>見積書（請求書とは別）</td>
+<td><a href="/articles/amazon-business-mitsumorisho-hakkou/">Amazonの見積書の出し方</a></td>
+</tr>
+</tbody>
+</table>
+<p>個人アカウントで公式ヘルプが案内している手順は、書類を開いて、ブラウザの印刷オプションで印刷するところまでです。ダウンロードボタンの手順は、読んだ範囲に見つかりませんでした。PDFで残したいときは、ブラウザ側の機能を使います。</p>
+<p>Amazonは、セキュリティ上の理由で領収書の印刷と郵送を承っていません。紙にするときは、自分で印刷します。</p>
+<p>この記事は、買い手として注文した商品の請求書の話です。出品者向けの請求書や、Amazon Web Servicesなど別のサービスの請求書は扱いません。画面の表示や条件は変わることがあり、この記事は公式ヘルプの記載に沿っています（自分のアカウントの画面は見ていません）。</p>
+<h2 id="amazonの請求書はどれ公式ヘルプに出てくる4つの書類">Amazonの「請求書」はどれ？公式ヘルプに出てくる4つの書類</h2>
+<p>「請求書」の名前で探すと迷います。公式ヘルプには似た書類が複数あり、開く場所も使い道も別です。個人アカウントで読めた範囲を表にします。</p>
+<table>
+<thead>
+<tr>
+<th>書類の名前</th>
+<th>開く場所</th>
+<th>公式ヘルプでの位置づけ</th>
+<th>出る条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>明細書／適格請求書</td>
+<td>注文履歴 →「領収書等」</td>
+<td>インボイス制度に関するインボイス（適格請求書）</td>
+<td>販売元がAmazon.co.jp、または出品者が適格請求書発行事業者で、登録番号をAmazonに登録している</td>
+</tr>
+<tr>
+<td>領収書／購入明細書</td>
+<td>注文履歴 →「領収書等」</td>
+<td>領収書</td>
+<td>クレジットカード、携帯決済、ペイディ、PayPay、ギフトカード、ポイントなどの支払い。コンビニ払い・ATM払い・ネットバンキング払い・電子マネー払いでは、Amazonは領収書を発行しない</td>
+</tr>
+<tr>
+<td>請求書</td>
+<td>注文履歴 →「請求書を表示する」</td>
+<td>パッケージの請求書。納品書が同梱されていないときに印刷できる。メーカーに修理を依頼するときなどの、お買い上げ証明に使える</td>
+<td>公式ヘルプに条件の記載なし</td>
+</tr>
+<tr>
+<td>支払い明細書</td>
+<td>注文履歴（各注文）</td>
+<td>経費報告書に使用できる正式な適格請求書（または区分記載請求書）</td>
+<td>注文が発送されると表示される</td>
+</tr>
+</tbody>
+</table>
+<p>「請求書を表示する」で開く書類が、適格請求書にあたるかどうかは、読んだ公式ヘルプに書かれていません。公式が適格請求書として案内しているのは、「明細書／適格請求書」と、注文履歴の支払い明細書です。</p>
+<p>メニューの名前と書類の呼び名を1対1で結ぶ説明も、見つかりませんでした。経費精算に出す書類の名前をめぐる整理は、<a href="/articles/amazon-ryoushuusho-seikyuusho-shikanai/">Amazonの領収書が「請求書」しかない時</a>にあります。</p>
+<h2 id="個人アカウントで請求書を出す手順パソコン">個人アカウントで請求書を出す手順（パソコン）</h2>
+<h3 id="インボイス用明細書適格請求書">インボイス用：「明細書／適格請求書」</h3>
+<p>公式ヘルプの手順は次の4つです。</p>
+<ol>
+<li>注文履歴にアクセスする</li>
+<li>該当の注文の「領収書等」を選ぶ</li>
+<li>「明細書／適格請求書」を選ぶ</li>
+<li>ブラウザの印刷オプションを選んで印刷する</li>
+</ol>
+<p>印刷できる条件は、販売元がAmazon.co.jpであること、または販売元が出品者で、その出品者が適格請求書発行事業者であり、登録番号をAmazonに登録していることです。</p>
+<p>出品者が登録番号を発行しているかは、Amazonビジネスのビジネスアカウントを除き、出品者に直接問い合わせる必要があります。公式ヘルプは、購入前の問い合わせを勧めています。見分け方は<a href="/articles/amazon-ryoushuusho-tekikaku-seikyuusho/">Amazonのインボイス対応の見分け方</a>にあります。</p>
+<p>プライム会費の適格請求書は、注文履歴のキーワード検索に「プライム」と入力し、出てきた注文から同じ手順で印刷します。会費の領収書も含めた手順は<a href="/articles/amazon-prime-kaihi-ryoushuusho/">Amazonプライム会費の領収書・適格請求書</a>にあります。</p>
+<h3 id="パッケージの請求書請求書を表示する">パッケージの請求書：「請求書を表示する」</h3>
+<p>納品書が同梱されていないときの手順として、公式ヘルプ「納品書が同梱されていない場合」にあります。</p>
+<ol>
+<li>注文履歴に移動する</li>
+<li>ドロップダウンメニューで、適切な日付範囲を選ぶ</li>
+<li>注文を見つけて、「請求書を表示する」を選ぶ</li>
+<li>「このページを記録用に印刷する」を選ぶ（ブラウザの「印刷」ボタンでもよい）</li>
+</ol>
+<p>個人アカウントの注文では、Amazon.co.jpが販売する商品に、一部を除き納品書が同梱されません（公式ヘルプ「納品書について」）。メーカーに修理を依頼するときなどは、この請求書をお買い上げ証明として使えると案内されています。</p>
+<p>注文は、手順2の日付範囲を選んで探します。古い注文が見つからないときは、日付範囲を切り替えます。納品書の扱いは<a href="/articles/amazon-nouhinsho-douhuu-dl/">Amazonの納品書の記事</a>にまとめています。</p>
+<h3 id="領収書がほしいとき">領収書がほしいとき</h3>
+<p>「領収書等」から「領収書／購入明細書」を選びます。出品者が販売する商品の領収書には、出品者名が発行者として印刷されます。社判の捺印は、Amazon.co.jpの領収書も出品者の領収書も承っていません（公式ヘルプ「領収書の発行可否、記載内容について」）。</p>
+<p>支払い方法で出ない場合や、スマホ・プライム会費の扱いは、<a href="/articles/amazon-ryoushuusho-dashikata/">Amazonの領収書の出し方</a>にまとめています。</p>
+<h3 id="発送前は出ない支払い明細書は出荷準備に入ると変更できない">発送前は出ない。支払い明細書は、出荷準備に入ると変更できない</h3>
+<p>領収書等（領収書、適格請求書または支払い明細書）は、注文が発送されると注文履歴に表示されます。発送までは閲覧も印刷もできません。</p>
+<p>支払い明細書の請求先住所は、支払い方法に関連付けられている住所です。公式ヘルプには、アカウントサービスの支払い方法から請求先住所を変更できる、とあります。一方で、注文商品が出荷準備に入ると、支払い明細書の内容は変更できなくなります（公式ヘルプ「支払い明細書について」）。</p>
+<p>支払い方法の請求先住所を変えると、注文済みの支払い明細書にも反映されるかは、公式ヘルプに書かれていません。宛名（名前）を変える方法も、今回読んだ個人アカウントの公式ヘルプに見つかりませんでした。<a href="/articles/amazon-ryoushuusho-atena-henkou/">Amazonの領収書の宛名変更</a>を見てください。</p>
+<h2 id="ダウンロードと印刷は何が違う公式の手順はブラウザの印刷まで">「ダウンロード」と「印刷」は何が違う？公式の手順はブラウザの印刷まで</h2>
+<p>「【Q】領収書が欲しい」には、印刷およびダウンロード可能な領収書は注文履歴で表示できる、とあります。ただ、ダウンロードの手順は書かれておらず、手順として案内されているのは、書類を開いてブラウザの印刷オプションで印刷する方法です。やりたいことごとに、公式ヘルプの案内を並べます。</p>
+<table>
+<thead>
+<tr>
+<th>やりたいこと</th>
+<th>公式ヘルプの案内</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>紙にしたい</td>
+<td>書類を開き、自分でブラウザから印刷する。Amazonは、セキュリティ上の理由で領収書の印刷と郵送を承っていない</td>
+</tr>
+<tr>
+<td>PDFにしたい</td>
+<td>手順は書かれていない。印刷画面の保存先でPDFを選べる場合があるが、これはブラウザ側の機能で、端末やブラウザによって名前が違う</td>
+</tr>
+<tr>
+<td>もう一度出したい</td>
+<td>領収書は「領収書／購入明細書」のリンクから何度でも再発行できる</td>
+</tr>
+<tr>
+<td>Amazonビジネスで2回目以降に開く</td>
+<td>「領収書／購入明細書」のリンクを2回目以降に選ぶと、請求書発行日が更新され、「再発行」と表示される</td>
+</tr>
+</tbody>
+</table>
+<p>Amazonビジネスでは、2回目以降に開くと請求書発行日が更新されます。経理に出すファイルは、最初に保存したものに決めておくと混乱しません。</p>
+<p>スマホでは、開く場所で結果が変わります。</p>
+<table>
+<thead>
+<tr>
+<th>開き方</th>
+<th>印刷</th>
+<th>公式ヘルプの案内</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>パソコンのブラウザ</td>
+<td>できる</td>
+<td>上の手順のとおり</td>
+</tr>
+<tr>
+<td>スマホのブラウザ（iPhoneはSafari、AndroidはChromeアプリ）</td>
+<td>できる（一部対象外の注文あり）</td>
+<td>iOSは共有メニューのプリント、Androidは「その他」→「共有」→「印刷」</td>
+</tr>
+<tr>
+<td>Amazonショッピングアプリ</td>
+<td>できない</td>
+<td>PCサイトの注文履歴から印刷する</td>
+</tr>
+</tbody>
+</table>
+<p>スマホでPDFにする手順や、経理への提出の形、事業の書類の保存の考え方は、<a href="/articles/amazon-ryoushuusho-sumaho/">Amazonの領収書をスマホで出す方法</a>にまとめています。</p>
+<h2 id="amazonビジネスの請求書はいつから何件まで取れる">Amazonビジネスの請求書は、いつから・何件まで取れる？</h2>
+<p>Amazonビジネスのほとんどの商品には、ダウンロード可能な支払い明細書や適格請求書が付いています（公式ヘルプ「支払い明細書や適格請求書を取得する」）。取れるのは、注文が発送されてから24時間後です。</p>
+<table>
+<thead>
+<tr>
+<th>取り方</th>
+<th>場所</th>
+<th>件数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1件ずつ</td>
+<td>注文履歴 → 該当する注文詳細の横の「領収書等」リンク</td>
+<td>1件</td>
+</tr>
+<tr>
+<td>まとめて</td>
+<td>購買データの「注文履歴データ」ページ →「注文関連書類をダウンロードする」ボタン</td>
+<td>一度に最大2,000</td>
+</tr>
+<tr>
+<td>請求書払い</td>
+<td>ビジネスアカウントの設定 →「請求書情報」</td>
+<td>1つずつ、または一度に最大2,000件をZIP</td>
+</tr>
+</tbody>
+</table>
+<p>見られる範囲は役割で決まります。購買依頼者は自分の注文、グループ管理者と会計担当者はグループ内の注文、アカウント管理者はすべての注文です。1年分などの取り方は、<a href="/articles/amazon-business-ryoushuusho-matomete-hakkou/">Amazonビジネスの領収書を一括でダウンロードする方法</a>にあります。</p>
+<h3 id="適格請求書か支払い明細書か">適格請求書か、支払い明細書か</h3>
+<p>Amazonは、出品者の登録番号の有無で、適格請求書か支払い明細書を発行します。Amazon、または登録番号をAmazonに登録した出品者の商品は適格請求書、登録番号のない出品者の注文は支払い明細書です。オンラインコード版ソフトウェアなど課税対象外の商品では、適格請求書は受け取れません。</p>
+<p>Amazonビジネスのお客様の適格請求書は、発行日（商品の発送日）から10年間、Amazonに保管されます。適格請求書を確認するときは、「T3040001028447」がアマゾンジャパン合同会社の適格請求書発行事業者登録番号です（公式ヘルプ）。</p>
+<h3 id="買う前に適格請求書が出る商品を絞り込める">買う前に、適格請求書が出る商品を絞り込める</h3>
+<p>ビジネスアカウント以外では、出品者が登録番号を発行しているかを、出品者に直接問い合わせて確かめる必要があります。</p>
+<p>Amazonビジネスのビジネスアカウントに限り、検索フィルタで適格請求書の「発行対象が含まれる商品」に絞り込めます。商品詳細ページに「適格請求書の発行対象です」と表記された商品を購入すると、注文履歴から適格請求書をダウンロードできます（公式ヘルプ「インボイス（適格請求書）について」）。</p>
+<h3 id="会社名と請求先住所を整える">会社名と請求先住所を整える</h3>
+<p>公式ヘルプには、適格請求書に受取人の会社名または団体名が含まれていない場合、その書類を適格簡易請求書として使えると書かれています。</p>
+<p>Amazonは、Eメールによる適格請求書の修正に対応しています。依頼に応じて、適格請求書の会社名と請求先住所を修正しますが、PDF形式の適格請求書の再発行には対応していません。今後の注文に対して正しい適格請求書を発行するには、ビジネスアカウントの設定で詳細を更新する必要があります。宛名の考え方は<a href="/articles/amazon-ryoushuusho-atena-henkou/">Amazonの領収書の宛名変更</a>にあります。</p>
+<h3 id="請求書払いの請求書は請求書情報から取る">請求書払いの請求書は、「請求書情報」から取る</h3>
+<p>請求書払い（後払いで購入し、締め日から30日の支払期限で払う、Amazonビジネスの支払い方法）の請求書は、適格請求書として使えます。ダウンロードは、ビジネスアカウントの設定ページの「請求書情報」からです。</p>
+<p>Amazonビジネスの公式ページ「Amazonでは請求書払いが利用できますか？」には、請求書は締め日から2営業日以内に、PDF形式で、事前に設定したメールアドレス宛に送付される、とあります。「請求書情報」の画面からは、過去10年分の請求書をダウンロードできるとも書かれています。</p>
+<p>請求書は、月でまとめて1枚、または注文ごとに発行できます。締め日は5日、10日、15日、20日、25日、末日から選べます。領収書の代わりは銀行振込控です。</p>
+<p>請求書払いは招待制で、審査があります（Amazonビジネスの公式サイト）。仕組みと申込みは、<a href="/articles/amazon-seikyuusho-barai-yarikata/">Amazonビジネスの請求書払いのやり方</a>にまとめています。</p>
+<aside class="cta-box cta-box--subtle"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">Amazonビジネス</p><h3 class="cta-box__title">会社名の入った請求書をまとめて取りたいなら、Amazonビジネスの登録（無料）から</h3><p class="cta-box__body">Amazonビジネスのビジネスアカウントなら、検索フィルタで適格請求書の「発行対象が含まれる商品」に絞り込めます（ビジネスアカウント以外では、出品者への直接の問い合わせが必要です）。請求書は発送の24時間後から注文履歴で取れ、購買データからは一度に最大2,000件をダウンロードできます。請求書払いは審査のある招待制で、請求書はPDFでメールに届きます。登録は無料（公式サイトの表記）で、個人アカウントとはアカウントの切り替えで行き来できます。月に数件だけなら、個人アカウントの手順で足ります。</p><a class="cta-box__button" href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">Amazonビジネスの登録ページへ（公式）</a></aside>
+<h2 id="請求書が出ないダウンロードできないのはなぜ確認表">請求書が出ない・ダウンロードできないのはなぜ？確認表</h2>
+<p>公式ヘルプから確かめられる理由を、上から順に当てはめてください。</p>
+<table>
+<thead>
+<tr>
+<th>症状</th>
+<th>確かめること（公式ヘルプの記載）</th>
+<th>次の一手</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>買ったばかりで出ない</td>
+<td>領収書等は発送されると表示され、発送までは閲覧も印刷もできない。Amazonビジネスは発送の24時間後から</td>
+<td>発送を待つ</td>
+</tr>
+<tr>
+<td>スマホのアプリで印刷できない</td>
+<td>アプリでは領収書等を印刷できない</td>
+<td>ブラウザで開き直す。対象外の注文はPCサイトから</td>
+</tr>
+<tr>
+<td>「明細書／適格請求書」が選べない</td>
+<td>販売元がAmazon.co.jpでない場合、出品者が適格請求書発行事業者の登録番号をAmazonに登録している注文だけが対象</td>
+<td>出品者に直接問い合わせる。見分け方は<a href="/articles/amazon-ryoushuusho-tekikaku-seikyuusho/">インボイス対応の見分け方</a>へ</td>
+</tr>
+<tr>
+<td>「領収書」が出ない</td>
+<td>コンビニ払い・ATM払い・ネットバンキング払い・電子マネー払いは、Amazonでは領収書を発行しない</td>
+<td>各支払い窓口の受領書等を使う。購入明細書とインボイスは、注文履歴で確認できる</td>
+</tr>
+<tr>
+<td>「領収書／購入明細書」を選ぶと「注文の詳細」しか開かない</td>
+<td>読んだ公式ヘルプに記載なし。2025年6月ごろからの利用者の報告がある（出所は次の記事）</td>
+<td><a href="/articles/amazon-ryoushuusho-hyouji-sarenai/">表示されない・出ない時の確認順</a>へ</td>
+</tr>
+<tr>
+<td>Amazonビジネスで、他の人の注文が見えない</td>
+<td>購買依頼者は自分の注文だけ。グループ内は管理者と会計担当者、全注文はアカウント管理者</td>
+<td>役割を管理者に確かめる</td>
+</tr>
+<tr>
+<td>まとめて取る件数が多い</td>
+<td>一度にダウンロードできるのは最大2,000件</td>
+<td>期間などを分けて取る</td>
+</tr>
+<tr>
+<td>注文そのものが見つからない</td>
+<td>「請求書を表示する」の公式の手順に、注文履歴の日付範囲を選ぶ操作がある</td>
+<td>日付範囲を切り替える。個人とビジネスを切り替えて使っているなら、注文したほうのアカウントで開く</td>
+</tr>
+</tbody>
+</table>
+<p>症状ごとの確認順と、カスタマーサービスへの伝え方は、<a href="/articles/amazon-ryoushuusho-hyouji-sarenai/">Amazonの領収書が表示されない・出ない時</a>にまとめています。</p>
+<p>アカウントの切り替えは、デスクトップブラウザでは「［貴社名］のアカウント」メニューの「アカウントの切り替え」から行います（公式ヘルプ）。共有のパソコンでは、この機能を使わないよう勧められています。</p>
+<h2 id="見積書納品書請求書払いは請求書とは別の書類">見積書・納品書・請求書払いは、請求書とは別の書類</h2>
+<p>名前が似ているため、取り違えやすい書類です。</p>
+<table>
+<thead>
+<tr>
+<th>書類</th>
+<th>公式ヘルプの説明</th>
+<th>詳しくは</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>見積書（Amazonビジネス）</td>
+<td>参考見積書は注文確定手続き中に、見積書は注文確定後に購買データの注文履歴データでダウンロードする。参考見積書には、注文確定時に適用される割引が反映されず、配送料と手数料も載らない</td>
+<td><a href="/articles/amazon-business-mitsumorisho-hakkou/">Amazonの見積書の出し方</a></td>
+</tr>
+<tr>
+<td>納品書</td>
+<td>個人アカウントの注文では、Amazon.co.jpが販売する商品に、一部を除き同梱されない。納品書が同梱されていないときは、「請求書を表示する」からパッケージの請求書を印刷できる</td>
+<td><a href="/articles/amazon-nouhinsho-douhuu-dl/">Amazonの納品書の記事</a></td>
+</tr>
+<tr>
+<td>請求書払い</td>
+<td>後払いで購入し、締め日から30日の支払期限で払う、Amazonビジネスの支払い方法。請求書払いの請求書が出るのは、この支払い方法を使うとき</td>
+<td><a href="/articles/amazon-seikyuusho-barai-yarikata/">請求書払いのやり方</a></td>
+</tr>
+</tbody>
+</table>
+<p>コンビニ、ATM、インターネットバンキング、電子マネーで払うと、見積書は利用できません（公式ヘルプ）。</p>
+<h2 id="個人アカウントのままでよいamazonビジネスを検討する場面">個人アカウントのままでよい？Amazonビジネスを検討する場面</h2>
+<p>個人アカウントの手順で足りるのは、請求書が必要な注文が月に数件で、買う先が主にAmazon.co.jpか、登録番号をAmazonに登録した出品者の人です。</p>
+<p>次のどれかに当てはまるなら、Amazonビジネスを検討する場面です。</p>
+<ul>
+<li>一度に何十件もの請求書が要る。今回読んだ個人アカウントの公式ヘルプには、まとめて取る方法が見つかりませんでした（<a href="/articles/amazon-ryoushuusho-ikkatsu-download/">個人アカウントの一括ダウンロード</a>）。Amazonビジネスは一度に最大2,000件です</li>
+<li>出品者の登録の有無を、購入前に絞り込みたい。ビジネスアカウント以外では、出品者に直接問い合わせます</li>
+<li>会社名や請求先住所を整えた適格請求書が要る</li>
+<li>請求書払いで、請求書をPDFでメールに受け取りたい（審査あり）</li>
+</ul>
+<p>登録の流れは<a href="/articles/amazon-houjin-account-tsukurikata/">Amazon 法人アカウントの作り方</a>、個人アカウントとの違いは<a href="/articles/amazon-business-kojin-chigai/">Amazonビジネスと個人アカウントの違い</a>にあります。</p>
+<aside class="cta-box cta-box--subtle"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">Amazonビジネス</p><h3 class="cta-box__title">会社名の入った請求書をまとめて取りたいなら、Amazonビジネスの登録（無料）から</h3><p class="cta-box__body">Amazonビジネスのビジネスアカウントなら、検索フィルタで適格請求書の「発行対象が含まれる商品」に絞り込めます（ビジネスアカウント以外では、出品者への直接の問い合わせが必要です）。請求書は発送の24時間後から注文履歴で取れ、購買データからは一度に最大2,000件をダウンロードできます。請求書払いは審査のある招待制で、請求書はPDFでメールに届きます。登録は無料（公式サイトの表記）で、個人アカウントとはアカウントの切り替えで行き来できます。月に数件だけなら、個人アカウントの手順で足ります。</p><a class="cta-box__button" href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">Amazonビジネスの登録ページへ（公式）</a></aside>
+<h2 id="出す前のチェックリストとまとめ">出す前のチェックリストとまとめ</h2>
+<h3 id="チェックリスト">チェックリスト</h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 注文が発送済みか見た（Amazonビジネスは発送の24時間後から）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 注文したアカウント（個人かビジネスか）で注文履歴を開いた</li>
+<li class="task-list-item"><input type="checkbox" disabled> パソコンか、スマホのブラウザで開いた（アプリでは印刷できない）</li>
+<li class="task-list-item"><input type="checkbox" disabled> インボイスが要るときは、「領収書等」に「明細書／適格請求書」があるかを見た</li>
+<li class="task-list-item"><input type="checkbox" disabled> 選べないときは、販売元と、出品者の登録番号の有無を確かめた</li>
+<li class="task-list-item"><input type="checkbox" disabled> コンビニ払いなどの注文は、領収書の代わりの受領書等を用意した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 提出先が求める書類の名前と形（PDFか紙か）を聞いた</li>
+<li class="task-list-item"><input type="checkbox" disabled> Amazonビジネスは、自分の役割と、一度に2,000件までの上限を確かめた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 経理に出すファイルを1つに決めて、消さずに保存した</li>
+</ul>
+<h3 id="まとめ">まとめ</h3>
+<p>Amazonの請求書は、個人アカウントでは注文履歴から出します。インボイスが要るときは「領収書等」の「明細書／適格請求書」、パッケージの請求書は「請求書を表示する」です。どちらも公式ヘルプの手順はブラウザの印刷までで、PDFにする操作はブラウザ側の機能になります。</p>
+<p>「請求書を表示する」の書類が適格請求書にあたるかは、公式ヘルプに書かれていません。Amazonビジネスは、発送の24時間後から注文履歴で取れ、購買データから一度に最大2,000件をダウンロードできます。</p>
+<p>税務の個別の判断は、税理士または税務署に相談してください。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Amazonの請求書は、どこから出せますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>個人アカウントでは注文履歴から出します。インボイス（適格請求書）が要るときは、該当の注文の「領収書等」から「明細書／適格請求書」を選び、ブラウザの印刷オプションで印刷します。販売元がAmazon.co.jpか、登録番号をAmazonに登録した出品者の注文が対象です。パッケージの請求書は、日付範囲を選んで注文を探し、「請求書を表示する」から開きます。Amazonビジネスは、発送の24時間後から注文履歴の「領収書等」で取れます（公式ヘルプ、2026年11月8日確認）。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Amazonの請求書をPDFでダウンロードするには、どうしますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>個人アカウントの公式ヘルプには、ダウンロードボタンの手順が見つかりませんでした。案内されているのは、書類を開いてブラウザの印刷オプションで印刷する方法です。PDFで残すなら、印刷画面の保存先でPDFを選べるかを確かめます。これはブラウザ側の機能で、Amazonの案内ではありません。Amazonビジネスは、購買データの注文履歴データから一度に最大2,000件をダウンロードできます。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Amazonの請求書が出ない・ダウンロードできないのは、なぜですか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式ヘルプから確かめられる主な理由は4つです。まだ発送されていない（発送までは閲覧も印刷もできず、Amazonビジネスは発送の24時間後から）、アプリで操作している（アプリでは印刷できない）、「明細書／適格請求書」の条件に合わない注文（出品者が登録番号をAmazonに登録していない）、支払い方法がコンビニ払いなどで領収書が出ない、です。Amazonビジネスでは、役割による見られる範囲の違いも関わります。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Amazonビジネスの請求書は、何件までまとめて取れますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>購買データの「注文履歴データ」ページで「注文関連書類をダウンロードする」ボタンを使うと、一度に最大2,000の請求書をダウンロードできます。請求書払いを使っている場合は、「請求書情報」から請求書を1つずつ、または一度に最大2,000件をZIPでダウンロードできます。見られる範囲は役割で決まり、購買依頼者は自分の注文だけです。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Amazonの見積書は、請求書の代わりになりますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>別の書類です。Amazonビジネスの見積書は、注文確定手続き中にダウンロードする参考見積書と、注文確定後に購買データから取る見積書の2種類で、日本語ではどちらも「見積書」という題名になります。参考見積書には、注文確定時に適用される割引が反映されません。今回読んだ公式ヘルプは、見積書を請求書や領収書の代わりとは案内していないため、経理に出す書類の名前は、提出先に確かめてください。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=GRPUHK7RCNVRBURD" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「【Amazon】領収書を印刷したい場合」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=GKUNKPD8Y7BJ37FQ" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「領収書等が発行されるタイミングについて」（ページ題は「領収書のダウンロードと印刷方法」）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=GFF6QTXBZFE7PAKY" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「【Amazon】領収書の発行可否、記載内容について」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=TgeQoI2TC9jEOh0mQf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「インボイス（適格請求書）について」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=G4M33F6BWMYDTRZU" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「支払い明細書について」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=TZQR9CIMrzLCGPuruQ" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「【Q】領収書が欲しい」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=GBJYRA66YG65QM9X" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「納品書が同梱されていない場合」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=GEYBPBVDGFDPGP6T" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「納品書について」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=202119460" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「支払い明細書や適格請求書を取得する」（Amazonビジネス）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=TqfyqCFhWbzAUh2Th5" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「Amazonビジネスの適格請求書の発行について」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=TRpfnPQH98IDU2kkAN" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「適格請求書の修正」（Amazonビジネス）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=GB2ABKD25MGSPE6Q" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「請求書を表示、ダウンロード、レポートを作成する」（Amazonビジネス）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=202114920" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「購入見積書をダウンロード」（Amazonビジネス）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=TCthycvaJ6zmE5NlON" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazon公式ヘルプ「Amazonのビジネスアカウントと個人アカウントを切り替える」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://business.amazon.co.jp/ja/solutions/payment-options/pay-by-invoice" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス「請求書払い」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://business.amazon.co.jp/ja/blog/pbi_overall" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス「Amazonでは請求書払いが利用できますか？」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://business.amazon.co.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス公式サイト</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/amazon-business-mitsumorisho-hakkou/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1oukbk0-g" x1="0" y1="0" x2="1" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1oukbk0-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1oukbk0-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1oukbk0-p)" data-astro-cid-yuatfsof></rect><circle cx="366" cy="57" r="153" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Amazon</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>見積書</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>出し方</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--amazon-business">Amazonビジネス実務</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>Amazonの見積書の出し方｜カートからPDFで保存する手順（Amazonビジネス・登録無料）</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>Amazonで見積書が必要なときは、登録無料のAmazonビジネスを使います。注文前はカートから参考見積書、注文後は注文履歴から見積書をPDFで保存でき、稟議や経費精算に使えます。個人アカウントしかない場合の考え方と、配送料が載らない・ダウンロードできないときの注意点もまとめました。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-06T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月6日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約12分</p></div></a><a class="card article-card" href="/articles/kojin-jigyou-kaigyoutodoke-nashi-amazon-business-toroku/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1ptehj0-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1ptehj0-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1ptehj0-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1ptehj0-p)" data-astro-cid-yuatfsof></rect><circle cx="363" cy="90" r="176" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>個人事業主</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>開業届なし</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Amazonビジネス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--amazon-business">Amazonビジネス実務</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>Amazonビジネスの登録に必要書類は？開業届なしの個人事業主が用意するもの一覧</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>個人事業主がAmazonビジネスに登録するときは、確認書類を1点提出します。開業届がなくても、過去2年以内の確定申告書B・収支内訳書、インボイスの登録通知書などで代わりになります。公式ヘルプの書類一覧と提出時の注意点、登録手順、屋号の扱いを整理しました。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-06T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月6日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/amazon-business/" data-astro-cid-sgg5joot>Amazonビジネス実務の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/business-prime/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 L4 4"></path><path d="M4 20 L21 20"></path><path d="M7 20 L7 14"></path><path d="M11 20 L11 10"></path><path d="M15 20 L15 15"></path><path d="M19 20 L19 7"></path><path d="M5 16 L20 8"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>Business Prime 損益分岐計算</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>注文回数と送料を入れると、プライムビジネス（旧Businessプライム）の元が取れる回数がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/amazon-business-check/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 9 l2 2 l3.5 -3.5"></path><path d="M8 15 h8"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>Amazonビジネスが必要か判定</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>5つの質問に答えるだけで、Amazonビジネスが「要る」「今は要らない」「どちらでも」のどれかがわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

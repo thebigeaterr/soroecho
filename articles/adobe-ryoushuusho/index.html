@@ -1,0 +1,337 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Adobeの領収書・請求書の取り方｜領収書は2026年7月以降、インボイス番号は2025年10月に変更 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="Adobe（Creative Cloud・Acrobat）の領収書は、アドビアカウントの注文ページで請求書PDFと一緒に取ります。領収書は2026年7月以降の購入分から、履歴は3年分。2025年10月3日に発行元が日本法人へ変わったインボイス番号と、宛名の確認点を公式ヘルプで整理します。"><link rel="canonical" href="https://soroecho.com/articles/adobe-ryoushuusho/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="Adobeの領収書・請求書の取り方｜領収書は2026年7月以降、インボイス番号は2025年10月に変更 | そろえ帳"><meta property="og:description" content="Adobe（Creative Cloud・Acrobat）の領収書は、アドビアカウントの注文ページで請求書PDFと一緒に取ります。領収書は2026年7月以降の購入分から、履歴は3年分。2025年10月3日に発行元が日本法人へ変わったインボイス番号と、宛名の確認点を公式ヘルプで整理します。"><meta property="og:url" content="https://soroecho.com/articles/adobe-ryoushuusho/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/adobe-ryoushuusho.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Adobeの領収書・請求書の取り方｜領収書は2026年7月以降、インボイス番号は2025年10月に変更 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Adobeの領収書・請求書の取り方｜領収書は2026年7月以降、インボイス番号は2025年10月に変更 | そろえ帳"><meta name="twitter:description" content="Adobe（Creative Cloud・Acrobat）の領収書は、アドビアカウントの注文ページで請求書PDFと一緒に取ります。領収書は2026年7月以降の購入分から、履歴は3年分。2025年10月3日に発行元が日本法人へ変わったインボイス番号と、宛名の確認点を公式ヘルプで整理します。"><meta name="twitter:image" content="https://soroecho.com/og/adobe-ryoushuusho.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"Adobeの領収書・請求書の取り方｜領収書は2026年7月以降、インボイス番号は2025年10月に変更","item":"https://soroecho.com/articles/adobe-ryoushuusho/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Adobeの領収書・請求書の取り方｜領収書は2026年7月以降、インボイス番号は2025年10月に変更","description":"Adobe（Creative Cloud・Acrobat）の領収書は、アドビアカウントの注文ページで請求書PDFと一緒に取ります。領収書は2026年7月以降の購入分から、履歴は3年分。2025年10月3日に発行元が日本法人へ変わったインボイス番号と、宛名の確認点を公式ヘルプで整理します。","url":"https://soroecho.com/articles/adobe-ryoushuusho/","datePublished":"2026-11-14T00:00:00.000Z","dateModified":"2026-11-14T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/adobe-ryoushuusho/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Adobeの領収書はどこでダウンロードできますか？","acceptedAnswer":{"@type":"Answer","text":"アドビの公式ヘルプ（2026年11月8日確認）では、アドビアカウントにログインし、「注文と請求書・領収書」ウィンドウでプランまたは製品の「請求書を表示」を選びます。「請求書と請求履歴」ウィンドウで、PDFの表示・ダウンロード・メール送信のアイコンと、「領収書を表示」アイコンが使えます。領収書は2026年7月以降のみ利用可能で、それ以前の購入はアドビカスタマーサポートに問い合わせる、と書かれています。"}},{"@type":"Question","name":"Adobeの領収書が出ず、請求書しかありません。経費の書類になりますか？","acceptedAnswer":{"@type":"Answer","text":"領収書の表示は、公式ヘルプでは2026年7月以降のみです。グループ版のヘルプは、領収書は支払証明であり税務請求書としては使えないので、税務目的では請求書（インボイス）を使うよう案内しています。国税庁は、所定の事項が載っていれば書類の名称を問わずインボイスになる、としています。提出先が求める書類は、会社の経理や税理士に確かめてください。"}},{"@type":"Question","name":"Adobeの請求書の宛名や会社名は変えられますか？","acceptedAnswer":{"@type":"Answer","text":"現行の個人版ヘルプには、請求書の宛名を変える手順が見つかりませんでした。プロフィールには会社名を追加・変更する欄があると公式にありますが、それが請求書の宛名になるとは書かれていません。支払い情報の更新は既存および新規のすべての請求書に適用されると案内されていますが、宛名が含まれるかも書かれていません。会社名だけにしたい場合の可否も、公式ヘルプには見つかりませんでした。変えたいときは、アドビのサポートに注文番号と希望の宛名を伝えて、既存の請求書にも反映できるかを聞いてください。"}},{"@type":"Question","name":"Adobeのインボイスの登録番号はいくつですか？","acceptedAnswer":{"@type":"Answer","text":"アドビの公式ヘルプでは、2025年10月3日以降の請求書はアドビ株式会社（Adobe KK）の発行で、登録番号はT7010701011841です。それ以前の請求書は、Adobe Systems Software Ireland Limited（T3700150007275）の発行です。国税庁の公表サイトでは、後者の番号に失効年月日（令和7年12月1日）が表示されます（2026年11月8日確認）。請求書の発行日と公表サイトの登録期間を照らして確かめてください。"}},{"@type":"Question","name":"Adobeの請求書は、いつまで取れますか？","acceptedAnswer":{"@type":"Answer","text":"個人版は、アドビアカウントに最大3年間の請求書履歴が保存される、と公式ヘルプにあります。グループ版は、請求書は契約がアクティブな間、利用できます。プランを解約または変更するとアクセスできなくなります。国税庁の一問一答では、個人事業者の請求書は5年、仕入税額控除の要件として保存する請求書等は7年なので、取った時点でPDFを自分で保存しておきます。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>Adobeの領収書・請求書の取り方｜領収書は2026年7月以降、インボイス番号は2025年10月に変更</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec6vwjti-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec6vwjti-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ec6vwjti-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec6vwjti-p)" data-astro-cid-yuatfsof></rect><circle cx="339" cy="68" r="124" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>adobe</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>領収書</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>Adobeの領収書・請求書の取り方｜領収書は2026年7月以降、インボイス番号は2025年10月に変更</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-11-14T00:00:00.000Z" data-astro-cid-sgg5joot>2026年11月14日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約12分</p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論adobeの領収書は注文と請求書領収書から取る経費の書類は請求書pdf履歴は3年分だけ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：Adobeの領収書は「注文と請求書・領収書」から取る。経費の書類は請求書PDF、履歴は3年分だけ</a></li><li data-astro-cid-sgg5joot><a href="#契約の入り口で書類の取り先が変わる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>契約の入り口で、書類の取り先が変わる</a></li><li data-astro-cid-sgg5joot><a href="#個人版請求書pdfと領収書の取り方" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>個人版：請求書PDFと領収書の取り方</a></li><li data-astro-cid-sgg5joot><a href="#領収書は2026年7月以降だけ請求書とどう使い分ける" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>領収書は2026年7月以降だけ。請求書とどう使い分ける？</a></li><li data-astro-cid-sgg5joot><a href="#年間プランの請求はどう見える月々払い一括払いと見られる期間" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>年間プランの請求はどう見える？月々払い・一括払いと、見られる期間</a></li><li data-astro-cid-sgg5joot><a href="#宛名会社名請求先住所は変えられる公式で分かること分からないこと" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>宛名・会社名・請求先住所は変えられる？公式で分かること・分からないこと</a></li><li data-astro-cid-sgg5joot><a href="#adobeのインボイス番号は2025年10月3日で発行元が変わった" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>Adobeのインボイス番号は？2025年10月3日で発行元が変わった</a></li><li data-astro-cid-sgg5joot><a href="#取った書類の保存年内にpdfで探せる形で" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>取った書類の保存：年内にPDFで、探せる形で</a></li><li data-astro-cid-sgg5joot><a href="#勘定科目と計上のタイミング" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>勘定科目と計上のタイミング</a></li><li data-astro-cid-sgg5joot><a href="#チェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>10</span>チェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#次の一歩記帳の手間をどう減らすか" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>11</span>次の一歩：記帳の手間をどう減らすか</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論adobeの領収書は注文と請求書領収書から取る経費の書類は請求書pdf履歴は3年分だけ">結論：Adobeの領収書は「注文と請求書・領収書」から取る。経費の書類は請求書PDF、履歴は3年分だけ</h2>
+<p>アドビの公式ヘルプ（2026年11月8日確認）によると、Creative Cloud や Acrobat などの個人版サブスクの書類は、アドビアカウントの「注文と請求書・領収書」ページ（account.adobe.com/orders）で取ります。請求書は PDF を表示・ダウンロード・メール送信でき、領収書は「領収書を表示」アイコンで見ます。</p>
+<p>ただし、領収書は2026年7月以降のみ利用できます。それ以前の購入は、アドビカスタマーサポートへの問い合わせです。経費の書類として残すなら、まず請求書PDFを保存します。</p>
+<p>履歴は最大3年分しか残りません。国税庁の一問一答では、個人事業者の請求書は5年、仕入税額控除の要件として保存する請求書等は7年なので、取った時点でPDFを自分で保存します。</p>
+<table>
+<thead>
+<tr>
+<th>知りたいこと</th>
+<th>公式に書かれていること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>どこで取るか</td>
+<td>個人版は、アドビアカウントの「注文と請求書・領収書」。グループ版は Admin Console（契約所有者のみ）</td>
+</tr>
+<tr>
+<td>領収書は出るか</td>
+<td>個人版は2026年7月以降のみ。グループ版は、日本を拠点とするアカウントでは利用できない</td>
+</tr>
+<tr>
+<td>何年分見られるか</td>
+<td>個人版は最大3年分。メールで届く月次の自動請求書はない</td>
+</tr>
+<tr>
+<td>宛名は変えられるか</td>
+<td>現行の個人版ヘルプに、宛名の変更手順は書かれていない（後述）</td>
+</tr>
+<tr>
+<td>発行元とインボイス番号</td>
+<td>2025年10月3日以降の請求書は、日本法人のアドビ株式会社が発行（T7010701011841）。それ以前は、アイルランドの Adobe Systems Software Ireland Limited</td>
+</tr>
+</tbody>
+</table>
+<p>画面の名称や条件は変わることがあります。この記事は、2026年11月8日に読んだ公式ページと国税庁の資料に基づきます。税の個別の判断は、税理士か税務署に確認してください。</p>
+<h2 id="契約の入り口で書類の取り先が変わる">契約の入り口で、書類の取り先が変わる</h2>
+<table>
+<thead>
+<tr>
+<th>契約の入り口</th>
+<th>書類の取り先</th>
+<th>公式に書かれていること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>個人版（adobe.com で購入）</td>
+<td>アドビアカウントの「注文と請求書・領収書」</td>
+<td>Creative Cloud、Acrobat、その他のアドビ製品の請求書を取れる</td>
+</tr>
+<tr>
+<td>グループ版（adobe.com で購入）</td>
+<td>Admin Console の「アカウント」にある請求履歴</td>
+<td>請求書を見られるのは契約所有者だけ</td>
+</tr>
+<tr>
+<td>販売店（リセラー）経由のグループ版</td>
+<td>購入した販売店</td>
+<td>請求書と課金情報は、リセラーに問い合わせる</td>
+</tr>
+<tr>
+<td>Apple App Store・Google Play</td>
+<td>元のストア</td>
+<td>支払いは購入したストアで管理する。書類の取り方は、読んだ公式ヘルプに見つからなかった（<a href="/articles/apple-ryoushuusho/">Apple の領収書</a>・<a href="/articles/google-ryoushuusho/">Google の領収書</a>の記事も参照）</td>
+</tr>
+</tbody>
+</table>
+<p>振込で払う場合、銀行振込と請求書払いは個人版が使えず、グループ版だけです（支払い方法の一覧、2026年10月5日更新）。銀行振込は年間プラン（一括払い）のみ、請求書払いは電話注文のみです。</p>
+<h2 id="個人版請求書pdfと領収書の取り方">個人版：請求書PDFと領収書の取り方</h2>
+<p>公式ヘルプの手順は次のとおりです。</p>
+<ol>
+<li>アドビアカウント（account.adobe.com/orders）にログインします。</li>
+<li>「注文と請求書・領収書」ウィンドウで、プランまたは製品の「請求書を表示」を選びます。</li>
+<li>「すべての請求書を表示」を選ぶと、アドビの購入の請求書がすべて表示されます。</li>
+<li>「請求書と請求履歴」ウィンドウで、アイコンを選びます。
+<ul>
+<li>PDFを表示：ブラウザーで請求書を開く</li>
+<li>PDFをダウンロード：端末に保存する</li>
+<li>PDFをメール送信：自分のメールアドレスに送る</li>
+<li>領収書を表示：サブスクリプションの領収書を見る</li>
+</ul>
+</li>
+<li>特定の購入は、検索バーに注文番号を入れて探せます。</li>
+</ol>
+<p>見つからないときは、次を確かめます。</p>
+<table>
+<thead>
+<tr>
+<th>症状</th>
+<th>確かめること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>請求書の数が足りない</td>
+<td>各サブスクリプションは個別に請求される、と公式にあります。Acrobat Pro や Adobe Stock を別のプランで使っていれば、その請求書も別に探します</td>
+</tr>
+<tr>
+<td>Adobe Stock の購入</td>
+<td>Stock の FAQ（2026年3月27日更新）に、新規ユーザーの初回購入では領収書がメールで届くとあります。2回目以降やクレジットパックの取り方は、読んだ公式ヘルプに見つかりませんでした</td>
+</tr>
+<tr>
+<td>買ったはずの請求が出ない</td>
+<td>別のメールアドレスのアカウントで買っていないか。購入に使ったアカウントでログインします</td>
+</tr>
+<tr>
+<td>支払った直後で出てこない</td>
+<td>グループ版のヘルプには、支払い後に請求履歴へ表示されるまで最大24時間かかる場合がある、とあります。個人版の請求書のページには、表示されるまでの時間の説明は見つかりませんでした</td>
+</tr>
+<tr>
+<td>引き落としの正体が分からない</td>
+<td>公式の請求確認ツール（Charge Finder）は、日本では利用できません。請求履歴を見て、分からなければサポートへ</td>
+</tr>
+</tbody>
+</table>
+<h2 id="領収書は2026年7月以降だけ請求書とどう使い分ける">領収書は2026年7月以降だけ。請求書とどう使い分ける？</h2>
+<p>個人版のヘルプには、次のメモがあります。「領収書は2026年7月以降のみ利用可能です。それ以前の購入については、アドビカスタマーサポートにお問い合わせください。」</p>
+<p>つまり、「領収書を表示」アイコンで見られるのは、2026年7月以降の購入分です。それ以前の分は、請求書PDFが手元の書類になります。</p>
+<p>請求書と領収書の役割について、グループ版のヘルプは次のように書いています。</p>
+<ul>
+<li>領収書は、支払いを受け取ったことを確認するもので、支払証明として使える</li>
+<li>領収書は支払証明であり、税務請求書として使用することはできない。税務目的では、請求履歴のインボイスを使う</li>
+</ul>
+<p>個人版のページに同じ記述は見つかりませんでした。この記事では、経費の書類は請求書PDFを基本にし、領収書は支払い済みの確認として併せて保存する、と整理します。</p>
+<p>国税庁は、所定の事項が記載された書類なら、請求書に限らず、領収書や納品書など名称を問わずインボイスになる、としています。領収書の表示に所定の事項が載るかは、アドビの公式ヘルプに書かれていません。手元の書類で確かめ、提出先（会社の経理、税理士）が求める書類も聞いておきます。</p>
+<h2 id="年間プランの請求はどう見える月々払い一括払いと見られる期間">年間プランの請求はどう見える？月々払い・一括払いと、見られる期間</h2>
+<p>アドビの購入ガイド（2024年9月6日更新）は、Creative Cloud の契約を3つに分けています。</p>
+<table>
+<thead>
+<tr>
+<th>契約</th>
+<th>公式の説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>月々プラン月々払い（個人版のみ）</td>
+<td>1か月ごとにお支払いと契約更新を行う</td>
+</tr>
+<tr>
+<td>年間プラン月々払い</td>
+<td>1年間の契約で、契約したタイミングから1か月ごとに請求が発生する</td>
+</tr>
+<tr>
+<td>年間プラン一括払い</td>
+<td>年間プランの価格を、1年分まとめて前払いする</td>
+</tr>
+</tbody>
+</table>
+<p>年間プラン月々払いの公式の図（6月15日に契約した例）では、請求日は6/15、7/15、…、5/15の12回です。1回目は6/15〜7/14までの利用料金分、12回目は5/15〜6/14までの利用料金分で、契約更新日は6/15です。</p>
+<p>請求書が1回の請求ごとに1通出るのか、一覧にどう並ぶのかは、読んだ公式ヘルプに書かれていません。自分のアカウントの「請求書と請求履歴」で数えてください。</p>
+<p>アドビの画面で見られるのは3年で、国税庁の保存期間より短くなっています。</p>
+<table>
+<thead>
+<tr>
+<th>区分</th>
+<th>国税庁の一問一答（令和8年7月）の保存期間</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>個人事業者の請求書・納品書・送り状など（青色申告・白色申告とも）</td>
+<td>5年</td>
+</tr>
+<tr>
+<td>個人事業者（青色申告）の領収証・預金通帳など</td>
+<td>7年。前々年分の事業所得と不動産所得の金額が300万円以下の方は5年</td>
+</tr>
+<tr>
+<td>消費税の課税事業者が、仕入税額控除の要件として保存する請求書等</td>
+<td>7年</td>
+</tr>
+<tr>
+<td>法人の注文書・契約書・領収書など</td>
+<td>7年</td>
+</tr>
+</tbody>
+</table>
+<p>解約や契約の変更の前にも、取っておきます。グループ版は、解約または変更すると請求書にアクセスできなくなると、公式の FAQ にあります。個人版は、解約後に請求書を取れるかが、読んだ公式ヘルプに書かれていません。</p>
+<h2 id="宛名会社名請求先住所は変えられる公式で分かること分からないこと">宛名・会社名・請求先住所は変えられる？公式で分かること・分からないこと</h2>
+<p>現行の個人版ヘルプ（請求書のページは2026年9月8日更新）には、請求書の宛名や会社名を変える手順は書かれていません。会社名だけを宛名にできるか（個人名を併記しない形にできるか）も、公式ヘルプには見つかりませんでした。国税庁がインボイスの記載事項に挙げる「インボイスの交付先である相手方の氏名または名称」が、宛名にあたります。関連する公式の記述は、次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>書かれていること</th>
+<th>書かれていないこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>プロフィールの会社名</td>
+<td>アカウントページの「公開プロフィール」で、プロフィール名・スクリーン名・会社名を追加または変更できる（2026年3月31日更新）</td>
+<td>その会社名が請求書の宛名になるか</td>
+</tr>
+<tr>
+<td>支払い情報・請求先住所の更新</td>
+<td>「プランと支払い」の「支払い方法を変更」から、カード番号や有効期限などを更新できる。更新は既存および新規のすべての請求書に自動的に適用される（2026年10月2日更新）。請求先住所の更新も、アドビアカウントでできるとされている（「課金について理解する」、2026年6月10日更新）</td>
+<td>請求先住所の手順。宛名が、その更新に含まれるか</td>
+</tr>
+<tr>
+<td>グループ版の請求先</td>
+<td>契約所有者だけが、請求先住所や税務情報を含む支払詳細を変更できる。更新は既存およびこれからのすべての請求書に使われる。法人カードは、カード所有者の名前と請求先住所を使う（2026年8月14日更新）</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>進め方は、次の順が現実的です。</p>
+<ol>
+<li>最新の請求書PDFで、宛名がどう表示されているかを見る（個人名のままで足りるかは、提出先や税理士に聞く）</li>
+<li>変えたいときは、アドビのサポートに、注文番号と希望の宛名を伝えて、既存の請求書にも反映できるかを聞く（個人版の「アカウントと支払い」は電話とチャットの案内あり）</li>
+<li>グループ版で請求書に追加の記載が要るときは、契約管理者が案内ページのメール窓口（<a href="mailto:jpinvreq@adobe.com">jpinvreq@adobe.com</a>）に依頼する。ページは2021年4月28日更新で、返信は3営業日が目安</li>
+</ol>
+<h2 id="adobeのインボイス番号は2025年10月3日で発行元が変わった">Adobeのインボイス番号は？2025年10月3日で発行元が変わった</h2>
+<p>アドビの公式ヘルプ（2026年1月28日更新）は、2025年10月3日から、日本のお客様との取引をアドビ株式会社（Adobe KK）を通じて行っている、と案内しています。</p>
+<table>
+<thead>
+<tr>
+<th>請求書の発行日</th>
+<th>発行元</th>
+<th>登録番号</th>
+<th>国税庁の公表サイトの表示（2026年11月8日確認）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2025年10月3日より前</td>
+<td>Adobe Systems Software Ireland Limited</td>
+<td>T3700150007275</td>
+<td>登録年月日 令和5年10月1日、失効年月日 令和7年12月1日</td>
+</tr>
+<tr>
+<td>2025年10月3日以降</td>
+<td>アドビ株式会社（Adobe KK）</td>
+<td>T7010701011841</td>
+<td>登録年月日 令和5年10月1日</td>
+</tr>
+</tbody>
+</table>
+<p>アドビのヘルプには、ほかに、価格（税抜）はこの変更で変わらないこと、アドビ株式会社から直接発行される請求書にはすべて消費税が適用されることが書かれています。</p>
+<p>古い番号を国税庁の公表サイトで検索すると、失効年月日が出ます。公表サイトは、登録が取り消された場合や効力を失った場合に、その年月日を公表します（国税庁Q&amp;A 問19）。契約が2025年10月をまたいでいれば、請求書は10月2日までと3日以降で、発行元と番号が分かれます。</p>
+<p>古い請求書は、発行日が公表サイトの登録年月日と失効年月日のあいだにあるかを見ます。その請求書で仕入税額控除ができるかは、個別の判断です。税理士か税務署に確認してください。国外の事業者が発行していた時期の請求書の見方は、<a href="/articles/kaigai-saas-shouhizei-invoice/">海外SaaSの消費税とインボイス</a>に整理しています。</p>
+<p>手元の請求書では、国税庁が挙げる6項目（交付先の氏名または名称、売手の氏名または名称と登録番号、取引年月日、取引内容、10％・8％それぞれの対価の総額と適用税率、10％・8％それぞれの消費税額等）が載っているかを見ます。アドビの公式ヘルプには、請求書の記載項目を一覧にしたページは見つかりませんでした。</p>
+<p>簡易課税制度や2割特例・3割特例を使う場合、消費税の納付税額の計算では、インボイスの入手や保存は必要ありません。ただし国税庁は、所得税等の観点では、これまでどおり領収書や請求書などの書類の保存が必要、としています。自分の登録については、<a href="/articles/invoice-touroku-yagou/">インボイス登録と屋号</a>で整理しています。</p>
+<h2 id="取った書類の保存年内にpdfで探せる形で">取った書類の保存：年内にPDFで、探せる形で</h2>
+<p>国税庁の一問一答（令和8年7月）から、アドビの請求書に関わる点を挙げます。</p>
+<ul>
+<li>領収書等のデータがインターネット上で確認できるようになった時点が、授受のタイミングと考えられています。ダウンロードしなければ保存義務が生じない、というものではなく、まとめてダウンロードする場合も、その取引の日が属する年分の中に保存します（問44）</li>
+<li>ECサイト上でいつでも確認できる場合は、ダウンロードして保存していなくても差し支えない取扱いがあります。ただしそれは、サイト側が真実性の確保などの要件を満たしている場合の取扱いで、保存期間が満了する前に確認できなくなるなら、その前にダウンロードして保存します（問45）</li>
+</ul>
+<p>アドビの画面がこの取扱いにあたるかは、国税庁の資料から判断できませんでした。見られる期間が3年なので、どちらにしても、ダウンロードして保存します。</p>
+<p>個人事業主のPDF請求書の保存例も、一問一答にあります（問19）。ファイル名に規則性をもって内容を表示し（国税庁の例は「20210131_㈱霞商店_110000」）、「取引の相手先」や「各月」など任意のフォルダに入れる方法です。アドビなら「請求日_アドビ_請求書の金額」の形に読み替えられます。</p>
+<p>基準期間（通常は2年前）の売上高が5,000万円以下で、税務職員のダウンロードの求めに応じられるようにしていれば、検索機能の確保は不要とされています。詳しい要件は、<a href="/articles/ryoushuusho-hozon-e-bunsho-taiou/">領収書の電子保存への対応</a>にまとめています。</p>
+<h2 id="勘定科目と計上のタイミング">勘定科目と計上のタイミング</h2>
+<p>国税庁の確定申告書等作成コーナーの必要経費の一覧（租税公課から雑費まで）に、ソフトウェアのサブスクリプションという名前の科目は見つかりませんでした。読んだ範囲で当てはまりうる説明は、通信費（事業用として使用した電話料、切手代、電報料など）、消耗品費（帳簿、文房具、用紙、包装紙、ガソリンなどの消耗品購入費）、雑費（事業上の費用で他の経費に当てはまらない経費）です。</p>
+<p>どれにするかは国税庁の案内から断定できないので、使い方に合わせて決め、迷えば税理士か税務署に確認してください。事業と私用の按分は、<a href="/articles/keihi-naru-mono-naranai-mono/">経費になるもの・ならないもの</a>にあります。</p>
+<p>年間プラン（一括払い）を年末近くに買うと、費用にする年も論点になります。個人事業主の場合、所得税基本通達37-30の2は、前払費用（一定の契約に基づき継続的に役務の提供を受けるために支出した費用のうち、その年12月31日にまだ提供を受けていない役務に対応するもの）の額は、その年分の必要経費に算入されないのが原則としています。</p>
+<p>ただし、支払った日から1年以内に提供を受ける役務に係るものを、継続して支払った日の属する年分の必要経費に算入しているときは、これを認める、としています。アドビの年間プランがあたるかは、個別の判断です。税理士か税務署に確認してください。</p>
+<h2 id="チェックリスト">チェックリスト</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> account.adobe.com/orders で、プランごとに請求書PDFをダウンロードした</li>
+<li class="task-list-item"><input type="checkbox" disabled> 領収書が要るかを提出先に確かめた（表示できるのは2026年7月以降の購入分）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 請求書の宛名・発行元・登録番号・消費税額を見た（2025年10月2日までは旧発行元の番号）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 年内にPDFを保存し、日付・金額・取引先で探せるようにした</li>
+<li class="task-list-item"><input type="checkbox" disabled> 解約や契約変更の前に、請求書をダウンロードした</li>
+</ul>
+<h2 id="次の一歩記帳の手間をどう減らすか">次の一歩：記帳の手間をどう減らすか</h2>
+<p>請求書PDFが取れたら、あとは帳簿への記録です。月々払いのプランは、請求が毎月発生します。自分で帳簿をつけて確定申告する人は、取引データを取り込める会計ソフトを使う方法もあります。</p>
+<aside class="cta-box"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">弥生株式会社</p><h3 class="cta-box__title">弥生シリーズ（やよいの青色申告 オンライン など）</h3><p class="cta-box__body">会計・確定申告のクラウドソフト（やよいの青色申告 オンラインなど）。</p><a class="cta-box__button" href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E9T4M2+35XE+5ZEMP" data-offer="yayoi" rel="sponsored nofollow noopener" target="_blank">弥生シリーズ（やよいの青色申告 オンライン など）の公式サイトへ</a></aside>
+<p><a href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+E9T4M2+35XE+5ZEMP" rel="sponsored nofollow noopener" target="_blank">やよいの青色申告 オンラインの公式ページを見る</a></p>
+<p>会計ソフトの比べ方は<a href="/articles/kaikei-software-kojin-jigyou-hikaku/">会計ソフト 個人事業主 比較</a>に、確定申告の全体の流れは<a href="/articles/kojin-jigyou-kakutei-shinkoku-nagare/">個人事業主の確定申告の流れ</a>にあります。</p>
+<p>他のサービスの領収書は、<a href="/articles/canva-ryoushuusho-invoice/">Canvaの領収書とインボイス</a>、<a href="/articles/chatgpt-ryoushuusho-invoice/">ChatGPTの領収書とインボイス</a>、<a href="/articles/microsoft365-ryoushuusho/">Microsoft 365の領収書</a>にまとめています。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Adobeの領収書はどこでダウンロードできますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>アドビの公式ヘルプ（2026年11月8日確認）では、アドビアカウントにログインし、「注文と請求書・領収書」ウィンドウでプランまたは製品の「請求書を表示」を選びます。「請求書と請求履歴」ウィンドウで、PDFの表示・ダウンロード・メール送信のアイコンと、「領収書を表示」アイコンが使えます。領収書は2026年7月以降のみ利用可能で、それ以前の購入はアドビカスタマーサポートに問い合わせる、と書かれています。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Adobeの領収書が出ず、請求書しかありません。経費の書類になりますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>領収書の表示は、公式ヘルプでは2026年7月以降のみです。グループ版のヘルプは、領収書は支払証明であり税務請求書としては使えないので、税務目的では請求書（インボイス）を使うよう案内しています。国税庁は、所定の事項が載っていれば書類の名称を問わずインボイスになる、としています。提出先が求める書類は、会社の経理や税理士に確かめてください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Adobeの請求書の宛名や会社名は変えられますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>現行の個人版ヘルプには、請求書の宛名を変える手順が見つかりませんでした。プロフィールには会社名を追加・変更する欄があると公式にありますが、それが請求書の宛名になるとは書かれていません。支払い情報の更新は既存および新規のすべての請求書に適用されると案内されていますが、宛名が含まれるかも書かれていません。会社名だけにしたい場合の可否も、公式ヘルプには見つかりませんでした。変えたいときは、アドビのサポートに注文番号と希望の宛名を伝えて、既存の請求書にも反映できるかを聞いてください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Adobeのインボイスの登録番号はいくつですか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>アドビの公式ヘルプでは、2025年10月3日以降の請求書はアドビ株式会社（Adobe KK）の発行で、登録番号はT7010701011841です。それ以前の請求書は、Adobe Systems Software Ireland Limited（T3700150007275）の発行です。国税庁の公表サイトでは、後者の番号に失効年月日（令和7年12月1日）が表示されます（2026年11月8日確認）。請求書の発行日と公表サイトの登録期間を照らして確かめてください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Adobeの請求書は、いつまで取れますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>個人版は、アドビアカウントに最大3年間の請求書履歴が保存される、と公式ヘルプにあります。グループ版は、請求書は契約がアクティブな間、利用できます。プランを解約または変更するとアクセスできなくなります。国税庁の一問一答では、個人事業者の請求書は5年、仕入税額控除の要件として保存する請求書等は7年なので、取った時点でPDFを自分で保存しておきます。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://helpx.adobe.com/jp/account/individual/billing-and-payments/view-billing-and-invoices/view-download-email-adobe-invoice.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>アドビ ヘルプ「アドビの請求書と領収書の確認」（個人版）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://helpx.adobe.com/jp/x-productkb/policy-pricing/invoice-business-registration.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>アドビ ヘルプ「アドビのインボイス制度への対応｜適格請求書発行事業者登録について」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://helpx.adobe.com/content/dam/help/ja/x-productkb/policy-pricing/invoice-business-registration/%E3%82%A2%E3%83%89%E3%83%93%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E9%81%A9%E6%A0%BC%E8%AB%8B%E6%B1%82%E6%9B%B8%E7%99%BA%E8%A1%8C%E4%BA%8B%E6%A5%AD%E8%80%85%E7%99%BB%E9%8C%B2%E7%95%AA%E5%8F%B7%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>アドビ「適格請求書発行事業者登録番号のお知らせ」（アドビ株式会社、2025年10月3日付PDF）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://helpx.adobe.com/jp/account/individual/billing-and-payments/view-billing-and-invoices/understand-billing-charges.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>アドビ ヘルプ「課金について理解する」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://helpx.adobe.com/jp/stock/web/common-questions/faq.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>アドビ ヘルプ「よくある質問｜Adobe Stock の基本」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://helpx.adobe.com/jp/account/individual/billing-and-payments/payment-and-billing-issues/unknown-charge-on-bill.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>アドビ ヘルプ「アドビの請求を確認する」（請求確認ツール）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://helpx.adobe.com/jp/account/individual/billing-and-payments/payment-methods/update-payment-information.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>アドビ ヘルプ「お支払い情報の更新」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://helpx.adobe.com/jp/account/individual/manage-your-account/manage-adobe-account-profile.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>アドビ ヘルプ「アドビアカウントプロファイルの管理」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://helpx.adobe.com/jp/x-productkb/policy-pricing/your-plan-jp.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>アドビ ヘルプ「[購入ガイド] 各種契約プランについて」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://helpx.adobe.com/jp/x-productkb/policy-pricing/payment.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>アドビ ヘルプ「[購入ガイド] 各種支払い方法と支払い方法の変更について」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://helpx.adobe.com/jp/account/individual/billing-and-payments/payment-methods/manage-adobe-subscriptions-through-app-stores.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>アドビ ヘルプ「サードパーティのアドビサブスクリプションの支払い情報を更新」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://helpx.adobe.com/jp/business/teams/setup-and-onboarding/manage-your-account/download-and-email-invoices.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>アドビ ヘルプ「請求書のダウンロードおよびメール送信」（グループ版・Admin Console）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://helpx.adobe.com/jp/business/teams/setup-and-onboarding/manage-your-account/manage-invoices-faq.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>アドビ ヘルプ「請求書の管理に関する FAQ」（グループ版）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://helpx.adobe.com/jp/business/teams/setup-and-onboarding/manage-your-account/update-payment-details.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>アドビ ヘルプ「Teams アカウントの支払詳細を更新」（グループ版）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://helpx.adobe.com/jp/x-productkb/policy-pricing/invoice-request-cct.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>アドビ ヘルプ「請求書発行のお申し込み方法（グループ版のみ）」（2021年4月28日更新）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://helpx.adobe.com/jp/contact/what-contact-options.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>アドビ ヘルプ「サポート対象製品とお問い合わせ方法について」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/invoice_about.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 インボイス制度について</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.invoice-kohyo.nta.go.jp/regno-search/detail?selRegNo=7010701011841" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 適格請求書発行事業者公表サイト（アドビ株式会社 T7010701011841）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.invoice-kohyo.nta.go.jp/regno-search/detail?selRegNo=3700150007275" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 適格請求書発行事業者公表サイト（Adobe Systems Software Ireland Limited T3700150007275）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/pdf/qa/01-01.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 消費税の仕入税額控除制度における適格請求書等保存方式に関するＱ＆Ａ（令和8年5月改訂）問19</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/law/joho-zeikaishaku/sonota/jirei/pdf/0026007-006_05.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 電子帳簿保存法一問一答【電子取引関係】（令和8年7月）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/law/tsutatsu/kihon/shotoku/05/09.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 所得税基本通達37-30の2（短期の前払費用）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.keisan.nta.go.jp/r7yokuaru/aoiroshinkoku/hitsuyokeihi/index.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 確定申告書等作成コーナー よくある質問「必要経費」（令和7年分）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.keisan.nta.go.jp/r7yokuaru/aoiroshinkoku/hitsuyokeihi/tsushinhi/tsushinhi.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 確定申告書等作成コーナー よくある質問 通信費</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.keisan.nta.go.jp/r7yokuaru/aoiroshinkoku/hitsuyokeihi/shomohinhi/shomohinhi.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 確定申告書等作成コーナー よくある質問 消耗品費</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.keisan.nta.go.jp/r7yokuaru/aoiroshinkoku/hitsuyokeihi/zappi/zappi.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 確定申告書等作成コーナー よくある質問 雑費</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.yayoi-kk.co.jp/shinkoku/aoiroshinkoku/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>弥生 やよいの青色申告 オンライン（公式ページ）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約8分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/kakutei-shinkoku/" data-astro-cid-sgg5joot>確定申告・会計ソフト・経費の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/receipts/" data-astro-cid-sgg5joot>サービス別 領収書・インボイス対応一覧を見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

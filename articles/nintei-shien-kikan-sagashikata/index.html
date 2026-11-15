@@ -1,0 +1,337 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>認定支援機関の探し方｜検索システムの使い方、補助金・融資で要る手続きと費用、頼む前の確認点 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="認定支援機関（認定経営革新等支援機関）は、国の検索システムで都道府県から探せます。2026年11月に読んだ公募要領では、事業承継・M&amp;A補助金（事業承継促進枠）は確認書が要り、新事業進出・ものづくり商業サービス補助金などは出てきません。探し方、費用、頼む前の確認点を公式資料で整理します。"><link rel="canonical" href="https://soroecho.com/articles/nintei-shien-kikan-sagashikata/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="認定支援機関の探し方｜検索システムの使い方、補助金・融資で要る手続きと費用、頼む前の確認点 | そろえ帳"><meta property="og:description" content="認定支援機関（認定経営革新等支援機関）は、国の検索システムで都道府県から探せます。2026年11月に読んだ公募要領では、事業承継・M&amp;A補助金（事業承継促進枠）は確認書が要り、新事業進出・ものづくり商業サービス補助金などは出てきません。探し方、費用、頼む前の確認点を公式資料で整理します。"><meta property="og:url" content="https://soroecho.com/articles/nintei-shien-kikan-sagashikata/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/nintei-shien-kikan-sagashikata.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="認定支援機関の探し方｜検索システムの使い方、補助金・融資で要る手続きと費用、頼む前の確認点 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="認定支援機関の探し方｜検索システムの使い方、補助金・融資で要る手続きと費用、頼む前の確認点 | そろえ帳"><meta name="twitter:description" content="認定支援機関（認定経営革新等支援機関）は、国の検索システムで都道府県から探せます。2026年11月に読んだ公募要領では、事業承継・M&amp;A補助金（事業承継促進枠）は確認書が要り、新事業進出・ものづくり商業サービス補助金などは出てきません。探し方、費用、頼む前の確認点を公式資料で整理します。"><meta name="twitter:image" content="https://soroecho.com/og/nintei-shien-kikan-sagashikata.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"認定支援機関の探し方｜検索システムの使い方、補助金・融資で要る手続きと費用、頼む前の確認点","item":"https://soroecho.com/articles/nintei-shien-kikan-sagashikata/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"認定支援機関の探し方｜検索システムの使い方、補助金・融資で要る手続きと費用、頼む前の確認点","description":"認定支援機関（認定経営革新等支援機関）は、国の検索システムで都道府県から探せます。2026年11月に読んだ公募要領では、事業承継・M&A補助金（事業承継促進枠）は確認書が要り、新事業進出・ものづくり商業サービス補助金などは出てきません。探し方、費用、頼む前の確認点を公式資料で整理します。","url":"https://soroecho.com/articles/nintei-shien-kikan-sagashikata/","datePublished":"2026-11-15T00:00:00.000Z","dateModified":"2026-11-15T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/nintei-shien-kikan-sagashikata/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"認定支援機関とは何ですか。誰でもなれますか？","acceptedAnswer":{"@type":"Answer","text":"中小企業等経営強化法にもとづき、国が「経営革新等支援業務」を行う者として認定した機関です。業務は、中小企業等の経営状況の分析と、事業計画づくりや実施についての指導・助言です。誰でもなれるわけではなく、税理士・弁護士・公認会計士・中小企業診断士・金融機関などは資格や免許で専門知識の基準を満たし、それ以外は、計画の認定実績3件以上や、中小機構が指定する研修の試験などで基準を満たします。実務経験は、法定業務に係る1年以上を含む3年以上などが基準で、認定は5年ごとの更新です。"}},{"@type":"Question","name":"補助金の申請には、必ず認定支援機関の確認書が要りますか？","acceptedAnswer":{"@type":"Answer","text":"補助金ごとに違います。2026年11月8日に読んだ公募要領では、事業承継・M&A補助金（事業承継促進枠、16次公募）は、全申請者が認定支援機関の確認書を出します。新事業進出・ものづくり商業サービス補助金（第2回）、中小企業省力化投資補助事業（一般型・第9回）、小規模事業者持続化補助金（一般型 通常枠・第20回）では、提出書類に認定支援機関の確認書は出てきません。新事業進出・ものづくり商業サービス補助金と省力化投資補助事業（一般型）では、金融機関から資金を受けるとき、別に「金融機関による確認書」が要ります。手元の公募要領で「認定経営革新等支援機関」を検索して確かめてください。"}},{"@type":"Question","name":"認定支援機関はどうやって探しますか？","acceptedAnswer":{"@type":"Answer","text":"国の認定経営革新等支援機関検索システムで、都道府県を選んで探します。条件の画面では、種別（税理士、公認会計士、弁護士、中小企業診断士、民間コンサル、商工会、商工会議所、金融機関）、相談可能内容、支援可能業種、支援実績などで絞れます。認定日と認定有効期限日は機関が変更できない項目なので、期限が切れていないかを確かめます。PR、支援メニュー、主な補助金等実績、事例は機関が自分で入力・修正できる項目なので、面談で直接聞いてください。"}},{"@type":"Question","name":"認定支援機関に払う費用はいくらですか？","acceptedAnswer":{"@type":"Answer","text":"読んだ公式資料に、料金表や相場は見つかりませんでした。事業再構築補助金事務局の集計（第1回〜第11回公募、令和6年2月）では、申請に登録された報酬（予定）額は、なしが66.8%、50万円以下が10.9%、100万円以下が7.1%、200万円以下が8.0%、500万円以下が6.1%、1,000万円以下が1.0%、1,000万円超が0.1%でした。ただし、別の制度（補助額が100万円から1.5億円まで）の資料で、報酬は予定額です。事業承継・M&A補助金（事業承継促進枠）では、確認書の取得に払った報酬は補助対象外とされています。"}},{"@type":"Question","name":"認定支援機関に頼むとき、何に気をつければよいですか？","acceptedAnswer":{"@type":"Answer","text":"新事業進出・ものづくり商業サービス補助金の公募要領は、提供するサービスの内容とかい離した高額な成功報酬等の請求、金額や条件が不透明な契約、強引な働きかけ、申請書の虚偽記載の教唆や支援者名を書かないよう求めること、確認を他者に外注することを、不適切な行為の例に挙げています。事業計画は申請者自身が作る必要があり、支援者がいれば、名前・支援内容・報酬（予定）額・契約期間を申請画面に入力します。困ったときは、金融機関以外の認定支援機関なら経済産業局等、補助金の申請なら事務局のトラブル等通報窓口に連絡できます。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>認定支援機関の探し方｜検索システムの使い方、補助金・融資で要る手続きと費用、頼む前の確認点</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecdqohay-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecdqohay-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecdqohay-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecdqohay-p)" data-astro-cid-yuatfsof></rect><circle cx="349" cy="61" r="138" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="184" fill="#fff" font-size="38" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>認定支援機関</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>認定支援機関の探し方｜検索システムの使い方、補助金・融資で要る手続きと費用、頼む前の確認点</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-11-15T00:00:00.000Z" data-astro-cid-sgg5joot>2026年11月15日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約13分</p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論認定支援機関は国が認定した相談先検索システムで探せるが要るかどうかは制度ごとに違う" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：認定支援機関は国が認定した相談先。検索システムで探せるが、要るかどうかは制度ごとに違う</a></li><li data-astro-cid-sgg5joot><a href="#認定支援機関とは誰がなれる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>認定支援機関とは？誰がなれる？</a></li><li data-astro-cid-sgg5joot><a href="#認定支援機関が要る手続きは2026年11月8日に読んだ公式資料で整理" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>認定支援機関が要る手続きは？2026年11月8日に読んだ公式資料で整理</a></li><li data-astro-cid-sgg5joot><a href="#認定支援機関の探し方検索システムで都道府県を選び種別と相談内容で絞る" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>認定支援機関の探し方：検索システムで都道府県を選び、種別と相談内容で絞る</a></li><li data-astro-cid-sgg5joot><a href="#認定支援機関の費用は料金表はないが補助金事務局の集計がある" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>認定支援機関の費用は？料金表はないが、補助金事務局の集計がある</a></li><li data-astro-cid-sgg5joot><a href="#頼む前に確認すること公式が挙げる不適切な行為の例" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>頼む前に確認すること：公式が挙げる「不適切な行為の例」</a></li><li data-astro-cid-sgg5joot><a href="#次の一手頼む前のチェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>次の一手：頼む前のチェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#まとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>まとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論認定支援機関は国が認定した相談先検索システムで探せるが要るかどうかは制度ごとに違う">結論：認定支援機関は国が認定した相談先。検索システムで探せるが、要るかどうかは制度ごとに違う</h2>
+<p>認定支援機関（正式名称は認定経営革新等支援機関）は、中小企業等経営強化法にもとづいて国が認定した、経営の相談先です。中小機構の案内では、商工会や商工会議所、金融機関、税理士、公認会計士、弁護士などが主な認定先とされています。探すときは、国の<a href="https://www.ninteishien.go.jp/NSK_CertificationArea">認定経営革新等支援機関検索システム</a>で、都道府県を選び、種別や相談内容で絞ります。</p>
+<p>ただし、「補助金には認定支援機関の確認書が要る」とは限りません。2026年11月8日に読んだ公募要領では、事業承継・M&amp;A補助金（事業承継促進枠）は、全員が認定支援機関の確認書を出します。一方、新事業進出・ものづくり商業サービス補助金、中小企業省力化投資補助事業（一般型）、小規模事業者持続化補助金（一般型 通常枠）では、認定支援機関の確認書は提出書類に出てきません。</p>
+<p>融資や税制には、認定支援機関が関わるものがあります。日本政策金融公庫の経営力強化の融資は、対象の1つが「認定経営革新等支援機関による指導および助言を受けている方」です。事業承継税制の特例承継計画には、認定支援機関の所見を書きます。</p>
+<p>費用の公式な料金表は、読んだ範囲では見つかりませんでした。終了した事業再構築補助金の事務局の集計では、申請の66.8%で、認定支援機関の報酬（予定）額が「なし」と登録されていました。公募要領は、高額な成功報酬や不透明な契約を「不適切な行為の例」に挙げ、認定取消に至る場合があるとしています。</p>
+<p>まず、要ると言われた制度の公募要領を開き、「認定経営革新等支援機関」と「確認書」で検索して、確認書が提出書類かどうかを見てください。</p>
+<h2 id="認定支援機関とは誰がなれる">認定支援機関とは？誰がなれる？</h2>
+<p>中小企業等経営強化法の第31条は、主務大臣が、経営革新等支援業務を行う者で基本方針に適合すると認められるものを、申請により認定できると定めています。認定を受けた者の業務は、条文では次の2つです（e-Govの現行の条文）。</p>
+<ul>
+<li>経営革新や経営力向上を行おうとする中小企業等の、経営資源の内容、財務内容その他の経営の状況を分析すること</li>
+<li>その事業の計画づくりについて指導・助言し、計画に従って行う事業の実施についても必要な指導・助言をすること</li>
+</ul>
+<p>制度は、平成24年8月30日に創設されました（金融庁の案内）。認定は5年ごとに更新を受けないと、期間が過ぎた時点で効力を失います（同法第33条）。</p>
+<p>認定の基準は、電子申請システムのよくある質問（02-001）に、次のとおり書かれています。</p>
+<table>
+<thead>
+<tr>
+<th>基準</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>専門知識</td>
+<td>次のいずれか。(イ) 国家資格や業の免許・認可を持つこと（該当するのは、税理士・税理士法人、弁護士・弁護士法人、公認会計士、監査法人、中小企業診断士、金融機関だけ）。(ロ) 経営革新計画などの策定に主たる支援者として関わり、計画の認定を3件以上受けていること。(ハ) 同等以上の能力（中小機構が指定する研修の試験に合格すること。商工会・商工会議所は「経営発達支援計画」の認定を受けていること）</td>
+</tr>
+<tr>
+<td>実務経験</td>
+<td>中小企業・小規模事業者の支援について、法定業務に係る1年以上を含む3年以上の実務経験。または同等以上の能力（中小機構が指定する研修の実践力判定試験に合格すること）</td>
+</tr>
+<tr>
+<td>そのほか</td>
+<td>業務を長く続けられる事業基盤（法人は組織体制も）があること。法第32条の欠格条項（拘禁刑以上の刑の執行を終えるなどして5年を経過しない人、認定を取り消されて5年を経過しない人、暴力団員など）に当たらないこと</td>
+</tr>
+</tbody>
+</table>
+<h2 id="認定支援機関が要る手続きは2026年11月8日に読んだ公式資料で整理">認定支援機関が要る手続きは？2026年11月8日に読んだ公式資料で整理</h2>
+<p>読んだ範囲を、補助金と、融資・税制などに分けて表にしました。表にない制度は、その制度の公式の要領で確かめてください。</p>
+<h3 id="補助金">補助金</h3>
+<table>
+<thead>
+<tr>
+<th>制度</th>
+<th>認定支援機関の扱い</th>
+<th>読んだ資料</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>事業承継・M&amp;A補助金（事業承継促進枠・16次公募）</td>
+<td>全申請者が「認定経営革新等支援機関の確認書」を出す。事業承継計画表も、認定支援機関等に確認を受けたものに限る。締切の直前は、依頼しても間に合わない場合がある。16次の申請受付は2026年10月2日から11月6日17時までで、終わっている</td>
+<td>公募要領（Ver.1.0、2026年9月）、よくある質問</td>
+</tr>
+<tr>
+<td>新事業進出・ものづくり商業サービス補助金（第2回）</td>
+<td>提出書類に認定支援機関の確認書はない。金融機関から資金提供を受けるときだけ「金融機関による確認書」が要る。認定支援機関は、助言を受けてよい外部支援者の例として出てくる。申請の締切は2026年12月25日15時</td>
+<td>公募要領（第2回・1.0版、令和8年11月）</td>
+</tr>
+<tr>
+<td>中小企業省力化投資補助事業（一般型・第9回）</td>
+<td>同じく確認書はない。金融機関から調達する予定なら「金融機関による確認書」が要る。専門的な支援が必要なら認定支援機関に相談するよう書かれ、検索システムのURLが載っている</td>
+<td>公募要領（第9回公募、2026年11月）</td>
+</tr>
+<tr>
+<td>小規模事業者持続化補助金（一般型 通常枠・第20回）</td>
+<td>認定支援機関の確認書は出てこない。要るのは、商工会・商工会議所が出す事業支援計画書（様式4）</td>
+<td>公募要領（第9版、2026年11月5日）</td>
+</tr>
+<tr>
+<td>事業再構築補助金</td>
+<td>公募は終了している。第13回公募要領は、事業計画書を金融機関等や認定支援機関と策定して確認を受けることを、補助対象要件にしていた</td>
+<td>公式サイト、公募要領（第13回）</td>
+</tr>
+</tbody>
+</table>
+<p>事業承継・M&amp;A補助金でも、専門家活用枠の公募要領には、認定支援機関の確認書は出てきません。終了した中小企業新事業進出補助金の第4回公募要領にも、認定支援機関の確認書は出てきません。</p>
+<p>事務局は、新事業進出・ものづくり商業サービス補助金を、中小企業新事業進出補助金やものづくり・商業・サービス生産性向上促進補助金とは異なる補助金だと書いています。名前が似ているので、正式名称と公募回を確かめてください。持続化補助金は<a href="/articles/jizokuka-hojokin-kojin-jigyou/">個人事業主向けの申請手順</a>と<a href="/articles/jizokuka-hojokin-shoukoukai-shoukoukaigisho/">商工会議所と商工会の事業支援計画書</a>に書きました。</p>
+<h3 id="融資税制計画づくり">融資・税制・計画づくり</h3>
+<table>
+<thead>
+<tr>
+<th>制度</th>
+<th>認定支援機関の扱い</th>
+<th>読んだ資料</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>日本政策金融公庫 新規開業・スタートアップ支援資金（中小企業経営力強化関連、国民生活事業）</td>
+<td>対象は、新たに事業を始める方か事業開始後おおむね7年以内の方のうち、中小会計を適用（予定を含む）し、自ら事業計画書を作り、認定支援機関の指導・助言を受けている方</td>
+<td>公庫のページ</td>
+</tr>
+<tr>
+<td>日本政策金融公庫 中小企業経営力強化資金（中小企業事業）</td>
+<td>対象は4つのうちいずれか。認定支援機関の指導・助言が条件なのは1つ目（経営革新などの事業計画書を作った方）。ほかの3つは、会計基準の適用と事業計画書、中小機構のハンズオン支援、経営者保証免除計画</td>
+<td>公庫のページ</td>
+</tr>
+<tr>
+<td>信用保証協会の経営力強化保証</td>
+<td>金融機関および認定支援機関の支援を受けつつ、自ら事業計画を作り、実行して進捗を報告する中小企業者が対象。保証料は、申込時の信用力に対応した料率より一区分低い（東京信用保証協会の案内）</td>
+<td>東京信用保証協会（2026年5月26日更新）</td>
+</tr>
+<tr>
+<td>事業承継税制（法人版・特例措置）</td>
+<td>特例承継計画に、認定支援機関（税理士、商工会、商工会議所等）の所見を書き、令和9年9月30日までに都道府県知事へ出す</td>
+<td>国税庁のあらまし（令和8年7月）</td>
+</tr>
+<tr>
+<td>先端設備等導入計画（固定資産税の特例）</td>
+<td>横浜市・福岡市の案内では、市に出す計画に認定支援機関の確認書を添える。固定資産税の特例を受けるときは、投資計画の確認書も要る。書類の名前は2市で違うので、申請先の市区町村の案内で確かめる</td>
+<td>横浜市（2026年6月29日更新）、福岡市（2026年6月12日更新）</td>
+</tr>
+<tr>
+<td>経営改善計画策定支援事業</td>
+<td>認定支援機関が計画づくりを支援し、費用の3分の2を中小企業活性化協議会が負担する（上限あり）。対象は、借入金の返済など財務上の問題を抱え、自分では計画を作りにくい事業者</td>
+<td>中小機構</td>
+</tr>
+</tbody>
+</table>
+<p>商工会議所の経営指導と推薦が条件のマル経融資は、公庫のページに認定支援機関の記載が見つかりませんでした。流れは<a href="/articles/marukei-yuushi/">マル経融資の条件・金利・流れ</a>にあります。創業融資の書類は<a href="/articles/jfc-sougyou-yuushi-hitsuyou-shorui/">日本政策金融公庫の創業融資の必要書類</a>、保証料の計算は<a href="/articles/shinyou-hoshouryou-keisan/">信用保証協会の保証料の計算方法</a>、資金調達の全体像は<a href="/articles/shikin-choutatsu-houhou-kojin-jigyou/">資金調達の方法を個人事業主向けに整理</a>で整理しています。</p>
+<h3 id="要ると言われたときの確かめ方">要ると言われたときの確かめ方</h3>
+<p>公募要領や案内のPDFを開き、「認定経営革新等支援機関」「認定支援機関」「確認書」で検索します。ヒットが提出書類や要件の欄にあれば、確認書や助言が条件です。ヒットが、外部の支援を受けるときの注意書きや、データの取扱いの説明だけなら、提出書類としては求められていません。同じ補助金でも、公募回や枠で書類が変わるため、手元の版で確かめます。</p>
+<h2 id="認定支援機関の探し方検索システムで都道府県を選び種別と相談内容で絞る">認定支援機関の探し方：検索システムで都道府県を選び、種別と相談内容で絞る</h2>
+<p>まず、すでに付き合いのある税理士、取引金融機関、地元の商工会議所・商工会が、認定を受けているかを調べると早いです。手順は次のとおりです（2026年11月8日時点の画面）。</p>
+<ol>
+<li><a href="https://www.ninteishien.go.jp/NSK_CertificationArea">検索システム</a>を開き、「都道府県から探す」で都道府県を選ぶ</li>
+<li>検索条件の画面で、次の項目を選び、「この条件で検索する」を押す</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>選べるもの</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>認定支援機関種別</td>
+<td>税理士（法人含む）、公認会計士（法人含む）、弁護士（法人含む）、中小企業診断士、民間コンサル（法人含む）、商工会、商工会議所、その他</td>
+</tr>
+<tr>
+<td>種別（金融機関）</td>
+<td>銀行・地銀、信金、信組、その他（系統金融等）。金融機関の支店は検索できない</td>
+</tr>
+<tr>
+<td>相談可能内容</td>
+<td>創業等支援、事業計画作成支援、経営改善、事業承継、M&amp;A、事業再生、人事・労務、金融・財務など18項目</td>
+</tr>
+<tr>
+<td>支援実績</td>
+<td>事業再構築補助金、経営改善計画策定支援事業、早期経営改善計画策定支援事業、ものづくり補助金、事業承継・引継ぎ補助金、商業・サービス業・農林水産業活性化税制</td>
+</tr>
+<tr>
+<td>そのほか</td>
+<td>支援可能業種（農業・林業から分類不能の産業まで20項目）、キーワード、本店・支店、自己PRあり</td>
+</tr>
+</tbody>
+</table>
+<p>公式の操作マニュアル（第9.0版、令和8年8月14日）によると、検索システムには、認定日、認定有効期限日、種別、住所・電話・メール、相談可能内容、支援メニュー、支援可能業種、主な補助金等実績、代表的な支援事例、PRなどが公表されます。見るときの注意は3つです。</p>
+<ul>
+<li>認定日、認定有効期限日、認定号は、機関が自分では変更できない項目です。支援メニュー、支援可能業種、主な補助金等実績、事例、PRは、機関が自分の画面から入力・修正でき、直すとすぐ反映されます。実績は、面談で聞いて確かめます</li>
+<li>「支援実績」の絞り込みは上の6つで、新事業進出補助金や省力化投資補助金は並んでいません。新しい補助金の実績は、この欄では絞れません</li>
+<li>認定は5年ごとの更新です。頼む前に、認定有効期限日が先であることを見ます</li>
+</ul>
+<p>事業承継・M&amp;A補助金の公募要領は、認定支援機関の具体名や連絡先を、中小企業庁のWebサイトで確認するか、最寄りの経済産業局に問い合わせるよう案内しています。</p>
+<h3 id="税理士金融機関商工会議所種類の違いは">税理士・金融機関・商工会議所…種類の違いは？</h3>
+<p>読んだ公式資料に、種類ごとの頼み方の違いや、用件別にどの種類が向くかを書いたものは見つかりませんでした。確かめられたのは次の点です。</p>
+<ul>
+<li>税理士、公認会計士、弁護士、中小企業診断士、金融機関は、資格や免許で専門知識の基準を満たす種別です（認定基準の(イ)）。国税庁は、事業承継税制の所見を書く機関の例に、税理士、商工会、商工会議所を挙げています</li>
+<li>補助金の「金融機関による確認書」は、資金を借りる金融機関に書いてもらう書類で、認定支援機関の確認書とは別のものです</li>
+<li>商工会・商工会議所は、「経営発達支援計画」の認定で専門知識の基準を満たす種別です。持続化補助金の事業支援計画書は、認定支援機関の確認書とは別の書類です</li>
+</ul>
+<p>税理士に頼むなら、検索システムの「税理士（法人含む）」で探します。探し方と見積もりの比べ方は<a href="/articles/zeirishi-sagashikata-hiyou-souba/">税理士の探し方</a>、費用の目安は<a href="/articles/kojin-jigyou-zeirishi-hiyou-souba/">個人事業主が税理士に頼む費用の相場</a>、紹介サービスの選び方は<a href="/articles/zeirishi-shoukai-service-hikaku/">税理士紹介サービスの比較</a>にあります。知り合いがいないときは、紹介を受ける方法もあります。</p>
+<p>弥生の税理士紹介サービスは、公式ページ（2026年11月8日に読んだ内容）によると、起業に関するお悩みに沿って税理士・会計事務所を無料で紹介するサービスで、紹介は完全無料と書かれています。よくある質問には、複数の税理士の紹介や、合わなかったときの再紹介も書かれています。認定支援機関かどうかの記載は見つからなかったため、紹介された事務所が認定を受けているかは、検索システムで確かめてください。依頼したあとの報酬は公式ページに書かれていないため、見積もりで確かめます。</p>
+<aside class="cta-box"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">弥生株式会社</p><h3 class="cta-box__title">弥生の税理士紹介サービス</h3><p class="cta-box__body">条件に合う税理士を弥生が紹介する、起業・開業ナビの税理士紹介サービス。</p><a class="cta-box__button" href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+DZ3BQ2+35XE+HXD0Y" data-offer="yayoi-zeirishi-shoukai" rel="sponsored nofollow noopener" target="_blank">弥生の税理士紹介サービスの公式サイトへ</a></aside>
+<h2 id="認定支援機関の費用は料金表はないが補助金事務局の集計がある">認定支援機関の費用は？料金表はないが、補助金事務局の集計がある</h2>
+<p>読んだ公式資料に、認定支援機関の報酬の料金表や相場は見つかりませんでした。数字があるのは、終了した事業再構築補助金の事務局が、第1回から第11回の公募で申請に登録された認定支援機関の報酬（予定）額を集計した資料（令和6年2月）です。集計の件数（資料のn）は176,889で、報酬額別の内訳は次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>報酬額（予定）</th>
+<th>全応募に占める割合</th>
+<th>採択率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>なし</td>
+<td>66.8%</td>
+<td>43.9%</td>
+</tr>
+<tr>
+<td>50万円以下</td>
+<td>10.9%</td>
+<td>41.5%</td>
+</tr>
+<tr>
+<td>100万円以下</td>
+<td>7.1%</td>
+<td>46.8%</td>
+</tr>
+<tr>
+<td>200万円以下</td>
+<td>8.0%</td>
+<td>47.6%</td>
+</tr>
+<tr>
+<td>500万円以下</td>
+<td>6.1%</td>
+<td>48.6%</td>
+</tr>
+<tr>
+<td>1,000万円以下</td>
+<td>1.0%</td>
+<td>52.6%</td>
+</tr>
+<tr>
+<td>1,000万円超</td>
+<td>0.1%</td>
+<td>47.0%</td>
+</tr>
+</tbody>
+</table>
+<p>注意が2つあります。事業再構築補助金は、第13回公募要領の補助額が100万円から1.5億円までの別の制度で、資料は予定額の集計なので、ほかの手続きの相場として読むのは避けてください。また、割合と採択率が並んでいるだけで、資料は報酬と採択の関係を説明していません。</p>
+<p>補助金の対象経費にならない例があります。事業承継・M&amp;A補助金（事業承継促進枠）のよくある質問は、認定支援機関の確認書を取るときに払った報酬を補助対象外とし、書類作成代行の費用も対象にならないとしています。新事業進出・ものづくり商業サービス補助金では、事業計画書の作成支援者への経費は、専門家経費の対象外です。</p>
+<p>費用の一部を公的機関が負担する制度もあります。経営改善計画策定支援事業では、認定支援機関に払う費用の3分の2を、中小企業活性化協議会が負担します。上限は、早期経営改善計画策定支援が80万円、経営改善計画策定支援（405事業）の通常枠が300万円で、申込は全国47都道府県の中小企業活性化協議会が受け付けています。</p>
+<h2 id="頼む前に確認すること公式が挙げる不適切な行為の例">頼む前に確認すること：公式が挙げる「不適切な行為の例」</h2>
+<p>新事業進出・ものづくり商業サービス補助金の公募要領（第2回）は、外部の支援を受けるときの注意として、次の行為を不適切な行為の例に挙げています。支援者が認定支援機関のときは、認定支援機関名の公表、業務改善命令、認定取消に至る可能性があるとも書かれています。右の列は、頼む前に聞くことの例です。</p>
+<table>
+<thead>
+<tr>
+<th>公式が挙げる不適切な行為の例</th>
+<th>頼む前に聞くことの例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>提供するサービスの内容とかい離した高額な成功報酬等を請求する</td>
+<td>着手金と成功報酬の額、計算の根拠、何の対価か</td>
+</tr>
+<tr>
+<td>金額や条件が不透明な契約を締結する。強引な働きかけを行う</td>
+<td>見積書や契約書に、金額と契約期間が書いてあるか。急かされていないか</td>
+</tr>
+<tr>
+<td>費用の水増しなど申請書に虚偽の記載を教唆する。作成支援者名を記載しないよう求める</td>
+<td>支援者名、支援内容、報酬（予定）額、契約期間を、申請画面に書く前提で話せるか</td>
+</tr>
+<tr>
+<td>事業計画書の確認で、認定支援機関が支援の一部又は全部を他者に委託・外注する</td>
+<td>確認書を書く担当者は誰か。外注しないか</td>
+</tr>
+</tbody>
+</table>
+<p>事業計画は、申請者自身が作る必要があります。新事業進出・ものづくり商業サービス補助金は、認定支援機関などの助言は受けてよいとしつつ、作成自体を申請者以外が行うことは認められず、発覚すると不採択・採択取消・交付決定取消になると書いています。支援者の名前や報酬の入力がない場合も、同じ扱いです。</p>
+<p>金融庁の案内は、名前貸し業務や単なる窓口業務、申請代行など形骸化した支援業務、実費から著しくかけ離れた請求、不透明な契約内容、強引な働きかけを、報告の対象に挙げています。国は一部の認定支援機関の不適切な行為が発覚したとして認定取消を行い、2025年9月10日付で、電子申請システムにお知らせを出しています。</p>
+<p>困ったときの窓口は次のとおりです。</p>
+<ul>
+<li>金融機関の認定支援機関：主たる事務所を所管する財務局等や金融庁（金融庁の案内）</li>
+<li>金融機関以外の認定支援機関：経済産業局等（同上）</li>
+<li>補助金の申請に関すること：事務局のトラブル等通報窓口（専用フォーム）</li>
+</ul>
+<h2 id="次の一手頼む前のチェックリスト">次の一手：頼む前のチェックリスト</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 要ると言われた制度の、正式名称、公募回、書類の名前を聞いた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 公募要領のPDFで「認定経営革新等支援機関」と「確認書」を検索し、提出書類か注意書きかを見た</li>
+<li class="task-list-item"><input type="checkbox" disabled> 検索システムで候補を2〜3件に絞り、認定有効期限日が先であることを確かめた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 見積書に、報酬の額、契約期間、確認書を書く担当者が書かれている。支援者名と報酬は、申請に書く前提で話した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 申請の締切から逆算して、余裕のある日に依頼した</li>
+</ul>
+<h2 id="まとめ">まとめ</h2>
+<p>認定支援機関は、検索システムで探せる、国が認定した相談先です。要るかどうかは公募要領で確かめ、頼む前に、認定有効期限日と、報酬・契約の内容を確認してください。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>認定支援機関とは何ですか。誰でもなれますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>中小企業等経営強化法にもとづき、国が「経営革新等支援業務」を行う者として認定した機関です。業務は、中小企業等の経営状況の分析と、事業計画づくりや実施についての指導・助言です。誰でもなれるわけではなく、税理士・弁護士・公認会計士・中小企業診断士・金融機関などは資格や免許で専門知識の基準を満たし、それ以外は、計画の認定実績3件以上や、中小機構が指定する研修の試験などで基準を満たします。実務経験は、法定業務に係る1年以上を含む3年以上などが基準で、認定は5年ごとの更新です。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>補助金の申請には、必ず認定支援機関の確認書が要りますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>補助金ごとに違います。2026年11月8日に読んだ公募要領では、事業承継・M&amp;A補助金（事業承継促進枠、16次公募）は、全申請者が認定支援機関の確認書を出します。新事業進出・ものづくり商業サービス補助金（第2回）、中小企業省力化投資補助事業（一般型・第9回）、小規模事業者持続化補助金（一般型 通常枠・第20回）では、提出書類に認定支援機関の確認書は出てきません。新事業進出・ものづくり商業サービス補助金と省力化投資補助事業（一般型）では、金融機関から資金を受けるとき、別に「金融機関による確認書」が要ります。手元の公募要領で「認定経営革新等支援機関」を検索して確かめてください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>認定支援機関はどうやって探しますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>国の認定経営革新等支援機関検索システムで、都道府県を選んで探します。条件の画面では、種別（税理士、公認会計士、弁護士、中小企業診断士、民間コンサル、商工会、商工会議所、金融機関）、相談可能内容、支援可能業種、支援実績などで絞れます。認定日と認定有効期限日は機関が変更できない項目なので、期限が切れていないかを確かめます。PR、支援メニュー、主な補助金等実績、事例は機関が自分で入力・修正できる項目なので、面談で直接聞いてください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>認定支援機関に払う費用はいくらですか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>読んだ公式資料に、料金表や相場は見つかりませんでした。事業再構築補助金事務局の集計（第1回〜第11回公募、令和6年2月）では、申請に登録された報酬（予定）額は、なしが66.8%、50万円以下が10.9%、100万円以下が7.1%、200万円以下が8.0%、500万円以下が6.1%、1,000万円以下が1.0%、1,000万円超が0.1%でした。ただし、別の制度（補助額が100万円から1.5億円まで）の資料で、報酬は予定額です。事業承継・M&amp;A補助金（事業承継促進枠）では、確認書の取得に払った報酬は補助対象外とされています。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>認定支援機関に頼むとき、何に気をつければよいですか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>新事業進出・ものづくり商業サービス補助金の公募要領は、提供するサービスの内容とかい離した高額な成功報酬等の請求、金額や条件が不透明な契約、強引な働きかけ、申請書の虚偽記載の教唆や支援者名を書かないよう求めること、確認を他者に外注することを、不適切な行為の例に挙げています。事業計画は申請者自身が作る必要があり、支援者がいれば、名前・支援内容・報酬（予定）額・契約期間を申請画面に入力します。困ったときは、金融機関以外の認定支援機関なら経済産業局等、補助金の申請なら事務局のトラブル等通報窓口に連絡できます。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://www.ninteishien.go.jp/NSK_CertificationArea" rel="noopener" target="_blank" data-astro-cid-sgg5joot>認定経営革新等支援機関検索システム「都道府県から探す」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.ninteishien.go.jp/NSK_CertificationList?prefectures=%E6%9D%B1%E4%BA%AC%E9%83%BD" rel="noopener" target="_blank" data-astro-cid-sgg5joot>認定経営革新等支援機関検索システム「検索条件の画面」（東京都を選んだ例）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.ninteishien.go.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>認定経営革新等支援機関電子申請システム「トップページ」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.ninteishien.go.jp/NSK_Info?id=a0HJ4000006QlXKMA0" rel="noopener" target="_blank" data-astro-cid-sgg5joot>認定経営革新等支援機関電子申請システム「認定経営革新等支援機関による不適切な行為の防止について」（2025年9月10日のお知らせ）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.ninteishien.go.jp/FaqDetails?Id=a0K10000010y6kGEAQ" rel="noopener" target="_blank" data-astro-cid-sgg5joot>認定経営革新等支援機関電子申請システム「具体的な認定（更新）基準は何か」（よくあるご質問 02-001）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.ninteishien.go.jp/FaqSearch" rel="noopener" target="_blank" data-astro-cid-sgg5joot>認定経営革新等支援機関電子申請システム「よくあるご質問」（03-013 認定の更新）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.ninteishien.go.jp/resource/1792656524000/manual" rel="noopener" target="_blank" data-astro-cid-sgg5joot>認定経営革新等支援機関電子申請システム「操作マニュアル」（中小企業庁、第9.0版、令和8年8月14日）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.fsa.go.jp/status/nintei/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>金融庁「認定経営革新等支援機関について」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://laws.e-gov.go.jp/law/411AC0000000018" rel="noopener" target="_blank" data-astro-cid-sgg5joot>e-Gov法令検索「中小企業等経営強化法」（平成十一年法律第十八号）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.smrj.go.jp/sme/succession/improvement-plans.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>中小機構「認定経営革新等支援機関による支援（再生等）」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.smrj.go.jp/supporter/revitalization/improvement.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>中小機構「経営改善計画策定支援事業」（支援機関の方へ）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://shoukei-mahojokin.go.jp/assets/documents/r7h/16-succession/requirements_succession_16.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>事業承継・M&amp;A補助金「16次公募 事業承継促進枠 公募要領」（Ver.1.0、2026年9月）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://shoukei-mahojokin.go.jp/r7h/16-succession_faq/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>事業承継・M&amp;A補助金「16次公募 事業承継促進 よくある質問」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://shoukei-mahojokin.go.jp/assets/documents/r7h/16-experts/requirements_experts_16.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>事業承継・M&amp;A補助金「16次公募 専門家活用枠 公募要領」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://shinjigyou-monodukuri.smrj.go.jp/assets/documents/shinmono_application_guidelines_02.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>新事業進出・ものづくり商業サービス補助金「公募要領（第2回）」（1.0版、令和8年11月）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://shinjigyou-monodukuri.smrj.go.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>新事業進出・ものづくり商業サービス補助金「トップページ」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://shinjigyou-shinshutsu.smrj.go.jp/docs/shinjigyou_koubo_4.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>中小企業新事業進出補助金「公募要領（第4回）」（令和8年3月）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://shoryokuka.smrj.go.jp/assets/pdf/application_guidelines_ippan_09.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>中小企業省力化投資補助事業（一般型）「公募要領（第9回公募）」（2026年11月）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://r6.jizokukahojokin.info/doc/r6_koubover9_ip20.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>小規模事業者持続化補助金＜一般型 通常枠＞「第20回公募 公募要領（第9版）」（2026年11月5日、商工会議所地区）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://official.jizokukanb.com/wp-content/uploads/2026/11/20_%E9%80%9A%E5%B8%B8%E6%9E%A0_%E5%85%AC%E5%8B%9F%E8%A6%81%E9%A0%98_%E7%AC%AC9%E7%89%88.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>小規模事業者持続化補助金＜一般型 通常枠＞「第20回公募 公募要領（第9版）」（2026年11月5日、商工会地区）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://jigyou-saikouchiku.go.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>事業再構築補助金「トップページ」（公募は終了）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://jigyou-saikouchiku.go.jp/pdf/koubo.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>事業再構築補助金「公募要領（第13回）」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://jigyou-saikouchiku.go.jp/pdf/ninteishienkikan_hoshujokyo.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>事業再構築補助金事務局「事業再構築補助金（第1回～第11回公募）認定経営革新等支援機関の報酬」（令和6年2月）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/publication/pamph/pdf/0026007-042_01.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「非上場株式等についての贈与税・相続税の納税猶予・免除（法人版事業承継税制）のあらまし」（令和8年7月）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.jfc.go.jp/n/finance/search/64.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>日本政策金融公庫「新規開業・スタートアップ支援資金（中小企業経営力強化関連）」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.jfc.go.jp/n/finance/search/64_t.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>日本政策金融公庫「中小企業経営力強化資金」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.jfc.go.jp/n/finance/search/kaizen_m.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>日本政策金融公庫「マル経融資（小規模事業者経営改善資金）」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.cgc-tokyo.or.jp/institution/keieiryokukyoka_0701.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>東京信用保証協会「経営力強化保証制度（略称：経営力強化）」（2026年5月26日更新）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.city.yokohama.lg.jp/business/kigyoshien/keieishien/capex/sentan.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>横浜市「『先端設備等導入計画』の認定受付について」（2026年6月29日更新）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.city.fukuoka.lg.jp/keizai/policy_mng/business/seisanseikoujou.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>福岡市「中小企業等経営強化法に基づく先端設備等導入計画の認定申請のご案内」（2026年6月12日更新）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.yayoi-kk.co.jp/kigyo/zeirishi-shoukai/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>弥生 税理士紹介サービス（起業・開業ナビ）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約8分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/zeirishi/" data-astro-cid-sgg5joot>税理士に頼むの記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

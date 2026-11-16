@@ -1,0 +1,229 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Amazonビジネスの配送日指定のしかたと納品書・請求書払いの基本手順 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="Amazonビジネスの配送日指定は、注文時に表示される配送オプションから選ぶのが基本ですが、商品や出品者によっては選べません。納品書の入手方法と請求書払いの申請・支払いの手順、注文前に確認したい点を個人事業主向けに整理します。"><link rel="canonical" href="https://soroecho.com/articles/scout-2026-11-16-1/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="Amazonビジネスの配送日指定のしかたと納品書・請求書払いの基本手順 | そろえ帳"><meta property="og:description" content="Amazonビジネスの配送日指定は、注文時に表示される配送オプションから選ぶのが基本ですが、商品や出品者によっては選べません。納品書の入手方法と請求書払いの申請・支払いの手順、注文前に確認したい点を個人事業主向けに整理します。"><meta property="og:url" content="https://soroecho.com/articles/scout-2026-11-16-1/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/scout-2026-11-16-1.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Amazonビジネスの配送日指定のしかたと納品書・請求書払いの基本手順 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Amazonビジネスの配送日指定のしかたと納品書・請求書払いの基本手順 | そろえ帳"><meta name="twitter:description" content="Amazonビジネスの配送日指定は、注文時に表示される配送オプションから選ぶのが基本ですが、商品や出品者によっては選べません。納品書の入手方法と請求書払いの申請・支払いの手順、注文前に確認したい点を個人事業主向けに整理します。"><meta name="twitter:image" content="https://soroecho.com/og/scout-2026-11-16-1.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"Amazonビジネスの配送日指定のしかたと納品書・請求書払いの基本手順","item":"https://soroecho.com/articles/scout-2026-11-16-1/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Amazonビジネスの配送日指定のしかたと納品書・請求書払いの基本手順","description":"Amazonビジネスの配送日指定は、注文時に表示される配送オプションから選ぶのが基本ですが、商品や出品者によっては選べません。納品書の入手方法と請求書払いの申請・支払いの手順、注文前に確認したい点を個人事業主向けに整理します。","url":"https://soroecho.com/articles/scout-2026-11-16-1/","datePublished":"2026-11-16T00:00:00.000Z","dateModified":"2026-11-16T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/scout-2026-11-16-1/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Amazonビジネスでは、すべての商品で配送日を指定できますか？","acceptedAnswer":{"@type":"Answer","text":"できない場合があります。配送日や時間帯の指定は、商品や出品者、お届け先によって選べる範囲が変わります。注文確認画面に表示される配送オプションで、その商品に指定ができるかを確認してください。"}},{"@type":"Question","name":"納品書は、紙とデータのどちらも手に入りますか？","acceptedAnswer":{"@type":"Answer","text":"注文履歴の画面から、注文内容を確認する書類を表示できる場合があります。同梱の有無は商品や出品者によって異なるため、経理で必要な書類の形式を先に決め、注文履歴の画面で表示できる書類を確認してください。"}},{"@type":"Question","name":"請求書払いは、個人事業主でも使えますか？","acceptedAnswer":{"@type":"Answer","text":"利用には事業者としての登録や、支払い方法ごとの条件があります。個人事業主でも対象になる可能性はありますが、可否は申込み時の審査や条件で決まります。申込み画面と公式ヘルプで、最新の条件を確認してください。"}},{"@type":"Question","name":"開業届を出す前でもAmazonビジネスに登録できますか？","acceptedAnswer":{"@type":"Answer","text":"登録時に求められる情報や確認事項は、公式の登録画面で案内されます。開業届の有無で手続きの流れが変わる場合があるため、登録画面で入力項目を確認し、不明な点は公式ヘルプで確かめてください。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>Amazonビジネスの配送日指定のしかたと納品書・請求書払いの基本手順</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec17juq8m-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec17juq8m-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ec17juq8m-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec17juq8m-p)" data-astro-cid-yuatfsof></rect><circle cx="377" cy="34" r="131" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>amazonビジネス</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>配送日指定</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--amazon-business">Amazonビジネス実務</span><h1 data-astro-cid-sgg5joot>Amazonビジネスの配送日指定のしかたと納品書・請求書払いの基本手順</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-11-16T00:00:00.000Z" data-astro-cid-sgg5joot>2026年11月16日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約6分</p><p class="cta-inline">Amazonビジネスは法人・個人事業主向けのAmazonアカウントで、登録は無料です。<a href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">公式サイトで詳細を見る</a></p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論配送日指定は注文確認画面で決まり商品ごとに選べる範囲が違う" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：配送日指定は注文確認画面で決まり、商品ごとに選べる範囲が違う</a></li><li data-astro-cid-sgg5joot><a href="#配送日指定の手順と指定できないときの考え方" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>配送日指定の手順と、指定できないときの考え方</a></li><li data-astro-cid-sgg5joot><a href="#納品書の入手方法と経理で使うときの注意点" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>納品書の入手方法と、経理で使うときの注意点</a></li><li data-astro-cid-sgg5joot><a href="#請求書払いのやり方と申込み前に確認すること" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>請求書払いのやり方と、申込み前に確認すること</a></li><li data-astro-cid-sgg5joot><a href="#法人か個人か開業届の有無で変わる準備" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>法人か個人か、開業届の有無で変わる準備</a></li><li data-astro-cid-sgg5joot><a href="#従業員がいる会社の場合購買担当の方へ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>従業員がいる会社の場合（購買担当の方へ）</a></li><li data-astro-cid-sgg5joot><a href="#失敗しないための確認チェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>失敗しないための確認チェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#まとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>まとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論配送日指定は注文確認画面で決まり商品ごとに選べる範囲が違う">結論：配送日指定は注文確認画面で決まり、商品ごとに選べる範囲が違う</h2>
+<p>Amazonビジネスで配送日を指定したいときは、注文の最終確認画面に出る配送オプションから選ぶのが基本です。
+ただし、すべての商品で日付や時間帯を選べるわけではありません。</p>
+<p>選べる内容は、商品、出品者、お届け先の住所によって変わります。
+「指定できる前提」で締め切りの近い備品を注文すると、間に合わないことがあります。</p>
+<p>納品書と請求書払いは、配送日指定とは別の手続きです。
+ただ、経理の流れ全体では同じ日に確認することが多いので、この記事では3つをまとめて整理します。</p>
+<p>この記事で扱うのは、画面での操作の流れと、確認すべき観点です。
+料金や手数料は変更されることがあるため、金額は書かず、何を確認すれば決められるかを中心に書きます。</p>
+<h2 id="配送日指定の手順と指定できないときの考え方">配送日指定の手順と、指定できないときの考え方</h2>
+<p>配送日指定は、カートに入れた後の注文手続きの中で行います。
+大まかな流れは次のとおりです。</p>
+<ol>
+<li>商品をカートに入れ、レジに進む</li>
+<li>お届け先の住所を選ぶ（または新しく登録する）</li>
+<li>配送オプションの欄で、選べる日付や時間帯を確認する</li>
+<li>希望のオプションを選び、支払い方法を確認する</li>
+<li>注文内容を見直して、注文を確定する</li>
+</ol>
+<p>[要実演スクショ: 配送オプション選択画面]</p>
+<p>配送オプションの欄に日付の選択肢が出ない場合は、その商品では指定ができない可能性があります。
+その場合は、到着予定日の表示を目安にします。</p>
+<p>複数の商品を一度に注文すると、商品ごとに出品者や発送元が違い、別々に届くことがあります。
+同じ日にまとめて届けたいときは、注文を分けるか、同じ発送元の商品に絞るかを検討します。</p>
+<h3 id="あなたの場合の分岐">「あなたの場合」の分岐</h3>
+<table>
+<thead>
+<tr>
+<th>あなたの状況</th>
+<th>確認する点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>自宅兼事務所で受け取る</td>
+<td>不在時の再配達で間に合うか。在宅の日に合わせて日付を選ぶ</td>
+</tr>
+<tr>
+<td>自宅の住所を出したくない</td>
+<td>届け先に別の受け取り先を使えるか。登録できる住所の種類を、住所登録画面で確認する</td>
+</tr>
+<tr>
+<td>共有オフィスや事務所で受け取る</td>
+<td>受付の受け取り可能な時間帯。時間帯指定が選べるか</td>
+</tr>
+<tr>
+<td>会議や研修の前日までに必要</td>
+<td>到着予定日に余裕があるか。指定できない商品なら、早めに注文する</td>
+</tr>
+</tbody>
+</table>
+<p>[要実演スクショ: 届け先住所の登録画面]</p>
+<aside class="cta-box cta-box--subtle"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">Amazonビジネス</p><h3 class="cta-box__title">法人・個人事業主向けのAmazonアカウント</h3><p class="cta-box__body">請求書払いや数量割引など、通常のAmazonアカウントにはない機能が使えます。登録は無料です（詳細は公式サイトの案内に基づきます）。</p><a class="cta-box__button" href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">Amazonビジネスの登録ページへ（公式）</a></aside>
+<h2 id="納品書の入手方法と経理で使うときの注意点">納品書の入手方法と、経理で使うときの注意点</h2>
+<p>納品書は、何を・いつ・いくらで買ったかを示す書類です。
+経費の根拠として保管するため、受け取り方をあらかじめ決めておくと後で困りません。</p>
+<p>入手の方法は、大きく分けて二つあります。
+商品に同梱される場合と、注文履歴の画面から書類を表示・保存する場合です。</p>
+<p>同梱の有無は、商品や出品者によって異なります。
+紙の同梱を前提にせず、画面で表示できる書類を基準にするほうが確実です。</p>
+<p>手順の例は次のとおりです。</p>
+<ol>
+<li>アカウントの「注文履歴」を開く</li>
+<li>対象の注文を選ぶ</li>
+<li>注文の詳細で、表示できる書類の項目を確認する</li>
+<li>必要な書類を表示し、PDFなどで保存する</li>
+<li>保存先とファイル名のルールを決めて、整理する</li>
+</ol>
+<p>[要実演スクショ: 注文履歴から書類を表示する画面]</p>
+<p>保存するときのファイル名は、「日付_購入先_金額」のように決めておくと、後から探しやすくなります。
+会計ソフトに取り込む場合も、同じ名前のルールがあると照合が楽になります。</p>
+<h3 id="保管の考え方">保管の考え方</h3>
+<p>帳簿や領収書類をいつまで保管するかは、税の制度で決まっています。
+個人か法人か、青色申告かどうかによっても条件が違うため、ここでは年数を断定しません。
+お使いの申告区分に合わせて、税務署や税理士に確認してください。</p>
+<h2 id="請求書払いのやり方と申込み前に確認すること">請求書払いのやり方と、申込み前に確認すること</h2>
+<p>請求書払いは、商品の代金をその場でカード払いせず、後からまとめて支払う方法です。
+経理を月単位で処理したい人や、取引先ごとに支払いを分けたい人に向いています。</p>
+<p>利用には申込みが必要で、審査や条件があります。
+個人事業主でも使える可能性はありますが、可否は申込み時の確認で決まります。</p>
+<p>一般的な流れは次のとおりです。</p>
+<ol>
+<li>事業者としてアカウントを登録する</li>
+<li>支払い方法の設定画面で、請求書払いの申込み項目を探す</li>
+<li>必要事項（事業者情報など）を入力して申し込む</li>
+<li>審査の結果を待つ</li>
+<li>承認されたら、注文時の支払い方法として選ぶ</li>
+</ol>
+<p>[要実演スクショ: 支払い方法の設定画面]</p>
+<p>申込み前に、次の点を公式の案内で確認してください。</p>
+<ul>
+<li>利用できる事業形態（個人事業主、法人）の条件</li>
+<li>支払い期日と、締め日の考え方</li>
+<li>手数料や利用上限額の有無</li>
+<li>請求書が発行されるタイミングと、受け取り方</li>
+<li>支払い先の口座と、振込手数料をどちらが負担するか</li>
+</ul>
+<p>金額や条件は変更されることがあります。
+この記事では具体的な数字を書かないので、必ず申込み画面で最新の内容を確認してください。</p>
+<aside class="cta-box cta-box--subtle"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">Amazonビジネス</p><h3 class="cta-box__title">法人・個人事業主向けのAmazonアカウント</h3><p class="cta-box__body">請求書払いや数量割引など、通常のAmazonアカウントにはない機能が使えます。登録は無料です（詳細は公式サイトの案内に基づきます）。</p><a class="cta-box__button" href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">Amazonビジネスの登録ページへ（公式）</a></aside>
+<h2 id="法人か個人か開業届の有無で変わる準備">法人か個人か、開業届の有無で変わる準備</h2>
+<p>「あなたの場合」に当てはまる準備を、先に整理しておきます。</p>
+<table>
+<thead>
+<tr>
+<th>あなたの状況</th>
+<th>準備しておくこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>開業届を出す前</td>
+<td>登録画面で求められる情報を確認する。事業用と私用の支払いを分ける方法を決める</td>
+</tr>
+<tr>
+<td>開業届を出した個人事業主</td>
+<td>屋号や事業用の連絡先を、アカウント情報にそろえる</td>
+</tr>
+<tr>
+<td>法人（ひとり社長）</td>
+<td>法人名義で登録するか、代表者個人で登録するかを決める。請求書の宛名に影響する</td>
+</tr>
+<tr>
+<td>法人口座をまだ作っていない</td>
+<td>請求書払いの支払い口座を、どの口座にするか決める</td>
+</tr>
+</tbody>
+</table>
+<p>事業用と私用の買い物を同じアカウントで混ぜると、経費の仕分けが面倒になります。
+購入履歴を後で見返すことを考えて、事業用の注文だけを分けられる運用を検討してください。</p>
+<p>住所についても、請求書や納品書の宛名に何が載るかを確認します。
+自宅住所を出したくない場合は、書類に表示される情報を、注文前に画面で確かめておくと安心です。</p>
+<h2 id="従業員がいる会社の場合購買担当の方へ">従業員がいる会社の場合（購買担当の方へ）</h2>
+<p>従業員が5〜30人ほどの会社では、注文する人と支払う人が別になることが多いです。
+このとき、配送日の指定と請求書払いの設定を、誰が管理するかを決めておきます。</p>
+<p>確認する観点は次のとおりです。</p>
+<ol>
+<li>注文できる人の範囲と、承認が必要な金額</li>
+<li>届け先を、拠点ごとに分けて登録できるか</li>
+<li>請求書を、部署や拠点ごとに分けて受け取れるか</li>
+<li>納品書の保存場所と、担当者の引き継ぎ方法</li>
+</ol>
+<p>承認や権限の機能は、プランや設定によって使える範囲が違う場合があります。
+社内ルールと照らし合わせて、公式の案内で確認してください。</p>
+<h2 id="失敗しないための確認チェックリスト">失敗しないための確認チェックリスト</h2>
+<p>最後に、注文前から保管までの確認点をまとめます。</p>
+<ol>
+<li>到着希望日の2〜3日前までには注文しているか</li>
+<li>配送オプションに日付や時間帯の選択肢が出ているか</li>
+<li>届け先の住所と受け取り可能な時間帯は合っているか</li>
+<li>支払い方法は、請求書払いかカードか</li>
+<li>納品書として使う書類を、画面から保存できたか</li>
+<li>保存ファイルの名前が、ルールどおりになっているか</li>
+</ol>
+<p>配送が間に合わなかったときは、注文履歴から配送状況を確認します。
+出品者や配送会社への問い合わせが必要なときは、注文番号を手元に置いて連絡します。</p>
+<p>登録や設定の詳細は、公式サイトのヘルプで最新の内容を確認してください。
+画面の表示や条件は、予告なく変わることがあります。</p>
+<aside class="cta-box cta-box--subtle"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">Amazonビジネス</p><h3 class="cta-box__title">法人・個人事業主向けのAmazonアカウント</h3><p class="cta-box__body">請求書払いや数量割引など、通常のAmazonアカウントにはない機能が使えます。登録は無料です（詳細は公式サイトの案内に基づきます）。</p><a class="cta-box__button" href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">Amazonビジネスの登録ページへ（公式）</a></aside>
+<h2 id="まとめ">まとめ</h2>
+<p>配送日指定は、注文確認画面の配送オプションで選びますが、商品や出品者によって選べない場合があります。
+納品書は注文履歴の画面から保存できる書類を基準にし、請求書払いは申込みと審査を経て使えるようになります。</p>
+<p>あなたの状況（開業届の有無、個人か法人か、住所の扱い）に合わせて、事前に確認する点を絞ると、手続きがスムーズです。
+金額や条件は変わるため、申込み前に公式の案内で最新の内容を確かめてください。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>Amazonビジネスでは、すべての商品で配送日を指定できますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>できない場合があります。配送日や時間帯の指定は、商品や出品者、お届け先によって選べる範囲が変わります。注文確認画面に表示される配送オプションで、その商品に指定ができるかを確認してください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>納品書は、紙とデータのどちらも手に入りますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>注文履歴の画面から、注文内容を確認する書類を表示できる場合があります。同梱の有無は商品や出品者によって異なるため、経理で必要な書類の形式を先に決め、注文履歴の画面で表示できる書類を確認してください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>請求書払いは、個人事業主でも使えますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>利用には事業者としての登録や、支払い方法ごとの条件があります。個人事業主でも対象になる可能性はありますが、可否は申込み時の審査や条件で決まります。申込み画面と公式ヘルプで、最新の条件を確認してください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>開業届を出す前でもAmazonビジネスに登録できますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>登録時に求められる情報や確認事項は、公式の登録画面で案内されます。開業届の有無で手続きの流れが変わる場合があるため、登録画面で入力項目を確認し、不明な点は公式ヘルプで確かめてください。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://business.amazon.co.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス（公式サイト）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-16）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/amazon-business-mitsumorisho-hakkou/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1oukbk0-g" x1="0" y1="0" x2="1" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1oukbk0-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1oukbk0-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1oukbk0-p)" data-astro-cid-yuatfsof></rect><circle cx="366" cy="57" r="153" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Amazon</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>見積書</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>出し方</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--amazon-business">Amazonビジネス実務</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>Amazonの見積書の出し方｜カートからPDFで保存する手順（Amazonビジネス・登録無料）</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>Amazonで見積書が必要なときは、登録無料のAmazonビジネスを使います。注文前はカートから参考見積書、注文後は注文履歴から見積書をPDFで保存でき、稟議や経費精算に使えます。個人アカウントしかない場合の考え方と、配送料が載らない・ダウンロードできないときの注意点もまとめました。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-06T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月6日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約13分</p></div></a><a class="card article-card" href="/articles/kojin-jigyou-kaigyoutodoke-nashi-amazon-business-toroku/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1ptehj0-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1ptehj0-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1ptehj0-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1ptehj0-p)" data-astro-cid-yuatfsof></rect><circle cx="363" cy="90" r="176" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>個人事業主</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>開業届なし</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Amazonビジネス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--amazon-business">Amazonビジネス実務</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>Amazonビジネスの登録に必要書類は？開業届なしの個人事業主が用意するもの一覧</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>個人事業主がAmazonビジネスに登録するときは、確認書類を1点提出します。開業届がなくても、過去2年以内の確定申告書B・収支内訳書、インボイスの登録通知書などで代わりになります。公式ヘルプの書類一覧と提出時の注意点、登録手順、屋号の扱いを整理しました。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-06T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月6日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/amazon-business/" data-astro-cid-sgg5joot>Amazonビジネス実務の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/business-prime/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 L4 4"></path><path d="M4 20 L21 20"></path><path d="M7 20 L7 14"></path><path d="M11 20 L11 10"></path><path d="M15 20 L15 15"></path><path d="M19 20 L19 7"></path><path d="M5 16 L20 8"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>Business Prime 損益分岐計算</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>注文回数と送料を入れると、プライムビジネス（旧Businessプライム）の元が取れる回数がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/amazon-business-check/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 9 l2 2 l3.5 -3.5"></path><path d="M8 15 h8"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>Amazonビジネスが必要か判定</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>5つの質問に答えるだけで、Amazonビジネスが「要る」「今は要らない」「どちらでも」のどれかがわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

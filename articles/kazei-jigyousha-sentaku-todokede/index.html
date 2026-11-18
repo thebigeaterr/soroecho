@@ -1,0 +1,339 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>消費税課税事業者選択届出書｜インボイス登録で不要になる場合と、出す人・期限・2年縛り | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="消費税課税事業者選択届出書は、免税事業者が自分から課税事業者になるための届出です。インボイス登録を経過措置で受けるなら不要で、還付などで課税事業者を選ぶなら必要です。期限は課税事業者になる課税期間の初日の前日まで。やめるときの2年縛りや簡易課税との関係を国税庁の案内で整理します。"><link rel="canonical" href="https://soroecho.com/articles/kazei-jigyousha-sentaku-todokede/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="消費税課税事業者選択届出書｜インボイス登録で不要になる場合と、出す人・期限・2年縛り | そろえ帳"><meta property="og:description" content="消費税課税事業者選択届出書は、免税事業者が自分から課税事業者になるための届出です。インボイス登録を経過措置で受けるなら不要で、還付などで課税事業者を選ぶなら必要です。期限は課税事業者になる課税期間の初日の前日まで。やめるときの2年縛りや簡易課税との関係を国税庁の案内で整理します。"><meta property="og:url" content="https://soroecho.com/articles/kazei-jigyousha-sentaku-todokede/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/kazei-jigyousha-sentaku-todokede.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="消費税課税事業者選択届出書｜インボイス登録で不要になる場合と、出す人・期限・2年縛り — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="消費税課税事業者選択届出書｜インボイス登録で不要になる場合と、出す人・期限・2年縛り | そろえ帳"><meta name="twitter:description" content="消費税課税事業者選択届出書は、免税事業者が自分から課税事業者になるための届出です。インボイス登録を経過措置で受けるなら不要で、還付などで課税事業者を選ぶなら必要です。期限は課税事業者になる課税期間の初日の前日まで。やめるときの2年縛りや簡易課税との関係を国税庁の案内で整理します。"><meta name="twitter:image" content="https://soroecho.com/og/kazei-jigyousha-sentaku-todokede.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"消費税課税事業者選択届出書｜インボイス登録で不要になる場合と、出す人・期限・2年縛り","item":"https://soroecho.com/articles/kazei-jigyousha-sentaku-todokede/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"消費税課税事業者選択届出書｜インボイス登録で不要になる場合と、出す人・期限・2年縛り","description":"消費税課税事業者選択届出書は、免税事業者が自分から課税事業者になるための届出です。インボイス登録を経過措置で受けるなら不要で、還付などで課税事業者を選ぶなら必要です。期限は課税事業者になる課税期間の初日の前日まで。やめるときの2年縛りや簡易課税との関係を国税庁の案内で整理します。","url":"https://soroecho.com/articles/kazei-jigyousha-sentaku-todokede/","datePublished":"2026-11-18T00:00:00.000Z","dateModified":"2026-11-18T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/kazei-jigyousha-sentaku-todokede/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"課税事業者選択届出書は、インボイスの登録をするときに必ず必要ですか？","acceptedAnswer":{"@type":"Answer","text":"必ずではありません。免税事業者が令和5年10月1日から令和11年9月30日までの日の属する課税期間中に登録を受けるなら、登録申請書に登録希望日を書くことで、その日から課税事業者になります。この場合、課税事業者選択届出書を出す必要はありません。この期間に当たらない課税期間に登録を受けるときは、原則どおり届出書を出して課税事業者になる必要があります（国税庁のインボイスQ&A問7、2026年11月8日確認）。"}},{"@type":"Question","name":"課税事業者選択届出書は、いつまでに出せばよいですか？","acceptedAnswer":{"@type":"Answer","text":"課税事業者になりたい課税期間の初日の前日までです。個人事業者が令和9年分から課税事業者になるなら、令和8年12月31日までです。新たに事業を開始した場合は、その事業を開始した日の属する課税期間中に出せば、その課税期間から課税事業者になれます。期限日が土日祝日でも、翌日には延びません。飲食料品を売る免税事業者には、令和9年4月からの特例案があります（本文参照。国税庁の手続案内D1-4、No.6501、2026年11月8日確認）。"}},{"@type":"Question","name":"課税事業者を選んだあと、免税事業者に戻れますか？","acceptedAnswer":{"@type":"Answer","text":"戻れますが、条件があります。「消費税課税事業者選択不適用届出書」を、戻りたい課税期間の初日の前日までに出します。ただし、事業を廃止した場合を除き、課税事業者になった課税期間の初日から2年を経過する日の属する課税期間の初日以後でなければ出せません。2年以内に、税抜100万円以上の調整対象固定資産を買って一般課税で申告した場合は、原則として、仕入れた課税期間の初日から3年間戻れません（国税庁の記載要領、No.6501）。"}},{"@type":"Question","name":"売上が1,000万円以下になれば、自動で免税事業者に戻りますか？","acceptedAnswer":{"@type":"Answer","text":"戻りません。国税庁のQ&Aに、課税事業者選択届出書を出した場合は、不適用届出書を出さない限り効力が続き、基準期間の課税売上高が1,000万円以下になった課税期間も免税事業者にならないとあります。インボイスの登録を取りやめるだけでも戻れません。課税事業者選択届出書を出している事業者は、不適用届出書も必要です（No.6501のQ&A、インボイスQ&A問13）。"}},{"@type":"Question","name":"簡易課税を使うなら、課税事業者選択届出書のほかに簡易課税の届出も要りますか？","acceptedAnswer":{"@type":"Answer","text":"要ります。簡易課税制度選択届出書は別の届出書で、使いたい課税期間の初日の前日までに出します。登録の経過措置で課税事業者になった人は、登録日を含む課税期間中に出せば、その課税期間から使えます。なお、簡易課税の適用を受けている間は、還付を受けられません（国税庁の手続案内D1-22、インボイスQ&A問9、消費税率引下げQ&A問3-1）。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>消費税課税事業者選択届出書｜インボイス登録で不要になる場合と、出す人・期限・2年縛り</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1n7swmp-g" x1="0" y1="0" x2="1" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1n7swmp-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ec1n7swmp-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1n7swmp-p)" data-astro-cid-yuatfsof></rect><circle cx="357" cy="108" r="129" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="184" fill="#fff" font-size="38" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>消費税課税事業者…</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>消費税課税事業者選択届出書｜インボイス登録で不要になる場合と、出す人・期限・2年縛り</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-11-18T00:00:00.000Z" data-astro-cid-sgg5joot>2026年11月18日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約13分</p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論出すのは免税事業者のまま自分から課税事業者になりたい人インボイス登録だけなら今は出さなくてよい" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：出すのは「免税事業者のまま、自分から課税事業者になりたい人」。インボイス登録だけなら、今は出さなくてよい</a></li><li data-astro-cid-sgg5joot><a href="#自分は出す人-出さない人-状況別の早見表" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>自分は出す人？ 出さない人？ 状況別の早見表</a></li><li data-astro-cid-sgg5joot><a href="#期限はいつまで-効力が出る時期と年末の日付" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>期限はいつまで？ 効力が出る時期と、年末の日付</a></li><li data-astro-cid-sgg5joot><a href="#インボイス登録をするとき届出書は要る-登録の経過措置と比べる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>インボイス登録をするとき、届出書は要る？ 登録の経過措置と比べる</a></li><li data-astro-cid-sgg5joot><a href="#やめるには-不適用届出書と2年の縛り" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>やめるには？ 不適用届出書と「2年の縛り」</a></li><li data-astro-cid-sgg5joot><a href="#簡易課税の届出とはどうつながる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>簡易課税の届出とは、どうつながる？</a></li><li data-astro-cid-sgg5joot><a href="#飲食料品を扱う免税事業者は令和9年4月からの特例も確認する" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>飲食料品を扱う免税事業者は、令和9年4月からの特例も確認する</a></li><li data-astro-cid-sgg5joot><a href="#届出書の書き方欄ごとの要点" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>届出書の書き方：欄ごとの要点</a></li><li data-astro-cid-sgg5joot><a href="#迷うときは売上先と仕入れを持って税理士に比べてもらう" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>迷うときは、売上先と仕入れを持って税理士に比べてもらう</a></li><li data-astro-cid-sgg5joot><a href="#提出前のチェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>10</span>提出前のチェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#まとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>11</span>まとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論出すのは免税事業者のまま自分から課税事業者になりたい人インボイス登録だけなら今は出さなくてよい">結論：出すのは「免税事業者のまま、自分から課税事業者になりたい人」。インボイス登録だけなら、今は出さなくてよい</h2>
+<p>消費税課税事業者選択届出書（この記事では「選択届出書」とも書きます）は、基準期間（個人は前々年）の課税売上高が1,000万円以下で免税になる事業者が、自分から課税事業者になることを選ぶときの届出書です（国税庁の<a href="https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/shohi/annai/pdf/1461_01_youryou.pdf">記載要領</a>）。設備投資や輸出が多く、消費税の還付を受けたいときに使われます（国税庁 No.6501のQ&amp;A）。課税期間は、原則として、個人事業者なら1月から12月までの1年、法人なら事業年度です。</p>
+<p>押さえる点は3つです。</p>
+<ul>
+<li><strong>インボイス登録だけなら、届出書は要りません</strong>。令和5年10月1日から令和11年9月30日までの日の属する課税期間中に登録を受ける免税事業者は、登録申請書に登録希望日を書けば、その日から課税事業者になります（国税庁のインボイスQ&amp;A問7）</li>
+<li><strong>期限は、課税事業者になりたい課税期間の初日の前日まで</strong>です。個人事業者が令和9年（2027年）分から選ぶなら令和8年12月31日（木）で、期限日が休日でも延びません</li>
+<li><strong>選んだら、原則2年は免税事業者に戻れません</strong>。戻るには別の届出書が要り、出せるのは、選んだ課税期間から数えて2年目の課税期間の初日以後です</li>
+</ul>
+<p>飲食料品を売る免税事業者には、令和9年4月の税率引下げ（案）に合わせた特例も示されています。法案が成立した場合の内容です（下の節）。制度の説明は、国税庁の公式ページ（2026年11月8日時点）によります。</p>
+<h2 id="自分は出す人-出さない人-状況別の早見表">自分は出す人？ 出さない人？ 状況別の早見表</h2>
+<table>
+<thead>
+<tr>
+<th>あなたの状況</th>
+<th>届出書</th>
+<th>公式の案内</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>免税事業者のまま、還付を受けたい（登録はしない）</td>
+<td>要る</td>
+<td>No.6501のQ&amp;A</td>
+</tr>
+<tr>
+<td>免税事業者で、令和11年9月30日の属する課税期間中にインボイス登録を受ける</td>
+<td>要らない。登録申請書に登録希望日を書く</td>
+<td>インボイスQ&amp;A問7</td>
+</tr>
+<tr>
+<td>免税事業者で、上の期間に当たらない課税期間に登録を受ける</td>
+<td>要る（原則どおり）</td>
+<td>問7の注2</td>
+</tr>
+<tr>
+<td>すでにインボイス発行事業者の登録を受けている</td>
+<td>要らない（登録を受けている間は、納税義務が免除されない）</td>
+<td>No.6501</td>
+</tr>
+<tr>
+<td>基準期間か特定期間の課税売上高が1,000万円を超えている</td>
+<td>要らない。もともと課税事業者で、別の届出書がある（下の表）</td>
+<td>No.6501、No.6629</td>
+</tr>
+<tr>
+<td>資本金1,000万円以上で設立した法人の1期目・2期目、特定新規設立法人</td>
+<td>要らない。設立3期目から選ぶなら、2期目中に出す</td>
+<td>記載要領の注1</td>
+</tr>
+<tr>
+<td>新しく開業した個人、新たに設立された免税事業者の法人</td>
+<td>選ぶなら要る。事業を開始した日の属する課税期間中に出せば、その課税期間から</td>
+<td>D1-4、No.6531、問11</td>
+</tr>
+<tr>
+<td>免税事業者のままでいる</td>
+<td>出さない。課税事業者になる必要はないが、インボイスも出せない</td>
+<td>免税事業者向けリーフレット</td>
+</tr>
+</tbody>
+</table>
+<p>課税事業者になることと、インボイスを出せることは別です。インボイスを交付できるのは、登録を受けた適格請求書発行事業者だけです（インボイスQ&amp;A問10）。</p>
+<h3 id="名前が似た届出書との違い">名前が似た届出書との違い</h3>
+<p>「消費税課税事業者届出書」は、売上が1,000万円を超えて課税事業者になったときに出す、別の届出書です（国税庁 No.6629）。</p>
+<table>
+<thead>
+<tr>
+<th>届出書</th>
+<th>出す場面</th>
+<th>期限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>消費税課税事業者選択届出書</td>
+<td>免税事業者が、自分から課税事業者になることを選ぶとき</td>
+<td>選ぶ課税期間の初日の前日まで</td>
+</tr>
+<tr>
+<td>消費税課税事業者届出書（基準期間用）</td>
+<td>基準期間の課税売上高が1,000万円超となったとき</td>
+<td>事由が生じた場合速やかに</td>
+</tr>
+<tr>
+<td>消費税課税事業者届出書（特定期間用）</td>
+<td>特定期間の課税売上高が1,000万円超となったとき</td>
+<td>事由が生じた場合速やかに</td>
+</tr>
+</tbody>
+</table>
+<h2 id="期限はいつまで-効力が出る時期と年末の日付">期限はいつまで？ 効力が出る時期と、年末の日付</h2>
+<p>期限は、課税事業者になりたい課税期間の初日の前日までです。効力は、提出した日の属する課税期間の翌課税期間から生じます（記載要領）。新たに事業を開始した場合は、その事業を開始した日の属する課税期間中に出せば、その課税期間から課税事業者になれます（<a href="https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/shohi/annai/1461_01.htm">手続案内 D1-4</a>）。</p>
+<table>
+<thead>
+<tr>
+<th>状況</th>
+<th>課税事業者になりたい課税期間</th>
+<th>届出書の期限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>個人事業者（免税事業者）</td>
+<td>令和9年（2027年）分から</td>
+<td>令和8年12月31日（木）</td>
+</tr>
+<tr>
+<td>3月決算の法人（免税事業者）</td>
+<td>令和9年4月1日からの事業年度から</td>
+<td>令和9年3月31日（水）</td>
+</tr>
+<tr>
+<td>令和9年に開業する個人事業者</td>
+<td>開業した令和9年分から</td>
+<td>令和9年12月31日（その課税期間中）</td>
+</tr>
+</tbody>
+</table>
+<p>上の表は、手続案内の期限に、この記事で日付を当てはめたものです。期限日の扱いは、次のとおりです。</p>
+<ul>
+<li><strong>休日でも延びません</strong>。課税期間の末日が土日祝日でも、翌日等の平日には延長されません（No.6501）</li>
+<li><strong>郵送は、通信日付印の日が提出日</strong>とみなされます（No.6629の注）</li>
+<li><strong>税務署の窓口は年末に閉まります</strong>。総合窓口の受付は原則午前9時から午後3時で、土日祝日と12月29日〜1月3日は執務していません（D1-4）。令和8年12月31日が期限なら、窓口に出せる最後の平日は12月28日（月）です（この記事での計算）</li>
+<li><strong>e-Taxは、メンテナンス時間を除き24時間</strong>使えます（<a href="https://www.e-tax.nta.go.jp/info_center/index.html">e-Taxの案内</a>）。個人事業主は、e-Taxソフト（WEB版）の「マイページ」から届出できます（D1-4）</li>
+<li><strong>出し忘れは、「やむを得ない事情」に当たりません</strong>。災害などで出せない状態になった場合などが対象で、提出を忘れていた場合は当たりません（No.6630）。承認の申請は、事情がやんだ日から2か月以内です（<a href="https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/shohi/annai/23120014.htm">D1-6</a>）</li>
+</ul>
+<h2 id="インボイス登録をするとき届出書は要る-登録の経過措置と比べる">インボイス登録をするとき、届出書は要る？ 登録の経過措置と比べる</h2>
+<p>免税事業者が登録を受けるには、原則として選択届出書を出して課税事業者になる必要があります。ただし、令和5年10月1日から令和11年9月30日までの日の属する課税期間中に登録を受けるなら、登録申請書に登録希望日（提出日から15日以降の、自分で決める日）を書けば、その日から課税事業者になれます。届出書は要りません（インボイスQ&amp;A問7）。</p>
+<p>この経過措置で登録すると、登録日から課税期間の末日までの取引が申告の対象です。登録日の属する課税期間が令和5年10月1日を含まないときは、登録日の属する課税期間の翌課税期間から、登録日以後2年を経過する日の属する課税期間までは、免税事業者に戻れません（同）。</p>
+<p>届出書で課税事業者になる課税期間の初日から登録も受けたいときは、登録申請書を、その初日から起算して15日前の日までに出します（問7の注2）。令和9年1月1日からなら令和8年12月17日（木）で、届出書の期限より前です（この記事での計算）。</p>
+<p>次の表は、国税庁のQ&amp;A（問3-1の「参考」の表と問3-4）にある、個人事業者が令和9年中に課税事業者になる2つの方法の比べ方です。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>課税事業者選択届出書</th>
+<th>登録の経過措置（令和9年4月1日登録の例）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>手続</td>
+<td>令和8年12月31日までに届出書を出す（原則）</td>
+<td>登録申請書に登録希望日を書き、令和9年3月17日までに出す</td>
+</tr>
+<tr>
+<td>課税事業者になる日</td>
+<td>令和9年1月1日</td>
+<td>令和9年4月1日</td>
+</tr>
+<tr>
+<td>免税事業者に戻れない期間</td>
+<td>令和9年1月1日〜令和10年12月31日</td>
+<td>令和9年4月1日〜令和11年12月31日</td>
+</tr>
+<tr>
+<td>免税事業者に戻る手続</td>
+<td>令和10年中に不適用届出書を出す</td>
+<td>令和11年12月17日までに登録取消届出書を出す</td>
+</tr>
+<tr>
+<td>インボイスの交付義務</td>
+<td>なし</td>
+<td>あり</td>
+</tr>
+</tbody>
+</table>
+<p>登録申請書は、国税庁がe-Taxでの作成・提出を案内しています（<a href="https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/hojin/annai/invoice_01.htm">D1-64</a>）。屋号の扱いは<a href="/articles/invoice-touroku-yagou/">インボイス登録と屋号の扱い</a>、請求書の書き方は<a href="/articles/seikyuusho-kakikata-invoice-taiou/">請求書の書き方とインボイス対応</a>にあります。</p>
+<h2 id="やめるには-不適用届出書と2年の縛り">やめるには？ 不適用届出書と「2年の縛り」</h2>
+<p>課税事業者をやめるには、「消費税課税事業者選択不適用届出書」を、戻りたい課税期間の初日の前日までに出します（<a href="https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/shohi/annai/1461_02.htm">D1-5</a>）。ただし、事業を廃止した場合を除き、選択届出書の効力が生じた日から2年を経過する日の属する課税期間の初日以後でなければ出せません。個人事業者や1年決算の法人は、原則として、効力が生じた年（事業年度）の翌年（翌事業年度）の初日です（不適用届出書の記載要領）。</p>
+<table>
+<thead>
+<tr>
+<th>例（この記事での当てはめ）</th>
+<th>不適用届出書を出せる時期と、免税に戻れる時期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>令和9年分から選んだ個人事業者</td>
+<td>令和10年1月1日以後に出せる。令和10年中に出せば、令和11年分から免税に戻れる</td>
+</tr>
+<tr>
+<td>上の人が令和9年に税抜120万円の機械を買い、令和9年分を一般課税で申告した</td>
+<td>令和11年1月1日以後でなければ出せない。免税に戻れるのは令和12年分から</td>
+</tr>
+</tbody>
+</table>
+<p>2つ目の例は、<strong>調整対象固定資産の縛り</strong>です。課税事業者になって2年以内に開始した課税期間（簡易課税の期間を除く）に、一の取引単位が税抜100万円以上の建物、機械、車両、器具備品などを買い、一般課税で申告すると、原則として仕入れた課税期間の初日から3年間は免税に戻れません（No.6501、記載要領）。</p>
+<p>なお、免税に戻れるのは、基準期間の課税売上高が1,000万円以下であるなど、選択していなければ免税事業者になる課税期間であることが前提です（国税庁のQ&amp;A）。</p>
+<p>やめる前に、次の点も確かめます。</p>
+<ul>
+<li><strong>売上が下がっても、自動では戻りません</strong>。選択届出書は、不適用届出書を出さない限り効力が続きます（No.6501のQ&amp;A）。戻っても、特定期間の課税売上高が1,000万円を超えれば、その課税期間は課税事業者です（D1-5）</li>
+<li><strong>インボイス登録を取りやめるだけでは、戻れません</strong>。選択届出書を出している事業者は、登録の効力が失われたあとも、免税事業者になるには不適用届出書が要ります（インボイスQ&amp;A問13）。登録取消届出書は、翌課税期間の初日から起算して15日前の日までに出し、その日が休日でも翌日にはなりません（<a href="https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/hojin/annai/invoice_07.htm">D1-70</a>、問13）</li>
+</ul>
+<h2 id="簡易課税の届出とはどうつながる">簡易課税の届出とは、どうつながる？</h2>
+<p>簡易課税は、課税事業者が使う計算方法です。「消費税簡易課税制度選択届出書」を、使いたい課税期間の初日の前日までに出します（<a href="https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/shohi/annai/1461_13.htm">D1-22</a>）。選択届出書と同じ「初日の前日まで」とされています。課税事業者になる課税期間から簡易課税を使いたいなら、どちらの期限も、その課税期間の初日の前日です（この記事での整理）。</p>
+<ul>
+<li><strong>登録の経過措置で課税事業者になった人</strong>は、登録日を含む課税期間中に簡易課税の届出書を出せば、その課税期間から簡易課税にできます（インボイスQ&amp;A問9）</li>
+<li><strong>簡易課税を使うと、還付は受けられません</strong>。簡易課税の適用を受けている事業者は還付を受けられない、とQ&amp;Aにあります（税率引下げQ&amp;A問3-1の注）</li>
+<li><strong>設備を買うと、簡易課税の届出書も出せない場合があります</strong>。選択届出書で課税事業者になって2年以内に100万円以上の調整対象固定資産を買い、一般課税で申告すると、一定期間は出せません（No.6501、記載要領）</li>
+<li><strong>免税に戻っても、簡易課税の効力は残ります</strong>。簡易課税制度選択不適用届出書を出さない限り続きます（不適用届出書の記載要領）</li>
+</ul>
+<p>個人事業者の令和9年分・令和10年分の3割特例は、インボイス発行事業者の登録が要件です。選択届出書を出して課税事業者になった免税事業者も、対象に含まれます。ただし、選択届出書で課税事業者になってから2年以内に一般課税で100万円以上の設備（調整対象固定資産）を買い、不適用届出書を出せない課税期間は対象外です（国税庁の令和8年度税制改正の特集とリーフレット、インボイスQ&amp;A問115-2）。特例のあとに簡易課税へ移る期限は、<a href="/articles/kani-kazei-sentaku-todokede/">簡易課税制度選択届出書の期限と書き方</a>にあります。</p>
+<h2 id="飲食料品を扱う免税事業者は令和9年4月からの特例も確認する">飲食料品を扱う免税事業者は、令和9年4月からの特例も確認する</h2>
+<p>国税庁の令和8年9月の資料には、令和9年4月1日から令和11年3月31日までの2年間、飲食料品の消費税率を1%（国・地方合計）に引き下げる案が載っています。国税庁は、この内容を「法案が国会に提出され、審議を経た上で可決・成立した場合のもの」と断っています。</p>
+<p>資料は、売上げに係る税額より仕入れに係る税額が大きくなる場合に、課税事業者として一般課税で申告すれば還付を受けられる、と説明しています。免税事業者向けには、次の特例が示されています。</p>
+<ul>
+<li>飲食料品の販売を行う免税事業者は、令和9年4月1日の属する課税期間中（個人事業者なら令和9年末まで）に選択届出書を出せば、その課税期間から課税事業者になれます</li>
+<li>個人事業者が令和9年中に出すと、令和9年1月1日から課税事業者です。1月から3月の飲食料品の販売は税率8%で申告し、令和9年・令和10年の2年間は課税事業者です</li>
+<li>届出書の「適用開始課税期間」欄に令和9年4月1日の属する課税期間、「参考事項」欄に「飲食料品特例」と書きます。法案が成立すれば、令和9年4月1日より前でも出せるようになる予定です</li>
+<li>令和9年4月以降の取引だけを申告したい場合、国税庁のQ&amp;Aは、登録の経過措置が考えられるとしています。登録希望日を令和9年4月1日にするなら、令和9年3月17日までに登録申請書を出します。インボイスを交付する義務等が課されます</li>
+</ul>
+<p>国税庁は、特設サイトに最新の情報を随時掲載していく予定としています。出す前に、<a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/zeiritsuhikisage.htm">消費税率引下げ特設サイト</a>で確かめてください。</p>
+<h2 id="届出書の書き方欄ごとの要点">届出書の書き方：欄ごとの要点</h2>
+<p>様式は、国税庁の<a href="https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/shohi/annai/1461_01.htm">手続案内のページ</a>にあります。出す先は、納税地を所轄する税務署長です。欄ごとの要点は、国税庁の様式と記載要領のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>欄</th>
+<th>書くこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>基本欄</td>
+<td>提出先の税務署長、個人番号または法人番号、氏名または名称、納税地、住所。法人は代表者の氏名・住所も書く</td>
+</tr>
+<tr>
+<td>① 適用開始課税期間</td>
+<td>課税事業者を選ぶ課税期間の初日と末日</td>
+</tr>
+<tr>
+<td>② 基準期間</td>
+<td>①の課税期間の基準期間の初日と末日</td>
+</tr>
+<tr>
+<td>③ 総売上高・課税売上高</td>
+<td>基準期間に国内で行った資産の譲渡等の対価の額の合計（総売上高）と、課税資産の譲渡等の対価の額の合計（課税売上高）。消費税額・地方消費税額を含まない金額で、輸出取引の売上高を含み、売上げに係る対価の返還等の金額（税抜き）を含みません。基準期間が1年に満たない法人は月数で割って12倍。基準期間が免税事業者だったときは、税抜き処理は要りません</td>
+</tr>
+<tr>
+<td>生年月日・設立年月日、事業内容など</td>
+<td>個人は生年月日、法人は設立年月日。事業内容も書く。法人だけ、事業年度と資本金も書く</td>
+</tr>
+<tr>
+<td>届出区分</td>
+<td>該当する届出の事情の番号（1=事業開始、2=設立、3=相続、4=合併、5=分割、6=特別会計、7=その他）。当てはまる事情がないときの書き方は、読んだ記載要領には見つかりませんでした</td>
+</tr>
+<tr>
+<td>参考事項・税理士署名</td>
+<td>参考になる事項があれば書く。様式には税理士署名の欄もあります</td>
+</tr>
+</tbody>
+</table>
+<p>記載例（この記事での当てはめ）は、令和8年中に出して令和9年分から課税事業者になる個人事業者です。①は令和9年1月1日から12月31日、②は令和7年1月1日から12月31日、③は令和7年分の金額です（令和7年に免税事業者だったなら、税抜きの処理は要りません）。</p>
+<h2 id="迷うときは売上先と仕入れを持って税理士に比べてもらう">迷うときは、売上先と仕入れを持って税理士に比べてもらう</h2>
+<p>課税事業者を選ぶか、免税事業者のままでいるかは、事業者の事情で答えが変わります。国税庁の免税事業者向けリーフレットは、次の点を挙げています。</p>
+<ul>
+<li><strong>売上先がインボイスを必要とするか</strong>。消費者や免税事業者、簡易課税や2割特例・3割特例で申告する課税事業者の売上先は、インボイスを必要としません</li>
+<li><strong>売上先の経過措置</strong>：免税事業者などからの仕入れについて、売上先は令和8年10月1日から7割、令和10年10月1日から5割、令和12年10月1日から3割を控除できます。令和13年10月1日からは控除できません</li>
+</ul>
+<p>顧問の税理士がいれば、その人に比べてもらうのが早いです。いなければ、探す入口の一つとして、紹介サービスがあります。</p>
+<aside class="cta-box"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">弥生株式会社</p><h3 class="cta-box__title">弥生の税理士紹介サービス</h3><p class="cta-box__body">条件に合う税理士を弥生が紹介する、起業・開業ナビの税理士紹介サービス。</p><a class="cta-box__button" href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+DZ3BQ2+35XE+HXD0Y" data-offer="yayoi-zeirishi-shoukai" rel="sponsored nofollow noopener" target="_blank">弥生の税理士紹介サービスの公式サイトへ</a></aside>
+<p><a href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+DZ3BQ2+35XE+HXD0Y" rel="sponsored nofollow noopener" target="_blank">弥生の税理士紹介サービスの公式サイト</a>で、申込方法と紹介の流れを確かめられます。依頼したあとの報酬額は、公式ページでは見つからなかったため、見積もりで確かめます。探し方は<a href="/articles/zeirishi-sagashikata-hiyou-souba/">税理士の探し方</a>にあります。相談には、基準期間の課税売上高、売上先と仕入れの内訳、設備投資の予定を持っていきます。</p>
+<h2 id="提出前のチェックリスト">提出前のチェックリスト</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 課税事業者になりたい課税期間の初日を決め、その前日を期限にした</li>
+<li class="task-list-item"><input type="checkbox" disabled> インボイスも受けるなら、届出書で行くか、登録の経過措置で行くかを決めた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 2年は免税に戻れないこと、100万円以上の設備を買うと原則3年になることを確かめた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 年末が期限なら、窓口が閉まる12月29日より前か、e-Taxで出す計画にした</li>
+</ul>
+<h2 id="まとめ">まとめ</h2>
+<p>消費税課税事業者選択届出書は、免税事業者が自分から課税事業者になるための届出書です。インボイス登録を令和11年9月30日の属する課税期間中に受けるなら、登録申請書に登録希望日を書けば足り、届出書は要りません。還付などのために課税事業者になるなら、その課税期間の初日の前日までに出します。</p>
+<p>出したら原則2年は免税に戻れず、100万円以上の設備を一般課税で買うと原則3年です。簡易課税の届出書は別で、期限も「初日の前日」です。飲食料品の特例は法案の成立が前提です。個別の判断は、税務署か税理士に確認してください。申告全体の流れは<a href="/articles/kojin-jigyou-kakutei-shinkoku-nagare/">個人事業主の確定申告の流れ</a>にあります。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>課税事業者選択届出書は、インボイスの登録をするときに必ず必要ですか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>必ずではありません。免税事業者が令和5年10月1日から令和11年9月30日までの日の属する課税期間中に登録を受けるなら、登録申請書に登録希望日を書くことで、その日から課税事業者になります。この場合、課税事業者選択届出書を出す必要はありません。この期間に当たらない課税期間に登録を受けるときは、原則どおり届出書を出して課税事業者になる必要があります（国税庁のインボイスQ&amp;A問7、2026年11月8日確認）。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>課税事業者選択届出書は、いつまでに出せばよいですか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>課税事業者になりたい課税期間の初日の前日までです。個人事業者が令和9年分から課税事業者になるなら、令和8年12月31日までです。新たに事業を開始した場合は、その事業を開始した日の属する課税期間中に出せば、その課税期間から課税事業者になれます。期限日が土日祝日でも、翌日には延びません。飲食料品を売る免税事業者には、令和9年4月からの特例案があります（本文参照。国税庁の手続案内D1-4、No.6501、2026年11月8日確認）。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>課税事業者を選んだあと、免税事業者に戻れますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>戻れますが、条件があります。「消費税課税事業者選択不適用届出書」を、戻りたい課税期間の初日の前日までに出します。ただし、事業を廃止した場合を除き、課税事業者になった課税期間の初日から2年を経過する日の属する課税期間の初日以後でなければ出せません。2年以内に、税抜100万円以上の調整対象固定資産を買って一般課税で申告した場合は、原則として、仕入れた課税期間の初日から3年間戻れません（国税庁の記載要領、No.6501）。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>売上が1,000万円以下になれば、自動で免税事業者に戻りますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>戻りません。国税庁のQ&amp;Aに、課税事業者選択届出書を出した場合は、不適用届出書を出さない限り効力が続き、基準期間の課税売上高が1,000万円以下になった課税期間も免税事業者にならないとあります。インボイスの登録を取りやめるだけでも戻れません。課税事業者選択届出書を出している事業者は、不適用届出書も必要です（No.6501のQ&amp;A、インボイスQ&amp;A問13）。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>簡易課税を使うなら、課税事業者選択届出書のほかに簡易課税の届出も要りますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>要ります。簡易課税制度選択届出書は別の届出書で、使いたい課税期間の初日の前日までに出します。登録の経過措置で課税事業者になった人は、登録日を含む課税期間中に出せば、その課税期間から使えます。なお、簡易課税の適用を受けている間は、還付を受けられません（国税庁の手続案内D1-22、インボイスQ&amp;A問9、消費税率引下げQ&amp;A問3-1）。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/shohi/annai/1461_01.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「D1-4 消費税課税事業者選択届出手続」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/shohi/annai/pdf/1461_01.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「消費税課税事業者選択届出書」（様式、PDF）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/shohi/annai/pdf/1461_01_youryou.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「消費税課税事業者選択届出書の記載要領等」（PDF）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/shohi/annai/1461_02.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「D1-5 消費税課税事業者選択不適用届出手続」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/shohi/annai/pdf/1461_02_youryou.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「消費税課税事業者選択不適用届出書の記載要領等」（PDF）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/shohi/annai/23120014.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「D1-6 消費税課税事業者選択（不適用）届出に係る特例承認申請手続」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6501.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「No.6501 納税義務の免除」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6501_qa.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「No.6501 納税義務の免除」のQ&amp;A（免税事業者の消費税の還付・選択届出書の効力）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6531.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「No.6531 新規開業又は法人の新規設立のとき」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6629.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「No.6629 消費税の各種届出書」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6630.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「No.6630 やむを得ない事情により課税事業者選択届出書の提出が間に合わなかった場合」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6505.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「No.6505 簡易課税制度」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/shohi/annai/1461_13.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「D1-22 消費税簡易課税制度選択届出手続」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/law/tsutatsu/kobetsu/kansetsu/951225/pdf2/youryou_074.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「消費税簡易課税制度選択届出書の記載要領等」（PDF）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/hojin/annai/invoice_01.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「D1-64 適格請求書発行事業者の登録申請手続（国内事業者用）」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/hojin/annai/invoice_07.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「D1-70 適格請求書発行事業者の登録の取消しを求める旨の届出手続」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/pdf/qa/01-01.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「消費税の仕入税額控除制度における適格請求書等保存方式に関するQ＆A」（令和8年5月改訂、PDF）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/pdf/0022001-174.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「免税事業者の皆様へ インボイス制度について」（令和8年4月改訂、PDF）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/invoice-review/index.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「令和8年度税制改正特集」（インボイス制度特設サイト）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/invoice-review/pdf/0026004-099-01-1.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「インボイス制度に関する令和8年度税制改正について」（リーフレット、PDF）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/zeiritsuhikisage.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「消費税率引下げ特設サイト」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/pdf/0026008-127_leaflet.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「飲食料品に係る２年間の消費税率引下げについて」（リーフレット、令和8年9月、PDF）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/pdf/0026008-127_qa.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁「飲食料品に係る２年間の消費税率引下げに関するＱ＆Ａ」（令和8年9月、PDF）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.e-tax.nta.go.jp/info_center/index.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>e-Tax「e-Taxの利用可能時間」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.yayoi-kk.co.jp/kigyo/zeirishi-shoukai/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>弥生「税理士紹介サービス（起業・開業ナビ）」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約8分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/zeirishi/" data-astro-cid-sgg5joot>税理士に頼むの記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/receipts/" data-astro-cid-sgg5joot>サービス別 領収書・インボイス対応一覧を見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

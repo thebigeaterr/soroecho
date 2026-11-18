@@ -1,0 +1,220 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ファクタリングの審査で見られる点｜「審査なし」をうたう業者への注意と準備 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="ファクタリングの審査基準を定めた公的資料はなく、各社の公式表記から見られる点を整理しました。主な着眼点は売掛先の信用力と取引の実在性で、必要書類や申込前の準備、チェックリストも紹介し、「審査なし」とうたう業者には慎重な確認が必要だと解説します。"><link rel="canonical" href="https://soroecho.com/articles/factoring-shinsa-mirareru-ten/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="ファクタリングの審査で見られる点｜「審査なし」をうたう業者への注意と準備 | そろえ帳"><meta property="og:description" content="ファクタリングの審査基準を定めた公的資料はなく、各社の公式表記から見られる点を整理しました。主な着眼点は売掛先の信用力と取引の実在性で、必要書類や申込前の準備、チェックリストも紹介し、「審査なし」とうたう業者には慎重な確認が必要だと解説します。"><meta property="og:url" content="https://soroecho.com/articles/factoring-shinsa-mirareru-ten/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/factoring-shinsa-mirareru-ten.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="ファクタリングの審査で見られる点｜「審査なし」をうたう業者への注意と準備 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="ファクタリングの審査で見られる点｜「審査なし」をうたう業者への注意と準備 | そろえ帳"><meta name="twitter:description" content="ファクタリングの審査基準を定めた公的資料はなく、各社の公式表記から見られる点を整理しました。主な着眼点は売掛先の信用力と取引の実在性で、必要書類や申込前の準備、チェックリストも紹介し、「審査なし」とうたう業者には慎重な確認が必要だと解説します。"><meta name="twitter:image" content="https://soroecho.com/og/factoring-shinsa-mirareru-ten.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"ファクタリングの審査で見られる点｜「審査なし」をうたう業者への注意と準備","item":"https://soroecho.com/articles/factoring-shinsa-mirareru-ten/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"ファクタリングの審査で見られる点｜「審査なし」をうたう業者への注意と準備","description":"ファクタリングの審査基準を定めた公的資料はなく、各社の公式表記から見られる点を整理しました。主な着眼点は売掛先の信用力と取引の実在性で、必要書類や申込前の準備、チェックリストも紹介し、「審査なし」とうたう業者には慎重な確認が必要だと解説します。","url":"https://soroecho.com/articles/factoring-shinsa-mirareru-ten/","datePublished":"2026-11-18T00:00:00.000Z","dateModified":"2026-11-18T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/factoring-shinsa-mirareru-ten/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"ファクタリングの審査では何が見られますか。","acceptedAnswer":{"@type":"Answer","text":"公的機関に審査基準の記載は見当たりません。各社の公式ページでは、売掛金が実際に存在するか、売掛先に支払い能力があるか、入金予定日はいつか、といった請求書と売掛先に関する点を確認すると書かれています。"}},{"@type":"Question","name":"「審査なし」とうたう業者は使えますか。","acceptedAnswer":{"@type":"Answer","text":"慎重な確認が必要です。アクセルファクターの公式ページは「審査なしで調達できるわけではありません」と記載しています。金融庁は、実態が貸付けにあたる偽装ファクタリングに注意を呼びかけています。"}},{"@type":"Question","name":"個人事業主が申し込むときの書類は何ですか。","acceptedAnswer":{"@type":"Answer","text":"会社により異なります。QuQuMo onlineは、請求書、入出金明細、代表者の本人確認書類に加え、開業届または確定申告書一式と健康保険証を挙げています。申込先の公式ページで最新の条件を確認してください。"}},{"@type":"Question","name":"業者が貸金業の登録を受けているか調べる方法はありますか。","acceptedAnswer":{"@type":"Answer","text":"金融庁のページで案内されている「登録貸金業者情報検索サービス」で確認できます。無登録で貸金業を営むことは刑事罰の対象とされています。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>ファクタリングの審査で見られる点｜「審査なし」をうたう業者への注意と準備</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec10nzkbs-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec10nzkbs-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec10nzkbs-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec10nzkbs-p)" data-astro-cid-yuatfsof></rect><circle cx="340" cy="51" r="130" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>ファクタリング</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>ファクタリングの審査で見られる点｜「審査なし」をうたう業者への注意と準備</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-11-18T00:00:00.000Z" data-astro-cid-sgg5joot>2026年11月18日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約9分</p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論とこの記事で分かること" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論と、この記事で分かること</a></li><li data-astro-cid-sgg5joot><a href="#公的資料に審査基準の記載はない" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>公的資料に審査基準の記載はない</a></li><li data-astro-cid-sgg5joot><a href="#各社の公式が書く審査で見られる点" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>各社の公式が書く審査で「見られる点」</a></li><li data-astro-cid-sgg5joot><a href="#各社が挙げる提出書類" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>各社が挙げる提出書類</a></li><li data-astro-cid-sgg5joot><a href="#審査なし審査が甘いとうたう業者への注意" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>「審査なし」「審査が甘い」とうたう業者への注意</a></li><li data-astro-cid-sgg5joot><a href="#スムーズに進めるための準備" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>スムーズに進めるための準備</a></li><li data-astro-cid-sgg5joot><a href="#法人の場合に確認すること" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>法人の場合に確認すること</a></li><li data-astro-cid-sgg5joot><a href="#申込む前のチェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>申込む前のチェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#次の一歩" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>次の一歩</a></li><li data-astro-cid-sgg5joot><a href="#まとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>10</span>まとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論とこの記事で分かること">結論と、この記事で分かること</h2>
+<p>ファクタリングの審査基準について、金融庁など公的機関に記載は見当たりません。審査が緩いか厳しいかを一般化できるデータもありません。各社の公式ページが書いているのは、売掛金と売掛先、つまり「請求書とその相手方」を確認する、という範囲です。</p>
+<p>検索では「審査が緩い」「審査が甘い」「審査なし」といった文句を目にします。これらは業者側のうたい文句です。事実として受け取らず、慎重に確認してください。「審査なし」をうたう業者には、金融庁が注意する偽装ファクタリング（実態は貸付け）の可能性も含めて確認が必要です。</p>
+<p>この記事で分かることは次の4点です。</p>
+<ul>
+<li>各社の公式ページが書く「見られる点」</li>
+<li>各社が挙げる提出書類</li>
+<li>「審査なし」とうたう業者への注意点</li>
+<li>申込前の準備とチェックリスト</li>
+</ul>
+<p>個人事業主か法人かで、必要な書類や条件が変わる場合があります。該当する箇所を読み分けてください。</p>
+<h2 id="公的資料に審査基準の記載はない">公的資料に審査基準の記載はない</h2>
+<p>金融庁のファクタリング関連のページには、利用者向けの注意喚起は載っています。しかし、ファクタリング会社がどのような基準で審査するかを定めた記載は見当たりません。</p>
+<p>そのため、この記事では「通りやすい条件」や「通りやすい会社」は扱いません。審査の厳しさを会社同士で比べることもしません。根拠となるデータがないためです。</p>
+<p>書けるのは、各社が自社の公式ページに書いている範囲だけです。次の章からは、公式の表記をそのまま整理します。表記は2026年10月17日時点で確認したもので、条件は変わる可能性があります。申し込む前に、必ず各社の最新ページを見てください。</p>
+<h2 id="各社の公式が書く審査で見られる点">各社の公式が書く審査で「見られる点」</h2>
+<p>各社の表記を並べると、確認の対象はあなた自身だけではないことが分かります。請求書の相手方（売掛先）も対象に含まれます。</p>
+<table>
+<thead>
+<tr>
+<th>会社</th>
+<th>その会社の表記（要旨）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>アクセルファクター</td>
+<td>売掛金が本当に存在するか、売掛先に支払い能力があるか、入金予定日がいつかなどを確認する。そのうえで買取可能額や手数料を提示し、納得すれば契約に進む</td>
+</tr>
+<tr>
+<td>株式会社No.1</td>
+<td>買取った売掛債権（売掛金）が回収できるか否かを重視する</td>
+</tr>
+<tr>
+<td>QuQuMo online</td>
+<td>審査が完了すると買取額及び手数料が提示される。請求書は請求金額・入金日が確定しているものに限る</td>
+</tr>
+<tr>
+<td>ラボル</td>
+<td>本人確認書類、請求書、取引を示すエビデンス（取引先とのメール等）を求める。現時点では法人が取引先となる請求書のみ買取対象</td>
+</tr>
+<tr>
+<td>ペイトナー</td>
+<td>支払い期日が確定している請求書、口座入出金明細などを求める。支払期日まで70日以内の請求書が対象</td>
+</tr>
+<tr>
+<td>ビートレーディング</td>
+<td>審査資料を2点と表記。給与債権・不良債権・売掛先が個人事業主の売掛金は買取対象外</td>
+</tr>
+</tbody>
+</table>
+<p>表から読み取れるのは、請求書の内容と売掛先の状況が中心になるという点です。売掛先が個人事業主の請求書を扱わない会社や、法人向けの請求書に限る会社があります。</p>
+<p>自分の請求書が対象になるかは、会社ごとに違います。取引先の種類も、申込前に確認する項目に入ります。</p>
+<h2 id="各社が挙げる提出書類">各社が挙げる提出書類</h2>
+<p>提出書類は、各社の公式ページに次のように書かれています。個人事業主と法人で違いが明記されているのは、QuQuMo onlineの記載の範囲です。</p>
+<table>
+<thead>
+<tr>
+<th>会社</th>
+<th>公式に挙げる書類</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QuQuMo online</td>
+<td>請求書、入出金明細（保有する全銀行口座の直近3ヶ月分）、代表者の本人確認書類（運転免許証またはパスポートなど）。個人事業主は開業届又は青色・白色の確定申告書一式と健康保険証</td>
+</tr>
+<tr>
+<td>株式会社No.1</td>
+<td>通帳コピー・請求書・発注書・納品書。最終確認では、直近の取引入金が確認できる書類、決算書直近二期分、成因資料、取引先企業との基本契約書など</td>
+</tr>
+<tr>
+<td>ラボル</td>
+<td>本人確認書類、請求書、取引を示すエビデンス。決算書や契約書の準備は必要ないと表記</td>
+</tr>
+<tr>
+<td>ペイトナー</td>
+<td>支払い期日が確定している請求書、口座入出金明細、初回のみ顔写真付き身分証。審査結果や申込内容によって追加書類を求める場合がある</td>
+</tr>
+<tr>
+<td>アクセルファクター</td>
+<td>請求書など売掛金額が確認できる書類、通帳3か月分の写し、身分証明書。利用金額によっては決算書の提出を求める場合がある</td>
+</tr>
+<tr>
+<td>ビートレーディング</td>
+<td>審査資料は2点と表記</td>
+</tr>
+</tbody>
+</table>
+<p>同じ「請求書」でも、求める条件は少しずつ違います。QuQuMo onlineは入金日が確定したものに限り、すでに入金日を過ぎたものは申し込めないと書いています。ペイトナーは支払期日が確定していることを挙げています。</p>
+<p>ペイトナーとアクセルファクターは、状況によって追加の書類（審査結果や申込内容による追加書類、利用金額による決算書）を求める場合があると書いています。最初から決算書を用意しておくと、慌てずに済みます。</p>
+<p>ペイトナーの必要書類と対象の請求書（支払期日まで70日以内）は、<a href="https://px.a8.net/svt/ejp?a8mat=4BEIPB+4RHMA+4PF6+5YJRM" rel="sponsored nofollow noopener" target="_blank">ペイトナーの公式サイト</a>で確認できます。</p>
+<h2 id="審査なし審査が甘いとうたう業者への注意">「審査なし」「審査が甘い」とうたう業者への注意</h2>
+<p>「審査なし」「審査が甘い」といった文句を見かけたら、慎重に確認してください。アクセルファクターの公式ページは、「審査なしで調達できるわけではありません」と明記しています。同社の説明では、売掛金の実在や売掛先の支払い能力が確認の対象です。</p>
+<p>さらに重要なのが、偽装ファクタリングです。金融庁は次のようなケースを、貸金業に該当するおそれがある例として挙げています。</p>
+<ul>
+<li>債権の買取代金が、債権額に比べて著しく低額である</li>
+<li>債権の回収（集金）が売主に委託され、売主が集金できなかった場合に買い戻す定めがある</li>
+<li>売主自身の資金でファクタリング業者に支払う定めがある</li>
+</ul>
+<p>契約書に「ノンリコース」（売掛先が払えなくても売主に返済義務がない）と書いてあるかどうかなど、形式だけでは判断されません。経済的側面や実態に照らして判断されます。</p>
+<p>貸金業を行うには、財務局または都道府県の登録が必要です。無登録営業は刑事罰の対象とされています。業者の登録は、金融庁が案内する「登録貸金業者情報検索サービス」で確認できます。</p>
+<p>不安がある場合の相談窓口として、金融庁のページでは次の名称が挙げられています。連絡先や受付時間は同ページで確認してください。</p>
+<ol>
+<li>金融庁 金融サービス利用者相談室</li>
+<li>警察の相談窓口</li>
+<li>日本貸金業協会 貸金業相談・紛争解決センター</li>
+<li>消費者ホットライン</li>
+</ol>
+<p>少しでも心配な点があれば、弁護士に相談することも案内されています。また、高額な手数料や大幅な割引率で契約すると、資金繰りが悪化して多重債務に陥る危険性があると、金融庁は別のページで注意しています。</p>
+<p>なお、給与（賃金債権）を売る「給与ファクタリング」は、事業者向けの売掛金のファクタリングとは別物です。違いは <a href="/articles/factoring-kojin-kyuuryo-chigai/">個人向けの給料ファクタリングとの違い</a> で整理しています。</p>
+<h2 id="スムーズに進めるための準備">スムーズに進めるための準備</h2>
+<p>通過を約束する方法はありません。ただ、各社は「書類が揃っている前提」で手続きの時間を案内しています。書類が揃っていないと、進めにくくなります。</p>
+<ul>
+<li>QuQuMo onlineは、最短で申込から入金まで2時間としつつ「必要書類がそろっている前提」と書いています。</li>
+<li>株式会社No.1は、最短即日での契約が可能としながら、必要書類が全て揃っていることが前提で、余裕を持った契約を推奨しています。</li>
+<li>アクセルファクターは、営業時間内かつ書類が揃っていれば最短1時間で結果が出るとしつつ、混雑状況や会社の状況で前後すると書いています。</li>
+</ul>
+<p>準備の手順は次のとおりです。</p>
+<ol>
+<li>請求書を確認します。金額と入金日が確定しているものを用意します（QuQuMo online）。入金日を過ぎたものは申込できません。</li>
+<li>入出金明細を用意します。QuQuMo onlineは全口座の直近3ヶ月分、アクセルファクターは通帳3か月分の写しを挙げています。</li>
+<li>本人確認書類を用意します。運転免許証やパスポートなどです。</li>
+<li>個人事業主は、開業届または確定申告書を用意します（QuQuMo online）。</li>
+<li>受付時間内に申し込みます。株式会社No.1は平日9:00〜19:00、アクセルファクターは平日10:00〜18:30です。ペイトナーは営業時間外の申請が翌営業日の入金になります。</li>
+<li>余裕を持って申し込みます（株式会社No.1）。</li>
+</ol>
+<p>開業届をまだ出していない方は、申込先が求める書類を先に確認してください。会社によっては、開業届や確定申告書を求めるためです。</p>
+<h2 id="法人の場合に確認すること">法人の場合に確認すること</h2>
+<p>法人の場合、会社によっては次のような書類を求められます。株式会社No.1は、最終確認の書類として、直近の取引入金が確認できる書類、決算書直近二期分、成因資料（請求書・発注書・納品書など）、取引先企業との基本契約書を挙げています。基本契約書がない場合は相談できると書かれています。</p>
+<p>決算書の直近二期分は、すぐに出せない場合があります。申込前に手元にあるか確認してください。</p>
+<p>株式会社No.1の公式表記では、利用対象は売掛債権をお持ちの法人と個人事業主で、買取金額は50万円〜3億円です。給料ファクタリングは扱っていません。条件の確認先として、<a href="https://px.a8.net/svt/ejp?a8mat=4BEIPB+3KMEQ+4EKW+5YJRM" rel="sponsored nofollow noopener" target="_blank">株式会社No.1の公式サイトで条件を確認する</a> を挙げます。これは会社名としての紹介であり、順位や優劣を示すものではありません。</p>
+<h2 id="申込む前のチェックリスト">申込む前のチェックリスト</h2>
+<p>申込前に、次の項目を一つずつ確認してください。</p>
+<ol>
+<li>請求書の金額と入金日は確定しているか</li>
+<li>入金日をすでに過ぎていないか</li>
+<li>売掛先は申込先の対象か（法人のみ、個人事業主は対象外など）</li>
+<li>入出金明細を、必要な期間分そろえたか</li>
+<li>本人確認書類は有効期限内か</li>
+<li>個人事業主の場合、開業届または確定申告書があるか</li>
+<li>法人の場合、決算書直近二期分があるか</li>
+<li>受付時間内に申し込めるか</li>
+<li>業者は貸金業の登録を受けているか（登録貸金業者情報検索サービスで確認）</li>
+<li>買取代金が債権額に比べて著しく低くないか、買い戻しの定めがないか</li>
+</ol>
+<p>10項目のうち、特に9と10は契約前に確認してください。判断に迷ったときは、相談窓口や弁護士に尋ねることが案内されています。</p>
+<h2 id="次の一歩">次の一歩</h2>
+<p>仕組みから整理したい方は <a href="/articles/factoring-toha/">ファクタリングとは</a>、即日対応の見方は <a href="/articles/factoring-sokujitsu-erabikata/">即日ファクタリングの選び方</a> を読んでください。個人事業主の注意点は <a href="/articles/factoring-kojin-jigyou-chuui/">個人事業主のファクタリング注意点</a>、給料ファクタリングとの違いは <a href="/articles/factoring-kojin-kyuuryo-chigai/">個人と給料ファクタリングの違い</a> にまとめています。入金サイクルと資金繰りは <a href="/articles/freelance-nyukin-cycle-shikinguri/">フリーランスの入金サイクルと資金繰り</a> が参考になります。</p>
+<aside class="cta-box"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">株式会社アクティブサポート</p><h3 class="cta-box__title">QuQuMo online（ファクタリング）</h3><p class="cta-box__body">オンラインで申し込める売掛金の買取（ファクタリング）サービス。</p><a class="cta-box__button" href="https://px.a8.net/svt/ejp?a8mat=4BEIPB+2Z6SY+4JGG+BWVTE" data-offer="ququmo" rel="sponsored nofollow noopener" target="_blank">QuQuMo online（ファクタリング）の公式サイトへ</a></aside>
+<p>QuQuMo onlineは、株式会社アクティブサポートが運営するオンライン完結のファクタリングサービスです。公式サイトでは、審査が完了すると買取額及び手数料が提示されると説明しています。最短で申込から入金まで2時間とされていますが、必要書類がそろっている前提です。ファクタリングの自主規制団体「OFA」の認定事業者とも表記されています。電話受付は平日9:00〜19:00です。条件の詳細は <a href="https://px.a8.net/svt/ejp?a8mat=4BEIPB+2Z6SY+4JGG+BWVTE" rel="sponsored nofollow noopener" target="_blank">QuQuMo onlineの公式サイトで条件を確認する</a> からご確認ください。</p>
+<h2 id="まとめ">まとめ</h2>
+<p>ファクタリングの審査基準を定めた公的資料は見当たらず、審査の緩さ・厳しさを一般化できるデータもありません。各社の公式ページが書くのは、売掛金の実在、売掛先の支払い能力、入金予定日といった、請求書と売掛先の確認です。</p>
+<p>「審査なし」「審査が甘い」とうたう業者には注意してください。実態が貸付けの偽装ファクタリングであれば、貸金業の登録が必要です。登録の有無と契約内容を、契約前に確認しましょう。</p>
+<p>申込前は、請求書の入金日、入出金明細、本人確認書類、個人事業主なら開業届や確定申告書をそろえることが基本です。法人は決算書直近二期分も確認してください。時間に余裕を持って、各社の最新の公式情報で条件を確かめてから進めましょう。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>ファクタリングの審査では何が見られますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公的機関に審査基準の記載は見当たりません。各社の公式ページでは、売掛金が実際に存在するか、売掛先に支払い能力があるか、入金予定日はいつか、といった請求書と売掛先に関する点を確認すると書かれています。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>「審査なし」とうたう業者は使えますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>慎重な確認が必要です。アクセルファクターの公式ページは「審査なしで調達できるわけではありません」と記載しています。金融庁は、実態が貸付けにあたる偽装ファクタリングに注意を呼びかけています。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>個人事業主が申し込むときの書類は何ですか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>会社により異なります。QuQuMo onlineは、請求書、入出金明細、代表者の本人確認書類に加え、開業届または確定申告書一式と健康保険証を挙げています。申込先の公式ページで最新の条件を確認してください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>業者が貸金業の登録を受けているか調べる方法はありますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>金融庁のページで案内されている「登録貸金業者情報検索サービス」で確認できます。無登録で貸金業を営むことは刑事罰の対象とされています。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://www.fsa.go.jp/user/factoring.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>金融庁 ファクタリングの利用に関する注意喚起</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://www.fsa.go.jp/ordinary/chuui/kinyu_chuui4.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>金融庁 高額な手数料によるファクタリングに関する注意喚起</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://accelfacter.co.jp/service/factoring/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>アクセルファクター ファクタリングサービス</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://accelfacter.co.jp/service/encashment.php" rel="noopener" target="_blank" data-astro-cid-sgg5joot>アクセルファクター 資金調達の流れ・必要書類</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://no1service.co.jp/factoring-service/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>株式会社No.1 ファクタリングサービス</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://ququmo.net/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>QuQuMo online</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://labol.co.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>ラボル</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://paytner.co.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>ペイトナー</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li><li data-astro-cid-sgg5joot><a href="https://betrading.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>ビートレーディング</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-17）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約8分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/seikyuusho-shiharai/" data-astro-cid-sgg5joot>請求書・資金繰り・法人カードの記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>補助金・助成金の勘定科目と消費税｜計上時期・圧縮記帳・仕訳の例を国税庁の記載で整理 | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="補助金・助成金は消費税の課税対象外（不課税）で、法人は益金、個人事業主は収入に入ります。設備の取得に充てた分は、圧縮記帳（法人税法・所得税法の第42条）で調整できる場合があります。法人と個人事業主の違いを、国税庁と法令の記載で表に整理します。"><link rel="canonical" href="https://soroecho.com/articles/hojokin-kanjoukamoku-shiwake/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="補助金・助成金の勘定科目と消費税｜計上時期・圧縮記帳・仕訳の例を国税庁の記載で整理 | そろえ帳"><meta property="og:description" content="補助金・助成金は消費税の課税対象外（不課税）で、法人は益金、個人事業主は収入に入ります。設備の取得に充てた分は、圧縮記帳（法人税法・所得税法の第42条）で調整できる場合があります。法人と個人事業主の違いを、国税庁と法令の記載で表に整理します。"><meta property="og:url" content="https://soroecho.com/articles/hojokin-kanjoukamoku-shiwake/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/hojokin-kanjoukamoku-shiwake.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="補助金・助成金の勘定科目と消費税｜計上時期・圧縮記帳・仕訳の例を国税庁の記載で整理 — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="補助金・助成金の勘定科目と消費税｜計上時期・圧縮記帳・仕訳の例を国税庁の記載で整理 | そろえ帳"><meta name="twitter:description" content="補助金・助成金は消費税の課税対象外（不課税）で、法人は益金、個人事業主は収入に入ります。設備の取得に充てた分は、圧縮記帳（法人税法・所得税法の第42条）で調整できる場合があります。法人と個人事業主の違いを、国税庁と法令の記載で表に整理します。"><meta name="twitter:image" content="https://soroecho.com/og/hojokin-kanjoukamoku-shiwake.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"補助金・助成金の勘定科目と消費税｜計上時期・圧縮記帳・仕訳の例を国税庁の記載で整理","item":"https://soroecho.com/articles/hojokin-kanjoukamoku-shiwake/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"補助金・助成金の勘定科目と消費税｜計上時期・圧縮記帳・仕訳の例を国税庁の記載で整理","description":"補助金・助成金は消費税の課税対象外（不課税）で、法人は益金、個人事業主は収入に入ります。設備の取得に充てた分は、圧縮記帳（法人税法・所得税法の第42条）で調整できる場合があります。法人と個人事業主の違いを、国税庁と法令の記載で表に整理します。","url":"https://soroecho.com/articles/hojokin-kanjoukamoku-shiwake/","datePublished":"2026-11-19T00:00:00.000Z","dateModified":"2026-11-19T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/hojokin-kanjoukamoku-shiwake/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"補助金・助成金に消費税はかかりますか。","acceptedAnswer":{"@type":"Answer","text":"かかりません。国税庁の消費税法基本通達5-2-15は、国や地方公共団体などから受ける補助金・奨励金・助成金のように、特定の政策目的の実現を図るための給付金は、資産の譲渡等の対価に該当しないとしています。タックスアンサーNo.6157も、国または地方公共団体からの補助金や助成金等を課税の対象とならないもの（不課税）の例に挙げています。"}},{"@type":"Question","name":"補助金で買った設備の消費税は、仕入税額控除できますか。","acceptedAnswer":{"@type":"Answer","text":"課税仕入れに当たり、ほかの要件を満たせば対象です。消費税法基本通達11-2-8は、資産の譲受け等が課税仕入れに当たるかどうかは支出した金銭の源泉を問わず、補助金を充てた場合でも仕入税額控除の規定が適用されるとしています。ただし免税事業者は仕入税額控除を受けられず、適格請求書発行事業者以外の者からの課税仕入れは原則として対象外です。"}},{"@type":"Question","name":"補助金の勘定科目は何にすればよいですか。","acceptedAnswer":{"@type":"Answer","text":"今回確認した国税庁・e-Govの記載には、補助金に付ける科目名を決めた規定は見当たりませんでした。補助金と分かる名前で、売上とは別に記録するのが整理しやすく、「補助金収入」「助成金収入」「雑収入」などが例です。固定資産の取得に充てる分を法人が圧縮記帳する場合の科目名（国庫補助金受贈益、固定資産圧縮損など）も、法令上の指定ではなく例です。"}},{"@type":"Question","name":"圧縮記帳は、どんな補助金で使えますか。","acceptedAnswer":{"@type":"Answer","text":"法人税法第42条は、固定資産の取得または改良に充てるための、国または地方公共団体の補助金・給付金などが対象です。返還を要しないことが事業年度終了の時までに確定し、その時までに交付の目的に適合した固定資産を取得または改良していることが条件で、確定申告書への明細の記載も要ります。人件費や研修費など経費に充てる補助金・助成金は、条文の文言上、対象ではありません。"}},{"@type":"Question","name":"個人事業主も圧縮記帳できますか。","acceptedAnswer":{"@type":"Answer","text":"個人事業主には、所得税法第42条の総収入金額不算入があります。国税庁のタックスアンサーNo.2202によると、固定資産の取得や改良に充てた部分の国庫補助金等を総収入金額に算入せず、「国庫補助金等の総収入金額不算入に関する明細書」を添付した確定申告書を出します。取得費は、実際の金額から不算入にした額を引いた残りです。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>補助金・助成金の勘定科目と消費税｜計上時期・圧縮記帳・仕訳の例を国税庁の記載で整理</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec10qwz5o-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec10qwz5o-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec10qwz5o-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec10qwz5o-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="43" r="132" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>補助金</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>勘定科目</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>補助金・助成金の勘定科目と消費税｜計上時期・圧縮記帳・仕訳の例を国税庁の記載で整理</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-11-19T00:00:00.000Z" data-astro-cid-sgg5joot>2026年11月19日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約13分</p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論補助金助成金そのものに消費税はかからない法人は益金個人事業主は収入に入れ設備に充てた分は圧縮記帳を使える場合がある" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：補助金・助成金そのものに消費税はかからない。法人は益金、個人事業主は収入に入れ、設備に充てた分は圧縮記帳を使える場合がある</a></li><li data-astro-cid-sgg5joot><a href="#消費税補助金は不課税設備を買った分の仕入税額控除は別に判断する" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>消費税：補助金は不課税。設備を買った分の仕入税額控除は別に判断する</a></li><li data-astro-cid-sgg5joot><a href="#収入に入れる時期特例がなければ通常のルール圧縮記帳は確定が分かれ目" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>収入に入れる時期：特例がなければ通常のルール。圧縮記帳は「確定」が分かれ目</a></li><li data-astro-cid-sgg5joot><a href="#圧縮記帳を使える場面と使えない場面" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>圧縮記帳を使える場面と、使えない場面</a></li><li data-astro-cid-sgg5joot><a href="#勘定科目と仕訳の例法人個人事業主免税事業者" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>勘定科目と仕訳の例：法人・個人事業主・免税事業者</a></li><li data-astro-cid-sgg5joot><a href="#助成金雇用関係などの場合" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>助成金（雇用関係など）の場合</a></li><li data-astro-cid-sgg5joot><a href="#申請前決算前のチェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>申請前・決算前のチェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#よくある質問とまとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>よくある質問とまとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論補助金助成金そのものに消費税はかからない法人は益金個人事業主は収入に入れ設備に充てた分は圧縮記帳を使える場合がある">結論：補助金・助成金そのものに消費税はかからない。法人は益金、個人事業主は収入に入れ、設備に充てた分は圧縮記帳を使える場合がある</h2>
+<p>国税庁の消費税法基本通達5-2-15（2026年11月3日取得）は、国や地方公共団体などから受ける補助金・奨励金・助成金のように、特定の政策目的の実現を図るための給付金は、資産の譲渡等の対価に該当しないとしています。受け取った補助金・助成金そのものに消費税はかからず（不課税）、課税売上にも入りません。</p>
+<p>圧縮記帳などの特例を使わなければ、受け取った分は、法人では益金、個人事業主では総収入金額に入ります。ただし、固定資産の取得・改良に充てる国・地方公共団体の補助金等は、条件を満たすと、法人は圧縮記帳（法人税法第42条）、個人事業主は総収入金額不算入（所得税法第42条）の対象になります。</p>
+<p>勘定科目の名前は、今回確認した国税庁・e-Govの記載には、指定が見当たりませんでした。この記事の科目名と仕訳は、出どころの考え方に沿った「例」です。</p>
+<p>法人と個人事業主で、いつ・どの扱いになるかを表にまとめます。</p>
+<table>
+<thead>
+<tr>
+<th>論点</th>
+<th>法人</th>
+<th>個人事業主</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>消費税</td>
+<td>補助金・助成金そのものは不課税。設備を買った分は、課税仕入れなら仕入税額控除の対象</td>
+<td>同じ</td>
+</tr>
+<tr>
+<td>収入に入れる</td>
+<td>益金（法人税法第22条）。計算は一般に公正妥当と認められる会計処理の基準による</td>
+<td>総収入金額（所得税法第36条）。その年において収入すべき金額</td>
+</tr>
+<tr>
+<td>科目の考え方</td>
+<td>売上とは別に、補助金と分かる名前で記録する（例：補助金収入、助成金収入）</td>
+<td>同じ</td>
+</tr>
+<tr>
+<td>圧縮記帳</td>
+<td>法人税法第42条。事業年度末までに返還を要しないことが確定し、同じ時までに固定資産を取得・改良したとき</td>
+<td>所得税法第42条。その年の12月31日までに確定し、取得・改良したとき、総収入金額に算入しない</td>
+</tr>
+<tr>
+<td>年度末までに確定しないとき</td>
+<td>特別勘定（法人税法第43条）</td>
+<td>条件付国庫補助金等（所得税法第43条）</td>
+</tr>
+<tr>
+<td>申告の手続き</td>
+<td>確定申告書に損金算入の明細を記載</td>
+<td>確定申告書に記載し、明細書を添付</td>
+</tr>
+</tbody>
+</table>
+<p>この記事で分かることは次のとおりです。</p>
+<ul>
+<li>補助金・助成金の消費税（不課税）と、設備を買った分の仕入税額控除</li>
+<li>収入に入れる時期と、圧縮記帳が関わる場面</li>
+<li>圧縮記帳を使える補助金と、使えない補助金</li>
+<li>科目名と仕訳の例（法人・個人事業主・免税事業者）</li>
+<li>助成金（雇用関係など）の扱い</li>
+</ul>
+<p>補助金の申請のしかたは、補助金ごとに違います。一例は、<a href="/articles/jizokuka-hojokin-kojin-jigyou/">小規模事業者持続化補助金の個人事業主向け申請手順</a>で整理しています。</p>
+<p>この記事は、国税庁のタックスアンサー（令和8年4月1日現在法令等）・通達・質疑応答事例と、e-Gov法令検索の条文（いずれも2026年11月3日取得）を出どころにしています。税の個別の判断は、税理士または税務署に相談してください。</p>
+<h2 id="消費税補助金は不課税設備を買った分の仕入税額控除は別に判断する">消費税：補助金は不課税。設備を買った分の仕入税額控除は別に判断する</h2>
+<p>国税庁のタックスアンサーと通達（2026年11月3日取得）によると、消費税の扱いは次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>場面</th>
+<th>扱い</th>
+<th>出どころ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>補助金・助成金を受け取る</td>
+<td>資産の譲渡等の対価に該当せず、課税の対象外（不課税）。消費税はかからない</td>
+<td>消費税法基本通達5-2-15、No.6157</td>
+</tr>
+<tr>
+<td>雇用調整助成金のように、経費の支出にあたって補てんを前提に手続きをとる助成金</td>
+<td>これも資産の譲渡等の対価に該当しない</td>
+<td>消費税法基本通達5-2-15 の注</td>
+</tr>
+<tr>
+<td>課税売上割合の計算</td>
+<td>不課税の取引は、分母にも分子にも入れない</td>
+<td>No.6209</td>
+</tr>
+<tr>
+<td>補助金で設備を買う</td>
+<td>課税仕入れに当たれば仕入税額控除の対象。支出した金銭の源泉は問わない</td>
+<td>消費税法基本通達11-2-8、No.6451</td>
+</tr>
+<tr>
+<td>免税事業者</td>
+<td>仕入税額控除を受けられない</td>
+<td>No.6355</td>
+</tr>
+<tr>
+<td>適格請求書発行事業者以外からの仕入れ</td>
+<td>原則として仕入税額控除の対象外</td>
+<td>No.6355</td>
+</tr>
+<tr>
+<td>国、地方公共団体、公共・公益法人等</td>
+<td>補助金などの「特定収入」で賄う課税仕入れ等の消費税額を、仕入控除税額から控除する調整が要る。一般の事業者とは異なる</td>
+<td>No.6495</td>
+</tr>
+</tbody>
+</table>
+<p>つまり、受け取った補助金は、消費税の課税売上には入れません。一方、補助金で機械を買ったときの消費税は、補助金を使ったかどうかとは別に、課税仕入れの要件で判断します。</p>
+<p>仕入税額控除は、実際に仕入れなどをした課税期間に行います。減価償却資産でも、購入した課税期間に、購入価額の全額に対する消費税額が対象になります（No.6355）。</p>
+<p>インボイス制度の下では、仕入税額控除を受けるために、原則として適格請求書等の保存が必要です（No.6355）。設備の購入先が登録事業者かどうかは、<a href="/articles/invoice-touroku-yagou/">インボイスの登録番号と屋号の記事</a>も参考になります。</p>
+<h2 id="収入に入れる時期特例がなければ通常のルール圧縮記帳は確定が分かれ目">収入に入れる時期：特例がなければ通常のルール。圧縮記帳は「確定」が分かれ目</h2>
+<p>法人と個人事業主の基本のルールは、次のとおりです。</p>
+<ul>
+<li>法人：益金の額は、別段の定めがあるものを除き、資産の販売、無償による資産の譲受けなどの取引（資本等取引以外）に係る収益の額で、その額は、別段の定めがあるものを除き、一般に公正妥当と認められる会計処理の基準に従って計算されます（法人税法第22条第2項・第4項）</li>
+<li>個人事業主：総収入金額に算入する金額は、別段の定めがあるものを除き、その年において収入すべき金額です（所得税法第36条第1項）</li>
+</ul>
+<p>補助金の計上時期だけを定めた通達や質疑応答事例は、今回確認した範囲では見つかりませんでした。圧縮記帳などの特例を使わなければ、補助金は法人では益金、個人事業主では総収入金額に入ると読めます。圧縮記帳の条文が「損金の額に算入する」「総収入金額に算入しない」と、特例の形で書かれているためです。</p>
+<p>特例を使う場面では、「返還を要しないことが確定したか」が分かれ目になります。年度末（法人は事業年度終了の時、個人事業主はその年の12月31日）の状況で、扱いは次のように分かれます。</p>
+<table>
+<thead>
+<tr>
+<th>年度末の状況</th>
+<th>法人</th>
+<th>個人事業主</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>返還を要しないことが確定し、交付の目的に合う固定資産も取得・改良済み</td>
+<td>圧縮記帳で、圧縮額を損金に算入できる（法人税法第42条第1項）</td>
+<td>国庫補助金等の額を総収入金額に算入しない（所得税法第42条第1項）</td>
+</tr>
+<tr>
+<td>返還を要しないことが確定していない</td>
+<td>特別勘定を設ける経理で、その金額を損金に算入できる。確定したら取り崩して益金に算入する（法人税法第43条）</td>
+<td>総収入金額に算入しない。返還を要しないことが確定した日の属する年分で、総収入金額に算入する（取得・改良に充てた金額のうち政令で定める金額を除く。所得税法第43条第1項・第2項）</td>
+</tr>
+<tr>
+<td>特例を使わない</td>
+<td>益金に算入</td>
+<td>総収入金額に算入</td>
+</tr>
+</tbody>
+</table>
+<p>「返還を要しないことが確定しているか」の判定について、法人税基本通達10-2-1は、次の一般的な条件が付いていても、判定には関係しないとしています。</p>
+<ul>
+<li>交付の条件に違反した場合には返還しなければならないこと</li>
+<li>一定期間内に相当の収益が生じた場合には返還しなければならないこと</li>
+</ul>
+<p>同じ通達の注は、補助金等に係る予算の執行の適正化に関する法律第15条の規定により交付すべき補助金等の額が確定し、その旨の通知を受けた国庫補助金等は、返還を要しないことが確定したものに該当する、としています。どの通知がこれに当たるかは、補助金ごとの交付要綱や規程で決まるので、補助金の公式資料を確かめてください。</p>
+<h2 id="圧縮記帳を使える場面と使えない場面">圧縮記帳を使える場面と、使えない場面</h2>
+<p>法人税法第42条第1項（e-Gov法令検索、2026年11月3日取得）の要件を、順に並べます。</p>
+<ol>
+<li>固定資産の取得または改良に充てるための、国または地方公共団体の補助金・給付金など（国庫補助金等）の交付を受けた</li>
+<li>その国庫補助金等の返還を要しないことが、事業年度終了の時までに確定した</li>
+<li>事業年度終了の時までに、交付の目的に適合した固定資産を取得または改良した</li>
+<li>その固定資産の帳簿価額を、損金経理で減額した（または、確定した決算で積立金として積み立てるなどの経理をした）</li>
+<li>確定申告書に、損金算入に関する明細を記載した（同条第3項）</li>
+</ol>
+<p>損金に算入できる金額は、その事業年度に交付を受けた国庫補助金等の額に相当する金額（圧縮限度額）の範囲内です。</p>
+<p>個人事業主は、所得税法第42条第1項・第3項と、タックスアンサーNo.2202（令和8年4月1日現在法令等）によると、次のとおりです。</p>
+<ul>
+<li>固定資産の取得や改良に充てるための国庫補助金等で、返還を要しないことがその年12月31日までに確定し、同日までに交付の目的に適合した固定資産の取得・改良をした場合に、その額を総収入金額に算入しない</li>
+<li>確定申告書に適用を受ける旨などを記載し、「国庫補助金等の総収入金額不算入に関する明細書」を添付して、所轄税務署長に提出する</li>
+<li>固定資産の取得費は、実際に要した金額から、総収入金額に算入しなかった国庫補助金等の額を引いた残りになる。減価償却費は、この取得費を基礎に計算する</li>
+</ul>
+<p>確定申告の全体の流れは、<a href="/articles/kojin-jigyou-kakutei-shinkoku-nagare/">個人事業主の確定申告の流れ</a>で整理しています。</p>
+<h3 id="使えない補助金助成金">使えない補助金・助成金</h3>
+<p>次のものは、圧縮記帳や総収入金額不算入の対象になりません。</p>
+<ul>
+<li>経費に充てる補助金・助成金：条文は「固定資産の取得又は改良に充てるための」補助金等を対象としています。人件費・研修費・広告費などに充てるものは、文言上、対象ではありません</li>
+<li>国・地方公共団体以外が交付するもの：法人税法施行令第79条は、国・地方公共団体の補助金・給付金のほかに、一部の独立行政法人（独立行政法人高齢・障害・求職者雇用支援機構、国立研究開発法人新エネルギー・産業技術総合開発機構など）の助成金・補助金を挙げています</li>
+<li>工場誘致条例などに基づく補助金・奨励金のうち、実質的に地方税の減免に代えて交付されたことが明らかなもの（法人税基本通達10-2-4）</li>
+</ul>
+<p>条文や施行令に書かれていない団体が交付する補助金でも、国税庁の質疑応答事例（令和7年8月1日現在の法令・通達等に基づく）は、国の補助金が基金などを通じて間接交付される場合に、補助金交付団体が国に代わって交付事務を行っているに過ぎず、実質的に国から直接交付を受けたものと認められるときは、国庫補助金等に該当すると考えられる、と答えています。</p>
+<p>ただし、この回答は照会に係る事実関係を前提とした一般的な回答で、具体的な取引では異なる課税関係になることがあると、事例に注記されています。</p>
+<h3 id="圧縮記帳で気をつける点">圧縮記帳で気をつける点</h3>
+<p>圧縮記帳で積立金として経理した資産が、除却・廃棄・滅失・譲渡されたときは、その積立金を取り崩して、その事業年度の益金の額に算入します（法人税基本通達10-1-2）。特別勘定の経理は、積立金として積み立てる方法のほか、仮受金等として経理する方法でもよいとされています（同10-1-1）。</p>
+<p>圧縮記帳は、申告書への記載が適用の条件です（法人税法第42条第3項、所得税法第42条第3項）。記載がなくても、やむを得ない事情があると税務署長が認めるときは適用できる場合がありますが（法人税法第42条第4項、所得税法第42条第4項）、これに頼らず、申告の時に記載します。</p>
+<p>自分の補助金が圧縮記帳の対象か、いつ「返還を要しない確定」になるか、どの方式で経理するかは、補助金の交付要綱と決算の時期で変わります。判断に迷うときは、税理士または税務署に相談してください。探し方は、<a href="/articles/zeirishi-sagashikata-hiyou-souba/">税理士の探し方</a>で整理しています。</p>
+<aside class="cta-box"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">弥生株式会社</p><h3 class="cta-box__title">弥生の税理士紹介サービス</h3><p class="cta-box__body">条件に合う税理士を弥生が紹介する、起業・開業ナビの税理士紹介サービス。</p><a class="cta-box__button" href="https://px.a8.net/svt/ejp?a8mat=4BC4QV+DZ3BQ2+35XE+HXD0Y" data-offer="yayoi-zeirishi-shoukai" rel="sponsored nofollow noopener" target="_blank">弥生の税理士紹介サービスの公式サイトへ</a></aside>
+<h2 id="勘定科目と仕訳の例法人個人事業主免税事業者">勘定科目と仕訳の例：法人・個人事業主・免税事業者</h2>
+<p>勘定科目の名前は、今回確認した国税庁・e-Govの記載には指定が見当たりませんでした。ここでは、補助金と分かる名前を使った例を示します。会社や事業者が使っている科目や、会計ソフトの標準の科目に合わせてかまいません。</p>
+<p>次の前提で、税抜経理方式の例を示します。</p>
+<ul>
+<li>機械を1台、200万円（税抜）で購入し、消費税20万円とあわせて220万円を銀行振込で支払った</li>
+<li>この機械の取得に充てる国庫補助金等100万円が、同じ事業年度（個人は同じ年）に返還を要しないことが確定し、入金された</li>
+<li>課税事業者で、購入先は適格請求書発行事業者。仕入税額控除の要件を満たす</li>
+</ul>
+<h3 id="法人の例直接減額方式の圧縮記帳">法人の例（直接減額方式の圧縮記帳）</h3>
+<table>
+<thead>
+<tr>
+<th>手順</th>
+<th>借方</th>
+<th>貸方</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① 機械を購入して支払う</td>
+<td>機械装置 2,000,000／仮払消費税 200,000</td>
+<td>普通預金 2,200,000</td>
+<td>仮払消費税は、課税仕入れの消費税額</td>
+</tr>
+<tr>
+<td>② 補助金が入金される</td>
+<td>普通預金 1,000,000</td>
+<td>国庫補助金受贈益 1,000,000（科目名の例。補助金収入でもよい）</td>
+<td>益金。消費税はかからない</td>
+</tr>
+<tr>
+<td>③ 圧縮記帳をする</td>
+<td>固定資産圧縮損 1,000,000</td>
+<td>機械装置 1,000,000</td>
+<td>損金経理で帳簿価額を減額する（法人税法第42条第1項）。機械装置の帳簿価額は100万円になる</td>
+</tr>
+</tbody>
+</table>
+<p>この例では、②の益金100万円と③の損金100万円が同額なので、補助金を受け取った事業年度の所得は、この取引だけで見ると増えません。圧縮した100万円の分だけ、機械装置の帳簿価額は小さくなります。</p>
+<p>確定申告書には、損金算入の明細を記載します。積立金として積み立てる方法を選ぶ場合の経理は、法人税法第42条第1項の文言（確定した決算で積立金として積み立てる方法）に沿って、税理士に確かめてください。</p>
+<h3 id="個人事業主の例総収入金額不算入">個人事業主の例（総収入金額不算入）</h3>
+<table>
+<thead>
+<tr>
+<th>手順</th>
+<th>借方</th>
+<th>貸方</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① 機械を購入して支払う</td>
+<td>機械装置 2,000,000／仮払消費税 200,000</td>
+<td>普通預金 2,200,000</td>
+<td>税抜経理の例</td>
+</tr>
+<tr>
+<td>② 補助金が入金される</td>
+<td>普通預金 1,000,000</td>
+<td>補助金収入 1,000,000（科目名の例）</td>
+<td>帳簿上の収入。消費税はかからない</td>
+</tr>
+<tr>
+<td>③ 確定申告で調整する</td>
+<td>（申告書と明細書で行う）</td>
+<td></td>
+<td>所得税法第42条により、100万円を総収入金額に算入しない。機械の取得費は、200万円−100万円＝100万円</td>
+</tr>
+</tbody>
+</table>
+<p>③で、帳簿のどの科目をどう動かすかと、決算書のどの欄に書くかは、今回確認した国税庁の記載には書かれていませんでした。会計ソフトの手引きか税理士に確かめてください。</p>
+<h3 id="免税事業者税込経理の例">免税事業者・税込経理の例</h3>
+<p>免税事業者は、税抜経理方式で経理している場合でも、法人税の所得金額は税込経理方式で計算します（法人）。個人の免税事業者は、税込経理方式を適用します（No.6905、No.6909）。</p>
+<p>上の前提を免税事業者に当てはめると、機械装置は消費税込みの220万円で記録し、仮払消費税は使いません。免税事業者は仕入税額控除を受けられないので（No.6355）、消費税20万円は取得価額の一部になります。補助金100万円を圧縮記帳すると、帳簿価額は120万円です。</p>
+<h3 id="事業の売上と混ぜない">事業の売上と混ぜない</h3>
+<p>補助金・助成金は消費税の課税売上ではないので、売上高とは別の科目に分けておくと、消費税の申告で課税売上と不課税を区別しやすくなります。課税売上割合の計算でも、不課税の取引は分母にも分子にも入れません（No.6209）。</p>
+<h2 id="助成金雇用関係などの場合">助成金（雇用関係など）の場合</h2>
+<p>助成金も、消費税の扱いは補助金と同じです。消費税法基本通達5-2-15は、題名を「補助金、奨励金、助成金等」とし、注で、雇用調整助成金・職業転換給付金・身体障害者等能力開発助成金のように、経費の支出に当たってあらかじめ補てんを前提に手続きをとる助成金でも、資産の譲渡等の対価に該当しないとしています。</p>
+<p>法人税・所得税では、人件費・賃金・職業訓練費などの経費に充てる助成金は、固定資産の取得に充てるものではないので、圧縮記帳の対象になりません。受け取った分は、法人は益金、個人事業主は総収入金額に入ります。科目は、例として「助成金収入」です。</p>
+<table>
+<thead>
+<tr>
+<th>場面</th>
+<th>借方</th>
+<th>貸方</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>助成金が入金される（例）</td>
+<td>普通預金</td>
+<td>助成金収入</td>
+<td>消費税はかからない（不課税）。計上する時期は、助成金ごとの支給決定の内容と決算の時期を踏まえて、税理士に確かめる</td>
+</tr>
+</tbody>
+</table>
+<h2 id="申請前決算前のチェックリスト">申請前・決算前のチェックリスト</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 受け取る補助金・助成金が、固定資産の取得・改良に充てるものか、経費に充てるものかを分けた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 交付元が、国・地方公共団体か、それ以外かを確かめた（それ以外は、令第79条の列挙や、実質が国の補助金かどうかを確かめる）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 返還を要しないことが確定する時期（確定通知など）を、交付要綱や規程で確かめた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 圧縮記帳を使うときは、事業年度末（個人は12月31日）までに固定資産を取得した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 確定申告書に、損金算入の明細または総収入金額不算入の記載・明細書を付ける準備をした</li>
+<li class="task-list-item"><input type="checkbox" disabled> 補助金・助成金は、売上とは別の科目に分けて記録した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 購入先が適格請求書発行事業者かを確かめ、請求書等を保存した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 免税事業者か課税事業者かで、税込経理か税抜経理かを確かめた</li>
+</ul>
+<h2 id="よくある質問とまとめ">よくある質問とまとめ</h2>
+<h3 id="補助金の勘定科目は決まっていますか">補助金の勘定科目は決まっていますか</h3>
+<p>今回確認した国税庁・e-Govの記載には、補助金に付ける科目名を決めた規定は見当たりませんでした。この記事の「補助金収入」「助成金収入」「国庫補助金受贈益」「固定資産圧縮損」は、例です。実際の科目は、会社や事業者の科目表と、会計ソフトの設定に合わせてください。</p>
+<h3 id="圧縮記帳をしないとどうなりますか">圧縮記帳をしないとどうなりますか</h3>
+<p>特例を使わなければ、補助金は法人では益金、個人事業主では総収入金額に入ります。設備を買った年度（年）に、補助金の分だけ所得が増える形になります。圧縮記帳を使うかどうかや、特別勘定にするかどうかは、条件と申告の手続きを確かめて、税理士に相談して決めます。</p>
+<h3 id="まとめ">まとめ</h3>
+<p>補助金・助成金そのものは、消費税法基本通達5-2-15により資産の譲渡等の対価に該当せず、消費税はかかりません（不課税）。補助金で買った設備の消費税は、課税仕入れの要件を満たせば、仕入税額控除の対象です（同11-2-8）。免税事業者は仕入税額控除を受けられません。</p>
+<p>受け取った分は、法人は益金、個人事業主は総収入金額に入ります。固定資産の取得・改良に充てる国・地方公共団体の補助金等は、返還を要しないことが年度末までに確定し、同じ時までに取得した場合に、法人は圧縮記帳（法人税法第42条）、個人事業主は総収入金額不算入（所得税法第42条）を使えます。確定していないときは、特別勘定（法人税法第43条）や条件付国庫補助金等（所得税法第43条）の定めがあります。</p>
+<p>科目名は法令上の指定が見当たらず、例として示しました。計上時期、圧縮記帳の可否、経理の方式は、補助金の交付要綱と決算の時期で変わるので、税理士または税務署に相談してください。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>補助金・助成金に消費税はかかりますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>かかりません。国税庁の消費税法基本通達5-2-15は、国や地方公共団体などから受ける補助金・奨励金・助成金のように、特定の政策目的の実現を図るための給付金は、資産の譲渡等の対価に該当しないとしています。タックスアンサーNo.6157も、国または地方公共団体からの補助金や助成金等を課税の対象とならないもの（不課税）の例に挙げています。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>補助金で買った設備の消費税は、仕入税額控除できますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>課税仕入れに当たり、ほかの要件を満たせば対象です。消費税法基本通達11-2-8は、資産の譲受け等が課税仕入れに当たるかどうかは支出した金銭の源泉を問わず、補助金を充てた場合でも仕入税額控除の規定が適用されるとしています。ただし免税事業者は仕入税額控除を受けられず、適格請求書発行事業者以外の者からの課税仕入れは原則として対象外です。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>補助金の勘定科目は何にすればよいですか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>今回確認した国税庁・e-Govの記載には、補助金に付ける科目名を決めた規定は見当たりませんでした。補助金と分かる名前で、売上とは別に記録するのが整理しやすく、「補助金収入」「助成金収入」「雑収入」などが例です。固定資産の取得に充てる分を法人が圧縮記帳する場合の科目名（国庫補助金受贈益、固定資産圧縮損など）も、法令上の指定ではなく例です。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>圧縮記帳は、どんな補助金で使えますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>法人税法第42条は、固定資産の取得または改良に充てるための、国または地方公共団体の補助金・給付金などが対象です。返還を要しないことが事業年度終了の時までに確定し、その時までに交付の目的に適合した固定資産を取得または改良していることが条件で、確定申告書への明細の記載も要ります。人件費や研修費など経費に充てる補助金・助成金は、条文の文言上、対象ではありません。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>個人事業主も圧縮記帳できますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>個人事業主には、所得税法第42条の総収入金額不算入があります。国税庁のタックスアンサーNo.2202によると、固定資産の取得や改良に充てた部分の国庫補助金等を総収入金額に算入せず、「国庫補助金等の総収入金額不算入に関する明細書」を添付した確定申告書を出します。取得費は、実際の金額から不算入にした額を引いた残りです。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/law/tsutatsu/kihon/shohi/05/02.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 消費税法基本通達 第5章第2節 資産の譲渡の範囲（5-2-15 補助金、奨励金、助成金等）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/law/tsutatsu/kihon/shohi/11/02.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 消費税法基本通達 第11章第2節（11-2-8 保険金等による資産の譲受け等）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6157.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.6157 課税の対象とならないもの(不課税)の具体例</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6209.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.6209 非課税と不課税の違い</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6355.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.6355 課税売上げと課税仕入れ</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6451.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.6451 仕入税額控除の対象となるもの</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6495.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.6495 国、地方公共団体や公共・公益法人等に特定収入がある場合の仕入控除税額の調整</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6905.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.6905 税抜経理と税込経理の選択適用(法人の場合)</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6909.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.6909 税抜経理と税込経理の選択適用(個人の場合)</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2202.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.2202 国庫補助金等を受け取ったとき</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/law/tsutatsu/kihon/hojin/10/10_01.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 法人税基本通達 第10章第1節 圧縮記帳の通則</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/law/tsutatsu/kihon/hojin/10/10_02.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 法人税基本通達 第10章第2節 国庫補助金等で取得した資産の圧縮記帳</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/law/shitsugi/hojin/07/11.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 質疑応答事例（法人税）間接交付された国又は地方公共団体の補助金で取得した固定資産の圧縮記帳の適用について</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://laws.e-gov.go.jp/law/340AC0000000034" rel="noopener" target="_blank" data-astro-cid-sgg5joot>e-Gov法令検索 法人税法（第22条、第42条、第43条）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://laws.e-gov.go.jp/law/340CO0000000097" rel="noopener" target="_blank" data-astro-cid-sgg5joot>e-Gov法令検索 法人税法施行令（第79条 国庫補助金等の範囲）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://laws.e-gov.go.jp/law/340AC0000000033" rel="noopener" target="_blank" data-astro-cid-sgg5joot>e-Gov法令検索 所得税法（第36条、第42条、第43条）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://www.yayoi-kk.co.jp/kigyo/zeirishi-shoukai/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>弥生 税理士紹介サービス（起業・開業ナビ）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約8分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/zeirishi/" data-astro-cid-sgg5joot>税理士に頼むの記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

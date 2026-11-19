@@ -1,0 +1,655 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>省力化投資補助金（カタログ注文型）の申請方法｜期限・補助率・個人事業主・一般型との違い | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="カタログ注文型は、登録された製品を選び、販売事業者と共同で電子申請する補助金です。公募要領（第12版）では2027年3月末頃まで随時受付、補助率は1/2以下、補助上限額は従業員数で500万〜1,000万円（賃上げ要件で750万〜1,500万円）。個人事業主も対象です。"><link rel="canonical" href="https://soroecho.com/articles/shoryokuka-catalog-shinsei/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="省力化投資補助金（カタログ注文型）の申請方法｜期限・補助率・個人事業主・一般型との違い | そろえ帳"><meta property="og:description" content="カタログ注文型は、登録された製品を選び、販売事業者と共同で電子申請する補助金です。公募要領（第12版）では2027年3月末頃まで随時受付、補助率は1/2以下、補助上限額は従業員数で500万〜1,000万円（賃上げ要件で750万〜1,500万円）。個人事業主も対象です。"><meta property="og:url" content="https://soroecho.com/articles/shoryokuka-catalog-shinsei/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/shoryokuka-catalog-shinsei.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="省力化投資補助金（カタログ注文型）の申請方法｜期限・補助率・個人事業主・一般型との違い — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="省力化投資補助金（カタログ注文型）の申請方法｜期限・補助率・個人事業主・一般型との違い | そろえ帳"><meta name="twitter:description" content="カタログ注文型は、登録された製品を選び、販売事業者と共同で電子申請する補助金です。公募要領（第12版）では2027年3月末頃まで随時受付、補助率は1/2以下、補助上限額は従業員数で500万〜1,000万円（賃上げ要件で750万〜1,500万円）。個人事業主も対象です。"><meta name="twitter:image" content="https://soroecho.com/og/shoryokuka-catalog-shinsei.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"省力化投資補助金（カタログ注文型）の申請方法｜期限・補助率・個人事業主・一般型との違い","item":"https://soroecho.com/articles/shoryokuka-catalog-shinsei/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"省力化投資補助金（カタログ注文型）の申請方法｜期限・補助率・個人事業主・一般型との違い","description":"カタログ注文型は、登録された製品を選び、販売事業者と共同で電子申請する補助金です。公募要領（第12版）では2027年3月末頃まで随時受付、補助率は1/2以下、補助上限額は従業員数で500万〜1,000万円（賃上げ要件で750万〜1,500万円）。個人事業主も対象です。","url":"https://soroecho.com/articles/shoryokuka-catalog-shinsei/","datePublished":"2026-11-19T00:00:00.000Z","dateModified":"2026-11-19T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/shoryokuka-catalog-shinsei/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"カタログ注文型の申請はいつまでできますか。","acceptedAnswer":{"@type":"Answer","text":"公募要領（第12版・令和8年10月20日改訂、2026年11月3日取得）では、令和9年3月末頃までの間に補助事業の申請を受け付けるとされています。事務局のスケジュールページでは、2024年6月25日から随時受付中で、公募回ごとの締切はありません。受付終了の時期は事務局のホームページで公開されるとされているので、申請の前に確かめてください。"}},{"@type":"Question","name":"補助率と補助上限額はいくらですか。","acceptedAnswer":{"@type":"Answer","text":"補助率は1/2以下です。補助上限額は申請時の従業員数で決まり、5人以下500万円、6〜20人750万円、21人以上1,000万円です。事業場内最低賃金を3.0％以上、給与支給総額を6.0％以上増やす賃上げ目標を立てると、750万円・1,000万円・1,500万円に上がります。目標を達成できなかったときは、引き上げなしの額に減額されます。"}},{"@type":"Question","name":"個人事業主でも申請できますか。","acceptedAnswer":{"@type":"Answer","text":"できます。公募要領は、補助対象者に個人事業主を含むとしています。個人事業主は、確定申告書の控え（第一表）と所得税の納税証明書（その2）を直近1期分出します。常勤従業員がいない場合は事業実態を示す書類が追加で要り、賃上げによる補助上限額の引き上げは使えません。"}},{"@type":"Question","name":"交付決定の前に製品を発注してもよいですか。","acceptedAnswer":{"@type":"Answer","text":"いけません。公募要領は、交付決定前に購入した省力化製品や、交付決定前に発生した導入費用を補助対象外とし、事前着手はいかなる理由でも認められないとしています。契約・発注は、交付決定通知を受けてから行います。"}},{"@type":"Question","name":"カタログ注文型と一般型は何が違いますか。","acceptedAnswer":{"@type":"Answer","text":"カタログ注文型は、事務局のカタログに登録された汎用製品を選んで導入します。一般型は、個別の現場や事業内容に合わせた設備導入・システム構築が対象で、補助上限額は最大1億円です。一般型は公募回制です。事務局のスケジュール（2026年11月3日取得）では、第9回は2026年11月4日に公募開始、12月下旬に申請締切の予定とされていました。最新の日程は事務局のサイトで確かめてください。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>省力化投資補助金（カタログ注文型）の申請方法｜期限・補助率・個人事業主・一般型との違い</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1y34fof-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient></defs><rect width="400" height="225" fill="url(#ec1y34fof-g)" data-astro-cid-yuatfsof></rect><circle cx="371" cy="62" r="60.199999999999996" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="371" cy="62" r="94.60000000000001" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="371" cy="62" r="129" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="371" cy="62" r="163.4" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.2" data-astro-cid-yuatfsof></circle><circle cx="371" cy="62" r="172" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>中小企業省力化投…</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>カタログ</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--services">開業・法人サービス</span><h1 data-astro-cid-sgg5joot>省力化投資補助金（カタログ注文型）の申請方法｜期限・補助率・個人事業主・一般型との違い</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-11-19T00:00:00.000Z" data-astro-cid-sgg5joot>2026年11月19日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約21分</p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論製品と販売事業者を選び事業者が共同で電子申請する受付は2027年3月末頃まで随時" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：製品と販売事業者を選び、事業者が共同で電子申請する。受付は2027年3月末頃まで随時</a></li><li data-astro-cid-sgg5joot><a href="#カタログ注文型と一般型の違い登録製品を選ぶか現場に合わせて設備を作るか" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>カタログ注文型と一般型の違い：登録製品を選ぶか、現場に合わせて設備を作るか</a></li><li data-astro-cid-sgg5joot><a href="#いつまで申請できるか随時受付で受付の見込みは2027年3月末頃まで" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>いつまで申請できるか：随時受付で、受付の見込みは2027年3月末頃まで</a></li><li data-astro-cid-sgg5joot><a href="#補助率と補助上限額従業員数で決まる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>補助率と補助上限額：従業員数で決まる</a></li><li data-astro-cid-sgg5joot><a href="#対象になる人個人事業主も申請できる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>対象になる人：個人事業主も申請できる</a></li><li data-astro-cid-sgg5joot><a href="#事業者と販売事業者の分担申請システムで誰が何を入力するか" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>事業者と販売事業者の分担：申請システムで誰が何を入力するか</a></li><li data-astro-cid-sgg5joot><a href="#提出書類個人事業主と法人で違う" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>提出書類：個人事業主と法人で違う</a></li><li data-astro-cid-sgg5joot><a href="#交付決定の前後でやってはいけないこと" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>交付決定の前後でやってはいけないこと</a></li><li data-astro-cid-sgg5joot><a href="#補助金を受け取るまでとその後の3年間" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>補助金を受け取るまでと、その後の3年間</a></li><li data-astro-cid-sgg5joot><a href="#経理と税務圧縮記帳の扱い" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>10</span>経理と税務：圧縮記帳の扱い</a></li><li data-astro-cid-sgg5joot><a href="#申請前のチェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>11</span>申請前のチェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#よくある質問とまとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>12</span>よくある質問とまとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論製品と販売事業者を選び事業者が共同で電子申請する受付は2027年3月末頃まで随時">結論：製品と販売事業者を選び、事業者が共同で電子申請する。受付は2027年3月末頃まで随時</h2>
+<p>中小企業省力化投資補助金（カタログ注文型）は、事務局のカタログに登録された汎用製品（券売機・自動精算機・配膳ロボットなど）を選び、その製品を扱う登録済みの販売事業者と共同で交付申請する補助金です。事務局のサイトに申請の入口はなく、販売事業者からの招待メールで始まります。</p>
+<p>公募要領（第12版・令和8年10月20日改訂、2026年11月3日取得）によると、申請は2027年3月末頃（令和9年3月末頃）まで随時受け付けられ、公募回ごとの締切はありません。補助率は1/2以下で、補助上限額は従業員数で決まります。個人事業主も対象です。</p>
+<p>いちばん注意するのは順番です。交付決定の前に契約・発注すると補助対象外になります。補助金は事業が終わってからの精算払いなので、代金は先に事業者が払います。</p>
+<p>申請から入金までの流れと、誰が担当するかを表にしました。担当の「事業者」は、補助を受ける中小企業・個人事業主です。</p>
+<table>
+<thead>
+<tr>
+<th>順番</th>
+<th>やること</th>
+<th>担当</th>
+<th>時期・期限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>GビズIDプライムを取得する</td>
+<td>事業者</td>
+<td>申請の前。審査はオンライン申請で最短即日、書類申請で最大1か月</td>
+</tr>
+<tr>
+<td>2</td>
+<td>製品カタログから導入する製品を選ぶ</td>
+<td>事業者</td>
+<td>申請の前</td>
+</tr>
+<tr>
+<td>3</td>
+<td>製品を扱う販売事業者を選んで連絡し、事業計画を一緒に作る</td>
+<td>事業者が連絡、販売事業者が要件を確認</td>
+<td>申請の前</td>
+</tr>
+<tr>
+<td>4</td>
+<td>共同で交付申請する（電子申請）</td>
+<td>事業者と販売事業者</td>
+<td>随時。招待メールのURLは7日間有効</td>
+</tr>
+<tr>
+<td>5</td>
+<td>審査を受け、採択と同時に交付決定</td>
+<td>事務局</td>
+<td>申請から概ね1〜2か月</td>
+</tr>
+<tr>
+<td>6</td>
+<td>契約・納品・検収・請求・支払（銀行振込）をする</td>
+<td>事業者と販売事業者</td>
+<td>交付決定日から原則12か月以内。交付決定より前の契約・発注は対象外</td>
+</tr>
+<tr>
+<td>7</td>
+<td>実績報告を出す</td>
+<td>事業者が作成、販売事業者が確認して提出</td>
+<td>補助事業実施期間の内</td>
+</tr>
+<tr>
+<td>8</td>
+<td>補助額の確定、精算払請求、入金</td>
+<td>事務局が確定、事業者が請求</td>
+<td>実績報告のあと</td>
+</tr>
+<tr>
+<td>9</td>
+<td>効果報告を出す</td>
+<td>事業者</td>
+<td>補助事業の終了後3年間、毎年</td>
+</tr>
+</tbody>
+</table>
+<p>GビズIDの公式ページ（2026年11月3日取得）によると、プライムの審査はオンライン申請（マイナンバーカードと、読み取りできるスマートフォンが必要）で最短即日、書類申請で最大1か月です。取得の手順は<a href="/articles/gbizid-prime-shutoku/">GビズIDプライムの取得方法</a>で整理しています。</p>
+<p>この記事で分かることは次のとおりです。</p>
+<ul>
+<li>カタログ注文型と一般型の違い</li>
+<li>申請の受付期間（いつまでか）</li>
+<li>補助率・補助上限額と、賃上げ要件</li>
+<li>個人事業主が出す書類と、事業者・販売事業者の分担</li>
+<li>交付決定の前後でやってはいけないこと、入金までと効果報告</li>
+</ul>
+<p>この記事は、2026年11月3日に事務局サイト（shoryokuka.smrj.go.jp）で取得した内容です。制度は随時更新されるので、申請の前に最新の公募要領を確かめてください。</p>
+<p>2026年3月19日に制度が改定され、金額と要件が変わりました。改定前（2026年3月16日17:00までに提出され、不備なく受理された申請）の補助上限額は、5人以下200万円、6〜20人500万円、21人以上1,000万円です。それ以前の日付の資料を読むときは、どちらの金額かを確かめてください。</p>
+<h2 id="カタログ注文型と一般型の違い登録製品を選ぶか現場に合わせて設備を作るか">カタログ注文型と一般型の違い：登録製品を選ぶか、現場に合わせて設備を作るか</h2>
+<p>事務局のトップページと「一般型とは」（2026年11月3日取得）によると、中小企業省力化投資補助金には「カタログ注文型」と「一般型」の2つの類型があります。違いは次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>比べる点</th>
+<th>カタログ注文型</th>
+<th>一般型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>補助の対象</td>
+<td>カタログに登録された汎用製品</td>
+<td>個別の現場や事業内容に合わせた設備導入・システム構築</td>
+</tr>
+<tr>
+<td>補助上限額</td>
+<td>5人以下500万円、6〜20人750万円、21人以上1,000万円（賃上げ要件で750万・1,000万・1,500万円）</td>
+<td>5人以下750万円、6〜20人1,500万円、21〜50人3,000万円、51〜100人5,000万円、101人以上8,000万円（賃上げ要件で1,000万〜1億円）</td>
+</tr>
+<tr>
+<td>補助率</td>
+<td>1/2以下</td>
+<td>中小企業1/2（最低賃金引き上げ特例で2/3）、小規模企業者・小規模事業者・再生事業者2/3</td>
+</tr>
+<tr>
+<td>受付の方法</td>
+<td>随時受付（2027年3月末頃まで）。販売事業者の招待で始める</td>
+<td>公募回制。2026年11月3日時点の事務局の案内では、第9回は11月4日に公募開始・12月下旬に申請締切の予定</td>
+</tr>
+<tr>
+<td>補助事業の期間</td>
+<td>交付決定日から原則12か月以内</td>
+<td>交付決定日から18か月以内（採択発表日から20か月以内）</td>
+</tr>
+<tr>
+<td>労働生産性の目標</td>
+<td>年平均成長率3.0％以上（3年間）</td>
+<td>年平均成長率4.0％以上</td>
+</tr>
+</tbody>
+</table>
+<p>一般型の欄は、事務局の「一般型とは」と一般型スケジュールの記載にとどめています。一般型の詳しい要件は、一般型の公募要領で確かめてください。</p>
+<p>カタログ注文型のよくあるご質問（2026年11月3日取得）には、次の3点が書かれています。</p>
+<ul>
+<li>カタログに掲載されていない製品を買った場合は、補助対象外です</li>
+<li>一般型との併用は、同じ補助対象経費には使えません。別の補助対象経費なら併用できます</li>
+<li>新規事業（新規創業や、既存企業の新事業展開）は、省力化の効果を確かめにくいため補助対象外です</li>
+</ul>
+<p>一般型については、カタログ注文型に登録されているカテゴリの製品を導入する場合は審査の際に考慮される、と「一般型とは」に書かれています。</p>
+<h3 id="カタログにどんな製品があるか">カタログにどんな製品があるか</h3>
+<p>事務局の製品カテゴリ（令和8年10月8日付）によると、2026年10月2日時点で製品カテゴリは208件、製品登録は3,041件です。非製造業向けでは、券売機が99件、自動精算機が28件、配膳ロボットが3件登録されています。</p>
+<p>製品は、事務局サイトの「製品カタログ検索」と「販売事業者検索」で探します。販売事業者は、対象製品ごとに載っている「販売事業者一覧」から選び、掲載されたサポート窓口の電話番号かメールアドレスへ連絡します（申請・手続きの流れ STEP3）。</p>
+<h2 id="いつまで申請できるか随時受付で受付の見込みは2027年3月末頃まで">いつまで申請できるか：随時受付で、受付の見込みは2027年3月末頃まで</h2>
+<p>カタログ注文型は、公募回ごとの締切がありません。事務局のスケジュールページ（2026年11月3日取得）は、応募・交付申請を2024年6月25日から「随時受付中」とし、「当面の間、随時受付を行います（メンテナンス期間を除く）」と書いています。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>内容</th>
+<th>出どころ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>申請の受付</td>
+<td>2024年6月25日から随時受付（当面の間）</td>
+<td>事務局のスケジュールページ</td>
+</tr>
+<tr>
+<td>受付の見込み</td>
+<td>令和9年3月末頃までの間に補助事業の申請を受け付ける</td>
+<td>公募要領 1-4（P.5）、手引きP.6</td>
+</tr>
+<tr>
+<td>受付終了の公表</td>
+<td>申請受付時期と終了時期は事務局のホームページで公開する</td>
+<td>公募要領 5-4（P.23）</td>
+</tr>
+<tr>
+<td>審査の目安</td>
+<td>採択・交付決定は申請から概ね1〜2か月</td>
+<td>スケジュールページ、手引きP.6</td>
+</tr>
+<tr>
+<td>補助事業の期間</td>
+<td>交付決定日から原則12か月以内</td>
+<td>公募要領 3-1（P.14）</td>
+</tr>
+<tr>
+<td>登録の有効期間</td>
+<td>登録された製品・製造事業者・販売事業者は令和9年9月末まで</td>
+<td>公募要領 1-4（P.5）</td>
+</tr>
+</tbody>
+</table>
+<p>「2027年3月末頃」は、「頃」と書かれた見込みの日付で、確定した締切日ではありません。受付終了の時期が公表されたら、事務局サイトの案内に従ってください。予算の状況による受付終了の有無は、今回確認した公式資料には書かれていませんでした。</p>
+<p>2026年3月19日の改定の前は、受付期間は「2026年9月末頃まで」でした（制度改定のご案内、2026年11月3日取得）。改定で2027年3月末頃に延びたので、改定前の資料に「9月末まで」とあれば、それは改定前の期間です。</p>
+<p>期限は申請日ではなく、交付決定日から数えます。交付決定の後に契約・納品・支払・実績報告を終えるまでが原則12か月以内で、期限までに完了できなさそうなときは、事務局へ報告して承認を得る必要があります（補助事業の実施及び実績報告の手引き P.9）。</p>
+<p>一般型は公募回制で、事務局の一般型スケジュール（2026年11月3日取得）では、第8回が2026年10月16日17:00に締め切られました。第9回は、2026年11月4日（水）公募開始、12月上旬申請受付開始、12月下旬申請締切の予定で、詳細は後日お知らせとされていました（2026年11月3日時点）。申請の前に、事務局の最新のスケジュールで確かめてください。</p>
+<h2 id="補助率と補助上限額従業員数で決まる">補助率と補助上限額：従業員数で決まる</h2>
+<p>公募要領（第12版）2-1（P.7）によると、補助率は1/2以下で、補助上限額は申請時点の従業員数で決まります。</p>
+<table>
+<thead>
+<tr>
+<th>従業員数</th>
+<th>補助上限額</th>
+<th>賃上げ要件を満たす場合</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5人以下</td>
+<td>500万円</td>
+<td>750万円</td>
+</tr>
+<tr>
+<td>6〜20人</td>
+<td>750万円</td>
+<td>1,000万円</td>
+</tr>
+<tr>
+<td>21人以上</td>
+<td>1,000万円</td>
+<td>1,500万円</td>
+</tr>
+</tbody>
+</table>
+<p>ここでいう従業員は、中小企業基本法上の「常時使用する従業員」です。日々雇い入れられる人、2か月以内の期間を定めて使う人、季節的業務に4か月以内の期間を定めて使う人、試みの使用期間中の人は含まれません（公募要領 2-3）。</p>
+<p>補助率が「1/2以下」と書かれているのは、製品ごとに補助上限額が設定されているためです。製品の購入価格が、その補助上限額の2倍を上回ると、補助率は1/2未満になります（公募要領 2-1 ※3）。</p>
+<h3 id="補助金の額の計算">補助金の額の計算</h3>
+<p>応募・交付申請の手引き（P.30〜31）の計算式を当てはめると、補助金申請可能額は次のように決まります。消費税は補助対象外なので（公募要領 2-2）、金額は税抜で考えます。</p>
+<ul>
+<li>A：「製品本体の補助上限額×数量」と「製品本体購入費用の合計×1/2」の低いほう</li>
+<li>導入・設定費用の補助対象経費：実際の負担額と「製品本体購入費用の合計の2割」の低いほう</li>
+<li>B：「製品本体の補助上限額×数量の2割」と「導入・設定費用の補助対象経費×1/2」の低いほう</li>
+<li>補助金申請可能額＝A＋B。ただし、従業員数による補助上限額（上の表）が上限</li>
+</ul>
+<p>計算の例を2つ示します。製品に登録された補助上限額を100万円、導入・設定費用の実際の負担額を30万円と仮定した、手引きの式に当てはめた例で、実際の製品の数字ではありません。</p>
+<table>
+<thead>
+<tr>
+<th>例</th>
+<th>製品本体（税抜）</th>
+<th>A</th>
+<th>導入・設定費用の補助対象経費</th>
+<th>B</th>
+<th>補助金申請可能額</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td>200万円</td>
+<td>100万円</td>
+<td>30万円</td>
+<td>15万円</td>
+<td>115万円</td>
+</tr>
+<tr>
+<td>②</td>
+<td>300万円</td>
+<td>100万円</td>
+<td>30万円</td>
+<td>15万円</td>
+<td>115万円</td>
+</tr>
+</tbody>
+</table>
+<p>②は、製品本体が補助上限額の2倍（200万円）を上回るので、補助率が1/2未満になる例です。消費税を除く事業者の実質の負担は、①が115万円、②が215万円です。実際の補助上限額は製品ごとに登録されているので、販売事業者に確かめてください。</p>
+<p>補助金申請額は、補助金申請可能額を上限に、事業者が申請マイページで入力します。手引き（P.86）には、この額が交付決定額になるので、入力誤りに十分注意するよう書かれています。</p>
+<h3 id="製品と導入経費の条件">製品と導入経費の条件</h3>
+<p>公募要領 2-2（P.9〜10）によると、補助対象経費は「製品本体価格」と「導入経費」の2つです。条件は次のとおりです。</p>
+<ul>
+<li>製品本体の購入費は、一部のカテゴリを除いて単価50万円以上であること</li>
+<li>導入経費は、設置作業・運搬費・動作確認・マスタ設定などの費用で、上限は製品本体価格の2割</li>
+<li>中古品、対外的に無償で提供されるもの、交付決定前に購入した製品は対象外</li>
+<li>補助金の申請や報告にかかる申請代行費、移動交通費・宿泊費、委託・外注費は導入経費に含まれない</li>
+<li>1回の交付申請で申請できる製品は1種類。同じ製品を複数台申請することはできる</li>
+</ul>
+<h3 id="賃上げ要件補助上限額を引き上げるときだけ">賃上げ要件：補助上限額を引き上げるときだけ</h3>
+<p>補助上限額を上の表の右の列（賃上げ要件を満たす場合）に引き上げるには、次の2つを、補助事業実施期間の終了時点で達成する見込みの事業計画を作ります（公募要領 2-1（2）②、P.7〜8）。</p>
+<ul>
+<li>事業場内最低賃金（補助事業を実施する事業場で最も低い賃金）を、申請時より3.0％以上増やす</li>
+<li>給与支給総額（所定内給与のみ。賞与・福利厚生費・法定福利費・退職金・役員報酬は含まない）を、申請時より6.0％以上増やす</li>
+</ul>
+<p>申請時に、賃金引き上げの計画を従業員に表明していることが必要です。達成できなかったときは、自己の責によらない正当な理由がなければ、引き上げなしの補助上限額に合わせて補助額が減額されます。</p>
+<p>達成のために報告の期間だけ賃金を上げ、実績報告のあとに下げることは認められません。従業員がいない事業者は賃金引き上げ目標を立てられないため、補助上限額を引き上げて申請することはできません（手引き P.11）。</p>
+<h3 id="2回目以降の申請">2回目以降の申請</h3>
+<p>補助上限額に達するまでは、複数回の交付申請ができます。事務局の「2回目以降の交付申請」（2026年11月3日取得）によると、2回目以降は、それ以前の申請の補助金の支払いが終わってから申請します。</p>
+<p>累計の上限は、申請時に決まる補助上限額の2倍から、前回までの累計交付額を引いた額です。労働生産性の目標は年平均成長率4.0％以上、事業場内最低賃金は前回の交付申請時から3.5％以上の引き上げなどが要件に加わります。</p>
+<h2 id="対象になる人個人事業主も申請できる">対象になる人：個人事業主も申請できる</h2>
+<p>公募要領 2-3（P.11）は、日本国内で事業を営む中小企業等を対象とし、個人事業主を含むと書いています。中小企業者の条件は、「資本金又は従業員数（常勤）が下表の数字以下となる会社又は個人」です。</p>
+<table>
+<thead>
+<tr>
+<th>業種</th>
+<th>資本金</th>
+<th>常勤従業員数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>製造業、建設業、運輸業</td>
+<td>3億円</td>
+<td>300人</td>
+</tr>
+<tr>
+<td>卸売業</td>
+<td>1億円</td>
+<td>100人</td>
+</tr>
+<tr>
+<td>サービス業（ソフトウェア業、情報処理サービス業、旅館業を除く）</td>
+<td>5,000万円</td>
+<td>100人</td>
+</tr>
+<tr>
+<td>小売業</td>
+<td>5,000万円</td>
+<td>50人</td>
+</tr>
+<tr>
+<td>旅館業</td>
+<td>5,000万円</td>
+<td>200人</td>
+</tr>
+<tr>
+<td>ソフトウェア業、情報処理サービス業</td>
+<td>3億円</td>
+<td>300人</td>
+</tr>
+<tr>
+<td>その他の業種</td>
+<td>3億円</td>
+<td>300人</td>
+</tr>
+</tbody>
+</table>
+<p>ゴム製品製造業など、表にない区分もあります。区分と、みなし大企業・みなし同一法人の判定は、公募要領 2-3で確かめてください。</p>
+<p>申請の時点で満たす主な要件は、公募要領 4-2（P.20）に次のように書かれています。</p>
+<ul>
+<li>人手不足の状態にあることが確認できる（下の4つのうち1つを選ぶ）</li>
+<li>全従業員の賃金が、交付申請の直近月と実績報告の直近月の最低賃金を超えている</li>
+<li>過去1年に、労働関係法令違反で送検処分を受けていない</li>
+<li>GビズIDプライムを取得している</li>
+<li>補助金等の重複（2-4）に当たらない</li>
+</ul>
+<p>人手不足の確認は、公募要領 3-2（2）（P.15）で次の4つから選びます。④を選ぶと審査が厳しくなり、採択結果の通知が大幅に遅れる可能性があります。</p>
+<table>
+<thead>
+<tr>
+<th>選ぶ理由</th>
+<th>内容</th>
+<th>出す書類</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td>直近の従業員の平均残業時間が30時間を超えている</td>
+<td>時間外労働時間（指定様式）</td>
+</tr>
+<tr>
+<td>②</td>
+<td>整理解雇によらない離職・退職で、従業員が前年度比5％以上減った</td>
+<td>従業員減少の確認用（指定様式）</td>
+</tr>
+<tr>
+<td>③</td>
+<td>採用活動をして求人を掲載したが、人が集まらなかった</td>
+<td>求人票や求人サイトの画面。掲載日が申請日から1年以内で、事業者名が分かるもの</td>
+</tr>
+<tr>
+<td>④</td>
+<td>その他、省力化を進める必要に迫られている</td>
+<td>背景理由の具体的な説明（追加の書類を求められることがある）</td>
+</tr>
+</tbody>
+</table>
+<p>補助金等の重複は、公募要領 2-4（P.13〜14）に、ものづくり補助金の交付決定から10か月以内の事業者、事業再構築促進補助金・新事業進出補助金で採択された事業用の機器、デジタル化・AI導入補助金（旧IT導入補助金）と同じ業務プロセスの事業などが書かれています。ほかの補助金を使う予定がある人は、重複しないかを事前に確かめます。</p>
+<h3 id="個人事業主が気をつける点">個人事業主が気をつける点</h3>
+<p>公募要領と応募・交付申請の手引き、補助事業の実施及び実績報告の手引き（2026年11月3日取得）から、個人事業主に関わる点をまとめます。</p>
+<ul>
+<li>事業者名には屋号を入力します。屋号がなければ、申請する個人の氏名です（手引き P.67）</li>
+<li>取引の相手や支払いは、個人事業主本人の氏名または事務局へ申請した屋号で行います。親族の口座からの支払いは認められません（実績報告の手引き P.11）</li>
+<li>常勤従業員がいない場合は、事業実態の詳細が分かる書類（過去1年以内の他社との取引の書類。発注書・請求書・納品書・業務委託契約書・工事請負契約書・売買契約書など）を出し、追加の審査を受けます（公募要領 2-3）</li>
+<li>常勤従業員がいない事業者は、2回目以降の交付申請はできません</li>
+<li>従業員が0人の場合、人手不足の理由として「平均残業時間が30時間を超えている」（①）は選べません（手引き P.40）</li>
+<li>採択された場合、事務局は、個人事業主の所在地を都道府県までで公表します（公募要領 3-4）</li>
+<li>新規創業は「新規事業」として補助対象外です（よくあるご質問）</li>
+</ul>
+<p>創業して間もない人が対象になるか、確定申告書がまだない場合にどうするかは、今回確認した公式資料には書かれていませんでした。この場合は、販売事業者または事務局のコールセンターに確かめてください。</p>
+<h2 id="事業者と販売事業者の分担申請システムで誰が何を入力するか">事業者と販売事業者の分担：申請システムで誰が何を入力するか</h2>
+<p>応募・交付申請の手引き（P.59〜60）によると、申請は販売事業者が申請マイページを招待することで始まります。事業者と販売事業者が交互に入力し、最後の提出は事業者が行います。</p>
+<table>
+<thead>
+<tr>
+<th>段階</th>
+<th>担当</th>
+<th>やること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>STEP01 招待</td>
+<td>販売事業者</td>
+<td>販売事業者ポータルから、招待する事業者の情報と、申請を担当する販売事業者の情報を入力して招待する。事業者にマイページ開設のメールが届く（URLの有効期限は7日間）</td>
+</tr>
+<tr>
+<td>STEP02 マイページ開設</td>
+<td>事業者</td>
+<td>招待メールのURLから、GビズIDに登録しているメールアドレスを入力し、GビズIDでログインして開設する</td>
+</tr>
+<tr>
+<td>STEP03 入力</td>
+<td>事業者</td>
+<td>申請要件と共同申請の宣誓、基本情報、事業計画、給与支給総額と事業場内最低賃金、労働生産性の入力、書類の添付。入力が済んだら販売事業者に確認を依頼する</td>
+</tr>
+<tr>
+<td>STEP04 入力</td>
+<td>販売事業者</td>
+<td>事業者の入力内容の確認、宣誓、製品の選択と価格の入力、省力化効果判定シートなどの添付。事業者に確認を依頼する</td>
+</tr>
+<tr>
+<td>STEP05 提出</td>
+<td>事業者</td>
+<td>導入製品の確認、補助金申請額の入力、保険加入の確認、最終確認、アンケート（損益計算書などの数値）の入力と添付、SMS認証、事務局への提出</td>
+</tr>
+<tr>
+<td>審査</td>
+<td>事務局</td>
+<td>不備があれば差し戻し。差し戻した日から180日を経過しても再提出がないと、申請は無効</td>
+</tr>
+</tbody>
+</table>
+<p>事業計画のうち、導入製品の使い方と、省力化で空いた時間・人員の使い道は、事業者が入力します（200文字程度）。省力化効果判定シートは、販売事業者がExcelに入力して添付します（手引き P.41〜43）。</p>
+<p>提出された申請は、採否が決まるまで取り下げられません。不採択になったあとの再申請はできます（手引き P.6、P.93）。交付決定の内容に不服があるときは、通知を受けた日から10日以内に書面で取り下げを申し出られます。</p>
+<p>共同申請では、販売事業者も事業の実施に責任を負います（公募要領 1-3）。共同事業実施規約（手引き P.27）には、交付決定が取り消されて補助金の返還を命じられたとき、違反したのが事業者なら事業者が、販売事業者なら販売事業者が負担し、双方なら中小機構の定める割合で負担する、と書かれています。</p>
+<h2 id="提出書類個人事業主と法人で違う">提出書類：個人事業主と法人で違う</h2>
+<p>手引き（P.47〜56）と公募要領 5-3（P.22〜23）の提出書類のうち、事業者が用意する主なものは次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>区分</th>
+<th>書類</th>
+<th>注意（手引きの記載）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>全事業者共通</td>
+<td>従業員名簿（指定様式）</td>
+<td>従業員数が0人なら不要。22名以上は任意の21名分</td>
+</tr>
+<tr>
+<td>全事業者共通</td>
+<td>損益計算書（直近2期分）</td>
+<td>個人事業主の白色申告は収支内訳書。決算を2期迎えていなければ1期分</td>
+</tr>
+<tr>
+<td>全事業者共通</td>
+<td>貸借対照表（直近2期分）</td>
+<td>個人事業主の白色申告は提出不要</td>
+</tr>
+<tr>
+<td>個人事業主</td>
+<td>確定申告書の控え 第一表（直近1期分）</td>
+<td>令和7年分。ない人は令和6年分。電子申告の印字などで税務署の受領が確認できること。マイナンバーは黒塗り</td>
+</tr>
+<tr>
+<td>個人事業主</td>
+<td>所得税の納税証明書（その2）（直近1期分）</td>
+<td>令和7年分。ない人は令和6年分。税務署が発行したもの。納税証明データシートや消費税は不可</td>
+</tr>
+<tr>
+<td>法人</td>
+<td>履歴事項全部証明書、法人税の納税証明書（その2）直近3期分、役員名簿、株主・出資者名簿</td>
+<td>履歴事項全部証明書は発行から3か月以内</td>
+</tr>
+<tr>
+<td>人手不足（①〜③）</td>
+<td>指定様式、または求人票</td>
+<td>上の表のとおり</td>
+</tr>
+<tr>
+<td>賃上げで上限を引き上げる人</td>
+<td>最低賃金者の賃金台帳</td>
+<td>交付申請日の直近月1か月分</td>
+</tr>
+<tr>
+<td>常勤従業員がいない人</td>
+<td>事業実態の詳細が分かる書類</td>
+<td>過去1年以内の他社との取引の書類</td>
+</tr>
+<tr>
+<td>販売事業者が添付</td>
+<td>省力化効果判定シート</td>
+<td>導入する製品の業種のシートを使う</td>
+</tr>
+</tbody>
+</table>
+<p>確定申告書の控えは、手引きのよくある不備（P.95）に「令和7年より申告書等の控えに収受日付印の押なつが行われないため、その場合、別途受領がわかる資料の提出をお願いします」と書かれています。</p>
+<p>電子申告の印字などで受領が確認できないときは、受信通知を一緒に出せます（P.52）。申告の流れは、<a href="/articles/kojin-jigyou-kakutei-shinkoku-nagare/">個人事業主の確定申告の流れ</a>で整理しています。</p>
+<p>手引きのよくある不備には、ほかに次の例があります（P.95〜97）。</p>
+<ul>
+<li>求人票に申請した事業者名が書かれていない、掲載日が交付申請日から1年以内でない</li>
+<li>「その他」を選んだのに、人手不足の背景理由の具体的な説明がない</li>
+<li>賃金台帳が、交付申請日の直近月1か月分でない</li>
+<li>省力化効果判定シートの業種と、導入する製品の業種が一致していない</li>
+</ul>
+<h2 id="交付決定の前後でやってはいけないこと">交付決定の前後でやってはいけないこと</h2>
+<p>公募要領と、補助事業の実施及び実績報告の手引き（2026年10月27日改訂）から、補助金が受け取れなくなる主な行為を並べます。</p>
+<table>
+<thead>
+<tr>
+<th>やってはいけないこと</th>
+<th>公式の記載</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>交付決定の前に、契約・発注・支払いをする</td>
+<td>交付決定前に購入した製品や、交付決定前に発生した費用は補助対象外。いかなる理由でも事前着手は認められない（公募要領 2-2、実績報告の手引き P.9）</td>
+</tr>
+<tr>
+<td>契約の前に請求や支払いをする</td>
+<td>契約→納品→検収→請求→支払の順に行う。請求が納品前でも、契約より後に請求する（実績報告の手引き P.9）</td>
+</tr>
+<tr>
+<td>現金・クレジットカード・手形・相殺で払う</td>
+<td>支払いは銀行振込が対象。補助事業者の口座から払い、振込手数料を差し引かない。口座振替は、販売事業者名が分かり、期間内に引き落とされる場合だけ認められる（実績報告の手引き P.10）</td>
+</tr>
+<tr>
+<td>自己負担を減らす・なくす売り方をする</td>
+<td>ポイント・クーポンの発行、払い戻しなどは不適切。交付決定の取消し、販売事業者の登録取消し、公表がある（公募要領 2-2）</td>
+</tr>
+<tr>
+<td>申請した製品本体価格を超えて買う</td>
+<td>超えた分を自己負担にすることも認められない（手引き P.33）</td>
+</tr>
+<tr>
+<td>登録された周辺機器を一部だけ導入する</td>
+<td>登録内容のとおり導入しないと、製品全体が対象外になりうる（手引き P.32、実績報告の手引き P.12）</td>
+</tr>
+<tr>
+<td>補助事業実施期間内に完了しない</td>
+<td>事務局の承認なく期限を過ぎると、交付決定の取消し（実績報告の手引き P.9）</td>
+</tr>
+<tr>
+<td>導入した製品を譲渡・交換・貸付する</td>
+<td>導入日から1年間は不可（公募要領 4-3）。事務局の承認なく貸付・転売をすると交付決定の取消し（公募要領 3-6）</td>
+</tr>
+<tr>
+<td>省力化を理由に従業員を解雇する</td>
+<td>効果報告の結果、補助金の返還が発生する場合がある（公募要領 3-5）</td>
+</tr>
+</tbody>
+</table>
+<p>交付決定の後にも、事業者がやることがあります。実績報告の手引き（P.7）によると、採択された事業者は、研修動画の視聴と確認テストの受講が必須で、修了証は実績報告で出します。</p>
+<p>補助額（導入経費を含む）が500万円以上になる場合は、事業計画期間が終わるまで、補助額以上の保険金額の保険または共済に入る必要があります（ファイナンス・リース取引を除く）。保険料は補助対象外で、加入を示す書類を実績報告で出します（公募要領 3-2（4））。</p>
+<h2 id="補助金を受け取るまでとその後の3年間">補助金を受け取るまでと、その後の3年間</h2>
+<p>実績報告の手引き（P.41、P.59〜64）によると、実績報告は事業者が入力と添付を行い、販売事業者が確認して事務局へ提出します。そのあと、事務局が確定検査を行い、補助額が確定したら確定通知書が届きます。</p>
+<p>事業者は、確定通知書を受け取ってから、申請マイページで精算払請求をします。請求のあとに補助金が交付されます。事業の完了前に補助金を受け取る概算払いは認められていません。</p>
+<p>実績報告で出す主な書類は、契約書・納品書・検収書・請求書・支払いの証明書類・取得財産等管理明細表・製品の写真・補助金を受ける口座の情報・確認テストの修了証です。保険の加入証明書と賃金台帳は、該当する人が出します（実績報告の手引き 目次）。</p>
+<p>確定検査にかかる日数は、今回確認した公式資料には書かれていませんでした。賃金引き上げで補助上限額を引き上げた人は、賃金の引き上げ実績が確認できるまで実績報告ができません（公募要領 3-4）。</p>
+<p>補助金を受け取ったあとも、効果報告が続きます（公募要領 3-5）。</p>
+<ul>
+<li>補助事業の終了後3年間、事務局が定める期間に、毎年報告します（3回目の報告まで）</li>
+<li>報告する内容は、省力化製品の稼働状況と、事業計画の達成状況（従業員数と労働時間・決算情報、賃上げの実績）です</li>
+<li>効果報告が期限までに出ないと、交付決定が取り消されることがあります</li>
+<li>実績報告の提出後から効果報告期間の終了までの間に、製品が事業所に導入されているかを確かめる実地検査があります</li>
+</ul>
+<p>労働生産性（付加価値額÷従業員数。付加価値額は営業利益・人件費・減価償却費の合計）は、3年間で毎年、申請時より年平均成長率3.0％以上伸ばす計画を立てます（公募要領 2-1（2）①）。</p>
+<p>目標が達成できなかったとき、事務局のよくあるご質問は、意図的に製品を使わずに放置したなど、事業者の故意や過失が原因の場合は返還になる可能性があると書いています。</p>
+<p>事務局に出した書類と、補助事業の帳簿・証拠書類は、補助事業の完了の日の属する年度の終了後5年間、保存します（実績報告の手引き P.66）。</p>
+<p>2026年3月19日以降の申請では、収益納付は求められません（実績報告の手引き P.66。制度改定のご案内にも「収益納付の撤廃」とあります）。</p>
+<h2 id="経理と税務圧縮記帳の扱い">経理と税務：圧縮記帳の扱い</h2>
+<p>中小機構の資料「中小企業省力化投資補助事業における圧縮記帳等の適用について」（令和7年7月10日、2026年11月3日取得）によると、この補助事業は、所得税法第42条または法人税法第42条の国庫補助金等に該当し、他の要件も満たす場合には、圧縮記帳等の適用が認められます。</p>
+<p>同じ資料は、補助金のうち「経費を補填するための補助金」は、所得税法第42条・法人税法第42条の対象外で、圧縮記帳等は認められないとしています。</p>
+<p>補助金・助成金の消費税や計上時期、圧縮記帳を使える場面は、<a href="/articles/hojokin-kanjoukamoku-shiwake/">補助金・助成金の勘定科目と消費税</a>で国税庁の記載をもとに整理しています。自分の場合に圧縮記帳を使えるか、消費税や仕訳をどうするかは、個別の判断が要ります。税務署または税理士に相談してください。探し方は、<a href="/articles/zeirishi-sagashikata-hiyou-souba/">税理士の探し方</a>で整理しています。</p>
+<p>補助金は精算払いで、先に代金を払う必要があります。立て替える資金の考え方は、<a href="/articles/shikin-choutatsu-houhou-kojin-jigyou/">資金調達の方法を個人事業主向けに整理した記事</a>も参考になります。</p>
+<h2 id="申請前のチェックリスト">申請前のチェックリスト</h2>
+<p>公式に書かれている事実の範囲で、確認したい項目を並べます。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 導入したい製品が、製品カタログに登録されている</li>
+<li class="task-list-item"><input type="checkbox" disabled> 製品を扱う販売事業者を決め、連絡した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 従業員数が、業種ごとの上限（資本金または常勤従業員数）に収まっている</li>
+<li class="task-list-item"><input type="checkbox" disabled> 人手不足の理由（①〜④）のどれに当たるかを決め、必要な書類をそろえた</li>
+<li class="task-list-item"><input type="checkbox" disabled> GビズIDプライムを取得した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 賃上げで補助上限額を引き上げるときは、賃金引き上げの計画を従業員に表明した</li>
+<li class="task-list-item"><input type="checkbox" disabled> 確定申告書の控え（第一表）、所得税の納税証明書（その2）、損益計算書などをそろえた</li>
+<li class="task-list-item"><input type="checkbox" disabled> ほかの補助金と、補助対象経費・業務プロセスが重複しない</li>
+<li class="task-list-item"><input type="checkbox" disabled> 補助金申請額を、販売事業者と一緒に確かめた（交付決定額になる）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 交付決定の通知が届くまで、契約・発注・支払いをしない</li>
+<li class="task-list-item"><input type="checkbox" disabled> 支払いは補助事業者の口座からの銀行振込にする</li>
+<li class="task-list-item"><input type="checkbox" disabled> 補助額が500万円以上になるときは、保険または共済の加入を用意する</li>
+</ul>
+<h2 id="よくある質問とまとめ">よくある質問とまとめ</h2>
+<h3 id="公式の問い合わせ先はありますか">公式の問い合わせ先はありますか</h3>
+<p>公募要領 6（P.24）に、中小企業省力化投資補助事業コールセンター（0570-099-660、平日9:30〜17:30。IP電話などは03-4335-7595）が書かれています。ファイナンス・リース取引の問い合わせ先は、公益社団法人リース事業協会（03-3595-1501）です。</p>
+<h3 id="リースで導入できますか">リースで導入できますか</h3>
+<p>できます。ファイナンス・リース取引を使うと、事務局が対象リース会社に補助金を交付し、事業者が払うリース料から補助金相当分が減額されます。事業者・販売事業者・対象リース会社の3者で共同申請し、リース料軽減計算書などが要ります（公募要領 3-2（5））。</p>
+<h3 id="まとめ">まとめ</h3>
+<p>カタログ注文型は、カタログに登録された製品を選び、販売事業者と共同で電子申請する補助金です。公募要領（第12版・令和8年10月20日改訂）では、2027年3月末頃まで随時受け付けられ、補助率は1/2以下、補助上限額は従業員数で500万円・750万円・1,000万円（賃上げ要件で750万円・1,000万円・1,500万円）です。</p>
+<p>個人事業主も対象で、確定申告書の控えと所得税の納税証明書（その2）を出します。申請の入口は販売事業者の招待で、最後の提出は事業者です。交付決定の前の契約・発注は補助対象外で、支払いは銀行振込にします。</p>
+<p>条件や金額は改定されることがあります。申請の前に、事務局サイトで最新の公募要領を確かめ、判断に迷う点は販売事業者や事務局のコールセンターに相談してください。税務の個別の判断は、税理士・税務署に相談してください。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>カタログ注文型の申請はいつまでできますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公募要領（第12版・令和8年10月20日改訂、2026年11月3日取得）では、令和9年3月末頃までの間に補助事業の申請を受け付けるとされています。事務局のスケジュールページでは、2024年6月25日から随時受付中で、公募回ごとの締切はありません。受付終了の時期は事務局のホームページで公開されるとされているので、申請の前に確かめてください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>補助率と補助上限額はいくらですか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>補助率は1/2以下です。補助上限額は申請時の従業員数で決まり、5人以下500万円、6〜20人750万円、21人以上1,000万円です。事業場内最低賃金を3.0％以上、給与支給総額を6.0％以上増やす賃上げ目標を立てると、750万円・1,000万円・1,500万円に上がります。目標を達成できなかったときは、引き上げなしの額に減額されます。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>個人事業主でも申請できますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>できます。公募要領は、補助対象者に個人事業主を含むとしています。個人事業主は、確定申告書の控え（第一表）と所得税の納税証明書（その2）を直近1期分出します。常勤従業員がいない場合は事業実態を示す書類が追加で要り、賃上げによる補助上限額の引き上げは使えません。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>交付決定の前に製品を発注してもよいですか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>いけません。公募要領は、交付決定前に購入した省力化製品や、交付決定前に発生した導入費用を補助対象外とし、事前着手はいかなる理由でも認められないとしています。契約・発注は、交付決定通知を受けてから行います。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>カタログ注文型と一般型は何が違いますか。</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>カタログ注文型は、事務局のカタログに登録された汎用製品を選んで導入します。一般型は、個別の現場や事業内容に合わせた設備導入・システム構築が対象で、補助上限額は最大1億円です。一般型は公募回制です。事務局のスケジュール（2026年11月3日取得）では、第9回は2026年11月4日に公募開始、12月下旬に申請締切の予定とされていました。最新の日程は事務局のサイトで確かめてください。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://shoryokuka.smrj.go.jp/catalog/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>中小企業省力化投資補助金 カタログ注文型 トップページ</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://shoryokuka.smrj.go.jp/catalog/about/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>カタログ注文型とは</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://shoryokuka.smrj.go.jp/catalog/flow/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>申請・手続きの流れ（カタログ注文型）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://shoryokuka.smrj.go.jp/catalog/schedule/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>スケジュール（カタログ注文型）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://shoryokuka.smrj.go.jp/catalog/revision_260319/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>2026年3月19日制度改定（カタログ注文型）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://shoryokuka.smrj.go.jp/catalog/download/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>資料ダウンロード（カタログ注文型）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://shoryokuka.smrj.go.jp/assets/pdf/application_guidelines_catalog.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>中小企業省力化投資補助事業（カタログ注文型）公募要領（第12版、令和8年10月20日改訂）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://shoryokuka.smrj.go.jp/assets/pdf/application_manual_catalog.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>応募・交付申請の手引き（2026年3月19日版、2026年10月20日改訂）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://shoryokuka.smrj.go.jp/assets/pdf/implementation_manual.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>補助事業の実施及び実績報告の手引き（2026年10月27日改訂）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://shoryokuka.smrj.go.jp/catalog/faq/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>よくあるご質問（カタログ注文型）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://shoryokuka.smrj.go.jp/catalog/multiple_applications/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>2回目以降の交付申請（カタログ注文型）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://shoryokuka.smrj.go.jp/assets/pdf/product_catalog.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>製品カテゴリ（令和8年10月8日）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://shoryokuka.smrj.go.jp/assets/pdf/faq_reductionentry.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>中小企業省力化投資補助事業における圧縮記帳等の適用について（令和7年7月10日）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://shoryokuka.smrj.go.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>中小企業省力化投資補助金（トップページ。カタログ注文型と一般型の違い）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://shoryokuka.smrj.go.jp/ippan/about/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>一般型とは（中小企業省力化投資補助金）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://shoryokuka.smrj.go.jp/ippan/schedule/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>スケジュール（一般型）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li><li data-astro-cid-sgg5joot><a href="https://gbiz-id.go.jp/top/apply/account_select.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>GビズID 申請アカウントの選択</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-03）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/virtual-office-hiyou-soba-uchiwake/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecetav61-g" x1="0" y1="1" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecetav61-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ecetav61-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecetav61-p)" data-astro-cid-yuatfsof></rect><circle cx="382" cy="66" r="128" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>費用</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>相場</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスの費用相場を解説｜月額料金はいくら？入会金・保証金など初期費用の内訳と年払い・月払いの違い</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの費用は月額料金だけでは判断できません。入会金・保証金・郵便転送・電話対応・来客対応を含めた総額で比較することが結論です。本記事では料金の構成要素、オプションで金額が変わる場面、年払いと月払いの違いを整理し、自分の状況に合わせた見積もり方を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約8分</p></div></a><a class="card article-card" href="/articles/virtual-office-houjin-kouza-shinsa/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ech797md-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ech797md-p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)" data-astro-cid-yuatfsof><rect width="14" height="1.2" fill="#fff" fill-opacity="0.14" data-astro-cid-yuatfsof></rect></pattern></defs><rect width="400" height="225" fill="url(#ech797md-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ech797md-p)" data-astro-cid-yuatfsof></rect><circle cx="355" cy="75" r="174" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>法人口座</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>審査</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>バーチャルオフィスで法人口座の審査は通る？銀行が見る項目と対策</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>バーチャルオフィスの住所でも法人口座は開設できる可能性がありますが、審査では事業実態・資本金・事業計画など住所以外の項目も見られます。不利になりやすい条件と、申込前に揃えるべき書類を整理し、審査で「通らない」と言われる理由を解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約4分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/services/sonota/" data-astro-cid-sgg5joot>その他の開業準備の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/virtual-office-cost/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 L4 10 L12 4 L20 10 L20 21"></path><path d="M4 21 L20 21"></path><rect x="10" y="14" width="4" height="7"></rect><path d="M7 10.5 L7 13.5"></path><path d="M17 10.5 L17 13.5"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>バーチャルオフィス費用シミュレータ</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>使い方・郵便物の転送頻度・電話番号の要否を選ぶと、月額・年額の目安がわかります。各社の公式料金で初年度・年額の比較もできます。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/henkou-touki-hiyou/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 h8 l4 4 v14 h-12 Z"></path><path d="M14 3 v4 h4"></path><path d="M9 12 h6"></path><path d="M9 16 h6"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>変更登記の費用計算（登録免許税・書類作成）</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>本店移転・役員変更・商号変更などを選ぶと、登録免許税と書類作成の費用（自分で作る場合・GVA法人登記）の目安がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

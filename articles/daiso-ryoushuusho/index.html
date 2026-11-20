@@ -1,0 +1,270 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ダイソーの領収書｜レジのレシートが領収証。手書き・押印・再発行は不可、ネットは注文履歴から | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="ダイソーの店舗はレジのレシートが領収証で、手書き・押印・分割・合算・再発行は対応外です。ネットストアは出荷翌日以降にマイページの注文履歴から原則1回。簡易インボイスの見方と1万円未満の扱いを、公式ページと国税庁の原文で整理します。"><link rel="canonical" href="https://soroecho.com/articles/daiso-ryoushuusho/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="ダイソーの領収書｜レジのレシートが領収証。手書き・押印・再発行は不可、ネットは注文履歴から | そろえ帳"><meta property="og:description" content="ダイソーの店舗はレジのレシートが領収証で、手書き・押印・分割・合算・再発行は対応外です。ネットストアは出荷翌日以降にマイページの注文履歴から原則1回。簡易インボイスの見方と1万円未満の扱いを、公式ページと国税庁の原文で整理します。"><meta property="og:url" content="https://soroecho.com/articles/daiso-ryoushuusho/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/daiso-ryoushuusho.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="ダイソーの領収書｜レジのレシートが領収証。手書き・押印・再発行は不可、ネットは注文履歴から — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="ダイソーの領収書｜レジのレシートが領収証。手書き・押印・再発行は不可、ネットは注文履歴から | そろえ帳"><meta name="twitter:description" content="ダイソーの店舗はレジのレシートが領収証で、手書き・押印・分割・合算・再発行は対応外です。ネットストアは出荷翌日以降にマイページの注文履歴から原則1回。簡易インボイスの見方と1万円未満の扱いを、公式ページと国税庁の原文で整理します。"><meta name="twitter:image" content="https://soroecho.com/og/daiso-ryoushuusho.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"ダイソーの領収書｜レジのレシートが領収証。手書き・押印・再発行は不可、ネットは注文履歴から","item":"https://soroecho.com/articles/daiso-ryoushuusho/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"ダイソーの領収書｜レジのレシートが領収証。手書き・押印・再発行は不可、ネットは注文履歴から","description":"ダイソーの店舗はレジのレシートが領収証で、手書き・押印・分割・合算・再発行は対応外です。ネットストアは出荷翌日以降にマイページの注文履歴から原則1回。簡易インボイスの見方と1万円未満の扱いを、公式ページと国税庁の原文で整理します。","url":"https://soroecho.com/articles/daiso-ryoushuusho/","datePublished":"2026-11-20T00:00:00.000Z","dateModified":"2026-11-20T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/daiso-ryoushuusho/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"ダイソーで領収書はもらえますか？手書きや押印はできますか？","acceptedAnswer":{"@type":"Answer","text":"店舗では、公式のよくあるご質問に「レジで発行するレシートを領収書としてご利用できます」とあります。手書きの領収証はインボイス制度への対応に伴って発行が終了し、店舗運営ポリシーには「押印・分割・合算・再発行は対応できません」と書かれています。店舗で宛名や但し書きを入れてもらえるかは、読んだ公式ページには書かれていませんでした。"}},{"@type":"Question","name":"ダイソーのレシートはインボイス（適格簡易請求書）になりますか？登録番号は？","acceptedAnswer":{"@type":"Answer","text":"大創産業の公式お知らせ（2023年9月18日付）は、9月27日発行のレシート・領収証から適格簡易請求書としてご利用頂けるとしています。お知らせにある見本画像のレシートには、登録番号 T7240001022681 が印字されています。一部店舗で内容が異なる場合があると公式にも書かれているため、手元のレシートで確かめ、個別の判断は税理士・税務署に確認してください。"}},{"@type":"Question","name":"ダイソーネットストアの領収書は、どこから出せますか？","acceptedAnswer":{"@type":"Answer","text":"公式のよくあるご質問では、出荷完了後に注文履歴のページから発行します。領収書・納品書の発行は出荷の翌日以降に使え、領収書の発行は誤記載の場合を除いて原則1回です。再発行した場合は、印刷済みの領収書を必ず破棄するよう案内されています。"}},{"@type":"Question","name":"ダイソーでレシートを失くしたら、再発行できますか？","acceptedAnswer":{"@type":"Answer","text":"公式のよくあるご質問では「二重発行となりますので、お断りをさせていただいております」とあります。国税庁のインボイスQ&A（問24-5）は、売手が販売時に簡易インボイスを交付していれば、後日あらためて交付を求められても交付する義務は生じないとしています。失くした分の経理上の扱いは、会社の経理や税理士に確認してください。"}},{"@type":"Question","name":"1回の買い物が1万円未満なら、インボイスのレシートは要りませんか？","acceptedAnswer":{"@type":"Answer","text":"国税庁のインボイスQ&A（問111）では、基準期間の課税売上高が1億円以下または特定期間の課税売上高が5,000万円以下の事業者が、2023年10月1日から2029年9月30日までに行う税込1万円未満の課税仕入れは、一定の事項を記載した帳簿のみの保存で仕入税額控除を受けられます。判定は1回の取引の金額で、1商品ごとではありません。自分が対象かどうかは、税理士・税務署に確認してください。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>ダイソーの領収書｜レジのレシートが領収証。手書き・押印・再発行は不可、ネットは注文履歴から</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1omz9au-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1omz9au-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ec1omz9au-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1omz9au-p)" data-astro-cid-yuatfsof></rect><circle cx="365" cy="65" r="131" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>ダイソー</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>領収書</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--amazon-business">Amazonビジネス実務</span><h1 data-astro-cid-sgg5joot>ダイソーの領収書｜レジのレシートが領収証。手書き・押印・再発行は不可、ネットは注文履歴から</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-11-20T00:00:00.000Z" data-astro-cid-sgg5joot>2026年11月20日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約13分</p><p class="cta-inline">ダイソーのレシートは再発行できません。ネットで買える備品は、注文履歴から書類を取れる買い先に寄せる手もあります<a href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">登録ページを見る（公式）</a></p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論店舗はレジのレシートが領収証ネットは注文履歴から原則1回" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：店舗はレジのレシートが領収証。ネットは注文履歴から、原則1回</a></li><li data-astro-cid-sgg5joot><a href="#店舗で買った分レシートがそのまま領収証手書き押印分割合算再発行はできない" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>店舗で買った分：レシートがそのまま領収証。手書き・押印・分割・合算・再発行はできない</a></li><li data-astro-cid-sgg5joot><a href="#ダイソーのレシートはインボイスになる公式のお知らせと登録番号" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>ダイソーのレシートはインボイスになる？公式のお知らせと登録番号</a></li><li data-astro-cid-sgg5joot><a href="#1回の買い物が1万円未満のときは国税庁の少額特例" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>1回の買い物が1万円未満のときは？国税庁の少額特例</a></li><li data-astro-cid-sgg5joot><a href="#ダイソーネットストアの領収書出荷の翌日以降マイページの注文履歴から原則1回" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>ダイソーネットストアの領収書：出荷の翌日以降、マイページの注文履歴から原則1回</a></li><li data-astro-cid-sgg5joot><a href="#会社個人事業主向けまとめ買いオンラインショップnp掛け払い1000個以上の大量注文" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>会社・個人事業主向け：まとめ買いオンラインショップ、NP掛け払い、1,000個以上の大量注文</a></li><li data-astro-cid-sgg5joot><a href="#領収書入れや領収証の用紙はダイソーで探せる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>「領収書入れ」や領収証の用紙は、ダイソーで探せる？</a></li><li data-astro-cid-sgg5joot><a href="#経理に出す前のチェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>経理に出す前のチェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#併用の選択肢少額の備品は書類の取り方で買い先を分ける" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>併用の選択肢：少額の備品は、書類の取り方で買い先を分ける</a></li><li data-astro-cid-sgg5joot><a href="#よくある質問とまとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>10</span>よくある質問とまとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論店舗はレジのレシートが領収証ネットは注文履歴から原則1回">結論：店舗はレジのレシートが領収証。ネットは注文履歴から、原則1回</h2>
+<p>ダイソーの公式ページ（大創産業のよくあるご質問と店舗運営ポリシー、ダイソーネットストアとまとめ買いオンラインショップの案内、2026年11月8日確認）によると、領収書の取り方は買い方で分かれます。</p>
+<p>店舗で買った分は、レジで出るレシートがそのまま領収書です。手書きの領収証は終了し、押印・分割・合算・再発行もできません。ネットストアやまとめ買いオンラインショップで買った分は、出荷の翌日以降に、注文履歴のページから領収書を発行します。</p>
+<table>
+<thead>
+<tr>
+<th>買い方</th>
+<th>手元に残る書類</th>
+<th>取り方・条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>店舗</td>
+<td>レジのレシート</td>
+<td>その場で受け取る。手書き・押印・分割・合算・再発行は対応しない</td>
+</tr>
+<tr>
+<td>ダイソーネットストア（1個から）</td>
+<td>領収書</td>
+<td>出荷完了後、マイページの注文履歴から。出荷の翌日以降で、原則1回</td>
+</tr>
+<tr>
+<td>まとめ買いオンラインショップ（箱単位）</td>
+<td>領収書</td>
+<td>ネットストアと同じ手順</td>
+</tr>
+<tr>
+<td>まとめ買い・NP掛け払い（後払い）</td>
+<td>決済会社が出す請求書。領収書の扱いは公式に記載なし</td>
+<td>月末締めで、購入の翌月第2営業日に発行。審査あり</td>
+</tr>
+<tr>
+<td>1商品1,000個以上の大量注文</td>
+<td>領収書（PDF）</td>
+<td>メールで届く。宛名は依頼のやり取りで伝える</td>
+</tr>
+</tbody>
+</table>
+<p>この記事で分かることは次のとおりです。</p>
+<ul>
+<li>店舗のレシート（手書き・押印・再発行・宛名）と、簡易インボイスの登録番号</li>
+<li>1回の買い物が1万円未満のときの国税庁の少額特例</li>
+<li>ネット注文・請求書払い・大量注文の領収書の出し方</li>
+</ul>
+<p>画面の表記や条件は変わることがあります。実際の画面と、公式の最新の案内で確かめてください。</p>
+<h2 id="店舗で買った分レシートがそのまま領収証手書き押印分割合算再発行はできない">店舗で買った分：レシートがそのまま領収証。手書き・押印・分割・合算・再発行はできない</h2>
+<p>公式のよくあるご質問（最終更新日 2026年6月5日）は、店舗の領収書について「レジで発行するレシートを領収書としてご利用できます」と答えています。手書きの領収証はインボイス制度への対応に伴って発行が終了し、レジから印字される領収証またはレシートを使います。合算・分割の領収証はお断りしています。</p>
+<p>大創産業の「店舗運営ポリシー」の「領収証について」には、「当店のレジから印字される領収証は、税法上正式な領収証として認められています」とあり、「押印・分割・合算・再発行は対応できません」とも書かれています。国税庁がインボイスの記載事項に挙げる項目に、押印は入っていません（インボイスQ&amp;A問25）。</p>
+<p>使える支払い方法は店舗で違い、店舗検索で確かめられます。店舗の領収書について、支払い方法ごとに書類を分けた説明は、読んだ公式ページには見つかりませんでした。</p>
+<h3 id="宛名と但し書きは公式のページでは見つからなかった">宛名と但し書きは、公式のページでは見つからなかった</h3>
+<p>店舗の領収書で宛名や但し書きを入れてもらえるかは、読んだ公式ページには書かれていませんでした。公式のお知らせにある見本のレシートにも、宛名の欄はありません。</p>
+<p>小売業が出す簡易インボイスは宛名を省ける形で、宛名がなくても不備とは限らないと国税庁は案内しています（次の章）。会社の経理規程で宛名が要るときは、買う前にダイソーお客様相談室のお問い合わせフォームか店舗で聞くのが確実です。</p>
+<h3 id="レシートを失くしたら再発行は断られる">レシートを失くしたら：再発行は断られる</h3>
+<p>公式のよくあるご質問は、紛失について「二重発行となりますので、お断りをさせていただいております」と答えています。</p>
+<p>国税庁のインボイスQ&amp;A（問24-5、2025年6月追加）は、売手が販売時に簡易インボイスを交付していれば、後日あらためて交付を求められても、交付する義務は生じないとしています。失くした分の経理上の扱いは、会社の経理や税理士に聞いてください。電子データでの保存は、<a href="/articles/ryoushuusho-hozon-e-bunsho-taiou/">領収書の保存と電子データの扱い</a>で整理しています。</p>
+<h3 id="返品するときもレシートが要る">返品するときも、レシートが要る</h3>
+<p>返品は、購入日の翌日から14日以内に、レシートと商品を持って購入店舗へ行きます。食品・ペットフード・印鑑・開封済み・使用済みの商品は受けられません（よくあるご質問、最終更新日 2026年6月16日）。</p>
+<h2 id="ダイソーのレシートはインボイスになる公式のお知らせと登録番号">ダイソーのレシートはインボイスになる？公式のお知らせと登録番号</h2>
+<p>大創産業の公式お知らせ「インボイス制度について」（2023年9月18日付）には、「9月27日発行のレシート・領収証よりインボイス（適格簡易請求書）としてご利用頂けます」とあります。「店舗のレジから印字されるレシート及び領収証は税法上、領収証と認められております」とも書かれています。</p>
+<p>お知らせの見本画像（変更後）のレシートには、見出しの「&lt;領収証&gt;」、日付、10％と8％それぞれの税抜対象額と税額、「※印は軽減税率適用商品です」、「登録番号 T7240001022681」が印字されています。お知らせは「一部店舗により内容が異なる場合がございます」とも書いているため、番号は見本として読み、手元のレシートで確かめてください。食品・飲料は軽減税率で消費税率8％と、公式のよくあるご質問にあります。</p>
+<h3 id="国税庁の適格簡易請求書と見本の見比べ">国税庁の「適格簡易請求書」と、見本の見比べ</h3>
+<p>国税庁によると、小売業など不特定かつ多数の者に取引を行う事業は、通常のインボイスに代えて、記載事項を簡単にした適格簡易請求書（簡易インボイス）を交付できます（インボイスQ&amp;A問58）。違いは、宛名（書類の交付を受ける事業者の氏名または名称）が不要な点と、税率ごとの消費税額等か適用税率のどちらか一方で足りる点です。小売業は、形態を問わずこの書類を交付できます（問24）。</p>
+<table>
+<thead>
+<tr>
+<th>国税庁の記載事項（問58）</th>
+<th>公式の見本の印字</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① 事業者の名称、登録番号</td>
+<td>「DAISO」のロゴ、店名と電話番号の欄、登録番号</td>
+</tr>
+<tr>
+<td>② 取引年月日</td>
+<td>日付</td>
+</tr>
+<tr>
+<td>③ 軽減税率の対象品目である旨</td>
+<td>対象の品に「※」、「※印は軽減税率適用商品です」</td>
+</tr>
+<tr>
+<td>④ 税率ごとの対価の額</td>
+<td>「10%税抜対象額」「8%税抜対象額」</td>
+</tr>
+<tr>
+<td>⑤ 税率ごとの消費税額等、または適用税率</td>
+<td>「10%税額」「8%税額」</td>
+</tr>
+</tbody>
+</table>
+<p>国税庁は「受け取ったインボイスに宛名等の記載がなくても、不備ではなく簡易インボイスである場合がありますのでご注意ください」と案内しています（インボイス制度について）。見本には会社名の印字が見当たりませんが、問21-2は、電話番号などで事業者を特定できれば屋号や省略した名称でも差し支えなく、公表サイトで登録番号の有効性が確認できれば、一義的には有効な適格請求書等として扱って差し支えない、としています。</p>
+<p>登録番号の有効性は、国税庁の適格請求書発行事業者公表サイトで調べられます（No.6498）。この記事では、そのサイトの検索結果は取得していません。個別の判断は税理士・税務署へ相談してください。登録番号の基本は、<a href="/articles/invoice-touroku-yagou/">インボイスの登録番号と屋号</a>で整理しています。</p>
+<h2 id="1回の買い物が1万円未満のときは国税庁の少額特例">1回の買い物が1万円未満のときは？国税庁の少額特例</h2>
+<p>ダイソーの買い物でも、1回の金額が税込1万円未満なら関わる特例があります。仕入税額控除（買ったときに払った消費税を、納める消費税から差し引く仕組み）に関する「少額特例」です。国税庁のインボイスQ&amp;A（問111・問112）の要点は次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>論点</th>
+<th>国税庁の原文の要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>対象の事業者</td>
+<td>基準期間の課税売上高が1億円以下、または特定期間の課税売上高が5,000万円以下（基準期間は個人事業者が前々年、法人が前々事業年度。特定期間は個人事業者が前年1月1日から6月30日、法人が前事業年度開始の日以後6か月の期間）</td>
+</tr>
+<tr>
+<td>期間</td>
+<td>2023年10月1日から2029年（令和11年）9月30日までの課税仕入れ</td>
+</tr>
+<tr>
+<td>金額の判定</td>
+<td>1回の取引の課税仕入れの金額（税込み）が1万円未満かどうか。1商品ごとではない</td>
+</tr>
+<tr>
+<td>残すもの</td>
+<td>一定の事項を記載した帳簿のみ。「経過措置（少額特例）の適用がある旨」の記載は不要</td>
+</tr>
+</tbody>
+</table>
+<p>判定の例として、国税庁は、5,000円の商品と7,000円の商品を同時に買うと合計12,000円で対象外、別の日に買ってそれぞれ精算すれば、それぞれ1万円未満で対象になる、としています（問112）。</p>
+<p>簡易課税制度や2割特例・3割特例を使う事業者は、消費税の計算でインボイスの入手や保存は必要ありません。ただし国税庁は「所得税等の観点からは、これまでどおり領収書や請求書などの書類の保存が必要です」と書いています（インボイス制度について）。所得税のタックスアンサー（No.2070）も、取引に伴い作成したり受け取ったりした書類を保存しておく必要がある、としています。自分が少額特例の対象か、仕入税額控除を受けるべきかは、この記事では判断しません。税理士または税務署へ相談してください。</p>
+<h3 id="立て替えた会社員が宛名に個人名の入った書類を受け取ったとき">立て替えた会社員が、宛名に個人名の入った書類を受け取ったとき</h3>
+<p>会社の備品を従業員が立て替えて買い、会社が代金を負担する場合は、会社が負担すべき費用を従業員から立替払いを受けた扱いになります（インボイスQ&amp;A問94-2、2024年4月追加）。宛名に従業員名が書かれた適格簡易請求書は、原則、そのまま保存しても仕入税額控除に使えません。ただし、従業員が会社に所属していることが明らかな名簿等も一緒に保存していれば、保存要件を満たすとして差し支えない、とされています。名簿等がなく従業員を特定できない場合は、従業員が作成した立替金精算書の交付を受けて保存します。</p>
+<h2 id="ダイソーネットストアの領収書出荷の翌日以降マイページの注文履歴から原則1回">ダイソーネットストアの領収書：出荷の翌日以降、マイページの注文履歴から原則1回</h2>
+<p>ダイソーネットストア（jp.daisonet.com）は、1個から買えるネット通販です。公式のよくあるご質問によると、注文は合計が税込770円以上から、注文の流れの最初に無料の会員登録が案内されています。店舗やコンビニでは受け取れず、自宅や事業所など直接受け取れる場所を指定します。支払い方法は、クレジットカードと、PayPay・メルペイ・楽天ペイ・au PAY・d払い・エポスかんたん決済で、請求書発行・現金振込には対応していません。</p>
+<p>領収書は、出荷完了後に、マイページの注文履歴のページから発行します。公式に書かれている条件は次のとおりです。</p>
+<ul>
+<li>領収書・納品書の発行は、出荷の翌日以降に使える</li>
+<li>領収書の発行は、誤記載の場合を除き、原則1回</li>
+<li>再発行した場合は、印刷済みの領収書を必ず破棄する</li>
+</ul>
+<p>「原則1回」なので、発行する前に、会社が求める書類の形を確かめておくと取り直しになりません。納品書は商品に同梱されず、マイページの注文履歴から出力します。見積書は、ログインして商品をカートに入れ、カートの表示から見積書発行ボタンを押すと、登録のメールアドレスに届きます。</p>
+<p>ネットストアのお知らせには、2026年11月4日付で、マイページからの領収書・納品書の発行に関する不具合が解消した、という報告が載っています。</p>
+<p>領収書への宛名の入れ方、登録番号が載るか、何か月前の注文まで取れるか、スマートフォンで発行できるかは、読んだ公式ページには書かれていませんでした。ネットストアの商品は、店舗では返品・交換できません。</p>
+<h2 id="会社個人事業主向けまとめ買いオンラインショップnp掛け払い1000個以上の大量注文">会社・個人事業主向け：まとめ買いオンラインショップ、NP掛け払い、1,000個以上の大量注文</h2>
+<p>同じ商品を箱単位・セット単位で買う「ダイソーまとめ買いオンラインショップ」は、公式のよくあるご質問が「法人・団体・個人のお客様向け」と案内しています。会員登録が必要で、領収書の取り方はネットストアと同じです（出荷完了後、出荷の翌日以降に注文履歴から、原則1回）。</p>
+<h3 id="np掛け払い後払い請求書払い">NP掛け払い（後払い・請求書払い）</h3>
+<p>法人・個人事業主を対象にした後払いで、公式のご利用ガイドとよくあるご質問によると、仕組みは次のとおりです。</p>
+<ul>
+<li>審査があり（通常はすぐ完了）、与信枠は企業ごとに設定される</li>
+<li>請求書は月末締めで、購入の翌月第2営業日に、株式会社ネットプロテクションズが発行する。基本は郵送で、メール送付はお問い合わせフォームで頼む</li>
+<li>支払いは、請求書記載の銀行口座かコンビニの払込票。振込手数料は客の負担で、コンビニ払いはメールの請求書と30万円超では選べない</li>
+<li>審査完了のメールは、支払い完了ではなく与信審査完了の知らせ。商品が請求書より先に届くこともある</li>
+</ul>
+<p>請求書の送付先や宛先の変更は、ダイソーオンラインショップのお問い合わせフォームへ連絡します。NP掛け払いの分の領収書の出し方と、請求書の登録番号は、読んだ公式ページには書かれていませんでした。届いた請求書で、発行元・宛名・登録番号を確かめてください。</p>
+<h3 id="1商品1000個以上の大量注文">1商品1,000個以上の大量注文</h3>
+<p>大量注文ご利用ガイドによると、1商品で1,000個以上のときは、ご注文依頼フォームに商品番号・名称・個数を送ります。在庫の確保のあと、請求先・配送先を聞かれ、請求書で事前入金します。入金の確認ができた翌日から、発送の準備に入ります。領収書はメールでPDFが送られ、宛名の希望は、メールのやり取りのときに伝えます。入金後の返金・交換はできず、沖縄県と離島は配送対象外、1か月以内に引き取れる商品だけが対象です。</p>
+<h2 id="領収書入れや領収証の用紙はダイソーで探せる">「領収書入れ」や領収証の用紙は、ダイソーで探せる？</h2>
+<p>領収書やレシートを入れる物の専用の分類は、読んだ範囲のダイソーネットストアには見つかりませんでした。「文具」の「ファイル」に、ジッパーファイル、クリアホルダー、書類ケース・セクションファイル・筒、名刺・カードホルダーなどの分類があります。</p>
+<p>領収書を出す側なら、「文具」の「事務用品」にある「伝票・領収書」の分類に、領収証の用紙が並びます。2026年11月8日に読んだ一覧には「領収証 内訳付 複写ノーカーボン ５０組」「軽減税率対応領収証（バックカーボン複写）」などがあり、100円（税込110円）と表示されていました。</p>
+<h2 id="経理に出す前のチェックリスト">経理に出す前のチェックリスト</h2>
+<p>公式ページと国税庁の原文に書かれている範囲で、確認したい項目を並べます。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 店舗の分は、レジのレシートを受け取った（手書き・押印・分割・合算・再発行はできない）</li>
+<li class="task-list-item"><input type="checkbox" disabled> レシートに、日付、税率ごとの内訳、「T＋13桁」の登録番号があるか見た</li>
+<li class="task-list-item"><input type="checkbox" disabled> 宛名のないレシートでよいか、会社の経理に確かめた（宛名が要るなら、買う前に聞いた）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 1回の買い物が税込1万円未満か以上かを分けて整理した（少額特例の対象かは、税理士・税務署に確認する）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 立て替えた分に個人名の宛名が入っていないか、名簿等や立替金精算書が要るかを確かめた</li>
+<li class="task-list-item"><input type="checkbox" disabled> ネットの分は、出荷の翌日以降にマイページの注文履歴から領収書を発行した（原則1回）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 納品書が必要な分は、マイページから出力した</li>
+<li class="task-list-item"><input type="checkbox" disabled> NP掛け払いの分は、決済会社から届く請求書（購入の翌月第2営業日に発行）を待った</li>
+<li class="task-list-item"><input type="checkbox" disabled> 返品する物は、購入日の翌日から14日以内に、レシートと商品を持っていく</li>
+</ul>
+<h2 id="併用の選択肢少額の備品は書類の取り方で買い先を分ける">併用の選択肢：少額の備品は、書類の取り方で買い先を分ける</h2>
+<p>ダイソーの店舗は、書類がレシート1枚ずつで、再発行も合算もできません。ネットで買える備品は、書類の取り方が決まった買い先に寄せる方法もあります。比べる点は次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>比べる点</th>
+<th>確認すること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>書類の取り方</td>
+<td>その場で出るか、注文履歴から取れるか。取り直せるか</td>
+</tr>
+<tr>
+<td>まとめて取れるか</td>
+<td>複数の注文の書類を、一度に取れるか</td>
+</tr>
+<tr>
+<td>支払方法</td>
+<td>カード、請求書払いなどの種類と、審査の有無</td>
+</tr>
+<tr>
+<td>書類の発行元</td>
+<td>販売店か運営会社か、登録番号はあるか</td>
+</tr>
+</tbody>
+</table>
+<p>Amazonビジネスは、公式サイトの表記では登録が無料です（2026年9月12日確認）。購買データの「注文履歴データ」から、領収書（適格請求書・支払い明細書）を一度に最大2,000件ダウンロードできると、Amazonビジネスのヘルプにあります（2026年11月1日確認）。請求書払いは、公式ページによると招待制で審査があり、締め日から30日の支払期限です（2026年10月22日確認）。ダイソーとどちらが合うかは、買う物と数量で変わるため、優劣はつけません。</p>
+<p>3社の違いは<a href="/articles/amazon-business-monotaro-askul-hikaku/">アマゾンビジネス・モノタロウ・アスクルの比較記事</a>、まとめて取る方法は<a href="/articles/amazon-business-ryoushuusho-matomete-hakkou/">Amazonビジネスの領収書を一括でダウンロードする方法</a>、モノタロウとアスクルの書類は<a href="/articles/monotaro-ryoushuusho/">モノタロウの領収書・請求書の記事</a>と<a href="/articles/askul-ryoushuusho/">アスクルの領収書・請求書の記事</a>で整理しています。ホームセンターや家具店のレシートは、<a href="/articles/joyfulhonda-ryoushuusho/">ジョイフル本田の領収書</a>と<a href="/articles/ikea-ryoushuusho/">IKEAの領収書</a>を見てください。</p>
+<aside class="cta-box cta-box--subtle"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">Amazonビジネス</p><h3 class="cta-box__title">ダイソーのレシートは再発行できません。ネットで買える備品は、注文履歴から書類を取れる買い先に寄せる手もあります</h3><p class="cta-box__body">ダイソーの店舗は、レシートの再発行も合算も分割もできないため、買い物のたびに1枚ずつ保管する形です。事務用品や消耗品をネットで買う分は、Amazonビジネスなら購買データの「注文履歴データ」から、領収書（適格請求書・支払い明細書）を一度に最大2,000件ダウンロードできます。登録は公式サイトの表記で無料です。請求書払いは審査のある招待制なので、条件は公式で確かめてから選べます。</p><a class="cta-box__button" href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">Amazonビジネスの登録ページへ（公式）</a></aside>
+<h2 id="よくある質問とまとめ">よくある質問とまとめ</h2>
+<h3 id="領収書と領収証は同じですか">領収書と領収証は同じですか</h3>
+<p>ダイソーの公式ページでは、店舗の案内に「領収書」と「領収証」の両方が使われ、ネットは「領収書」です。国税庁は、必要な事項が書かれていれば、請求書、納品書、領収書、レシート等のどれでも、名称を問わず適格請求書にあたるとしています（問25）。会社の経理が求める名前と、手元の書類の名称が合うかを見てください。</p>
+<h3 id="まとめ">まとめ</h3>
+<p>ダイソーの領収書は、買い方で取り方が違います。店舗は、レジのレシートが領収書で、手書き・押印・分割・合算・再発行はできません。レシートは、公式のお知らせで2023年9月27日発行分から適格簡易請求書として使えるとされ、見本には登録番号が印字されています。</p>
+<p>ネットストアとまとめ買いオンラインショップは、出荷の翌日以降にマイページの注文履歴から、原則1回だけ領収書を発行します。まとめ買いにはNP掛け払いの請求書払いがあり、1,000個以上の大量注文は領収書をPDFで受け取れます。</p>
+<p>1万円未満の特例や宛名の考え方は、国税庁の原文を紹介しました。自分のケースの判断は、税理士・税務署へ相談してください。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>ダイソーで領収書はもらえますか？手書きや押印はできますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>店舗では、公式のよくあるご質問に「レジで発行するレシートを領収書としてご利用できます」とあります。手書きの領収証はインボイス制度への対応に伴って発行が終了し、店舗運営ポリシーには「押印・分割・合算・再発行は対応できません」と書かれています。店舗で宛名や但し書きを入れてもらえるかは、読んだ公式ページには書かれていませんでした。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>ダイソーのレシートはインボイス（適格簡易請求書）になりますか？登録番号は？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>大創産業の公式お知らせ（2023年9月18日付）は、9月27日発行のレシート・領収証から適格簡易請求書としてご利用頂けるとしています。お知らせにある見本画像のレシートには、登録番号 T7240001022681 が印字されています。一部店舗で内容が異なる場合があると公式にも書かれているため、手元のレシートで確かめ、個別の判断は税理士・税務署に確認してください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>ダイソーネットストアの領収書は、どこから出せますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式のよくあるご質問では、出荷完了後に注文履歴のページから発行します。領収書・納品書の発行は出荷の翌日以降に使え、領収書の発行は誤記載の場合を除いて原則1回です。再発行した場合は、印刷済みの領収書を必ず破棄するよう案内されています。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>ダイソーでレシートを失くしたら、再発行できますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式のよくあるご質問では「二重発行となりますので、お断りをさせていただいております」とあります。国税庁のインボイスQ&amp;A（問24-5）は、売手が販売時に簡易インボイスを交付していれば、後日あらためて交付を求められても交付する義務は生じないとしています。失くした分の経理上の扱いは、会社の経理や税理士に確認してください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>1回の買い物が1万円未満なら、インボイスのレシートは要りませんか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>国税庁のインボイスQ&amp;A（問111）では、基準期間の課税売上高が1億円以下または特定期間の課税売上高が5,000万円以下の事業者が、2023年10月1日から2029年9月30日までに行う税込1万円未満の課税仕入れは、一定の事項を記載した帳簿のみの保存で仕入税額控除を受けられます。判定は1回の取引の金額で、1商品ごとではありません。自分が対象かどうかは、税理士・税務署に確認してください。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://www.daiso-sangyo.co.jp/info/news/25751" rel="noopener" target="_blank" data-astro-cid-sgg5joot>大創産業 お知らせ「インボイス制度について」（2023年9月18日付）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.daiso-sangyo.co.jp/company/oneprice" rel="noopener" target="_blank" data-astro-cid-sgg5joot>大創産業 店舗運営ポリシー</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://daiso.tayori.com/q/daiso/detail/1297780/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>DAISO よくあるご質問「商品を購入時、領収書は発行してもらえますか？」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://daiso.tayori.com/q/daiso/detail/1297778/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>DAISO よくあるご質問「手書きの領収証は発行してもらえますか?」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://daiso.tayori.com/q/daiso/detail/1297779/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>DAISO よくあるご質問「合算・分割の領収証は発行してもらえますか ?」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://daiso.tayori.com/q/daiso/detail/1297794/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>DAISO よくあるご質問「レシート/領収書を紛失してしまいました。再発行はできますか？」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://daiso.tayori.com/q/daiso/detail/1297781/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>DAISO よくあるご質問「軽減税率は対応していますか？」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://daiso.tayori.com/q/daiso/detail/1297775/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>DAISO よくあるご質問「クレジットカードや電子マネーでの支払いはできますか？」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://daiso.tayori.com/q/daiso/detail/1297760/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>DAISO よくあるご質問「間違えて購入してしまいました。返品はできますか？」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://daiso.tayori.com/q/daiso/detail/1297807/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>DAISO よくあるご質問「注文方法について教えてください」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://daiso.tayori.com/q/daiso/detail/1297801/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>DAISO よくあるご質問「ダイソーネットストアとオンラインショップの違いはなんですか？」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://daiso.tayori.com/q/daiso/detail/1297765/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>DAISO よくあるご質問「オンラインでの購入はできますか？」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://jp.daisonet.com/pages/faq" rel="noopener" target="_blank" data-astro-cid-sgg5joot>ダイソーネットストア よくあるご質問</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://jp.daisonet.com/blogs/%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9/%E8%A7%A3%E6%B6%88%E5%A0%B1%E5%91%8A-%E9%A0%98%E5%8F%8E%E6%9B%B8%E3%81%8C%E7%99%BA%E8%A1%8C%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E4%B8%8D%E5%85%B7%E5%90%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6-11-4%E6%9B%B4%E6%96%B0" rel="noopener" target="_blank" data-astro-cid-sgg5joot>ダイソーネットストア お知らせ「【解消報告】領収書が発行できない不具合について（11/4更新）」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://jp.daisonet.com/collections/stationery0222" rel="noopener" target="_blank" data-astro-cid-sgg5joot>ダイソーネットストア 文具「伝票・領収書」の商品一覧</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://jpbulk.daisonet.com/pages/faq" rel="noopener" target="_blank" data-astro-cid-sgg5joot>ダイソーまとめ買いオンラインショップ よくあるご質問</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://jpbulk.daisonet.com/pages/user-guide" rel="noopener" target="_blank" data-astro-cid-sgg5joot>ダイソーまとめ買いオンラインショップ ご利用ガイド</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://jpbulk.daisonet.com/pages/largeorder" rel="noopener" target="_blank" data-astro-cid-sgg5joot>ダイソーまとめ買いオンラインショップ 大量注文ご利用ガイド</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/invoice_about.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 インボイス制度について</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6498.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.6498 適格請求書等保存方式（インボイス制度）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2070.htm" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 タックスアンサー No.2070 青色申告制度</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/pdf/qa/21-2.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 インボイスQ&amp;A 問21-2 公表サイトの検索結果とレシート表記が異なる場合</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/pdf/qa/24.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 インボイスQ&amp;A 問24 適格簡易請求書の交付ができる事業</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/pdf/qa/24-5.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 インボイスQ&amp;A 問24-5 適格請求書の交付に当たっての期間制限</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/pdf/qa/25.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 インボイスQ&amp;A 問25 適格請求書の様式</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/pdf/qa/58.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 インボイスQ&amp;A 問58 適格簡易請求書の記載事項</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/pdf/qa/94-2.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 インボイスQ&amp;A 問94-2 従業員が立替払をした際に受領した適格簡易請求書での仕入税額控除</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/pdf/qa/111.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 インボイスQ&amp;A 問111 一定規模以下の事業者に対する事務負担の軽減措置</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/pdf/qa/112.pdf" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 インボイスQ&amp;A 問112 少額特例における1万円未満の判定単位</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://business.amazon.co.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス公式サイト</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-09-12）</span></li><li data-astro-cid-sgg5joot><a href="https://business.amazon.co.jp/ja/solutions/payment-options/pay-by-invoice" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス 請求書払い</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-10-22）</span></li><li data-astro-cid-sgg5joot><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=202119460" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス ヘルプ「支払い明細書や適格請求書を取得する」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-01）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/amazon-business-mitsumorisho-hakkou/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1oukbk0-g" x1="0" y1="0" x2="1" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1oukbk0-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1oukbk0-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1oukbk0-p)" data-astro-cid-yuatfsof></rect><circle cx="366" cy="57" r="153" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Amazon</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>見積書</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>出し方</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--amazon-business">Amazonビジネス実務</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>Amazonの見積書の出し方｜カートからPDFで保存する手順（Amazonビジネス・登録無料）</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>Amazonで見積書が必要なときは、登録無料のAmazonビジネスを使います。注文前はカートから参考見積書、注文後は注文履歴から見積書をPDFで保存でき、稟議や経費精算に使えます。個人アカウントしかない場合の考え方と、配送料が載らない・ダウンロードできないときの注意点もまとめました。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-06T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月6日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約13分</p></div></a><a class="card article-card" href="/articles/kojin-jigyou-kaigyoutodoke-nashi-amazon-business-toroku/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1ptehj0-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1ptehj0-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1ptehj0-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1ptehj0-p)" data-astro-cid-yuatfsof></rect><circle cx="363" cy="90" r="176" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>個人事業主</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>開業届なし</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Amazonビジネス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--amazon-business">Amazonビジネス実務</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>Amazonビジネスの登録に必要書類は？開業届なしの個人事業主が用意するもの一覧</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>個人事業主がAmazonビジネスに登録するときは、確認書類を1点提出します。開業届がなくても、過去2年以内の確定申告書B・収支内訳書、インボイスの登録通知書などで代わりになります。公式ヘルプの書類一覧と提出時の注意点、登録手順、屋号の扱いを整理しました。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-06T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月6日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/amazon-business/" data-astro-cid-sgg5joot>Amazonビジネス実務の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/receipts/" data-astro-cid-sgg5joot>サービス別 領収書・インボイス対応一覧を見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/business-prime/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 L4 4"></path><path d="M4 20 L21 20"></path><path d="M7 20 L7 14"></path><path d="M11 20 L11 10"></path><path d="M15 20 L15 15"></path><path d="M19 20 L19 7"></path><path d="M5 16 L20 8"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>Business Prime 損益分岐計算</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>注文回数と送料を入れると、プライムビジネス（旧Businessプライム）の元が取れる回数がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/amazon-business-check/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 9 l2 2 l3.5 -3.5"></path><path d="M8 15 h8"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>Amazonビジネスが必要か判定</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>5つの質問に答えるだけで、Amazonビジネスが「要る」「今は要らない」「どちらでも」のどれかがわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>

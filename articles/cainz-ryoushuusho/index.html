@@ -1,0 +1,330 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-z4jru4n3><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>カインズの領収書の取り方｜ネットは支払い方法で変わる。店舗・再発行・手書き・インボイス | そろえ帳</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD94V6KQX"></script><script>(function(){const gaId = "G-VSD94V6KQX";
+
+            window.dataLayer = window.dataLayer || [];
+            // define:vars はこのスクリプトを関数で包むため、下のクリック計測から呼べるよう window に置く
+            window.gtag = function gtag() {
+              dataLayer.push(arguments);
+            };
+            gtag('js', new Date());
+            gtag('config', gaId, { anonymize_ip: true });
+          })();</script><script>
+      document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+        var href = anchor.href;
+        // 自作の note（有料テンプレ等）へのクリック（2026-10-03）。アフィリの KPI に混ざらないよう別イベントで送る
+        if (href.indexOf('note.com/like_quince7527') !== -1) {
+          if (typeof gtag === 'function') gtag('event', 'note_click', { link_url: href, page_path: location.pathname });
+          return;
+        }
+        var linkKind = null;
+        if (href.indexOf('amazon.co.jp/tryAB') !== -1) {
+          linkKind = 'amazon_business';
+        } else if (
+          (href.indexOf('amazon.co.jp') !== -1 || href.indexOf('amazon.com') !== -1) &&
+          href.indexOf('tag=') !== -1
+        ) {
+          linkKind = 'amazon';
+        } else if (href.indexOf('px.a8.net') !== -1) {
+          linkKind = 'a8';
+        } else if (href.indexOf('hb.afl.rakuten.co.jp') !== -1 || href.indexOf('af.moshimo.com') !== -1) {
+          linkKind = 'rakuten';
+        } else if ((anchor.getAttribute('rel') || '').indexOf('sponsored') !== -1) {
+          linkKind = 'other';
+        }
+        if (!linkKind) return;
+        var linkDomain = '';
+        try {
+          linkDomain = new URL(href, location.href).hostname;
+        } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            link_kind: linkKind,
+            link_domain: linkDomain,
+            offer_id: anchor.dataset.offer || '',
+            page_path: location.pathname,
+          });
+        }
+        // 自前の計測。bot（webdriver）は送らない。失敗してもリンクの動きには影響させない
+        try {
+          if (!navigator.webdriver && navigator.sendBeacon) {
+            navigator.sendBeacon(
+              'https://t.soroecho.com/c',
+              JSON.stringify({
+                kind: linkKind,
+                offer: anchor.dataset.offer || '',
+                page: location.pathname,
+                href_host: linkDomain,
+              }),
+            );
+          }
+        } catch (e) {}
+      });
+    </script><meta name="description" content="カインズのネット注文の領収証は、支払いがクレジットカード・d払い・Amazon Payのときだけ出ます。再発行は自分で2回まで、手書きは原則なしで、インボイスにあたるのはお買上げ明細書です。店舗受取、請求書払い、返品の書類も公式の案内で整理します。"><link rel="canonical" href="https://soroecho.com/articles/cainz-ryoushuusho/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/icons/192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/icons/180.png"><link rel="alternate" type="application/rss+xml" title="そろえ帳" href="/rss.xml"><meta name="robots" content="index, follow"><meta name="generator" content="Astro v7.3.1"><meta property="og:type" content="article"><meta property="og:site_name" content="そろえ帳"><meta property="og:title" content="カインズの領収書の取り方｜ネットは支払い方法で変わる。店舗・再発行・手書き・インボイス | そろえ帳"><meta property="og:description" content="カインズのネット注文の領収証は、支払いがクレジットカード・d払い・Amazon Payのときだけ出ます。再発行は自分で2回まで、手書きは原則なしで、インボイスにあたるのはお買上げ明細書です。店舗受取、請求書払い、返品の書類も公式の案内で整理します。"><meta property="og:url" content="https://soroecho.com/articles/cainz-ryoushuusho/"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://soroecho.com/og/cainz-ryoushuusho.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="カインズの領収書の取り方｜ネットは支払い方法で変わる。店舗・再発行・手書き・インボイス — そろえ帳"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="カインズの領収書の取り方｜ネットは支払い方法で変わる。店舗・再発行・手書き・インボイス | そろえ帳"><meta name="twitter:description" content="カインズのネット注文の領収証は、支払いがクレジットカード・d払い・Amazon Payのときだけ出ます。再発行は自分で2回まで、手書きは原則なしで、インボイスにあたるのはお買上げ明細書です。店舗受取、請求書払い、返品の書類も公式の案内で整理します。"><meta name="twitter:image" content="https://soroecho.com/og/cainz-ryoushuusho.png"><meta name="twitter:site" content="@soroecho"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"そろえ帳","url":"https://soroecho.com","description":"小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"そろえ帳","url":"https://soroecho.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://soroecho.com/"},{"@type":"ListItem","position":2,"name":"記事一覧","item":"https://soroecho.com/articles/"},{"@type":"ListItem","position":3,"name":"カインズの領収書の取り方｜ネットは支払い方法で変わる。店舗・再発行・手書き・インボイス","item":"https://soroecho.com/articles/cainz-ryoushuusho/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"カインズの領収書の取り方｜ネットは支払い方法で変わる。店舗・再発行・手書き・インボイス","description":"カインズのネット注文の領収証は、支払いがクレジットカード・d払い・Amazon Payのときだけ出ます。再発行は自分で2回まで、手書きは原則なしで、インボイスにあたるのはお買上げ明細書です。店舗受取、請求書払い、返品の書類も公式の案内で整理します。","url":"https://soroecho.com/articles/cainz-ryoushuusho/","datePublished":"2026-11-20T00:00:00.000Z","dateModified":"2026-11-20T00:00:00.000Z","author":{"@type":"Organization","name":"そろえ帳 運営者"},"publisher":{"@type":"Organization","name":"そろえ帳"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://soroecho.com/articles/cainz-ryoushuusho/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"カインズの領収書は、どこでもらえますか？","acceptedAnswer":{"@type":"Answer","text":"買い方で変わります。ネットの注文は、支払い方法がクレジットカード・d払い・Amazon Payのときだけ、出荷完了メールのリンクか、ログイン後のマイページから領収証を印刷します。店舗受取（CAINZ PickUp）は受取店舗で領収書を頼み、ポケットレジはサービスカウンターで頼みます。店舗で買った分は、レシート・POS領収書・手書き領収書があり、頼み方の細かい決まりは公式では確認できませんでした。"}},{"@type":"Question","name":"カインズのネット注文で、領収証が出ない支払い方法はありますか？","acceptedAnswer":{"@type":"Answer","text":"あります。公式のよくある質問では、後払い（コンビニ・銀行）、コンビニ前払い、代金引換、請求書払いの注文は、カインズからは領収証を発行していないとされています。支払いのときに出たレシートや払込受領証が領収証の扱いです。支払い方法は注文確定後に変えられないため、領収証が要るときは確定前に選びます。"}},{"@type":"Question","name":"カインズの領収証は再発行できますか？手書きは出してもらえますか？","acceptedAnswer":{"@type":"Answer","text":"ネットの領収証は、出荷完了メールのリンクかマイページから、自分で2回まで発行できます。2回目には「再」の文字が印刷されます。ネットの注文の手書きは、原則発行していませんが、役所への提出などで必要なときは、発行済みの領収証を返送した上で手続きします。問い合わせフォームに、発行理由・注文番号・名前・宛名・金額・郵送先・電話番号を書いて連絡します。"}},{"@type":"Question","name":"カインズのレシートはインボイス（適格請求書）に対応していますか？","acceptedAnswer":{"@type":"Answer","text":"公式のよくある質問では、レシート、POS領収書、手書き領収書のすべてにインボイスの登録番号が記載されているとされています。登録番号は「T3-0700-0100-6474」で、レシートではバーコードの上にあります。ネットでは、出荷完了後に発行される「お買上げ明細書」が適格請求書とされ、商品に同梱される明細書は非対応です。個別の判断は税理士・税務署に確認してください。"}},{"@type":"Question","name":"カインズで請求書払いはできますか？","acceptedAnswer":{"@type":"Answer","text":"法人・個人事業主向けに「BtoB掛け払い」が案内されています。カインズオンライン会員の登録が必要で、利用開始時と注文ごとに審査があります。月末締め・翌月末払いで、未払い累計額の上限は20万円（税込）です。書類は請求書で、領収証は出ません。見積書の発行もできません。"}}]}</script><link rel="stylesheet" href="/_astro/BaseLayout.CdafRqRl.css"><style>.email-signup[data-astro-cid-kdlozfn6]{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);margin:2.5rem 0;padding:1.5rem}.email-signup[data-astro-cid-kdlozfn6] h2[data-astro-cid-kdlozfn6]{border-left:none;margin:0 0 .5rem;padding-left:0;font-size:1.05rem}.email-signup__lead[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:0 0 1rem;font-size:.9rem;line-height:1.8}.email-signup__label[data-astro-cid-kdlozfn6]{display:none}.email-signup__row[data-astro-cid-kdlozfn6]{flex-wrap:wrap;gap:.75rem;display:flex}.email-signup__input[data-astro-cid-kdlozfn6]{border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:var(--color-bg);flex:240px;padding:.6rem .8rem;font-size:.95rem}.email-signup__button[data-astro-cid-kdlozfn6]{background:var(--color-primary);color:#fff;border-radius:var(--radius-sm);cursor:pointer;border:none;height:44px;padding:0 1.5rem;font-size:.95rem;font-weight:700}.email-signup__button[data-astro-cid-kdlozfn6]:hover{background:var(--color-primary-hover)}.email-signup__pending[data-astro-cid-kdlozfn6]{color:var(--color-text-muted);margin:2rem 0;font-size:.8rem}
+.eyecatch[data-astro-cid-yuatfsof]{line-height:0;display:block}.eyecatch[data-astro-cid-yuatfsof] svg[data-astro-cid-yuatfsof]{width:100%;height:auto;display:block}.article-card[data-astro-cid-7ahxywo7]{gap:0;padding:0;overflow:hidden}.article-card__media[data-astro-cid-7ahxywo7]{border-bottom:1px solid var(--color-border)}.article-card__body[data-astro-cid-7ahxywo7]{flex-direction:column;flex:1;padding:1.25rem 1.5rem 1.5rem;display:flex}.article-card__title[data-astro-cid-7ahxywo7]{color:var(--color-text);-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:.75rem 0 .25rem;font-size:1.05rem;font-weight:800;line-height:1.5;display:-webkit-box;overflow:hidden}.article-card__desc[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;margin:0;font-size:.9rem;line-height:1.7;display:-webkit-box;overflow:hidden}.article-card__meta[data-astro-cid-7ahxywo7]{color:var(--color-text-muted);margin:.9rem 0 0;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.DE7v3Ud6.css"></head><body data-astro-cid-z4jru4n3><a class="skip-link" href="#main-content" data-astro-cid-z4jru4n3>本文へ移動</a><header class="site-header" data-astro-cid-z4jru4n3><div class="site-header__inner" data-astro-cid-z4jru4n3><p class="site-header__name" data-astro-cid-z4jru4n3><a href="/" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</a></p><nav class="site-nav" aria-label="主要ナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li></ul></nav></div></header><main id="main-content" data-astro-cid-z4jru4n3><p class="pr-notice" data-astro-cid-jqv5i22p>本ページにはアフィリエイト広告（Amazonアソシエイト等）が含まれます。表示内容は公式情報と自費体験に基づき、報酬の有無で評価を変えることはありません。</p><div class="breadcrumbs-wrap" data-astro-cid-z4jru4n3><nav class="breadcrumbs" aria-label="パンくずリスト" data-astro-cid-vx4iavld><ol data-astro-cid-vx4iavld><li data-astro-cid-vx4iavld><a href="/" data-astro-cid-vx4iavld>トップ</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><a href="/articles/" data-astro-cid-vx4iavld>記事一覧</a><span class="breadcrumbs__sep" aria-hidden="true" data-astro-cid-vx4iavld>›</span></li><li data-astro-cid-vx4iavld><span aria-current="page" data-astro-cid-vx4iavld>カインズの領収書の取り方｜ネットは支払い方法で変わる。店舗・再発行・手書き・インボイス</span></li></ol></nav></div><article class="page article" data-astro-cid-sgg5joot><div class="article__eyecatch" data-astro-cid-sgg5joot><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1qv3l9w-g" x1="1" y1="0" x2="0" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1qv3l9w-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1qv3l9w-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1qv3l9w-p)" data-astro-cid-yuatfsof></rect><circle cx="369" cy="114" r="149" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="140" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>カインズ</text><text x="32" y="184" fill="#fff" font-size="34" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>領収書</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><span class="badge badge--amazon-business">Amazonビジネス実務</span><h1 data-astro-cid-sgg5joot>カインズの領収書の取り方｜ネットは支払い方法で変わる。店舗・再発行・手書き・インボイス</h1><p class="article__meta" data-astro-cid-sgg5joot>公開日: <time datetime="2026-11-20T00:00:00.000Z" data-astro-cid-sgg5joot>2026年11月20日</time><span class="article__meta-sep" aria-hidden="true" data-astro-cid-sgg5joot>・</span>読了目安: 約12分</p><p class="cta-inline">カインズの請求書払いが合わないときは、Amazonビジネスの登録（無料）も比べられます<a href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">登録ページを見る（公式）</a></p><nav class="article__toc" aria-label="目次" data-astro-cid-sgg5joot><p class="article__toc-title" data-astro-cid-sgg5joot>目次</p><ol data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="#結論カインズの領収書は買い方で変わるネットは支払い方法で領収証が出るかが決まる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>01</span>結論：カインズの領収書は買い方で変わる。ネットは支払い方法で、領収証が出るかが決まる</a></li><li data-astro-cid-sgg5joot><a href="#店舗で買った分レシートpos領収書手書き領収書頼み方の細かい決まりは公式では確認できなかった" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>02</span>店舗で買った分：レシート、POS領収書、手書き領収書。頼み方の細かい決まりは公式では確認できなかった</a></li><li data-astro-cid-sgg5joot><a href="#店舗受取ポケットレジmobile-storeの場合書類をもらう窓口が違う" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>03</span>店舗受取・ポケットレジ・Mobile Storeの場合：書類をもらう窓口が違う</a></li><li data-astro-cid-sgg5joot><a href="#ネットの領収証はどの支払い方法なら出る" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>04</span>ネットの領収証は、どの支払い方法なら出る？</a></li><li data-astro-cid-sgg5joot><a href="#領収証は何回まで再発行できる手書きは頼める" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>05</span>領収証は何回まで再発行できる？手書きは頼める？</a></li><li data-astro-cid-sgg5joot><a href="#カインズのレシートはインボイスになるネットの適格請求書はお買上げ明細書" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>06</span>カインズのレシートはインボイスになる？ネットの適格請求書は「お買上げ明細書」</a></li><li data-astro-cid-sgg5joot><a href="#法人個人事業主は請求書払いにできる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>07</span>法人・個人事業主は請求書払いにできる？</a></li><li data-astro-cid-sgg5joot><a href="#返品するとき領収書はどうなる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>08</span>返品するとき、領収書はどうなる？</a></li><li data-astro-cid-sgg5joot><a href="#経理に出す前のチェックリスト" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>09</span>経理に出す前のチェックリスト</a></li><li data-astro-cid-sgg5joot><a href="#併用の選択肢ネット注文の書類は支払い方法で変わる" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>10</span>併用の選択肢：ネット注文の書類は、支払い方法で変わる</a></li><li data-astro-cid-sgg5joot><a href="#よくある質問とまとめ" data-astro-cid-sgg5joot><span class="article__toc-number" data-astro-cid-sgg5joot>11</span>よくある質問とまとめ</a></li></ol></nav><div class="article__body" data-astro-cid-sgg5joot><h2 id="結論カインズの領収書は買い方で変わるネットは支払い方法で領収証が出るかが決まる">結論：カインズの領収書は買い方で変わる。ネットは支払い方法で、領収証が出るかが決まる</h2>
+<p>カインズ公式サイトのよくある質問と案内（2026年11月8日取得）によると、書類の取り方は買い方で分かれます。</p>
+<p>ネットの注文で領収証を印刷できるのは、支払い方法がクレジットカード・d払い・Amazon Payのときだけです。後払い・コンビニ前払い・代金引換・請求書払いでは、カインズからは領収証が発行されません。支払い方法は注文の確定後に変えられないので、領収証が要る注文は、確定前に決めてください。</p>
+<table>
+<thead>
+<tr>
+<th>買い方</th>
+<th>手元に残す書類</th>
+<th>取り方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>店舗で買う</td>
+<td>レシート、POS領収書、手書き領収書（公式の回答に出てくる呼び名）</td>
+<td>会計のときに店で頼む。頼み方の細かい決まりは公式では確認できなかった</td>
+</tr>
+<tr>
+<td>ネット（カード・d払い・Amazon Pay）</td>
+<td>領収証</td>
+<td>出荷完了メールのリンク、または会員のマイページから印刷。自分で発行できるのは2回まで</td>
+</tr>
+<tr>
+<td>ネット（後払い・コンビニ前払い・代金引換・請求書払い）</td>
+<td>支払いのときに出たレシートや払込受領証</td>
+<td>カインズは領収証を発行しない</td>
+</tr>
+<tr>
+<td>ネットのインボイス</td>
+<td>お買上げ明細書</td>
+<td>出荷後に、マイページか出荷完了メールのリンクから印刷</td>
+</tr>
+<tr>
+<td>店舗受取（CAINZ PickUp）</td>
+<td>受取店舗で出す領収書</td>
+<td>明細書を持って、受け取りカウンターかサービスカウンターで頼む</td>
+</tr>
+<tr>
+<td>ポケットレジ</td>
+<td>領収書</td>
+<td>サービスカウンターで頼む</td>
+</tr>
+</tbody>
+</table>
+<p>「カインズホーム」で検索する方も、公式ページに表示されている名前は「カインズ」「株式会社カインズ」です。</p>
+<p>この記事で分かることは次のとおりです。</p>
+<ul>
+<li>店舗・ネット・店舗受取の違いと、支払い方法ごとの領収証</li>
+<li>再発行の回数、手書きの手順、インボイスとお買上げ明細書</li>
+<li>法人・個人事業主向けの請求書払いと、返品のときの書類</li>
+</ul>
+<p>画面の表記や条件は変わることがあります。実際の画面と公式の最新の案内で確かめてください。</p>
+<h2 id="店舗で買った分レシートpos領収書手書き領収書頼み方の細かい決まりは公式では確認できなかった">店舗で買った分：レシート、POS領収書、手書き領収書。頼み方の細かい決まりは公式では確認できなかった</h2>
+<p>公式のインボイスのよくある質問は、「レシート、POS領収書、手書き領収書、すべてにインボイス登録番号が記載されています」と答えています。店で出る書類に、この3つの呼び名があることが分かります。</p>
+<p>一方で、次の3点は、今回確認した公式ページに書かれていませんでした。この記事では断定しません。</p>
+<ul>
+<li>店でPOS領収書や手書き領収書が出る場面</li>
+<li>宛名や但し書きを入れてもらえるか、どう頼むか</li>
+<li>レシートの再発行ができるか</li>
+</ul>
+<p>宛名や但し書きが必要なときは、会計のときにレジで頼み、何が出るかをその場で確かめるのが現実的です。返品の予定があるなら、レシートと領収書の両方を保管してください（後ろの返品の項を参照）。</p>
+<h2 id="店舗受取ポケットレジmobile-storeの場合書類をもらう窓口が違う">店舗受取・ポケットレジ・Mobile Storeの場合：書類をもらう窓口が違う</h2>
+<h3 id="店舗受取cainz-pickup受取店舗で領収書を出してもらう">店舗受取（CAINZ PickUp）：受取店舗で領収書を出してもらう</h3>
+<p>店舗取り置きサービス（CAINZ PickUp）の領収書は、公式のよくある質問によると、明細書を持って来店し、受け取りカウンターかサービスカウンターで頼みます。店舗支払いなら、支払ったレジで頼みます。</p>
+<p>ネット注文のように、メールのリンクやマイページから印刷することはできません。例外は【CAINZ-DASH】の商品で、出荷完了メールの領収証発行用リンクから、受け取ったあとに印刷します。店舗受取の支払い方法は、店舗払いかクレジットカードのみと案内されています。</p>
+<h3 id="アプリで買ったときポケットレジは窓口でmobile-storeは画像で保存">アプリで買ったとき：ポケットレジは窓口で、Mobile Storeは画像で保存</h3>
+<p>アプリの「ポケットレジ」で買ったときも、領収書はサービスカウンターで頼みます。アプリの履歴（ご利用明細）は販売証明書の扱いです。販売証明書は公式の保証の案内に出てくる書類で、経理に出す書類としての扱いは書かれていないため、領収書とは別と考えます。</p>
+<p>CAINZ Mobile Storeで買ったときは、レシートの発行がありません。領収書は、アプリの「購入履歴」から対象の購入を選び、最下部の「領収書」、続けて「保存」を押して、画像として保存する案内です（iPhoneは画像の長押し、Androidはスクリーンショット）。</p>
+<h2 id="ネットの領収証はどの支払い方法なら出る">ネットの領収証は、どの支払い方法なら出る？</h2>
+<p>オンラインショップ（配送）で使える支払い方法は、公式のよくある質問によると6つで、カインズが領収証を発行するのは3つだけです。</p>
+<table>
+<thead>
+<tr>
+<th>支払い方法</th>
+<th>カインズの領収証</th>
+<th>代わりになる書類</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>クレジットカード</td>
+<td>出る</td>
+<td>－</td>
+</tr>
+<tr>
+<td>d払い</td>
+<td>出る（dポイントを使った分は、領収に反映されない）</td>
+<td>－</td>
+</tr>
+<tr>
+<td>Amazon Pay</td>
+<td>出る</td>
+<td>－</td>
+</tr>
+<tr>
+<td>GMO後払い（コンビニ・銀行）</td>
+<td>出ない</td>
+<td>支払いのときに出たレシートや払込受領証</td>
+</tr>
+<tr>
+<td>コンビニ前払い</td>
+<td>出ない</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>代金引換</td>
+<td>出ない</td>
+<td>同上</td>
+</tr>
+</tbody>
+</table>
+<p>請求書払いも、カインズからは領収証を発行しない支払い方法として書かれています（後ろの「法人・個人事業主は請求書払いにできる？」で整理します）。後払いのはがきに書かれた購入明細は、一部の商品のみの記載です。正規の明細書は、出荷完了メールかマイページの注文履歴で見る案内です。</p>
+<h3 id="領収証の取り方出荷完了メールのリンクかマイページ">領収証の取り方：出荷完了メールのリンクか、マイページ</h3>
+<p>領収証は、商品の出荷後に印刷します。方法は2つです。</p>
+<ol>
+<li>出荷完了メールに書かれた「領収証発行用のリンク」から印刷する</li>
+<li>ログインして買った場合は、出荷完了後にマイページからも印刷できる</li>
+</ol>
+<p>分割出荷の注文は、全ての商品が発送になった時点で印刷できます。マイページの注文履歴で見られるのは、過去1年分までです。領収証の印刷に期限があるかは書かれていませんが、出荷後に早めに印刷して保存しておくと安心です。ネットで印刷した書類の保存は、<a href="/articles/ryoushuusho-hozon-e-bunsho-taiou/">領収書の保存と電子データの扱い</a>で整理しています。</p>
+<p>宛名や但し書きの入れ方は、今回確認した公式ページには書かれていませんでした。</p>
+<h3 id="支払い方法を間違えたとき">支払い方法を間違えたとき</h3>
+<p>支払い方法は、注文の確定後は変えられません。コンビニ前払いで未入金なら、支払わずに注文をし直します。ほかの支払い方法は、マイページのキャンセルボタンで取り消して、注文をし直します。ボタンがないときやゲスト注文は、問い合わせフォームで聞く案内です。</p>
+<h2 id="領収証は何回まで再発行できる手書きは頼める">領収証は何回まで再発行できる？手書きは頼める？</h2>
+<h3 id="再発行自分で2回まで2回目は再の文字入り">再発行：自分で2回まで、2回目は「再」の文字入り</h3>
+<p>公式のよくある質問によると、メールの領収証リンクか、マイページの注文履歴から、領収証を自分で発行できるのは2回までです。2回目に発行ボタンを押すと、領収証には「再」の文字が印刷されます。印刷できないときは、注文番号を書いて、問い合わせフォームから連絡します。</p>
+<h3 id="手書き原則なし役所への提出などは発行済みの領収証を返送して手続き">手書き：原則なし。役所への提出などは、発行済みの領収証を返送して手続き</h3>
+<p>ネットの注文の手書きの領収証は、公式のよくある質問の回答欄に「原則、手書き領収証の発行はしておりません」と書かれています。ただし、役所への提出などで必要なときは、すでに発行済みの領収証を返送した上で、発行の手続きをする案内です。</p>
+<p>まず、問い合わせフォームに、手書き領収証の発行理由・注文番号・注文者の名前・領収証の宛名・金額・郵送先住所・電話番号を書いて連絡します。宛名と金額は、例として「（株）カインズ」「￥1,980」と示されています。</p>
+<p>但し書きは、お買上げ明細書を添付するため、記載しないと書かれています。返送の宛先と届くまでの日数、領収証が出ない支払い方法（後払いなど）の注文で手書きを頼めるかは、今回確認した公式ページに書かれていませんでした。フォームで確かめてください。</p>
+<h2 id="カインズのレシートはインボイスになるネットの適格請求書はお買上げ明細書">カインズのレシートはインボイスになる？ネットの適格請求書は「お買上げ明細書」</h2>
+<p>カインズの公式のよくある質問には、登録番号は「T3-0700-0100-6474」と書かれています。ハイフンを除くと、T3070001006474 です。国税庁の適格請求書発行事業者公表サイトでも、この番号は、氏名又は名称が株式会社カインズ、登録年月日が令和5年10月1日として公表されています（2026年11月8日取得）。</p>
+<p>書類ごとの公式の扱いは次のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>書類</th>
+<th>公式の扱い</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>店舗のレシート・POS領収書・手書き領収書</td>
+<td>すべてに登録番号が記載されている。レシートは、バーコードの上に登録番号がある</td>
+</tr>
+<tr>
+<td>ネットの「お買上げ明細書」</td>
+<td>出荷完了後に発行される書類が、適格請求書とされている</td>
+</tr>
+<tr>
+<td>商品に同梱される明細書</td>
+<td>非対応。注意するよう書かれている</td>
+</tr>
+<tr>
+<td>ネットの領収証</td>
+<td>登録番号が載るかは、今回確認した公式ページでは確認できなかった</td>
+</tr>
+</tbody>
+</table>
+<h3 id="お買上げ明細書の取り方">お買上げ明細書の取り方</h3>
+<p>「お買上げ明細書」は、出荷後に、マイページか出荷完了メールのリンクから印刷します。分割出荷の場合は、全ての商品が発送になった時点で印刷できます。</p>
+<p>マイページがない方は、問い合わせフォームに、注文者の名前・注文番号・送り先住所・電話番号を書いて頼むと、明細書を郵便で送ってもらえます。商品の発送前に頼んだときは、発送完了後の郵送です。</p>
+<p>同梱の明細書は、出荷場所が複数に分かれると、同梱された商品だけが載ります。注文全体の明細書は、全ての商品の出荷が完了したあとに、マイページから出力します。</p>
+<p>登録番号が有効かどうかは、上のとおり国税庁の公表サイトで調べられます。仕入税額控除の可否など個別の判断は、税理士または税務署へ相談してください。登録番号の基本は<a href="/articles/invoice-touroku-yagou/">インボイスの登録番号と屋号</a>で整理しています。</p>
+<h2 id="法人個人事業主は請求書払いにできる">法人・個人事業主は請求書払いにできる？</h2>
+<p>カインズ公式の「法人・個人事業主のお客様向けサービス」には、月末締めの「BtoB掛け払い」が案内されています。GMOペイメントサービスが提供する「GMO掛払い」を使うとされています。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>公式ページの記載</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>対象・費用</td>
+<td>法人または個人事業主（個人事業主は屋号が必要）。手数料・入会金・年会費はかからず、銀行振込手数料は購入者の負担</td>
+</tr>
+<tr>
+<td>申込</td>
+<td>カインズオンライン会員の登録が必要。結果は1週間程度で連絡</td>
+</tr>
+<tr>
+<td>審査</td>
+<td>利用開始時と注文ごとに与信審査がある。基準と理由は開示されない</td>
+</tr>
+<tr>
+<td>締めと期限</td>
+<td>月末締め、翌月末支払い。締めの基準は注文日ではなく出荷完了日</td>
+</tr>
+<tr>
+<td>請求書の発行</td>
+<td>購入月の翌月の3営業日までに発行（土日祝を除く）</td>
+</tr>
+<tr>
+<td>上限</td>
+<td>未払い累計額20万円（税込）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="書類は請求書領収証と見積書は出ない">書類は請求書。領収証と見積書は出ない</h3>
+<p>請求書は、GMOペイメントサービスから封書とメールで届き、GMO掛払いのマイページからPDFをダウンロードして印刷することもできます。再発行も、GMO掛払いのマイページの請求書検索からダウンロードします。</p>
+<p>請求書払いでは、カインズからは領収証が発行されません。見積書の発行はできず、マイページでも納品書は発行できません。商品には金額入りの明細書が同梱され、納品書がほしいときは、注文のたびに「お買い上げ明細書の金額表示をしない」を選びます。</p>
+<h3 id="宛名インボイス会員登録の注意点">宛名・インボイス・会員登録の注意点</h3>
+<p>請求書の宛名は、「請求先が異なる」という申請がなければ、注文者情報（カインズカード情報）で印字されます。宛名・住所・メールアドレスのどれか1つでも注文者情報と違うときは、請求先の別登録が必要で、情報変更フォームから連絡します。インボイス対応の請求書が要るときも、同じフォームから連絡する案内です。</p>
+<p>会員登録では、氏名に企業名や部署名を入れられます（姓・名とも各10文字まで）。住所は企業（事業所）の情報で、公共機関に届け出されている住所のとおりに入力します。</p>
+<h3 id="見積りや大量の注文が必要なとき">見積りや大量の注文が必要なとき</h3>
+<p>「大量注文について」の公式ページには、会社や施設の備品などを「まとめてお見積り・大量注文を承っております」と書かれています。ネットで「ご注文数が30個以上、または、ご注文金額5万円以上」の場合や、銀行振込（前払い）で払いたい場合も、問い合わせフォームから連絡する案内です。見積書の考え方は、<a href="/articles/amazon-business-mitsumorisho-hakkou/">Amazonビジネスの見積書の発行</a>でも整理しています。</p>
+<p>特定商取引法に基づく表記には、請求書払いは「一部ご契約者様」向けで、特定の企業との取引には別途取引契約書の締結が必要と書かれています。</p>
+<h2 id="返品するとき領収書はどうなる">返品するとき、領収書はどうなる？</h2>
+<h3 id="店舗で返品するとき">店舗で返品するとき</h3>
+<p>公式のよくある質問によると、お客様都合の返品・交換は、原則、購入から1か月以内で、販売履歴の確認が取れる場合に限られ、レシートを持っていきます。レシートがないときは、購入時に出したカインズカード（カインズアプリ）を持参します。カードやアプリの場合は、販売履歴の確認に時間がかかる場合があります。</p>
+<p>領収書については、別に領収書を発行してもらった場合は領収書が必要で、領収証を持っている方は来店時に持参するよう書かれています。クレジットカードで払った分は、購入した店舗での対応で、本人名義のカードを持参します。C’z PRO店舗では、C’z PRO店で買った物以外の返品・交換はできません。</p>
+<h3 id="ネット注文を返品するとき">ネット注文を返品するとき</h3>
+<p>ネット注文は、商品が届いてから30日以内に、問い合わせフォームから連絡します。お客様都合の交換は承っておらず、返品後にあらためて注文する案内です。お客様都合の返品は、未使用・未着用・未開封の状態に限られます。</p>
+<p>返金は、クレジットカード・d払い・Amazon Payなら請求金額の訂正（締め日の都合で、一度引き落とされて翌日以降に返金されることがある）、コンビニ前払い・代金引換・後払いなら指定した口座への振込です。返金までは約1〜2週間と案内されています。返品した分の領収証や明細書を経理でどう扱うかは、公式のよくある質問に書かれていません。会計の処理は、税理士や税務署に確かめてください。</p>
+<h2 id="経理に出す前のチェックリスト">経理に出す前のチェックリスト</h2>
+<p>公式ページに書かれている事実の範囲で、確認したい項目を並べます。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 店舗・ネット・店舗受取・ポケットレジのどれで買ったかを分けた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 店舗の分は、宛名や但し書きの要否を経理に聞いてから、会計のときに頼んだ</li>
+<li class="task-list-item"><input type="checkbox" disabled> ネット注文は、確定する前に支払い方法を決めた（領収証が要るなら、カード・d払い・Amazon Pay）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 出荷後に、出荷完了メールのリンクかマイページから領収証を印刷して保存した（自分で発行できるのは2回まで。分割出荷は全ての商品の発送後）</li>
+<li class="task-list-item"><input type="checkbox" disabled> インボイスが要る分は、お買上げ明細書を印刷した（同梱の明細書は非対応）</li>
+<li class="task-list-item"><input type="checkbox" disabled> 書類に「T＋13桁」の登録番号があるか確かめた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 店舗受取の分は、明細書を持って受取店舗で領収書を頼んだ</li>
+<li class="task-list-item"><input type="checkbox" disabled> 手書きが必要な分は、返送の手順を問い合わせフォームで確かめた</li>
+<li class="task-list-item"><input type="checkbox" disabled> 返品の可能性がある分は、レシートと領収書の両方を保管した</li>
+</ul>
+<h2 id="併用の選択肢ネット注文の書類は支払い方法で変わる">併用の選択肢：ネット注文の書類は、支払い方法で変わる</h2>
+<p>カインズのネット注文は、領収証が出るのがカード・d払い・Amazon Payだけで、請求書払いには審査と上限があります。買い先を分けて持つときは、手続きの面で次の点を並べると比べやすくなります。</p>
+<table>
+<thead>
+<tr>
+<th>比べる点</th>
+<th>カインズの公式の記載</th>
+<th>確認すること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>登録の条件</td>
+<td>BtoB掛け払いは手数料・入会金・年会費なし（銀行振込手数料は購入者負担）。個人事業主は屋号が必要</td>
+<td>費用はかかるか、事業者でなければ登録できないか</td>
+</tr>
+<tr>
+<td>審査と上限</td>
+<td>利用開始時と注文ごとに与信審査。未払い累計額は20万円（税込）まで</td>
+<td>審査の有無と、利用限度額</td>
+</tr>
+<tr>
+<td>書類</td>
+<td>請求書。インボイス対応の請求書は連絡して発行。見積書は不可</td>
+<td>領収書・請求書・見積書をどの画面から取れるか</td>
+</tr>
+</tbody>
+</table>
+<p>Amazonビジネスは、公式サイトの表記では登録が無料です（2026年11月8日確認）。請求書払いは、公式ページによると招待制で審査があり、締め日から30日の支払期限です。締め日は5日・10日・15日・20日・25日・末日から選べ、請求書は月ごとか注文ごとに発行でき、適格請求書として使えるとも書かれています。カインズとどちらが合うかは、買う物や支払いの流れで変わるため、この記事では優劣をつけません。</p>
+<p>3社の違いは<a href="/articles/amazon-business-monotaro-askul-hikaku/">アマゾンビジネス・モノタロウ・アスクルの比較記事</a>で整理しています。ほかの店の書類は、<a href="/articles/joyfulhonda-ryoushuusho/">ジョイフル本田</a>、<a href="/articles/kohnan-ryoushuusho/">コーナン</a>、<a href="/articles/monotaro-ryoushuusho/">モノタロウ</a>、<a href="/articles/askul-ryoushuusho/">アスクル</a>、Amazonで買った分は<a href="/articles/amazon-ryoushuusho-dashikata/">Amazonの領収書の出し方</a>を見てください。</p>
+<aside class="cta-box cta-box--subtle"><p class="cta-box__ad-label">広告</p><p class="cta-box__label">Amazonビジネス</p><h3 class="cta-box__title">カインズの請求書払いが合わないときは、Amazonビジネスの登録（無料）も比べられます</h3><p class="cta-box__body">カインズのBtoB掛け払いは、利用開始時と注文ごとに与信審査があり、未払い累計額は20万円（税込）までです。Amazonビジネスは、公式サイトの表記で登録無料です。請求書払いは審査のある招待制で、締め日から30日の支払期限があります。扱う商品も条件も違うので、よく買う物で、書類の出方と支払いの流れを比べてから決められます。</p><a class="cta-box__button" href="https://www.amazon.co.jp/tryAB?tag=soroecho-22" rel="sponsored nofollow noopener" target="_blank">Amazonビジネスの登録ページへ（公式）</a></aside>
+<h2 id="よくある質問とまとめ">よくある質問とまとめ</h2>
+<h3 id="領収書領収証お買上げ明細書販売証明書は同じですか">領収書・領収証・お買上げ明細書・販売証明書は同じですか</h3>
+<p>同じではありません。公式のよくある質問では「領収証」と「領収書」の両方の表記が使われています。インボイスにあたるネットの書類は「お買上げ明細書」で、「販売証明書」は保証に関わる書類です。</p>
+<h3 id="まとめ">まとめ</h3>
+<p>カインズの領収書は、買い方で取り方が違います。ネットの領収証は、支払い方法がクレジットカード・d払い・Amazon Payのときだけ、出荷完了メールのリンクかマイページから印刷でき、自分で発行できるのは2回までです。ネットの手書きは原則なしで、役所への提出などは返送の手続きになります。</p>
+<p>インボイスの登録番号は T3-0700-0100-6474 で、ネットでは「お買上げ明細書」が適格請求書とされ、同梱の明細書は非対応です。店舗の手書き領収書の頼み方や、宛名・但し書きは公式では確認できなかったため、買った店のレジで確かめてください。税務の個別の判断は、税理士・税務署へ相談してください。</p>
+</div><section class="article__faq" aria-labelledby="faq-heading" data-astro-cid-sgg5joot><h2 id="faq-heading" data-astro-cid-sgg5joot>よくある質問</h2><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>カインズの領収書は、どこでもらえますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>買い方で変わります。ネットの注文は、支払い方法がクレジットカード・d払い・Amazon Payのときだけ、出荷完了メールのリンクか、ログイン後のマイページから領収証を印刷します。店舗受取（CAINZ PickUp）は受取店舗で領収書を頼み、ポケットレジはサービスカウンターで頼みます。店舗で買った分は、レシート・POS領収書・手書き領収書があり、頼み方の細かい決まりは公式では確認できませんでした。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>カインズのネット注文で、領収証が出ない支払い方法はありますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>あります。公式のよくある質問では、後払い（コンビニ・銀行）、コンビニ前払い、代金引換、請求書払いの注文は、カインズからは領収証を発行していないとされています。支払いのときに出たレシートや払込受領証が領収証の扱いです。支払い方法は注文確定後に変えられないため、領収証が要るときは確定前に選びます。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>カインズの領収証は再発行できますか？手書きは出してもらえますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>ネットの領収証は、出荷完了メールのリンクかマイページから、自分で2回まで発行できます。2回目には「再」の文字が印刷されます。ネットの注文の手書きは、原則発行していませんが、役所への提出などで必要なときは、発行済みの領収証を返送した上で手続きします。問い合わせフォームに、発行理由・注文番号・名前・宛名・金額・郵送先・電話番号を書いて連絡します。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>カインズのレシートはインボイス（適格請求書）に対応していますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>公式のよくある質問では、レシート、POS領収書、手書き領収書のすべてにインボイスの登録番号が記載されているとされています。登録番号は「T3-0700-0100-6474」で、レシートではバーコードの上にあります。ネットでは、出荷完了後に発行される「お買上げ明細書」が適格請求書とされ、商品に同梱される明細書は非対応です。個別の判断は税理士・税務署に確認してください。</p></div><div class="article__faq-item" data-astro-cid-sgg5joot><p class="article__faq-q" data-astro-cid-sgg5joot><span class="article__faq-mark" aria-hidden="true" data-astro-cid-sgg5joot>Q</span>カインズで請求書払いはできますか？</p><p class="article__faq-a" data-astro-cid-sgg5joot><span class="article__faq-mark article__faq-mark--a" aria-hidden="true" data-astro-cid-sgg5joot>A</span>法人・個人事業主向けに「BtoB掛け払い」が案内されています。カインズオンライン会員の登録が必要で、利用開始時と注文ごとに審査があります。月末締め・翌月末払いで、未払い累計額の上限は20万円（税込）です。書類は請求書で、領収証は出ません。見積書の発行もできません。</p></div></section><section class="article__sources" aria-labelledby="sources-heading" data-astro-cid-sgg5joot><h2 id="sources-heading" data-astro-cid-sgg5joot>出典</h2><ul data-astro-cid-sgg5joot><li data-astro-cid-sgg5joot><a href="https://customer.cainz.com/support/faq/0000000056/0000000126" rel="noopener" target="_blank" data-astro-cid-sgg5joot>カインズ よくある質問「領収証・明細書について」（オンラインショップの一覧）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://customer.cainz.com/support/faq/0000000056/0000000126/000001414" rel="noopener" target="_blank" data-astro-cid-sgg5joot>カインズ よくある質問「【オンラインショップ】領収証（領収書）は発行してもらえますか？」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://customer.cainz.com/support/faq/0000000056/0000000126/000017201" rel="noopener" target="_blank" data-astro-cid-sgg5joot>カインズ よくある質問「【オンラインショップ】領収証（領収書）を再発行してもらうことはできますか？」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://customer.cainz.com/support/faq/0000000056/0000000126/000001491" rel="noopener" target="_blank" data-astro-cid-sgg5joot>カインズ よくある質問「【オンラインショップ】手書きの領収証（領収書）は発行してもらえますか？」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://customer.cainz.com/support/faq/0000000056/0000000126/000001448" rel="noopener" target="_blank" data-astro-cid-sgg5joot>カインズ よくある質問「【オンラインショップ】明細書はもらえますか？」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://customer.cainz.com/support/faq/0000000056/0000000126/000017309" rel="noopener" target="_blank" data-astro-cid-sgg5joot>カインズ よくある質問「【オンラインショップ】同梱されていた明細書と注文内容が一致しません。」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://customer.cainz.com/support/faq/0000000061/0000000103/000017338" rel="noopener" target="_blank" data-astro-cid-sgg5joot>カインズ よくある質問「インボイスの登録番号を教えてください。」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://customer.cainz.com/support/faq/0000000061/0000000103/000017337" rel="noopener" target="_blank" data-astro-cid-sgg5joot>カインズ よくある質問「買い物をした際に発行されるレシートは、インボイス制度対応のものとなりますか？」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://customer.cainz.com/support/faq/0000000149/0000000152/000017178" rel="noopener" target="_blank" data-astro-cid-sgg5joot>カインズ よくある質問「【PickUp】購入した際、領収証は発行できますか？」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://customer.cainz.com/support/faq/0000000056/0000000085/000017265" rel="noopener" target="_blank" data-astro-cid-sgg5joot>カインズ よくある質問「【オンラインショップ】支払い方法は何がありますか？」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://customer.cainz.com/support/faq/0000000056/0000000081/000001456" rel="noopener" target="_blank" data-astro-cid-sgg5joot>カインズ よくある質問「【オンラインショップ】支払い方法は変更できますか？」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://customer.cainz.com/support/faq/0000000056/0000000081/000017248" rel="noopener" target="_blank" data-astro-cid-sgg5joot>カインズ よくある質問「【オンラインショップ】注文履歴はどこで確認できますか？」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://customer.cainz.com/support/faq/0000000056/0000000085/000001380" rel="noopener" target="_blank" data-astro-cid-sgg5joot>カインズ よくある質問「【オンラインショップ】後払いの振込用紙が入っていません。」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://customer.cainz.com/support/faq/0000000057/0000000196/000017349" rel="noopener" target="_blank" data-astro-cid-sgg5joot>カインズ よくある質問「【アプリ】ポケットレジ（Pocket Regi）の利用方法について教えてください。」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://customer.cainz.com/support/faq/0000000057/0000000196/000017354" rel="noopener" target="_blank" data-astro-cid-sgg5joot>カインズ よくある質問「【アプリ】ポケットレジ（Pocket Regi）の買い物でも販売証明書は発行できますか。」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://customer.cainz.com/support/faq/0000000216/0000000219/000017624" rel="noopener" target="_blank" data-astro-cid-sgg5joot>カインズ よくある質問「【CAINZ Mobile Store】領収書が欲しいです」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://customer.cainz.com/support/faq/0000000216/0000000219/000017623" rel="noopener" target="_blank" data-astro-cid-sgg5joot>カインズ よくある質問「【CAINZ Mobile Store】レシートはありますか？」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://customer.cainz.com/support/faq/0000000058/0000000093/000001390" rel="noopener" target="_blank" data-astro-cid-sgg5joot>カインズ よくある質問「返品・交換は購入してからどれくらいまで対応してもらえますか？」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://customer.cainz.com/support/faq/0000000058/0000000093/000001365" rel="noopener" target="_blank" data-astro-cid-sgg5joot>カインズ よくある質問「返品・交換はどの店舗でも対応してもらえますか？」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://customer.cainz.com/support/faq/0000000058/0000000093/000001499" rel="noopener" target="_blank" data-astro-cid-sgg5joot>カインズ よくある質問「レシートが無い場合には返品・交換はできませんか？」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://customer.cainz.com/support/faq/0000000056/0000000083/000017247" rel="noopener" target="_blank" data-astro-cid-sgg5joot>カインズ よくある質問「【オンラインショップ】商品を交換・返品したいのですが？」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://customer.cainz.com/support/faq/0000000056/0000000083/000017222" rel="noopener" target="_blank" data-astro-cid-sgg5joot>カインズ よくある質問「【オンラインショップ】返金方法について教えてください。」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://customer.cainz.com/support/faq/0000000058/0000000093/000001377" rel="noopener" target="_blank" data-astro-cid-sgg5joot>カインズ よくある質問「商品の保証期間はいつまでですか？」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.cainz.com/contents/service/for_b2b.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>カインズ 法人・個人事業主のお客様向けサービス</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.cainz.com/contents/service/gmo_kb.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>カインズ GMO掛払いについて</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://customer.cainz.com/support/faq/0000000056/0000000081/000001469" rel="noopener" target="_blank" data-astro-cid-sgg5joot>カインズ よくある質問「【オンラインショップ】 大量に注文したい場合はどうすればよいですか？」</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.cainz.com/contents/service/bulk_order.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>カインズ 大量注文について</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.cainz.com/contents/shoppingguide/legal.html" rel="noopener" target="_blank" data-astro-cid-sgg5joot>カインズ 特定商取引法に基づく表記</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://www.invoice-kohyo.nta.go.jp/regno-search/detail?selRegNo=3070001006474" rel="noopener" target="_blank" data-astro-cid-sgg5joot>国税庁 適格請求書発行事業者公表サイト（株式会社カインズ）</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://business.amazon.co.jp/" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス公式サイト</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li><li data-astro-cid-sgg5joot><a href="https://business.amazon.co.jp/ja/solutions/payment-options/pay-by-invoice" rel="noopener" target="_blank" data-astro-cid-sgg5joot>Amazonビジネス 請求書払い</a><span class="article__sources-date" data-astro-cid-sgg5joot>（確認日: 2026-11-08）</span></li></ul></section><section class="article__related" aria-labelledby="related-heading" data-astro-cid-sgg5joot><h2 id="related-heading" data-astro-cid-sgg5joot>関連記事</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article-card" href="/articles/amazon-business-mitsumorisho-hakkou/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1oukbk0-g" x1="0" y1="0" x2="1" y2="1" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1oukbk0-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1oukbk0-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1oukbk0-p)" data-astro-cid-yuatfsof></rect><circle cx="366" cy="57" r="153" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Amazon</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>見積書</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>出し方</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--amazon-business">Amazonビジネス実務</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>Amazonの見積書の出し方｜カートからPDFで保存する手順（Amazonビジネス・登録無料）</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>Amazonで見積書が必要なときは、登録無料のAmazonビジネスを使います。注文前はカートから参考見積書、注文後は注文履歴から見積書をPDFで保存でき、稟議や経費精算に使えます。個人アカウントしかない場合の考え方と、配送料が載らない・ダウンロードできないときの注意点もまとめました。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-06T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月6日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約13分</p></div></a><a class="card article-card" href="/articles/kojin-jigyou-kaigyoutodoke-nashi-amazon-business-toroku/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ec1ptehj0-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#10231a" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#1f3a2f" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#38634f" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ec1ptehj0-p" width="18" height="18" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><circle cx="9" cy="9" r="1.5" fill="#fff" fill-opacity="0.22" data-astro-cid-yuatfsof></circle></pattern></defs><rect width="400" height="225" fill="url(#ec1ptehj0-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ec1ptehj0-p)" data-astro-cid-yuatfsof></rect><circle cx="363" cy="90" r="176" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>AMAZON BUSINESS</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>個人事業主</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>開業届なし</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>Amazonビジネス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#c9a227" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#10231a" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--amazon-business">Amazonビジネス実務</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>Amazonビジネスの登録に必要書類は？開業届なしの個人事業主が用意するもの一覧</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>個人事業主がAmazonビジネスに登録するときは、確認書類を1点提出します。開業届がなくても、過去2年以内の確定申告書B・収支内訳書、インボイスの登録通知書などで代わりになります。公式ヘルプの書類一覧と提出時の注意点、登録手順、屋号の扱いを整理しました。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-06T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月6日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約7分</p></div></a><a class="card article-card" href="/articles/tokutei-shoutorihiki-juusho-hyouki/" data-astro-cid-7ahxywo7><div class="article-card__media" data-astro-cid-7ahxywo7><span class="eyecatch" data-astro-cid-yuatfsof><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true" focusable="false" data-astro-cid-yuatfsof><defs data-astro-cid-yuatfsof><linearGradient id="ecudn0xq-g" x1="0" y1="0" x2="1" y2="0" data-astro-cid-yuatfsof><stop offset="0" stop-color="#4a1d14" data-astro-cid-yuatfsof></stop><stop offset="0.55" stop-color="#7c3326" data-astro-cid-yuatfsof></stop><stop offset="1" stop-color="#a85543" data-astro-cid-yuatfsof></stop></linearGradient><pattern id="ecudn0xq-p" width="28" height="28" patternUnits="userSpaceOnUse" data-astro-cid-yuatfsof><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity="0.14" stroke-width="1" data-astro-cid-yuatfsof></path></pattern></defs><rect width="400" height="225" fill="url(#ecudn0xq-g)" data-astro-cid-yuatfsof></rect><rect width="400" height="225" fill="url(#ecudn0xq-p)" data-astro-cid-yuatfsof></rect><circle cx="351" cy="88" r="142" fill="#fff" fill-opacity="0.08" data-astro-cid-yuatfsof></circle><text x="32" y="50" fill="#fff" fill-opacity="0.72" font-size="10" font-weight="700" letter-spacing="2.4" data-astro-cid-yuatfsof>BUSINESS SERVICES</text><text x="32" y="104" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>特定商取引法</text><text x="32" y="144" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>住所</text><text x="32" y="184" fill="#fff" font-size="30" font-weight="800" letter-spacing="0.5" data-astro-cid-yuatfsof>バーチャルオフィス</text><g transform="translate(346,167)" data-astro-cid-yuatfsof><rect width="22" height="22" rx="6" fill="#e9c46a" data-astro-cid-yuatfsof></rect><text x="11" y="16" text-anchor="middle" fill="#4a1d14" font-size="12" font-weight="800" data-astro-cid-yuatfsof>帳</text></g></svg></span></div><div class="article-card__body" data-astro-cid-7ahxywo7><span class="badge badge--services">開業・法人サービス</span><h3 class="article-card__title" data-astro-cid-7ahxywo7>ネットショップの特定商取引法、住所は自宅でなくてもいい？省略要件とバーチャルオフィスの注意点</h3><p class="article-card__desc" data-astro-cid-7ahxywo7>特定商取引法の通信販売表記では原則として住所の記載が必要ですが、一定の要件を満たせば省略でき、バーチャルオフィスの住所を使うことも可能です。ただし実態のない住所表示は認められないため、契約前に対応体制を確認する必要があります。開業届の有無や法人・個人の別による違いも解説します。</p><p class="article-card__meta" data-astro-cid-7ahxywo7><time datetime="2026-09-15T00:00:00.000Z" data-astro-cid-7ahxywo7>2026年9月15日</time><span aria-hidden="true" data-astro-cid-7ahxywo7> ・ </span>読了約5分</p></div></a></div></section><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/guides/amazon-business/" data-astro-cid-sgg5joot>Amazonビジネス実務の記事をまとめて見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><p class="article__guide-hub-link" data-astro-cid-sgg5joot><a class="arrow-link" href="/receipts/" data-astro-cid-sgg5joot>サービス別 領収書・インボイス対応一覧を見る <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></a></p><section class="article__tools" aria-labelledby="tools-heading" data-astro-cid-sgg5joot><h2 id="tools-heading" data-astro-cid-sgg5joot>使えるツール</h2><div class="card-grid" data-astro-cid-sgg5joot><a class="card article__tool-card" href="/tools/business-prime/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 L4 4"></path><path d="M4 20 L21 20"></path><path d="M7 20 L7 14"></path><path d="M11 20 L11 10"></path><path d="M15 20 L15 15"></path><path d="M19 20 L19 7"></path><path d="M5 16 L20 8"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>Business Prime 損益分岐計算</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>注文回数と送料を入れると、プライムビジネス（旧Businessプライム）の元が取れる回数がわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a><a class="card article__tool-card" href="/tools/amazon-business-check/" data-astro-cid-sgg5joot><svg class="tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 9 l2 2 l3.5 -3.5"></path><path d="M8 15 h8"></path></svg><p class="article__tool-card-name" data-astro-cid-sgg5joot>Amazonビジネスが必要か判定</p><p class="article__tool-card-desc" data-astro-cid-sgg5joot>5つの質問に答えるだけで、Amazonビジネスが「要る」「今は要らない」「どちらでも」のどれかがわかります。</p><span class="arrow-link article__tool-card-cta" data-astro-cid-sgg5joot>使ってみる <span class="arrow-link__arrow" aria-hidden="true" data-astro-cid-sgg5joot>→</span></span></a></div></section><p class="email-signup__pending" data-astro-cid-kdlozfn6>メール登録機能は準備中です。</p></article></main><footer class="site-footer" data-astro-cid-z4jru4n3><div class="site-footer__inner" data-astro-cid-z4jru4n3><div class="site-footer__top" data-astro-cid-z4jru4n3><div class="site-footer__about" data-astro-cid-z4jru4n3><p class="site-footer__brand" data-astro-cid-z4jru4n3><span class="brand-mark" aria-hidden="true" data-astro-cid-z4jru4n3>帳</span>そろえ帳</p><p class="site-footer__desc" data-astro-cid-z4jru4n3>小さな会社・個人事業主の「調達と手続き」実務ガイド。計算ツールと手順解説。</p></div><nav class="site-footer__nav" aria-label="フッターナビゲーション" data-astro-cid-z4jru4n3><ul data-astro-cid-z4jru4n3><li data-astro-cid-z4jru4n3><a href="/articles/" data-astro-cid-z4jru4n3>記事一覧</a></li><li data-astro-cid-z4jru4n3><a href="/guides/" data-astro-cid-z4jru4n3>ガイド</a></li><li data-astro-cid-z4jru4n3><a href="/tools/" data-astro-cid-z4jru4n3>ツール</a></li><li data-astro-cid-z4jru4n3><a href="/about/" data-astro-cid-z4jru4n3>運営者</a></li><li data-astro-cid-z4jru4n3><a href="/disclosure/" data-astro-cid-z4jru4n3>広告・PR方針</a></li><li data-astro-cid-z4jru4n3><a href="/privacy/" data-astro-cid-z4jru4n3>プライバシーポリシー</a></li><li data-astro-cid-z4jru4n3><a href="/contact/" data-astro-cid-z4jru4n3>お問い合わせ</a></li></ul></nav></div><div class="site-footer__bottom" data-astro-cid-z4jru4n3><p class="site-footer__copyright" data-astro-cid-z4jru4n3>© 2026 そろえ帳</p></div></div></footer></body></html>
